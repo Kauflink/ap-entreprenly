@@ -8,7 +8,138 @@
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-*Contenido por agregar.*
+<div align="center">
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><strong>Nombre</strong></td>
+      <td align="center" valign="middle">Camargo Briceño, Joseph Julius</td>
+      <td align="center" valign="middle" rowspan="3">
+        <img src="./images/foto_julius.png" alt="Joseph Julius" width="250">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Carrera</strong></td>
+      <td align="center" valign="middle">Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Código</strong></td>
+      <td align="center" valign="middle">U20241D992</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Perfil</strong></td>
+      <td colspan="2">
+        Me considero una persona dedicada a mis responsabilidades, siempre enfocada en obtener los mejores resultados posibles tanto para el equipo como para mí. Busco siempre potenciar las habilidades y el rendimiento de los demás, así como el mío propio, cuando trabajamos en conjunto. Valoro y respeto las ideas y opiniones de los demás, y cuando nuestras perspectivas entran en conflicto, siempre fomento el diálogo y el debate constructivo.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><strong>Nombre</strong></td>
+      <td align="center" valign="middle">Palma De Los Santos, Elynor Mikela</td>
+      <td align="center" valign="middle" rowspan="3">
+        <img src="./images/foto_elynor.png" alt="Elynor Mikela" width="250">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Carrera</strong></td>
+      <td align="center" valign="middle">Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Código</strong></td>
+      <td align="center" valign="middle">U20241A972</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Perfil</strong></td>
+      <td colspan="2">
+        Conocimientos en C++, utilizando Visual Studio. Me considero una persona responsable, con buena predisposición y siempre dispuesta a colaborar en equipo. Me esfuerzo por mantener una actitud proactiva y por aprender continuamente para mejorar mis habilidades y contribuir de manera significativa en cada proyecto.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><strong>Nombre</strong></td>
+      <td align="center" valign="middle">Flores Pinchi, José Fernando</td>
+      <td align="center" valign="middle" rowspan="3">
+        <img src="./images/foto_fernando.png" alt="José Fernando" width="250">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Carrera</strong></td>
+      <td align="center" valign="middle">Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Código</strong></td>
+      <td align="center" valign="middle">U20241A290</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Perfil</strong></td>
+      <td colspan="2">
+        Soy estudiante del cuarto ciclo y me considero responsable y adaptable, con interés en el aprendizaje continuo y la innovación tecnológica. Me motiva aplicar mis conocimientos en proyectos prácticos que aporten valor y mejoren la vida cotidiana, mientras fortalezco mis competencias y colaboro con otros apasionados por el desarrollo de software
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><strong>Nombre</strong></td>
+      <td align="center" valign="middle">Peirano Brun, José Antonio</td>
+      <td align="center" valign="middle" rowspan="3">
+        <img src="./images/foto_jose.png" alt="José Antonio" width="250">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Carrera</strong></td>
+      <td align="center" valign="middle">Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Código</strong></td>
+      <td align="center" valign="middle">U202414715</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Perfil</strong></td>
+      <td colspan="2">
+        Soy una persona responsable, comprometida y proactiva, siempre dispuesta a aportar ideas creativas e innovadoras que impulsen el crecimiento del proyecto. Me esfuerzo por mantener una comunicación clara y efectiva, fomentando el trabajo en equipo y un ambiente positivo que motive a todos a dar lo mejor de sí mismos.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><strong>Nombre</strong></td>
+      <td align="center" valign="middle">Chavez Carrasco, Lionel Abraham</td>
+      <td align="center" valign="middle" rowspan="3">
+        <img src="./images/foto_lionel.png" alt="Elynor Mikela" width="250">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Carrera</strong></td>
+      <td align="center" valign="middle">Ingeniería de Software</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Código</strong></td>
+      <td align="center" valign="middle">U202416151</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><strong>Perfil</strong></td>
+      <td colspan="2">
+        Soy Lionel Abraham Chavez Carrasco, estudiante de Ingeniería de Software (quinto ciclo) con experiencia en el desarrollo de videojuegos 2D en Unity (C++/C#) y aplicaciones. Me caracterizo por ser responsable, creativo y adaptable, con interés en la innovación tecnológica, el diseño de interfaces (UX/UI) y la gestión ágil de proyectos. Me motiva aplicar mis conocimientos en proyectos que integren tecnología y creatividad, aportando valor real a los usuarios y fortaleciendo mis competencias como futuro ingeniero de software.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 ## 1.2. Solution Profile
 
