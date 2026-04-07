@@ -10,8 +10,6 @@
 
 *Contenido por agregar.*
 
----
-
 ## 4.2. Information Architecture
 
 ### 4.2.1. Organization Systems
@@ -34,8 +32,6 @@
 
 *Contenido por agregar.*
 
----
-
 ## 4.3. Landing Page UI Design
 
 ### 4.3.1. Landing Page Wireframe
@@ -45,8 +41,6 @@
 ### 4.3.2. Landing Page Mock-up
 
 *Contenido por agregar.*
-
----
 
 ## 4.4. Web Applications UX/UI Design
 
@@ -66,13 +60,9 @@
 
 *Contenido por agregar.*
 
----
-
 ## 4.5. Web Applications Prototyping
 
 *Contenido por agregar.*
-
----
 
 ## 4.6. Domain-Driven Software Architecture
 
@@ -92,15 +82,11 @@
 
 *Contenido por agregar.*
 
----
-
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
 
 *Contenido por agregar.*
-
----
 
 ## 4.8. Database Design
 
