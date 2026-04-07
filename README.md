@@ -146,8 +146,7 @@ Aplicaciones Web
 
 # Student Outcome
 
-En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 3 (ABET – EAC), el cual se define como la capacidad de comunicarse efectivamente con un rango de audiencias. La información se presenta a través del siguiente cuadro, donde se especifican las dimensiones de la competencia, las acciones realizadas por cada integrante y las conclusiones generales del equipo.
-
+En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 5 (ABET – EAC), el cual se define como la capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos. La información se presenta a través del siguiente cuadro, donde se especifican las dimensiones de la competencia, las acciones realizadas por cada integrante y las conclusiones generales del equipo.
 <table>
   <thead>
     <tr>
@@ -158,14 +157,14 @@ En esta sección se detallan las actividades realizadas en el trabajo final y el
   </thead>
   <tbody>
     <tr>
-      <td>Comunica oralmente con efectividad a diferentes rangos de audiencia.</td>
+      <td>Trabaja en equipo para proporcionar liderazgo en forma conjunta</td>
       <td>
         Acciones realizadas de cada uno aqui...
       </td>
       <td>Conclusiónes aquí...</td>
     </tr>
     <tr>
-      <td>Comunica por escrito con efectividad a diferentes rangos de audiencia.</td>
+      <td>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</td>
       <td>
         Acciones realizadas de cada uno aqui...
       </td>
