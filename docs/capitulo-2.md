@@ -358,6 +358,214 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ---
 
+**Segmento 2: Clientes Finales**
+
+
+-   Primera entrevista:
+
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/sofia_lopez.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistada:</strong> María López
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Femenino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 23
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 6:35
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> San Martín de Porres
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        María es una joven de 23 años que prefiere métodos de pago digitales como Yape y Plin. Su principal molestia al comprar en minimarkets locales es la lentitud en la respuesta y la incertidumbre sobre el stock real, habiendo tenido experiencias negativas donde pagó por productos agotados. Esta falta de transparencia ha quebrado su confianza en varios negocios locales.
+        Muestra un alto interés en soluciones tecnológicas: validaría con entusiasmo un sistema que use sensores de peso reales para confirmar el stock desde su celular y valora críticamente la recepción inmediata de comprobantes de pago virtuales. Afirma que dejaría de ir presencialmente a los mercados si pudiera comprar de forma segura y rápida (en tres clics) vía WhatsApp, siempre que el sistema le brinde confirmaciones automáticas e inmediatas.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Segunda entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/curay.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> Sebastián Curay
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Masculino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 19
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 6:35
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> San Martín de Porres, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        Sebastián es un estudiante de 19 años que prioriza la rapidez y los pagos digitales (Tarjeta y Yape/Plin) por encima del efectivo. Su mayor frustración es la incertidumbre del stock y la demora en la atención vía WhatsApp, habiendo experimentado varias veces el pagar por productos que finalmente estaban agotados, lo que ha erosionado su confianza en los negocios locales.
+        Debido a su carga académica, valora enormemente la posibilidad de realizar compras en "tres clics" para ahorrar tiempo. No cuenta con herramientas en casa para validar el peso de lo que recibe, por lo que un sistema con sensores de peso reales que valide el stock digitalmente le brindaría la seguridad que actualmente le falta. Además, considera indispensable recibir una confirmación automática e inmediata tras el pago para mitigar la sensación de riesgo al pagar por adelantado.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Tercera entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/cat.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistada:</strong> Rosmery Villa
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Femenino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 21
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 6:35
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> an Martín de Porres, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        Rosmery es una joven de 21 años que utiliza casi exclusivamente billeteras digitales (Yape) y tarjetas, evitando el uso de efectivo. Identifica la demora en la respuesta y la falta de stock actualizado como los principales motivos para abandonar una compra. Ha tenido experiencias negativas pagando por productos que luego resultan estar agotados, lo que genera una pérdida total de confianza en el negocio.
+        Se define como alguien que no sabe "escoger productos" en el mercado físico, por lo que prefiere una solución digital de "tres clics" que pueda usar incluso mientras viaja en el bus. Valida con entusiasmo la implementación de sensores de peso reales en los estantes, ya que desconfía de las balanzas tradicionales de los mercados. Aunque no le da importancia al comprobante físico, exige una confirmación automática del sistema al pagar por adelantado para evitar la sensación de inseguridad e insatisfacción.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
 ### 2.2.3. Análisis de entrevistas
 
 *Contenido por agregar.*
