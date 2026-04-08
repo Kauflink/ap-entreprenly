@@ -151,7 +151,212 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ### 2.2.2. Registro de entrevistas
 
-*Contenido por agregar.*
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
+-   Primera entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/abuelito.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> Hercilio Carrasco Herrera
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Masculino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 62
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 6:35
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        Herilio es un comerciante con cuatro décadas de trayectoria que actualmente utiliza Excel para su control de productos, aunque admite tener dificultades con el descuadre de stock (errores manuales al comprar o registrar). Su mayor "punto de dolor" es el desorden financiero: mezcla el dinero de las ventas con los pagos a proveedores y no logra cuadrar el efectivo con los vouchers de tarjetas y billeteras digitales como Yape o Plin.
+        Valida con entusiasmo la implementación de balanzas inteligentes para inventario automático y un chatbot con IA que gestione los pedidos de WhatsApp, funciones que actualmente delega en su hijo. Considera que un sistema que automatice el arqueo de caja y permita ventas 24/7 sin errores de stock sería una solución "bacán" que le ahorraría tiempo, dinero y reduciría la carga operativa de su personal.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Segunda entrevista:
+
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/abuelita.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> María Encarnación Velázquez
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Femenino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 60
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 6:35
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        María gestiona su negocio basándose principalmente en la memoria y la inspección visual diaria. Admite que este método genera errores, como enviar pedidos equivocados o duplicados a los clientes, lo que deriva en pérdidas económicas (ej. kilos de fruta regalados para no quedar mal con el cliente). Existe una falta de consenso administrativo con su esposo: mientras ella busca un cierre de caja formal, él prefiere la inmediatez de usar el dinero de Yape/Tarjeta directamente para nuevas compras sin registrar.
+        Muestra una apertura total hacia la tecnología para "hacer descansar al cerebro". Valida que una balanza inteligente le permitiría cobrar hasta los céntimos exactos (evitando el redondeo a favor del cliente que merman su ganancia). Además, ve en el chatbot y la impresión automática de vouchers una solución para no "perder tiempo pensando" y evitar errores de despacho, asegurando que su volumen de ventas subiría al ofrecer una atención mucho más rápida.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Tercera entrevista:
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/luis.png" alt="Captura de entrevista" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado:</strong> Luis Vargas
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Género:</strong> Masculino
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> Fernando Flores
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Edad:</strong> 54
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> 6:35
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista:</strong>
+        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+       Luis es un comerciante de 54 años que confía plenamente en su memoria para el control de inventarios. Al trabajar con fruta selecta, asegura que no tiene pérdidas económicas por calidad, aunque reconoce que actualmente no puede saber con exactitud si el stock físico coincide con lo que debería haber. Aunque no siente dificultad para revisar sus movimientos en Yape o Plin, admite que el proceso es manual.
+        Valida que un sistema de inventario por peso le ahorraría mucho tiempo, evitando el conteo unidad por unidad. Además, ve con buenos ojos la automatización de pedidos por WhatsApp, señalando que una impresión automática de comprobantes haría el despacho "mucho más rápido". Finalmente, coincide en que un sistema que funcione 24/7 mediante un bot aumentaría significativamente su volumen de ventas al eliminar la fricción de la atención manual.
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
 
 ### 2.2.3. Análisis de entrevistas
 
