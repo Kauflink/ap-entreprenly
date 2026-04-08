@@ -574,7 +574,10 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ### 2.3.1. User Personas
 
-*Contenido por agregar.*
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+<p align="center">
+  <img src="images/user_persona_Don_Lucho.png" alt="user_persona_valentina" width="500"/>
+</p>
 
 ### 2.3.2. User Task Matrix
 
