@@ -595,6 +595,11 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
   <img src="images/journey_mapin_segmento1.png" alt="user_persona_valentina" width="500"/>
 </p>
 
+**Segmento 2: Clientes Finales**
+<p align="center">
+  <img src="images/journey_mapin_segmento2.png" alt="user_persona_andrea" width="500"/>
+</p>
+
 ### 2.3.4. Empathy Mapping
 
 *Contenido por agregar.*
