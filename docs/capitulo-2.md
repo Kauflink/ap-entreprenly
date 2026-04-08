@@ -590,7 +590,10 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
 
 ### 2.3.3. User Journey Mapping
 
-*Contenido por agregar.*
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+<p align="center">
+  <img src="images/journey_mapin_segmento1.png" alt="user_persona_valentina" width="500"/>
+</p>
 
 ### 2.3.4. Empathy Mapping
 
