@@ -171,6 +171,180 @@
 </table>
 <br> </br>
 
+*agregar epic 5 y 6*
+
+<table>
+  <tr>
+    <th>Epic-07</th>
+    <th>Conversación y Catálogo</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      <br></br>
+      Como cliente potencial, quiero  una interacción fluida con el chatbot de WhatsApp y visualizar un catálogo de productos actualizado en tiempo real, para poder conocer la oferta disponible y comenzar mi proceso de compra de manera inmediata.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">32</td>
+    <td align="center">Iniciar conversación con chatbot</td>
+  </tr>
+  <tr>
+    <td align="center">33</td>
+    <td align="center">Recibir catálogo de productos</td>
+  </tr>
+  <tr>
+    <td align="center">34</td>
+    <td align="center">Catálogo sincronizado con inventario real</td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>Epic-08</th>
+    <th>Gestión de Pedido y Stock</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      <br></br>
+      Como cliente, quiero seleccionar productos, indicar cantidades y registrar mi ubicación de entrega, para que el sistema genere un pedido consolidado y verifique automáticamente la disponibilidad física antes de proceder al pago.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">35</td>
+    <td align="center">Seleccionar productos y cantidades</td>
+  </tr>
+  <tr>
+    <td align="center">36</td>
+    <td align="center">Registrar dirección de delivery</td>
+  </tr>
+  <tr>
+    <td align="center">37</td>
+    <td align="center">Generar pedido consolidado</td>
+  </tr>
+  <tr>
+    <td align="center">38</td>
+    <td align="center">Validar stock antes del pago</td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>Epic-09</th>
+    <th>Pago Digital P2P</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      <br></br>
+      Como cliente y comerciante, queremos gestionar el envío y la validación de comprobantes de pago digitales (Yape/Plin) a través de WhatsApp y el dashboard, para garantizar una transacción segura y confirmada antes de finalizar la venta.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">39</td>
+    <td align="center">Recibir instrucciones de pago</td>
+  </tr>
+  <tr>
+    <td align="center">40</td>
+    <td align="center">Reportar pago digital realizado</td>
+  </tr>
+  <tr>
+    <td align="center">41</td>
+    <td align="center">Validar pago desde el dashboard</td>
+  </tr>
+  <tr>
+    <td align="center">42</td>
+    <td align="center">Notificar estado del pago al cliente</td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>Epic-10</th>
+    <th>Confirmación, Venta y Comprobante</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      <br></br>
+      Como dueño de negocio, quiero que el sistema confirme el pedido tras la validación del pago, descuente el stock y emita un comprobante digital, para mantener el control financiero y brindar un respaldo legal de la compra al cliente.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">43</td>
+    <td align="center">Confirmar pedido y descontar stock</td>
+  </tr>
+  <tr>
+    <td align="center">44</td>
+    <td align="center">Registrar venta en el sistema</td>
+  </tr>
+  <tr>
+    <td align="center">45</td>
+    <td align="center">Emitir comprobante al cliente</td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>Epic-11</th>
+    <th>Flujos Alternativos y Restricciones</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      <br></br>
+      Como sistema de gestión, quiero manejar escenarios de excepción como falta de stock, tiempos de espera agotados y rechazos de pago, para proteger la integridad del inventario y evitar pérdidas económicas.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">46</td>
+    <td align="center">Manejar stock insuficiente</td>
+  </tr>
+  <tr>
+    <td align="center">47</td>
+    <td align="center">Cancelar pedido por timeout de pago</td>
+  </tr>
+  <tr>
+    <td align="center">48</td>
+    <td align="center">Rechazar pago fraudulento o incorrecto</td>
+  </tr>
+</table>
+<br></br>
+
+
+<table>
+  <tr>
+    <th>Epic-12</th>
+    <th>Technical Stories – RESTful API</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      <br></br>
+      Como equipo de desarrollo, queremos implementar una arquitectura de servicios RESTful segura y escalable, para que todos los componentes de la plataforma (chatbot, dashboard, inventario) intercambien datos de manera consistente.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">49</td>
+    <td align="center">API: obtener catálogo de productos</td>
+  </tr>
+  <tr>
+    <td align="center">50</td>
+    <td align="center">API: crear y actualizar pedido</td>
+  </tr>
+  <tr>
+    <td align="center">51</td>
+    <td align="center">API: validar y registrar pago</td>
+  </tr>
+</table>
+<br></br>
+
+
 <!-- US-->
 <table>
 <tr>
