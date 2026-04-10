@@ -49,6 +49,10 @@
     <td align="center">13</td>
     <td align="center">Buscador de Productos</td>
   </tr>
+  <tr>
+    <td align="center">24</td>
+    <td align="center">Creación de lotes</td>
+  </tr>
 </table>
 <br> </br>
 
@@ -1073,6 +1077,47 @@ Y el acceso permanecerá habilitado hasta el final del periodo<br><br>
 
 <br><br>
 
+<table>
+<tr>
+<th>User Story</th>
+<th>24</th>
+<th>Epic ID</th>
+<th>01</th>
+</tr>
+<tr>
+<td><strong>Title</strong></td>
+<td colspan="3">Creación de lotes</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td colspan="3">
+Como usuario quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.
+</td>
+</tr>
+<tr>
+<td><strong>Acceptance Criteria</strong></td>
+<td colspan="3">
+
+<strong>Scenario 1: Creación de lote exitosa</strong><br>
+Dado que el usuario está en la sección de productos<br>
+Cuando presiona el botón “Crear Lote”<br>
+Y selecciona un producto existente<br>
+Y completa los datos requeridos correctamente<br>
+Entonces el sistema debe registrar el nuevo lote<br>
+Y mostrarlo en la lista de lotes<br><br>
+
+<strong>Scenario 2: Validación al crear lote</strong><br>
+Dado que el usuario está en la sección de productos<br>
+Cuando presiona el botón “Crear Lote”<br>
+Y no selecciona un producto o ingresa datos incompletos o inválidos<br>
+Entonces el sistema debe mostrar mensajes de error<br>
+Y no permitir la creación del lote<br><br>
+
+</td>
+</tr>
+</table>
+
+<br><br>
 ## 3.2. Impact Mapping
 
 _Contenido por agregar._
