@@ -753,7 +753,17 @@ La principal coincidencia entre ambos segmentos es que los dos otorgan alta impo
 
 ### 2.3.4. Empathy Mapping
 
-*Contenido por agregar.*
+
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+<p align="center">
+  <img src="images/emp_comerciantes.png" alt="user_persona_valentina" width="500"/>
+</p>
+
+**Segmento 2: Clientes Finales**
+<p align="center">
+  <img src="images/emp_clientes.png" alt="user_persona_andrea" width="500"/>
+</p>
+
 
 ## 2.4. Big Picture Event Storming
 
