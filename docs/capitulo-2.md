@@ -683,7 +683,45 @@ Los clientes finales entrevistados representan un perfil digital, exigente y con
 
 ### 2.3.2. User Task Matrix
 
-*Contenido por agregar.*
+
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
+| Tarea | Frecuencia | Importancia |
+|---|---|---|
+| Verificar el stock disponible de productos en el local   | Always        | High |
+| Registrar las ventas del día (efectivo y digital)        | Always        | High |
+| Cuadrar la caja al cierre del turno                      | Always        | High |
+| Separar ingresos en efectivo de pagos por Yape/Plin/POS  | Often         | High |
+| Atender pedidos de clientes por WhatsApp                 | Often         | High |
+| Reponer productos cuando detecta quiebre de stock        | Often         | High |
+| Verificar que el peso despachado coincida con lo cobrado | Often         | High |
+| Delegar la atención de WhatsApp a un familiar o empleado | Sometimes     | Medium |
+| Revisar movimientos de Yape o Plin desde el celular      | Often         | Medium |
+| Realizar conteo manual de inventario                     | Sometimes     | High |
+| Coordinar pedidos con proveedores                        | Sometimes     | Medium |
+| Detectar pérdidas o mermas en productos                  | Rarely        | High |
+
+**Segmento 2: Clientes Finales**
+| Tarea | Frecuencia | Importancia |
+|---|---|---|
+| Buscar productos disponibles en negocios cercanos                 | Often | High |
+| Consultar por WhatsApp si un producto está disponible             | Often | High |
+| Realizar el pago de una compra de forma digital (Yape/Tarjeta)    | Always| High |
+| Verificar que el producto recibido coincida con lo pedido         | Often | High |
+| Esperar confirmación de pago o recibo tras una compra             | Always| High |
+| Evaluar si confiar en un negocio local para comprar en línea      | Sometimes| High |
+| Comparar precios entre negocios locales                           | Sometimes| Medium |
+| Ir presencialmente al mercado o minimarket                        | Sometimes| Medium |
+| Revisar el estado de su pedido tras confirmar la compra           | Often    | Medium |
+| Reclamar o solicitar devolución por producto agotado o incorrecto | Rarely   | High |
+
+**Análisis del User Task Matrix**
+Las tareas con mayor frecuencia e importancia para el segmento de comerciantes son la verificación de stock, el registro de ventas y el cuadre de caja, las tres calificadas como Always y High. Esto confirma que su jornada gira en torno al control operativo del negocio y que cualquier herramienta que automatice o simplifique estas tareas tendrá una adopción directa e inmediata. La atención de pedidos por WhatsApp y la separación de medios de pago, calificadas como Often y High, representan tareas críticas que hoy realizan de forma manual y con alta probabilidad de error.
+
+Para el segmento de clientes finales, las tareas de mayor frecuencia e importancia son el pago digital y la espera de confirmación, ambas calificadas como Always y High, junto con la consulta de disponibilidad por WhatsApp y la verificación del pedido recibido, calificadas como Often y High. Esto indica que su experiencia de compra está completamente mediada por el canal digital y que la confianza en el proceso depende directamente de recibir respuestas rápidas y confirmaciones automáticas.
+
+La principal coincidencia entre ambos segmentos es que los dos otorgan alta importancia a la verificación del stock real: el segmento de comerciantes desde el lado operativo del negocio y el segmento de clientes finales desde el lado del consumidor que no quiere pagar por algo que no existe. La principal diferencia radica en la frecuencia del ontacto presencial: el segmento de comerciantes opera físicamente en el local todos los días, mientras que el segmento de clientes finales busca reducir o eliminar esa necesidad. Esta divergencia refuerza el valor de Entreprenly como puente entre la operación física del comerciante y la experiencia digital del cliente.
+
 
 ### 2.3.3. User Journey Mapping
 
