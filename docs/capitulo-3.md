@@ -1292,6 +1292,685 @@ Y no permitir la creación del lote<br><br>
 </table>
 
 <br><br>
+
+*agregar user stories 25-31*
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>32</th>
+    <th>Epic ID</th>
+    <th>07</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Iniciar conversación con chatbot</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero iniciar una conversación con el chatbot de WhatsApp para poder realizar un pedido sin necesidad de llamar ni ir a la tienda.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Respuesta inmediata al primer mensaje</strong><br>
+      Dado que el cliente envía cualquier mensaje al número de WhatsApp registrado,<br>
+      Cuando el chatbot recibe el mensaje,<br> 
+      Entonces responde en menos de 3 segundos con mensaje de bienvenida con el nombre del negocio y las opciones disponibles <br><br>
+      <strong>Scenario 2: Retomar conversación activa</strong><br>
+      Dado que el cliente ya tiene una conversación activa sin completar,<br>
+      Cuando envía un nuevo mensaje,<br>
+      Entonces el chatbot retoma el contexto del pedido en curso sin reiniciar el flujo.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>33</th>
+    <th>Epic ID</th>
+    <th>07</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Recibir catálogo de productos</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero recibir el catálogo actualizado de productos directamente en WhatsApp para elegir lo que deseo comprar.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Catálogo enviado con productos disponibles</strong><br>
+      Dado que el cliente solicita ver el catálogo,<br>
+      Cuando el chatbot consulta el inventario,<br>
+      Entonces envía la lista con nombre, precio y stock, mostrando únicamente productos con stock mayor a 0.<br><br>
+      <strong>Scenario 2: Sin productos disponibles en inventario</strong><br>
+      Dado que no hay productos con stock disponible,<br>
+      Cuando el chatbot consulta el inventario,<br>
+      Entonces informa al cliente que no hay productos disponibles en este momento.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>34</th>
+    <th>Epic ID</th>
+    <th>07</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Catálogo sincronizado con inventario real</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como comerciante, quiero que el catálogo del chatbot refleje siempre el inventario real para evitar vender productos sin existencia.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Precio actualizado reflejado en el siguiente catálogo</strong><br>
+      Dado que el comerciante actualiza el precio de un producto en el dashboard,<br>
+      Cuando un cliente solicita el catálogo,<br>
+      Entonces el chatbot muestra el precio actualizado.<br><br>
+      <strong>Scenario 2: Producto agotado no aparece en el catálogo</strong><br>
+      Dado que un producto agota su stock,<br>
+      Cuando el sistema actualiza el inventario,<br>
+      Entonces ese producto deja de mostrarse en el catálogo.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>35</th>
+    <th>Epic ID</th>
+    <th>08</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Seleccionar productos y cantidades</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero seleccionar uno o más productos e indicar la cantidad para que el sistema construya mi pedido correctamente.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Selección exitosa de producto unitario</strong><br>
+      Dado que el cliente recibe el catálogo,<br>
+      Cuando indica un producto y cantidad válida,<br>
+      Entonces el chatbot confirma la selección y la agrega al pedido en curso.<br><br>
+      <strong>Scenario 2: Selección de producto por peso</strong><br>
+      Dado que el cliente indica un producto por peso (ej: 1.5 kg de arroz),<br>
+      Cuando el chatbot procesa la solicitud,<br>
+      Entonces registra la cantidad en kilogramos y calcula el subtotal.<br><br><strong>Scenario 3: Producto no encontrado en el catálogo</strong><br>
+      Dado que el cliente escribe un producto inexistente,<br>
+      Cuando el chatbot no lo encuentra,<br>
+      Entonces informa que no está disponible y muestra el catálogo nuevamente.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>36</th>
+    <th>Epic ID</th>
+    <th>08</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Registrar dirección de delivery</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero ingresar mi dirección de entrega para que el comerciante sepa dónde enviar mi pedido.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Registro exitoso de dirección de entrega</strong><br>
+      Dado que el cliente confirmó al menos un producto,<br>
+      Cuando el chatbot solicita la dirección y el cliente la ingresa,<br>
+      Entonces el sistema registra la dirección asociada al pedido y continúa el flujo.<br><br>
+      <strong>Scenario 2: Cliente no responde con dirección</strong><br>
+      Dado que el chatbot solicitó la dirección de entrega,<br>
+      Cuando el cliente no ingresa dirección en 10 minutos,<br>
+      Entonces el chatbot solicita nuevamente la dirección antes de continuar.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>37</th>
+    <th>Epic ID</th>
+    <th>08</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Generar pedido consolidado</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como sistema, quiero generar un pedido con todos los productos, cantidades, dirección y datos del cliente para poder procesarlo.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Pedido creado exitosamente</strong><br>
+      Dado que el cliente confirma productos y dirección,<br>
+      Cuando el sistema genera el pedido,<br>
+      Entonces crea un registro con estado 'pendiente', productos, cantidades, dirección y timestamp.<br><br>
+      <strong>Scenario 2: Validación de stock iniciada tras generación</strong><br>
+      Dado que el pedido ha sido generado,<br>
+      Cuando el sistema procede a la validación,<br>
+      Entonces verifica que cada producto tenga suficiente existencia antes de continuar al pago.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>38</th>
+    <th>Epic ID</th>
+    <th>08</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Validar stock antes del pago</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como sistema, quiero validar el stock de cada producto del pedido para evitar comprometer inventario inexistente.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Stock suficiente para todos los ítems</strong><br>
+      Dado que se genera un pedido,<br>
+      Cuando el sistema verifica el stock,<br>
+      Entonces confirma que hay cantidad suficiente para cada ítem y avanza al flujo de pago.<br><br>
+      <strong>Scenario 2: Stock insuficiente para un ítem del pedido</strong><br>
+      Dado que un producto del pedido no tiene stock suficiente,<br>
+      Cuando el sistema detecta la insuficiencia,<br>
+      Entonces notifica al cliente indicando qué producto no está disponible y ofrece continuar con menor cantidad o eliminar el ítem.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>39</th>
+    <th>Epic ID</th>
+    <th>09</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Recibir instrucciones de pago</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero recibir las instrucciones de pago por WhatsApp para saber cómo realizar la transferencia.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Instrucciones de pago enviadas correctamente</strong><br>
+      Dado que el stock del pedido fue validado exitosamente,<br>
+      Cuando el chatbot envía las instrucciones,<br>
+      Entonces el cliente recibe el número Yape/Plin del comerciante, el monto total y el número de pedido como referencia.<br><br>
+      <strong>Scenario 2: Registro del evento de instrucción enviada</strong><br>
+      Dado que el mensaje con instrucciones es entregado,<br>
+      Cuando el sistema confirma la entrega,<br>
+      Entonces registra el evento 'Instrucción de pago enviada' con timestamp.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>40</th>
+    <th>Epic ID</th>
+    <th>09</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Reportar pago digital realizado</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero reportar que realicé el pago enviando el comprobante al chatbot para que el comerciante pueda verificarlo.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Reporte exitoso del comprobante de pago</strong><br>
+      Dado que el cliente realizó el pago por Yape o Plin,<br>
+      Cuando envía el comprobante al chatbot,<br>
+      Entonces el sistema registra 'Pago digital reportado' y notifica al comerciante en el dashboard.<br><br>
+      <strong>Scenario 2: Timeout sin reporte de pago</strong><br>
+      Dado que el cliente recibió las instrucciones de pago,<br>
+      Cuando transcurren 30 minutos sin que el cliente reporte el pago,<br>
+      Entonces el chatbot envía un recordatorio y el pedido permanece en estado 'esperando pago'.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>41</th>
+    <th>Epic ID</th>
+    <th>09</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Validar pago desde el dashboard</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como comerciante, quiero revisar y aprobar o rechazar el pago reportado desde el dashboard para confirmar que el dinero fue recibido.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Comerciante visualiza pedidos con pago pendiente</strong><br>
+      Dado que el cliente reportó su pago,<br>
+      Cuando el comerciante revisa el pedido en el dashboard,<br>
+      Entonces visualiza el comprobante, el monto y los detalles del pedido.<br><br>
+      <strong>Scenario 2: Aprobación del pago por el comerciante</strong><br>
+      Dado que el comerciante verifica que el pago es correcto,<br>
+      Cuando lo aprueba,<br>
+      Entonces el sistema registra 'Pago validado manualmente' y continúa el flujo.<br><br>
+      <strong>Scenario 3: Rechazo del pago por el comerciante</strong><br>
+      Dado que el comerciante detecta un pago incorrecto,<br>
+      Cuando lo rechaza indicando el motivo,<br>
+      Entonces el chatbot notifica al cliente y le indica los pasos a seguir.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>42</th>
+    <th>Epic ID</th>
+    <th>09</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Notificar estado del pago al cliente</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero recibir una notificación sobre si mi pago fue aprobado o rechazado para saber si mi pedido está confirmado.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Notificación de pago aprobado</strong><br>
+      Dado que el comerciante aprueba el pago,<br>
+      Cuando el sistema actualiza el estado,<br>
+      Entonces el chatbot envía al cliente un mensaje confirmando que su pago fue recibido y el pedido está en proceso.<br><br>
+      <strong>Scenario 2: Notificación de pago rechazado</strong><br>
+      Dado que el comerciante rechaza el pago,<br>
+      Cuando el sistema actualiza el estado,<br>
+      Entonces el chatbot informa al cliente que no fue validado y solicita que lo intente nuevamente.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>43</th>
+    <th>Epic ID</th>
+    <th>10</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Confirmar pedido y descontar stock</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Confirmación de pedido y descuento de inventario</strong><br>
+      Dado que el comerciante aprueba el pago,<br>
+      Cuando el sistema confirma el pedido,<br>
+      Entonces actualiza el estado a 'confirmado' y descuenta el stock de cada producto del inventario.<br><br>
+      <strong>Scenario 2: Actualización de peso en balanza IoT</strong><br>
+      Dado que el pedido incluye productos por peso,<br>
+      Cuando el sistema descuenta el stock,<br>
+      Entonces actualiza el peso disponible en la balanza IoT.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>44</th>
+    <th>Epic ID</th>
+    <th>10</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Registrar venta en el sistema</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como comerciante, quiero que cada pedido confirmado quede registrado como venta para tener un control financiero preciso.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Venta registrada correctamente</strong><br>
+      Dado que el pedido ha sido confirmado,<br>
+      Cuando el sistema registra la venta,<br>
+      Entonces crea un registro con monto total, método de pago, productos y timestamp.<br><br>
+      <strong>Scenario 2: Venta digital separada del efectivo en caja</strong><br>
+      Dado que el pago fue digital (Yape/Plin),<br>
+      Cuando se registra la venta,<br>
+      Entonces el monto queda asociado al canal de pagos digitales, separado del efectivo en caja.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>45</th>
+    <th>Epic ID</th>
+    <th>10</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Emitir comprobante al cliente</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero recibir un comprobante de mi compra por WhatsApp para tener un respaldo de la transacción.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Comprobante enviado al cliente por WhatsApp</strong><br>
+      Dado que la venta ha sido registrada,<br>
+      Cuando el sistema genera el comprobante,<br>
+      Entonces el chatbot envía al cliente un resumen con número de pedido, productos, cantidades, monto total y fecha.<br><br>
+      <strong>Scenario 2: Pedido marcado como completado</strong><br>
+      Dado que el comprobante es emitido,<br>
+      Cuando el chatbot lo entrega,<br>
+      Entonces el sistema registra 'Comprobante emitido' y el pedido pasa a estado 'completado'.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>46</th>
+    <th>Epic ID</th>
+    <th>11</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Manejar stock insuficiente</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como cliente, quiero ser notificado si un producto no tiene stock suficiente para poder ajustar mi pedido.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Notificación de stock insuficiente al cliente</strong><br>
+      Dado que el cliente solicita una cantidad mayor al stock disponible,<br>
+      Cuando el sistema valida el inventario,<br>
+      Entonces el chatbot notifica qué producto no tiene stock y ofrece ajustar la cantidad o eliminarlo.<br><br>
+      <strong>Scenario 2: Cliente ajusta la cantidad del producto</strong><br>
+      Dado que el chatbot informó al cliente sobre el stock insuficiente,<br>
+      Cuando el cliente confirma una nueva cantidad menor o igual al stock disponible,<br>
+      Entonces el sistema actualiza el pedido y continúa el flujo normalmente.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>47</th>
+    <th>Epic ID</th>
+    <th>11</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Cancelar pedido por timeout de pago</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como sistema, quiero cancelar automáticamente un pedido si el cliente no reporta el pago en el tiempo establecido para liberar el stock reservado.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Cancelación automática por timeout</strong><br>
+      Dado que el cliente recibió las instrucciones de pago,<br>
+      Cuando transcurren 60 minutos sin reporte de pago,<br>
+      Entonces el sistema cancela el pedido, libera el stock y notifica al cliente por WhatsApp.<br><br>
+      <strong>Scenario 2: Registro del evento de cancelación</strong><br>
+      Dado que el pedido es cancelado por timeout,<br>
+      Cuando el sistema actualiza el estado,<br>
+      Entonces registra el evento de cancelación con motivo 'timeout de pago' para trazabilidad.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>48</th>
+    <th>Epic ID</th>
+    <th>11</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Rechazar pago fraudulento o incorrecto</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como comerciante, quiero poder rechazar un pago si el comprobante es incorrecto para proteger el negocio de fraudes.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Rechazo manual por comprobante sospechoso</strong><br>
+      Dado que el comerciante revisa un comprobante sospechoso,<br>
+      Cuando lo rechaza indicando el motivo,<br>
+      Entonces el pedido vuelve a 'esperando pago' y el chatbot notifica al cliente.<br><br>
+      <strong>Scenario 2: Alerta por rechazos repetidos del mismo cliente</strong><br>
+      Dado que el mismo cliente presenta pagos rechazados dos veces,<br>
+      Cuando el sistema detecta el patrón,<br>
+      Entonces alerta al comerciante y bloquea el pedido para revisión manual.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>49</th>
+    <th>Epic ID</th>
+    <th>12</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Conocer la propuesta de valor</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como visitante, quiero entender qué hace Entreprenly y cómo puede beneficiar a mi negocio para decidir si me interesa adquirirlo.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Sección hero visible al cargar la página</strong><br>
+      Dado que el visitante accede a la landing page,<br>
+      Cuando la página carga,<br>
+      Entonces visualiza el headline, la propuesta de valor y los beneficios clave en la sección hero.<br><br>
+      <strong>Scenario 2: Sección de funcionalidades al hacer scroll</strong><br>
+      Dado que el visitante navega a la sección de funcionalidades,<br>
+      Cuando hace scroll,<br>
+      Entonces visualiza las características principales: chatbot WhatsApp, inventario, balanza IoT y dashboard financiero.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>50</th>
+    <th>Epic ID</th>
+    <th>12</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">API: crear y actualizar pedido</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como developer, quiero endpoints POST /api/orders y PATCH /api/orders/:id para gestionar el ciclo de vida completo de un pedido.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Creación exitosa de un pedido</strong><br>
+      Dado que el chatbot envía POST /api/orders con datos válidos,<br>
+      Cuando el servidor valida el cuerpo,<br>
+      Entonces responde HTTP 201 Created con el pedido: id, estado 'pendiente' y timestamp.<br><br>
+      <strong>Scenario 2: Actualización de estado de un pedido</strong><br>
+      Dado que se envía PATCH /api/orders/:id con estado válido,<br>
+      Cuando el servidor procesa la actualización,<br>
+      Entonces responde HTTP 200 con el objeto pedido actualizado.<br><br>
+      <strong>Scenario 3: Pedido no encontrado</strong><br>
+      Dado que el id del pedido no existe,<br>
+      Cuando el servidor busca el recurso,<br>
+      Entonces responde HTTP 404 Not Found.
+    </td>
+  </tr>
+</table>
+<br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>51</th>
+    <th>Epic ID</th>
+    <th>12</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">API: validar y registrar pago</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como developer, quiero un endpoint PATCH /api/payments/:id para que el comerciante apruebe o rechace pagos desde el dashboard.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Aprobación de pago y descuento de stock</strong><br>
+      Dado que se envía PATCH /api/payments/:id con status: 'aprobado',<br>
+      Cuando el servidor procesa la validación,<br>
+      Entonces responde HTTP 200, actualiza el pedido a 'confirmado' y descuenta el stock.<br><br>
+      <strong>Scenario 2: Rechazo de pago con motivo registrado</strong><br>
+      Dado que se envía PATCH /api/payments/:id con status: 'rechazado' y motivo,<br>
+      Cuando el servidor procesa el rechazo,<br>
+      Entonces responde HTTP 200 y registra el motivo en el historial.<br><br>
+      <strong>Scenario 3: Pago no encontrado</strong><br>
+      Dado que el id de pago no existe,<br>
+      Cuando el servidor busca el recurso,<br>
+      Entonces responde HTTP 404 Not Found.
+    </td>
+  </tr>
+</table>
+<br></br>
+
 ## 3.2. Impact Mapping
 
 _Contenido por agregar._
