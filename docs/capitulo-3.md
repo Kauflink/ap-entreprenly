@@ -45,6 +45,10 @@
     <td align="center">6</td>
     <td align="center">Visualización de detalles de Lotes</td>
   </tr>
+  <tr>
+    <td align="center">13</td>
+    <td align="center">Buscador de Productos</td>
+  </tr>
 </table>
 <br> </br>
 
@@ -538,6 +542,42 @@ Dado que el usuario está en la sección de lotes<br>
 Y uno o más lotes tienen una fecha de caducidad menor a la fecha actual<br>
 Cuando el usuario accede al dashboard de lotes<br>
 Entonces se debe mostrar una alerta indicando los lotes vencidos<br><br>
+
+</td>
+</tr>
+</table>
+
+<br><br>
+<table>
+<tr>
+<th>User Story</th>
+<th>13</th>
+<th>Epic ID</th>
+<th>01</th>
+</tr>
+<tr>
+<td><strong>Title</strong></td>
+<td colspan="3">Buscador de Productos</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td colspan="3">
+Como usuario quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.
+</td>
+</tr>
+<tr>
+<td><strong>Acceptance Criteria</strong></td>
+<td colspan="3">
+
+<strong>Scenario 1: Búsqueda de productos por nombre</strong><br>
+Dado que el usuario está en el listado de productos<br>
+Cuando ingresa el nombre de un producto en el campo de búsqueda<br>
+Entonces el sistema debe filtrar y mostrar los productos que coincidan con el nombre ingresado<br><br>
+
+<strong>Scenario 2: Búsqueda de productos por categoría</strong><br>
+Dado que el usuario está en el listado de productos<br>
+Cuando selecciona o ingresa una categoría en el buscador<br>
+Entonces el sistema debe filtrar y mostrar los productos que pertenecen a esa categoría<br><br>
 
 </td>
 </tr>
