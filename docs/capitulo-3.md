@@ -171,7 +171,66 @@
 </table>
 <br> </br>
 
-*agregar epic 5 y 6*
+<table>
+  <tr>
+    <th>Epic-05</th>
+    <th>Control de Ingresos y Arqueo de Caja</th>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      Como cajero o comerciante quiero contar con un módulo de ventas integrado con dispositivos IoT y persistencia en base de datos, para procesar transacciones de manera rápida, emitir comprobantes legales y mantener el inventario sincronizado automáticamente.
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">25</td>
+    <td align="center">Selección y Registro de Ítems</td>
+  </tr>
+  <tr>
+    <td align="center">26</td>
+    <td align="center">Registro de Productos por Peso (IoT)</td>
+  </tr>
+  <tr>
+    <td align="center">27</td>
+    <td align="center">Gestión del Detalle del Ticket de Venta</td>
+  </tr>
+  <tr>
+    <td align="center">28</td>
+    <td align="center">Selección de Método de Pago</td>
+  </tr>
+
+  <tr>
+    <td align="center">30</td>
+    <td align="center">Finalización de Venta, Registro y Emisión de Comprobante</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Epic-06</th>
+    <th>Gestion de Ventas</th>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      Como comerciante, quiero que el sistema centralice y clasifique los ingresos según el medio de pago en tiempo real, para realizar el arqueo de caja al final del día de manera exacta y sin errores manuales.
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">29</td>
+    <td align="center">Clasificación Automática de Ingresos por Medio de Pago</td>
+  </tr>
+
+  <tr>
+    <td align="center">31</td>
+    <td align="center">Consulta de Resumen de Caja Diario</td>
+  </tr>
+  
+</table>
 
 <table>
   <tr>
