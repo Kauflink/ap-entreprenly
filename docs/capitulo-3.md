@@ -402,7 +402,83 @@
   </tr>
 </table>
 <br></br>
-
+<table>
+  <tr>
+    <th>Epic-13</th>
+    <th>Inicio de Sesión y Registro</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      Como usuario quiero poder registrarme, verificar mi cuenta, iniciar sesión y recuperar mi contraseña para acceder de forma segura a la plataforma.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">52</td>
+    <td align="center">Registro de cuenta con email</td>
+  </tr>
+  <tr>
+    <td align="center">53</td>
+    <td align="center">Verificación de email</td>
+  </tr>
+  <tr>
+    <td align="center">54</td>
+    <td align="center">Inicio de sesión con credenciales</td>
+  </tr>
+  <tr>
+    <td align="center">55</td>
+    <td align="center">Inicio de sesión con Google OAuth</td>
+  </tr>
+  <tr>
+    <td align="center">56</td>
+    <td align="center">Recuperación de contraseña</td>
+  </tr>
+  <tr>
+    <td align="center">57</td>
+    <td align="center">Cierre de sesión</td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>Epic-14</th>
+    <th>Perfil y Configuración</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <strong>Descripción:</strong>
+      Como usuario quiero gestionar mi perfil y preferencias personales para personalizar mi experiencia dentro de la plataforma.
+    </td>
+  </tr>
+  <tr>
+    <td align="center">58</td>
+    <td align="center">Visualizar perfil actual</td>
+  </tr>
+  <tr>
+    <td align="center">59</td>
+    <td align="center">Actualizar nombre y biografía</td>
+  </tr>
+  <tr>
+    <td align="center">60</td>
+    <td align="center">Subir foto de perfil</td>
+  </tr>
+  <tr>
+    <td align="center">61</td>
+    <td align="center">Cambiar email con re-verificación</td>
+  </tr>
+  <tr>
+    <td align="center">62</td>
+    <td align="center">Cambiar contraseña</td>
+  </tr>
+  <tr>
+    <td align="center">63</td>
+    <td align="center">Configurar preferencias de idioma, zona horaria y tema</td>
+  </tr>
+  <tr>
+    <td align="center">64</td>
+    <td align="center">Configurar notificaciones</td>
+  </tr>
+</table>
 
 <!-- US-->
 <table>
@@ -2285,6 +2361,467 @@ Y no permitir la creación del lote<br><br>
   </tr>
 </table>
 <br></br>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>52</th>
+    <th>Epic ID</th>
+    <th>13</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Registro de cuenta con email</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly.
+    </td>
+  </tr>
+  <br><br>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Registro exitoso</strong><br>
+      Dado que el usuario ingresa un email no registrado y una contraseña válida,<br>
+      Cuando envía el formulario de registro,<br>
+      Entonces el sistema crea la cuenta, envía un email de verificación y muestra un mensaje de confirmación.<br><br>
+      <strong>Scenario 2: Email ya registrado</strong><br>
+      Dado que el usuario ingresa un email que ya existe en el sistema,<br>
+      Cuando envía el formulario de registro,<br>
+      Entonces el sistema muestra un mensaje de error indicando que el email ya está en uso.<br><br>
+      <strong>Scenario 3: Datos inválidos</strong><br>
+      Dado que el usuario ingresa una contraseña que no cumple los requisitos mínimos,<br>
+      Cuando envía el formulario,<br>
+      Entonces el sistema muestra los errores de validación correspondientes sin crear la cuenta.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>53</th>
+    <th>Epic ID</th>
+    <th>13</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Verificación de email</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.
+    </td>
+  </tr>
+  <br><br>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Verificación exitosa</strong><br>
+      Dado que el usuario hace clic en el enlace de verificación válido,<br>
+      Cuando el sistema valida el token,<br>
+      Entonces la cuenta queda activa y el usuario es redirigido al dashboard principal.<br><br>
+      <strong>Scenario 2: Token expirado</strong><br>
+      Dado que el usuario hace clic en un enlace de verificación cuyo token ha expirado,<br>
+      Cuando el sistema intenta validarlo,<br>
+      Entonces muestra un mensaje de error y ofrece la opción de reenviar el email de verificación.<br><br>
+      <strong>Scenario 3: Token inválido</strong><br>
+      Dado que el usuario accede a un enlace de verificación con un token malformado,<br>
+      Cuando el sistema intenta procesarlo,<br>
+      Entonces muestra un mensaje de error indicando que el enlace no es válido.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>54</th>
+    <th>Epic ID</th>
+    <th>13</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Inicio de sesión con credenciales</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Inicio de sesión exitoso</strong><br>
+      Dado que el usuario ingresa credenciales válidas,<br>
+      Cuando envía el formulario de login,<br>
+      Entonces el sistema genera un JWT, inicia la sesión y redirige al dashboard principal.<br><br>
+      <strong>Scenario 2: Credenciales inválidas</strong><br>
+      Dado que el usuario ingresa una contraseña incorrecta,<br>
+      Cuando envía el formulario de login,<br>
+      Entonces el sistema muestra un mensaje de error sin revelar cuál campo es incorrecto.<br><br>
+      <strong>Scenario 3: Cuenta bloqueada por intentos fallidos</strong><br>
+      Dado que el usuario ha fallado 5 intentos consecutivos de inicio de sesión,<br>
+      Cuando intenta iniciar sesión nuevamente,<br>
+      Entonces el sistema bloquea la cuenta y notifica al usuario por email.
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>55</th>
+    <th>Epic ID</th>
+    <th>13</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Inicio de sesión con Google OAuth</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: OAuth exitoso con cuenta nueva</strong><br>
+      Dado que el usuario inicia el flujo OAuth con una cuenta de Google no registrada previamente,<br>
+      Cuando Google autoriza el acceso y devuelve el token,<br>
+      Entonces el sistema crea una nueva cuenta vinculada al proveedor e inicia la sesión.<br><br>
+      <strong>Scenario 2: OAuth exitoso con cuenta existente</strong><br>
+      Dado que el usuario inicia el flujo OAuth con un email ya registrado en el sistema,<br>
+      Cuando Google devuelve el token,<br>
+      Entonces el sistema vincula el proveedor a la cuenta existente e inicia la sesión.<br><br>
+      <strong>Scenario 3: OAuth denegado por el usuario</strong><br>
+      Dado que el usuario cancela la autorización en la pantalla de Google,<br>
+      Cuando el flujo OAuth es interrumpido,<br>
+      Entonces el sistema redirige al usuario a la pantalla de login sin crear ninguna cuenta.
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>56</th>
+    <th>Epic ID</th>
+    <th>13</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Recuperación de contraseña</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.
+    </td>
+  </tr>
+  <br><br>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Reset exitoso</strong><br>
+      Dado que el usuario solicita el reset con un email registrado y confirma la nueva contraseña desde el enlace recibido,<br>
+      Cuando el sistema procesa la solicitud,<br>
+      Entonces actualiza la contraseña, invalida todas las sesiones anteriores y redirige al login.<br><br>
+      <strong>Scenario 2: Token de reset expirado</strong><br>
+      Dado que el usuario accede al enlace de reset después de que el token ha expirado,<br>
+      Cuando el sistema intenta validarlo,<br>
+      Entonces muestra un mensaje de error y solicita generar un nuevo enlace.<br><br>
+      <strong>Scenario 3: Email no registrado</strong><br>
+      Dado que el usuario solicita el reset con un email que no existe en el sistema,<br>
+      Cuando envía el formulario,<br>
+      Entonces el sistema responde con un mensaje genérico sin confirmar ni negar la existencia del email.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>57</th>
+    <th>Epic ID</th>
+    <th>13</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Cierre de sesión</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.
+    </td>
+  </tr>
+  <br><br>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Cierre de sesión exitoso</strong><br>
+      Dado que el usuario hace clic en la opción de cerrar sesión,<br>
+      Cuando el sistema procesa la solicitud,<br>
+      Entonces revoca el JWT activo y redirige al usuario a la pantalla de login.<br><br>
+      <strong>Scenario 2: Intento de acceso tras cerrar sesión</strong><br>
+      Dado que el usuario ha cerrado su sesión y el token ha sido revocado,<br>
+      Cuando intenta acceder a una ruta protegida,<br>
+      Entonces el sistema rechaza la solicitud y redirige al login.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>58</th>
+    <th>Epic ID</th>
+    <th>14</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Visualizar perfil actual</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Visualización exitosa</strong><br>
+      Dado que el usuario navega a la sección de perfil,<br>
+      Cuando el sistema carga los datos,<br>
+      Entonces muestra nombre, bio, foto de perfil, email y preferencias actuales del usuario.<br><br>
+      <strong>Scenario 2: Sesión expirada</strong><br>
+      Dado que la sesión del usuario ha expirado,<br>
+      Cuando intenta acceder a la sección de perfil,<br>
+      Entonces el sistema redirige al login.
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>59</th>
+    <th>Epic ID</th>
+    <th>14</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Actualizar nombre y biografía</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.
+    </td>
+  </tr>
+  <br><br>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Actualización exitosa</strong><br>
+      Dado que el usuario edita su nombre y/o bio con datos válidos,<br>
+      Cuando guarda los cambios,<br>
+      Entonces el sistema actualiza los datos y muestra el perfil con la información nueva.<br><br>
+      <strong>Scenario 2: Campo obligatorio vacío</strong><br>
+      Dado que el usuario deja el campo de nombre vacío,<br>
+      Cuando intenta guardar,<br>
+      Entonces el sistema muestra un error de validación sin guardar los cambios.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>60</th>
+    <th>Epic ID</th>
+    <th>14</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Subir foto de perfil</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Subida exitosa</strong><br>
+      Dado que el usuario selecciona una imagen con formato y tamaño permitidos,<br>
+      Cuando la sube al sistema,<br>
+      Entonces el servicio de almacenamiento guarda el archivo, actualiza la URL del avatar y muestra la nueva foto en el perfil.<br><br>
+      <strong>Scenario 2: Formato de imagen no permitido</strong><br>
+      Dado que el usuario intenta subir un archivo con formato no soportado,<br>
+      Cuando el sistema valida el archivo,<br>
+      Entonces muestra un mensaje de error indicando los formatos aceptados sin guardar el archivo.<br><br>
+      <strong>Scenario 3: Tamaño de archivo excedido</strong><br>
+      Dado que el usuario intenta subir una imagen que supera el tamaño máximo permitido,<br>
+      Cuando el sistema valida el archivo,<br>
+      Entonces muestra un mensaje de error indicando el límite de tamaño.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>61</th>
+    <th>Epic ID</th>
+    <th>14</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Cambiar email con re-verificación</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.
+    </td>
+  </tr>
+<br><br>
+
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Cambio de email exitoso</strong><br>
+      Dado que el usuario solicita cambiar su email a uno no registrado previamente,<br>
+      Cuando confirma el nuevo email desde el enlace enviado,<br>
+      Entonces el sistema actualiza el email y lo marca como verificado.<br><br>
+      <strong>Scenario 2: Nuevo email ya en uso</strong><br>
+      Dado que el usuario ingresa un email que ya pertenece a otra cuenta,<br>
+      Cuando intenta guardar el cambio,<br>
+      Entonces el sistema muestra un mensaje de error sin actualizar el email.<br><br>
+      <strong>Scenario 3: Confirmación desde enlace expirado</strong><br>
+      Dado que el usuario hace clic en el enlace de confirmación después de que ha expirado,<br>
+      Cuando el sistema valida el token,<br>
+      Entonces muestra un mensaje de error y ofrece reenviar el email de confirmación.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>62</th>
+    <th>Epic ID</th>
+    <th>14</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Cambiar contraseña</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Cambio exitoso</strong><br>
+      Dado que el usuario ingresa su contraseña actual correcta y una nueva contraseña válida,<br>
+      Cuando guarda el cambio,<br>
+      Entonces el sistema actualiza la contraseña e invalida todas las sesiones activas excepto la actual.<br><br>
+      <strong>Scenario 2: Contraseña actual incorrecta</strong><br>
+      Dado que el usuario ingresa una contraseña actual incorrecta,<br>
+      Cuando intenta guardar el cambio,<br>
+      Entonces el sistema muestra un error de validación sin actualizar la contraseña.<br><br>
+      <strong>Scenario 3: Nueva contraseña no cumple requisitos</strong><br>
+      Dado que el usuario ingresa una nueva contraseña que no cumple los requisitos mínimos,<br>
+      Cuando intenta guardar,<br>
+      Entonces el sistema muestra los requisitos incumplidos sin aplicar el cambio.
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>63</th>
+    <th>Epic ID</th>
+    <th>14</th>
+  </tr>
+  <br><br>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Configurar preferencias de idioma, zona horaria y tema</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero configurar mi idioma, zona horaria y tema visual para adaptar la plataforma a mis preferencias.
+    </td>
+  </tr>
+  <br><br>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Cambio de idioma exitoso</strong><br>
+      Dado que el usuario selecciona un idioma disponible,<br>
+      Cuando guarda la preferencia,<br>
+      Entonces el sistema actualiza el idioma de la interfaz de forma inmediata.<br><br>
+      <strong>Scenario 2: Cambio de zona horaria exitoso</strong><br>
+      Dado que el usuario selecciona una zona horaria de la lista disponible,<br>
+      Cuando guarda la preferencia,<br>
+      Entonces el sistema almacena la zona horaria y la aplica en las fechas mostradas.<br><br>
+      <strong>Scenario 3: Cambio de tema exitoso</strong><br>
+      Dado que el usuario selecciona el tema claro u oscuro,<br>
+      Cuando guarda la preferencia,<br>
+      Entonces el sistema aplica el tema seleccionado de forma inmediata y lo persiste para futuras sesiones.
+    </td>
+  </tr>
+</table>
+<br><br>
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>64</th>
+    <th>Epic ID</th>
+    <th>14</th>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td colspan="3">Configurar notificaciones</td>
+  </tr>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td colspan="3">
+      Como usuario autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Acceptance Criteria</strong></td>
+    <td colspan="3">
+      <strong>Scenario 1: Guardado exitoso de preferencias</strong><br>
+      Dado que el usuario activa o desactiva tipos de notificación disponibles,<br>
+      Cuando guarda los cambios,<br>
+      Entonces el sistema almacena las preferencias y las aplica en los envíos futuros.<br><br>
+      <strong>Scenario 2: Sin cambios realizados</strong><br>
+      Dado que el usuario accede a la sección de notificaciones sin modificar nada,<br>
+      Cuando sale de la sección,<br>
+      Entonces el sistema mantiene las preferencias anteriores sin alteración.
+    </td>
+  </tr>
+</table>
 
 ## 3.2. Impact Mapping
 
