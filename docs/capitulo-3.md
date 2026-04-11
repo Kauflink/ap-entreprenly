@@ -46,7 +46,7 @@
     <td align="center">Visualización de detalles de Lotes</td>
   </tr>
   <tr>
-    <td align="center">13</td>
+    <td align="center">12</td>
     <td align="center">Buscador de Productos</td>
   </tr>
   <tr>
