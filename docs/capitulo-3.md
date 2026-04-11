@@ -1568,7 +1568,7 @@ Y no permitir la creación del lote<br><br>
 <strong>Scenario 2: Procesamiento de cierre de venta (Ruta Feliz)
 </strong><br>
 <strong>Dado</strong> que el total de la venta ha sido calculado y revisado,<br>
-<strong>Cuando</strong> el cajero selecciona el medio de pago (Efectivo, Tarjeta o Digital),<br>
+<strong>Cuando</strong> el cajero selecciona el medio de pago (Efectivo, Tarjeta/Yape/Plin),<br>
 <strong>Y</strong> confirma que el monto recibido es correcto,<br>
 <strong>Entonces</strong> el sistema habilita la opción para procesar el cierre de la transacción.<br>
 
@@ -1585,14 +1585,14 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Consulta de Resumen de Caja Diario
+<td colspan="3">Monitoreo de Resumen de Caja en Panel de Ventas
 
 </td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
 <td colspan="3">
-<strong>Como</strong> cajero, <strong>quiero</strong> procesar el pago y finalizar la venta con un solo paso, <strong>para</strong> registrar la transacción en el sistema y entregarle su boleta al cliente de forma inmediata.
+<strong>Como</strong> cajero, <strong>quiero</strong> visualizar de forma centralizada y en tiempo real el resumen de los ingresos acumulados por método de pago dentro del mismo panel de ventas, <strong>para</strong> tener un control inmediato de los saldos acumulados del día sin necesidad de salir de la interfaz operativa principal.
 
 </td>
 </tr>
@@ -1600,12 +1600,11 @@ Y no permitir la creación del lote<br><br>
 <td><strong>Acceptance Criteria</strong></td>
 <td colspan="3">
 
-<strong>Scenario 1: Visualización detallada de ingresos
+<strong>Scenario 1: Visualización centralizada de ingresos operativos
 </strong><br>
-<strong>Dado</strong> que el comerciante accede a la sección de "Cierre de Caja" o "Reportes",
-<strong>Cuando</strong> el sistema consulta los saldos acumulados en la base de datos,
-<strong>Y</strong> desglosa los totales por: Efectivo, Tarjeta y Yape/Plin,
-<strong>Entonces</strong> el sistema muestra el monto total general y la suma independiente de cada categoría para el arqueo final.
+<strong>Dado</strong> que el cajero se encuentra en la sección principal de "Ventas",
+<strong>Cuando</strong> realiza transacciones sucesivas,
+<strong>Entonces</strong> el sistema actualiza automáticamente el panel de "Resumen de Caja", mostrando en tiempo real los siguientes datos desglosados.
 
 </td>
 </tr>
