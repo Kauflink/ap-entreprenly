@@ -7,51 +7,51 @@
 <table>
   <tr>
     <th>Epic-01</th>
-    <th>Gestión de Inventario</th>
+    <th>Gestión de inventario</th>
   </tr>
 
   <tr>
     <td colspan="2" >
       <strong >Descripción:</strong>
-      Como usuario quiero gestionar mi inventario(lotes y productos) para visualizar los datos con mayor claridad.
+      Como usuario quiero gestionar mi inventario (lotes y productos) para visualizar los datos con mayor claridad.
     </td>
   </tr>
 
   <tr>
     <td align="center">1</td>
-    <td align="center">Agregación de Productos</td>
+    <td align="center">Agregar productos</td>
   </tr>
   <tr>
     <td align="center">2</td>
-    <td align="center">Edición de lotes</td>
+    <td align="center">Editar lotes</td>
   </tr>
   <tr>
     <td align="center">3</td>
-    <td align="center">Agregación de Lotes</td>
+    <td align="center">Agregar lotes</td>
   </tr>
   <tr>
     <td align="center">4</td>
-    <td align="center">Eliminación de Lotes</td>
+    <td align="center">Eliminar lotes</td>
   </tr>
   <tr>
     <td align="center">10</td>
-    <td align="center">Visualización de detalles de Producto</td>
+    <td align="center">Visualizar detalles de producto</td>
   </tr>
   <tr>
     <td align="center">5</td>
-    <td align="center">Edición de Productos</td>
+    <td align="center">Editar productos</td>
   </tr>
   <tr>
     <td align="center">6</td>
-    <td align="center">Visualización de detalles de Lotes</td>
+    <td align="center">Visualizar detalles de lotes</td>
   </tr>
   <tr>
     <td align="center">12</td>
-    <td align="center">Buscador de Productos</td>
+    <td align="center">Buscar productos</td>
   </tr>
   <tr>
     <td align="center">23</td>
-    <td align="center">Creación de lotes</td>
+    <td align="center">Crear lotes</td>
   </tr>
 </table>
 <br><br>
@@ -59,7 +59,7 @@
   <tr>
     <th>Epic-02</th>
     <th>
-      Notificaciones de Inventario
+      Notificaciones de inventario
     </th>
   </tr>
 
@@ -72,7 +72,7 @@
 
   <tr>
     <td align="center">7</td>
-    <td align="center">Detección de Stock Agotado</td>
+    <td align="center">Detectar stock agotado</td>
   </tr>
   <tr>
     <td align="center">8</td>
@@ -81,12 +81,12 @@
   
   <tr>
     <td align="center">9</td>
-    <td align="center">Dashboard de Lotes</td>
+    <td align="center">Visualizar dashboard de lotes</td>
   </tr>
 
   <tr>
     <td align="center">11</td>
-    <td align="center">Alerta de caducación de Lote</td>
+    <td align="center">Recibir alerta de caducidad de lote</td>
   </tr>
 </table>
 <br><br>
@@ -163,7 +163,7 @@
 <table>
   <tr>
     <th>Epic-05</th>
-    <th>Control de Ingresos y Arqueo de Caja</th>
+    <th>Control de ingresos y Arqueo de caja</th>
   </tr>
 
   <tr>
@@ -175,31 +175,31 @@
 
   <tr>
     <td align="center">24</td>
-    <td align="center">Selección y Registro de Ítems</td>
+    <td align="center">Seleccionar y registrar ítems</td>
   </tr>
   <tr>
     <td align="center">25</td>
-    <td align="center">Registro de Productos por Peso (IoT)</td>
+    <td align="center">Registrar productos por peso (IoT)</td>
   </tr>
   <tr>
     <td align="center">26</td>
-    <td align="center">Gestión del Detalle del Ticket de Venta</td>
+    <td align="center">Gestionar detalle del ticket de venta</td>
   </tr>
   <tr>
     <td align="center">27</td>
-    <td align="center">Selección de Método de Pago</td>
+    <td align="center">Seleccionar método de pago</td>
   </tr>
 
   <tr>
     <td align="center">29</td>
-    <td align="center">Finalización de Venta, Registro y Emisión de Comprobante</td>
+    <td align="center">Finalizar venta, registrar transacción y emitir comprobante</td>
   </tr>
 </table>
 <br><br>
 <table>
   <tr>
     <th>Epic-06</th>
-    <th>Gestion de Ventas</th>
+    <th>Gestion de ventas</th>
   </tr>
 
   <tr>
@@ -211,12 +211,12 @@
 
   <tr>
     <td align="center">28</td>
-    <td align="center">Clasificación Automática de Ingresos por Medio de Pago</td>
+    <td align="center">Clasificar ingresos por medio de pago</td>
   </tr>
 
   <tr>
     <td align="center">30</td>
-    <td align="center">Consulta de Resumen de Caja Diario</td>
+    <td align="center">Consultar resumen diario de caja</td>
   </tr>
   
 </table>
@@ -224,7 +224,7 @@
 <table>
   <tr>
     <th>Epic-07</th>
-    <th>Conversación y Catálogo</th>
+    <th>Conversación y catálogo</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -242,14 +242,14 @@
   </tr>
   <tr>
     <td align="center">33</td>
-    <td align="center">Catálogo sincronizado con inventario real</td>
+    <td align="center">Sincronizar catálogo con inventario real</td>
   </tr>
 </table>
 <br><br>
 <table>
   <tr>
     <th>Epic-08</th>
-    <th>Gestión de Pedido y Stock</th>
+    <th>Gestión de pedido y stock</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -278,7 +278,7 @@
 <table>
   <tr>
     <th>Epic-09</th>
-    <th>Pago Digital P2P</th>
+    <th>Pago digital P2P</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -307,7 +307,7 @@
 <table>
   <tr>
     <th>Epic-10</th>
-    <th>Confirmación, Venta y Comprobante</th>
+    <th>Confirmación, venta y comprobante</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -332,7 +332,7 @@
 <table>
   <tr>
     <th>Epic-11</th>
-    <th>Flujos Alternativos y Restricciones</th>
+    <th>Flujos alternativos y restricciones</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -382,7 +382,7 @@
 <table>
   <tr>
     <th>Epic-13</th>
-    <th>Inicio de Sesión y Registro</th>
+    <th>Inicio de sesión y registro</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -392,34 +392,34 @@
   </tr>
   <tr>
     <td align="center">51</td>
-    <td align="center">Registro de cuenta con email</td>
+    <td align="center">Registrar cuenta con email</td>
   </tr>
   <tr>
     <td align="center">52</td>
-    <td align="center">Verificación de email</td>
+    <td align="center">Verificar email</td>
   </tr>
   <tr>
     <td align="center">53</td>
-    <td align="center">Inicio de sesión con credenciales</td>
+    <td align="center">Iniciar sesión con credenciales</td>
   </tr>
   <tr>
     <td align="center">54</td>
-    <td align="center">Inicio de sesión con Google OAuth</td>
+    <td align="center">Iniciar sesión con Google OAuth</td>
   </tr>
   <tr>
     <td align="center">55</td>
-    <td align="center">Recuperación de contraseña</td>
+    <td align="center">Recuperar contraseña</td>
   </tr>
   <tr>
     <td align="center">56</td>
-    <td align="center">Cierre de sesión</td>
+    <td align="center">Cerrar sesión</td>
   </tr>
 </table>
 <br><br>
 <table>
   <tr>
     <th>Epic-14</th>
-    <th>Perfil y Configuración</th>
+    <th>Perfil y configuración</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -458,7 +458,9 @@
 </table>
 
 <!-- US-->
+
 <br><br>
+
 <table>
 <tr>
 <th>User Story</th>
@@ -468,7 +470,7 @@
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Agregación de Productos</td>
+<td colspan="3">Agregar productos</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -505,7 +507,7 @@ Entonces el sistema mostrará mensajes de error
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Edición de lotes</td>
+<td colspan="3">Editar lotes</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -543,7 +545,7 @@ Entonces el sistema mostrará mensajes de error y no guardará los cambios
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Agregación de Lotes</td>
+<td colspan="3">Agregar lotes</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -582,7 +584,7 @@ Entonces saldrá un mensaje de error por campo inválido
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Eliminación de Lotes</td>
+<td colspan="3">Eliminar lotes</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -619,7 +621,7 @@ Entonces saldrá un mensaje de error de no haber seleccionado un lote
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Edición de Productos</td>
+<td colspan="3">Editar productos</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -656,7 +658,7 @@ Entonces el sistema mostrará mensajes de error<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Visualización de detalles de Lotes</td>
+<td colspan="3">Visualizar detalles de lotes</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -693,7 +695,7 @@ Entonces los detalles saldrá un mensaje de error<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Detección de Stock Agotado</td>
+<td colspan="3">Detectar stock agotado</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -767,7 +769,7 @@ Entonces se mostrarán los detalles del lote sin alertas<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Dashboard de Lotes</td>
+<td colspan="3">Visualizar dashboard de lotes</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -803,7 +805,7 @@ Entonces no se debe mostrar el banner de alertas<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Visualización de detalles de Producto</td>
+<td colspan="3">Visualizar detalles de producto</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -841,7 +843,7 @@ Y los campos faltantes deben mostrarse como vacíos("-")<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Alerta de caducación de Lote</td>
+<td colspan="3">Recibir alerta de caducidad de lote</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -879,7 +881,7 @@ Entonces se debe mostrar una alerta indicando los lotes vencidos<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Buscador de Productos</td>
+<td colspan="3">Buscar productos</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -1288,7 +1290,7 @@ Y el acceso permanecerá habilitado hasta el final del periodo<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Creación de lotes</td>
+<td colspan="3">Crear lotes</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -1328,7 +1330,7 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Selección y Registro de Ítems</td>
+<td colspan="3">Seleccionar y registrar ítems</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -1342,7 +1344,7 @@ Y no permitir la creación del lote<br><br>
 
 <strong>Scenario 1: Selección de producto existente</strong><br>
 <strong>Dado</strong> que el cajero se encuentra en la interfaz de ventas,<br>
-<strong>Cuando</strong> ingresa el  nombre del producto en el buscador,<br>
+<strong>Cuando</strong> ingresa el nombre del producto en el buscador,<br>
 <strong>Y</strong> haya ingresado la cantidad <br>
 <strong>Y</strong> presiona la tecla enter para confirmar,<br>
 <strong>Entonces</strong> el sistema añade el producto con su información base al detalle de la venta.<br><br>
@@ -1366,7 +1368,7 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Registro de Productos por Peso (IoT)</td>
+<td colspan="3">Registrar productos por peso (IoT)</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -1405,7 +1407,7 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Gestión del Detalle del Ticket de Venta</td>
+<td colspan="3">Gestionar detalle del ticket de venta</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -1437,7 +1439,7 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Selección de Método de Pago</td>
+<td colspan="3">Seleccionar método de pago</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -1477,7 +1479,7 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Clasificación Automática de Ingresos por Medio de Pago</td>
+<td colspan="3">Clasificar ingresos por medio de pago</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
@@ -1510,7 +1512,7 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Finalización de Venta, Registro y Emisión de Comprobante
+<td colspan="3">Finalizar venta, registrar transacción y emitir comprobante
 
 </td>
 </tr>
@@ -1552,7 +1554,7 @@ Y no permitir la creación del lote<br><br>
 </tr>
 <tr>
 <td><strong>Title</strong></td>
-<td colspan="3">Consulta de Resumen de Caja Diario
+<td colspan="3">Consultar resumen diario de caja
 
 </td>
 </tr>
@@ -1653,7 +1655,7 @@ Y no permitir la creación del lote<br><br>
   </tr>
   <tr>
     <td><strong>Title</strong></td>
-    <td colspan="3">Catálogo sincronizado con inventario real</td>
+    <td colspan="3">Sincronizar catálogo con inventario real</td>
   </tr>
   <tr>
     <td><strong>Description</strong></td>
@@ -2252,7 +2254,7 @@ Y no permitir la creación del lote<br><br>
   </tr>
   <tr>
     <td><strong>Title</strong></td>
-    <td colspan="3">Registro de cuenta con email</td>
+    <td colspan="3">Registrar cuenta con email</td>
   </tr>
   <tr>
     <td><strong>Description</strong></td>
@@ -2289,7 +2291,7 @@ Y no permitir la creación del lote<br><br>
   </tr>
   <tr>
     <td><strong>Title</strong></td>
-    <td colspan="3">Verificación de email</td>
+    <td colspan="3">Verificar email</td>
   </tr>
   <tr>
     <td><strong>Description</strong></td>
@@ -2326,7 +2328,7 @@ Y no permitir la creación del lote<br><br>
   </tr>
   <tr>
     <td><strong>Title</strong></td>
-    <td colspan="3">Inicio de sesión con credenciales</td>
+    <td colspan="3">Iniciar sesión con credenciales</td>
   </tr>
   <tr>
     <td><strong>Description</strong></td>
@@ -2362,7 +2364,7 @@ Y no permitir la creación del lote<br><br>
   </tr>
   <tr>
     <td><strong>Title</strong></td>
-    <td colspan="3">Inicio de sesión con Google OAuth</td>
+    <td colspan="3">Iniciar sesión con Google OAuth</td>
   </tr>
   <tr>
     <td><strong>Description</strong></td>
@@ -2398,7 +2400,7 @@ Y no permitir la creación del lote<br><br>
   </tr>
   <tr>
     <td><strong>Title</strong></td>
-    <td colspan="3">Recuperación de contraseña</td>
+    <td colspan="3">Recuperar contraseña</td>
   </tr>
   <tr>
     <td><strong>Description</strong></td>
@@ -2435,7 +2437,7 @@ Y no permitir la creación del lote<br><br>
   </tr>
   <tr>
     <td><strong>Title</strong></td>
-    <td colspan="3">Cierre de sesión</td>
+    <td colspan="3">Cerrar sesión</td>
   </tr>
   <tr>
     <td><strong>Description</strong></td>
