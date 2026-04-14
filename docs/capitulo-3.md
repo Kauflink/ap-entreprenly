@@ -1392,7 +1392,7 @@ Como cajero, quiero ingresar el número de unidades de un producto seleccionado,
 
 <strong>Scenario 1: Confirmación de cantidad unitaria </strong><br>
 Dado que el modal "Registrar Cantidad" está abierto,<br>
-Cuando el cajero ingresa un número entero en el teclado numérico,<br>
+Cuando el cajero ingresa el número entero "3" en el teclado numérico,<br>
 Y presiona el botón "Confirmar cantidad",<br>
 Entonces el sistema calcula el subtotal y añade el ítem al detalle de la venta.<br><br>
 
@@ -1554,9 +1554,11 @@ Como cajero, quiero procesar el pago y finalizar la venta en un solo paso, para 
 
 <strong>Scenario 1: Procesamiento exitoso del cierre de venta</strong><br>
 Dado que el ticket de venta tiene productos añadidos y el método de pago ha sido seleccionado,<br>
+
 Cuando el cajero presiona el botón "Finalizar Venta y Emitir Boleta",<br>
 
 Y el sistema registra la información en la base de datos actualizando saldos y stock,<br>
+
 Entonces el sistema genera el comprobante de pago, muestra un mensaje de éxito y limpia la interfaz para una nueva venta.<br><br>
 
 <strong>Scenario 2: Bloqueo de finalización por datos incompletos</strong><br>
