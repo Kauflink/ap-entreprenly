@@ -163,60 +163,65 @@
 <table>
   <tr>
     <th>Epic-05</th>
-    <th>Control de ingresos y Arqueo de caja</th>
+    <th>Gestión de Transacciones y Operaciones de Venta</th>
   </tr>
 
   <tr>
     <td colspan="2">
       <strong>Descripción:</strong>
-      Como cajero o comerciante quiero contar con un módulo de ventas integrado con dispositivos IoT y persistencia en base de datos, para procesar transacciones de manera rápida, emitir comprobantes legales y mantener el inventario sincronizado automáticamente.
+      Como comerciante, quiero gestionar el proceso completo de registro de ventas, desde la selección de productos hasta la emisión del comprobante, para asegurar una operación ágil y sin errores.
     </td>
   </tr>
 
   <tr>
     <td align="center">24</td>
-    <td align="center">Seleccionar y registrar ítems</td>
+    <td align="center">Buscar productos en el inventario y validar su tipo de medida</td>
   </tr>
   <tr>
     <td align="center">25</td>
-    <td align="center">Registrar productos por peso (IoT)</td>
+    <td align="center">Registrar la cantidad de unidades en el Ticket de Venta</td>
   </tr>
   <tr>
     <td align="center">26</td>
-    <td align="center">Gestionar detalle del ticket de venta</td>
+    <td align="center">Capturar el peso mediante balanza IoT o ingreso manual</td>
   </tr>
   <tr>
     <td align="center">27</td>
-    <td align="center">Seleccionar método de pago</td>
+    <td align="center">Gestionar el desglose y cálculo del Ticket de Venta</td>
+  </tr>
+
+  <tr>
+    <td align="center">28</td>
+    <td align="center">Seleccionar el método de pago para la transacción</td>
   </tr>
 
   <tr>
     <td align="center">29</td>
-    <td align="center">Finalizar venta, registrar transacción y emitir comprobante</td>
+    <td align="center">Finalizar la venta, registrar la transacción y emitir el comprobante</td>
   </tr>
 </table>
 <br><br>
 <table>
   <tr>
     <th>Epic-06</th>
-    <th>Gestion de ventas</th>
+    <th>Control de Ingresos y Monitoreo de Caja</th>
   </tr>
 
   <tr>
     <td colspan="2">
       <strong>Descripción:</strong>
-      Como comerciante, quiero que el sistema centralice y clasifique los ingresos según el medio de pago en tiempo real, para realizar el arqueo de caja al final del día de manera exacta y sin errores manuales.
+      Como dueño del negocio, quiero supervisar los flujos de dinero entrante en tiempo real, para tener visibilidad total sobre la liquidez y los métodos de pago utilizados durante el día.
     </td>
   </tr>
 
   <tr>
-    <td align="center">28</td>
-    <td align="center">Clasificar ingresos por medio de pago</td>
+    <td align="center">30</td>
+    <td align="center">Clasificar automáticamente los ingresos según el medio de pago</td>
   </tr>
 
   <tr>
-    <td align="center">30</td>
-    <td align="center">Consultar resumen diario de caja</td>
+    <td align="center">31</td>
+    <td align="center">Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td>
   </tr>
   
 </table>
@@ -233,15 +238,15 @@
     </td>
   </tr>
   <tr>
-    <td align="center">31</td>
+    <td align="center">32</td>
     <td align="center">Iniciar conversación con chatbot</td>
   </tr>
   <tr>
-    <td align="center">32</td>
+    <td align="center">33</td>
     <td align="center">Recibir catálogo de productos</td>
   </tr>
   <tr>
-    <td align="center">33</td>
+    <td align="center">34</td>
     <td align="center">Sincronizar catálogo con inventario real</td>
   </tr>
 </table>
@@ -258,19 +263,19 @@
     </td>
   </tr>
   <tr>
-    <td align="center">34</td>
+    <td align="center">35</td>
     <td align="center">Seleccionar productos y cantidades</td>
   </tr>
   <tr>
-    <td align="center">35</td>
+    <td align="center">36</td>
     <td align="center">Registrar dirección de delivery</td>
   </tr>
   <tr>
-    <td align="center">36</td>
+    <td align="center">37</td>
     <td align="center">Generar pedido consolidado</td>
   </tr>
   <tr>
-    <td align="center">37</td>
+    <td align="center">38</td>
     <td align="center">Validar stock antes del pago</td>
   </tr>
 </table>
@@ -287,19 +292,19 @@
     </td>
   </tr>
   <tr>
-    <td align="center">38</td>
+    <td align="center">39</td>
     <td align="center">Recibir instrucciones de pago</td>
   </tr>
   <tr>
-    <td align="center">39</td>
+    <td align="center">40</td>
     <td align="center">Reportar pago digital realizado</td>
   </tr>
   <tr>
-    <td align="center">40</td>
+    <td align="center">41</td>
     <td align="center">Validar pago desde el dashboard</td>
   </tr>
   <tr>
-    <td align="center">41</td>
+    <td align="center">42</td>
     <td align="center">Notificar estado del pago al cliente</td>
   </tr>
 </table>
@@ -316,15 +321,15 @@
     </td>
   </tr>
   <tr>
-    <td align="center">42</td>
+    <td align="center">43</td>
     <td align="center">Confirmar pedido y descontar stock</td>
   </tr>
   <tr>
-    <td align="center">43</td>
+    <td align="center">44</td>
     <td align="center">Registrar venta en el sistema</td>
   </tr>
   <tr>
-    <td align="center">44</td>
+    <td align="center">45</td>
     <td align="center">Emitir comprobante al cliente</td>
   </tr>
 </table>
@@ -341,15 +346,15 @@
     </td>
   </tr>
   <tr>
-    <td align="center">45</td>
+    <td align="center">46</td>
     <td align="center">Manejar stock insuficiente</td>
   </tr>
   <tr>
-    <td align="center">46</td>
+    <td align="center">47</td>
     <td align="center">Cancelar pedido por timeout de pago</td>
   </tr>
   <tr>
-    <td align="center">47</td>
+    <td align="center">48</td>
     <td align="center">Rechazar pago fraudulento o incorrecto</td>
   </tr>
 </table>
@@ -366,15 +371,15 @@
     </td>
   </tr>
   <tr>
-    <td align="center">48</td>
+    <td align="center">49</td>
     <td align="center">API: obtener catálogo de productos</td>
   </tr>
   <tr>
-    <td align="center">49</td>
+    <td align="center">50</td>
     <td align="center">API: crear y actualizar pedido</td>
   </tr>
   <tr>
-    <td align="center">50</td>
+    <td align="center">51</td>
     <td align="center">API: validar y registrar pago</td>
   </tr>
 </table>
@@ -391,27 +396,27 @@
     </td>
   </tr>
   <tr>
-    <td align="center">51</td>
+    <td align="center">52</td>
     <td align="center">Registrar cuenta con email</td>
   </tr>
   <tr>
-    <td align="center">52</td>
+    <td align="center">53</td>
     <td align="center">Verificar email</td>
   </tr>
   <tr>
-    <td align="center">53</td>
+    <td align="center">54</td>
     <td align="center">Iniciar sesión con credenciales</td>
   </tr>
   <tr>
-    <td align="center">54</td>
+    <td align="center">55</td>
     <td align="center">Iniciar sesión con Google OAuth</td>
   </tr>
   <tr>
-    <td align="center">55</td>
+    <td align="center">56</td>
     <td align="center">Recuperar contraseña</td>
   </tr>
   <tr>
-    <td align="center">56</td>
+    <td align="center">57</td>
     <td align="center">Cerrar sesión</td>
   </tr>
 </table>
@@ -428,31 +433,31 @@
     </td>
   </tr>
   <tr>
-    <td align="center">57</td>
+    <td align="center">58</td>
     <td align="center">Visualizar perfil actual</td>
   </tr>
   <tr>
-    <td align="center">58</td>
+    <td align="center">59</td>
     <td align="center">Actualizar nombre y biografía</td>
   </tr>
   <tr>
-    <td align="center">59</td>
+    <td align="center">60</td>
     <td align="center">Subir foto de perfil</td>
   </tr>
   <tr>
-    <td align="center">60</td>
+    <td align="center">61</td>
     <td align="center">Cambiar email con re-verificación</td>
   </tr>
   <tr>
-    <td align="center">61</td>
+    <td align="center">62</td>
     <td align="center">Cambiar contraseña</td>
   </tr>
   <tr>
-    <td align="center">62</td>
+    <td align="center">63</td>
     <td align="center">Configurar preferencias de idioma, zona horaria y tema</td>
   </tr>
   <tr>
-    <td align="center">63</td>
+    <td align="center">64</td>
     <td align="center">Configurar notificaciones</td>
   </tr>
 </table>
