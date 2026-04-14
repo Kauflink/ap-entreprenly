@@ -1396,7 +1396,7 @@ Cuando el cajero ingresa el número entero "3" en el teclado numérico,<br>
 Y presiona el botón "Confirmar cantidad",<br>
 Entonces el sistema calcula el subtotal y añade el ítem al detalle de la venta.<br><br>
 
-<strong>Scenario 2: Validación de stock insuficiente</strong><br>
+<strong>Scenario 2: Validación de stock insuficiente por cantidad</strong><br>
 Dado que el cajero ha ingresado una cantidad en el modal,<br>
 Cuando el sistema verifica que la cantidad solicitada es mayor al stock disponible en el inventario,<br>
 Y el usuario intenta confirmar la acción,<br>
@@ -1442,6 +1442,11 @@ Cuando el cajero digita el peso observado físicamente en el teclado decimal,<br
 Y presiona el botón "Confirmar Peso",<br>
 Entonces el sistema registra el dato y añade el producto al ticket de venta.<br><br>
 
+<strong>Scenario 3: Validación de stock insuficiente por peso</strong><br>
+Dado que el cajero ha ingresado el peso en el modal,<br>
+Cuando el sistema verifica que el peso solicitado es mayor al stock disponible en el inventario,<br>
+Y el usuario intenta confirmar la acción,<br>
+Entonces el sistema muestra una alerta indicando "Stock insuficiente" y no permite añadir el producto al ticket.<br>
 
 </td>
 </tr>
