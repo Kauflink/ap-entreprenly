@@ -1563,7 +1563,7 @@ Entonces el sistema genera el comprobante de pago, muestra un mensaje de éxito 
 Dado que el cajero se encuentra en la pantalla de ventas,<br>
 Cuando intenta presionar el botón de finalizar venta sin productos en el ticket o sin método de pago,<br>
 Y el sistema detecta la ausencia de estos datos obligatorios,<br>
-Entonces el sistema muestra dos mensaje “No hay productos en el ticket” y “Por favor, seleccione un método de pago” manteniendo la interfaz de venta activa hasta que se completen los campos requeridos.<br>
+Entonces el sistema muestra un mensaje “No hay productos en el ticket” manteniendo la interfaz de venta activa hasta que se completen los campos requeridos.<br>
 
 
 </td>
