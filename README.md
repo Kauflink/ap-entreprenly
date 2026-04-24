@@ -3,7 +3,7 @@
 ---
 
 ![Logo de la UPC](docs/images/upc_logo.png "Universidad Peruana de Ciencias Aplicadas")
-x
+
 ### Universidad Peruana de Ciencias Aplicadas
 
 <small>Facultad de Ingeniería &nbsp;·&nbsp; Ingeniería de Software &nbsp;·&nbsp; 5to Ciclo</small>
