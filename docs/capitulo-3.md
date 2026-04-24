@@ -519,7 +519,7 @@
     <td>Epic-06</td>
   </tr>
 
-  <!-- EPIC 07 -->
+ <!-- EPIC 07 -->
   <tr>
     <td><strong>Epic-07</strong></td>
     <td><strong>Configurar Chatbot de WhatsApp Business</strong></td>
@@ -527,7 +527,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 32 -->
   <tr>
     <td>US-32</td>
@@ -537,20 +536,12 @@
       <strong>Scenario 1: Mostrar código QR en primer acceso</strong><br>
       Dado que el comerciante no tiene ninguna cuenta vinculada, cuando accede a la sección de chatbot, entonces el sistema genera y muestra un código QR válido para iniciar la vinculación.<br><br>
       <strong>Scenario 2: Vinculación exitosa tras escaneo</strong><br>
-      Dado que el comerciante escanea el código QR desde su WhatsApp Business, cuando el sistema confirma la conexión, entonces registra la vinculación, activa el chatbot y habilita la visualización de conversaciones.
-      <br><br>
-     <strong>Scenario 3: Vinculación fallida por código QR expirado</strong><br>
-      Dado que el comerciante está en el proceso de vinculación de WhatsApp Business,<br>
-      Cuando el código QR expira sin haber sido escaneado<br>
-      Y el sistema detecta que la sesión no fue establecida en el tiempo límite,<br>
-      Entonces el sistema descarta el código expirado<br>
-      Y muestra un mensaje indicando que el código expiró<br>
-      Y genera un nuevo código QR automáticamente para que el comerciante reintente la vinculación.
-      <br><br>
+      Dado que el comerciante escanea el código QR desde su WhatsApp Business, cuando el sistema confirma la conexión, entonces registra la vinculación, activa el chatbot y habilita la visualización de conversaciones.<br><br>
+      <strong>Scenario 3: Vinculación fallida por código QR expirado</strong><br>
+      Dado que el comerciante está en el proceso de vinculación de WhatsApp Business, cuando el código QR expira sin haber sido escaneado y el sistema detecta que la sesión no fue establecida en el tiempo límite, entonces el sistema descarta el código expirado, muestra un mensaje indicando que el código expiró y genera un nuevo código QR automáticamente.
     </td>
     <td>Epic-07</td>
   </tr>
-
   <!-- US 33 -->
   <tr>
     <td>US-33</td>
@@ -564,7 +555,6 @@
     </td>
     <td>Epic-07</td>
   </tr>
-
   <!-- EPIC 08 -->
   <tr>
     <td><strong>Epic-08</strong></td>
@@ -573,7 +563,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 34 -->
   <tr>
     <td>US-34</td>
@@ -587,7 +576,6 @@
     </td>
     <td>Epic-08</td>
   </tr>
-
   <!-- US 35 -->
   <tr>
     <td>US-35</td>
@@ -601,7 +589,6 @@
     </td>
     <td>Epic-08</td>
   </tr>
-
   <!-- EPIC 09 -->
   <tr>
     <td><strong>Epic-09</strong></td>
@@ -610,7 +597,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 36 -->
   <tr>
     <td>US-36</td>
@@ -624,7 +610,6 @@
     </td>
     <td>Epic-09</td>
   </tr>
-
   <!-- US 37 -->
   <tr>
     <td>US-37</td>
@@ -638,7 +623,6 @@
     </td>
     <td>Epic-09</td>
   </tr>
-
   <!-- US 38 -->
   <tr>
     <td>US-38</td>
@@ -650,14 +634,10 @@
       <strong>Scenario 2: Sistema registra pedido tras confirmación del cliente</strong><br>
       Dado que el bot envió el resumen y el cliente confirma que el pedido es correcto, entonces el sistema registra el pedido con estado pendiente y envía las instrucciones de pago.<br><br>
       <strong>Scenario 3: Solicitar dirección de entrega al cliente</strong><br>
-      Dado que el cliente confirmó los productos de su pedido,<br>
-      Cuando el chatbot verifica que aún no se registró una dirección de entrega,<br>
-      Entonces solicita al cliente que indique su dirección antes de continuar<br>
-      Y no genera el resumen del pedido hasta que el cliente la proporcione.
+      Dado que el cliente confirmó los productos de su pedido, cuando el chatbot verifica que aún no se registró una dirección de entrega, entonces solicita al cliente que indique su dirección antes de continuar y no genera el resumen del pedido hasta que el cliente la proporcione.
     </td>
     <td>Epic-09</td>
   </tr>
-
   <!-- EPIC 10 -->
   <tr>
     <td><strong>Epic-10</strong></td>
@@ -666,7 +646,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 39 -->
   <tr>
     <td>US-39</td>
@@ -680,7 +659,6 @@
     </td>
     <td>Epic-10</td>
   </tr>
-
   <!-- US 40 -->
   <tr>
     <td>US-40</td>
@@ -694,7 +672,6 @@
     </td>
     <td>Epic-10</td>
   </tr>
-
   <!-- US 41 -->
   <tr>
     <td>US-41</td>
@@ -710,7 +687,6 @@
     </td>
     <td>Epic-10</td>
   </tr>
-
   <!-- US 42 -->
   <tr>
     <td>US-42</td>
@@ -724,7 +700,6 @@
     </td>
     <td>Epic-10</td>
   </tr>
-
   <!-- EPIC 11 -->
   <tr>
     <td><strong>Epic-11</strong></td>
@@ -733,7 +708,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 43 -->
   <tr>
     <td>US-43</td>
@@ -747,7 +721,6 @@
     </td>
     <td>Epic-11</td>
   </tr>
-
   <!-- US 44 -->
   <tr>
     <td>US-44</td>
@@ -761,7 +734,6 @@
     </td>
     <td>Epic-11</td>
   </tr>
-
   <!-- US 45 -->
   <tr>
     <td>US-45</td>
@@ -775,7 +747,6 @@
     </td>
     <td>Epic-11</td>
   </tr>
-
   <!-- EPIC 12 -->
   <tr>
     <td><strong>Epic-12</strong></td>
@@ -784,7 +755,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 46 -->
   <tr>
     <td>US-46</td>
@@ -798,7 +768,6 @@
     </td>
     <td>Epic-12</td>
   </tr>
-
   <!-- US 47 -->
   <tr>
     <td>US-47</td>
@@ -812,7 +781,6 @@
     </td>
     <td>Epic-12</td>
   </tr>
-
   <!-- US 48 -->
   <tr>
     <td>US-48</td>
@@ -826,7 +794,6 @@
     </td>
     <td>Epic-12</td>
   </tr>
-
   <!-- EPIC 13 -->
   <tr>
     <td><strong>Epic-13</strong></td>
@@ -835,7 +802,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 49 -->
   <tr>
     <td>US-49</td>
@@ -849,7 +815,6 @@
     </td>
     <td>Epic-13</td>
   </tr>
-
   <!-- US 50 -->
   <tr>
     <td>US-50</td>
@@ -865,7 +830,6 @@
     </td>
     <td>Epic-13</td>
   </tr>
-
   <!-- US 51 -->
   <tr>
     <td>US-51</td>
