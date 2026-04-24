@@ -1063,12 +1063,14 @@
     </td>
     <td>Epic-15</td>
   </tr>
- <tr>
+  <!-- EPIC 16 -->
+  <tr>
     <td><strong>Epic-16</strong></td>
     <td><strong>Panel de Inicio (Home)</strong></td>
     <td>Como comerciante, quiero contar con un panel de inicio centralizado que me muestre un resumen visual del estado de mi negocio al ingresar a la plataforma, para tomar decisiones rápidas sin necesidad de navegar entre módulos.</td>
     <td></td>
-
+    <td></td>
+  </tr>
   <!-- US 65 -->
   <tr>
     <td>US-65</td>
@@ -1076,155 +1078,76 @@
     <td>Como comerciante, quiero visualizar un resumen de las ventas del día en el panel de inicio para conocer el rendimiento de mi negocio sin ingresar al módulo de ventas.</td>
     <td>
       <strong>Scenario 1: Resumen de ventas cargado correctamente</strong><br>
-      Dado que el usuario activa o desactiva tipos de notificación disponibles,<br> 
-      Cuando guarda los cambios, <br> 
-      Entonces el sistema almacena las preferencias y las aplica en los envíos futuros.<br><br>
-      <strong>Scenario 2:  Sin ventas registradas en el día</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y no se ha registrado ninguna venta en el día actual,<br>
-      Cuando el sistema carga la información,<br>
-      Entonces el resumen muestra cero en todos los indicadores<br>
-      Y se indica que aún no hay ventas registradas para el día.
-      <td>Epic-16</td>
+      Dado que el comerciante accede al panel de inicio y existen ventas registradas en el día, cuando el sistema carga la información, entonces se muestra el total de ventas del día, el número de transacciones y el desglose por método de pago.<br><br>
+      <strong>Scenario 2: Sin ventas registradas en el día</strong><br>
+      Dado que el comerciante accede al panel de inicio y no se ha registrado ninguna venta en el día actual, cuando el sistema carga la información, entonces el resumen muestra cero en todos los indicadores y se indica que aún no hay ventas registradas para el día.
     </td>
-      <!-- US 66 -->
-    <tr>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 66 -->
+  <tr>
     <td>US-66</td>
     <td>Visualizar estado del chatbot en el home</td>
-    <td>	Como comerciante, quiero visualizar el estado de conexión del chatbot y los chats activos desde el panel de inicio para saber si mi canal de ventas por WhatsApp está operativo sin ingresar al módulo de chatbot.</td>
+    <td>Como comerciante, quiero visualizar el estado de conexión del chatbot y los chats activos desde el panel de inicio para saber si mi canal de ventas por WhatsApp está operativo sin ingresar al módulo de chatbot.</td>
     <td>
-      <strong>Scenario 1: Chatbot conectado con actividad reciente </strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y el chatbot se encuentra vinculado y activo,<br>
-      Cuando el sistema carga la vista,<br>
-     Entonces se muestra el estado "Conectado", el número de conversaciones activas del día y el número de pedidos generados por el bot.<br><br>
-      <strong>Scenario 2:  Chatbot desconectado</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y el chatbot no está vinculado o su sesión expiró,<br>
-      Cuando el sistema carga la vista,<br>
-      Entonces se muestra el estado "Desconectado" con una alerta visible<br>
-      Y un acceso directo para reconectar desde el mismo panel.
-      <td>Epic-16</td>
+      <strong>Scenario 1: Chatbot conectado con actividad reciente</strong><br>
+      Dado que el comerciante accede al panel de inicio y el chatbot se encuentra vinculado y activo, cuando el sistema carga la vista, entonces se muestra el estado "Conectado", el número de conversaciones activas del día y el número de pedidos generados por el bot.<br><br>
+      <strong>Scenario 2: Chatbot desconectado</strong><br>
+      Dado que el comerciante accede al panel de inicio y el chatbot no está vinculado o su sesión expiró, cuando el sistema carga la vista, entonces se muestra el estado "Desconectado" con una alerta visible y un acceso directo para reconectar desde el mismo panel.
     </td>
-    <!-- US 67 -->
-    <tr>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 67 -->
+  <tr>
     <td>US-67</td>
     <td>Visualizar alertas de inventario en el home</td>
     <td>Como comerciante, quiero ver las alertas críticas de inventario directamente en el panel de inicio para identificar rápidamente productos agotados o lotes próximos a vencer sin ingresar al módulo de lotes.</td>
     <td>
       <strong>Scenario 1: Alertas de inventario mostradas en el home</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y existen productos sin stock o lotes próximos a vencer,<br>
-      Cuando el sistema carga la vista,<br>
-      Entonces se muestra una sección de alertas con el nombre del producto o lote afectado y el tipo de alerta correspondiente.<br><br>
-      <strong>Scenario 2:  Sin alertas activas de inventario</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y no se ha registrado ninguna venta en el día actual,<br>
-      Cuando el sistema carga la información,
-      Entonces el resumen muestra cero en todos los indicadores<br>
-      Y se indica que aún no hay ventas registradas para el día.
-      <td>Epic-16</td>
+      Dado que el comerciante accede al panel de inicio y existen productos sin stock o lotes próximos a vencer, cuando el sistema carga la vista, entonces se muestra una sección de alertas con el nombre del producto o lote afectado y el tipo de alerta correspondiente.<br><br>
+      <strong>Scenario 2: Sin alertas activas de inventario</strong><br>
+      Dado que el comerciante accede al panel de inicio y no existen condiciones críticas en el inventario, cuando el sistema carga la vista, entonces la sección de alertas muestra un mensaje indicando que todo el inventario está en estado normal.
     </td>
-     <!-- US 68 -->
-    <tr>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 68 -->
+  <tr>
     <td>US-68</td>
-    <td>Visualizar pedidos recientes en el home</td>
-    <td>Como comerciante, quiero ver los pedidos más recientes con su estado actual en el panel de inicio para hacer seguimiento sin ingresar al módulo de pedidos.</td>
+    <td>Visualizar contador de pedidos pendientes en el home</td>
+    <td>Como comerciante, quiero ver el número de pedidos que están pendientes de atención en el panel de inicio para priorizar mi respuesta sin necesidad de ingresar al módulo de chatbot.</td>
     <td>
-      <strong>Scenario 1: Pedidos recientes mostrados correctamente</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y existen productos sin stock o lotes próximos a vencer,<br>
-      Entonces se muestran los últimos cinco pedidos con número de pedido, nombre del cliente, monto total y estado actual.<br>
-      <strong>Scenario 2:  Sin pedidos registrados en el día</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y no se ha registrado ningún pedido en el día actual,<br>
-      Cuando el sistema carga la vista,<br>
-      Entonces la sección de pedidos recientes muestra un mensaje indicando que aún no hay pedidos para el día.
-      <td>Epic-16</td>
+      <strong>Scenario 1: Pedidos pendientes mostrados correctamente</strong><br>
+      Dado que el comerciante accede al panel de inicio y existen pedidos en estado "pendiente de validación" o "esperando pago", cuando el sistema carga la vista, entonces se muestra un contador con el número total de pedidos que requieren atención inmediata del comerciante.<br><br>
+      <strong>Scenario 2: Sin pedidos pendientes</strong><br>
+      Dado que el comerciante accede al panel de inicio y todos los pedidos del día han sido atendidos o no existe ninguno, cuando el sistema carga la vista, entonces el contador muestra cero y se indica que no hay pedidos pendientes de atención.
     </td>
-     <!-- US 69-->
-    <tr>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 69 -->
+  <tr>
     <td>US-69</td>
     <td>Visualizar pedidos recientes en el home</td>
     <td>Como comerciante, quiero ver los pedidos más recientes con su estado actual en el panel de inicio para hacer seguimiento sin ingresar al módulo de pedidos.</td>
     <td>
       <strong>Scenario 1: Pedidos recientes mostrados correctamente</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y existen pedidos registrados en el día,<br>
-      Cuando el sistema carga la vista,<br>
-      Entonces se muestran los últimos cinco pedidos con número de pedido, nombre del cliente, monto total y estado actual.<br>
-      <strong>Scenario 2:  Sin pedidos registrados en el día</strong><br>
-      Dado que el comerciante accede al panel de inicio,<br>
-      Y no se ha registrado ningún pedido en el día actual,<br>
-      Cuando el sistema carga la vista,<br>
-      Entonces la sección de pedidos recientes muestra un mensaje indicando que aún no hay pedidos para el día.
-      <td>Epic-16</td>
+      Dado que el comerciante accede al panel de inicio y existen pedidos registrados en el día, cuando el sistema carga la vista, entonces se muestran los últimos cinco pedidos con número de pedido, nombre del cliente, monto total y estado actual.<br><br>
+      <strong>Scenario 2: Sin pedidos registrados en el día</strong><br>
+      Dado que el comerciante accede al panel de inicio y no se ha registrado ningún pedido en el día actual, cuando el sistema carga la vista, entonces la sección de pedidos recientes muestra un mensaje indicando que aún no hay pedidos para el día.
     </td>
-    <!-- US 70-->
-    <tr>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 70 -->
+  <tr>
     <td>US-70</td>
     <td>Acceder a módulos desde accesos directos del home</td>
-    <td>	Como comerciante, quiero contar con accesos directos a los módulos principales desde el panel de inicio para navegar rápidamente a cualquier sección sin recorrer el menú lateral.</td>
+    <td>Como comerciante, quiero contar con accesos directos a los módulos principales desde el panel de inicio para navegar rápidamente a cualquier sección sin recorrer el menú lateral.</td>
     <td>
       <strong>Scenario 1: Acceso directo navega al módulo correcto</strong><br>
-      Dado que el comerciante se encuentra en el panel de inicio, <br>
-      Cuando presiona alguno de los accesos directos disponibles,<br>
-      Entonces el sistema lo redirige al módulo correspondiente sin pérdida de datos ni recargas innecesarias.
+      Dado que el comerciante se encuentra en el panel de inicio, cuando presiona alguno de los accesos directos disponibles, entonces el sistema lo redirige al módulo correspondiente sin pérdida de datos ni recargas innecesarias.<br><br>
       <strong>Scenario 2: Acceso directo con indicador de alerta activa</strong><br>
-      Dado que el comerciante se encuentra en el panel de inicio,<br>
-      Y un módulo tiene alertas o notificaciones pendientes,<br>
-      Cuando el sistema carga la vista,<br>
-      Entonces el acceso directo correspondiente muestra un indicador visual con el número de alertas o pendientes activos.
-      <td>Epic-16</td>
+      Dado que el comerciante se encuentra en el panel de inicio y un módulo tiene alertas o notificaciones pendientes, cuando el sistema carga la vista, entonces el acceso directo correspondiente muestra un indicador visual con el número de alertas o pendientes activos.
     </td>
-  </tr>
-
-  <!-- US 71 -->
-  <tr>
-    <td>US-71</td>
-    <td>Agregar método de pago de suscripción</td>
-    <td>Como usuario con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" dentro de la sección "Método de pago y datos fiscales" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td>
-    <td>
-      <strong>Scenario 1: Formulario de método de pago abierto</strong><br>
-      Dado que el usuario se encuentra en la sección "Método de pago y datos fiscales", cuando presiona el botón "Agregar método de pago", entonces el sistema muestra un formulario o modal para registrar los datos del medio de pago.<br><br>
-      <strong>Scenario 2: Método de pago registrado correctamente</strong><br>
-      Dado que el usuario completa los datos requeridos del método de pago y presiona "Guardar método de pago", cuando el sistema valida la información, entonces el método queda asociado a la suscripción y se muestra en el panel como método disponible para futuros cobros.<br><br>
-      <strong>Scenario 3: Método de pago inválido o cancelado</strong><br>
-      Dado que el usuario ingresa datos incompletos, inválidos o cierra el formulario antes de guardar, cuando el sistema valida la acción, entonces no registra cambios y mantiene el estado anterior del método de pago.
-    </td>
-    <td>Epic-04</td>
-  </tr>
-
-  <!-- US 72 -->
-  <tr>
-    <td>US-72</td>
-    <td>Completar datos fiscales de suscripción</td>
-    <td>Como usuario con una cuenta registrada, quiero presionar el botón "Completar datos" dentro de "Método de pago y datos fiscales" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td>
-    <td>
-      <strong>Scenario 1: Formulario de datos fiscales mostrado</strong><br>
-      Dado que el usuario se encuentra en la sección "Método de pago y datos fiscales", cuando presiona el botón "Completar datos", entonces el sistema muestra un formulario con los campos fiscales requeridos para la facturación de la suscripción.<br><br>
-      <strong>Scenario 2: Datos fiscales guardados correctamente</strong><br>
-      Dado que el usuario completa los campos fiscales obligatorios y presiona "Guardar datos fiscales", cuando el sistema valida la información, entonces registra los datos y actualiza la sección mostrando que la información fiscal está completa.<br><br>
-      <strong>Scenario 3: Datos fiscales incompletos o inválidos</strong><br>
-      Dado que el usuario deja campos obligatorios vacíos o ingresa un documento inválido, cuando presiona "Guardar datos fiscales", entonces el sistema no guarda la información, resalta los campos con error y muestra un mensaje de validación.
-    </td>
-    <td>Epic-04</td>
-  </tr>
-
-  <!-- US 73 -->
-  <tr>
-    <td>US-73</td>
-    <td>Descargar historial de suscripción</td>
-    <td>Como usuario, quiero presionar el botón "Descargar historial" dentro de "Actividad de la suscripción" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td>
-    <td>
-      <strong>Scenario 1: Historial descargado correctamente</strong><br>
-      Dado que existen eventos registrados en la actividad de la suscripción, cuando el usuario presiona el botón "Descargar historial", entonces el sistema genera y descarga un archivo con el historial de actividad visible para el usuario.<br><br>
-      <strong>Scenario 2: Historial sin actividad suficiente</strong><br>
-      Dado que la suscripción aún no tiene eventos relevantes registrados, cuando el usuario presiona "Descargar historial", entonces el sistema muestra un mensaje indicando que no hay actividad suficiente para descargar.<br><br>
-      <strong>Scenario 3: Error al generar descarga</strong><br>
-      Dado que ocurre un error al preparar el archivo, cuando el usuario intenta descargar el historial, entonces el sistema muestra un mensaje de error y mantiene disponible el botón para volver a intentarlo.
-    </td>
-    <td>Epic-04</td>
+    <td>Epic-16</td>
   </tr>
   <!-- Epic 17 -->
   <tr>
@@ -1234,9 +1157,9 @@
     <td></td>
   </tr>
 
-  <!-- US 69 -->
+  <!-- US 71 -->
   <tr>
-    <td>US-74</td>
+    <td>US-71</td>
     <td>Visualizar el centro de soporte</td>
     <td>Como comerciante, quiero visualizar el centro de soporte al presionar el botón de Ayuda para acceder de forma rápida a las opciones de asistencia disponibles.</td>
     <td>
@@ -1254,9 +1177,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 70 -->
+  <!-- US 72 -->
   <tr>
-    <td>US-75</td>
+    <td>US-72</td>
     <td>Buscar artículo de ayuda</td>
     <td>Como comerciante, quiero buscar artículos de ayuda por palabras clave para encontrar rápidamente la información que necesito sin revisar todas las categorías.</td>
     <td>
@@ -1274,9 +1197,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 71 -->
+  <!-- US 73 -->
   <tr>
-    <td>US-76</td>
+    <td>US-73</td>
     <td>Consultar artículo de ayuda</td>
     <td>Como comerciante, quiero abrir y leer un artículo de ayuda para entender cómo usar una funcionalidad de la plataforma o resolver un problema específico.</td>
     <td>
@@ -1294,9 +1217,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 72 -->
+  <!-- US 74 -->
   <tr>
-    <td>US-77</td>
+    <td>US-74</td>
     <td>Reportar un problema</td>
     <td>Como comerciante, quiero reportar un problema o incidencia desde el centro de soporte para que el equipo de Entreprenly pueda revisarlo y darle seguimiento.</td>
     <td>
@@ -1316,9 +1239,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 73 -->
+  <!-- US 75 -->
   <tr>
-    <td>US-78</td>
+    <td>US-75</td>
     <td>Confirmar envío del reporte</td>
     <td>Como comerciante, quiero recibir una confirmación visual tras enviar un reporte para tener la certeza de que mi solicitud fue registrada correctamente.</td>
     <td>
