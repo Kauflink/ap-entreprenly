@@ -3,7 +3,7 @@
 ---
 
 ![Logo de la UPC](docs/images/upc_logo.png "Universidad Peruana de Ciencias Aplicadas")
-
+x
 ### Universidad Peruana de Ciencias Aplicadas
 
 <small>Facultad de Ingeniería &nbsp;·&nbsp; Ingeniería de Software &nbsp;·&nbsp; 5to Ciclo</small>
@@ -147,6 +147,7 @@ Aplicaciones Web
 # Student Outcome
 
 En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 5 (ABET – EAC), el cual se define como la capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos. La información se presenta a través del siguiente cuadro, donde se especifican las dimensiones de la competencia, las acciones realizadas por cada integrante y las conclusiones generales del equipo.
+
 <table>
   <thead>
     <tr>
