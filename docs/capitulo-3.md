@@ -1,8 +1,7 @@
-# Capítulo III: Requirements Specification
+﻿# Capítulo III: Requirements Specification
 
 ## 3.1. User Stories
 
-<!-- Epics-->
 <table>
   <thead>
     <tr>
@@ -14,7 +13,6 @@
     </tr>
   </thead>
   <tbody>
-
   <!-- EPIC 01 -->
   <tr>
     <td><strong>Epic-01</strong></td>
@@ -23,7 +21,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 01 -->
   <tr>
     <td>US-01</td>
@@ -37,7 +34,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 02 -->
   <tr>
     <td>US-02</td>
@@ -51,7 +47,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 03 -->
   <tr>
     <td>US-03</td>
@@ -67,7 +62,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 04 -->
   <tr>
     <td>US-04</td>
@@ -81,7 +75,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 05 -->
   <tr>
     <td>US-05</td>
@@ -91,13 +84,10 @@
       <strong>Scenario 1: Producto editado correctamente</strong><br>
       Dado que el usuario está en la sección de productos y selecciona un producto existente, cuando presione "Editar", entonces el producto se actualizará exitosamente.<br><br>
       <strong>Scenario 2: Validación al editar productos</strong><br>
-      Dado que el usuario se encuentra en la lista de inventario y ha seleccionado un producto existente.
-      Cuando el usuario intenta cambiar el "Tipo de Producto" y presiona el botón de guardar. 
-      Entonces el sistema debe impedir la acción y mostrar un mensaje de error indicando: "Este campo no se puede modificar".
+      Dado que el usuario se encuentra en la lista de inventario y ha seleccionado un producto existente, cuando el usuario intenta cambiar el "Tipo de Producto" y presiona el botón de guardar, entonces el sistema debe impedir la acción y mostrar un mensaje de error indicando: "Este campo no se puede modificar".
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 06 -->
   <tr>
     <td>US-06</td>
@@ -113,7 +103,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 10 -->
   <tr>
     <td>US-10</td>
@@ -127,7 +116,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 12 -->
   <tr>
     <td>US-12</td>
@@ -141,7 +129,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- US 23 -->
   <tr>
     <td>US-23</td>
@@ -155,7 +142,6 @@
     </td>
     <td>Epic-01</td>
   </tr>
-
   <!-- EPIC 02 -->
   <tr>
     <td><strong>Epic-02</strong></td>
@@ -164,7 +150,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 07 -->
   <tr>
     <td>US-07</td>
@@ -178,7 +163,6 @@
     </td>
     <td>Epic-02</td>
   </tr>
-
   <!-- US 08 -->
   <tr>
     <td>US-08</td>
@@ -192,7 +176,6 @@
     </td>
     <td>Epic-02</td>
   </tr>
-
   <!-- US 09 -->
   <tr>
     <td>US-09</td>
@@ -206,7 +189,6 @@
     </td>
     <td>Epic-02</td>
   </tr>
-
   <!-- US 11 -->
   <tr>
     <td>US-11</td>
@@ -220,7 +202,6 @@
     </td>
     <td>Epic-02</td>
   </tr>
-
   <!-- EPIC 03 -->
   <tr>
     <td><strong>Epic-03</strong></td>
@@ -229,7 +210,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 13 -->
   <tr>
     <td>US-13</td>
@@ -243,7 +223,6 @@
     </td>
     <td>Epic-03</td>
   </tr>
-
   <!-- US 14 -->
   <tr>
     <td>US-14</td>
@@ -257,7 +236,6 @@
     </td>
     <td>Epic-03</td>
   </tr>
-
   <!-- US 15 -->
   <tr>
     <td>US-15</td>
@@ -271,7 +249,6 @@
     </td>
     <td>Epic-03</td>
   </tr>
-
   <!-- US 16 -->
   <tr>
     <td>US-16</td>
@@ -285,7 +262,6 @@
     </td>
     <td>Epic-03</td>
   </tr>
-
   <!-- US 17 -->
   <tr>
     <td>US-17</td>
@@ -299,7 +275,6 @@
     </td>
     <td>Epic-03</td>
   </tr>
-
   <!-- EPIC 04 -->
   <tr>
     <td><strong>Epic-04</strong></td>
@@ -308,7 +283,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 18 -->
   <tr>
     <td>US-18</td>
@@ -322,7 +296,6 @@
     </td>
     <td>Epic-04</td>
   </tr>
-
   <!-- US 19 -->
   <tr>
     <td>US-19</td>
@@ -336,7 +309,6 @@
     </td>
     <td>Epic-04</td>
   </tr>
-
   <!-- US 20 -->
   <tr>
     <td>US-20</td>
@@ -350,7 +322,6 @@
     </td>
     <td>Epic-04</td>
   </tr>
-
   <!-- US 21 -->
   <tr>
     <td>US-21</td>
@@ -366,7 +337,6 @@
     </td>
     <td>Epic-04</td>
   </tr>
-
   <!-- US 22 -->
   <tr>
     <td>US-22</td>
@@ -380,7 +350,51 @@
     </td>
     <td>Epic-04</td>
   </tr>
-
+  <!-- US 71 -->
+  <tr>
+    <td>US-71</td>
+    <td>Agregar método de pago de suscripción</td>
+    <td>Como usuario con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" dentro de la sección "Método de pago y datos fiscales" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td>
+    <td>
+      <strong>Scenario 1: Formulario de método de pago abierto</strong><br>
+      Dado que el usuario se encuentra en la sección "Método de pago y datos fiscales", cuando presiona el botón "Agregar método de pago", entonces el sistema muestra un formulario o modal para registrar los datos del medio de pago.<br><br>
+      <strong>Scenario 2: Método de pago registrado correctamente</strong><br>
+      Dado que el usuario completa los datos requeridos del método de pago y presiona "Guardar método de pago", cuando el sistema valida la información, entonces el método queda asociado a la suscripción y se muestra en el panel como método disponible para futuros cobros.<br><br>
+      <strong>Scenario 3: Método de pago inválido o cancelado</strong><br>
+      Dado que el usuario ingresa datos incompletos, inválidos o cierra el formulario antes de guardar, cuando el sistema valida la acción, entonces no registra cambios y mantiene el estado anterior del método de pago.
+    </td>
+    <td>Epic-04</td>
+  </tr>
+  <!-- US 72 -->
+  <tr>
+    <td>US-72</td>
+    <td>Completar datos fiscales de suscripción</td>
+    <td>Como usuario con una cuenta registrada, quiero presionar el botón "Completar datos" dentro de "Método de pago y datos fiscales" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td>
+    <td>
+      <strong>Scenario 1: Formulario de datos fiscales mostrado</strong><br>
+      Dado que el usuario se encuentra en la sección "Método de pago y datos fiscales", cuando presiona el botón "Completar datos", entonces el sistema muestra un formulario con los campos fiscales requeridos para la facturación de la suscripción.<br><br>
+      <strong>Scenario 2: Datos fiscales guardados correctamente</strong><br>
+      Dado que el usuario completa los campos fiscales obligatorios y presiona "Guardar datos fiscales", cuando el sistema valida la información, entonces registra los datos y actualiza la sección mostrando que la información fiscal está completa.<br><br>
+      <strong>Scenario 3: Datos fiscales incompletos o inválidos</strong><br>
+      Dado que el usuario deja campos obligatorios vacíos o ingresa un documento inválido, cuando presiona "Guardar datos fiscales", entonces el sistema no guarda la información, resalta los campos con error y muestra un mensaje de validación.
+    </td>
+    <td>Epic-04</td>
+  </tr>
+  <!-- US 73 -->
+  <tr>
+    <td>US-73</td>
+    <td>Descargar historial de suscripción</td>
+    <td>Como usuario, quiero presionar el botón "Descargar historial" dentro de "Actividad de la suscripción" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td>
+    <td>
+      <strong>Scenario 1: Historial descargado correctamente</strong><br>
+      Dado que existen eventos registrados en la actividad de la suscripción, cuando el usuario presiona el botón "Descargar historial", entonces el sistema genera y descarga un archivo con el historial de actividad visible para el usuario.<br><br>
+      <strong>Scenario 2: Historial sin actividad suficiente</strong><br>
+      Dado que la suscripción aún no tiene eventos relevantes registrados, cuando el usuario presiona "Descargar historial", entonces el sistema muestra un mensaje indicando que no hay actividad suficiente para descargar.<br><br>
+      <strong>Scenario 3: Error al generar descarga</strong><br>
+      Dado que ocurre un error al preparar el archivo, cuando el usuario intenta descargar el historial, entonces el sistema muestra un mensaje de error y mantiene disponible el botón para volver a intentarlo.
+    </td>
+    <td>Epic-04</td>
+  </tr>
   <!-- EPIC 05 -->
   <tr>
     <td><strong>Epic-05</strong></td>
@@ -389,7 +403,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 24 -->
   <tr>
     <td>US-24</td>
@@ -397,16 +410,14 @@
     <td>Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso, para abrir la interfaz de ingreso correspondiente.</td>
     <td>
       <strong>Scenario 1: Búsqueda y validación de producto por peso</strong><br>
-     Dado que el cajero ingresa “Manzana” en el buscador, cuando selecciona el producto de la lista,y el sistema verifica que el producto está registrado con medida en "Kg", entonces el sistema despliega el modal "Registrar Peso".<br><br>
+      Dado que el cajero ingresa "Manzana" en el buscador, cuando selecciona el producto de la lista y el sistema verifica que el producto está registrado con medida en "Kg", entonces el sistema despliega el modal "Registrar Peso".<br><br>
       <strong>Scenario 2: Búsqueda y validación de producto por cantidad</strong><br>
-      Dado que el cajero realiza una búsqueda, cuando selecciona “Coca Cola” del inventario, y el sistema verifica que el producto está registrado por unidades, entonces el sistema despliega el modal "Registrar Cantidad".<br><br>
-<br><br>
+      Dado que el cajero realiza una búsqueda, cuando selecciona "Coca Cola" del inventario y el sistema verifica que el producto está registrado por unidades, entonces el sistema despliega el modal "Registrar Cantidad".<br><br>
       <strong>Scenario 3: Producto no encontrado</strong><br>
-      Dado que el término ingresado no coincide con el inventario, cuando se ejecuta la búsqueda, entonces el sistema muestra un mensaje indicando "Producto no encontrado".<br><br>
+      Dado que el término ingresado no coincide con el inventario, cuando se ejecuta la búsqueda, entonces el sistema muestra un mensaje indicando "Producto no encontrado".
     </td>
     <td>Epic-05</td>
   </tr>
-
   <!-- US 25 -->
   <tr>
     <td>US-25</td>
@@ -414,13 +425,12 @@
     <td>Como cajero, quiero ingresar el número de unidades de un producto seleccionado, para añadirlo al detalle de la venta.</td>
     <td>
       <strong>Scenario 1: Confirmación de cantidad unitaria</strong><br>
-      Dado que el modal "Registrar Cantidad" está abierto, cuando el cajero ingresa el número entero “3” en el teclado numérico, y presiona el botón "Confirmar cantidad", entonces el sistema calcula el subtotal y añade el ítem al detalle de la venta.<br><br>
+      Dado que el modal "Registrar Cantidad" está abierto, cuando el cajero ingresa el número entero "3" en el teclado numérico y presiona el botón "Confirmar cantidad", entonces el sistema calcula el subtotal y añade el ítem al detalle de la venta.<br><br>
       <strong>Scenario 2: Validación de stock insuficiente por cantidad</strong><br>
-      Dado que el cajero ha ingresado una cantidad en el modal, Cuando el sistema verifica que la cantidad solicitada es mayor al stock disponible en el inventario, Y el usuario intenta confirmar la acción, Entonces el sistema muestra una alerta indicando "Stock insuficiente" y no permite añadir el producto al ticket.
+      Dado que el cajero ha ingresado una cantidad en el modal, cuando el sistema verifica que la cantidad solicitada es mayor al stock disponible y el usuario intenta confirmar la acción, entonces el sistema muestra una alerta indicando "Stock insuficiente" y no permite añadir el producto al ticket.
     </td>
     <td>Epic-05</td>
   </tr>
-
   <!-- US 26 -->
   <tr>
     <td>US-26</td>
@@ -428,16 +438,14 @@
     <td>Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td>
     <td>
       <strong>Scenario 1: Captura automática</strong><br>
-      Dado que el modal "Registrar Peso" está abierto, cuando el sistema detecta una balanza IoT conectada, y el cajero coloca el producto sobre la balanza física, y el hardware envía la lectura de peso al sistema, entonces el valor se carga automáticamente en el campo de peso.<br><br>
+      Dado que el modal "Registrar Peso" está abierto, cuando el sistema detecta una balanza IoT conectada y el cajero coloca el producto sobre la balanza física y el hardware envía la lectura de peso al sistema, entonces el valor se carga automáticamente en el campo de peso.<br><br>
       <strong>Scenario 2: Registro de peso manual</strong><br>
-      Dado que el sistema no detecta una balanza, y el modal "Registrar Peso" está abierto, cuando el cajero digita el peso “2” observado físicamente en el teclado decimal, y presiona el botón "Confirmar Peso", entonces el sistema registra el dato y añade el producto al ticket de venta.
-<br><br>
+      Dado que el sistema no detecta una balanza y el modal "Registrar Peso" está abierto, cuando el cajero digita el peso observado físicamente en el teclado decimal y presiona el botón "Confirmar Peso", entonces el sistema registra el dato y añade el producto al ticket de venta.<br><br>
       <strong>Scenario 3: Validación de stock insuficiente por peso</strong><br>
-      Dado que el cajero ha ingresado el peso en el modal, cuando el sistema verifica que el peso solicitado es mayor al stock disponible en el inventario, y el usuario intenta confirmar la acción, entonces el sistema muestra una alerta indicando "Stock insuficiente" y no permite añadir el producto al ticket.
+      Dado que el cajero ha ingresado el peso en el modal, cuando el sistema verifica que el peso solicitado es mayor al stock disponible y el usuario intenta confirmar la acción, entonces el sistema muestra una alerta indicando "Stock insuficiente" y no permite añadir el producto al ticket.
     </td>
     <td>Epic-05</td>
   </tr>
-
   <!-- US 27 -->
   <tr>
     <td>US-27</td>
@@ -445,14 +453,12 @@
     <td>Como cajero, quiero visualizar el desglose de productos (nombre, cantidad/peso, precio unitario y subtotal) para verificar que la información sea correcta antes de proceder al pago.</td>
     <td>
       <strong>Scenario 1: Actualización del detalle y monto total</strong><br>
-      Dado que se han añadido productos (por unidad o peso) al ticket de venta, cuando el sistema procesa cada ítem de la lista, y calcula automáticamente el subtotal multiplicando el precio por la cantidad o peso, y suma todos los subtotales de la lista, entonces el sistema muestra el desglose detallado y el monto total acumulado de la venta en la interfaz.
-<br><br>
+      Dado que se han añadido productos al ticket de venta, cuando el sistema procesa cada ítem de la lista y calcula automáticamente el subtotal multiplicando el precio por la cantidad o peso y suma todos los subtotales, entonces el sistema muestra el desglose detallado y el monto total acumulado de la venta en la interfaz.<br><br>
       <strong>Scenario 2: Edición o eliminación de un ítem del detalle</strong><br>
-      Dado que un producto ya se encuentra registrado en el detalle de la venta, cuando el cajero selecciona la opción de eliminar, y el sistema confirma la acción del usuario, entonces el sistema actualiza la lista del detalle y recalcula el monto total de la venta inmediatamente.<br><br>
+      Dado que un producto ya se encuentra registrado en el detalle de la venta, cuando el cajero selecciona la opción de eliminar y el sistema confirma la acción, entonces el sistema actualiza la lista del detalle y recalcula el monto total de la venta inmediatamente.
     </td>
     <td>Epic-05</td>
   </tr>
-
   <!-- US 28 -->
   <tr>
     <td>US-28</td>
@@ -460,13 +466,12 @@
     <td>Como cajero, quiero elegir el medio por el cual está pagando el cliente (Efectivo o Tarjeta/Yape/Plin), para que el ingreso se registre en la categoría contable correcta.</td>
     <td>
       <strong>Scenario 1: Selección de método de pago exitosa</strong><br>
-      Dado que el ticket de venta tiene el monto total calculado, cuando el cajero hace clic sobre el ícono de "Efectivo" o "Tarjeta Yape/Plin", y el sistema marca visualmente la opción seleccionada como activa, y registra la categoría del método de pago internamente, entonces el sistema habilita el botón "Finalizar Venta y Emitir Boleta".<br><br>
+      Dado que el ticket de venta tiene el monto total calculado, cuando el cajero hace clic sobre el ícono de "Efectivo" o "Tarjeta Yape/Plin" y el sistema marca visualmente la opción seleccionada como activa, entonces el sistema habilita el botón "Finalizar Venta y Emitir Boleta".<br><br>
       <strong>Scenario 2: Intento de finalización sin método de pago</strong><br>
-      Dado que el cajero ha terminado de agregar productos al ticket, cuando intenta presionar el botón de finalizar la venta sin haber marcado una opción de pago, y el sistema valida que no hay un método asignado para la transacción actual, entonces el sistema muestra un mensaje de advertencia indicando "Por favor, seleccione un método de pago" y bloquea la emisión de la boleta.
+      Dado que el cajero ha terminado de agregar productos al ticket, cuando intenta presionar el botón de finalizar la venta sin haber marcado una opción de pago, entonces el sistema muestra un mensaje de advertencia indicando "Por favor, seleccione un método de pago" y bloquea la emisión de la boleta.
     </td>
     <td>Epic-05</td>
   </tr>
-
   <!-- US 29 -->
   <tr>
     <td>US-29</td>
@@ -474,13 +479,12 @@
     <td>Como cajero, quiero procesar el pago y finalizar la venta en un solo paso, para registrar la transacción en el sistema y entregar el comprobante al cliente de forma inmediata.</td>
     <td>
       <strong>Scenario 1: Procesamiento exitoso del cierre de venta</strong><br>
-      Dado que el ticket de venta tiene productos añadidos y el método de pago ha sido seleccionado,ncuando el cajero presiona el botón "Finalizar Venta y Emitir Boleta", y el sistema valida que los datos de la transacción son correctos, y el sistema registra la información en la base de datos actualizando saldos y stock, entonces el sistema genera el comprobante de pago, muestra un mensaje de éxito y limpia la interfaz para una nueva venta.<br><br>
+      Dado que el ticket de venta tiene productos añadidos y el método de pago ha sido seleccionado, cuando el cajero presiona el botón "Finalizar Venta y Emitir Boleta" y el sistema valida que los datos de la transacción son correctos, entonces el sistema genera el comprobante de pago, muestra un mensaje de éxito y limpia la interfaz para una nueva venta.<br><br>
       <strong>Scenario 2: Bloqueo de finalización por datos incompletos</strong><br>
-      Dado que el cajero se encuentra en la pantalla de ventas, cuando intenta presionar el botón de finalizar venta sin productos en el ticket o sin método de pago, y el sistema detecta la ausencia de estos datos obligatorios, entonces el sistema muestra un mensaje “No hay productos en el ticket” manteniendo la interfaz de venta activa hasta que se complete el campo  requerido.
+      Dado que el cajero se encuentra en la pantalla de ventas, cuando intenta presionar el botón de finalizar venta sin productos en el ticket o sin método de pago, entonces el sistema muestra un mensaje "No hay productos en el ticket" manteniendo la interfaz de venta activa hasta que se complete el campo requerido.
     </td>
     <td>Epic-05</td>
   </tr>
-
   <!-- EPIC 06 -->
   <tr>
     <td><strong>Epic-06</strong></td>
@@ -489,7 +493,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 30 -->
   <tr>
     <td>US-30</td>
@@ -497,29 +500,26 @@
     <td>Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente, para tener visibilidad inmediata de cuánto dinero hay en efectivo y cuánto en digital.</td>
     <td>
       <strong>Scenario 1: Actualización del acumulado por método de pago</strong><br>
-      Dado que se ha finalizado una venta exitosamente, cuando el sistema procesa el registro de la transacción, y detecta el método de pago utilizado (Efectivo o Tarjeta/Digital), y suma el monto de la venta al saldo anterior de esa categoría, entonces el sistema actualiza visualmente el "Resumen de Caja" con los nuevos montos acumulados.
-<br><br>
+      Dado que se ha finalizado una venta exitosamente, cuando el sistema procesa el registro de la transacción y detecta el método de pago utilizado (Efectivo o Tarjeta/Digital), entonces el sistema actualiza visualmente el "Resumen de Caja" con los nuevos montos acumulados.<br><br>
       <strong>Scenario 2: Visualización del total general de ingresos</strong><br>
-      Dado que los saldos por categoría (Efectivo y Digital) han sido actualizados, cuando el comerciante visualiza el panel de "Resumen de Caja", y el sistema suma ambos acumulados de forma automática, entonces el sistema muestra el "Total del Día" como la suma consolidada de todos los medios de pago.
+      Dado que los saldos por categoría (Efectivo y Digital) han sido actualizados, cuando el comerciante visualiza el panel de "Resumen de Caja", entonces el sistema muestra el "Total del Día" como la suma consolidada de todos los medios de pago.
     </td>
     <td>Epic-06</td>
   </tr>
-
   <!-- US 31 -->
   <tr>
     <td>US-31</td>
     <td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td>
     <td>Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago, para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td>
     <td>
-    <strong>Scenario 1: Visualización dinámica de ingresos operativos</strong><br>
-      Dado que el cajero se encuentra en la sección de "Ventas", cuando finaliza transacciones de forma sucesiva, y el sistema procesa los nuevos montos registrados, entonces el sistema actualiza automáticamente los contadores de "Efectivo", "Tarjeta Yape/Plin" y el "Total del Día" en la parte inferior de la pantalla.<br><br>
+      <strong>Scenario 1: Visualización dinámica de ingresos operativos</strong><br>
+      Dado que el cajero se encuentra en la sección de "Ventas", cuando finaliza transacciones de forma sucesiva, entonces el sistema actualiza automáticamente los contadores de "Efectivo", "Tarjeta Yape/Plin" y el "Total del Día" en la parte inferior de la pantalla.<br><br>
       <strong>Scenario 2: Persistencia de saldos al cambiar de sección</strong><br>
-      Dado que el cajero tiene un saldo acumulado en el Resumen de Caja, cuando navega hacia otra sección (ej. "Productos" o "Lotes") y regresa nuevamente a "Ventas", y el sistema recupera los datos almacenados en la sesión, entonces el sistema muestra los saldos actualizados tal como estaban antes de salir de la pestaña, evitando que la información se pierda o se reinicie.
+      Dado que el cajero tiene un saldo acumulado en el Resumen de Caja, cuando navega hacia otra sección y regresa nuevamente a "Ventas", entonces el sistema muestra los saldos actualizados tal como estaban antes de salir de la pestaña.
     </td>
     <td>Epic-06</td>
   </tr>
-
- <!-- EPIC 07 -->
+  <!-- EPIC 07 -->
   <tr>
     <td><strong>Epic-07</strong></td>
     <td><strong>Configurar Chatbot de WhatsApp Business</strong></td>
@@ -845,7 +845,6 @@
     </td>
     <td>Epic-13</td>
   </tr>
-
   <!-- EPIC 14 -->
   <tr>
     <td><strong>Epic-14</strong></td>
@@ -854,7 +853,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 52 -->
   <tr>
     <td>US-52</td>
@@ -870,7 +868,6 @@
     </td>
     <td>Epic-14</td>
   </tr>
-
   <!-- US 53 -->
   <tr>
     <td>US-53</td>
@@ -886,7 +883,6 @@
     </td>
     <td>Epic-14</td>
   </tr>
-
   <!-- US 54 -->
   <tr>
     <td>US-54</td>
@@ -902,7 +898,6 @@
     </td>
     <td>Epic-14</td>
   </tr>
-
   <!-- US 55 -->
   <tr>
     <td>US-55</td>
@@ -918,7 +913,6 @@
     </td>
     <td>Epic-14</td>
   </tr>
-
   <!-- US 56 -->
   <tr>
     <td>US-56</td>
@@ -934,7 +928,6 @@
     </td>
     <td>Epic-14</td>
   </tr>
-
   <!-- US 57 -->
   <tr>
     <td>US-57</td>
@@ -948,7 +941,6 @@
     </td>
     <td>Epic-14</td>
   </tr>
-
   <!-- EPIC 15 -->
   <tr>
     <td><strong>Epic-15</strong></td>
@@ -957,7 +949,6 @@
     <td></td>
     <td></td>
   </tr>
-
   <!-- US 58 -->
   <tr>
     <td>US-58</td>
@@ -971,7 +962,6 @@
     </td>
     <td>Epic-15</td>
   </tr>
-
   <!-- US 59 -->
   <tr>
     <td>US-59</td>
@@ -985,7 +975,6 @@
     </td>
     <td>Epic-15</td>
   </tr>
-
   <!-- US 60 -->
   <tr>
     <td>US-60</td>
@@ -1001,7 +990,6 @@
     </td>
     <td>Epic-15</td>
   </tr>
-
   <!-- US 61 -->
   <tr>
     <td>US-61</td>
@@ -1017,7 +1005,6 @@
     </td>
     <td>Epic-15</td>
   </tr>
-
   <!-- US 62 -->
   <tr>
     <td>US-62</td>
@@ -1033,7 +1020,6 @@
     </td>
     <td>Epic-15</td>
   </tr>
-
   <!-- US 63 -->
   <tr>
     <td>US-63</td>
@@ -1049,7 +1035,6 @@
     </td>
     <td>Epic-15</td>
   </tr>
-
   <!-- US 64 -->
   <tr>
     <td>US-64</td>
@@ -1157,9 +1142,9 @@
     <td></td>
   </tr>
 
-  <!-- US 71 -->
+  <!-- US 69 -->
   <tr>
-    <td>US-71</td>
+    <td>US-74</td>
     <td>Visualizar el centro de soporte</td>
     <td>Como comerciante, quiero visualizar el centro de soporte al presionar el botón de Ayuda para acceder de forma rápida a las opciones de asistencia disponibles.</td>
     <td>
@@ -1177,9 +1162,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 72 -->
+  <!-- US 70 -->
   <tr>
-    <td>US-72</td>
+    <td>US-75</td>
     <td>Buscar artículo de ayuda</td>
     <td>Como comerciante, quiero buscar artículos de ayuda por palabras clave para encontrar rápidamente la información que necesito sin revisar todas las categorías.</td>
     <td>
@@ -1197,9 +1182,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 73 -->
+  <!-- US 71 -->
   <tr>
-    <td>US-73</td>
+    <td>US-76</td>
     <td>Consultar artículo de ayuda</td>
     <td>Como comerciante, quiero abrir y leer un artículo de ayuda para entender cómo usar una funcionalidad de la plataforma o resolver un problema específico.</td>
     <td>
@@ -1217,9 +1202,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 74 -->
+  <!-- US 72 -->
   <tr>
-    <td>US-74</td>
+    <td>US-77</td>
     <td>Reportar un problema</td>
     <td>Como comerciante, quiero reportar un problema o incidencia desde el centro de soporte para que el equipo de Entreprenly pueda revisarlo y darle seguimiento.</td>
     <td>
@@ -1239,9 +1224,9 @@
     <td>Epic-17</td>
   </tr>
 
-  <!-- US 75 -->
+  <!-- US 73 -->
   <tr>
-    <td>US-75</td>
+    <td>US-78</td>
     <td>Confirmar envío del reporte</td>
     <td>Como comerciante, quiero recibir una confirmación visual tras enviar un reporte para tener la certeza de que mi solicitud fue registrada correctamente.</td>
     <td>
@@ -1263,9 +1248,16 @@
 
 ## 3.2. Impact Mapping
 
-_Contenido por agregar._
+El Impact Mapping es una técnica de planificación estratégica que permite vincular los objetivos de negocio con las funcionalidades del producto, respondiendo las preguntas: ¿por qué construimos esto?, ¿quién nos ayuda a lograrlo?, ¿cómo cambia su comportamiento? y ¿qué entregamos para provocar ese cambio? Su elaboración permite asegurar que cada User Story tenga un propósito claro y directo sobre el objetivo del negocio.A continuación se presenta el Impact Map elaborado en UXPressia para Entreprenly:
+
+![Impact Mapping](./images/Impact_Mapping.png "Impact Mapping")
+
+El Impact Map parte de un único objetivo de negocio: permitir que el pequeño comerciante gestione su negocio de forma eficiente, reduzca pérdidas de inventario y automatice la atención de pedidos sin depender de procesos manuales. Se identificó al Comerciante como único actor, dado que es el usuario directo de la plataforma y el único cuyo comportamiento debe cambiar para que el objetivo se cumpla.
+A partir de este actor se derivaron cinco impactos esperados: que deje de gestionar su inventario manualmente, que reaccione a tiempo ante problemas de stock, que registre sus ventas presenciales de forma rápida y ordenada, que delegue la atención de pedidos por WhatsApp al chatbot, y que tome decisiones con información centralizada desde el panel de inicio. Cada uno de estos impactos se traduce en entregables concretos que corresponden a las funcionalidades de la plataforma, las cuales están sustentadas por las User Stories especificadas en la sección 3.1.
 
 ## 3.3. Product Backlog
+
+A continuación se presenta el Product Backlog de Entreprenly con todas las User Stories priorizadas según su valor para el negocio. Las User Stories de mayor impacto directo en la operación del comerciante y en la propuesta de valor central del producto se ubican en las primeras posiciones. Las historias relacionadas con autenticación, suscripción y perfil, si bien necesarias, se ubican en posiciones posteriores por tratarse de funcionalidades de soporte.
 
 <table>
   <thead>
@@ -1274,484 +1266,102 @@ _Contenido por agregar._
       <th>User Story Id</th>
       <th>Título</th>
       <th>Descripción</th>
-      <th>Story Points (1/2/3/5/8)</th>
+      <th>Story Points</th>
     </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>1</td>
-    <td>US-24</td>
-    <td>Buscar productos en el inventario y validar su tipo de medida</td>
-    <td>Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso y abrir la interfaz de ingreso correspondiente.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>US-25</td>
-    <td>Registrar la cantidad de unidades en el Ticket de Venta</td>
-    <td>Como cajero, quiero ingresar el número de unidades de un producto seleccionado para añadirlo al detalle de la venta.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>US-26</td>
-    <td>Capturar el peso mediante balanza IoT o ingreso manual</td>
-    <td>Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td>
-    <td>8</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>US-27</td>
-    <td>Gestionar el desglose y cálculo del Ticket de Venta</td>
-    <td>Como cajero, quiero visualizar el desglose de productos (nombre, cantidad/peso, precio unitario y subtotal) para verificar que la información sea correcta antes de proceder al pago.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>US-28</td>
-    <td>Seleccionar el método de pago para la transacción</td>
-    <td>Como cajero, quiero elegir el medio por el cual está pagando el cliente (Efectivo o Tarjeta/Yape/Plin) para que el ingreso se registre en la categoría contable correcta.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>US-29</td>
-    <td>Finalizar la venta y emitir el comprobante de pago</td>
-    <td>Como cajero, quiero procesar el pago y finalizar la venta en un solo paso para entregar el comprobante al cliente de forma inmediata.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>US-30</td>
-    <td>Clasificar automáticamente los ingresos según el medio de pago</td>
-    <td>Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente para tener visibilidad inmediata de cuánto dinero hay en efectivo y cuánto en digital.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>US-31</td>
-    <td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td>
-    <td>Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>US-43</td>
-    <td>Confirmar pedido y descontar stock</td>
-    <td>Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real y reflejar el consumo de stock.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>US-44</td>
-    <td>Registrar venta en el sistema</td>
-    <td>Como comerciante, quiero que cada pedido confirmado quede registrado como venta en el sistema para mantener un control financiero preciso y trazable.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>US-45</td>
-    <td>Emitir comprobante digital al cliente</td>
-    <td>Como cliente, quiero recibir un comprobante de mi compra a través del chatbot para tener un respaldo de la transacción realizada.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>US-36</td>
-    <td>Responder consulta de producto disponible</td>
-    <td>Como sistema, quiero que el chatbot responda automáticamente al cliente con la información del producto solicitado cuando este existe en el inventario para iniciar el proceso de pedido sin intervención del comerciante.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>US-37</td>
-    <td>Sugerir alternativas ante producto no disponible</td>
-    <td>Como sistema, quiero que el chatbot informe al cliente cuando un producto no está disponible y le sugiera otros productos del inventario para evitar que la conversación quede sin respuesta útil.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>US-38</td>
-    <td>Confirmar pedido con el cliente</td>
-    <td>Como sistema, quiero que el chatbot presente un resumen del pedido al cliente y solicite confirmación antes de proceder al pago para asegurar que los productos y cantidades sean correctos.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>US-39</td>
-    <td>Recibir instrucciones de pago por WhatsApp</td>
-    <td>Como cliente, quiero recibir las instrucciones de pago a través del chatbot para saber cómo realizar la transferencia y completar mi pedido.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>US-40</td>
-    <td>Reportar comprobante de pago digital</td>
-    <td>Como cliente, quiero enviar el comprobante de mi pago al chatbot para que el comerciante pueda verificarlo y confirmar mi pedido.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>US-41</td>
-    <td>Validar comprobante de pago desde el dashboard</td>
-    <td>Como comerciante, quiero revisar el comprobante reportado por el cliente y aprobarlo o rechazarlo desde el dashboard para confirmar que el dinero fue recibido correctamente.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>US-42</td>
-    <td>Notificar resultado de validación al cliente</td>
-    <td>Como cliente, quiero recibir una notificación sobre el resultado de la validación de mi pago para saber si mi pedido fue confirmado o si debo realizar alguna acción adicional.</td>
-    <td>2</td>
-  </tr>
-
-  <tr>
-    <td>19</td>
-    <td>US-01</td>
-    <td>Agregar productos</td>
-    <td>Como usuario quiero agregar productos para gestionar mi inventario de manera eficiente.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>US-05</td>
-    <td>Editar productos</td>
-    <td>Como usuario quiero editar productos para actualizar los datos en el inventario.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>21</td>
-    <td>US-10</td>
-    <td>Visualizar detalles de producto</td>
-    <td>Como usuario quiero visualizar la información detallada de cada producto en el listado para conocer rápidamente sus características, stock disponible y precio sin necesidad de ingresar a otra pantalla.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>US-12</td>
-    <td>Buscar productos</td>
-    <td>Como usuario quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>23</td>
-    <td>US-23</td>
-    <td>Crear lotes</td>
-    <td>Como usuario quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>24</td>
-    <td>US-03</td>
-    <td>Agregar lotes</td>
-    <td>Como usuario quiero agregar lotes para gestionar correctamente las cantidades y fechas de vencimiento.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>25</td>
-    <td>US-02</td>
-    <td>Editar lotes</td>
-    <td>Como usuario quiero editar los lotes para actualizar los datos del inventario.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>26</td>
-    <td>US-04</td>
-    <td>Eliminar lotes</td>
-    <td>Como usuario quiero eliminar lotes para deshacerme de los lotes que no me sirvan.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>27</td>
-    <td>US-06</td>
-    <td>Visualizar detalles de lotes</td>
-    <td>Como usuario quiero visualizar los detalles de los lotes para gestionar mejor el inventario.</td>
-    <td>2</td>
-  </tr>
-
-  <tr>
-    <td>28</td>
-    <td>US-09</td>
-    <td>Visualizar dashboard de lotes</td>
-    <td>Como usuario quiero visualizar un dashboard de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>29</td>
-    <td>US-07</td>
-    <td>Detectar stock agotado</td>
-    <td>Como usuario quiero ser notificado cuando tengo bajo/nada de stock.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>30</td>
-    <td>US-08</td>
-    <td>Mostrar alertas de estado al visualizar detalles</td>
-    <td>Como usuario quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>31</td>
-    <td>US-11</td>
-    <td>Recibir alerta de caducidad de lote</td>
-    <td>Como usuario quiero ser notificado cuando un lote esté próximo a vencer o ya haya vencido para tomar acciones como priorizar su uso o descartarlo.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>32</td>
-    <td>US-32</td>
-    <td>Vincular cuenta de WhatsApp Business mediante código QR</td>
-    <td>Como comerciante, quiero conectar mi cuenta de WhatsApp Business escaneando un código QR para activar el chatbot de atención a clientes desde el dashboard.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>33</td>
-    <td>US-33</td>
-    <td>Consultar estado de vinculación del chatbot</td>
-    <td>Como comerciante, quiero conocer el estado de conexión de mi WhatsApp Business para saber si el chatbot se encuentra activo o requiere reconexión.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>34</td>
-    <td>US-34</td>
-    <td>Visualizar conversaciones de clientes en el dashboard</td>
-    <td>Como comerciante, quiero ver los chats que el bot ha tenido con mis clientes dentro del dashboard para tener visibilidad de todas las conversaciones activas sin usar WhatsApp directamente.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>35</td>
-    <td>US-35</td>
-    <td>Responder mensajes de clientes desde el dashboard</td>
-    <td>Como comerciante, quiero enviar mensajes a mis clientes directamente desde el dashboard para gestionar conversaciones sin necesitar abrir WhatsApp.</td>
-    <td>3</td>
-  </tr>
-
-  <tr>
-    <td>36</td>
-    <td>US-46</td>
-    <td>Manejar stock insuficiente en pedido</td>
-    <td>Como cliente, quiero ser notificado cuando un producto no tiene stock suficiente para ajustar mi pedido antes de proceder al pago.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>37</td>
-    <td>US-47</td>
-    <td>Cancelar pedido por expiración de tiempo de pago</td>
-    <td>Como sistema, quiero cancelar automáticamente un pedido cuando el cliente no reporta el comprobante de pago en el tiempo establecido para liberar el stock reservado.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>38</td>
-    <td>US-48</td>
-    <td>Rechazar comprobante de pago inválido</td>
-    <td>Como comerciante, quiero rechazar un comprobante de pago cuando sea incorrecto o sospechoso para proteger el negocio de transacciones fraudulentas.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>39</td>
-    <td>US-50</td>
-    <td>Gestionar ciclo de vida de pedidos mediante API</td>
-    <td>Como developer, quiero endpoints para crear y actualizar pedidos para que el chatbot y el dashboard intercambien información del pedido de forma automática y consistente.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>40</td>
-    <td>US-51</td>
-    <td>Validar y registrar pagos mediante API</td>
-    <td>Como developer, quiero un endpoint para aprobar o rechazar pagos desde el dashboard para que el sistema actualice el inventario y notifique al cliente de forma automática.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>41</td>
-    <td>US-49</td>
-    <td>Conocer propuesta de valor en landing page</td>
-    <td>Como visitante, quiero entender qué hace Entreprenly y cómo puede beneficiar a mi negocio para decidir si me interesa adquirirlo.</td>
-    <td>3</td>
-  </tr>
-
-  <tr>
-    <td>42</td>
-    <td>US-13</td>
-    <td>Seleccionar plan de suscripción</td>
-    <td>Como usuario con Plan Free, quiero presionar el botón "Elegir plan" en la tarjeta del Plan Control para definir el plan que deseo contratar y continuar con el proceso de suscripción.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>43</td>
-    <td>US-14</td>
-    <td>Iniciar proceso de suscripción</td>
-    <td>Como usuario con un plan seleccionado, quiero presionar el botón "Continuar con la suscripción" para abrir el formulario de facturación y comenzar formalmente la contratación del plan elegido.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>44</td>
-    <td>US-15</td>
-    <td>Registrar datos de facturación</td>
-    <td>Como usuario, quiero completar el formulario de facturación y presionar el botón "Continuar al pago" para que el sistema pueda preparar el cobro correspondiente a la suscripción.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>45</td>
-    <td>US-16</td>
-    <td>Procesar cobro de suscripción</td>
-    <td>Como usuario, quiero revisar el resumen de cobro y presionar el botón "Pagar y activar suscripción" para validar el pago del Plan Control seleccionado.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>46</td>
-    <td>US-17</td>
-    <td>Activar suscripción</td>
-    <td>Como usuario, quiero que al confirmarse el pago el sistema active automáticamente el Plan Control y me redirija al panel de suscripción para acceder a las funcionalidades premium.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>47</td>
-    <td>US-18</td>
-    <td>Visualizar panel de suscripción</td>
-    <td>Como usuario, quiero hacer clic en la opción lateral "Suscripción" para ver un panel con el plan actual, estado, fecha de renovación, facturación y acciones disponibles.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>48</td>
-    <td>US-19</td>
-    <td>Consultar estado de suscripción</td>
-    <td>Como usuario, quiero ver una etiqueta de estado en el panel de suscripción para saber si mi plan se encuentra en estado "Activa", "Cancelación programada", "Cancelada" o "Plan Free".</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>49</td>
-    <td>US-20</td>
-    <td>Renovar suscripción</td>
-    <td>Como usuario con una suscripción de pago activa o próxima a vencer, quiero presionar el botón "Renovar suscripción" para extender la vigencia de mi acceso a la plataforma.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>50</td>
-    <td>US-21</td>
-    <td>Solicitar cancelación de suscripción</td>
-    <td>Como usuario con una suscripción de pago activa, quiero presionar el botón "Solicitar cancelación" y luego "Confirmar cancelación" para detener la renovación automática al finalizar el periodo vigente.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>51</td>
-    <td>US-22</td>
-    <td>Cancelar suscripción</td>
-    <td>Como sistema, quiero cancelar la suscripción de pago al finalizar su periodo vigente para retirar el acceso premium y devolver la cuenta del usuario al Plan Free.</td>
-    <td>3</td>
-  </tr>
-
-  <tr>
-    <td>52</td>
-    <td>US-71</td>
-    <td>Agregar método de pago de suscripción</td>
-    <td>Como usuario con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" dentro de la sección "Método de pago y datos fiscales" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>53</td>
-    <td>US-72</td>
-    <td>Completar datos fiscales de suscripción</td>
-    <td>Como usuario con una cuenta registrada, quiero presionar el botón "Completar datos" dentro de "Método de pago y datos fiscales" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>54</td>
-    <td>US-73</td>
-    <td>Descargar historial de suscripción</td>
-    <td>Como usuario, quiero presionar el botón "Descargar historial" dentro de "Actividad de la suscripción" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td>
-    <td>2</td>
-  </tr>
-
-  <tr>
-    <td>55</td>
-    <td>US-52</td>
-    <td>Registrar cuenta con email</td>
-    <td>Como usuario anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly y obtener automáticamente el Plan Free.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>56</td>
-    <td>US-53</td>
-    <td>Verificar email</td>
-    <td>Como usuario registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>57</td>
-    <td>US-54</td>
-    <td>Iniciar sesión con credenciales</td>
-    <td>Como usuario registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>58</td>
-    <td>US-55</td>
-    <td>Iniciar sesión con Google OAuth</td>
-    <td>Como usuario anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.</td>
-    <td>5</td>
-  </tr>
-  <tr>
-    <td>59</td>
-    <td>US-56</td>
-    <td>Recuperar contraseña</td>
-    <td>Como usuario registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>60</td>
-    <td>US-57</td>
-    <td>Cerrar sesión</td>
-    <td>Como usuario autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>61</td>
-    <td>US-58</td>
-    <td>Visualizar perfil actual</td>
-    <td>Como usuario autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>62</td>
-    <td>US-59</td>
-    <td>Actualizar nombre y biografía</td>
-    <td>Como usuario autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>63</td>
-    <td>US-60</td>
-    <td>Subir foto de perfil</td>
-    <td>Como usuario autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>64</td>
-    <td>US-61</td>
-    <td>Cambiar email con re-verificación</td>
-    <td>Como usuario autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>65</td>
-    <td>US-62</td>
-    <td>Cambiar contraseña</td>
-    <td>Como usuario autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>66</td>
-    <td>US-63</td>
-    <td>Configurar preferencias de idioma, zona horaria y tema</td>
-    <td>Como usuario autenticado, quiero configurar mi idioma, zona horaria y tema visual para adaptar la plataforma a mis preferencias.</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>67</td>
-    <td>US-64</td>
-    <td>Configurar notificaciones</td>
-    <td>Como usuario autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.</td>
-    <td>2</td>
-  </tr>
+    <!-- BLOQUE 1: LANDING -->
+    <tr><td>1</td><td>US-49</td><td>Conocer propuesta de valor en landing page</td><td>Como visitante, quiero entender qué hace Entreprenly y cómo puede beneficiar a mi negocio para decidir si me interesa adquirirlo.</td><td>3</td></tr>
+    <!-- BLOQUE 2: AUTENTICACIÓN -->
+    <tr><td>2</td><td>US-52</td><td>Registrar cuenta con email</td><td>Como usuario anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly y obtener automáticamente el Plan Free.</td><td>3</td></tr>
+    <tr><td>3</td><td>US-53</td><td>Verificar email</td><td>Como usuario registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.</td><td>3</td></tr>
+    <tr><td>4</td><td>US-54</td><td>Iniciar sesión con credenciales</td><td>Como usuario registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.</td><td>3</td></tr>
+    <tr><td>5</td><td>US-55</td><td>Iniciar sesión con Google OAuth</td><td>Como usuario anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.</td><td>5</td></tr>
+    <tr><td>6</td><td>US-56</td><td>Recuperar contraseña</td><td>Como usuario registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.</td><td>3</td></tr>
+    <tr><td>7</td><td>US-57</td><td>Cerrar sesión</td><td>Como usuario autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.</td><td>1</td></tr>
+    <!-- BLOQUE 3: GESTIÓN DE INVENTARIO -->
+    <tr><td>8</td><td>US-01</td><td>Agregar productos</td><td>Como usuario quiero agregar productos para gestionar mi inventario de manera eficiente.</td><td>3</td></tr>
+    <tr><td>9</td><td>US-05</td><td>Editar productos</td><td>Como usuario quiero editar productos para actualizar los datos en el inventario.</td><td>2</td></tr>
+    <tr><td>10</td><td>US-10</td><td>Visualizar detalles de producto</td><td>Como usuario quiero visualizar la información detallada de cada producto en el listado para conocer rápidamente sus características, stock disponible y precio sin necesidad de ingresar a otra pantalla.</td><td>2</td></tr>
+    <tr><td>11</td><td>US-12</td><td>Buscar productos</td><td>Como usuario quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.</td><td>3</td></tr>
+    <tr><td>12</td><td>US-23</td><td>Crear lotes</td><td>Como usuario quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.</td><td>3</td></tr>
+    <tr><td>13</td><td>US-03</td><td>Agregar lotes</td><td>Como usuario quiero agregar lotes para gestionar correctamente las cantidades y fechas de vencimiento.</td><td>2</td></tr>
+    <tr><td>14</td><td>US-02</td><td>Editar lotes</td><td>Como usuario quiero editar los lotes para actualizar los datos del inventario.</td><td>2</td></tr>
+    <tr><td>15</td><td>US-06</td><td>Visualizar detalles de lotes</td><td>Como usuario quiero visualizar los detalles de los lotes para gestionar mejor el inventario.</td><td>2</td></tr>
+    <tr><td>16</td><td>US-04</td><td>Eliminar lotes</td><td>Como usuario quiero eliminar lotes para deshacerme de los lotes que no me sirvan.</td><td>1</td></tr>
+    <!-- BLOQUE 4: ALERTAS DE INVENTARIO -->
+    <tr><td>17</td><td>US-09</td><td>Visualizar dashboard de lotes</td><td>Como usuario quiero visualizar un dashboard de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.</td><td>3</td></tr>
+    <tr><td>18</td><td>US-07</td><td>Detectar stock agotado</td><td>Como usuario quiero ser notificado cuando tengo bajo/nada de stock.</td><td>3</td></tr>
+    <tr><td>19</td><td>US-11</td><td>Recibir alerta de caducidad de lote</td><td>Como usuario quiero ser notificado cuando un lote esté próximo a vencer o ya haya vencido para tomar acciones como priorizar su uso o descartarlo.</td><td>3</td></tr>
+    <tr><td>20</td><td>US-08</td><td>Mostrar alertas de estado al visualizar detalles</td><td>Como usuario quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.</td><td>2</td></tr>
+    <!-- BLOQUE 5: VENTAS PRESENCIALES (POS) -->
+    <tr><td>21</td><td>US-24</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso, para abrir la interfaz de ingreso correspondiente.</td><td>3</td></tr>
+    <tr><td>22</td><td>US-25</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>Como cajero, quiero ingresar el número de unidades de un producto seleccionado, para añadirlo al detalle de la venta.</td><td>2</td></tr>
+    <tr><td>23</td><td>US-26</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td><td>5</td></tr>
+    <tr><td>24</td><td>US-27</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>Como cajero, quiero visualizar el desglose de productos para verificar que la información sea correcta antes de proceder al pago.</td><td>3</td></tr>
+    <tr><td>25</td><td>US-28</td><td>Seleccionar el método de pago para la transacción</td><td>Como cajero, quiero elegir el medio por el cual está pagando el cliente para que el ingreso se registre en la categoría contable correcta.</td><td>2</td></tr>
+    <tr><td>26</td><td>US-29</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>Como cajero, quiero procesar el pago y finalizar la venta en un solo paso para registrar la transacción en el sistema y entregar el comprobante al cliente de forma inmediata.</td><td>3</td></tr>
+    <!-- BLOQUE 6: CONTROL DE CAJA -->
+    <tr><td>27</td><td>US-30</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente para tener visibilidad inmediata del efectivo y digital.</td><td>3</td></tr>
+    <tr><td>28</td><td>US-31</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td><td>2</td></tr>
+    <!-- BLOQUE 7: PANEL DE INICIO (HOME) -->
+    <tr><td>29</td><td>US-65</td><td>Visualizar resumen de ventas del día</td><td>Como comerciante, quiero visualizar un resumen de las ventas del día en el panel de inicio para conocer el rendimiento de mi negocio sin ingresar al módulo de ventas.</td><td>2</td></tr>
+    <tr><td>30</td><td>US-67</td><td>Visualizar alertas de inventario en el home</td><td>Como comerciante, quiero ver las alertas críticas de inventario directamente en el panel de inicio para identificar rápidamente productos agotados o lotes próximos a vencer.</td><td>2</td></tr>
+    <tr><td>31</td><td>US-68</td><td>Visualizar contador de pedidos pendientes en el home</td><td>Como comerciante, quiero ver el número de pedidos que están pendientes de atención en el panel de inicio para priorizar mi respuesta sin necesidad de ingresar al módulo de chatbot.</td><td>1</td></tr>
+    <tr><td>32</td><td>US-69</td><td>Visualizar pedidos recientes en el home</td><td>Como comerciante, quiero ver los pedidos más recientes con su estado actual en el panel de inicio para hacer seguimiento sin ingresar al módulo de pedidos.</td><td>2</td></tr>
+    <tr><td>33</td><td>US-66</td><td>Visualizar estado del chatbot en el home</td><td>Como comerciante, quiero visualizar el estado de conexión del chatbot y los chats activos desde el panel de inicio para saber si mi canal de ventas por WhatsApp está operativo.</td><td>2</td></tr>
+    <tr><td>34</td><td>US-70</td><td>Acceder a módulos desde accesos directos del home</td><td>Como comerciante, quiero contar con accesos directos a los módulos principales desde el panel de inicio para navegar rápidamente a cualquier sección sin recorrer el menú lateral.</td><td>1</td></tr>
+    <!-- BLOQUE 8: CHATBOT WHATSAPP -->
+    <tr><td>35</td><td>US-32</td><td>Vincular cuenta de WhatsApp Business mediante código QR</td><td>Como comerciante, quiero conectar mi cuenta de WhatsApp Business escaneando un código QR para activar el chatbot de atención a clientes desde el dashboard.</td><td>5</td></tr>
+    <tr><td>36</td><td>US-33</td><td>Consultar estado de vinculación del chatbot</td><td>Como comerciante, quiero conocer el estado de conexión de mi WhatsApp Business para saber si el chatbot se encuentra activo o requiere reconexión.</td><td>2</td></tr>
+    <tr><td>37</td><td>US-34</td><td>Visualizar conversaciones de clientes en el dashboard</td><td>Como comerciante, quiero ver los chats que el bot ha tenido con mis clientes dentro del dashboard para tener visibilidad de todas las conversaciones activas sin usar WhatsApp directamente.</td><td>3</td></tr>
+    <tr><td>38</td><td>US-35</td><td>Responder mensajes de clientes desde el dashboard</td><td>Como comerciante, quiero enviar mensajes a mis clientes directamente desde el dashboard para gestionar conversaciones sin necesitar abrir WhatsApp.</td><td>3</td></tr>
+    <!-- BLOQUE 9: FLUJO DE PEDIDOS POR BOT -->
+    <tr><td>39</td><td>US-36</td><td>Responder consulta de producto disponible</td><td>Como sistema, quiero que el chatbot responda automáticamente al cliente con la información del producto solicitado cuando este existe en el inventario.</td><td>3</td></tr>
+    <tr><td>40</td><td>US-37</td><td>Sugerir alternativas ante producto no disponible</td><td>Como sistema, quiero que el chatbot informe al cliente cuando un producto no está disponible y le sugiera otros productos del inventario.</td><td>2</td></tr>
+    <tr><td>41</td><td>US-38</td><td>Confirmar pedido con el cliente</td><td>Como sistema, quiero que el chatbot presente un resumen del pedido al cliente y solicite confirmación antes de proceder al pago.</td><td>3</td></tr>
+    <tr><td>42</td><td>US-39</td><td>Recibir instrucciones de pago por WhatsApp</td><td>Como cliente, quiero recibir las instrucciones de pago a través del chatbot para saber cómo realizar la transferencia y completar mi pedido.</td><td>2</td></tr>
+    <tr><td>43</td><td>US-40</td><td>Reportar comprobante de pago digital</td><td>Como cliente, quiero enviar el comprobante de mi pago al chatbot para que el comerciante pueda verificarlo y confirmar mi pedido.</td><td>3</td></tr>
+    <tr><td>44</td><td>US-41</td><td>Validar comprobante de pago desde el dashboard</td><td>Como comerciante, quiero revisar el comprobante reportado por el cliente y aprobarlo o rechazarlo desde el dashboard.</td><td>3</td></tr>
+    <tr><td>45</td><td>US-42</td><td>Notificar resultado de validación al cliente</td><td>Como cliente, quiero recibir una notificación sobre el resultado de la validación de mi pago para saber si mi pedido fue confirmado.</td><td>2</td></tr>
+    <!-- BLOQUE 10: CONFIRMACIÓN Y CIERRE DE PEDIDOS -->
+    <tr><td>46</td><td>US-43</td><td>Confirmar pedido y descontar stock</td><td>Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real y reflejar el consumo de stock.</td><td>3</td></tr>
+    <tr><td>47</td><td>US-44</td><td>Registrar venta en el sistema</td><td>Como comerciante, quiero que cada pedido confirmado quede registrado como venta en el sistema para mantener un control financiero preciso y trazable.</td><td>2</td></tr>
+    <tr><td>48</td><td>US-45</td><td>Emitir comprobante digital al cliente</td><td>Como cliente, quiero recibir un comprobante de mi compra a través del chatbot para tener un respaldo de la transacción realizada.</td><td>3</td></tr>
+    <!-- BLOQUE 11: FLUJOS ALTERNATIVOS Y RESTRICCIONES -->
+    <tr><td>49</td><td>US-46</td><td>Manejar stock insuficiente en pedido</td><td>Como cliente, quiero ser notificado cuando un producto no tiene stock suficiente para ajustar mi pedido antes de proceder al pago.</td><td>3</td></tr>
+    <tr><td>50</td><td>US-47</td><td>Cancelar pedido por expiración de tiempo de pago</td><td>Como sistema, quiero cancelar automáticamente un pedido cuando el cliente no reporta el comprobante de pago en el tiempo establecido para liberar el stock reservado.</td><td>3</td></tr>
+    <tr><td>51</td><td>US-48</td><td>Rechazar comprobante de pago inválido</td><td>Como comerciante, quiero rechazar un comprobante de pago cuando sea incorrecto o sospechoso para proteger el negocio de transacciones fraudulentas.</td><td>3</td></tr>
+    <!-- BLOQUE 12: API TÉCNICA -->
+    <tr><td>52</td><td>US-50</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>Como developer, quiero endpoints para crear y actualizar pedidos para que el chatbot y el dashboard intercambien información del pedido de forma automática y consistente.</td><td>5</td></tr>
+    <tr><td>53</td><td>US-51</td><td>Validar y registrar pagos mediante API</td><td>Como developer, quiero un endpoint para aprobar o rechazar pagos desde el dashboard para que el sistema actualice el inventario y notifique al cliente de forma automática.</td><td>5</td></tr>
+    <!-- BLOQUE 13: SUSCRIPCIÓN -->
+    <tr><td>54</td><td>US-13</td><td>Seleccionar plan de suscripción</td><td>Como usuario con Plan Free, quiero presionar el botón "Elegir plan" en la tarjeta del Plan Control para definir el plan que deseo contratar y continuar con el proceso de suscripción.</td><td>2</td></tr>
+    <tr><td>55</td><td>US-14</td><td>Iniciar proceso de suscripción</td><td>Como usuario con un plan seleccionado, quiero presionar el botón "Continuar con la suscripción" para abrir el formulario de facturación y comenzar formalmente la contratación del plan elegido.</td><td>2</td></tr>
+    <tr><td>56</td><td>US-71</td><td>Agregar método de pago de suscripción</td><td>Como usuario con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td><td>3</td></tr>
+    <tr><td>57</td><td>US-72</td><td>Completar datos fiscales de suscripción</td><td>Como usuario con una cuenta registrada, quiero presionar el botón "Completar datos" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td><td>2</td></tr>
+    <tr><td>58</td><td>US-15</td><td>Registrar datos de facturación</td><td>Como usuario, quiero completar el formulario de facturación y presionar el botón "Continuar al pago" para que el sistema pueda preparar el cobro correspondiente a la suscripción.</td><td>3</td></tr>
+    <tr><td>59</td><td>US-16</td><td>Procesar cobro de suscripción</td><td>Como usuario, quiero revisar el resumen de cobro y presionar el botón "Pagar y activar suscripción" para validar el pago del Plan Control seleccionado.</td><td>5</td></tr>
+    <tr><td>60</td><td>US-17</td><td>Activar suscripción</td><td>Como usuario, quiero que al confirmarse el pago el sistema active automáticamente el Plan Control y me redirija al panel de suscripción para acceder a las funcionalidades premium.</td><td>3</td></tr>
+    <tr><td>61</td><td>US-18</td><td>Visualizar panel de suscripción</td><td>Como usuario, quiero hacer clic en la opción lateral "Suscripción" para ver un panel con el plan actual, estado, fecha de renovación, facturación y acciones disponibles.</td><td>2</td></tr>
+    <tr><td>62</td><td>US-19</td><td>Consultar estado de suscripción</td><td>Como usuario, quiero ver una etiqueta de estado en el panel de suscripción para saber si mi plan se encuentra en estado "Activa", "Cancelación programada", "Cancelada" o "Plan Free".</td><td>1</td></tr>
+    <tr><td>63</td><td>US-20</td><td>Renovar suscripción</td><td>Como usuario con una suscripción de pago activa o próxima a vencer, quiero presionar el botón "Renovar suscripción" para extender la vigencia de mi acceso a la plataforma.</td><td>3</td></tr>
+    <tr><td>64</td><td>US-21</td><td>Solicitar cancelación de suscripción</td><td>Como usuario con una suscripción de pago activa, quiero presionar el botón "Solicitar cancelación" y luego "Confirmar cancelación" para detener la renovación automática al finalizar el periodo vigente.</td><td>2</td></tr>
+    <tr><td>65</td><td>US-22</td><td>Cancelar suscripción</td><td>Como sistema, quiero cancelar la suscripción de pago al finalizar su periodo vigente para retirar el acceso premium y devolver la cuenta del usuario al Plan Free.</td><td>3</td></tr>
+    <tr><td>66</td><td>US-73</td><td>Descargar historial de suscripción</td><td>Como usuario, quiero presionar el botón "Descargar historial" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td><td>2</td></tr>
+    <!-- BLOQUE 14: SOPORTE Y AYUDA (NUEVO) -->
+    <tr><td>67</td><td>US-74</td><td>Visualizar el centro de soporte</td><td>Como comerciante, quiero visualizar el centro de soporte al presionar el botón de Ayuda para acceder de forma rápida a las opciones de asistencia disponibles.</td><td>2</td></tr>
+    <tr><td>68</td><td>US-75</td><td>Buscar artículo de ayuda</td><td>Como comerciante, quiero buscar artículos de ayuda por palabras clave para encontrar rápidamente la información que necesito sin revisar todas las categorías.</td><td>2</td></tr>
+    <tr><td>69</td><td>US-76</td><td>Consultar artículo de ayuda</td><td>Como comerciante, quiero abrir y leer un artículo de ayuda para entender cómo usar una funcionalidad de la plataforma o resolver un problema específico.</td><td>2</td></tr>
+    <tr><td>70</td><td>US-77</td><td>Reportar un problema</td><td>Como comerciante, quiero reportar un problema o incidencia desde el centro de soporte para que el equipo de Entreprenly pueda revisarlo y darle seguimiento.</td><td>3</td></tr>
+    <tr><td>71</td><td>US-78</td><td>Confirmar envío del reporte</td><td>Como comerciante, quiero recibir una confirmación visual tras enviar un reporte para tener la certeza de que mi solicitud fue registrada correctamente.</td><td>1</td></tr>
+    <!-- BLOQUE 15: PERFIL Y CONFIGURACIÓN -->
+    <tr><td>72</td><td>US-58</td><td>Visualizar perfil actual</td><td>Como usuario autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.</td><td>1</td></tr>
+    <tr><td>73</td><td>US-59</td><td>Actualizar nombre y biografía</td><td>Como usuario autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.</td><td>2</td></tr>
+    <tr><td>74</td><td>US-60</td><td>Subir foto de perfil</td><td>Como usuario autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.</td><td>3</td></tr>
+    <tr><td>75</td><td>US-61</td><td>Cambiar email con re-verificación</td><td>Como usuario autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.</td><td>3</td></tr>
+    <tr><td>76</td><td>US-62</td><td>Cambiar contraseña</td><td>Como usuario autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td><td>3</td></tr>
+    <tr><td>77</td><td>US-63</td><td>Configurar preferencias de idioma, zona horaria y tema</td><td>Como usuario autenticado, quiero configurar mi idioma, zona horaria y tema visual para adaptar la plataforma a mis preferencias.</td><td>2</td></tr>
+    <tr><td>78</td><td>US-64</td><td>Configurar notificaciones</td><td>Como usuario autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.</td><td>2</td></tr>
   </tbody>
 </table>
