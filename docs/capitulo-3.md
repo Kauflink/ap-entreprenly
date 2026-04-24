@@ -3,2705 +3,1262 @@
 ## 3.1. User Stories
 
 <!-- Epics-->
-<div align="center">
 <table>
+  <thead>
+    <tr>
+      <th>Epic / Story ID</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Criterios de Aceptación</th>
+      <th>Relacionado con (Epic ID)</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <!-- EPIC 01 -->
   <tr>
-    <th>Epic-01</th>
-    <th>Gestión de Inventario</th>
+    <td><strong>Epic-01</strong></td>
+    <td><strong>Gestión de inventario</strong></td>
+    <td>Como usuario quiero gestionar mi inventario (lotes y productos) para visualizar los datos con mayor claridad.</td>
+    <td></td>
+    <td></td>
   </tr>
 
+  <!-- US 01 -->
   <tr>
-    <td colspan="2" >
-      <strong >Descripción:</strong>
-      Como usuario quiero gestionar mi inventario(lotes y productos) para visualizar los datos con mayor claridad.
+    <td>US-01</td>
+    <td>Agregar productos</td>
+    <td>Como usuario quiero agregar productos para gestionar mi inventario de manera eficiente.</td>
+    <td>
+      <strong>Scenario 1: Agregar producto correctamente</strong><br>
+      Dado que el usuario está en el formulario de productos, cuando ingrese los datos correctamente y presione "Guardar", entonces el producto se registrará exitosamente.<br><br>
+      <strong>Scenario 2: Validación de datos</strong><br>
+      Dado que el usuario está en el formulario de productos, cuando deje campos obligatorios vacíos y presione "Guardar", entonces el sistema mostrará mensajes de error.
     </td>
+    <td>Epic-01</td>
   </tr>
 
+  <!-- US 02 -->
   <tr>
-    <td align="center">1</td>
-    <td align="center">Agregación de Productos</td>
-  </tr>
-  <tr>
-    <td align="center">2</td>
-    <td align="center">Edición de lotes</td>
-  </tr>
-  <tr>
-    <td align="center">3</td>
-    <td align="center">Agregación de Lotes</td>
-  </tr>
-  <tr>
-    <td align="center">4</td>
-    <td align="center">Eliminación de Lotes</td>
-  </tr>
-  <tr>
-    <td align="center">10</td>
-    <td align="center">Visualización de detalles de Producto</td>
-  </tr>
-  <tr>
-    <td align="center">5</td>
-    <td align="center">Edición de Productos</td>
-  </tr>
-  <tr>
-    <td align="center">6</td>
-    <td align="center">Visualización de detalles de Lotes</td>
-  </tr>
-  <tr>
-    <td align="center">13</td>
-    <td align="center">Buscador de Productos</td>
-  </tr>
-  <tr>
-    <td align="center">23</td>
-    <td align="center">Creación de lotes</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-02</th>
-    <th>
-      Notificaciones de Inventario
-    </th>
-  </tr>
-
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como usuario quiero que el sistema me notifique el estado de mis lotes para organizarme mejor.
+    <td>US-02</td>
+    <td>Editar lotes</td>
+    <td>Como usuario quiero editar los lotes para actualizar los datos del inventario.</td>
+    <td>
+      <strong>Scenario 1: Editar lote correctamente</strong><br>
+      Dado que el usuario está en la sección de lotes y selecciona un lote existente, cuando modifique los datos correctamente y presione "Guardar", entonces los cambios del lote se actualizarán exitosamente.<br><br>
+      <strong>Scenario 2: Validación al editar lote</strong><br>
+      Dado que el usuario está editando un lote, cuando ingrese datos inválidos o deje campos obligatorios vacíos y presione "Guardar", entonces el sistema mostrará mensajes de error y no guardará los cambios.
     </td>
+    <td>Epic-01</td>
   </tr>
 
+  <!-- US 03 -->
   <tr>
-    <td align="center">7</td>
-    <td align="center">Detección de Stock Agotado</td>
-  </tr>
-  <tr>
-    <td align="center">8</td>
-    <td align="center">Mostrar alertas de estado al visualizar detalles</td>
-  </tr>
-  
-  <tr>
-    <td align="center">9</td>
-    <td align="center">Dashboard de Lotes</td>
-  </tr>
-
-  <tr>
-    <td align="center">11</td>
-    <td align="center">Alerta de caducación de Lote</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-03</th>
-    <th>Proceso de suscripción</th>
-  </tr>
-
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como usuario quiero completar el proceso de suscripción para acceder a las funcionalidades de la plataforma según el plan elegido.
+    <td>US-03</td>
+    <td>Agregar lotes</td>
+    <td>Como usuario quiero agregar lotes para gestionar correctamente las cantidades y fechas de vencimiento.</td>
+    <td>
+      <strong>Scenario 1: Agregar lote correctamente</strong><br>
+      Dado que el usuario está en la sección de lotes y selecciona un lote existente, cuando ingrese una cantidad y fecha válida y presione "Agregar", entonces el nuevo lote se agregará exitosamente.<br><br>
+      <strong>Scenario 2: Intento de registro de lote con información incompleta</strong><br>
+      Dado que el usuario se encuentra en el formulario de Agregación de Lotes. 
+      Cuando intenta procesar la solicitud dejando uno o más campos obligatorios vacíos.
+      Entonces el sistema debe impedir el registro y resaltar cada campo omitido con el mensaje: "Este campo es obligatorio".
     </td>
+    <td>Epic-01</td>
   </tr>
 
+  <!-- US 04 -->
   <tr>
-    <td align="center">13</td>
-    <td align="center">Seleccionar plan de suscripción</td>
-  </tr>
-  <tr>
-    <td align="center">14</td>
-    <td align="center">Iniciar proceso de suscripción</td>
-  </tr>
-  <tr>
-    <td align="center">15</td>
-    <td align="center">Registrar datos de facturación</td>
-  </tr>
-  <tr>
-    <td align="center">16</td>
-    <td align="center">Procesar cobro de suscripción</td>
-  </tr>
-  <tr>
-    <td align="center">17</td>
-    <td align="center">Activar suscripción</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-04</th>
-    <th>Configuración de suscripción</th>
-  </tr>
-
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como usuario quiero visualizar y gestionar la configuración de mi suscripción para consultar su estado, renovarla o cancelarla según mis necesidades.
+    <td>US-04</td>
+    <td>Eliminar lotes</td>
+    <td>Como usuario quiero eliminar lotes para deshacerme de los lotes que no me sirvan.</td>
+    <td>
+      <strong>Scenario 1: Eliminar lote correctamente</strong><br>
+      Dado que el usuario está en la sección de lotes y selecciona un lote existente, cuando presione "Eliminar", entonces el lote se eliminará exitosamente.<br><br>
+      <strong>Scenario 2: Validación al eliminar lote</strong><br>
+      Dado que el usuario está en la sección de lotes y no selecciona un lote existente, cuando presione "Eliminar", entonces saldrá un mensaje de error de no haber seleccionado un lote.
     </td>
+    <td>Epic-01</td>
   </tr>
 
+  <!-- US 05 -->
   <tr>
-    <td align="center">18</td>
-    <td align="center">Visualizar panel de suscripción</td>
-  </tr>
-  <tr>
-    <td align="center">19</td>
-    <td align="center">Consultar estado de suscripción</td>
-  </tr>
-  <tr>
-    <td align="center">20</td>
-    <td align="center">Renovar suscripción</td>
-  </tr>
-  <tr>
-    <td align="center">21</td>
-    <td align="center">Solicitar cancelación de suscripción</td>
-  </tr>
-  <tr>
-    <td align="center">22</td>
-    <td align="center">Cancelar suscripción</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-05</th>
-    <th>Control de Ingresos y Arqueo de Caja</th>
-  </tr>
-
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como cajero o comerciante quiero contar con un módulo de ventas integrado con dispositivos IoT y persistencia en base de datos, para procesar transacciones de manera rápida, emitir comprobantes legales y mantener el inventario sincronizado automáticamente.
+    <td>US-05</td>
+    <td>Editar productos</td>
+    <td>Como usuario quiero editar productos para actualizar los datos en el inventario.</td>
+    <td>
+      <strong>Scenario 1: Producto editado correctamente</strong><br>
+      Dado que el usuario está en la sección de productos y selecciona un producto existente, cuando presione "Editar", entonces el producto se actualizará exitosamente.<br><br>
+      <strong>Scenario 2: Validación al editar productos</strong><br>
+      Dado que el usuario se encuentra en la lista de inventario y ha seleccionado un producto existente.
+      Cuando el usuario intenta cambiar el "Tipo de Producto" y presiona el botón de guardar. 
+      Entonces el sistema debe impedir la acción y mostrar un mensaje de error indicando: "Este campo no se puede modificar".
     </td>
+    <td>Epic-01</td>
   </tr>
 
+  <!-- US 06 -->
   <tr>
-    <td align="center">24</td>
-    <td align="center">Selección y Registro de Ítems</td>
-  </tr>
-  <tr>
-    <td align="center">25</td>
-    <td align="center">Registro de Productos por Peso (IoT)</td>
-  </tr>
-  <tr>
-    <td align="center">26</td>
-    <td align="center">Gestión del Detalle del Ticket de Venta</td>
-  </tr>
-  <tr>
-    <td align="center">27</td>
-    <td align="center">Selección de Método de Pago</td>
-  </tr>
-
-  <tr>
-    <td align="center">29</td>
-    <td align="center">Finalización de Venta, Registro y Emisión de Comprobante</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-06</th>
-    <th>Gestion de Ventas</th>
-  </tr>
-
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como comerciante, quiero que el sistema centralice y clasifique los ingresos según el medio de pago en tiempo real, para realizar el arqueo de caja al final del día de manera exacta y sin errores manuales.
+    <td>US-06</td>
+    <td>Visualizar detalles de lotes</td>
+    <td>Como usuario quiero visualizar los detalles de los lotes para gestionar mejor el inventario.</td>
+    <td>
+      <strong>Scenario 1: Detalles de lote mostrados correctamente</strong><br>
+      Dado que el usuario está en la sección de lotes y selecciona un lote existente, cuando presione "Ver Detalles", entonces los detalles se mostrarán exitosamente.<br><br>
+      <strong>Scenario 2: Error al recuperar los detalles del lote</strong><br>
+      Dado que el usuario visualiza la tarjeta de un producto con lotes existentes.
+      Cuando el usuario presiona "Ver Detalles" pero ocurre un error de comunicación con el servidor (timeout o error 500).
+      Entonces el sistema debe mostrar un mensaje de error indicando: "No se pudieron cargar los detalles en este momento. Inténtelo más tarde".
     </td>
+    <td>Epic-01</td>
   </tr>
 
+  <!-- US 10 -->
   <tr>
-    <td align="center">28</td>
-    <td align="center">Clasificación Automática de Ingresos por Medio de Pago</td>
-  </tr>
-
-  <tr>
-    <td align="center">30</td>
-    <td align="center">Consulta de Resumen de Caja Diario</td>
-  </tr>
-  
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-07</th>
-    <th>Conversación y Catálogo</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como cliente potencial, quiero  una interacción fluida con el chatbot de WhatsApp y visualizar un catálogo de productos actualizado en tiempo real, para poder conocer la oferta disponible y comenzar mi proceso de compra de manera inmediata.
+    <td>US-10</td>
+    <td>Visualizar detalles de producto</td>
+    <td>Como usuario quiero visualizar la información detallada de cada producto en el listado para conocer rápidamente sus características, stock disponible y precio sin necesidad de ingresar a otra pantalla.</td>
+    <td>
+      <strong>Scenario 1: Visualización de información del producto</strong><br>
+      Dado que el usuario accede al listado de productos, cuando se carga la información, entonces cada producto debe mostrar: tipo, nombre, descripción, código QR, stock total y precio.<br><br>
+      <strong>Scenario 2: Manejo de información incompleta del producto</strong><br>
+      Dado que un producto no cuenta con algún dato, cuando se carga la información, entonces el sistema muestra los datos disponibles y los campos faltantes aparecen como "-".
     </td>
+    <td>Epic-01</td>
   </tr>
+
+  <!-- US 12 -->
   <tr>
-    <td align="center">31</td>
-    <td align="center">Iniciar conversación con chatbot</td>
-  </tr>
-  <tr>
-    <td align="center">32</td>
-    <td align="center">Recibir catálogo de productos</td>
-  </tr>
-  <tr>
-    <td align="center">33</td>
-    <td align="center">Catálogo sincronizado con inventario real</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-08</th>
-    <th>Gestión de Pedido y Stock</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como cliente, quiero seleccionar productos, indicar cantidades y registrar mi ubicación de entrega, para que el sistema genere un pedido consolidado y verifique automáticamente la disponibilidad física antes de proceder al pago.
+    <td>US-12</td>
+    <td>Buscar productos</td>
+    <td>Como usuario quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.</td>
+    <td>
+      <strong>Scenario 1: Búsqueda de productos por nombre</strong><br>
+      Dado que el usuario está en el listado de productos, cuando ingresa el nombre de un producto en el campo de búsqueda, entonces el sistema filtra y muestra los productos que coincidan.<br><br>
+      <strong>Scenario 2: Búsqueda de productos por categoría</strong><br>
+      Dado que el usuario está en el listado de productos, cuando selecciona o ingresa una categoría, entonces el sistema filtra y muestra los productos de esa categoría.
     </td>
+    <td>Epic-01</td>
   </tr>
+
+  <!-- US 23 -->
   <tr>
-    <td align="center">34</td>
-    <td align="center">Seleccionar productos y cantidades</td>
-  </tr>
-  <tr>
-    <td align="center">35</td>
-    <td align="center">Registrar dirección de delivery</td>
-  </tr>
-  <tr>
-    <td align="center">36</td>
-    <td align="center">Generar pedido consolidado</td>
-  </tr>
-  <tr>
-    <td align="center">37</td>
-    <td align="center">Validar stock antes del pago</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-09</th>
-    <th>Pago Digital P2P</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como cliente y comerciante, queremos gestionar el envío y la validación de comprobantes de pago digitales (Yape/Plin) a través de WhatsApp y el dashboard, para garantizar una transacción segura y confirmada antes de finalizar la venta.
+    <td>US-23</td>
+    <td>Crear lotes</td>
+    <td>Como usuario quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.</td>
+    <td>
+      <strong>Scenario 1: Creación de lote exitosa</strong><br>
+      Dado que el usuario está en la sección de productos, cuando presiona "Crear Lote", selecciona un producto y completa los datos correctamente, entonces el sistema registra el nuevo lote y lo muestra en la lista.<br><br>
+      <strong>Scenario 2: Validación al crear lote</strong><br>
+      Dado que el usuario no selecciona un producto o ingresa datos incompletos, entonces el sistema muestra mensajes de error y no permite la creación del lote.
     </td>
+    <td>Epic-01</td>
   </tr>
+
+  <!-- EPIC 02 -->
   <tr>
-    <td align="center">38</td>
-    <td align="center">Recibir instrucciones de pago</td>
+    <td><strong>Epic-02</strong></td>
+    <td><strong>Notificaciones de inventario</strong></td>
+    <td>Como usuario quiero que el sistema me notifique el estado de mis lotes para organizarme mejor.</td>
+    <td></td>
+    <td></td>
   </tr>
+
+  <!-- US 07 -->
   <tr>
-    <td align="center">39</td>
-    <td align="center">Reportar pago digital realizado</td>
-  </tr>
-  <tr>
-    <td align="center">40</td>
-    <td align="center">Validar pago desde el dashboard</td>
-  </tr>
-  <tr>
-    <td align="center">41</td>
-    <td align="center">Notificar estado del pago al cliente</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-10</th>
-    <th>Confirmación, Venta y Comprobante</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como dueño de negocio, quiero que el sistema confirme el pedido tras la validación del pago, descuente el stock y emita un comprobante digital, para mantener el control financiero y brindar un respaldo legal de la compra al cliente.
+    <td>US-07</td>
+    <td>Detectar stock agotado</td>
+    <td>Como usuario quiero ser notificado cuando tengo bajo/nada de stock.</td>
+    <td>
+      <strong>Scenario 1: Alerta de stock próximo a agotarse</strong><br>
+      Dado que uno o más lotes tienen stock por debajo del umbral definido, cuando el usuario accede al dashboard de lotes, entonces se muestra una alerta visible indicando los lotes próximos a agotarse.<br><br>
+      <strong>Scenario 2: Alerta de stock agotado</strong><br>
+      Dado que uno o más lotes están agotados, cuando el usuario accede al dashboard, entonces se muestra una alerta indicando los lotes agotados.
     </td>
+    <td>Epic-02</td>
   </tr>
+
+  <!-- US 08 -->
   <tr>
-    <td align="center">42</td>
-    <td align="center">Confirmar pedido y descontar stock</td>
-  </tr>
-  <tr>
-    <td align="center">43</td>
-    <td align="center">Registrar venta en el sistema</td>
-  </tr>
-  <tr>
-    <td align="center">44</td>
-    <td align="center">Emitir comprobante al cliente</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-11</th>
-    <th>Flujos Alternativos y Restricciones</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como sistema de gestión, quiero manejar escenarios de excepción como falta de stock, tiempos de espera agotados y rechazos de pago, para proteger la integridad del inventario y evitar pérdidas económicas.
+    <td>US-08</td>
+    <td>Mostrar alertas de estado al visualizar detalles</td>
+    <td>Como usuario quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.</td>
+    <td>
+      <strong>Scenario 1: Alerta de estado mostrada</strong><br>
+      Dado que el lote tiene stock bajo, está agotado o próximo a vencer, cuando presiona "Ver Detalles", entonces se mostrarán los detalles del lote con alertas de estado.<br><br>
+      <strong>Scenario 2: Sin alertas si el estado es normal</strong><br>
+      Dado que el lote no tiene condiciones críticas, cuando presiona "Ver Detalles", entonces se muestran los detalles sin alertas.
     </td>
+    <td>Epic-02</td>
   </tr>
+
+  <!-- US 09 -->
   <tr>
-    <td align="center">45</td>
-    <td align="center">Manejar stock insuficiente</td>
-  </tr>
-  <tr>
-    <td align="center">46</td>
-    <td align="center">Cancelar pedido por timeout de pago</td>
-  </tr>
-  <tr>
-    <td align="center">47</td>
-    <td align="center">Rechazar pago fraudulento o incorrecto</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-12</th>
-    <th>Technical Stories – RESTful API</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como equipo de desarrollo, queremos implementar una arquitectura de servicios RESTful segura y escalable, para que todos los componentes de la plataforma (chatbot, dashboard, inventario) intercambien datos de manera consistente.
+    <td>US-09</td>
+    <td>Visualizar dashboard de lotes</td>
+    <td>Como usuario quiero visualizar un dashboard de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.</td>
+    <td>
+      <strong>Scenario 1: Visualización de resumen de lotes</strong><br>
+      Dado que el usuario ingresa al módulo de lotes, cuando se carga la pantalla, entonces se muestra un resumen con indicadores clave sobre los estados de los lotes.<br><br>
+      <strong>Scenario 2: Sin alertas si no hay condiciones críticas</strong><br>
+      Dado que no existen lotes vencidos ni próximos a vencer, cuando se carga el dashboard, entonces no se muestra el banner de alertas.
     </td>
+    <td>Epic-02</td>
   </tr>
+
+  <!-- US 11 -->
   <tr>
-    <td align="center">48</td>
-    <td align="center">API: obtener catálogo de productos</td>
-  </tr>
-  <tr>
-    <td align="center">49</td>
-    <td align="center">API: crear y actualizar pedido</td>
-  </tr>
-  <tr>
-    <td align="center">50</td>
-    <td align="center">API: validar y registrar pago</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-13</th>
-    <th>Inicio de Sesión y Registro</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como usuario quiero poder registrarme, verificar mi cuenta, iniciar sesión y recuperar mi contraseña para acceder de forma segura a la plataforma.
+    <td>US-11</td>
+    <td>Recibir alerta de caducidad de lote</td>
+    <td>Como usuario quiero ser notificado cuando un lote esté próximo a vencer o ya haya vencido para tomar acciones como priorizar su uso o descartarlo.</td>
+    <td>
+      <strong>Scenario 1: Alerta de lote próximo a vencer</strong><br>
+      Dado que uno o más lotes tienen fecha de caducidad dentro del rango próximo definido, cuando el usuario accede al dashboard de lotes, entonces se muestra una alerta indicando los lotes próximos a vencer.<br><br>
+      <strong>Scenario 2: Alerta de lote vencido</strong><br>
+      Dado que uno o más lotes tienen fecha de caducidad menor a la fecha actual, cuando el usuario accede al dashboard, entonces se muestra una alerta indicando los lotes vencidos.
     </td>
+    <td>Epic-02</td>
   </tr>
+
+  <!-- EPIC 03 -->
   <tr>
-    <td align="center">51</td>
-    <td align="center">Registro de cuenta con email</td>
+    <td><strong>Epic-03</strong></td>
+    <td><strong>Proceso de suscripción</strong></td>
+    <td>Como usuario con cuenta creada y Plan Free asignado por defecto, quiero iniciar la suscripción al Plan Control para habilitar las funcionalidades premium desde la landing o desde la sección "Suscripción" del dashboard.</td>
+    <td></td>
+    <td></td>
   </tr>
+
+  <!-- US 13 -->
   <tr>
-    <td align="center">52</td>
-    <td align="center">Verificación de email</td>
-  </tr>
-  <tr>
-    <td align="center">53</td>
-    <td align="center">Inicio de sesión con credenciales</td>
-  </tr>
-  <tr>
-    <td align="center">54</td>
-    <td align="center">Inicio de sesión con Google OAuth</td>
-  </tr>
-  <tr>
-    <td align="center">55</td>
-    <td align="center">Recuperación de contraseña</td>
-  </tr>
-  <tr>
-    <td align="center">56</td>
-    <td align="center">Cierre de sesión</td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>Epic-14</th>
-    <th>Perfil y Configuración</th>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <strong>Descripción:</strong>
-      Como usuario quiero gestionar mi perfil y preferencias personales para personalizar mi experiencia dentro de la plataforma.
+    <td>US-13</td>
+    <td>Seleccionar plan de suscripción</td>
+    <td>Como usuario con Plan Free, quiero presionar el botón "Elegir plan" en la tarjeta del Plan Control para definir el plan que deseo contratar y continuar con el proceso de suscripción.</td>
+    <td>
+      <strong>Scenario 1: Selección de plan realizada correctamente</strong><br>
+      Dado que el usuario visualiza los planes disponibles en la landing o en la sección "Suscripción", cuando presiona el botón "Elegir plan" de la tarjeta "Plan Control", entonces el sistema registra el plan seleccionado, resalta visualmente la tarjeta y habilita el botón "Continuar con la suscripción".<br><br>
+      <strong>Scenario 2: Intento de continuar sin seleccionar un plan</strong><br>
+      Dado que el usuario no ha presionado el botón "Elegir plan" en ninguna tarjeta, cuando intenta hacer clic en "Continuar con la suscripción", entonces el sistema no permite avanzar y muestra un mensaje indicando que debe seleccionar un plan primero.
     </td>
+    <td>Epic-03</td>
   </tr>
+
+  <!-- US 14 -->
   <tr>
-    <td align="center">57</td>
-    <td align="center">Visualizar perfil actual</td>
-  </tr>
-  <tr>
-    <td align="center">58</td>
-    <td align="center">Actualizar nombre y biografía</td>
-  </tr>
-  <tr>
-    <td align="center">59</td>
-    <td align="center">Subir foto de perfil</td>
-  </tr>
-  <tr>
-    <td align="center">60</td>
-    <td align="center">Cambiar email con re-verificación</td>
-  </tr>
-  <tr>
-    <td align="center">61</td>
-    <td align="center">Cambiar contraseña</td>
-  </tr>
-  <tr>
-    <td align="center">62</td>
-    <td align="center">Configurar preferencias de idioma, zona horaria y tema</td>
-  </tr>
-  <tr>
-    <td align="center">63</td>
-    <td align="center">Configurar notificaciones</td>
-  </tr>
-</table>
-
-<!-- US-->
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>01</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Agregación de Productos</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero agregar productos para gestionar mi inventario de manera eficiente.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Agregar producto correctamente</strong><br>
-Dado que el usuario está en el formulario de productos<br>
-Cuando ingrese los datos correctamente<br>
-Y presione el botón “Guardar”<br>
-Entonces el producto se registrará exitosamente<br><br>
-
-<strong>Scenario 2: Validación de datos</strong><br>
-Dado que el usuario está en el formulario de productos<br>
-Cuando deje campos obligatorios vacíos<br>
-Y presione el botón “Guardar”<br>
-Entonces el sistema mostrará mensajes de error
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>02</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Edición de lotes</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero editar los lotes para actualizar los datos del inventario.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Editar lote correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y selecciona un lote existente<br>
-Cuando modifique los datos correctamente<br>
-Y presione el botón “Guardar”<br>
-Entonces los cambios del lote se actualizarán exitosamente<br><br>
-
-<strong>Scenario 2: Validación al editar lote</strong><br>
-Dado que el usuario está editando un lote<br>
-Cuando ingrese datos inválidos o deje campos obligatorios vacíos<br>
-Y presione el botón “Guardar”<br>
-Entonces el sistema mostrará mensajes de error y no guardará los cambios
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>03</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Agregación de Lotes</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero agregar lotes para gestionar correctamente las cantidades, fechas de vencimiento
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Agregar lote correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y selecciona un lote existente<br>
-Cuando ingrese una cantidad, fecha válida<br>
-Y presione el botón “Agregar”<br>
-Entonces el nuevo lote se agregará exitosamente.<br><br>
-
-<strong>Scenario 2: Validación al agregar lote</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y selecciona un lote existente<br>
-Cuando ingrese una cantidad, fecha válida<br>
-Y presione el botón “Agregar”<br>
-Entonces saldrá un mensaje de error por campo inválido
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>04</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Eliminación de Lotes</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero eliminar lotes para deshacerme de los lotes que no me sirvan
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Eliminar lote correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y selecciona un lote existente<br>
-Cuando presione el botón “Eliminar”<br>
-Entonces el lote se eliminará exitosamente<br><br>
-
-<strong>Scenario 2: Validación al eliminar lote</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y selecciona un lote existente<br>
-Cuando presione el botón “Eliminar”<br>
-Entonces saldrá un mensaje de error de no haber seleccionado un lote
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>05</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Edición de Productos</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero editar productos para actualizar los datos en el inventario
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Producto editado correctamente</strong><br>
-Dado que el usuario está en la sección de productos<br>
-Y selecciona un producto existente<br>
-Cuando presione el botón “Editar”<br>
-Entonces el producto se actualizará exitosamente<br><br>
-
-<strong>Scenario 2: Validación al editar productos</strong><br>
-Dado que el usuario está en la sección de productos<br>
-Y no selecciona un producto existente<br>
-Cuando presione el botón “Editar”<br>
-Entonces el sistema mostrará mensajes de error<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>06</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Visualización de detalles de Lotes</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero visualizar los detalles de los lotes para poder gestionar mejor el inventario
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Detalles de lote mostrados correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y selecciona un lote existente<br>
-Cuando presione el botón “Ver Detalles”<br>
-Entonces los detalles se mostraran exitosamente<br><br>
-
-<strong>Scenario 2: Validación al visualizar detalles de lote</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y no selecciona un lote existente<br>
-Cuando presione el botón “Ver Detalles”<br>
-Entonces los detalles saldrá un mensaje de error<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>07</th>
-<th>Epic ID</th>
-<th>02</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Detección de Stock Agotado</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero ser notificado cuando tengo bajo/nada de stock
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Alerta de stock próximo a agotarse mostrada correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y uno o más lotes tienen stock por debajo del umbral definido<br>
-Cuando el usuario accede al dashboard de lotes<br>
-Entonces se debe mostrar una alerta visible indicando los lotes próximos a agotarse<br><br>
-
-<strong>Scenario 2: Alerta de stock agotado mostrada correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y uno o más de sus lotes estan agotados<br>
-Cuando el usuario accede al dashboard de lotes<br>
-Entonces se debe mostrar una alerta indicando los lotes agotados<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>08</th>
-<th>Epic ID</th>
-<th>02</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Mostrar alertas de estado al visualizar detalles</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Alerta de stock próximo a agotarse mostrada correctamente</strong><br>
-Dado que el usuario selecciona un lote<br>
-Y el lote no tiene stock bajo, está agotado o próximo a vencer.<br>
-Cuando presiona "Ver Detalles"<br>
-Entonces se mostrarán los detalles del lote con alertas de estado<br><br>
-
-<strong>Scenario 2: No mostrar alertas si el estado es normal</strong><br>
-Dado que el usuario selecciona un lote<br>
-Y el lote tiene stock bajo, está agotado o próximo a vencer.<br>
-Cuando presiona "Ver Detalles"<br>
-Entonces se mostrarán los detalles del lote sin alertas<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>09</th>
-<th>Epic ID</th>
-<th>02</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Dashboard de Lotes</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero visualizar un dashboard de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Visualización de resumen de lotes</strong><br>
-Dado que el usuario ingresa al módulo de lotes<br>
-Cuando se carga la pantalla<br>
-Entonces se debe mostrar un resumen con indicadores clave sobre los estados de los lotes<br>
-
-<strong>Scenario 2: No mostrar alertas si no existen condiciones críticas</strong><br>
-Dado que el usuario ingresa al módulo de lotes<br>
-Y no existen lotes vencidos ni próximos a vencer<br>
-Cuando se carga el dashboard<br>
-Entonces no se debe mostrar el banner de alertas<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>10</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Visualización de detalles de Producto</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero visualizar la información detallada de cada producto en el listado para conocer rápidamente sus características, stock disponible y precio sin necesidad de ingresar a otra pantalla.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Visualización de información del producto</strong><br>
-Dado que el usuario accede al listado de productos<br>
-Cuando se carga la información<br>
-Entonces cada producto debe mostrar sus datos principales<br>
-Y debe incluir: tipo, nombre, descripción,codigo QR, stock total y precio<br><br>
-
-<strong>Scenario 2: Manejo de información incompleta del producto</strong><br>
-Dado que el usuario accede al listado de productos<br>
-Y un producto no cuenta con algún dato (descripción o código QR)<br>
-Cuando se carga la información<br>
-Entonces el sistema debe mostrar los demás datos disponibles correctamente<br>
-Y los campos faltantes deben mostrarse como vacíos("-")<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>11</th>
-<th>Epic ID</th>
-<th>02</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Alerta de caducación de Lote</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero ser notificado cuando un lote esté próximo a vencer o ya haya vencido
-para poder tomar acciones como priorizar su uso o descartarlo.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Alerta de lote próximo a vencer mostrada correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y uno o más lotes tienen una fecha de caducidad dentro del rango próximo definido<br>
-Cuando el usuario accede al dashboard de lotes<br>
-Entonces se debe mostrar una alerta indicando los lotes próximos a vencer<br><br>
-
-<strong>Scenario 2: Alerta de lote vencido mostrada correctamente</strong><br>
-Dado que el usuario está en la sección de lotes<br>
-Y uno o más lotes tienen una fecha de caducidad menor a la fecha actual<br>
-Cuando el usuario accede al dashboard de lotes<br>
-Entonces se debe mostrar una alerta indicando los lotes vencidos<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>12</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Buscador de Productos</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Búsqueda de productos por nombre</strong><br>
-Dado que el usuario está en el listado de productos<br>
-Cuando ingresa el nombre de un producto en el campo de búsqueda<br>
-Entonces el sistema debe filtrar y mostrar los productos que coincidan con el nombre ingresado<br><br>
-
-<strong>Scenario 2: Búsqueda de productos por categoría</strong><br>
-Dado que el usuario está en el listado de productos<br>
-Cuando selecciona o ingresa una categoría en el buscador<br>
-Entonces el sistema debe filtrar y mostrar los productos que pertenecen a esa categoría<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>13</th>
-<th>Epic ID</th>
-<th>03</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Seleccionar plan de suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero seleccionar un plan de suscripción para definir el tipo de acceso y beneficios que tendré dentro de la plataforma.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Selección de plan realizada correctamente</strong><br>
-Dado que el usuario visualiza los planes de suscripción disponibles<br>
-Cuando selecciona uno de los planes mostrados<br>
-Entonces el sistema registrará el plan seleccionado<br>
-Y permitirá continuar con el proceso de suscripción<br><br>
-
-<strong>Scenario 2: Intento de continuar sin seleccionar un plan</strong><br>
-Dado que el usuario visualiza los planes de suscripción disponibles<br>
-Y no selecciona ningún plan<br>
-Cuando intenta continuar con el proceso<br>
-Entonces el sistema no permitirá avanzar<br>
-Y mostrará un mensaje indicando que debe seleccionar un plan<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>14</th>
-<th>Epic ID</th>
-<th>03</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Iniciar proceso de suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero iniciar el proceso de suscripción para comenzar formalmente la contratación del plan previamente elegido.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Proceso de suscripción iniciado correctamente</strong><br>
-Dado que el usuario ya seleccionó un plan de suscripción<br>
-Cuando presiona la opción para iniciar la suscripción<br>
-Entonces el sistema registrará el inicio del proceso de suscripción<br>
-Y habilitará el formulario de facturación<br><br>
-
-<strong>Scenario 2: Intento de iniciar suscripción sin plan seleccionado</strong><br>
-Dado que el usuario no ha seleccionado un plan de suscripción<br>
-Cuando intenta iniciar el proceso de suscripción<br>
-Entonces el sistema no permitirá iniciar el proceso<br>
-Y mostrará un mensaje solicitando seleccionar un plan primero<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>15</th>
-<th>Epic ID</th>
-<th>03</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Registrar datos de facturación</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero ingresar mis datos de facturación para que el sistema pueda procesar el cobro correspondiente a la suscripción.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Datos de facturación registrados correctamente</strong><br>
-Dado que el usuario se encuentra en el proceso de suscripción<br>
-Y completa correctamente los datos de facturación<br>
-Cuando confirma el formulario<br>
-Entonces el sistema registrará los datos ingresados<br>
-Y permitirá continuar al paso de cobro<br><br>
-
-<strong>Scenario 2: Datos de facturación inválidos</strong><br>
-Dado que el usuario se encuentra en el proceso de suscripción<br>
-Y completa incorrectamente los datos de facturación<br>
-Cuando intenta confirmar el formulario<br>
-Entonces el sistema no registrará los datos<br>
-Y mostrará un mensaje indicando que existen datos inválidos<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>16</th>
-<th>Epic ID</th>
-<th>03</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Procesar cobro de suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero que el sistema procese el cobro de la suscripción para validar el pago del plan seleccionado.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Cobro procesado exitosamente</strong><br>
-Dado que el usuario ha registrado correctamente sus datos de facturación<br>
-Cuando el sistema procesa el cobro de la suscripción<br>
-Entonces el cobro será procesado exitosamente<br>
-Y el sistema permitirá activar la suscripción<br><br>
-
-<strong>Scenario 2: Error durante el procesamiento del cobro</strong><br>
-Dado que el usuario ha iniciado el proceso de pago<br>
-Cuando ocurre un error como tarjeta rechazada, datos inválidos o cobro fallido<br>
-Entonces el sistema no activará la suscripción<br>
-Y mostrará un mensaje indicando el motivo del error<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>17</th>
-<th>Epic ID</th>
-<th>03</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Activar suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero que mi suscripción sea activada una vez confirmado el cobro para acceder a las funcionalidades de la plataforma según el plan contratado.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Activación de suscripción exitosa</strong><br>
-Dado que el cobro de la suscripción fue procesado correctamente<br>
-Cuando el sistema confirma el pago<br>
-Entonces la suscripción será activada<br>
-Y el usuario obtendrá acceso a las funcionalidades correspondientes<br><br>
-
-<strong>Scenario 2: Suscripción no activada por pago no confirmado</strong><br>
-Dado que el cobro de la suscripción no fue confirmado<br>
-Cuando el sistema intenta activar la suscripción<br>
-Entonces la suscripción permanecerá en estado pendiente<br>
-Y el usuario no podrá acceder a las funcionalidades premium<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>18</th>
-<th>Epic ID</th>
-<th>04</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Visualizar panel de suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero visualizar el panel de suscripción para consultar de forma clara la información general relacionada con mi plan actual.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Panel de suscripción mostrado correctamente</strong><br>
-Dado que el usuario accede a la sección de suscripción<br>
-Cuando el sistema carga la vista correspondiente<br>
-Entonces se mostrará el panel de suscripción<br>
-Y se visualizarán los datos generales de la suscripción del usuario<br><br>
-
-<strong>Scenario 2: Usuario sin suscripción registrada</strong><br>
-Dado que el usuario accede a la sección de suscripción<br>
-Y no tiene una suscripción activa o registrada<br>
-Cuando el sistema carga la vista correspondiente<br>
-Entonces se mostrará el panel sin información activa<br>
-Y se indicará que no existe una suscripción disponible<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>19</th>
-<th>Epic ID</th>
-<th>04</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Consultar estado de suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero consultar el estado de mi suscripción para saber si se encuentra activa, vencida o cancelada.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Estado de suscripción activa mostrado correctamente</strong><br>
-Dado que el usuario tiene una suscripción vigente<br>
-Cuando consulta el estado de su suscripción<br>
-Entonces el sistema mostrará que la suscripción se encuentra activa<br><br>
-
-<strong>Scenario 2: Estado de suscripción vencida o cancelada mostrado correctamente</strong><br>
-Dado que el usuario tiene una suscripción vencida o cancelada<br>
-Cuando consulta el estado de su suscripción<br>
-Entonces el sistema mostrará el estado correspondiente<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>20</th>
-<th>Epic ID</th>
-<th>04</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Renovar suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero renovar mi suscripción para extender la vigencia de mi acceso a la plataforma.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Renovación realizada correctamente</strong><br>
-Dado que el usuario tiene una suscripción activa o próxima a vencer<br>
-Cuando selecciona la opción de renovar suscripción<br>
-Entonces el sistema registrará la renovación<br>
-Y actualizará la nueva fecha de vencimiento<br><br>
-
-<strong>Scenario 2: Renovación no permitida</strong><br>
-Dado que el usuario no cuenta con una suscripción válida para renovación<br>
-Cuando intenta renovar su suscripción<br>
-Entonces el sistema no permitirá la acción<br>
-Y mostrará un mensaje indicando que la renovación no puede realizarse<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>21</th>
-<th>Epic ID</th>
-<th>04</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Solicitar cancelación de suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero solicitar la cancelación de mi suscripción para detener su continuidad al finalizar el periodo vigente.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Solicitud de cancelación registrada correctamente</strong><br>
-Dado que el usuario tiene una suscripción activa<br>
-Cuando solicita la cancelación de su suscripción<br>
-Entonces el sistema registrará la solicitud de cancelación<br>
-Y mantendrá el acceso hasta la fecha de vencimiento<br><br>
-
-<strong>Scenario 2: Usuario cancela la operación antes de confirmar</strong><br>
-Dado que el usuario inició el proceso de cancelación<br>
-Cuando decide no confirmar la solicitud<br>
-Entonces el sistema no registrará la cancelación<br>
-Y la suscripción continuará sin cambios<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>22</th>
-<th>Epic ID</th>
-<th>04</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Cancelar suscripción</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como sistema quiero cancelar la suscripción al finalizar su periodo vigente para retirar el acceso del usuario a las funcionalidades premium.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Cancelación ejecutada correctamente</strong><br>
-Dado que existe una solicitud de cancelación registrada<br>
-Y la fecha de vencimiento ha sido alcanzada<br>
-Cuando el sistema procesa el fin del periodo<br>
-Entonces la suscripción será cancelada<br>
-Y el acceso a funcionalidades premium será retirado<br><br>
-
-<strong>Scenario 2: Suscripción aún dentro del periodo vigente</strong><br>
-Dado que existe una solicitud de cancelación registrada<br>
-Pero la fecha de vencimiento aún no ha llegado<br>
-Cuando el sistema verifica el estado de la suscripción<br>
-Entonces la suscripción continuará activa<br>
-Y el acceso permanecerá habilitado hasta el final del periodo<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>23</th>
-<th>Epic ID</th>
-<th>01</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Creación de lotes</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-Como usuario quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Creación de lote exitosa</strong><br>
-Dado que el usuario está en la sección de productos<br>
-Cuando presiona el botón “Crear Lote”<br>
-Y selecciona un producto existente<br>
-Y completa los datos requeridos correctamente<br>
-Entonces el sistema debe registrar el nuevo lote<br>
-Y mostrarlo en la lista de lotes<br><br>
-
-<strong>Scenario 2: Validación al crear lote</strong><br>
-Dado que el usuario está en la sección de productos<br>
-Cuando presiona el botón “Crear Lote”<br>
-Y no selecciona un producto o ingresa datos incompletos o inválidos<br>
-Entonces el sistema debe mostrar mensajes de error<br>
-Y no permitir la creación del lote<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>24</th>
-<th>Epic ID</th>
-<th>06</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Selección y Registro de Ítems</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-<strong>Como</strong> cajero, <strong>quiero</strong> buscar y seleccionar productos del inventario, <strong>para</strong> agregarlos al detalle del Ticket de Venta.
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Selección de producto existente</strong><br>
-<strong>Dado</strong> que el cajero se encuentra en la interfaz de ventas,<br>
-<strong>Cuando</strong> ingresa el  nombre del producto en el buscador,<br>
-<strong>Y</strong> haya ingresado la cantidad <br>
-<strong>Y</strong> presiona la tecla enter para confirmar,<br>
-<strong>Entonces</strong> el sistema añade el producto con su información base al detalle de la venta.<br><br>
-
-<strong>Scenario 2: Intento de agregar producto no registrado</strong><br>
-<strong>Dado</strong> que el cajero se encuentra en la interfaz de ventas,<br>
-<strong>Cuando</strong> ingresa un nombre de un producto que no existe en la base de datos,<br>
-<strong>Y</strong> el sistema termina de realizar la búsqueda sin coincidencias,<br>
-<strong>Entonces</strong> el sistema muestra un mensaje de error indicando "Producto no encontrado".<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>25</th>
-<th>Epic ID</th>
-<th>06</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Registro de Productos por Peso (IoT)</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-<strong>Como</strong> cajero, <strong>quiero</strong> registrar el peso de los productos en el sistema (ya sea por captura automática o ingreso manual), <strong>para</strong> agilizar el proceso de cobro y asegurar que la venta no se detenga por fallas técnicas
-
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Captura automática mediante balanza conectada (Ruta Principal)</strong><br>
-<strong>Dado</strong> que el sistema cuenta con una balanza IoT configurada y conectada,<br>
-<strong>Cuando</strong> se selecciona un producto que se vende por peso,<br>
-<strong>Y</strong> el sistema recibe la lectura del peso directamente del hardware, <br>
-<strong>Entonces</strong> el sistema carga el valor automáticamente en el detalle de la venta<br><br>
-
-<strong>Scenario 2: Registro manual en ausencia o falla de balanza (Ruta Alternativa)</strong><br>
-<strong>Dado</strong> que el establecimiento no cuenta con balanza IoT o el dispositivo está desconectado,<br>
-<strong>Cuando</strong> el cajero selecciona un producto que se vende por peso,<br>
-<strong>Y</strong> el sistema detecta que no hay respuesta del hardware elige la opción "Ingreso Manual",<br>
-<strong>Entonces</strong> el sistema habilita un teclado numérico para que el cajero digite el peso observado físicamente.
-<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>26</th>
-<th>Epic ID</th>
-<th>06</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Gestión del Detalle del Ticket de Venta</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-<strong>Como</strong> cajero, <strong>quiero</strong> visualizar el desglose de productos (nombre, cantidad, precio unitario y subtotal), <strong>para</strong> verificar que la información de la venta sea correcta antes del pago.
-
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Actualización del detalle y monto total</strong><br>
-<strong>Dado</strong> que se han añadido productos al ticket de venta,<br>
-<strong>Cuando</strong> el sistema procesa cada ítem de la lista,<br>
-<strong>Y</strong> multiplica el precio unitario por la cantidad o peso ingresado, <br>
-<strong>Entonces</strong> el sistema muestra el subtotal por producto y el monto total acumulado de la venta.
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>27</th>
-<th>Epic ID</th>
-<th>06</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Selección de Método de Pago</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-<strong>Como</strong> cajero, <strong>quiero</strong> elegir cómo está pagando el cliente (Efectivo, Tarjeta/Yape/Plin), <strong>para</strong> que el monto de la venta se registre en la categoría correcta de ingresos.
-
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Selección de método de pago exitosa</strong><br>
-<strong>Dado</strong> que el ticket de venta tiene el monto total calculado,
-<strong>Cuando</strong> el cajero hace clic sobre el ícono de "Efectivo", "Tarjeta/Yape/Plin",
-<strong>Y</strong> el sistema marca la opción seleccionada como activa,
-<strong>Entonces</strong> el sistema habilita el botón para emitir la boleta y finalizar la venta.
-
-<strong>Scenario 1: Omisión del método de pago</strong><br>
-<strong>Dado</strong> que el cajero terminó de enlistar los productos,
-<strong>Cuando</strong> intenta finalizar la venta sin haber seleccionado ninguna opción de pago,
-<strong>Y</strong> el sistema detecta que no hay un método asignado para esta transacción,
-<strong>Entonces</strong> el sistema muestra un mensaje indicando "Por favor, seleccione un método de pago" y no permite generar la boleta.
-
-<br><br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>28</th>
-<th>Epic ID</th>
-<th>07</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Clasificación Automática de Ingresos por Medio de Pago</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-<strong>Como</strong> comerciante, <strong>quiero</strong> que cada venta finalizada sume su monto al acumulado del método de pago correspondiente, <strong>para</strong> tener visibilidad inmediata de cuánto dinero hay en efectivo y cuánto en digital (Yape/Plin/Tarjeta).
-
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Actualización de acumulados tras venta
-</strong><br>
-<strong>Dado</strong> que el sistema ha registrado una venta exitosamente,
-<strong>Cuando</strong> el proceso de guardado en PostgreSQL detecta el medio de pago utilizado (ej. Yape),
-<strong>Y</strong> localiza la cuenta acumulativa de dicho método en el sistema,
-<strong>Entonces</strong> el sistema suma el monto de la venta al total acumulado de ese medio de pago de forma inmediata.
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>29</th>
-<th>Epic ID</th>
-<th>06</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Finalización de Venta, Registro y Emisión de Comprobante
-
-</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-<strong>Como</strong> cajero, <strong>quiero</strong> procesar el pago y finalizar la venta con un solo paso, <strong>para</strong> registrar la transacción en el sistema y entregarle su boleta al cliente de forma inmediata.
-
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Procesamiento de cierre de venta (Ruta Feliz)
-</strong><br>
-<strong>Dado</strong> que el detalle del ticket de venta está completo y el método de pago ha sido seleccionado,<br>
-<strong>Cuando</strong> el cajero presiona el botón "Finalizar Venta y Emitir Boleta",<br>
-<strong>Y</strong> registra la información en PostgreSQL actualizando los saldos y el stock,<br>
-<strong>Entonces</strong> el sistema genera el comprobante de pago final y limpia la pantalla para una nueva venta.<br>
-
-<strong>Scenario 2: Procesamiento de cierre de venta (Ruta Feliz)
-</strong><br>
-<strong>Dado</strong> que el total de la venta ha sido calculado y revisado,<br>
-<strong>Cuando</strong> el cajero selecciona el medio de pago (Efectivo, Tarjeta o Digital),<br>
-<strong>Y</strong> confirma que el monto recibido es correcto,<br>
-<strong>Entonces</strong> el sistema habilita la opción para procesar el cierre de la transacción.<br>
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-<tr>
-<th>User Story</th>
-<th>30</th>
-<th>Epic ID</th>
-<th>07</th>
-</tr>
-<tr>
-<td><strong>Title</strong></td>
-<td colspan="3">Consulta de Resumen de Caja Diario
-
-</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td colspan="3">
-<strong>Como</strong> cajero, <strong>quiero</strong> procesar el pago y finalizar la venta con un solo paso, <strong>para</strong> registrar la transacción en el sistema y entregarle su boleta al cliente de forma inmediata.
-
-</td>
-</tr>
-<tr>
-<td><strong>Acceptance Criteria</strong></td>
-<td colspan="3">
-
-<strong>Scenario 1: Visualización detallada de ingresos
-</strong><br>
-<strong>Dado</strong> que el comerciante accede a la sección de "Cierre de Caja" o "Reportes",
-<strong>Cuando</strong> el sistema consulta los saldos acumulados en la base de datos,
-<strong>Y</strong> desglosa los totales por: Efectivo, Tarjeta y Yape/Plin,
-<strong>Entonces</strong> el sistema muestra el monto total general y la suma independiente de cada categoría para el arqueo final.
-
-</td>
-</tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>31</th>
-    <th>Epic ID</th>
-    <th>07</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Iniciar conversación con chatbot</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero iniciar una conversación con el chatbot de WhatsApp para poder realizar un pedido sin necesidad de llamar ni ir a la tienda.
+    <td>US-14</td>
+    <td>Iniciar proceso de suscripción</td>
+    <td>Como usuario con un plan seleccionado, quiero presionar el botón "Continuar con la suscripción" para abrir el formulario de facturación y comenzar formalmente la contratación del plan elegido.</td>
+    <td>
+      <strong>Scenario 1: Proceso de suscripción iniciado correctamente</strong><br>
+      Dado que el usuario ya seleccionó el Plan Control, cuando presiona el botón "Continuar con la suscripción", entonces el sistema registra el inicio del proceso y lo redirige al formulario de facturación.<br><br>
+      <strong>Scenario 2: Intento sin plan seleccionado</strong><br>
+      Dado que el usuario no ha seleccionado un plan, cuando presiona el botón "Continuar con la suscripción", entonces el sistema no permite iniciar el proceso y muestra un mensaje solicitando seleccionar un plan primero.
     </td>
+    <td>Epic-03</td>
   </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Respuesta inmediata al primer mensaje</strong><br>
-      Dado que el cliente envía cualquier mensaje al número de WhatsApp registrado,<br>
-      Cuando el chatbot recibe el mensaje,<br> 
-      Entonces responde en menos de 3 segundos con mensaje de bienvenida con el nombre del negocio y las opciones disponibles <br><br>
-      <strong>Scenario 2: Retomar conversación activa</strong><br>
-      Dado que el cliente ya tiene una conversación activa sin completar,<br>
-      Cuando envía un nuevo mensaje,<br>
-      Entonces el chatbot retoma el contexto del pedido en curso sin reiniciar el flujo.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>32</th>
-    <th>Epic ID</th>
-    <th>07</th>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Recibir catálogo de productos</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero recibir el catálogo actualizado de productos directamente en WhatsApp para elegir lo que deseo comprar.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Catálogo enviado con productos disponibles</strong><br>
-      Dado que el cliente solicita ver el catálogo,<br>
-      Cuando el chatbot consulta el inventario,<br>
-      Entonces envía la lista con nombre, precio y stock, mostrando únicamente productos con stock mayor a 0.<br><br>
-      <strong>Scenario 2: Sin productos disponibles en inventario</strong><br>
-      Dado que no hay productos con stock disponible,<br>
-      Cuando el chatbot consulta el inventario,<br>
-      Entonces informa al cliente que no hay productos disponibles en este momento.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>33</th>
-    <th>Epic ID</th>
-    <th>07</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Catálogo sincronizado con inventario real</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como comerciante, quiero que el catálogo del chatbot refleje siempre el inventario real para evitar vender productos sin existencia.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Precio actualizado reflejado en el siguiente catálogo</strong><br>
-      Dado que el comerciante actualiza el precio de un producto en el dashboard,<br>
-      Cuando un cliente solicita el catálogo,<br>
-      Entonces el chatbot muestra el precio actualizado.<br><br>
-      <strong>Scenario 2: Producto agotado no aparece en el catálogo</strong><br>
-      Dado que un producto agota su stock,<br>
-      Cuando el sistema actualiza el inventario,<br>
-      Entonces ese producto deja de mostrarse en el catálogo.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>34</th>
-    <th>Epic ID</th>
-    <th>08</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Seleccionar productos y cantidades</td>
-  </tr>
-  
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero seleccionar uno o más productos e indicar la cantidad para que el sistema construya mi pedido correctamente.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Selección exitosa de producto unitario</strong><br>
-      Dado que el cliente recibe el catálogo,<br>
-      Cuando indica un producto y cantidad válida,<br>
-      Entonces el chatbot confirma la selección y la agrega al pedido en curso.<br><br>
-      <strong>Scenario 2: Selección de producto por peso</strong><br>
-      Dado que el cliente indica un producto por peso (ej: 1.5 kg de arroz),<br>
-      Cuando el chatbot procesa la solicitud,<br>
-      Entonces registra la cantidad en kilogramos y calcula el subtotal.<br><br><strong>Scenario 3: Producto no encontrado en el catálogo</strong><br>
-      Dado que el cliente escribe un producto inexistente,<br>
-      Cuando el chatbot no lo encuentra,<br>
-      Entonces informa que no está disponible y muestra el catálogo nuevamente.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>35</th>
-    <th>Epic ID</th>
-    <th>08</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Registrar dirección de delivery</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero ingresar mi dirección de entrega para que el comerciante sepa dónde enviar mi pedido.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Registro exitoso de dirección de entrega</strong><br>
-      Dado que el cliente confirmó al menos un producto,<br>
-      Cuando el chatbot solicita la dirección y el cliente la ingresa,<br>
-      Entonces el sistema registra la dirección asociada al pedido y continúa el flujo.<br><br>
-      <strong>Scenario 2: Cliente no responde con dirección</strong><br>
-      Dado que el chatbot solicitó la dirección de entrega,<br>
-      Cuando el cliente no ingresa dirección en 10 minutos,<br>
-      Entonces el chatbot solicita nuevamente la dirección antes de continuar.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>36</th>
-    <th>Epic ID</th>
-    <th>08</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Generar pedido consolidado</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como sistema, quiero generar un pedido con todos los productos, cantidades, dirección y datos del cliente para poder procesarlo.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Pedido creado exitosamente</strong><br>
-      Dado que el cliente confirma productos y dirección,<br>
-      Cuando el sistema genera el pedido,<br>
-      Entonces crea un registro con estado 'pendiente', productos, cantidades, dirección y timestamp.<br><br>
-      <strong>Scenario 2: Validación de stock iniciada tras generación</strong><br>
-      Dado que el pedido ha sido generado,<br>
-      Cuando el sistema procede a la validación,<br>
-      Entonces verifica que cada producto tenga suficiente existencia antes de continuar al pago.
-    </td>
-  </tr>
-</table>
 
-<table>
+  <!-- US 15 -->
   <tr>
-    <th>User Story</th>
-    <th>37</th>
-    <th>Epic ID</th>
-    <th>08</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Validar stock antes del pago</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como sistema, quiero validar el stock de cada producto del pedido para evitar comprometer inventario inexistente.
+    <td>US-15</td>
+    <td>Registrar datos de facturación</td>
+    <td>Como usuario, quiero completar el formulario de facturación y presionar el botón "Continuar al pago" para que el sistema pueda preparar el cobro correspondiente a la suscripción.</td>
+    <td>
+      <strong>Scenario 1: Datos de facturación registrados correctamente</strong><br>
+      Dado que el usuario completa correctamente los campos obligatorios del formulario de facturación y presiona el botón "Continuar al pago", cuando el sistema valida la información, entonces registra los datos y habilita el resumen previo al cobro.<br><br>
+      <strong>Scenario 2: Datos de facturación inválidos</strong><br>
+      Dado que el usuario ingresa datos incompletos o inválidos en el formulario, cuando presiona el botón "Continuar al pago", entonces el sistema no registra la información, resalta los campos con error y muestra un mensaje de validación.
     </td>
+    <td>Epic-03</td>
   </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Stock suficiente para todos los ítems</strong><br>
-      Dado que se genera un pedido,<br>
-      Cuando el sistema verifica el stock,<br>
-      Entonces confirma que hay cantidad suficiente para cada ítem y avanza al flujo de pago.<br><br>
-      <strong>Scenario 2: Stock insuficiente para un ítem del pedido</strong><br>
-      Dado que un producto del pedido no tiene stock suficiente,<br>
-      Cuando el sistema detecta la insuficiencia,<br>
-      Entonces notifica al cliente indicando qué producto no está disponible y ofrece continuar con menor cantidad o eliminar el ítem.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>38</th>
-    <th>Epic ID</th>
-    <th>09</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Recibir instrucciones de pago</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero recibir las instrucciones de pago por WhatsApp para saber cómo realizar la transferencia.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Instrucciones de pago enviadas correctamente</strong><br>
-      Dado que el stock del pedido fue validado exitosamente,<br>
-      Cuando el chatbot envía las instrucciones,<br>
-      Entonces el cliente recibe el número Yape/Plin del comerciante, el monto total y el número de pedido como referencia.<br><br>
-      <strong>Scenario 2: Registro del evento de instrucción enviada</strong><br>
-      Dado que el mensaje con instrucciones es entregado,<br>
-      Cuando el sistema confirma la entrega,<br>
-      Entonces registra el evento 'Instrucción de pago enviada' con timestamp.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>39</th>
-    <th>Epic ID</th>
-    <th>09</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Reportar pago digital realizado</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero reportar que realicé el pago enviando el comprobante al chatbot para que el comerciante pueda verificarlo.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Reporte exitoso del comprobante de pago</strong><br>
-      Dado que el cliente realizó el pago por Yape o Plin,<br>
-      Cuando envía el comprobante al chatbot,<br>
-      Entonces el sistema registra 'Pago digital reportado' y notifica al comerciante en el dashboard.<br><br>
-      <strong>Scenario 2: Timeout sin reporte de pago</strong><br>
-      Dado que el cliente recibió las instrucciones de pago,<br>
-      Cuando transcurren 30 minutos sin que el cliente reporte el pago,<br>
-      Entonces el chatbot envía un recordatorio y el pedido permanece en estado 'esperando pago'.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>40</th>
-    <th>Epic ID</th>
-    <th>09</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Validar pago desde el dashboard</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como comerciante, quiero revisar y aprobar o rechazar el pago reportado desde el dashboard para confirmar que el dinero fue recibido.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Comerciante visualiza pedidos con pago pendiente</strong><br>
-      Dado que el cliente reportó su pago,<br>
-      Cuando el comerciante revisa el pedido en el dashboard,<br>
-      Entonces visualiza el comprobante, el monto y los detalles del pedido.<br><br>
-      <strong>Scenario 2: Aprobación del pago por el comerciante</strong><br>
-      Dado que el comerciante verifica que el pago es correcto,<br>
-      Cuando lo aprueba,<br>
-      Entonces el sistema registra 'Pago validado manualmente' y continúa el flujo.<br><br>
-      <strong>Scenario 3: Rechazo del pago por el comerciante</strong><br>
-      Dado que el comerciante detecta un pago incorrecto,<br>
-      Cuando lo rechaza indicando el motivo,<br>
-      Entonces el chatbot notifica al cliente y le indica los pasos a seguir.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>41</th>
-    <th>Epic ID</th>
-    <th>09</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Notificar estado del pago al cliente</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero recibir una notificación sobre si mi pago fue aprobado o rechazado para saber si mi pedido está confirmado.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Notificación de pago aprobado</strong><br>
-      Dado que el comerciante aprueba el pago,<br>
-      Cuando el sistema actualiza el estado,<br>
-      Entonces el chatbot envía al cliente un mensaje confirmando que su pago fue recibido y el pedido está en proceso.<br><br>
-      <strong>Scenario 2: Notificación de pago rechazado</strong><br>
-      Dado que el comerciante rechaza el pago,<br>
-      Cuando el sistema actualiza el estado,<br>
-      Entonces el chatbot informa al cliente que no fue validado y solicita que lo intente nuevamente.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>42</th>
-    <th>Epic ID</th>
-    <th>10</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Confirmar pedido y descontar stock</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Confirmación de pedido y descuento de inventario</strong><br>
-      Dado que el comerciante aprueba el pago,<br>
-      Cuando el sistema confirma el pedido,<br>
-      Entonces actualiza el estado a 'confirmado' y descuenta el stock de cada producto del inventario.<br><br>
-      <strong>Scenario 2: Actualización de peso en balanza IoT</strong><br>
-      Dado que el pedido incluye productos por peso,<br>
-      Cuando el sistema descuenta el stock,<br>
-      Entonces actualiza el peso disponible en la balanza IoT.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>43</th>
-    <th>Epic ID</th>
-    <th>10</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Registrar venta en el sistema</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como comerciante, quiero que cada pedido confirmado quede registrado como venta para tener un control financiero preciso.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Venta registrada correctamente</strong><br>
-      Dado que el pedido ha sido confirmado,<br>
-      Cuando el sistema registra la venta,<br>
-      Entonces crea un registro con monto total, método de pago, productos y timestamp.<br><br>
-      <strong>Scenario 2: Venta digital separada del efectivo en caja</strong><br>
-      Dado que el pago fue digital (Yape/Plin),<br>
-      Cuando se registra la venta,<br>
-      Entonces el monto queda asociado al canal de pagos digitales, separado del efectivo en caja.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>44</th>
-    <th>Epic ID</th>
-    <th>10</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Emitir comprobante al cliente</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero recibir un comprobante de mi compra por WhatsApp para tener un respaldo de la transacción.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Comprobante enviado al cliente por WhatsApp</strong><br>
-      Dado que la venta ha sido registrada,<br>
-      Cuando el sistema genera el comprobante,<br>
-      Entonces el chatbot envía al cliente un resumen con número de pedido, productos, cantidades, monto total y fecha.<br><br>
-      <strong>Scenario 2: Pedido marcado como completado</strong><br>
-      Dado que el comprobante es emitido,<br>
-      Cuando el chatbot lo entrega,<br>
-      Entonces el sistema registra 'Comprobante emitido' y el pedido pasa a estado 'completado'.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>45</th>
-    <th>Epic ID</th>
-    <th>11</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Manejar stock insuficiente</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como cliente, quiero ser notificado si un producto no tiene stock suficiente para poder ajustar mi pedido.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Notificación de stock insuficiente al cliente</strong><br>
-      Dado que el cliente solicita una cantidad mayor al stock disponible,<br>
-      Cuando el sistema valida el inventario,<br>
-      Entonces el chatbot notifica qué producto no tiene stock y ofrece ajustar la cantidad o eliminarlo.<br><br>
-      <strong>Scenario 2: Cliente ajusta la cantidad del producto</strong><br>
-      Dado que el chatbot informó al cliente sobre el stock insuficiente,<br>
-      Cuando el cliente confirma una nueva cantidad menor o igual al stock disponible,<br>
-      Entonces el sistema actualiza el pedido y continúa el flujo normalmente.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>46</th>
-    <th>Epic ID</th>
-    <th>11</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Cancelar pedido por timeout de pago</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como sistema, quiero cancelar automáticamente un pedido si el cliente no reporta el pago en el tiempo establecido para liberar el stock reservado.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Cancelación automática por timeout</strong><br>
-      Dado que el cliente recibió las instrucciones de pago,<br>
-      Cuando transcurren 60 minutos sin reporte de pago,<br>
-      Entonces el sistema cancela el pedido, libera el stock y notifica al cliente por WhatsApp.<br><br>
-      <strong>Scenario 2: Registro del evento de cancelación</strong><br>
-      Dado que el pedido es cancelado por timeout,<br>
-      Cuando el sistema actualiza el estado,<br>
-      Entonces registra el evento de cancelación con motivo 'timeout de pago' para trazabilidad.
-    </td>
-  </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>47</th>
-    <th>Epic ID</th>
-    <th>11</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Rechazar pago fraudulento o incorrecto</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como comerciante, quiero poder rechazar un pago si el comprobante es incorrecto para proteger el negocio de fraudes.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Rechazo manual por comprobante sospechoso</strong><br>
-      Dado que el comerciante revisa un comprobante sospechoso,<br>
-      Cuando lo rechaza indicando el motivo,<br>
-      Entonces el pedido vuelve a 'esperando pago' y el chatbot notifica al cliente.<br><br>
-      <strong>Scenario 2: Alerta por rechazos repetidos del mismo cliente</strong><br>
-      Dado que el mismo cliente presenta pagos rechazados dos veces,<br>
-      Cuando el sistema detecta el patrón,<br>
-      Entonces alerta al comerciante y bloquea el pedido para revisión manual.
-    </td>
-  </tr>
-</table>
 
-<table>
+  <!-- US 16 -->
   <tr>
-    <th>User Story</th>
-    <th>48</th>
-    <th>Epic ID</th>
-    <th>12</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Conocer la propuesta de valor</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como visitante, quiero entender qué hace Entreprenly y cómo puede beneficiar a mi negocio para decidir si me interesa adquirirlo.
+    <td>US-16</td>
+    <td>Procesar cobro de suscripción</td>
+    <td>Como usuario, quiero revisar el resumen de cobro y presionar el botón "Pagar y activar suscripción" para validar el pago del Plan Control seleccionado.</td>
+    <td>
+      <strong>Scenario 1: Cobro procesado exitosamente</strong><br>
+      Dado que el usuario ya registró correctamente sus datos de facturación, cuando presiona el botón "Pagar y activar suscripción" y el cobro es aprobado, entonces el sistema registra el pago exitoso y habilita la activación de la suscripción.<br><br>
+      <strong>Scenario 2: Error durante el procesamiento del cobro</strong><br>
+      Dado que el usuario presionó el botón "Pagar y activar suscripción", cuando ocurre un error durante el cobro (tarjeta rechazada o datos inválidos), entonces el sistema no activa la suscripción y muestra el motivo del error dentro de la misma vista.
     </td>
+    <td>Epic-03</td>
   </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Sección hero visible al cargar la página</strong><br>
-      Dado que el visitante accede a la landing page,<br>
-      Cuando la página carga,<br>
-      Entonces visualiza el headline, la propuesta de valor y los beneficios clave en la sección hero.<br><br>
-      <strong>Scenario 2: Sección de funcionalidades al hacer scroll</strong><br>
-      Dado que el visitante navega a la sección de funcionalidades,<br>
-      Cuando hace scroll,<br>
-      Entonces visualiza las características principales: chatbot WhatsApp, inventario, balanza IoT y dashboard financiero.
-    </td>
-  </tr>
-</table>
 
-<table>
+  <!-- US 17 -->
   <tr>
-    <th>User Story</th>
-    <th>49</th>
-    <th>Epic ID</th>
-    <th>12</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">API: crear y actualizar pedido</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como developer, quiero endpoints POST /api/orders y PATCH /api/orders/:id para gestionar el ciclo de vida completo de un pedido.
+    <td>US-17</td>
+    <td>Activar suscripción</td>
+    <td>Como usuario, quiero que al confirmarse el pago el sistema active automáticamente el Plan Control y me redirija al panel de suscripción para acceder a las funcionalidades premium.</td>
+    <td>
+      <strong>Scenario 1: Activación de suscripción exitosa</strong><br>
+      Dado que el cobro fue procesado correctamente, cuando el sistema confirma el pago, entonces activa el Plan Control, actualiza el estado de la suscripción a "Activa" y redirige al usuario al panel de suscripción con acceso a funcionalidades premium.<br><br>
+      <strong>Scenario 2: Suscripción no activada por pago no confirmado</strong><br>
+      Dado que el cobro no fue confirmado, cuando el sistema intenta activar la suscripción, entonces el Plan Control no se activa, la cuenta permanece en Plan Free y el usuario no accede a funcionalidades premium.
     </td>
-  </tr><br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Creación exitosa de un pedido</strong><br>
-      Dado que el chatbot envía POST /api/orders con datos válidos,<br>
-      Cuando el servidor valida el cuerpo,<br>
-      Entonces responde HTTP 201 Created con el pedido: id, estado 'pendiente' y timestamp.<br><br>
-      <strong>Scenario 2: Actualización de estado de un pedido</strong><br>
-      Dado que se envía PATCH /api/orders/:id con estado válido,<br>
-      Cuando el servidor procesa la actualización,<br>
-      Entonces responde HTTP 200 con el objeto pedido actualizado.<br><br>
-      <strong>Scenario 3: Pedido no encontrado</strong><br>
-      Dado que el id del pedido no existe,<br>
-      Cuando el servidor busca el recurso,<br>
-      Entonces responde HTTP 404 Not Found.
-    </td>
+    <td>Epic-03</td>
   </tr>
-</table>
+
+  <!-- EPIC 04 -->
+  <tr>
+    <td><strong>Epic-04</strong></td>
+    <td><strong>Configuración de suscripción</strong></td>
+    <td>Como usuario, quiero visualizar y gestionar mi plan actual desde la sección "Suscripción" del dashboard para consultar su estado, renovarlo o cancelarlo según mis necesidades.</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- US 18 -->
+  <tr>
+    <td>US-18</td>
+    <td>Visualizar panel de suscripción</td>
+    <td>Como usuario, quiero hacer clic en la opción lateral "Suscripción" para ver un panel con el plan actual, estado, fecha de renovación, facturación y acciones disponibles.</td>
+    <td>
+      <strong>Scenario 1: Panel de suscripción mostrado correctamente</strong><br>
+      Dado que el usuario presiona la opción lateral "Suscripción" dentro del dashboard, cuando el sistema carga la vista, entonces se muestra el panel con los datos generales del plan actual y las acciones relacionadas.<br><br>
+      <strong>Scenario 2: Usuario con Plan Free por defecto</strong><br>
+      Dado que el usuario solo tiene el Plan Free asignado por defecto, cuando carga la vista de "Suscripción", entonces el panel muestra el estado del Plan Free y la opción para actualizar al Plan Control.
+    </td>
+    <td>Epic-04</td>
+  </tr>
+
+  <!-- US 19 -->
+  <tr>
+    <td>US-19</td>
+    <td>Consultar estado de suscripción</td>
+    <td>Como usuario, quiero ver una etiqueta de estado en el panel de suscripción para saber si mi plan se encuentra en estado "Activa", "Cancelación programada", "Cancelada" o "Plan Free".</td>
+    <td>
+      <strong>Scenario 1: Estado activa mostrado correctamente</strong><br>
+      Dado que el usuario tiene una suscripción vigente de pago, cuando ingresa al panel de "Suscripción", entonces el sistema muestra una etiqueta visible con el estado "Activa".<br><br>
+      <strong>Scenario 2: Estado no activa mostrado correctamente</strong><br>
+      Dado que el usuario tiene una suscripción cancelada, con cancelación programada o solo el Plan Free, cuando ingresa al panel de "Suscripción", entonces el sistema muestra la etiqueta correspondiente al estado real del plan.
+    </td>
+    <td>Epic-04</td>
+  </tr>
+
+  <!-- US 20 -->
+  <tr>
+    <td>US-20</td>
+    <td>Renovar suscripción</td>
+    <td>Como usuario con una suscripción de pago activa o próxima a vencer, quiero presionar el botón "Renovar suscripción" para extender la vigencia de mi acceso a la plataforma.</td>
+    <td>
+      <strong>Scenario 1: Renovación realizada correctamente</strong><br>
+      Dado que el usuario tiene una suscripción activa o próxima a vencer, cuando presiona el botón "Renovar suscripción" y confirma la acción, entonces el sistema registra la renovación y actualiza la nueva fecha de vencimiento en el panel.<br><br>
+      <strong>Scenario 2: Renovación no permitida</strong><br>
+      Dado que el usuario se encuentra en Plan Free o no cuenta con una suscripción renovable, cuando presiona el botón "Renovar suscripción", entonces el sistema muestra un mensaje indicando que primero debe contratar o reactivar un plan de pago.
+    </td>
+    <td>Epic-04</td>
+  </tr>
+
+  <!-- US 21 -->
+  <tr>
+    <td>US-21</td>
+    <td>Solicitar cancelación de suscripción</td>
+    <td>Como usuario con una suscripción de pago activa, quiero presionar el botón "Solicitar cancelación" y luego "Confirmar cancelación" para detener la renovación automática al finalizar el periodo vigente.</td>
+    <td>
+      <strong>Scenario 1: Solicitud de cancelación registrada correctamente</strong><br>
+      Dado que el usuario tiene una suscripción activa, cuando presiona el botón "Solicitar cancelación" y confirma la acción, entonces el sistema registra la solicitud y mantiene el acceso hasta la fecha de vencimiento.<br><br>
+      <strong>Scenario 2: Usuario cancela la operación antes de confirmar</strong><br>
+      Dado que el usuario inició el proceso de cancelación, cuando presiona el botón "Volver" o cierra el modal antes de confirmar, entonces el sistema no registra la cancelación y la suscripción continúa sin cambios.<br><br>
+      <strong>Scenario 3: Mantener plan vigente</strong><br>
+      Dado que el usuario visualiza el modal de confirmación para cancelar su suscripción, cuando presiona el botón "Mantener plan", entonces el sistema cierra el modal, no registra ninguna solicitud de cancelación y conserva el Plan Control activo con su fecha de renovación original.
+    </td>
+    <td>Epic-04</td>
+  </tr>
+
+  <!-- US 22 -->
+  <tr>
+    <td>US-22</td>
+    <td>Cancelar suscripción</td>
+    <td>Como sistema, quiero cancelar la suscripción de pago al finalizar su periodo vigente para retirar el acceso premium y devolver la cuenta del usuario al Plan Free.</td>
+    <td>
+      <strong>Scenario 1: Cancelación ejecutada correctamente</strong><br>
+      Dado que existe una solicitud de cancelación registrada y la fecha de vencimiento ha sido alcanzada, cuando el sistema procesa el fin del periodo, entonces la suscripción de pago es cancelada, el acceso premium es retirado y la cuenta vuelve automáticamente al Plan Free.<br><br>
+      <strong>Scenario 2: Suscripción aún dentro del periodo vigente</strong><br>
+      Dado que la fecha de vencimiento aún no ha llegado, cuando el sistema verifica el estado, entonces la suscripción continúa activa, mantiene acceso premium y conserva el estado "Cancelación programada" hasta el final del periodo.
+    </td>
+    <td>Epic-04</td>
+  </tr>
+
+  <!-- EPIC 05 -->
+  <tr>
+    <td><strong>Epic-05</strong></td>
+    <td><strong>Gestión de Transacciones y Operaciones de Venta</strong></td>
+    <td>Como comerciante, quiero gestionar el proceso completo de registro de ventas, desde la selección de productos hasta la emisión del comprobante, para asegurar una operación ágil y sin errores.</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- US 24 -->
+  <tr>
+    <td>US-24</td>
+    <td>Buscar productos en el inventario y validar su tipo de medida</td>
+    <td>Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso, para abrir la interfaz de ingreso correspondiente.</td>
+    <td>
+      <strong>Scenario 1: Búsqueda y validación de producto por peso</strong><br>
+     Dado que el cajero ingresa “Manzana” en el buscador, cuando selecciona el producto de la lista,y el sistema verifica que el producto está registrado con medida en "Kg", entonces el sistema despliega el modal "Registrar Peso".<br><br>
+      <strong>Scenario 2: Búsqueda y validación de producto por cantidad</strong><br>
+      Dado que el cajero realiza una búsqueda, cuando selecciona “Coca Cola” del inventario, y el sistema verifica que el producto está registrado por unidades, entonces el sistema despliega el modal "Registrar Cantidad".<br><br>
 <br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>50</th>
-    <th>Epic ID</th>
-    <th>12</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">API: validar y registrar pago</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como developer, quiero un endpoint PATCH /api/payments/:id para que el comerciante apruebe o rechace pagos desde el dashboard.
+      <strong>Scenario 3: Producto no encontrado</strong><br>
+      Dado que el término ingresado no coincide con el inventario, cuando se ejecuta la búsqueda, entonces el sistema muestra un mensaje indicando "Producto no encontrado".<br><br>
     </td>
+    <td>Epic-05</td>
   </tr>
-  <br><br>
+
+  <!-- US 25 -->
   <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Aprobación de pago y descuento de stock</strong><br>
-      Dado que se envía PATCH /api/payments/:id con status: 'aprobado',<br>
-      Cuando el servidor procesa la validación,<br>
-      Entonces responde HTTP 200, actualiza el pedido a 'confirmado' y descuenta el stock.<br><br>
-      <strong>Scenario 2: Rechazo de pago con motivo registrado</strong><br>
-      Dado que se envía PATCH /api/payments/:id con status: 'rechazado' y motivo,<br>
-      Cuando el servidor procesa el rechazo,<br>
-      Entonces responde HTTP 200 y registra el motivo en el historial.<br><br>
-      <strong>Scenario 3: Pago no encontrado</strong><br>
-      Dado que el id de pago no existe,<br>
-      Cuando el servidor busca el recurso,<br>
-      Entonces responde HTTP 404 Not Found.
+    <td>US-25</td>
+    <td>Registrar la cantidad de unidades en el Ticket de Venta</td>
+    <td>Como cajero, quiero ingresar el número de unidades de un producto seleccionado, para añadirlo al detalle de la venta.</td>
+    <td>
+      <strong>Scenario 1: Confirmación de cantidad unitaria</strong><br>
+      Dado que el modal "Registrar Cantidad" está abierto, cuando el cajero ingresa el número entero “3” en el teclado numérico, y presiona el botón "Confirmar cantidad", entonces el sistema calcula el subtotal y añade el ítem al detalle de la venta.<br><br>
+      <strong>Scenario 2: Validación de stock insuficiente por cantidad</strong><br>
+      Dado que el cajero ha ingresado una cantidad en el modal, Cuando el sistema verifica que la cantidad solicitada es mayor al stock disponible en el inventario, Y el usuario intenta confirmar la acción, Entonces el sistema muestra una alerta indicando "Stock insuficiente" y no permite añadir el producto al ticket.
     </td>
+    <td>Epic-05</td>
   </tr>
-</table>
-</div>
+
+  <!-- US 26 -->
+  <tr>
+    <td>US-26</td>
+    <td>Capturar el peso mediante balanza IoT o ingreso manual</td>
+    <td>Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td>
+    <td>
+      <strong>Scenario 1: Captura automática</strong><br>
+      Dado que el modal "Registrar Peso" está abierto, cuando el sistema detecta una balanza IoT conectada, y el cajero coloca el producto sobre la balanza física, y el hardware envía la lectura de peso al sistema, entonces el valor se carga automáticamente en el campo de peso.<br><br>
+      <strong>Scenario 2: Registro de peso manual</strong><br>
+      Dado que el sistema no detecta una balanza, y el modal "Registrar Peso" está abierto, cuando el cajero digita el peso “2” observado físicamente en el teclado decimal, y presiona el botón "Confirmar Peso", entonces el sistema registra el dato y añade el producto al ticket de venta.
 <br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>51</th>
-    <th>Epic ID</th>
-    <th>13</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Registro de cuenta con email</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly.
+      <strong>Scenario 3: Validación de stock insuficiente por peso</strong><br>
+      Dado que el cajero ha ingresado el peso en el modal, cuando el sistema verifica que el peso solicitado es mayor al stock disponible en el inventario, y el usuario intenta confirmar la acción, entonces el sistema muestra una alerta indicando "Stock insuficiente" y no permite añadir el producto al ticket.
     </td>
+    <td>Epic-05</td>
   </tr>
-  <br><br>
+
+  <!-- US 27 -->
   <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-27</td>
+    <td>Gestionar el desglose y cálculo del Ticket de Venta</td>
+    <td>Como cajero, quiero visualizar el desglose de productos (nombre, cantidad/peso, precio unitario y subtotal) para verificar que la información sea correcta antes de proceder al pago.</td>
+    <td>
+      <strong>Scenario 1: Actualización del detalle y monto total</strong><br>
+      Dado que se han añadido productos (por unidad o peso) al ticket de venta, cuando el sistema procesa cada ítem de la lista, y calcula automáticamente el subtotal multiplicando el precio por la cantidad o peso, y suma todos los subtotales de la lista, entonces el sistema muestra el desglose detallado y el monto total acumulado de la venta en la interfaz.
+<br><br>
+      <strong>Scenario 2: Edición o eliminación de un ítem del detalle</strong><br>
+      Dado que un producto ya se encuentra registrado en el detalle de la venta, cuando el cajero selecciona la opción de eliminar, y el sistema confirma la acción del usuario, entonces el sistema actualiza la lista del detalle y recalcula el monto total de la venta inmediatamente.<br><br>
+    </td>
+    <td>Epic-05</td>
+  </tr>
+
+  <!-- US 28 -->
+  <tr>
+    <td>US-28</td>
+    <td>Seleccionar el método de pago para la transacción</td>
+    <td>Como cajero, quiero elegir el medio por el cual está pagando el cliente (Efectivo o Tarjeta/Yape/Plin), para que el ingreso se registre en la categoría contable correcta.</td>
+    <td>
+      <strong>Scenario 1: Selección de método de pago exitosa</strong><br>
+      Dado que el ticket de venta tiene el monto total calculado, cuando el cajero hace clic sobre el ícono de "Efectivo" o "Tarjeta Yape/Plin", y el sistema marca visualmente la opción seleccionada como activa, y registra la categoría del método de pago internamente, entonces el sistema habilita el botón "Finalizar Venta y Emitir Boleta".<br><br>
+      <strong>Scenario 2: Intento de finalización sin método de pago</strong><br>
+      Dado que el cajero ha terminado de agregar productos al ticket, cuando intenta presionar el botón de finalizar la venta sin haber marcado una opción de pago, y el sistema valida que no hay un método asignado para la transacción actual, entonces el sistema muestra un mensaje de advertencia indicando "Por favor, seleccione un método de pago" y bloquea la emisión de la boleta.
+    </td>
+    <td>Epic-05</td>
+  </tr>
+
+  <!-- US 29 -->
+  <tr>
+    <td>US-29</td>
+    <td>Finalizar la venta y emitir el comprobante de pago</td>
+    <td>Como cajero, quiero procesar el pago y finalizar la venta en un solo paso, para registrar la transacción en el sistema y entregar el comprobante al cliente de forma inmediata.</td>
+    <td>
+      <strong>Scenario 1: Procesamiento exitoso del cierre de venta</strong><br>
+      Dado que el ticket de venta tiene productos añadidos y el método de pago ha sido seleccionado,ncuando el cajero presiona el botón "Finalizar Venta y Emitir Boleta", y el sistema valida que los datos de la transacción son correctos, y el sistema registra la información en la base de datos actualizando saldos y stock, entonces el sistema genera el comprobante de pago, muestra un mensaje de éxito y limpia la interfaz para una nueva venta.<br><br>
+      <strong>Scenario 2: Bloqueo de finalización por datos incompletos</strong><br>
+      Dado que el cajero se encuentra en la pantalla de ventas, cuando intenta presionar el botón de finalizar venta sin productos en el ticket o sin método de pago, y el sistema detecta la ausencia de estos datos obligatorios, entonces el sistema muestra un mensaje “No hay productos en el ticket” manteniendo la interfaz de venta activa hasta que se complete el campo  requerido.
+    </td>
+    <td>Epic-05</td>
+  </tr>
+
+  <!-- EPIC 06 -->
+  <tr>
+    <td><strong>Epic-06</strong></td>
+    <td><strong>Control de Ingresos y Monitoreo de Caja</strong></td>
+    <td>Como dueño del negocio, quiero supervisar los flujos de dinero entrante en tiempo real, para tener visibilidad total sobre la liquidez y los métodos de pago utilizados durante el día.</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- US 30 -->
+  <tr>
+    <td>US-30</td>
+    <td>Clasificar automáticamente los ingresos según el medio de pago</td>
+    <td>Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente, para tener visibilidad inmediata de cuánto dinero hay en efectivo y cuánto en digital.</td>
+    <td>
+      <strong>Scenario 1: Actualización del acumulado por método de pago</strong><br>
+      Dado que se ha finalizado una venta exitosamente, cuando el sistema procesa el registro de la transacción, y detecta el método de pago utilizado (Efectivo o Tarjeta/Digital), y suma el monto de la venta al saldo anterior de esa categoría, entonces el sistema actualiza visualmente el "Resumen de Caja" con los nuevos montos acumulados.
+<br><br>
+      <strong>Scenario 2: Visualización del total general de ingresos</strong><br>
+      Dado que los saldos por categoría (Efectivo y Digital) han sido actualizados, cuando el comerciante visualiza el panel de "Resumen de Caja", y el sistema suma ambos acumulados de forma automática, entonces el sistema muestra el "Total del Día" como la suma consolidada de todos los medios de pago.
+    </td>
+    <td>Epic-06</td>
+  </tr>
+
+  <!-- US 31 -->
+  <tr>
+    <td>US-31</td>
+    <td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td>
+    <td>Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago, para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td>
+    <td>
+    <strong>Scenario 1: Visualización dinámica de ingresos operativos</strong><br>
+      Dado que el cajero se encuentra en la sección de "Ventas", cuando finaliza transacciones de forma sucesiva, y el sistema procesa los nuevos montos registrados, entonces el sistema actualiza automáticamente los contadores de "Efectivo", "Tarjeta Yape/Plin" y el "Total del Día" en la parte inferior de la pantalla.<br><br>
+      <strong>Scenario 2: Persistencia de saldos al cambiar de sección</strong><br>
+      Dado que el cajero tiene un saldo acumulado en el Resumen de Caja, cuando navega hacia otra sección (ej. "Productos" o "Lotes") y regresa nuevamente a "Ventas", y el sistema recupera los datos almacenados en la sesión, entonces el sistema muestra los saldos actualizados tal como estaban antes de salir de la pestaña, evitando que la información se pierda o se reinicie.
+    </td>
+    <td>Epic-06</td>
+  </tr>
+
+ <!-- EPIC 07 -->
+  <tr>
+    <td><strong>Epic-07</strong></td>
+    <td><strong>Configurar Chatbot de WhatsApp Business</strong></td>
+    <td>Como comerciante, quiero configurar y vincular el chatbot de WhatsApp Business desde el dashboard para activar la atención automatizada de clientes.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 32 -->
+  <tr>
+    <td>US-32</td>
+    <td>Vincular cuenta de WhatsApp Business mediante código QR</td>
+    <td>Como comerciante, quiero conectar mi cuenta de WhatsApp Business escaneando un código QR para activar el chatbot de atención a clientes desde el dashboard.</td>
+    <td>
+      <strong>Scenario 1: Mostrar código QR en primer acceso</strong><br>
+      Dado que el comerciante no tiene ninguna cuenta vinculada, cuando accede a la sección de chatbot, entonces el sistema genera y muestra un código QR válido para iniciar la vinculación.<br><br>
+      <strong>Scenario 2: Vinculación exitosa tras escaneo</strong><br>
+      Dado que el comerciante escanea el código QR desde su WhatsApp Business, cuando el sistema confirma la conexión, entonces registra la vinculación, activa el chatbot y habilita la visualización de conversaciones.<br><br>
+      <strong>Scenario 3: Vinculación fallida por código QR expirado</strong><br>
+      Dado que el comerciante está en el proceso de vinculación de WhatsApp Business, cuando el código QR expira sin haber sido escaneado y el sistema detecta que la sesión no fue establecida en el tiempo límite, entonces el sistema descarta el código expirado, muestra un mensaje indicando que el código expiró y genera un nuevo código QR automáticamente.
+    </td>
+    <td>Epic-07</td>
+  </tr>
+  <!-- US 33 -->
+  <tr>
+    <td>US-33</td>
+    <td>Consultar estado de vinculación del chatbot</td>
+    <td>Como comerciante, quiero conocer el estado de conexión de mi WhatsApp Business para saber si el chatbot se encuentra activo o requiere reconexión.</td>
+    <td>
+      <strong>Scenario 1: Estado activo cuando la cuenta está vinculada</strong><br>
+      Dado que el comerciante tiene una cuenta vinculada, cuando accede a la sección de chatbot, entonces el sistema muestra el estado como activo junto al número vinculado.<br><br>
+      <strong>Scenario 2: Estado desconectado cuando la sesión expiró</strong><br>
+      Dado que la sesión ha expirado o fue cerrada externamente, cuando el comerciante accede a la sección de chatbot, entonces el sistema muestra el estado como desconectado y habilita la opción de volver a vincular.
+    </td>
+    <td>Epic-07</td>
+  </tr>
+  <!-- EPIC 08 -->
+  <tr>
+    <td><strong>Epic-08</strong></td>
+    <td><strong>Gestionar Conversaciones desde el Dashboard</strong></td>
+    <td>Como comerciante, quiero visualizar y gestionar los chats de mis clientes directamente desde el dashboard para atenderlos sin salir de la plataforma.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 34 -->
+  <tr>
+    <td>US-34</td>
+    <td>Visualizar conversaciones de clientes en el dashboard</td>
+    <td>Como comerciante, quiero ver los chats que el bot ha tenido con mis clientes dentro del dashboard para tener visibilidad de todas las conversaciones activas sin usar WhatsApp directamente.</td>
+    <td>
+      <strong>Scenario 1: Conversaciones cargadas cuando existe actividad</strong><br>
+      Dado que el comerciante tiene su WhatsApp Business vinculado, cuando accede a la sección de chatbot, entonces el sistema muestra la lista de conversaciones ordenada por la más reciente con el último mensaje visible.<br><br>
+      <strong>Scenario 2: Mensaje informativo cuando no hay conversaciones</strong><br>
+      Dado que ningún cliente ha iniciado una conversación con el bot, cuando el comerciante accede a la sección, entonces el sistema indica que aún no existen conversaciones registradas.
+    </td>
+    <td>Epic-08</td>
+  </tr>
+  <!-- US 35 -->
+  <tr>
+    <td>US-35</td>
+    <td>Responder mensajes de clientes desde el dashboard</td>
+    <td>Como comerciante, quiero enviar mensajes a mis clientes directamente desde el dashboard para gestionar conversaciones sin necesitar abrir WhatsApp.</td>
+    <td>
+      <strong>Scenario 1: Mensaje enviado correctamente al cliente</strong><br>
+      Dado que el comerciante selecciona una conversación activa y redacta un mensaje, cuando confirma el envío, entonces el sistema envía el mensaje al cliente a través de WhatsApp y lo registra en el hilo de conversación.<br><br>
+      <strong>Scenario 2: Envío bloqueado cuando el mensaje está vacío</strong><br>
+      Dado que el comerciante intenta confirmar el envío sin haber redactado ningún contenido, entonces el sistema no procesa el envío y mantiene el estado de la conversación sin cambios.
+    </td>
+    <td>Epic-08</td>
+  </tr>
+  <!-- EPIC 09 -->
+  <tr>
+    <td><strong>Epic-09</strong></td>
+    <td><strong>Procesar Pedidos mediante Bot Automático</strong></td>
+    <td>Como sistema, quiero que el chatbot responda automáticamente a los clientes según el stock disponible del negocio para facilitar el proceso de pedido sin intervención manual del comerciante.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 36 -->
+  <tr>
+    <td>US-36</td>
+    <td>Responder consulta de producto disponible</td>
+    <td>Como sistema, quiero que el chatbot responda automáticamente al cliente con la información del producto solicitado cuando este existe en el inventario para iniciar el proceso de pedido sin intervención del comerciante.</td>
+    <td>
+      <strong>Scenario 1: Bot informa disponibilidad del producto solicitado</strong><br>
+      Dado que el cliente envía el nombre de un producto y el sistema lo encuentra con stock mayor a cero, entonces el bot responde con nombre, precio y stock disponible, y ofrece al cliente agregarlo al pedido.<br><br>
+      <strong>Scenario 2: Bot registra selección confirmada por el cliente</strong><br>
+      Dado que el bot informó la disponibilidad y el cliente confirma la cantidad deseada, entonces el sistema registra la selección en el pedido en curso y consulta si desea agregar más productos.
+    </td>
+    <td>Epic-09</td>
+  </tr>
+  <!-- US 37 -->
+  <tr>
+    <td>US-37</td>
+    <td>Sugerir alternativas ante producto no disponible</td>
+    <td>Como sistema, quiero que el chatbot informe al cliente cuando un producto no está disponible y le sugiera otros productos del inventario para evitar que la conversación quede sin respuesta útil.</td>
+    <td>
+      <strong>Scenario 1: Bot sugiere alternativas cuando el producto no existe</strong><br>
+      Dado que el producto solicitado no se encuentra o tiene stock igual a cero, cuando el sistema verifica la disponibilidad, entonces el bot informa que no está disponible y presenta alternativas con stock.<br><br>
+      <strong>Scenario 2: Bot notifica cuando el inventario completo está agotado</strong><br>
+      Dado que todos los productos tienen stock igual a cero, cuando el sistema verifica la disponibilidad general, entonces el bot informa que no hay productos disponibles e invita al cliente a intentarlo más tarde.
+    </td>
+    <td>Epic-09</td>
+  </tr>
+  <!-- US 38 -->
+  <tr>
+    <td>US-38</td>
+    <td>Confirmar pedido con el cliente</td>
+    <td>Como sistema, quiero que el chatbot presente un resumen del pedido al cliente y solicite confirmación antes de proceder al pago para asegurar que los productos y cantidades sean correctos.</td>
+    <td>
+      <strong>Scenario 1: Bot envía resumen y solicita confirmación</strong><br>
+      Dado que el cliente indicó todos los productos y su dirección de entrega, cuando indica que no desea agregar más, entonces el sistema genera un resumen con productos, cantidades, total y dirección, y solicita confirmación.<br><br>
+      <strong>Scenario 2: Sistema registra pedido tras confirmación del cliente</strong><br>
+      Dado que el bot envió el resumen y el cliente confirma que el pedido es correcto, entonces el sistema registra el pedido con estado pendiente y envía las instrucciones de pago.<br><br>
+      <strong>Scenario 3: Solicitar dirección de entrega al cliente</strong><br>
+      Dado que el cliente confirmó los productos de su pedido, cuando el chatbot verifica que aún no se registró una dirección de entrega, entonces solicita al cliente que indique su dirección antes de continuar y no genera el resumen del pedido hasta que el cliente la proporcione.
+    </td>
+    <td>Epic-09</td>
+  </tr>
+  <!-- EPIC 10 -->
+  <tr>
+    <td><strong>Epic-10</strong></td>
+    <td><strong>Gestionar Pago Digital P2P</strong></td>
+    <td>Como cliente y comerciante, queremos gestionar el envío y la validación de comprobantes de pago digitales (Yape/Plin) a través de WhatsApp y el dashboard, para garantizar una transacción segura y confirmada antes de finalizar la venta.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 39 -->
+  <tr>
+    <td>US-39</td>
+    <td>Recibir instrucciones de pago por WhatsApp</td>
+    <td>Como cliente, quiero recibir las instrucciones de pago a través del chatbot para saber cómo realizar la transferencia y completar mi pedido.</td>
+    <td>
+      <strong>Scenario 1: Bot envía instrucciones tras confirmación del pedido</strong><br>
+      Dado que el cliente confirmó su pedido y el stock fue validado, cuando el sistema procesa la confirmación, entonces el bot envía el número Yape/Plin del comerciante, el monto total y el número de pedido como referencia.<br><br>
+      <strong>Scenario 2: Sistema registra el evento de instrucción enviada</strong><br>
+      Dado que el bot entrega las instrucciones de pago, cuando el sistema confirma la entrega del mensaje, entonces registra el evento con marca de tiempo para trazabilidad.
+    </td>
+    <td>Epic-10</td>
+  </tr>
+  <!-- US 40 -->
+  <tr>
+    <td>US-40</td>
+    <td>Reportar comprobante de pago digital</td>
+    <td>Como cliente, quiero enviar el comprobante de mi pago al chatbot para que el comerciante pueda verificarlo y confirmar mi pedido.</td>
+    <td>
+      <strong>Scenario 1: Sistema registra comprobante recibido y notifica al comerciante</strong><br>
+      Dado que el cliente realizó el pago por Yape o Plin, cuando envía el comprobante al chatbot, entonces el sistema lo registra, actualiza el estado del pedido a pendiente de validación y notifica al comerciante.<br><br>
+      <strong>Scenario 2: Bot envía recordatorio ante ausencia de reporte</strong><br>
+      Dado que el cliente recibió las instrucciones de pago, cuando transcurren treinta minutos sin que reporte el comprobante, entonces el sistema envía un recordatorio y mantiene el pedido en estado esperando pago.
+    </td>
+    <td>Epic-10</td>
+  </tr>
+  <!-- US 41 -->
+  <tr>
+    <td>US-41</td>
+    <td>Validar comprobante de pago desde el dashboard</td>
+    <td>Como comerciante, quiero revisar el comprobante reportado por el cliente y aprobarlo o rechazarlo desde el dashboard para confirmar que el dinero fue recibido correctamente.</td>
+    <td>
+      <strong>Scenario 1: Comerciante visualiza comprobante y detalles del pedido</strong><br>
+      Dado que el cliente reportó su comprobante, cuando el comerciante revisa el pedido, entonces el sistema muestra el comprobante, el monto y los detalles del pedido asociado.<br><br>
+      <strong>Scenario 2: Sistema registra validación manual al aprobar el pago</strong><br>
+      Dado que el comerciante verifica que el comprobante es correcto, cuando aprueba el pago, entonces el sistema registra la validación con marca de tiempo y continúa el flujo de confirmación.<br><br>
+      <strong>Scenario 3: Sistema notifica al cliente al rechazar el pago</strong><br>
+      Dado que el comerciante detecta que el comprobante es incorrecto, cuando lo rechaza indicando el motivo, entonces el sistema registra el rechazo y el bot notifica al cliente con los pasos a seguir.
+    </td>
+    <td>Epic-10</td>
+  </tr>
+  <!-- US 42 -->
+  <tr>
+    <td>US-42</td>
+    <td>Notificar resultado de validación al cliente</td>
+    <td>Como cliente, quiero recibir una notificación sobre el resultado de la validación de mi pago para saber si mi pedido fue confirmado o si debo realizar alguna acción adicional.</td>
+    <td>
+      <strong>Scenario 1: Bot confirma al cliente que el pago fue aprobado</strong><br>
+      Dado que el comerciante aprueba el comprobante, cuando el sistema actualiza el estado del pedido, entonces el bot envía al cliente un mensaje confirmando que el pago fue recibido y el pedido está en proceso.<br><br>
+      <strong>Scenario 2: Bot informa al cliente que el pago fue rechazado</strong><br>
+      Dado que el comerciante rechaza el comprobante, cuando el sistema actualiza el estado, entonces el bot informa al cliente que el pago no fue validado, indica el motivo y solicita que reintente.
+    </td>
+    <td>Epic-10</td>
+  </tr>
+  <!-- EPIC 11 -->
+  <tr>
+    <td><strong>Epic-11</strong></td>
+    <td><strong>Confirmar Venta y Emitir Comprobante</strong></td>
+    <td>Como dueño de negocio, quiero que el sistema confirme el pedido tras la validación del pago, descuente el stock y emita un comprobante digital, para mantener el control financiero y brindar un respaldo de la compra al cliente.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 43 -->
+  <tr>
+    <td>US-43</td>
+    <td>Confirmar pedido y descontar stock</td>
+    <td>Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real y reflejar el consumo de stock.</td>
+    <td>
+      <strong>Scenario 1: Sistema actualiza inventario al confirmar el pedido</strong><br>
+      Dado que el comerciante aprueba el comprobante de pago, cuando el sistema confirma el pedido, entonces actualiza el estado a confirmado y descuenta la cantidad correspondiente del stock de cada producto.<br><br>
+      <strong>Scenario 2: Sistema sincroniza peso con balanza IoT para productos por peso</strong><br>
+      Dado que el pedido incluye productos vendidos por peso, cuando el sistema descuenta el stock, entonces actualiza el peso disponible registrado en la balanza IoT.
+    </td>
+    <td>Epic-11</td>
+  </tr>
+  <!-- US 44 -->
+  <tr>
+    <td>US-44</td>
+    <td>Registrar venta en el sistema</td>
+    <td>Como comerciante, quiero que cada pedido confirmado quede registrado como venta en el sistema para mantener un control financiero preciso y trazable.</td>
+    <td>
+      <strong>Scenario 1: Sistema crea registro de venta al confirmar pedido</strong><br>
+      Dado que el pedido ha sido confirmado tras la validación del pago, cuando el sistema procesa el cierre de la transacción, entonces crea un registro de venta con monto total, método de pago, productos vendidos y marca de tiempo.<br><br>
+      <strong>Scenario 2: Sistema separa ingresos digitales de los ingresos en efectivo</strong><br>
+      Dado que el método de pago fue Yape o Plin, cuando el sistema registra la venta, entonces asocia el monto al canal de pagos digitales, manteniéndolo separado del efectivo en caja.
+    </td>
+    <td>Epic-11</td>
+  </tr>
+  <!-- US 45 -->
+  <tr>
+    <td>US-45</td>
+    <td>Emitir comprobante digital al cliente</td>
+    <td>Como cliente, quiero recibir un comprobante de mi compra a través del chatbot para tener un respaldo de la transacción realizada.</td>
+    <td>
+      <strong>Scenario 1: Bot envía comprobante al cliente tras registrar la venta</strong><br>
+      Dado que la venta ha sido registrada correctamente, cuando el sistema genera el comprobante, entonces el bot envía al cliente un resumen con número de pedido, productos, cantidades, monto total y fecha.<br><br>
+      <strong>Scenario 2: Sistema marca el pedido como completado al emitir el comprobante</strong><br>
+      Dado que el comprobante fue generado y enviado, cuando el sistema confirma la entrega, entonces registra el evento con marca de tiempo y actualiza el estado del pedido a completado.
+    </td>
+    <td>Epic-11</td>
+  </tr>
+  <!-- EPIC 12 -->
+  <tr>
+    <td><strong>Epic-12</strong></td>
+    <td><strong>Manejar Flujos Alternativos y Restricciones</strong></td>
+    <td>Como sistema de gestión, quiero manejar escenarios de excepción como falta de stock, tiempos de espera agotados y rechazos de pago, para proteger la integridad del inventario y evitar pérdidas económicas.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 46 -->
+  <tr>
+    <td>US-46</td>
+    <td>Manejar stock insuficiente en pedido</td>
+    <td>Como cliente, quiero ser notificado cuando un producto no tiene stock suficiente para ajustar mi pedido antes de proceder al pago.</td>
+    <td>
+      <strong>Scenario 1: Bot notifica al cliente sobre stock insuficiente</strong><br>
+      Dado que el cliente solicita una cantidad mayor al stock disponible, cuando el sistema valida el inventario, entonces el bot informa qué producto no tiene stock suficiente y ofrece ajustar la cantidad o eliminarlo del pedido.<br><br>
+      <strong>Scenario 2: Sistema actualiza el pedido con la nueva cantidad</strong><br>
+      Dado que el bot informó al cliente sobre el stock insuficiente, cuando el cliente confirma una nueva cantidad menor o igual al stock disponible, entonces el sistema actualiza el pedido y continúa el flujo de forma normal.
+    </td>
+    <td>Epic-12</td>
+  </tr>
+  <!-- US 47 -->
+  <tr>
+    <td>US-47</td>
+    <td>Cancelar pedido por expiración de tiempo de pago</td>
+    <td>Como sistema, quiero cancelar automáticamente un pedido cuando el cliente no reporta el comprobante de pago en el tiempo establecido para liberar el stock reservado.</td>
+    <td>
+      <strong>Scenario 1: Sistema cancela el pedido y libera el stock al expirar el tiempo</strong><br>
+      Dado que el cliente recibió las instrucciones de pago, cuando transcurren sesenta minutos sin que reporte el comprobante, entonces el sistema cancela el pedido, libera el stock reservado y notifica al cliente.<br><br>
+      <strong>Scenario 2: Sistema registra el evento de cancelación para trazabilidad</strong><br>
+      Dado que el pedido es cancelado por expiración, cuando el sistema actualiza el estado, entonces registra el evento de cancelación con el motivo y marca de tiempo correspondientes.
+    </td>
+    <td>Epic-12</td>
+  </tr>
+  <!-- US 48 -->
+  <tr>
+    <td>US-48</td>
+    <td>Rechazar comprobante de pago inválido</td>
+    <td>Como comerciante, quiero rechazar un comprobante de pago cuando sea incorrecto o sospechoso para proteger el negocio de transacciones fraudulentas.</td>
+    <td>
+      <strong>Scenario 1: Sistema revierte el estado del pedido al rechazar el comprobante</strong><br>
+      Dado que el comerciante identifica un comprobante sospechoso o incorrecto, cuando lo rechaza indicando el motivo, entonces el sistema devuelve el pedido al estado "esperando pago" y el bot notifica al cliente.<br><br>
+      <strong>Scenario 2: Sistema alerta al comerciante ante rechazos repetidos del mismo cliente</strong><br>
+      Dado que el mismo cliente presenta comprobantes rechazados en dos ocasiones consecutivas, cuando el sistema detecta el patrón, entonces alerta al comerciante y bloquea el pedido para revisión manual.
+    </td>
+    <td>Epic-12</td>
+  </tr>
+  <!-- EPIC 13 -->
+  <tr>
+    <td><strong>Epic-13</strong></td>
+    <td><strong>Technical Stories – Implementar RESTful API</strong></td>
+    <td>Como equipo de desarrollo, queremos implementar una arquitectura de servicios RESTful segura y escalable para que todos los componentes de la plataforma intercambien datos de manera consistente.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 49 -->
+  <tr>
+    <td>US-49</td>
+    <td>Conocer propuesta de valor en landing page</td>
+    <td>Como visitante, quiero entender qué hace Entreprenly y cómo puede beneficiar a mi negocio para decidir si me interesa adquirirlo.</td>
+    <td>
+      <strong>Scenario 1: Visitante visualiza la propuesta de valor al cargar la página</strong><br>
+      Dado que el visitante accede a la landing page, cuando la página termina de cargar, entonces el sistema muestra el headline principal, la propuesta de valor y los beneficios clave del producto.<br><br>
+      <strong>Scenario 2: Visitante accede a la sección de funcionalidades</strong><br>
+      Dado que el visitante navega por la landing page, cuando llega a la sección de funcionalidades, entonces el sistema presenta las características principales: chatbot WhatsApp, inventario, balanza IoT y dashboard financiero.
+    </td>
+    <td>Epic-13</td>
+  </tr>
+  <!-- US 50 -->
+  <tr>
+    <td>US-50</td>
+    <td>Gestionar ciclo de vida de pedidos mediante API</td>
+    <td>Como developer, quiero endpoints para crear y actualizar pedidos para que el chatbot y el dashboard intercambien información del pedido de forma automática y consistente.</td>
+    <td>
+      <strong>Scenario 1: Creación exitosa de pedido</strong><br>
+      Dado que el developer envía una solicitud de creación con datos válidos, cuando el servidor valida el cuerpo, entonces el sistema responde con HTTP 201, retorna el ID del pedido, el estado pendiente y la marca de tiempo.<br><br>
+      <strong>Scenario 2: Actualización de estado de pedido existente</strong><br>
+      Dado que el developer envía una solicitud de actualización con estado válido, cuando el servidor procesa la solicitud, entonces el sistema responde con HTTP 200 y retorna el objeto del pedido actualizado.<br><br>
+      <strong>Scenario 3: Solicitud sobre pedido inexistente</strong><br>
+      Dado que el developer referencia un ID de pedido que no existe, cuando el servidor busca el recurso, entonces el sistema responde con HTTP 404 indicando que el pedido no fue encontrado.
+    </td>
+    <td>Epic-13</td>
+  </tr>
+  <!-- US 51 -->
+  <tr>
+    <td>US-51</td>
+    <td>Validar y registrar pagos mediante API</td>
+    <td>Como developer, quiero un endpoint para aprobar o rechazar pagos desde el dashboard para que el sistema actualice el inventario y notifique al cliente de forma automática.</td>
+    <td>
+      <strong>Scenario 1: Aprobación de pago con descuento de stock</strong><br>
+      Dado que el developer envía una solicitud de aprobación con estado aprobado, cuando el servidor procesa la validación, entonces el sistema responde con HTTP 200, actualiza el pedido a confirmado y descuenta el stock correspondiente.<br><br>
+      <strong>Scenario 2: Rechazo de pago con registro de motivo</strong><br>
+      Dado que el developer envía una solicitud de rechazo con motivo especificado, cuando el servidor procesa el rechazo, entonces el sistema responde con HTTP 200 y registra el motivo en el historial del pago.<br><br>
+      <strong>Scenario 3: Solicitud sobre pago inexistente</strong><br>
+      Dado que el developer referencia un ID de pago que no existe, cuando el servidor busca el recurso, entonces el sistema responde con HTTP 404 indicando que el pago no fue encontrado.
+    </td>
+    <td>Epic-13</td>
+  </tr>
+
+  <!-- EPIC 14 -->
+  <tr>
+    <td><strong>Epic-14</strong></td>
+    <td><strong>Inicio de sesión y registro</strong></td>
+    <td>Como usuario quiero registrarme, verificar mi cuenta, iniciar sesión y recuperar mi contraseña para acceder de forma segura a la plataforma.</td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- US 52 -->
+  <tr>
+    <td>US-52</td>
+    <td>Registrar cuenta con email</td>
+    <td>Como usuario anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly y obtener automáticamente el Plan Free.</td>
+    <td>
       <strong>Scenario 1: Registro exitoso</strong><br>
-      Dado que el usuario ingresa un email no registrado y una contraseña válida,<br>
-      Cuando envía el formulario de registro,<br>
-      Entonces el sistema crea la cuenta, envía un email de verificación y muestra un mensaje de confirmación.<br><br>
+      Dado que el usuario ingresa un email no registrado y una contraseña válida, cuando envía el formulario, entonces el sistema crea la cuenta, asigna automáticamente el Plan Free, envía un email de verificación y muestra un mensaje de confirmación.<br><br>
       <strong>Scenario 2: Email ya registrado</strong><br>
-      Dado que el usuario ingresa un email que ya existe en el sistema,<br>
-      Cuando envía el formulario de registro,<br>
-      Entonces el sistema muestra un mensaje de error indicando que el email ya está en uso.<br><br>
+      Dado que el usuario ingresa un email que ya existe, cuando envía el formulario, entonces el sistema muestra un mensaje de error indicando que el email ya está en uso.<br><br>
       <strong>Scenario 3: Datos inválidos</strong><br>
-      Dado que el usuario ingresa una contraseña que no cumple los requisitos mínimos,<br>
-      Cuando envía el formulario,<br>
-      Entonces el sistema muestra los errores de validación correspondientes sin crear la cuenta.
+      Dado que la contraseña no cumple los requisitos mínimos, cuando envía el formulario, entonces el sistema muestra los errores de validación sin crear la cuenta.
     </td>
+    <td>Epic-14</td>
   </tr>
-</table>
-<br><br>
-<table>
+
+  <!-- US 53 -->
   <tr>
-    <th>User Story</th>
-    <th>52</th>
-    <th>Epic ID</th>
-    <th>13</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Verificación de email</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-53</td>
+    <td>Verificar email</td>
+    <td>Como usuario registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.</td>
+    <td>
       <strong>Scenario 1: Verificación exitosa</strong><br>
-      Dado que el usuario hace clic en el enlace de verificación válido,<br>
-      Cuando el sistema valida el token,<br>
-      Entonces la cuenta queda activa y el usuario es redirigido al dashboard principal.<br><br>
+      Dado que el usuario hace clic en el enlace de verificación válido, cuando el sistema valida el token, entonces la cuenta queda activa y el usuario es redirigido al dashboard principal.<br><br>
       <strong>Scenario 2: Token expirado</strong><br>
-      Dado que el usuario hace clic en un enlace de verificación cuyo token ha expirado,<br>
-      Cuando el sistema intenta validarlo,<br>
-      Entonces muestra un mensaje de error y ofrece la opción de reenviar el email de verificación.<br><br>
+      Dado que el token ha expirado, cuando el sistema intenta validarlo, entonces muestra un mensaje de error y ofrece la opción de reenviar el email de verificación.<br><br>
       <strong>Scenario 3: Token inválido</strong><br>
-      Dado que el usuario accede a un enlace de verificación con un token malformado,<br>
-      Cuando el sistema intenta procesarlo,<br>
-      Entonces muestra un mensaje de error indicando que el enlace no es válido.
+      Dado que el token está malformado, cuando el sistema intenta procesarlo, entonces muestra un mensaje de error indicando que el enlace no es válido.
     </td>
+    <td>Epic-14</td>
   </tr>
-</table>
-<br><br>
-<table>
+
+  <!-- US 54 -->
   <tr>
-    <th>User Story</th>
-    <th>53</th>
-    <th>Epic ID</th>
-    <th>13</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Inicio de sesión con credenciales</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-54</td>
+    <td>Iniciar sesión con credenciales</td>
+    <td>Como usuario registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.</td>
+    <td>
       <strong>Scenario 1: Inicio de sesión exitoso</strong><br>
-      Dado que el usuario ingresa credenciales válidas,<br>
-      Cuando envía el formulario de login,<br>
-      Entonces el sistema genera un JWT, inicia la sesión y redirige al dashboard principal.<br><br>
+      Dado que el usuario ingresa credenciales válidas, cuando envía el formulario, entonces el sistema genera un JWT, inicia la sesión y redirige al dashboard principal.<br><br>
       <strong>Scenario 2: Credenciales inválidas</strong><br>
-      Dado que el usuario ingresa una contraseña incorrecta,<br>
-      Cuando envía el formulario de login,<br>
-      Entonces el sistema muestra un mensaje de error sin revelar cuál campo es incorrecto.<br><br>
+      Dado que el usuario ingresa una contraseña incorrecta, cuando envía el formulario, entonces el sistema muestra un mensaje de error sin revelar cuál campo es incorrecto.<br><br>
       <strong>Scenario 3: Cuenta bloqueada por intentos fallidos</strong><br>
-      Dado que el usuario ha fallado 5 intentos consecutivos de inicio de sesión,<br>
-      Cuando intenta iniciar sesión nuevamente,<br>
-      Entonces el sistema bloquea la cuenta y notifica al usuario por email.
+      Dado que el usuario ha fallado 5 intentos consecutivos, cuando intenta iniciar sesión nuevamente, entonces el sistema bloquea la cuenta y notifica al usuario por email.
     </td>
+    <td>Epic-14</td>
   </tr>
-</table>
 
-<table>
+  <!-- US 55 -->
   <tr>
-    <th>User Story</th>
-    <th>54</th>
-    <th>Epic ID</th>
-    <th>13</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Inicio de sesión con Google OAuth</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-55</td>
+    <td>Iniciar sesión con Google OAuth</td>
+    <td>Como usuario anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.</td>
+    <td>
       <strong>Scenario 1: OAuth exitoso con cuenta nueva</strong><br>
-      Dado que el usuario inicia el flujo OAuth con una cuenta de Google no registrada previamente,<br>
-      Cuando Google autoriza el acceso y devuelve el token,<br>
-      Entonces el sistema crea una nueva cuenta vinculada al proveedor e inicia la sesión.<br><br>
+      Dado que el usuario inicia el flujo OAuth con una cuenta de Google no registrada previamente, cuando Google autoriza el acceso, entonces el sistema crea una nueva cuenta vinculada al proveedor e inicia la sesión.<br><br>
       <strong>Scenario 2: OAuth exitoso con cuenta existente</strong><br>
-      Dado que el usuario inicia el flujo OAuth con un email ya registrado en el sistema,<br>
-      Cuando Google devuelve el token,<br>
-      Entonces el sistema vincula el proveedor a la cuenta existente e inicia la sesión.<br><br>
+      Dado que el usuario inicia el flujo OAuth con un email ya registrado, cuando Google devuelve el token, entonces el sistema vincula el proveedor a la cuenta existente e inicia la sesión.<br><br>
       <strong>Scenario 3: OAuth denegado por el usuario</strong><br>
-      Dado que el usuario cancela la autorización en la pantalla de Google,<br>
-      Cuando el flujo OAuth es interrumpido,<br>
-      Entonces el sistema redirige al usuario a la pantalla de login sin crear ninguna cuenta.
+      Dado que el usuario cancela la autorización en la pantalla de Google, cuando el flujo es interrumpido, entonces el sistema redirige al usuario a la pantalla de login sin crear ninguna cuenta.
     </td>
+    <td>Epic-14</td>
   </tr>
-</table>
 
-<table>
+  <!-- US 56 -->
   <tr>
-    <th>User Story</th>
-    <th>55</th>
-    <th>Epic ID</th>
-    <th>13</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Recuperación de contraseña</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-56</td>
+    <td>Recuperar contraseña</td>
+    <td>Como usuario registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.</td>
+    <td>
       <strong>Scenario 1: Reset exitoso</strong><br>
-      Dado que el usuario solicita el reset con un email registrado y confirma la nueva contraseña desde el enlace recibido,<br>
-      Cuando el sistema procesa la solicitud,<br>
-      Entonces actualiza la contraseña, invalida todas las sesiones anteriores y redirige al login.<br><br>
+      Dado que el usuario solicita el reset con un email registrado y confirma la nueva contraseña desde el enlace recibido, cuando el sistema procesa la solicitud, entonces actualiza la contraseña, invalida todas las sesiones anteriores y redirige al login.<br><br>
       <strong>Scenario 2: Token de reset expirado</strong><br>
-      Dado que el usuario accede al enlace de reset después de que el token ha expirado,<br>
-      Cuando el sistema intenta validarlo,<br>
-      Entonces muestra un mensaje de error y solicita generar un nuevo enlace.<br><br>
+      Dado que el usuario accede al enlace después de que el token ha expirado, cuando el sistema intenta validarlo, entonces muestra un mensaje de error y solicita generar un nuevo enlace.<br><br>
       <strong>Scenario 3: Email no registrado</strong><br>
-      Dado que el usuario solicita el reset con un email que no existe en el sistema,<br>
-      Cuando envía el formulario,<br>
-      Entonces el sistema responde con un mensaje genérico sin confirmar ni negar la existencia del email.
+      Dado que el usuario solicita el reset con un email que no existe, cuando envía el formulario, entonces el sistema responde con un mensaje genérico sin confirmar ni negar la existencia del email.
     </td>
+    <td>Epic-14</td>
   </tr>
-</table>
-<br><br>
-<table>
+
+  <!-- US 57 -->
   <tr>
-    <th>User Story</th>
-    <th>56</th>
-    <th>Epic ID</th>
-    <th>13</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Cierre de sesión</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-57</td>
+    <td>Cerrar sesión</td>
+    <td>Como usuario autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.</td>
+    <td>
       <strong>Scenario 1: Cierre de sesión exitoso</strong><br>
-      Dado que el usuario hace clic en la opción de cerrar sesión,<br>
-      Cuando el sistema procesa la solicitud,<br>
-      Entonces revoca el JWT activo y redirige al usuario a la pantalla de login.<br><br>
+      Dado que el usuario hace clic en la opción de cerrar sesión, cuando el sistema procesa la solicitud, entonces revoca el JWT activo y redirige al usuario a la pantalla de login.<br><br>
       <strong>Scenario 2: Intento de acceso tras cerrar sesión</strong><br>
-      Dado que el usuario ha cerrado su sesión y el token ha sido revocado,<br>
-      Cuando intenta acceder a una ruta protegida,<br>
-      Entonces el sistema rechaza la solicitud y redirige al login.
+      Dado que el usuario ha cerrado su sesión y el token ha sido revocado, cuando intenta acceder a una ruta protegida, entonces el sistema rechaza la solicitud y redirige al login.
     </td>
+    <td>Epic-14</td>
   </tr>
-</table>
-<br><br>
-<table>
+
+  <!-- EPIC 15 -->
   <tr>
-    <th>User Story</th>
-    <th>57</th>
-    <th>Epic ID</th>
-    <th>14</th>
+    <td><strong>Epic-15</strong></td>
+    <td><strong>Perfil y configuración</strong></td>
+    <td>Como usuario quiero gestionar mi perfil y preferencias personales para personalizar mi experiencia dentro de la plataforma.</td>
+    <td></td>
+    <td></td>
   </tr>
+
+  <!-- US 58 -->
   <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Visualizar perfil actual</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-58</td>
+    <td>Visualizar perfil actual</td>
+    <td>Como usuario autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.</td>
+    <td>
       <strong>Scenario 1: Visualización exitosa</strong><br>
-      Dado que el usuario navega a la sección de perfil,<br>
-      Cuando el sistema carga los datos,<br>
-      Entonces muestra nombre, bio, foto de perfil, email y preferencias actuales del usuario.<br><br>
+      Dado que el usuario navega a la sección de perfil, cuando el sistema carga los datos, entonces muestra nombre, bio, foto de perfil, email y preferencias actuales del usuario.<br><br>
       <strong>Scenario 2: Sesión expirada</strong><br>
-      Dado que la sesión del usuario ha expirado,<br>
-      Cuando intenta acceder a la sección de perfil,<br>
-      Entonces el sistema redirige al login.
+      Dado que la sesión del usuario ha expirado, cuando intenta acceder a la sección de perfil, entonces el sistema redirige al login.
     </td>
+    <td>Epic-15</td>
   </tr>
-</table>
 
-<table>
+  <!-- US 59 -->
   <tr>
-    <th>User Story</th>
-    <th>58</th>
-    <th>Epic ID</th>
-    <th>14</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Actualizar nombre y biografía</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.
-    </td>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-59</td>
+    <td>Actualizar nombre y biografía</td>
+    <td>Como usuario autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.</td>
+    <td>
       <strong>Scenario 1: Actualización exitosa</strong><br>
-      Dado que el usuario edita su nombre y/o bio con datos válidos,<br>
-      Cuando guarda los cambios,<br>
-      Entonces el sistema actualiza los datos y muestra el perfil con la información nueva.<br><br>
+      Dado que el usuario edita su nombre y/o bio con datos válidos, cuando guarda los cambios, entonces el sistema actualiza los datos y muestra el perfil con la información nueva.<br><br>
       <strong>Scenario 2: Campo obligatorio vacío</strong><br>
-      Dado que el usuario deja el campo de nombre vacío,<br>
-      Cuando intenta guardar,<br>
-      Entonces el sistema muestra un error de validación sin guardar los cambios.
+      Dado que el usuario deja el campo de nombre vacío, cuando intenta guardar, entonces el sistema muestra un error de validación sin guardar los cambios.
     </td>
+    <td>Epic-15</td>
   </tr>
-</table>
-<br><br>
-<table>
+
+  <!-- US 60 -->
   <tr>
-    <th>User Story</th>
-    <th>59</th>
-    <th>Epic ID</th>
-    <th>14</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Subir foto de perfil</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-60</td>
+    <td>Subir foto de perfil</td>
+    <td>Como usuario autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.</td>
+    <td>
       <strong>Scenario 1: Subida exitosa</strong><br>
-      Dado que el usuario selecciona una imagen con formato y tamaño permitidos,<br>
-      Cuando la sube al sistema,<br>
-      Entonces el servicio de almacenamiento guarda el archivo, actualiza la URL del avatar y muestra la nueva foto en el perfil.<br><br>
+      Dado que el usuario selecciona una imagen con formato y tamaño permitidos, cuando la sube al sistema, entonces el servicio de almacenamiento guarda el archivo, actualiza la URL del avatar y muestra la nueva foto en el perfil.<br><br>
       <strong>Scenario 2: Formato de imagen no permitido</strong><br>
-      Dado que el usuario intenta subir un archivo con formato no soportado,<br>
-      Cuando el sistema valida el archivo,<br>
-      Entonces muestra un mensaje de error indicando los formatos aceptados sin guardar el archivo.<br><br>
+      Dado que el usuario intenta subir un archivo con formato no soportado, cuando el sistema valida el archivo, entonces muestra un mensaje de error indicando los formatos aceptados sin guardar el archivo.<br><br>
       <strong>Scenario 3: Tamaño de archivo excedido</strong><br>
-      Dado que el usuario intenta subir una imagen que supera el tamaño máximo permitido,<br>
-      Cuando el sistema valida el archivo,<br>
-      Entonces muestra un mensaje de error indicando el límite de tamaño.
+      Dado que el usuario intenta subir una imagen que supera el tamaño máximo (5120 KB), cuando el sistema valida el archivo, entonces muestra un mensaje de error indicando el límite de tamaño.
     </td>
+    <td>Epic-15</td>
   </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>60</th>
-    <th>Epic ID</th>
-    <th>14</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Cambiar email con re-verificación</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.
-    </td>
-  </tr>
-<br><br>
 
+  <!-- US 61 -->
   <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-61</td>
+    <td>Cambiar email con re-verificación</td>
+    <td>Como usuario autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.</td>
+    <td>
       <strong>Scenario 1: Cambio de email exitoso</strong><br>
-      Dado que el usuario solicita cambiar su email a uno no registrado previamente,<br>
-      Cuando confirma el nuevo email desde el enlace enviado,<br>
-      Entonces el sistema actualiza el email y lo marca como verificado.<br><br>
+      Dado que el usuario solicita cambiar su email a uno no registrado previamente y confirma desde el enlace enviado, entonces el sistema actualiza el email y lo marca como verificado.<br><br>
       <strong>Scenario 2: Nuevo email ya en uso</strong><br>
-      Dado que el usuario ingresa un email que ya pertenece a otra cuenta,<br>
-      Cuando intenta guardar el cambio,<br>
-      Entonces el sistema muestra un mensaje de error sin actualizar el email.<br><br>
+      Dado que el usuario ingresa un email que ya pertenece a otra cuenta, cuando intenta guardar el cambio, entonces el sistema muestra un mensaje de error sin actualizar el email.<br><br>
       <strong>Scenario 3: Confirmación desde enlace expirado</strong><br>
-      Dado que el usuario hace clic en el enlace de confirmación después de que ha expirado,<br>
-      Cuando el sistema valida el token,<br>
-      Entonces muestra un mensaje de error y ofrece reenviar el email de confirmación.
+      Dado que el usuario hace clic en el enlace de confirmación después de que ha expirado, cuando el sistema valida el token, entonces muestra un mensaje de error y ofrece reenviar el email de confirmación.
     </td>
+    <td>Epic-15</td>
   </tr>
-</table>
-<br><br>
-<table>
-  <tr>
-    <th>User Story</th>
-    <th>61</th>
-    <th>Epic ID</th>
-    <th>14</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Cambiar contraseña</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
-      <strong>Scenario 1: Cambio exitoso</strong><br>
-      Dado que el usuario ingresa su contraseña actual correcta y una nueva contraseña válida,<br>
-      Cuando guarda el cambio,<br>
-      Entonces el sistema actualiza la contraseña e invalida todas las sesiones activas excepto la actual.<br><br>
-      <strong>Scenario 2: Contraseña actual incorrecta</strong><br>
-      Dado que el usuario ingresa una contraseña actual incorrecta,<br>
-      Cuando intenta guardar el cambio,<br>
-      Entonces el sistema muestra un error de validación sin actualizar la contraseña.<br><br>
-      <strong>Scenario 3: Nueva contraseña no cumple requisitos</strong><br>
-      Dado que el usuario ingresa una nueva contraseña que no cumple los requisitos mínimos,<br>
-      Cuando intenta guardar,<br>
-      Entonces el sistema muestra los requisitos incumplidos sin aplicar el cambio.
-    </td>
-  </tr>
-</table>
 
-<table>
+  <!-- US 62 -->
   <tr>
-    <th>User Story</th>
-    <th>62</th>
-    <th>Epic ID</th>
-    <th>14</th>
-  </tr>
-  <br><br>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Configurar preferencias de idioma, zona horaria y tema</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero configurar mi idioma, zona horaria y tema visual para adaptar la plataforma a mis preferencias.
+    <td>US-62</td>
+    <td>Cambiar contraseña</td>
+    <td>Como usuario autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td>
+    <td>
+      <strong>Scenario 1: Cambio exitoso</strong><br>
+      Dado que el usuario ingresa su contraseña actual correcta y una nueva contraseña válida, cuando guarda el cambio, entonces el sistema actualiza la contraseña e invalida todas las sesiones activas excepto la actual.<br><br>
+      <strong>Scenario 2: Contraseña actual incorrecta</strong><br>
+      Dado que el usuario ingresa una contraseña actual incorrecta, cuando intenta guardar, entonces el sistema muestra un error de validación sin actualizar la contraseña.<br><br>
+      <strong>Scenario 3: Nueva contraseña no cumple requisitos</strong><br>
+      Dado que el usuario ingresa una nueva contraseña que no cumple los requisitos mínimos, cuando intenta guardar, entonces el sistema muestra los requisitos incumplidos sin aplicar el cambio.
     </td>
+    <td>Epic-15</td>
   </tr>
-  <br><br>
+
+  <!-- US 63 -->
   <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-63</td>
+    <td>Configurar preferencias de idioma, zona horaria y tema</td>
+    <td>Como usuario autenticado, quiero configurar mi idioma, zona horaria y tema visual para adaptar la plataforma a mis preferencias.</td>
+    <td>
       <strong>Scenario 1: Cambio de idioma exitoso</strong><br>
-      Dado que el usuario selecciona un idioma disponible,<br>
-      Cuando guarda la preferencia,<br>
-      Entonces el sistema actualiza el idioma de la interfaz de forma inmediata.<br><br>
+      Dado que el usuario selecciona un idioma disponible, cuando guarda la preferencia, entonces el sistema actualiza el idioma de la interfaz de forma inmediata.<br><br>
       <strong>Scenario 2: Cambio de zona horaria exitoso</strong><br>
-      Dado que el usuario selecciona una zona horaria de la lista disponible,<br>
-      Cuando guarda la preferencia,<br>
-      Entonces el sistema almacena la zona horaria y la aplica en las fechas mostradas.<br><br>
+      Dado que el usuario selecciona una zona horaria de la lista disponible, cuando guarda la preferencia, entonces el sistema la almacena y la aplica en las fechas mostradas.<br><br>
       <strong>Scenario 3: Cambio de tema exitoso</strong><br>
-      Dado que el usuario selecciona el tema claro u oscuro,<br>
-      Cuando guarda la preferencia,<br>
-      Entonces el sistema aplica el tema seleccionado de forma inmediata y lo persiste para futuras sesiones.
+      Dado que el usuario selecciona el tema claro u oscuro, cuando guarda la preferencia, entonces el sistema aplica el tema de forma inmediata y lo persiste para futuras sesiones.
     </td>
+    <td>Epic-15</td>
   </tr>
-</table>
-<br><br>
-<table>
+
+  <!-- US 64 -->
   <tr>
-    <th>User Story</th>
-    <th>63</th>
-    <th>Epic ID</th>
-    <th>14</th>
-  </tr>
-  <tr>
-    <td><strong>Title</strong></td>
-    <td colspan="3">Configurar notificaciones</td>
-  </tr>
-  <tr>
-    <td><strong>Description</strong></td>
-    <td colspan="3">
-      Como usuario autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Acceptance Criteria</strong></td>
-    <td colspan="3">
+    <td>US-64</td>
+    <td>Configurar notificaciones</td>
+    <td>Como usuario autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.</td>
+    <td>
       <strong>Scenario 1: Guardado exitoso de preferencias</strong><br>
-      Dado que el usuario activa o desactiva tipos de notificación disponibles,<br>
-      Cuando guarda los cambios,<br>
-      Entonces el sistema almacena las preferencias y las aplica en los envíos futuros.<br><br>
+      Dado que el usuario activa o desactiva tipos de notificación disponibles, cuando guarda los cambios, entonces el sistema almacena las preferencias y las aplica en los envíos futuros.<br><br>
       <strong>Scenario 2: Sin cambios realizados</strong><br>
-      Dado que el usuario accede a la sección de notificaciones sin modificar nada,<br>
-      Cuando sale de la sección,<br>
-      Entonces el sistema mantiene las preferencias anteriores sin alteración.
+      Dado que el usuario accede a la sección de notificaciones sin modificar nada, cuando sale de la sección, entonces el sistema mantiene las preferencias anteriores sin alteración.
     </td>
+    <td>Epic-15</td>
   </tr>
+  <!-- EPIC 16 -->
+  <tr>
+    <td><strong>Epic-16</strong></td>
+    <td><strong>Panel de Inicio (Home)</strong></td>
+    <td>Como comerciante, quiero contar con un panel de inicio centralizado que me muestre un resumen visual del estado de mi negocio al ingresar a la plataforma, para tomar decisiones rápidas sin necesidad de navegar entre módulos.</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- US 65 -->
+  <tr>
+    <td>US-65</td>
+    <td>Visualizar resumen de ventas del día</td>
+    <td>Como comerciante, quiero visualizar un resumen de las ventas del día en el panel de inicio para conocer el rendimiento de mi negocio sin ingresar al módulo de ventas.</td>
+    <td>
+      <strong>Scenario 1: Resumen de ventas cargado correctamente</strong><br>
+      Dado que el comerciante accede al panel de inicio y existen ventas registradas en el día, cuando el sistema carga la información, entonces se muestra el total de ventas del día, el número de transacciones y el desglose por método de pago.<br><br>
+      <strong>Scenario 2: Sin ventas registradas en el día</strong><br>
+      Dado que el comerciante accede al panel de inicio y no se ha registrado ninguna venta en el día actual, cuando el sistema carga la información, entonces el resumen muestra cero en todos los indicadores y se indica que aún no hay ventas registradas para el día.
+    </td>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 66 -->
+  <tr>
+    <td>US-66</td>
+    <td>Visualizar estado del chatbot en el home</td>
+    <td>Como comerciante, quiero visualizar el estado de conexión del chatbot y los chats activos desde el panel de inicio para saber si mi canal de ventas por WhatsApp está operativo sin ingresar al módulo de chatbot.</td>
+    <td>
+      <strong>Scenario 1: Chatbot conectado con actividad reciente</strong><br>
+      Dado que el comerciante accede al panel de inicio y el chatbot se encuentra vinculado y activo, cuando el sistema carga la vista, entonces se muestra el estado "Conectado", el número de conversaciones activas del día y el número de pedidos generados por el bot.<br><br>
+      <strong>Scenario 2: Chatbot desconectado</strong><br>
+      Dado que el comerciante accede al panel de inicio y el chatbot no está vinculado o su sesión expiró, cuando el sistema carga la vista, entonces se muestra el estado "Desconectado" con una alerta visible y un acceso directo para reconectar desde el mismo panel.
+    </td>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 67 -->
+  <tr>
+    <td>US-67</td>
+    <td>Visualizar alertas de inventario en el home</td>
+    <td>Como comerciante, quiero ver las alertas críticas de inventario directamente en el panel de inicio para identificar rápidamente productos agotados o lotes próximos a vencer sin ingresar al módulo de lotes.</td>
+    <td>
+      <strong>Scenario 1: Alertas de inventario mostradas en el home</strong><br>
+      Dado que el comerciante accede al panel de inicio y existen productos sin stock o lotes próximos a vencer, cuando el sistema carga la vista, entonces se muestra una sección de alertas con el nombre del producto o lote afectado y el tipo de alerta correspondiente.<br><br>
+      <strong>Scenario 2: Sin alertas activas de inventario</strong><br>
+      Dado que el comerciante accede al panel de inicio y no existen condiciones críticas en el inventario, cuando el sistema carga la vista, entonces la sección de alertas muestra un mensaje indicando que todo el inventario está en estado normal.
+    </td>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 68 -->
+  <tr>
+    <td>US-68</td>
+    <td>Visualizar contador de pedidos pendientes en el home</td>
+    <td>Como comerciante, quiero ver el número de pedidos que están pendientes de atención en el panel de inicio para priorizar mi respuesta sin necesidad de ingresar al módulo de chatbot.</td>
+    <td>
+      <strong>Scenario 1: Pedidos pendientes mostrados correctamente</strong><br>
+      Dado que el comerciante accede al panel de inicio y existen pedidos en estado "pendiente de validación" o "esperando pago", cuando el sistema carga la vista, entonces se muestra un contador con el número total de pedidos que requieren atención inmediata del comerciante.<br><br>
+      <strong>Scenario 2: Sin pedidos pendientes</strong><br>
+      Dado que el comerciante accede al panel de inicio y todos los pedidos del día han sido atendidos o no existe ninguno, cuando el sistema carga la vista, entonces el contador muestra cero y se indica que no hay pedidos pendientes de atención.
+    </td>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 69 -->
+  <tr>
+    <td>US-69</td>
+    <td>Visualizar pedidos recientes en el home</td>
+    <td>Como comerciante, quiero ver los pedidos más recientes con su estado actual en el panel de inicio para hacer seguimiento sin ingresar al módulo de pedidos.</td>
+    <td>
+      <strong>Scenario 1: Pedidos recientes mostrados correctamente</strong><br>
+      Dado que el comerciante accede al panel de inicio y existen pedidos registrados en el día, cuando el sistema carga la vista, entonces se muestran los últimos cinco pedidos con número de pedido, nombre del cliente, monto total y estado actual.<br><br>
+      <strong>Scenario 2: Sin pedidos registrados en el día</strong><br>
+      Dado que el comerciante accede al panel de inicio y no se ha registrado ningún pedido en el día actual, cuando el sistema carga la vista, entonces la sección de pedidos recientes muestra un mensaje indicando que aún no hay pedidos para el día.
+    </td>
+    <td>Epic-16</td>
+  </tr>
+  <!-- US 70 -->
+  <tr>
+    <td>US-70</td>
+    <td>Acceder a módulos desde accesos directos del home</td>
+    <td>Como comerciante, quiero contar con accesos directos a los módulos principales desde el panel de inicio para navegar rápidamente a cualquier sección sin recorrer el menú lateral.</td>
+    <td>
+      <strong>Scenario 1: Acceso directo navega al módulo correcto</strong><br>
+      Dado que el comerciante se encuentra en el panel de inicio, cuando presiona alguno de los accesos directos disponibles, entonces el sistema lo redirige al módulo correspondiente sin pérdida de datos ni recargas innecesarias.<br><br>
+      <strong>Scenario 2: Acceso directo con indicador de alerta activa</strong><br>
+      Dado que el comerciante se encuentra en el panel de inicio y un módulo tiene alertas o notificaciones pendientes, cuando el sistema carga la vista, entonces el acceso directo correspondiente muestra un indicador visual con el número de alertas o pendientes activos.
+    </td>
+    <td>Epic-16</td>
+  </tr>
+  <!-- Epic 17 -->
+  <tr>
+    <td><strong>Epic-17</strong></td>
+    <td><strong>Centro de Soporte y Ayuda</strong></td>
+    <td>Como comerciante, quiero contar con un centro de soporte accesible desde el botón de Ayuda para resolver mis dudas, reportar problemas y consultar guías de uso de la plataforma sin necesidad de contactar a un agente externo.</td>
+    <td></td>
+  </tr>
+
+  <!-- US 71 -->
+  <tr>
+    <td>US-71</td>
+    <td>Visualizar el centro de soporte</td>
+    <td>Como comerciante, quiero visualizar el centro de soporte al presionar el botón de Ayuda para acceder de forma rápida a las opciones de asistencia disponibles.</td>
+    <td>
+      <strong>Scenario 1: Centro de soporte cargado correctamente</strong><br>
+      Dado que el comerciante presiona el botón de Ayuda en el sidebar,<br>
+      Cuando el sistema carga la vista de soporte,<br>
+      Entonces se muestran las secciones: buscador de ayuda, artículos frecuentes, acceso directo a reportar problema y datos de contacto del soporte.<br><br>
+      <strong>Scenario 2: Centro de soporte sin artículos disponibles</strong><br>
+      Dado que el comerciante accede al centro de soporte,<br>
+      Y no existen artículos de ayuda configurados,<br>
+      Cuando el sistema carga la vista,<br>
+      Entonces se muestra un mensaje indicando que el contenido de ayuda no está disponible aún<br>
+      Y se mantiene visible la opción de reportar un problema.
+    </td>
+    <td>Epic-17</td>
+  </tr>
+
+  <!-- US 72 -->
+  <tr>
+    <td>US-72</td>
+    <td>Buscar artículo de ayuda</td>
+    <td>Como comerciante, quiero buscar artículos de ayuda por palabras clave para encontrar rápidamente la información que necesito sin revisar todas las categorías.</td>
+    <td>
+      <strong>Scenario 1: Búsqueda con resultados encontrados</strong><br>
+      Dado que el comerciante está en el centro de soporte,<br>
+      Cuando ingresa una palabra clave en el buscador y confirma la búsqueda,<br>
+      Entonces el sistema muestra los artículos que coinciden con el término ingresado.<br><br>
+      <strong>Scenario 2: Búsqueda sin resultados</strong><br>
+      Dado que el comerciante ingresa un término en el buscador,<br>
+      Y no existen artículos que coincidan con la búsqueda,<br>
+      Cuando el sistema procesa la consulta,<br>
+      Entonces se muestra un mensaje indicando que no se encontraron resultados<br>
+      Y se sugiere reformular la búsqueda o reportar el problema directamente.
+    </td>
+    <td>Epic-17</td>
+  </tr>
+
+  <!-- US 73 -->
+  <tr>
+    <td>US-73</td>
+    <td>Consultar artículo de ayuda</td>
+    <td>Como comerciante, quiero abrir y leer un artículo de ayuda para entender cómo usar una funcionalidad de la plataforma o resolver un problema específico.</td>
+    <td>
+      <strong>Scenario 1: Artículo cargado correctamente</strong><br>
+      Dado que el comerciante selecciona un artículo desde el listado o los resultados de búsqueda,<br>
+      Cuando el sistema carga el artículo,<br>
+      Entonces se muestra el título, el contenido detallado y las secciones relacionadas.<br><br>
+      <strong>Scenario 2: Artículo marcado como útil o no útil</strong><br>
+      Dado que el comerciante leyó el artículo de ayuda,<br>
+      Cuando selecciona la opción "¿Te fue útil este artículo?"<br>
+      Y elige "Sí" o "No",<br>
+      Entonces el sistema registra la respuesta<br>
+      Y si elige "No", muestra la opción de reportar el problema directamente.
+    </td>
+    <td>Epic-17</td>
+  </tr>
+
+  <!-- US 74 -->
+  <tr>
+    <td>US-74</td>
+    <td>Reportar un problema</td>
+    <td>Como comerciante, quiero reportar un problema o incidencia desde el centro de soporte para que el equipo de Entreprenly pueda revisarlo y darle seguimiento.</td>
+    <td>
+      <strong>Scenario 1: Reporte enviado correctamente</strong><br>
+      Dado que el comerciante está en el formulario de reporte de problema,<br>
+      Y completa los campos obligatorios: categoría, descripción y módulo afectado,<br>
+      Cuando presiona el botón "Enviar reporte",<br>
+      Entonces el sistema registra el reporte<br>
+      Y muestra una confirmación indicando que fue recibido.<br><br>
+      <strong>Scenario 2: Intento de envío con campos incompletos</strong><br>
+      Dado que el comerciante está en el formulario de reporte,<br>
+      Y deja campos obligatorios vacíos,<br>
+      Cuando presiona el botón "Enviar reporte",<br>
+      Entonces el sistema no registra el reporte<br>
+      Y muestra mensajes de error indicando los campos que deben completarse.
+    </td>
+    <td>Epic-17</td>
+  </tr>
+
+  <!-- US 75 -->
+  <tr>
+    <td>US-75</td>
+    <td>Confirmar envío del reporte</td>
+    <td>Como comerciante, quiero recibir una confirmación visual tras enviar un reporte para tener la certeza de que mi solicitud fue registrada correctamente.</td>
+    <td>
+      <strong>Scenario 1: Confirmación mostrada correctamente</strong><br>
+      Dado que el comerciante envió un reporte de problema exitosamente,<br>
+      Cuando el sistema procesa el envío,<br>
+      Entonces se muestra una pantalla de confirmación con el número de ticket generado, el mensaje "Tu reporte fue recibido" y la opción de volver al centro de soporte.<br><br>
+      <strong>Scenario 2: Error en el envío del reporte</strong><br>
+      Dado que el comerciante intentó enviar un reporte,<br>
+      Y ocurre un error en el sistema durante el procesamiento,<br>
+      Cuando el sistema detecta el fallo,<br>
+      Entonces no se genera el ticket<br>
+      Y se muestra un mensaje indicando que hubo un error y se invita a intentarlo nuevamente.
+    </td>
+    <td>Epic-17</td>
+  </tr>
+  </tbody>
 </table>
 
 ## 3.2. Impact Mapping
@@ -2710,4 +1267,491 @@ _Contenido por agregar._
 
 ## 3.3. Product Backlog
 
-_Contenido por agregar._
+<table>
+  <thead>
+    <tr>
+      <th># Orden</th>
+      <th>User Story Id</th>
+      <th>Título</th>
+      <th>Descripción</th>
+      <th>Story Points (1/2/3/5/8)</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>US-24</td>
+    <td>Buscar productos en el inventario y validar su tipo de medida</td>
+    <td>Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso y abrir la interfaz de ingreso correspondiente.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>US-25</td>
+    <td>Registrar la cantidad de unidades en el Ticket de Venta</td>
+    <td>Como cajero, quiero ingresar el número de unidades de un producto seleccionado para añadirlo al detalle de la venta.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>US-26</td>
+    <td>Capturar el peso mediante balanza IoT o ingreso manual</td>
+    <td>Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>US-27</td>
+    <td>Gestionar el desglose y cálculo del Ticket de Venta</td>
+    <td>Como cajero, quiero visualizar el desglose de productos (nombre, cantidad/peso, precio unitario y subtotal) para verificar que la información sea correcta antes de proceder al pago.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>US-28</td>
+    <td>Seleccionar el método de pago para la transacción</td>
+    <td>Como cajero, quiero elegir el medio por el cual está pagando el cliente (Efectivo o Tarjeta/Yape/Plin) para que el ingreso se registre en la categoría contable correcta.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>US-29</td>
+    <td>Finalizar la venta y emitir el comprobante de pago</td>
+    <td>Como cajero, quiero procesar el pago y finalizar la venta en un solo paso para entregar el comprobante al cliente de forma inmediata.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>US-30</td>
+    <td>Clasificar automáticamente los ingresos según el medio de pago</td>
+    <td>Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente para tener visibilidad inmediata de cuánto dinero hay en efectivo y cuánto en digital.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>US-31</td>
+    <td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td>
+    <td>Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>US-43</td>
+    <td>Confirmar pedido y descontar stock</td>
+    <td>Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real y reflejar el consumo de stock.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>US-44</td>
+    <td>Registrar venta en el sistema</td>
+    <td>Como comerciante, quiero que cada pedido confirmado quede registrado como venta en el sistema para mantener un control financiero preciso y trazable.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>US-45</td>
+    <td>Emitir comprobante digital al cliente</td>
+    <td>Como cliente, quiero recibir un comprobante de mi compra a través del chatbot para tener un respaldo de la transacción realizada.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>US-36</td>
+    <td>Responder consulta de producto disponible</td>
+    <td>Como sistema, quiero que el chatbot responda automáticamente al cliente con la información del producto solicitado cuando este existe en el inventario para iniciar el proceso de pedido sin intervención del comerciante.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>US-37</td>
+    <td>Sugerir alternativas ante producto no disponible</td>
+    <td>Como sistema, quiero que el chatbot informe al cliente cuando un producto no está disponible y le sugiera otros productos del inventario para evitar que la conversación quede sin respuesta útil.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>US-38</td>
+    <td>Confirmar pedido con el cliente</td>
+    <td>Como sistema, quiero que el chatbot presente un resumen del pedido al cliente y solicite confirmación antes de proceder al pago para asegurar que los productos y cantidades sean correctos.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>US-39</td>
+    <td>Recibir instrucciones de pago por WhatsApp</td>
+    <td>Como cliente, quiero recibir las instrucciones de pago a través del chatbot para saber cómo realizar la transferencia y completar mi pedido.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>US-40</td>
+    <td>Reportar comprobante de pago digital</td>
+    <td>Como cliente, quiero enviar el comprobante de mi pago al chatbot para que el comerciante pueda verificarlo y confirmar mi pedido.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>US-41</td>
+    <td>Validar comprobante de pago desde el dashboard</td>
+    <td>Como comerciante, quiero revisar el comprobante reportado por el cliente y aprobarlo o rechazarlo desde el dashboard para confirmar que el dinero fue recibido correctamente.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>US-42</td>
+    <td>Notificar resultado de validación al cliente</td>
+    <td>Como cliente, quiero recibir una notificación sobre el resultado de la validación de mi pago para saber si mi pedido fue confirmado o si debo realizar alguna acción adicional.</td>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <td>19</td>
+    <td>US-01</td>
+    <td>Agregar productos</td>
+    <td>Como usuario quiero agregar productos para gestionar mi inventario de manera eficiente.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>US-05</td>
+    <td>Editar productos</td>
+    <td>Como usuario quiero editar productos para actualizar los datos en el inventario.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>US-10</td>
+    <td>Visualizar detalles de producto</td>
+    <td>Como usuario quiero visualizar la información detallada de cada producto en el listado para conocer rápidamente sus características, stock disponible y precio sin necesidad de ingresar a otra pantalla.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>US-12</td>
+    <td>Buscar productos</td>
+    <td>Como usuario quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>US-23</td>
+    <td>Crear lotes</td>
+    <td>Como usuario quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>US-03</td>
+    <td>Agregar lotes</td>
+    <td>Como usuario quiero agregar lotes para gestionar correctamente las cantidades y fechas de vencimiento.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>US-02</td>
+    <td>Editar lotes</td>
+    <td>Como usuario quiero editar los lotes para actualizar los datos del inventario.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>US-04</td>
+    <td>Eliminar lotes</td>
+    <td>Como usuario quiero eliminar lotes para deshacerme de los lotes que no me sirvan.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>US-06</td>
+    <td>Visualizar detalles de lotes</td>
+    <td>Como usuario quiero visualizar los detalles de los lotes para gestionar mejor el inventario.</td>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <td>28</td>
+    <td>US-09</td>
+    <td>Visualizar dashboard de lotes</td>
+    <td>Como usuario quiero visualizar un dashboard de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>29</td>
+    <td>US-07</td>
+    <td>Detectar stock agotado</td>
+    <td>Como usuario quiero ser notificado cuando tengo bajo/nada de stock.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>US-08</td>
+    <td>Mostrar alertas de estado al visualizar detalles</td>
+    <td>Como usuario quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>US-11</td>
+    <td>Recibir alerta de caducidad de lote</td>
+    <td>Como usuario quiero ser notificado cuando un lote esté próximo a vencer o ya haya vencido para tomar acciones como priorizar su uso o descartarlo.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>US-32</td>
+    <td>Vincular cuenta de WhatsApp Business mediante código QR</td>
+    <td>Como comerciante, quiero conectar mi cuenta de WhatsApp Business escaneando un código QR para activar el chatbot de atención a clientes desde el dashboard.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>US-33</td>
+    <td>Consultar estado de vinculación del chatbot</td>
+    <td>Como comerciante, quiero conocer el estado de conexión de mi WhatsApp Business para saber si el chatbot se encuentra activo o requiere reconexión.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>US-34</td>
+    <td>Visualizar conversaciones de clientes en el dashboard</td>
+    <td>Como comerciante, quiero ver los chats que el bot ha tenido con mis clientes dentro del dashboard para tener visibilidad de todas las conversaciones activas sin usar WhatsApp directamente.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>US-35</td>
+    <td>Responder mensajes de clientes desde el dashboard</td>
+    <td>Como comerciante, quiero enviar mensajes a mis clientes directamente desde el dashboard para gestionar conversaciones sin necesitar abrir WhatsApp.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td>36</td>
+    <td>US-46</td>
+    <td>Manejar stock insuficiente en pedido</td>
+    <td>Como cliente, quiero ser notificado cuando un producto no tiene stock suficiente para ajustar mi pedido antes de proceder al pago.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>37</td>
+    <td>US-47</td>
+    <td>Cancelar pedido por expiración de tiempo de pago</td>
+    <td>Como sistema, quiero cancelar automáticamente un pedido cuando el cliente no reporta el comprobante de pago en el tiempo establecido para liberar el stock reservado.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>38</td>
+    <td>US-48</td>
+    <td>Rechazar comprobante de pago inválido</td>
+    <td>Como comerciante, quiero rechazar un comprobante de pago cuando sea incorrecto o sospechoso para proteger el negocio de transacciones fraudulentas.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>39</td>
+    <td>US-50</td>
+    <td>Gestionar ciclo de vida de pedidos mediante API</td>
+    <td>Como developer, quiero endpoints para crear y actualizar pedidos para que el chatbot y el dashboard intercambien información del pedido de forma automática y consistente.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>US-51</td>
+    <td>Validar y registrar pagos mediante API</td>
+    <td>Como developer, quiero un endpoint para aprobar o rechazar pagos desde el dashboard para que el sistema actualice el inventario y notifique al cliente de forma automática.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>41</td>
+    <td>US-49</td>
+    <td>Conocer propuesta de valor en landing page</td>
+    <td>Como visitante, quiero entender qué hace Entreprenly y cómo puede beneficiar a mi negocio para decidir si me interesa adquirirlo.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td>42</td>
+    <td>US-13</td>
+    <td>Seleccionar plan de suscripción</td>
+    <td>Como usuario con Plan Free, quiero presionar el botón "Elegir plan" en la tarjeta del Plan Control para definir el plan que deseo contratar y continuar con el proceso de suscripción.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>43</td>
+    <td>US-14</td>
+    <td>Iniciar proceso de suscripción</td>
+    <td>Como usuario con un plan seleccionado, quiero presionar el botón "Continuar con la suscripción" para abrir el formulario de facturación y comenzar formalmente la contratación del plan elegido.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>US-15</td>
+    <td>Registrar datos de facturación</td>
+    <td>Como usuario, quiero completar el formulario de facturación y presionar el botón "Continuar al pago" para que el sistema pueda preparar el cobro correspondiente a la suscripción.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>US-16</td>
+    <td>Procesar cobro de suscripción</td>
+    <td>Como usuario, quiero revisar el resumen de cobro y presionar el botón "Pagar y activar suscripción" para validar el pago del Plan Control seleccionado.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>US-17</td>
+    <td>Activar suscripción</td>
+    <td>Como usuario, quiero que al confirmarse el pago el sistema active automáticamente el Plan Control y me redirija al panel de suscripción para acceder a las funcionalidades premium.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>47</td>
+    <td>US-18</td>
+    <td>Visualizar panel de suscripción</td>
+    <td>Como usuario, quiero hacer clic en la opción lateral "Suscripción" para ver un panel con el plan actual, estado, fecha de renovación, facturación y acciones disponibles.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>48</td>
+    <td>US-19</td>
+    <td>Consultar estado de suscripción</td>
+    <td>Como usuario, quiero ver una etiqueta de estado en el panel de suscripción para saber si mi plan se encuentra en estado "Activa", "Cancelación programada", "Cancelada" o "Plan Free".</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>49</td>
+    <td>US-20</td>
+    <td>Renovar suscripción</td>
+    <td>Como usuario con una suscripción de pago activa o próxima a vencer, quiero presionar el botón "Renovar suscripción" para extender la vigencia de mi acceso a la plataforma.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td>US-21</td>
+    <td>Solicitar cancelación de suscripción</td>
+    <td>Como usuario con una suscripción de pago activa, quiero presionar el botón "Solicitar cancelación" y luego "Confirmar cancelación" para detener la renovación automática al finalizar el periodo vigente.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>51</td>
+    <td>US-22</td>
+    <td>Cancelar suscripción</td>
+    <td>Como sistema, quiero cancelar la suscripción de pago al finalizar su periodo vigente para retirar el acceso premium y devolver la cuenta del usuario al Plan Free.</td>
+    <td>3</td>
+  </tr>
+
+  <tr>
+    <td>52</td>
+    <td>US-71</td>
+    <td>Agregar método de pago de suscripción</td>
+    <td>Como usuario con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" dentro de la sección "Método de pago y datos fiscales" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>53</td>
+    <td>US-72</td>
+    <td>Completar datos fiscales de suscripción</td>
+    <td>Como usuario con una cuenta registrada, quiero presionar el botón "Completar datos" dentro de "Método de pago y datos fiscales" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>54</td>
+    <td>US-73</td>
+    <td>Descargar historial de suscripción</td>
+    <td>Como usuario, quiero presionar el botón "Descargar historial" dentro de "Actividad de la suscripción" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <td>55</td>
+    <td>US-52</td>
+    <td>Registrar cuenta con email</td>
+    <td>Como usuario anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly y obtener automáticamente el Plan Free.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>US-53</td>
+    <td>Verificar email</td>
+    <td>Como usuario registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>57</td>
+    <td>US-54</td>
+    <td>Iniciar sesión con credenciales</td>
+    <td>Como usuario registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>58</td>
+    <td>US-55</td>
+    <td>Iniciar sesión con Google OAuth</td>
+    <td>Como usuario anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>59</td>
+    <td>US-56</td>
+    <td>Recuperar contraseña</td>
+    <td>Como usuario registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>60</td>
+    <td>US-57</td>
+    <td>Cerrar sesión</td>
+    <td>Como usuario autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>61</td>
+    <td>US-58</td>
+    <td>Visualizar perfil actual</td>
+    <td>Como usuario autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>62</td>
+    <td>US-59</td>
+    <td>Actualizar nombre y biografía</td>
+    <td>Como usuario autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>63</td>
+    <td>US-60</td>
+    <td>Subir foto de perfil</td>
+    <td>Como usuario autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>64</td>
+    <td>US-61</td>
+    <td>Cambiar email con re-verificación</td>
+    <td>Como usuario autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>65</td>
+    <td>US-62</td>
+    <td>Cambiar contraseña</td>
+    <td>Como usuario autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>US-63</td>
+    <td>Configurar preferencias de idioma, zona horaria y tema</td>
+    <td>Como usuario autenticado, quiero configurar mi idioma, zona horaria y tema visual para adaptar la plataforma a mis preferencias.</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>67</td>
+    <td>US-64</td>
+    <td>Configurar notificaciones</td>
+    <td>Como usuario autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.</td>
+    <td>2</td>
+  </tr>
+  </tbody>
+</table>
