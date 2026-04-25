@@ -1490,25 +1490,25 @@ Además, se integra con servicios externos de mensajería (WhatsApp API) y persi
 ### 4.7.1. Class Diagrams
 
 <p align="center">Generación y Autenticación de Cuenta BC</p>
-<p align="center"><img src="images/Auth_BC-Class_Diagram__Generación_y_Autenticación_de_Cuenta_BC.png" width="500"/></p>
+<p align="center"><img src="images/01_AuthBC.png" width="500"/></p>
 
 <p align="center">Perfil y Configuración BC</p>
-<p align="center"><img src="images/Profile_BC-Class_Diagram__Perfil_y_Configuración_BC.png" width="500"/></p>
+<p align="center"><img src="images/02_ProfileBC.png" width="500"/></p>
 
 <p align="center">Gestión y Proceso de Suscripción BC</p>
-<p align="center"><img src="images/Subscription_BC-Class_Diagram__Gestión_y_Proceso_de_Suscripción_BC.png" width="500"/></p>
+<p align="center"><img src="images/03_SubscriptionBC.png" width="500"/></p>
 
 <p align="center">Gestión de Inventario de Suscripción BC</p>
-<p align="center"><img src="images/Inventory_BC-Class_Diagram__Gestión_de_Inventario_BC.png" width="500"/></p>
+<p align="center"><img src="images/04_InventoryBC.png" width="500"/></p>
 
 <p align="center">Pagos BC</p>
-<p align="center"><img src="images/Payment_BC-Class_Diagram__Payment_BC.png" width="500"/></p>
+<p align="center"><img src="images/06_PaymentBC.png" width="500"/></p>
 
 <p align="center">Ventas BC</p>
-<p align="center"><img src="images/Sales_BC-Class_Diagram__Ventas_BC.png" width="500"/></p>
+<p align="center"><img src="images/05_SalesBC.png" width="500"/></p>
 
 <p align="center">Chatbot de WhatsApp BC</p>
-<p align="center"><img src="images/Chatbot_BC-Class_Diagram__Chatbot_de_WhatsApp_BC.png" width="500"/></p>
+<p align="center"><img src="images/07_ChatbotBC.png" width="500"/></p>
 
 ## 4.8. Database Design
 
