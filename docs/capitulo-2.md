@@ -817,34 +817,145 @@ Los clientes finales entrevistados representan un perfil digital, exigente y con
 
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
 
-| Tarea | Frecuencia | Importancia |
-|---|---|---|
-| Verificar el stock disponible de productos en el local   | Always        | High |
-| Registrar las ventas del día (efectivo y digital)        | Always        | High |
-| Cuadrar la caja al cierre del turno                      | Always        | High |
-| Separar ingresos en efectivo de pagos por Yape/Plin/POS  | Often         | High |
-| Atender pedidos de clientes por WhatsApp                 | Often         | High |
-| Reponer productos cuando detecta quiebre de stock        | Often         | High |
-| Verificar que el peso despachado coincida con lo cobrado | Often         | High |
-| Delegar la atención de WhatsApp a un familiar o empleado | Sometimes     | Medium |
-| Revisar movimientos de Yape o Plin desde el celular      | Often         | Medium |
-| Realizar conteo manual de inventario                     | Sometimes     | High |
-| Coordinar pedidos con proveedores                        | Sometimes     | Medium |
-| Detectar pérdidas o mermas en productos                  | Rarely        | High |
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Tarea</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Verificar el stock disponible de productos en el local</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Registrar las ventas del día (efectivo y digital)</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Cuadrar la caja al cierre del turno</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Separar ingresos en efectivo de pagos por Yape/Plin/POS</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Atender pedidos de clientes por WhatsApp</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Reponer productos cuando detecta quiebre de stock</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Verificar que el peso despachado coincida con lo cobrado</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Delegar la atención de WhatsApp a un familiar o empleado</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Revisar movimientos de Yape o Plin desde el celular</td>
+      <td>Often</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Realizar conteo manual de inventario</td>
+      <td>Sometimes</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Coordinar pedidos con proveedores</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Detectar pérdidas o mermas en productos</td>
+      <td>Rarely</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 **Segmento 2: Clientes Finales**
-| Tarea | Frecuencia | Importancia |
-|---|---|---|
-| Buscar productos disponibles en negocios cercanos                 | Often | High |
-| Consultar por WhatsApp si un producto está disponible             | Often | High |
-| Realizar el pago de una compra de forma digital (Yape/Tarjeta)    | Always| High |
-| Verificar que el producto recibido coincida con lo pedido         | Often | High |
-| Esperar confirmación de pago o recibo tras una compra             | Always| High |
-| Evaluar si confiar en un negocio local para comprar en línea      | Sometimes| High |
-| Comparar precios entre negocios locales                           | Sometimes| Medium |
-| Ir presencialmente al mercado o minimarket                        | Sometimes| Medium |
-| Revisar el estado de su pedido tras confirmar la compra           | Often    | Medium |
-| Reclamar o solicitar devolución por producto agotado o incorrecto | Rarely   | High |
+
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Tarea</th>
+      <th>Frecuencia</th>
+      <th>Importancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Buscar productos disponibles en negocios cercanos</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Consultar por WhatsApp si un producto está disponible</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Realizar el pago de una compra de forma digital (Yape/Tarjeta)</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Verificar que el producto recibido coincida con lo pedido</td>
+      <td>Often</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Esperar confirmación de pago o recibo tras una compra</td>
+      <td>Always</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Evaluar si confiar en un negocio local para comprar en línea</td>
+      <td>Sometimes</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Comparar precios entre negocios locales</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Ir presencialmente al mercado o minimarket</td>
+      <td>Sometimes</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Revisar el estado de su pedido tras confirmar la compra</td>
+      <td>Often</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Reclamar o solicitar devolución por producto agotado o incorrecto</td>
+      <td>Rarely</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 **Análisis del User Task Matrix**
 Las tareas con mayor frecuencia e importancia para el segmento de comerciantes son la verificación de stock, el registro de ventas y el cuadre de caja, las tres calificadas como Always y High. Esto confirma que su jornada gira en torno al control operativo del negocio y que cualquier herramienta que automatice o simplifique estas tareas tendrá una adopción directa e inmediata. La atención de pedidos por WhatsApp y la separación de medios de pago, calificadas como Often y High, representan tareas críticas que hoy realizan de forma manual y con alta probabilidad de error.
@@ -888,7 +999,6 @@ El equipo Kauflink realizó una sesión colaborativa de Big Picture Event Stormi
 **Proceso realizado por el equipo**
 
 A continuación se describe cada una de las etapas realizadas durante la sesión de Big Picture Event Storming, acompañadas de las capturas del tablero en Miro correspondientes a cada fase.
-
 
 **Paso 1: Preparación del espacio de trabajo**
 
