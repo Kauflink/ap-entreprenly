@@ -8,52 +8,12 @@ Esta sección define los lineamientos de estilo que aseguran una identidad visua
 
 ### 4.1.1. General Style Guidelines.
 
-**Paleta de Colores**
-
-- **Colores Primarios**
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Código HEX</strong></th>
-      <th><strong>Color</strong></th>
-      <th><strong>Descripción</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>#F38313</strong></td>
-      <td><img src="images/_F38313.png" alt="#F38313" width="60" height="40" style="border-radius:4px;display:block;"></td>
-      <td>Es un tono vibrante y enérgico que comunica dinamismo y acción. <br>
-      Se utiliza como color de acento principal para botones de llamada a la acción (CTA) y elementos críticos de la marca, asegurando una alta visibilidad.</td>
-    </tr>
-    <tr>
-      <td><strong>#FCE0D4</strong></td>
-      <td><img src="images/_FCE0D4.png" alt="#FCE0D4" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
-      <td>Tono melocotón claro que aporta calidez y cercanía.
-      <br> Se emplea en fondos de tarjetas y estados de selección suave, proporcionando un contraste armonioso con el naranja principal sin saturar la interfaz.</td>
-    </tr>
-    <tr>
-      <td><strong>#0C0F12</strong></td>
-      <td><img src="images/_0C0F12.png" alt="#0C0F12" width="60" height="40" style="border-radius:4px;display:block;"></td>
-      <td>Color sólido y profundo utilizado para la tipografía principal y encabezados.
-      <br> Garantiza el cumplimiento de las normas de accesibilidad (WCAG) al ofrecer un contraste máximo sobre fondos claros.</td>
-    </tr>
-    <tr>
-      <td><strong>#F6F4F4</strong></td>
-      <td><img src="images/_F6F4F4.png" alt="#F6F4F4" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
-      <td>Un tono blanco con una mínima calidez que sirve como lienzo principal para la aplicación, evitando el deslumbramiento y proporcionando una sensación de orden y amplitud.</td>
-    </tr>
-  </tbody>
-</table>
-
-## 4.1. Style Guidelines
-
-Esta sección define los lineamientos de estilo que aseguran una identidad visual consistente, accesible y escalable en todas las interfaces del proyecto (web y móvil). Aquí se establecen los criterios de marca (logo, tono), tipografía, paleta de colores, espaciado y grid, así como estados e interacción (focus, hover, error) con enfoque en WCAG. Además, se especifican tokens de diseño y reglas responsive para facilitar la implementación y el mantenimiento entre equipos de diseño y desarrollo. Estos lineamientos actúan como fuente única de verdad, garantizando coherencia y calidad a medida que el producto evoluciona.
-
----
-
-### 4.1.1. General Style Guidelines.
+El sistema de diseño de Entreprenly está basado en **Material Design** como lenguaje 
+de diseño de referencia, adoptando sus principios de elevación, tipografía, sistema de 
+color y componentes interactivos para garantizar interfaces coherentes, accesibles y 
+familiares para el usuario. En la Frontend Web Application, estos lineamientos se 
+implementan a través de **PrimeVue**, la biblioteca de componentes de UI seleccionada 
+para Vue 3, cuyos componentes están alineados con los estándares de Material Design.
 
 **Paleta de Colores**
 
