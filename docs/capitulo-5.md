@@ -110,6 +110,12 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
       <td><a href="https://vuejs.org/">https://vuejs.org/</a></td>
     </tr>
     <tr>
+    <td><strong>PrimeVue</strong></td>
+      <td>Biblioteca de componentes de UI para Vue 3 utilizada en la construcción 
+      de la interfaz del Frontend Web Application, basada en Material Design.</td>
+      <td><a href="https://primevue.org/">https://primevue.org/</a></td>
+    </tr>
+    <tr>
       <td><strong>Node.js</strong></td>
       <td>Entorno de ejecución JavaScript requerido para ejecutar Vue CLI y las herramientas de build y gestión de dependencias del Frontend.</td>
       <td><a href="https://nodejs.org/">https://nodejs.org/</a></td>
@@ -287,6 +293,10 @@ Las convenciones aplicadas son las siguientes:
 - Los **servicios de comunicación con el API** se encapsulan en archivos dedicados dentro de `src/services/`, separando la lógica de acceso a datos de los componentes de presentación.
 - Se utiliza **Vue Router** para el enrutamiento del lado del cliente, definiendo las rutas con nombres descriptivos en **kebab-case**: `project-detail`, `user-profile`.
 - Las importaciones se organizan en bloques separados: primero librerías de Vue, luego librerías de terceros y finalmente módulos internos del proyecto.
+
+- Se utiliza **PrimeVue** como biblioteca de componentes de UI, siguiendo 
+  el sistema de diseño basado en **Material Design** para garantizar 
+  consistencia visual y accesibilidad en toda la aplicación.
 
 **Ejemplo de componente con Composition API:**
 
