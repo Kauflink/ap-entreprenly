@@ -295,7 +295,9 @@ Durante el Sprint 1 (13–20 de abril de 2026), el equipo realizó un total de *
 
 # Student Outcome
 
-En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 5 (ABET – EAC), el cual se define como la capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos. La información se presenta a través del siguiente cuadro, donde se especifican las dimensiones de la competencia, las acciones realizadas por cada integrante y las conclusiones generales del equipo.
+En esta sección se detallan las actividades realizadas en el trabajo final y el sustento de cómo estas han ayudado a desarrollar las dimensiones del Student Outcome 5 (ABET – EAC), el cual se define como la capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos. 
+
+La información se presenta a través del siguiente cuadro, donde se especifican las dimensiones de la competencia, las acciones realizadas por cada integrante y las conclusiones generales del equipo.
 
 <table>
   <thead>
@@ -307,18 +309,50 @@ En esta sección se detallan las actividades realizadas en el trabajo final y el
   </thead>
   <tbody>
     <tr>
-      <td>Trabaja en equipo para proporcionar liderazgo en forma conjunta</td>
+      <td><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta</strong></td>
       <td>
-        Acciones realizadas de cada uno aqui...
+        <strong>Camargo Briceño, Joseph Julius</strong><br>
+        <em>AV1</em><br>
+        Asumió el liderazgo técnico del equipo durante el Sprint 1, liderando la configuración inicial del repositorio del Landing Page bajo la organización Kauflink en GitHub. Tomó la iniciativa en el diseño e implementación del pipeline de integración continua con GitHub Actions, realizando cuatro iteraciones de ajuste hasta lograr el despliegue automático estable en GitHub Pages. Además, lideró la redacción de las secciones de Software Configuration Management (5.1) y la documentación completa del Sprint 1 (5.2.1), estableciendo el estándar de documentación técnica para el equipo.<br><br>
+        <strong>Chavez Carrasco, Lionel Abraham</strong><br>
+        <em>AV1</em><br>
+        Ejerció liderazgo en el área de diseño y desarrollo frontend del proyecto. Lideró la elaboración de las Style Guidelines (4.1), los Wireframes y Mock-ups del Landing Page (4.3) y el diseño completo de Web Applications UX/UI (4.4), estableciendo el sistema visual de Entreprenly. En el Landing Page, lideró el desarrollo de las funcionalidades interactivas más complejas del Sprint 1: el selector de idioma ES/EN, el switch de tema claro/oscuro y las animaciones de transición del hero, coordinando la integración de estas funcionalidades mediante Pull Requests revisados por el equipo.<br><br>
+        <strong>Palma De Los Santos, Elynor Mikela</strong><br>
+        <em>AV1</em><br>
+        Lideró el proceso de investigación con usuarios del proyecto, tomando la iniciativa en el diseño de las guías de entrevistas para ambos segmentos objetivo (2.2.1), coordinando el registro de entrevistas (2.2.2) y sintetizando los hallazgos en el análisis (2.2.3). Asimismo, lideró la construcción de los artefactos de Needfinding: User Personas, User Journey Mapping y Empathy Mapping (2.3), que sirvieron de base para las decisiones de diseño de todo el equipo. También lideró la redacción de los criterios de aceptación de las User Stories (3.1) y la elaboración de la sección Student Outcome del informe.<br><br>
+        <strong>Peirano Brun, José Antonio</strong><br>
+        <em>AV1</em><br>
+        Lideró el análisis estratégico y arquitectónico del proyecto. Condujo el análisis competitivo (2.1), identificando a los principales competidores y definiendo las estrategias y tácticas del equipo frente a ellos. Asimismo, lideró las sesiones de Big Picture Event Storming (2.4), facilitando la identificación de los bounded contexts y el lenguaje ubicuo del dominio. En el Capítulo IV, lideró el diseño de la arquitectura de software bajo el modelo C4 (4.6) y los diagramas de clases (4.7), estableciendo las bases de la solución técnica del backend.<br><br>
+        <strong>Flores Pinchi, José Fernando</strong><br>
+        <em>AV1</em><br>
+        Lideró la definición del alcance y la planificación del producto. Redactó el Solution Profile y la descripción de los Segmentos objetivo (1.2 y 1.3), sentando las bases del problema y la propuesta de valor. Lideró la construcción del Impact Mapping (3.2) y el Product Backlog (3.3), priorizando las historias de usuario junto al equipo. Además, lideró el diseño de la base de datos (4.8), elaborando los diagramas entidad-relación para cada bounded context. En el Landing Page, implementó la estructura base de las secciones principales (hero, funcionalidades, planes y footer) del Sprint 1.
       </td>
-      <td>Conclusiónes aquí...</td>
+      <td>
+        Durante la AV1, el equipo demostró una capacidad de liderazgo distribuido efectiva, donde cada integrante asumió la conducción de un área específica del proyecto según sus competencias y responsabilidades. Joseph Julius lideró la infraestructura técnica y la documentación del ciclo de vida; Lionel Abraham, el diseño visual e interactivo; Elynor Mikela, la investigación con usuarios y la especificación de requisitos; José Antonio, el análisis estratégico y la arquitectura del sistema; y José Fernando, la planificación del producto y el diseño de datos. Esta distribución de liderazgo permitió que el equipo avanzara en múltiples frentes de forma simultánea, logrando un primer Sprint completo con Landing Page desplegado dentro del plazo establecido.
+      </td>
     </tr>
     <tr>
-      <td>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</td>
+      <td><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong></td>
       <td>
-        Acciones realizadas de cada uno aqui...
+        <strong>Camargo Briceño, Joseph Julius</strong><br>
+        <em>AV1</em><br>
+        Preparó y facilitó la reunión de Sprint Planning del 18 de abril de 2026 (reunión virtual vía Discord), donde el equipo definió el Sprint Goal, el Sprint Backlog y la distribución de tareas para el Sprint 1. Estableció las convenciones de trabajo colaborativo del repositorio: la estrategia GitFlow con ramas main y develop, el estándar de Conventional Commits y el proceso de integración mediante Pull Requests, creando así una estructura que permitió a todos los integrantes contribuir de forma ordenada e inclusiva al código fuente.<br><br>
+        <strong>Chavez Carrasco, Lionel Abraham</strong><br>
+        <em>AV1</em><br>
+        Participó activamente en la reunión de planificación del Sprint 1, contribuyendo a la definición de los objetivos del sprint y a la estimación de esfuerzo de las tareas de diseño e implementación. Durante la ejecución, mantuvo comunicación constante con el equipo a través de Discord para coordinar la integración de las funcionalidades interactivas con la estructura base del Landing Page desarrollada por otros integrantes, asegurando coherencia visual y funcional en el producto final. Realizó la revisión y aprobación de los Pull Requests #2 y #3.<br><br>
+        <strong>Palma De Los Santos, Elynor Mikela</strong><br>
+        <em>AV1</em><br>
+        Colaboró en la planificación del Sprint 1, aportando en la identificación de las historias de usuario prioritarias en función de los hallazgos de las entrevistas realizadas con usuarios reales de ambos segmentos objetivo. Trabajó de manera coordinada con el equipo para asegurar que los criterios de aceptación de las User Stories reflejaran con fidelidad las necesidades identificadas en el proceso de Needfinding. Contribuyó también a la revisión del contenido textual del Landing Page, realizando correcciones de ortografía y tildes mediante commits en el repositorio.<br><br>
+        <strong>Peirano Brun, José Antonio</strong><br>
+        <em>AV1</em><br>
+        Participó en la reunión de planificación del Sprint 1 y colaboró en el establecimiento de los objetivos del producto, aportando la perspectiva del análisis competitivo y los bounded contexts identificados en el Event Storming para priorizar funcionalidades. Trabajó en coordinación con el equipo para que la arquitectura de software propuesta (diagramas C4 y de clases) fuera coherente con el modelo de dominio definido. Contribuyó al contenido textual del Landing Page mediante correcciones de redacción registradas como commits en el repositorio.<br><br>
+        <strong>Flores Pinchi, José Fernando</strong><br>
+        <em>AV1</em><br>
+        Participó en la reunión de planificación del Sprint 1, contribuyendo directamente a la construcción del Sprint Backlog a partir del Product Backlog que lideró. Colaboró en la implementación de la estructura base del Landing Page (secciones hero, funcionalidades, planes y footer), trabajando en sincronía con Lionel Abraham para mantener coherencia entre el diseño mock-up y el código desarrollado. Realizó el merge del Pull Request #5 y contribuyó con correcciones de contenido al repositorio compartido.
       </td>
-      <td>Conclusiónes aquí...</td>
+      <td>
+        Durante la AV1, el equipo estableció desde el inicio un entorno de trabajo colaborativo e inclusivo, sustentado en tres prácticas concretas: la planificación conjunta mediante una reunión de Sprint Planning virtual donde todos los integrantes definieron metas y distribuyeron tareas; el uso de GitFlow y Pull Requests como mecanismo de revisión entre pares que garantizó la calidad del código y la participación de todos en el repositorio; y la comunicación continua a través de Discord que permitió resolver bloqueos y tomar decisiones de forma ágil. El equipo cumplió el objetivo del Sprint 1: implementar y desplegar la primera versión del Landing Page dentro del plazo establecido, con todos los miembros evidenciando participación activa a través de commits en los repositorios del informe y del Landing Page.
+      </td>
     </tr>
   </tbody>
 </table>
