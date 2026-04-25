@@ -1102,7 +1102,7 @@ Esta sección presenta los mock-ups de alta fidelidad de la aplicación web de E
 #### Dashboard Principal
  
 <p align="center">
-    <img src="images/landing.png" alt="Landing.png" width="800"/>
+    <img src="./images/Landing.png" alt="Landing.png" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Dashboard Principal*
