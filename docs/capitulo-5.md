@@ -174,8 +174,8 @@ Para la gestión del código fuente y el seguimiento de modificaciones, el equip
 | Producto | URL del Repositorio |
 | :--- | :--- |
 | **Landing Page** | https://github.com/Kauflink/landing-entreprenly |
-| **Web Services** | https://github.com/Kauflink/daop-entreprenly-web-services | 
-| **Frontend Web Application** | https://github.com/Kauflink/daop-entreprenly-web-applications |
+| **Web Services** | https://github.com/Kauflink/ap-entreprenly-web-services | 
+| **Frontend Web Application** | https://github.com/Kauflink/ap-entreprenly-web-applications |
 
 **Estrategia de Flujo de Trabajo: GitFlow**
 
