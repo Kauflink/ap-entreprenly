@@ -1489,6 +1489,9 @@ Además, se integra con servicios externos de mensajería (WhatsApp API) y persi
 
 ### 4.7.1. Class Diagrams
 
+<p align="center">Shared BC</p>
+<p align="center"><img src="images/00_SharedBC.png" width="500"/></p>
+
 <p align="center">Generación y Autenticación de Cuenta BC</p>
 <p align="center"><img src="images/01_AuthBC.png" width="500"/></p>
 
