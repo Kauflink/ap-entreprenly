@@ -91,7 +91,7 @@ Durante la elaboración de la AV1, los cinco integrantes del equipo contribuyero
   </tbody>
 </table>
 
-![Contributors1](./docs/images/Contributors1.png "Contributors1")
+![Contributors1](./docs/images/contributors1.png "Contributors1")
 
 ![Contributors2](./docs/images/Contributors2.png "Contributors2")
 
