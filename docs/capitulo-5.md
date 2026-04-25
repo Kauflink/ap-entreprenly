@@ -19,7 +19,7 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
   <tbody>
     <tr>
       <td><strong>Jira</strong></td>
-      <td>Herramienta principal para la gestión del proyecto, administración del Product Backlog y seguimiento de Sprints bajo metodología ágil.</td>
+      <td>Herramienta principal para la gestión del proyecto, administración del Product Backlog y seguimiento de Sprints bajo marco de trabajo ágil.</td>
       <td><a href="https://www.atlassian.com/software/jira">https://www.atlassian.com/software/jira</a></td>
     </tr>
   </tbody>
@@ -38,7 +38,7 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
   <tbody>
     <tr>
       <td><strong>UXPressia</strong></td>
-      <td>Utilizado para la gestión de requerimientos, específicamente para la creación de User Personas, Empathy Maps e Impact Maps.</td>
+      <td>Utilizado para la gestión de requisitos, específicamente para la creación de User Personas, Empathy Maps e Impact Maps.</td>
       <td><a href="https://uxpressia.com/">https://uxpressia.com/</a></td>
     </tr>
   </tbody>
@@ -100,18 +100,18 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
       <td><a href="https://desktop.github.com/">https://desktop.github.com/</a></td>
     </tr>
     <tr>
-      <td><strong>Spring Boot / Java</strong></td>
-      <td>Framework y lenguaje principal para el desarrollo de los RESTful Web Services que conforman el Backend de la aplicación.</td>
-      <td><a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a></td>
+      <td><strong>ASP.NET Core / C#</strong></td>
+      <td>Framework y lenguaje principal para el desarrollo de los RESTful Web Services que conforman el Backend de la aplicación, utilizando .NET 8 como plataforma de ejecución.</td>
+      <td><a href="https://dotnet.microsoft.com/apps/aspnet">https://dotnet.microsoft.com/apps/aspnet</a></td>
     </tr>
     <tr>
-      <td><strong>Angular / TypeScript</strong></td>
-      <td>Framework y lenguaje utilizados para la construcción de la Frontend Web Application de la plataforma.</td>
-      <td><a href="https://angular.io/">https://angular.io/</a></td>
+      <td><strong>Vue.js / JavaScript</strong></td>
+      <td>Framework y lenguaje utilizados para la construcción de la Frontend Web Application de la plataforma, haciendo uso de Vue 3 con Composition API.</td>
+      <td><a href="https://vuejs.org/">https://vuejs.org/</a></td>
     </tr>
     <tr>
       <td><strong>Node.js</strong></td>
-      <td>Entorno de ejecución JavaScript requerido para ejecutar Angular CLI y las herramientas de build y gestión de dependencias del Frontend.</td>
+      <td>Entorno de ejecución JavaScript requerido para ejecutar Vue CLI y las herramientas de build y gestión de dependencias del Frontend.</td>
       <td><a href="https://nodejs.org/">https://nodejs.org/</a></td>
     </tr>
   </tbody>
@@ -174,7 +174,7 @@ Para la gestión del código fuente y el seguimiento de modificaciones, el equip
 | Producto | URL del Repositorio |
 | :--- | :--- |
 | **Landing Page** | https://github.com/Kauflink/landing-entreprenly |
-| **Web Services** | https://github.com/Kauflink/ap-entreprenly-web-services | 
+| **Web Services** | https://github.com/Kauflink/ap-entreprenly-web-services |
 | **Frontend Web Application** | https://github.com/Kauflink/ap-entreprenly-web-applications |
 
 **Estrategia de Flujo de Trabajo: GitFlow**
@@ -218,7 +218,7 @@ Para asegurar un historial de cambios legible y facilitar la automatización, se
 - docs: Modificaciones exclusivamente en la documentación.
 - style: Cambios de formato o estética que no afectan la lógica del código.
 - refactor: Reestructuración de código que no añade funciones ni corrige errores.
-- test: Adición o actualización de pruebas
+- test: Adición o actualización de pruebas.
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
@@ -239,12 +239,12 @@ Las convenciones aplicadas son las siguientes:
 - Todas las imágenes incluyen el atributo `alt` con una descripción significativa, como parte del enfoque de accesibilidad (a11y) del proyecto.
 - Se utiliza **indentación de 2 espacios** para mantener la legibilidad del árbol de elementos.
 - Los elementos de bloque se escriben en líneas separadas; los elementos en línea pueden mantenerse en una misma línea si el resultado es conciso.
-- Se evita el uso de estilos en línea (`style=""`); todo el estilo visual se delega a las hojas de estilo CSS externas o a las clases de Angular Material.
+- Se evita el uso de estilos en línea (`style=""`); todo el estilo visual se delega a las hojas de estilo CSS externas.
 - Los comentarios se utilizan para delimitar secciones principales del documento: `<!-- Hero Section -->`.
 
 #### CSS
 
-Para el estilo visual del Landing Page de Entreprenly, el equipo adopta la **Google HTML/CSS Style Guide** como guía de referencia, complementada con las convenciones del sistema de diseño basado en **Material Design**.
+Para el estilo visual del Landing Page de Entreprenly, el equipo adopta la **Google HTML/CSS Style Guide** como guía de referencia.
 
 Las convenciones aplicadas son las siguientes:
 
@@ -259,7 +259,7 @@ Las convenciones aplicadas son las siguientes:
 
 #### JavaScript
 
-El Landing Page de Entreprenly utiliza JavaScript para comportamientos de interacción básicos. El equipo adopta las convenciones establecidas en la **Google HTML/CSS Style Guide** para los aspectos de scripting complementarios al marcado.
+El Landing Page de Entreprenly utiliza JavaScript para comportamientos de interacción básicos. El equipo adopta las convenciones establecidas en la **Google JavaScript Style Guide**, la **MDN JavaScript guidelines** y la **W3C JavaScript Style Guide**.
 
 Las convenciones aplicadas son las siguientes:
 
@@ -270,52 +270,92 @@ Las convenciones aplicadas son las siguientes:
 - El código se organiza en funciones con una única responsabilidad, evitando bloques de lógica demasiado extensos.
 - Se incluyen comentarios descriptivos en funciones no triviales, explicando el propósito y no el mecanismo.
 
-#### TypeScript
+#### Vue.js
 
-Para el desarrollo del Frontend Web Application de Entreprenly con Angular, el equipo adopta la **Google TypeScript Style Guide** como referencia principal.
+Para el desarrollo del Frontend Web Application de Entreprenly con Vue 3, el equipo adopta la **Vue Style Guide** oficial como referencia principal.
 
 Las convenciones aplicadas son las siguientes:
 
-- Los nombres de **clases, interfaces y enumeraciones** se escriben en **PascalCase**: `UserProfile`, `AuthService`, `PaymentStatus`.
-- Los nombres de **variables, funciones y métodos** se escriben en **camelCase**: `isLoggedIn`, `fetchUserData()`.
+- Los nombres de **componentes** se escriben en **PascalCase** tanto en su definición como en su importación: `ProjectCard`, `AuthView`, `DashboardLayout`.
+- Los archivos de componentes siguen la convención **PascalCase** con extensión `.vue`: `ProjectCard.vue`, `AuthView.vue`.
+- Los **selectores** de componentes en las plantillas se escriben en **kebab-case**: `<project-card />`, `<auth-view />`.
+- Los nombres de **variables reactivas y funciones** se escriben en **camelCase**: `isLoggedIn`, `fetchUserData()`.
 - Los nombres de **constantes globales** se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
-- Los nombres de **archivos** de componentes, servicios y módulos de Angular siguen la convención **kebab-case** con sufijo descriptivo: `user-profile.component.ts`, `auth.service.ts`, `app-routing.module.ts`.
-- Se declaran **tipos explícitos** para todos los parámetros de funciones y valores de retorno; se evita el uso de `any`.
-- Se utilizan **interfaces** para describir la forma de los objetos del dominio: `interface Entrepreneur { id: number; name: string; }`.
-- Se prefiere el uso de **Observables** de RxJS sobre Promises para el manejo de operaciones asíncronas, coherente con el modelo reactivo de Angular.
-- Se habilita el modo estricto de TypeScript (`"strict": true`) en el `tsconfig.json` del proyecto.
-- Las importaciones se organizan en bloques separados: primero módulos de Angular, luego librerías de terceros y finalmente módulos internos del proyecto.
+- Se utiliza la **Composition API** con `<script setup>` para la definición de componentes, manteniendo la lógica reactiva centralizada y legible.
+- Se declaran **tipos explícitos** para las props mediante `defineProps` con validación de tipo y valores por defecto cuando corresponda.
+- Los componentes se organizan por bounded context o feature dentro del directorio `src/`, evitando una estructura monolítica.
+- Los **servicios de comunicación con el API** se encapsulan en archivos dedicados dentro de `src/services/`, separando la lógica de acceso a datos de los componentes de presentación.
+- Se utiliza **Vue Router** para el enrutamiento del lado del cliente, definiendo las rutas con nombres descriptivos en **kebab-case**: `project-detail`, `user-profile`.
+- Las importaciones se organizan en bloques separados: primero librerías de Vue, luego librerías de terceros y finalmente módulos internos del proyecto.
 
-#### Angular Framework
+**Ejemplo de componente con Composition API:**
 
-Además de las convenciones de TypeScript, el equipo adopta la **Angular Coding Style Guide** oficial para la organización y estructura de los componentes, servicios y módulos de la aplicación.
+```vue
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useProjectService } from '@/services/projectService'
+
+const props = defineProps({
+  projectId: {
+    type: Number,
+    required: true
+  }
+})
+
+const project = ref(null)
+const { getProjectById } = useProjectService()
+
+onMounted(async () => {
+  project.value = await getProjectById(props.projectId)
+})
+</script>
+```
+
+#### C# y ASP.NET Core
+
+Para el desarrollo de los RESTful Web Services de Entreprenly, el equipo adopta las **C# Coding Conventions** de Microsoft y las **Microsoft ASP.NET Core Coding Guidelines** como referencias principales.
 
 Las convenciones aplicadas son las siguientes:
 
-- Cada componente, servicio o módulo reside en **su propio archivo**, siguiendo el principio de una clase por archivo.
-- Los nombres de **componentes** siguen el patrón `[Feature]Component`: `DashboardComponent`, `ProjectCardComponent`.
-- Los nombres de **servicios** siguen el patrón `[Feature]Service`: `AuthService`, `ProjectService`.
-- Los **selectores** de los componentes se escriben en **kebab-case** con un prefijo único del proyecto (`ep-` por Entreprenly): `ep-project-card`, `ep-navbar`.
-- Los **módulos** de funcionalidad se organizan por bounded context o feature, evitando un único módulo monolítico.
-- Los métodos del ciclo de vida de Angular (`ngOnInit`, `ngOnDestroy`) se implementan a través de sus interfaces correspondientes (`OnInit`, `OnDestroy`).
-
-#### Java y Spring Boot
-
-Para el desarrollo de los RESTful Web Services de Entreprenly, el equipo adopta la **Google Java Style Guide** y las convenciones de **Spring Boot Features** como referencias principales.
-
-Las convenciones aplicadas son las siguientes:
-
-- Los nombres de **clases** se escriben en **PascalCase**: `ProjectController`, `UserRepository`, `AuthenticationService`.
-- Los nombres de **métodos y variables** se escriben en **camelCase**: `findProjectById()`, `currentUser`.
-- Los nombres de **constantes** se escriben en **UPPER_SNAKE_CASE**: `DEFAULT_PAGE_SIZE`.
-- Los nombres de **paquetes** se escriben en **minúsculas** y se organizan por bounded context, siguiendo la estructura: `com.kauflink.entreprenly.[boundedcontext].[layer]`. Por ejemplo: `com.kauflink.entreprenly.projects.interfaces`, `com.kauflink.entreprenly.auth.domain`.
-- La arquitectura interna de cada bounded context sigue el patrón de capas: `interfaces` (controllers), `application` (services, command handlers), `domain` (entities, value objects, repositories interfaces) e `infrastructure` (JPA repositories, external adapters).
+- Los nombres de **clases, interfaces y enumeraciones** se escriben en **PascalCase**: `ProjectController`, `IUserRepository`, `PaymentStatus`.
+- Las **interfaces** se nombran con el prefijo `I`: `IProjectRepository`, `IAuthService`.
+- Los nombres de **métodos y propiedades públicas** se escriben en **PascalCase**: `FindProjectById()`, `CurrentUser`.
+- Los nombres de **variables locales y parámetros** se escriben en **camelCase**: `projectId`, `currentUser`.
+- Los nombres de **constantes** se escriben en **PascalCase** en el ámbito de clase, o en **UPPER_SNAKE_CASE** para constantes globales: `DefaultPageSize`, `MAX_RETRY_ATTEMPTS`.
+- Los nombres de **namespaces** se organizan por bounded context, siguiendo la estructura: `Kauflink.Entreprenly.[BoundedContext].[Layer]`. Por ejemplo: `Kauflink.Entreprenly.Projects.Interfaces`, `Kauflink.Entreprenly.Auth.Domain`.
+- La arquitectura interna de cada bounded context sigue el patrón de capas: `Interfaces` (controllers), `Application` (services, command handlers), `Domain` (entities, value objects, repository interfaces) e `Infrastructure` (EF Core repositories, external adapters).
 - Los **endpoints** de los controladores REST se nombran en **kebab-case** y en plural para recursos: `/api/v1/projects`, `/api/v1/users`.
 - Los **métodos HTTP** se emplean de acuerdo con su semántica RESTful: `GET` para consultas, `POST` para creación, `PUT` para actualización completa, `PATCH` para actualización parcial y `DELETE` para eliminación.
-- Se utilizan **anotaciones estándar** de Spring Boot: `@RestController`, `@Service`, `@Repository`, `@Entity`, `@Value`, entre otras.
-- Se aplica **indentación de 4 espacios** de acuerdo con la Google Java Style Guide.
-- Los **comentarios Javadoc** se incluyen en todas las clases públicas y en los métodos cuya lógica no sea autoexplicativa.
+- Se utilizan **anotaciones estándar** de ASP.NET Core: `[ApiController]`, `[Route]`, `[HttpGet]`, `[HttpPost]`, `[Authorize]`, entre otras.
+- Se aplica **indentación de 4 espacios** de acuerdo con las convenciones de C#.
+- Los **comentarios XML** (`/// <summary>`) se incluyen en todas las clases públicas y en los métodos cuya lógica no sea autoexplicativa, habilitando la generación automática de documentación.
 
+**Ejemplo de controller en ASP.NET Core:**
+
+```csharp
+namespace Kauflink.Entreprenly.Projects.Interfaces;
+
+[ApiController]
+[Route("api/v1/[controller]")]
+public class ProjectsController : ControllerBase
+{
+    private readonly IProjectService _projectService;
+
+    public ProjectsController(IProjectService projectService)
+    {
+        _projectService = projectService;
+    }
+
+    /// <summary>Retrieves a project by its identifier.</summary>
+    [HttpGet("{projectId:int}")]
+    public async Task<IActionResult> GetById(int projectId)
+    {
+        var project = await _projectService.FindByIdAsync(projectId);
+        if (project is null) return NotFound();
+        return Ok(project);
+    }
+}
+```
 
 #### Gherkin (Acceptance Criteria)
 
@@ -359,7 +399,7 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
 #### Frontend Web Application
 
-El Frontend Web Application de Entreprenly está desarrollado con **Angular** y se despliega mediante **Firebase Hosting**, disponible en el subdominio **[app.entreprenly.online](https://app.entreprenly.online)**. Firebase Hosting fue elegido sobre GitHub Pages por tres razones concretas: soporta el enrutamiento del lado del cliente (SPA routing) de Angular de forma nativa sin configuraciones adicionales, permite asociar subdominios personalizados sin conflictos con el dominio principal ya utilizado por el Landing Page en GitHub Pages, y se integra de forma directa con GitHub Actions para automatizar el ciclo de build y despliegue.
+El Frontend Web Application de Entreprenly está desarrollado con **Vue.js** y se despliega mediante **Firebase Hosting**, disponible en el subdominio **[app.entreprenly.online](https://app.entreprenly.online)**. Firebase Hosting fue elegido sobre GitHub Pages por tres razones concretas: soporta el enrutamiento del lado del cliente (SPA routing) de Vue Router de forma nativa sin configuraciones adicionales, permite asociar subdominios personalizados sin conflictos con el dominio principal ya utilizado por el Landing Page en GitHub Pages, y se integra de forma directa con GitHub Actions para automatizar el ciclo de build y despliegue.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
@@ -369,16 +409,16 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
    npm install -g firebase-tools
    firebase login
    ```
-3. Dentro del repositorio del Frontend (`Kauflink/daop-entreprenly-web-applications`), inicializar Firebase Hosting:
+3. Dentro del repositorio del Frontend (`Kauflink/ap-entreprenly-web-applications`), inicializar Firebase Hosting:
    ```bash
    firebase init hosting
    ```
-   Durante la inicialización, seleccionar el proyecto Firebase creado, indicar `dist/entreprenly` como directorio público (output del build de Angular), confirmar que la aplicación es una SPA respondiendo `Yes` a la opción de reescritura de rutas al `index.html`, y no sobrescribir el `index.html` existente.
+   Durante la inicialización, seleccionar el proyecto Firebase creado, indicar `dist` como directorio público (output del build de Vue), confirmar que la aplicación es una SPA respondiendo `Yes` a la opción de reescritura de rutas al `index.html`, y no sobrescribir el `index.html` existente.
 4. Verificar que el archivo `firebase.json` generado incluya la regla de reescritura para SPA routing:
    ```json
    {
      "hosting": {
-       "public": "dist/entreprenly",
+       "public": "dist",
        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
        "rewrites": [
          { "source": "**", "destination": "/index.html" }
@@ -388,35 +428,35 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
    ```
 5. En Firebase Console, ingresar a **Hosting > Add custom domain** y registrar el subdominio `app.entreprenly.online`. Firebase proporcionará los registros DNS necesarios (tipo `A` o `CNAME`) que deben configurarse en el proveedor del dominio.
 6. En el repositorio, configurar el **GitHub Secret** `FIREBASE_SERVICE_ACCOUNT` con las credenciales de la cuenta de servicio de Firebase, necesarias para autenticar el despliegue desde GitHub Actions.
-7. Crear el archivo `.github/workflows/deploy-frontend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Node.js con la versión requerida, instalación de dependencias con `npm install`, generación del build de producción con `ng build --configuration production` y despliegue en Firebase Hosting usando la acción oficial `FirebaseExtended/action-hosting-deploy`.
-8. Validar el despliegue accediendo a `https://app.entreprenly.online` y verificando que la navegación entre vistas de Angular funciona correctamente sin errores 404 al refrescar el navegador.
+7. Crear el archivo `.github/workflows/deploy-frontend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Node.js con la versión requerida, instalación de dependencias con `npm install`, generación del build de producción con `npm run build` y despliegue en Firebase Hosting usando la acción oficial `FirebaseExtended/action-hosting-deploy`.
+8. Validar el despliegue accediendo a `https://app.entreprenly.online` y verificando que la navegación entre vistas de Vue Router funciona correctamente sin errores 404 al refrescar el navegador.
 
 #### RESTful Web Services
 
-El Backend de Entreprenly está desarrollado con **Spring Boot** y se despliega sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[api.entreprenly.online](https://api.entreprenly.online)**. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se conecta de forma segura a la VM mediante SSH para ejecutar el proceso de actualización del servicio.
+El Backend de Entreprenly está desarrollado con **ASP.NET Core** en C# y se despliega sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[api.entreprenly.online](https://api.entreprenly.online)**. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se conecta de forma segura a la VM mediante SSH para ejecutar el proceso de actualización del servicio.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
 1. En la consola de GCP, crear una instancia de **Compute Engine** con las siguientes características mínimas recomendadas: sistema operativo Ubuntu 24.04 LTS, tipo de máquina `e2-medium`, disco de arranque de 50 GB y dirección IP externa estática asignada.
-2. En la instancia, instalar **Java 17 (JDK)**:
+2. En la instancia, instalar el **SDK de .NET 8**:
    ```bash
    sudo apt update
-   sudo apt install -y openjdk-17-jdk
+   sudo apt install -y dotnet-sdk-8.0
    ```
-3. Configurar el servicio de Spring Boot como un servicio del sistema operativo con `systemd`, creando el archivo `/etc/systemd/system/entreprenly.service`, para garantizar su reinicio automático ante fallos o reinicios de la VM.
+3. Configurar el servicio de ASP.NET Core como un servicio del sistema operativo con `systemd`, creando el archivo `/etc/systemd/system/entreprenly.service`, para garantizar su reinicio automático ante fallos o reinicios de la VM.
 4. En el proveedor de DNS del dominio, crear un registro `A` que apunte `api.entreprenly.online` a la IP externa estática de la instancia de GCP.
-5. Instalar **Nginx** y **Certbot** en la VM para habilitar HTTPS mediante un certificado SSL gratuito de Let's Encrypt, configurando Nginx como proxy inverso que redirige el tráfico del puerto 443 al puerto `8080` donde escucha Spring Boot:
+5. Instalar **Nginx** y **Certbot** en la VM para habilitar HTTPS mediante un certificado SSL gratuito de Let's Encrypt, configurando Nginx como proxy inverso que redirige el tráfico del puerto 443 al puerto `5000` donde escucha ASP.NET Core:
    ```bash
    sudo apt install -y nginx certbot python3-certbot-nginx
    sudo certbot --nginx -d api.entreprenly.online
    ```
-6. En el repositorio de Web Services (`Kauflink/daop-entreprenly-web-services`), configurar los siguientes **GitHub Secrets**:
+6. En el repositorio de Web Services (`Kauflink/ap-entreprenly-web-services`), configurar los siguientes **GitHub Secrets**:
    - `GCP_VM_HOST`: dirección IP externa estática de la instancia.
    - `GCP_VM_USER`: nombre de usuario de la instancia.
    - `GCP_VM_SSH_KEY`: clave SSH privada para autenticación sin contraseña.
-7. Crear el archivo `.github/workflows/deploy-backend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Java 17, generación del artefacto ejecutable con `./mvnw clean package -DskipTests`, transferencia del archivo `.jar` a la VM mediante `scp` y reinicio del servicio en la VM mediante `ssh` con los comandos `sudo systemctl stop entreprenly`, copia del nuevo `.jar` y `sudo systemctl start entreprenly`.
-8. Configurar las **reglas de firewall** en GCP para exponer únicamente los puertos `80` y `443` al tráfico externo, manteniendo el puerto `8080` de Spring Boot restringido al acceso local de Nginx.
-9. Documentar los endpoints del API desplegado mediante **Swagger UI**, accesible en la ruta `https://api.entreprenly.online/swagger-ui/index.html`, y registrar la URL base del API como variable de entorno en el proyecto del Frontend Web Application para su integración.
+7. Crear el archivo `.github/workflows/deploy-backend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de .NET 8, generación del artefacto ejecutable con `dotnet publish -c Release -o ./publish`, transferencia de los archivos publicados a la VM mediante `scp` y reinicio del servicio en la VM mediante `ssh` con los comandos `sudo systemctl stop entreprenly`, copia de los nuevos archivos y `sudo systemctl start entreprenly`.
+8. Configurar las **reglas de firewall** en GCP para exponer únicamente los puertos `80` y `443` al tráfico externo, manteniendo el puerto `5000` de ASP.NET Core restringido al acceso local de Nginx.
+9. Documentar los endpoints del API desplegado mediante **Swagger UI**, accesible en la ruta `https://api.entreprenly.online/swagger/index.html`, y registrar la URL base del API como variable de entorno en el proyecto del Frontend Web Application para su integración.
 10. Validar el despliegue realizando una solicitud de prueba a un endpoint del API desde Swagger UI o desde Postman, confirmando que el servicio responde correctamente sobre HTTPS.
 
 ## 5.2. Landing Page, Services & Applications Implementation
