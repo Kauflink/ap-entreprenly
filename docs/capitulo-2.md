@@ -13,51 +13,166 @@ El objetivo es diseñar una solución que resuelva el "caos multicanal" en peque
 
 ##### Competidores
 
-|             |Entreprenly | Odoo | Lightspeed Retail |
-|-------|------|----------|-------|
-| |<img src="images/entrepenly-icon-dark.png" width="200"> | <img src="images/Odoo.png" width="200"> | <img src="images/LightSpeedRetail.png" width="200"> |
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Entreprenly</th>
+      <th>Odoo</th>
+      <th>Lightspeed Retail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="images/entrepenly-icon-dark.png" width="200"></td>
+      <td><img src="images/Odoo.png" width="200"></td>
+      <td><img src="images/LightSpeedRetail.png" width="200"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ---
 
 ##### Perfil
 
 ##### Overview 
-|             Entreprenly | Odoo | Lightspeed Retail |
-|-------------|----------|-------|
-|Plataforma web que centraliza pedidos de distintos canales de venta (WhatsApp + presencial) y automatiza el inventario en tiempo real mediante lógica digital y validación física con una balanza inteligente (IoT), permitiendo contrastar el stock registrado con el peso real disponible y detectar inconsistencias.|Sistema ERP integral que permite gestionar operaciones empresariales como ventas, inventario, contabilidad y CRM en múltiples sectores.|Sistema de punto de venta basado en la nube que permite gestionar ventas físicas, inventario y reportes en tiempo real para comercios minoristas.                         
+
+<table>
+  <thead>
+    <tr>
+      <th>Entreprenly</th>
+      <th>Odoo</th>
+      <th>Lightspeed Retail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Plataforma web que centraliza pedidos de distintos canales de venta (WhatsApp + presencial) y automatiza el inventario en tiempo real mediante lógica digital y validación física con una balanza inteligente (IoT), permitiendo contrastar el stock registrado con el peso real disponible y detectar inconsistencias.</td>
+      <td>Sistema ERP integral que permite gestionar operaciones empresariales como ventas, inventario, contabilidad y CRM en múltiples sectores.</td>
+      <td>Sistema de punto de venta basado en la nube que permite gestionar ventas físicas, inventario y reportes en tiempo real para comercios minoristas.</td>
+    </tr>
+  </tbody>
+</table>                       
 
 ---
 
 ##### ¿Qué valor ofrece a los clientes? 
-|             Entreprenly | Odoo | Lightspeed Retail |
-|-----|------------------|-------|
-| Elimina el caos multicanal unificando pedidos de WhatsApp y ventas presenciales, reduce pérdidas por desconocimiento de stock y errores humanos mediante validación automática con una balanza inteligente (IoT), garantizando consistencia entre el inventario digital y el físico en todo momento. | Ofrece control total del negocio mediante integración de múltiples módulos empresariales, mejorando la planificación y gestión a escala.|Permite agilizar ventas en tienda física, mejorar el control de inventario y generar reportes comerciales de forma rápida.
+<table>
+  <thead>
+    <tr>
+      <th>Entreprenly</th>
+      <th>Odoo</th>
+      <th>Lightspeed Retail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Elimina el caos multicanal unificando pedidos de WhatsApp y ventas presenciales, reduce pérdidas por desconocimiento de stock y errores humanos mediante validación automática con una balanza inteligente (IoT), garantizando consistencia entre el inventario digital y el físico en todo momento.</td>
+      <td>Ofrece control total del negocio mediante integración de múltiples módulos empresariales, mejorando la planificación y gestión a escala.</td>
+      <td>Permite agilizar ventas en tienda física, mejorar el control de inventario y generar reportes comerciales de forma rápida.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ##### Perfil de marketing 
-|             |Entreprenly | Odoo | Lightspeed Retail |
-|-------------|------------|----------|-------|
-|Mercado objetivo | Pequeños negocios de alimentos frescos: fruterías, minimarkets, dark stores y verdulerías con alta rotación de productos perecederos.|Empresas de todos los tamaños que buscan digitalizar su gestión integral de operaciones.|Comercios minoristas de cualquier rubro que requieren optimizar ventas en tienda física.
-|Estrategias de marketing/Ventaja competitiva/¿Qué valor ofrece a los clientes?  |Simplicidad de adopción, centralización multicanal y gestión automatizada de stock, con un modelo de costos accesible para microempresas.|Modularidad y escalabilidad empresarial con amplio ecosistema de integraciones.|Facilidad de uso y rapidez en procesos de venta en punto de venta físico.
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Entreprenly</th>
+      <th>Odoo</th>
+      <th>Lightspeed Retail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mercado objetivo</td>
+      <td>Pequeños negocios de alimentos frescos: fruterías, minimarkets, dark stores y verdulerías con alta rotación de productos perecederos.</td>
+      <td>Empresas de todos los tamaños que buscan digitalizar su gestión integral de operaciones.</td>
+      <td>Comercios minoristas de cualquier rubro que requieren optimizar ventas en tienda física.</td>
+    </tr>
+    <tr>
+      <td>Estrategias de marketing / Ventaja competitiva / ¿Qué valor ofrece a los clientes?</td>
+      <td>Simplicidad de adopción, centralización multicanal y gestión automatizada de stock, con un modelo de costos accesible para microempresas.</td>
+      <td>Modularidad y escalabilidad empresarial con amplio ecosistema de integraciones.</td>
+      <td>Facilidad de uso y rapidez en procesos de venta en punto de venta físico.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ##### Perfil de producto 
-|             |Entreprenly | Odoo | Lightspeed Retail |
-|-------------|------------|----------|-------|
-|Productos & servicios| Dashboard tipo POS con módulo de inventario inteligente: centraliza pedidos de WhatsApp y ventas presenciales, controla stock en tiempo real y se integra con una balanza inteligente (IoT) que permite calcular el stock de productos por peso y validar automáticamente el inventario físico comparando el peso real con el esperado. El sistema gestiona productos bajo dos tipos: productos unitarios con precio fijo y productos por peso con precio por kilogramo, donde el stock se representa como el peso total disponible. Además, incorpora gestión por lotes para registrar fechas de caducidad y mejorar la trazabilidad de productos perecederos.|Suite de aplicaciones empresariales: ventas, inventario, contabilidad, CRM, recursos humanos y más, integrables por módulos.|Sistema POS con gestión de ventas, control de inventario, reportes comerciales y soporte para múltiples tiendas físicas.
-|Canales de distribución |Plataforma web accesible desde cualquier dispositivo con actualización de datos en tiempo real.|Plataforma web modular, aplicaciones móviles y herramientas empresariales integradas.|Aplicación web y dispositivos POS físicos conectados a la nube.
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Entreprenly</th>
+      <th>Odoo</th>
+      <th>Lightspeed Retail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Productos &amp; servicios</td>
+      <td>Dashboard tipo POS con módulo de inventario inteligente: centraliza pedidos de WhatsApp y ventas presenciales, controla stock en tiempo real y se integra con una balanza inteligente (IoT) que permite calcular el stock de productos por peso y validar automáticamente el inventario físico comparando el peso real con el esperado. El sistema gestiona productos bajo dos tipos: productos unitarios con precio fijo y productos por peso con precio por kilogramo, donde el stock se representa como el peso total disponible. Además, incorpora gestión por lotes para registrar fechas de caducidad y mejorar la trazabilidad de productos perecederos.</td>
+      <td>Suite de aplicaciones empresariales: ventas, inventario, contabilidad, CRM, recursos humanos y más, integrables por módulos.</td>
+      <td>Sistema POS con gestión de ventas, control de inventario, reportes comerciales y soporte para múltiples tiendas físicas.</td>
+    </tr>
+    <tr>
+      <td>Canales de distribución</td>
+      <td>Plataforma web accesible desde cualquier dispositivo con actualización de datos en tiempo real.</td>
+      <td>Plataforma web modular, aplicaciones móviles y herramientas empresariales integradas.</td>
+      <td>Aplicación web y dispositivos POS físicos conectados a la nube.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ##### Análisis SWOT
-|             |Entreprenly | Odoo | Lightspeed Retail |
-|-------------|------------|----------|-------|
-|Fortalezas|Centralización multicanal (WhatsApp + presencial), enfoque en productos perecederos, modelo de costos accesible e integración con una balanza inteligente (IoT) que permite validar el inventario físico en tiempo real.|Sistema robusto, completo y altamente escalable con gran ecosistema de módulos y comunidad activa.|Facilidad de uso, agilidad en procesos de venta y control de inventario en punto de venta físico.|
-|Debilidades| Menor posicionamiento de marca frente a soluciones consolidadas y dependencia de correcta calibración de la balanza para asegurar precisión.|Elevada complejidad de implementación y costos altos para pequeños negocios; requiere consultoría especializada.|Limitado a ventas presenciales; sin automatización avanzada de inventario ni integración nativa de canales digitales como WhatsApp.|
-|Oportunidades|Creciente digitalización de mercados tradicionales en el Perú y accesibilidad de dispositivos IoT de bajo costo como balanzas inteligentes aplicadas al retail.|Expansión en mercados emergentes y demanda de digitalización empresarial a gran escala.|Adopción creciente de sistemas POS en el sector retail y apertura de nuevos locales físicos.
-|Amenazas|Costo inicial de implementación de una balanza inteligente (IoT) y resistencia al cambio tecnológico en pequeños comerciantes.|Nuevas soluciones más ligeras y accesibles dirigidas a pequeñas empresas.|Evolución hacia sistemas más integrados.|
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Entreprenly</th>
+      <th>Odoo</th>
+      <th>Lightspeed Retail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fortalezas</td>
+      <td>Centralización multicanal (WhatsApp + presencial), enfoque en productos perecederos, modelo de costos accesible e integración con una balanza inteligente (IoT) que permite validar el inventario físico en tiempo real.</td>
+      <td>Sistema robusto, completo y altamente escalable con gran ecosistema de módulos y comunidad activa.</td>
+      <td>Facilidad de uso, agilidad en procesos de venta y control de inventario en punto de venta físico.</td>
+    </tr>
+    <tr>
+      <td>Debilidades</td>
+      <td>Menor posicionamiento de marca frente a soluciones consolidadas y dependencia de correcta calibración de la balanza para asegurar precisión.</td>
+      <td>Elevada complejidad de implementación y costos altos para pequeños negocios; requiere consultoría especializada.</td>
+      <td>Limitado a ventas presenciales; sin automatización avanzada de inventario ni integración nativa de canales digitales como WhatsApp.</td>
+    </tr>
+    <tr>
+      <td>Oportunidades</td>
+      <td>Creciente digitalización de mercados tradicionales en el Perú y accesibilidad de dispositivos IoT de bajo costo como balanzas inteligentes aplicadas al retail.</td>
+      <td>Expansión en mercados emergentes y demanda de digitalización empresarial a gran escala.</td>
+      <td>Adopción creciente de sistemas POS en el sector retail y apertura de nuevos locales físicos.</td>
+    </tr>
+    <tr>
+      <td>Amenazas</td>
+      <td>Costo inicial de implementación de una balanza inteligente (IoT) y resistencia al cambio tecnológico en pequeños comerciantes.</td>
+      <td>Nuevas soluciones más ligeras y accesibles dirigidas a pequeñas empresas.</td>
+      <td>Evolución hacia sistemas más integrados.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -90,9 +205,9 @@ Entreprenly valida el inventario digital mediante una balanza inteligente conect
 
 - Uso de canales de comunicación comunes para facilitar adopción.
 
-#### Tácticas: 
-
 ---
+
+#### Tácticas: 
 
 #### Lanzamiento de Productos Innovadores: 
 - Implementación inicial con balanza inteligente conectada al sistema.
@@ -767,8 +882,219 @@ La principal coincidencia entre ambos segmentos es que los dos otorgan alta impo
 
 ## 2.4. Big Picture Event Storming
 
-*Contenido por agregar.*
+El Big Picture Event Storming es una técnica de modelado colaborativo creada por Alberto Brandolini que permite a un equipo explorar y comprender el dominio de un negocio en pocas horas. A diferencia de las sesiones de análisis tradicionales, esta técnica se centra en identificar los Domain Events más significativos del negocio —es decir, los hechos relevantes que ocurren en el dominio— y organizarlos cronológicamente para construir una visión compartida del landscape del negocio. No se busca un diseño técnico detallado, sino una comprensión de alto nivel que exponga procesos clave, actores, sistemas externos y potenciales problemas u oportunidades.
+El equipo Kauflink realizó una sesión colaborativa de Big Picture Event Storming sobre el dominio de Entreprenly, la plataforma de gestión operativa para minimarkets, bodegas y puestos de mercado. El objetivo fue modelar el ciclo de vida completo de la operación diaria de un comercio minorista de alimentos frescos: desde la configuración de productos hasta el cierre financiero del turno. La sesión fue guiada siguiendo el Step-by-Step Guide disponible en https://bit.ly/bpes-guide, y se utilizó Miro como herramienta de tablero digital colaborativo.
+
+**Proceso realizado por el equipo**
+
+A continuación se describe cada una de las etapas realizadas durante la sesión de Big Picture Event Storming, acompañadas de las capturas del tablero en Miro correspondientes a cada fase.
+
+
+**Paso 1: Preparación del espacio de trabajo**
+
+Antes de iniciar la sesión, el equipo preparó el tablero de Miro con el espacio de diseño necesario: un área de trabajo infinita con la leyenda de colores de sticky notes visible para todos los participantes, y una agenda visual de los pasos a seguir fijada en el lateral del tablero.
+
+Se definieron los colores de cada tipo de elemento según la convención del método:
+
+<div align="center">
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td font-weight:bold; text-align:center;">Domain Event</td>
+      <td>Hecho relevante que ocurrió en el dominio del negocio. Se redacta en tiempo pasado.</td>
+    </tr>
+    <tr>
+      <td font-weight:bold; text-align:center;">Actor</td>
+      <td>Persona con un rol específico que desencadena o participa en un evento del dominio.</td>
+    </tr>
+    <tr>
+      <td font-weight:bold; text-align:center;">External System</td>
+      <td>Sistema externo que interactúa con la plataforma, enviando o recibiendo información.</td>
+    </tr>
+    <tr>
+      <td font-weight:bold; text-align:center;">Hot Spot</td>
+      <td>Área de incertidumbre, conflicto o riesgo que requiere atención o resolución posterior.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+En esta primera etapa, cada miembro propuso de forma individual los eventos de dominio relevantes para el sistema, redactándolos en tiempo pasado y representándolos con post-its de color naranja. Se buscó cubrir los flujos del comerciante y del cliente final sin filtrar ni debatir, generando el mayor volumen posible de eventos. Los eventos identificados abarcaron los procesos de registro de productos, control de inventario por peso (IoT), ventas presenciales, pedidos por WhatsApp, conciliación de caja y gestión de alertas operativas.
+
+<div align="center">
+  <img src="./images/paso1.png" alt="Paso 1" width="800">
+</div>
+
+---
+
+**Paso 2: Energizante colaborativo**
+
+Para activar la participación y romper la dinámica habitual de reuniones, el equipo inició la sesión con una dinámica colaborativa breve. Dado que la sesión fue realizada de forma remota, se utilizó la dinámica de Collaborative Word Storm: cada participante escribió libremente en el tablero de Miro los primeros términos o situaciones del negocio que le venían a la mente al pensar en un comerciante de barrio peruano gestionando su negocio. Esto preparó a todos los integrantes para la fase de generación de eventos.
+
+**Paso 3: Presentación del objetivo y alcance**
+
+El equipo definió y comunicó a todos los participantes el objetivo, el alcance y los casos de uso que guiarían la sesión
+
+- **Objetivo:** Obtener una visión de alto nivel del dominio de negocio de Entreprenly, identificando los eventos más relevantes del ciclo de vida operativo de un minimarket o puesto de mercado.
+
+- **Alcance:** La operación diaria completa de un comercio minorista de alimentos frescos, desde la apertura del turno hasta el cierre de caja, incluyendo los canales de venta presencial y por WhatsApp, y la integración con balanzas inteligentes (IoT).
+
+- Casos de uso principales a explorar:
+  - Gestión de inventario de productos perecederos
+  - Registro de ventas presenciales con conciliación de pagos
+  - Atención de pedidos por WhatsApp con validación de stock
+  - Detección de descuadres entre stock físico y digital 
+
+Para arrancar la sesión, el facilitador colocó el primer Domain Event en el tablero como ejemplo: *Lote registrado*
+
+<div align="center">
+  <img src="./images/paso3.png" alt="Paso 3" width="800">
+</div>
+
+---
+
+**Paso 4: Generación de Domain Events**
+
+En esta fase, cada integrante del equipo generó de forma libre e independiente todos los Domain Events que consideró relevantes para el dominio de Entreprenly. Los eventos se redactaron en tiempo pasado y en inglés, siguiendo la convención del Ubiquitous Language del proyecto. No hubo restricciones ni orden; la idea fue plasmar el mayor número posible de eventos significativos del negocio.
+
+La fase duró aproximadamente 20 minutos, hasta que el ritmo de generación de nuevos eventos disminuyó notablemente.
+
+<div align="center">
+  <img src="./images/paso4.svg" alt="Paso 4" width="800">
+</div>
+
+---
+
+**Paso 5: Ordenamiento cronológico de Domain Events**
+
+Una vez generados todos los eventos, el equipo procedió a organizarlos cronológicamente de izquierda a derecha en el tablero, representando el flujo temporal de la operación del negocio. Esta etapa fue la más rica en discusión, ya que los distintos puntos de vista de los integrantes afloraron al intentar acordar el orden y la relación entre eventos.
+
+<div align="center">
+  <img src="./images/Entreprenly_Phase2.svg" alt="Entreprenly Fase 2" width="800">
+</div>
+
+---
+
+**Paso 6: Incorporación de Actores y Sistemas externos**
+
+Con los eventos ya ordenados, el equipo identificó y colocó los Actores (personas con un rol específico) y los Sistemas externos que desencadenan o responden a los eventos del dominio.
+
+<div align="center">
+  <img src="./images/gestion_inventario.svg" alt="proceso_de_suscripcion" width="800">
+
+  <img src="./images/pagos.svg" alt="configuracion_de_suscripcion" width="800">
+
+  <img src="./images/ventas.svg" alt="venta" width="800">
+
+  <img src="./images/perfil_configuracion.svg" alt="gestion_de_inventario" width="800">
+
+  <img src="./images/chatbot_whatsApp.svg" alt="perfil_configuracion" width="800">
+
+  <img src="./images/generación_autenticación_cuenta.svg" alt="chatbot" width="800">
+
+  <img src="./images/gestión_proceso_suscripción.svg" alt="inicion_sesion" width="800">
+</div>
+
+Como resultado de la sesión, el equipo consolidó una visión compartida del dominio operativo de Entreprenly, identificando siete flujos principales: inicio de sesión, proceso de suscripción, configuración de suscripción, venta presencial, gestión de inventario, chatbot de pedidos por WhatsApp y gestión de perfil y configuración. Esta base sirvió como punto de partida para la definición del Ubiquitous Language y el posterior Design-Level Event Storming.
 
 ## 2.5. Ubiquitous Language
 
-*Contenido por agregar.*
+A continuación se presenta el glosario de términos y conceptos del dominio de negocio de Entreprenly. Estos términos han sido definidos de forma clara y sin ambigüedad, con el objetivo de que todos los miembros del equipo y stakeholders compartan un lenguaje común durante el ciclo de vida del proyecto. Los términos se presentan en inglés, idioma base del dominio, acompañados de su definición en español.
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr color: white;">
+      <th style="width: 25%;">Término (EN)</th>
+      <th>Definición</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Merchant</strong></td>
+      <td>Dueño o administrador de un minimarket, bodega o puesto de mercado que gestiona su operación a través de Entreprenly.</td>
+    </tr>
+    <tr>
+      <td><strong>Customer</strong></td>
+      <td>Cliente final que realiza pedidos a través del canal de WhatsApp.</td>
+    </tr>
+    <tr>
+      <td><strong>Product</strong></td>
+      <td>Artículo registrado en el sistema con nombre, precio y categoría. Puede ser de tipo unitario o vendido por peso.</td>
+    </tr>
+    <tr>
+      <td><strong>Unit Product</strong></td>
+      <td>Producto cuyo stock se mide en unidades individuales y tiene un precio fijo por unidad.</td>
+    </tr>
+    <tr>
+      <td><strong>Weight Product</strong></td>
+      <td>Producto cuyo stock se representa como el peso total disponible en kilogramos y tiene un precio por kilogramo.</td>
+    </tr>
+    <tr>
+      <td><strong>Stock</strong></td>
+      <td>Cantidad disponible de un producto en el local, expresada en unidades o kilogramos según el tipo de producto.</td>
+    </tr>
+    <tr>
+      <td><strong>Batch</strong></td>
+      <td>Lote de un producto registrado con fecha de caducidad, utilizado para el control y trazabilidad de productos perecederos.</td>
+    </tr>
+    <tr>
+      <td><strong>Scale Reading</strong></td>
+      <td>Lectura enviada por la balanza inteligente que indica el peso actual de un producto en el estante en tiempo real.</td>
+    </tr>
+    <tr>
+      <td><strong>Stock Discrepancy</strong></td>
+      <td>Diferencia detectada entre el stock registrado en el sistema y el peso real reportado por la balanza inteligente.</td>
+    </tr>
+    <tr>
+      <td><strong>Sale</strong></td>
+      <td>Transacción registrada por la venta de uno o más productos a un cliente, ya sea de forma presencial o a través del chatbot de WhatsApp.</td>
+    </tr>
+    <tr>
+      <td><strong>Cash Register</strong></td>
+      <td>Registro digital de los ingresos en efectivo acumulados durante un turno de trabajo del comerciante.</td>
+    </tr>
+    <tr>
+      <td><strong>Shift</strong></td>
+      <td>Período de trabajo del comerciante durante el cual se registran ventas y al final del cual se realiza el cierre y conciliación de caja.</td>
+    </tr>
+    <tr>
+      <td><strong>Order</strong></td>
+      <td>Pedido realizado por un cliente a través del chatbot de WhatsApp, con los productos y cantidades especificadas.</td>
+    </tr>
+    <tr>
+      <td><strong>Alert</strong></td>
+      <td>Notificación generada automáticamente por el sistema ante situaciones críticas como stock bajo o descuadre detectado entre inventario físico y digital.</td>
+    </tr>
+    <tr>
+      <td><strong>Subscription</strong></td>
+      <td>Plan contratado por el comerciante para acceder a las funcionalidades de la plataforma Entreprenly.</td>
+    </tr>
+    <tr>
+      <td><strong>Smart Scale</strong></td>
+      <td>Balanza inteligente conectada al sistema que envía lecturas de peso en tiempo real para validar el stock físico disponible en el estante.</td>
+    </tr>
+    <tr>
+      <td><strong>Inventory Sync</strong></td>
+      <td>Proceso de conciliación entre el stock registrado digitalmente en el sistema y el peso real detectado por la balanza inteligente.</td>
+    </tr>
+    <tr>
+      <td><strong>Chatbot</strong></td>
+      <td>Asistente conversacional integrado en WhatsApp que permite a los clientes realizar pedidos, consultar disponibilidad de productos y recibir confirmaciones de compra de forma automatizada.</td>
+    </tr>
+    <tr>
+      <td><strong>Perishable Product</strong></td>
+      <td>Producto con fecha de caducidad definida que requiere control especial de rotación y merma para evitar pérdidas económicas.</td>
+    </tr>
+    <tr>
+      <td><strong>Shrinkage</strong></td>
+      <td>Pérdida de producto no registrada como venta, que puede deberse a merma, deterioro, error de pesaje o retiro no autorizado.</td>
+    </tr>
+  </tbody>
+</table>

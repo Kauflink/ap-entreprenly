@@ -22,4 +22,8 @@
 
   <p style="padding-left:2em; text-indent:-2em;">Zhao, P. (2024). Challenges and solutions of fresh retail supply chain: A case study of Wal-Mart. <em>Frontiers in Business, Economics and Management</em>, <em>14</em>(3), 165–168. https://doi.org/10.54097/0e0ezb98</p>
 
+  <p style="padding-left:2em; text-indent:-2em;">Google. (s.f.-a). <em>Google HTML/CSS style guide</em>. https://google.github.io/styleguide/htmlcssguide.html</p>
+
+  <p style="padding-left:2em; text-indent:-2em;">SpecFlow. (s.f.). <em>Gherkin conventions for readable specifications</em>. https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/</p>
+
 </div>
