@@ -318,8 +318,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 6:35
-      </td>
+        <strong>Duración:</strong> 8:17 - 15:03     </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
       </td>
@@ -387,7 +386,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 6:35
+        <strong>Duración:</strong> 0:00 - 8:17 
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
@@ -455,7 +454,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 6:35
+        <strong>Duración:</strong> 15:03 - 19:34
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Lugar de Residencia:</strong> Magdalena del Mar, Lima
@@ -527,7 +526,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 6:35
+        <strong>Duración:</strong> 19:34 - 24:17
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Lugar de Residencia:</strong> San Martín de Porres
@@ -595,7 +594,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 6:35
+        <strong>Duración:</strong> 24:18 -29:46
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Lugar de Residencia:</strong> San Martín de Porres, Lima
@@ -663,7 +662,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> 6:35
+        <strong>Duración:</strong> 29:46 -35:55
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Lugar de Residencia:</strong> an Martín de Porres, Lima
