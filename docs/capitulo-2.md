@@ -331,7 +331,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista:</strong>
-        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRASxvnnvZYEkl1aBnA9hn3FU?e=RaD2CE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" style="color: #1a6b6b;">Hercilio Carrasco Herrera-Entrevista</a>
       </td>
     </tr>
   </table>
@@ -400,7 +400,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista:</strong>
-        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRASxvnnvZYEkl1aBnA9hn3FU?e=pi2r7d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" style="color: #1a6b6b;">María Encarnación Velázquez-Entrevista</a>
       </td>
     </tr>
   </table>
@@ -468,7 +468,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista:</strong>
-        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRASxvnnvZYEkl1aBnA9hn3FU?e=pi2r7d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" style="color: #1a6b6b;">Luis Vargas-Entrevista</a>
       </td>
     </tr>
   </table>
@@ -540,7 +540,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista:</strong>
-        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRASxvnnvZYEkl1aBnA9hn3FU?e=pi2r7d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" style="color: #1a6b6b;">María López-Entrevista</a>
       </td>
     </tr>
   </table>
@@ -608,7 +608,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista:</strong>
-        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRASxvnnvZYEkl1aBnA9hn3FU?e=pi2r7d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" style="color: #1a6b6b;">Sebastián Curay-Entrevista</a>
       </td>
     </tr>
   </table>
@@ -676,7 +676,7 @@ Esta sección presenta el estudio cualitativo basado en entrevistas semiestructu
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista:</strong>
-        <a href="https://youtu.be/J-kTxRbFjtU" style="color: #1a6b6b;">https://youtu.be/J-kTxRbFjtU</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a972_upc_edu_pe/IQBA6K2q8EbuRLHJ6wHhv5MRASxvnnvZYEkl1aBnA9hn3FU?e=pi2r7d&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" style="color: #1a6b6b;">Rosmery Villa-Entrevista</a>
       </td>
     </tr>
   </table>
