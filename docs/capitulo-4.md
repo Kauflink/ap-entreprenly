@@ -1353,10 +1353,6 @@ Chatbot de WhatsApp
 
 Este Bounded Context permite la venta a través de un chatbot de WhatsApp. Para ello, consume información del inventario con el fin de conocer la disponibilidad de productos.
 
-Pagos
-<p align="center"> <img src="images/Entreprenly - Pagos.jpg" width="500"/> <img src="images/Canvas BC 4.jpg" width="500"/> </p>
-
-En este Bounded Context se gestionan los pagos tanto de ventas presenciales como de aquellas realizadas a través de WhatsApp.
 
 Ventas
 <p align="center"> <img src="images/Entreprenly - Ventas.jpg" width="500"/> <img src="images/Canvas BC 3.jpg" width="500"/> </p>
@@ -1377,7 +1373,6 @@ A continuación, se presentan los principales flujos de interacción del sistema
 
 <p align="center"><img src="images/Entreprenly - Flujo Gestion de inventario.jpg" width="500"/></p>
 
-<p align="center"><img src="images/Entreprenly - Flujo Pagos.jpg" width="500"/></p>
 
 <p align="center"><img src="images/Entreprenly - Flujo Gestion y Proceso de suscripcion.jpg" width="500"/></p>
 
@@ -1449,29 +1444,25 @@ Además, se integra con servicios externos de mensajería (WhatsApp API) y persi
 
 ### 4.7.1. Class Diagrams
 
-<p align="center">Shared BC</p>
-<p align="center"><img src="images/00_SharedBC.png" width="500"/></p>
-
 <p align="center">Generación y Autenticación de Cuenta BC</p>
-<p align="center"><img src="images/01_AuthBC.png" width="500"/></p>
+<p align="center"><img src="images/01_AuthBC.svg" width="500"/></p>
 
 <p align="center">Perfil y Configuración BC</p>
 <p align="center"><img src="images/02_ProfileBC.png" width="500"/></p>
 
 <p align="center">Gestión y Proceso de Suscripción BC</p>
-<p align="center"><img src="images/03_SubscriptionBC.png" width="500"/></p>
+<p align="center"><img src="images/03_SubscriptionBC.svg" width="500"/></p>
 
 <p align="center">Gestión de Inventario de Suscripción BC</p>
-<p align="center"><img src="images/04_InventoryBC.png" width="500"/></p>
+<p align="center"><img src="images/04_InventoryBC.svg" width="500"/></p>
 
-<p align="center">Pagos BC</p>
-<p align="center"><img src="images/06_PaymentBC.png" width="500"/></p>
+
 
 <p align="center">Ventas BC</p>
-<p align="center"><img src="images/05_SalesBC.png" width="500"/></p>
+<p align="center"><img src="images/05_SalesBC.svg" width="500"/></p>
 
 <p align="center">Chatbot de WhatsApp BC</p>
-<p align="center"><img src="images/07_ChatbotBC.png" width="500"/></p>
+<p align="center"><img src="images/07_ChatbotBC.svg" width="500"/></p>
 
 ## 4.8. Database Design
 
@@ -1493,47 +1484,147 @@ El chatbot de WhatsApp se integra mediante `ConexionesWhatsApp`, que persiste la
 
 <div align="center">
 
-![Database Diagram Entreprenly](images/Entreprendly_database_diagram.svg)
+![Database Diagram Entreprenly](images/Entreprenly_database_diagram.png)
 
 </div>
+## Organización del esquema de base de datos
 
 El esquema se organiza en las siguientes tablas por categoría:
 
-**Identidad y Acceso:**
+---
 
-- `Comerciantes` (datos de acceso y rol).
-- `PreferenciasComercio` (idioma, tema y notificaciones).
-- `SesionesActivas` (JWTs activos para revocación de sesiones).
-- `TokensVerificacion` (tokens de un solo uso para verificar email y recuperar contraseña).
-- `Clientes` (datos para boletas).
+**Inventario**
 
-**Suscripciones:**
+- `inventory_unit_products`  
+  Catálogo de productos vendidos por unidad, incluyendo precio, peso en gramos, marca y código QR único.
 
-- `Suscripciones` (plan y ciclo de vida: pendiente → activa → cancelada → vencida).
-- `BoletoSuscripcion` (datos del cobro, guarda solo los últimos 4 dígitos de la tarjeta por seguridad).
+- `inventory_weight_products`  
+  Catálogo de productos vendidos por peso, almacenando el precio por kilogramo y código QR.
 
-**Inventario:**
+- `inventory_lots`  
+  Tabla general de trazabilidad de lotes con fecha de ingreso y tipo de lote (`unit` o `weight`).
 
-- `Categorias` (tabla de referencia normalizada).
-- `Productos` (catálogo con tipo unidad o peso, precio y stock).
-- `Lotes` (trazabilidad por fecha de vencimiento para productos perecederos).
+- `inventory_unit_lots`  
+  Lotes específicos de productos unitarios con cantidad disponible y fecha de vencimiento.
 
-**Ventas e IoT:**
+- `inventory_weight_lots`  
+  Lotes de productos vendidos al peso con cantidad disponible en kilogramos.
 
-- `LecturasBalanza` (pesajes con snapshot histórico de precio).
-- `Ventas` (encabezado de transacción presencial).
-- `DetalleVenta` (líneas de cada venta).
-- `ResumenDiario` (cierre de caja con total_general calculado automáticamente).
+- `inventory_stock_alerts`  
+  Registro de alertas de inventario como productos vencidos, próximos a vencer, bajo stock o sin stock.
 
-**Chatbot WhatsApp:**
+---
 
-- `ConexionesWhatsApp` (sesión delnúmero vinculado por QR, relación 1:1 con el comerciante).
-- `Conversaciones` (historial de mensajes entre bot, cliente y comerciante).
+**Ventas**
 
-**Pedidos y Pagos:**
+- `sales`  
+  Encabezado de ventas presenciales, incluyendo método de pago, estado de la venta, total y timestamps.
 
-- `Pedidos` (ciclo pendiente → esperando_pago → confirmado → completado).
-- `DetallePedido` (líneas del pedido).
-- `Pagos` (validación manual del comprobante Yape/Plin, relación 1:1 con el pedido).
+- `sale_items`  
+  Detalle de productos vendidos en cada transacción con snapshot del nombre, cantidad, peso y subtotal.
 
-La normalización aplicada se resume en tres puntos. La **1FN** se cumple con valores atómicos en todas las columnas usando ENUM para campos de valores controlados. La **2FN** se cumple con claves primarias simples en todas las tablas. La **3FN** se evidencia en la separación de `PreferenciasComercio`, `BoletoSuscripcion` y `Categorias` para eliminar dependencias transitivas, la eliminación del campo `subtotal` en los detalles por ser valor derivado, y la separación de `Clientes` y `Comerciantes` por pertenecer a entidades de negocio distintas.
+- `cash_registers`  
+  Resumen diario de caja con totales en efectivo, pagos digitales y cantidad de ventas realizadas.
+
+---
+
+ **IoT**
+
+- `iot_scale`  
+  Registro de conexión de la balanza IoT utilizada para productos vendidos por peso.
+
+---
+ **Suscripciones**
+
+- `subscription_dashboard`  
+  Información principal del plan actual y plan recomendado para el comerciante, incluyendo precios, estado y periodo de facturación.
+
+- `subscription_plan_features`  
+  Características habilitadas para cada plan asociado al dashboard de suscripciones.
+
+- `subscription_plan_limits`  
+  Límites de uso del plan, como consumo actual y capacidad máxima permitida.
+
+- `subscription_billing_setup`  
+  Configuración de facturación y datos fiscales asociados al comerciante.
+
+- `subscription_payment_methods`  
+  Métodos de pago registrados para suscripciones, incluyendo marca de tarjeta y últimos cuatro dígitos.
+
+- `subscription_activity`  
+  Historial de actividades y eventos relacionados con la suscripción.
+
+---
+
+**Perfil y Configuración**
+
+- `profile_user`  
+  Información básica del usuario administrador, incluyendo nombre, rol y plan contratado.
+
+- `profile_preferences`  
+  Preferencias del usuario como idioma, zona horaria, tema visual y moneda.
+
+- `profile_notification_settings`  
+  Configuración de notificaciones relacionadas con stock, pagos y mensajes del chatbot.
+
+---
+
+**WhatsApp y Chatbot**
+
+- `whatsapp_sessions`  
+  Sesiones activas de WhatsApp vinculadas al negocio mediante QR.
+
+- `conversations`  
+  Conversaciones generadas entre clientes y el chatbot, con estado y timestamps.
+
+- `chat_messages`  
+  Mensajes enviados dentro de cada conversación, incluyendo texto e imágenes.
+
+---
+
+**Pedidos Digitales**
+
+- `chat_orders`  
+  Gestión de pedidos realizados mediante WhatsApp, incluyendo dirección, método de pago, estado y control de rechazos.
+
+- `chat_order_items`  
+  Detalle de productos solicitados en cada pedido con snapshot de precio unitario.
+
+---
+
+**Relaciones principales**
+
+- Los productos (`inventory_unit_products` y `inventory_weight_products`) se relacionan con sus respectivos lotes mediante claves foráneas.
+- Las ventas (`sales`) se relacionan con `sale_items`.
+- Las conversaciones (`conversations`) se relacionan con mensajes (`chat_messages`) y pedidos (`chat_orders`.
+- Los pedidos (`chat_orders`) se relacionan con `chat_order_items`.
+- El dashboard de suscripciones (`subscription_dashboard`) centraliza relaciones con:
+  - `subscription_plan_features`
+  - `subscription_plan_limits`
+  - `subscription_billing_setup`
+  - `subscription_payment_methods`
+  - `subscription_activity`
+- El usuario (`profile_user`) se relaciona con:
+  - `profile_preferences`
+  - `profile_notification_settings`
+
+---
+
+**Normalización aplicada**
+
+La normalización aplicada se resume en tres puntos principales:
+
+- **Primera Forma Normal (1FN):**  
+  Se cumple mediante el uso de atributos atómicos y tipos controlados mediante `ENUM`, evitando listas o valores multivaluados en una misma columna.
+
+- **Segunda Forma Normal (2FN):**  
+  Se garantiza utilizando claves primarias simples y separando adecuadamente entidades independientes como productos, lotes, ventas, conversaciones y suscripciones.
+
+- **Tercera Forma Normal (3FN):**  
+  Se evidencia en la separación de configuraciones, preferencias, características de planes y actividades en tablas independientes, eliminando redundancia y dependencias transitivas.
+
+Además:
+
+- Los detalles de ventas y pedidos almacenan snapshots de información (`productName`, `unitPrice`, `subtotal`) para mantener consistencia histórica aunque cambie el catálogo de productos posteriormente.
+- Los totales almacenados en `sales`, `chat_orders` y `cash_registers` funcionan como registros contables históricos y no como datos derivados puramente calculables.
+- La separación entre productos unitarios y productos por peso evita valores nulos innecesarios y mejora la integridad del modelo de inventario.
