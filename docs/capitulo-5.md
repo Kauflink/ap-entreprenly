@@ -100,18 +100,28 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
       <td><a href="https://desktop.github.com/">https://desktop.github.com/</a></td>
     </tr>
     <tr>
-      <td><strong>Spring Boot / Java</strong></td>
-      <td>Framework y lenguaje principal para el desarrollo de los RESTful Web Services que conforman el Backend de la aplicación.</td>
-      <td><a href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a></td>
+      <td><strong>ASP.NET Core / C#</strong></td>
+      <td>Framework y lenguaje principal para el desarrollo de los RESTful Web Services que conforman el Backend de la aplicación, siguiendo la arquitectura, el estilo de codificación y la organización por bounded context del proyecto de referencia <strong>learning-center-platform</strong>.</td>
+      <td><a href="https://dotnet.microsoft.com/apps/aspnet">https://dotnet.microsoft.com/apps/aspnet</a></td>
     </tr>
     <tr>
-      <td><strong>Angular / TypeScript</strong></td>
-      <td>Framework y lenguaje utilizados para la construcción de la Frontend Web Application de la plataforma.</td>
-      <td><a href="https://angular.io/">https://angular.io/</a></td>
+      <td><strong>.NET SDK</strong></td>
+      <td>Kit de desarrollo requerido para compilar, ejecutar y publicar el proyecto de Web Services en C#, junto con Entity Framework Core para la capa de persistencia.</td>
+      <td><a href="https://dotnet.microsoft.com/download">https://dotnet.microsoft.com/download</a></td>
     </tr>
     <tr>
-      <td><strong>Node.js</strong></td>
-      <td>Entorno de ejecución JavaScript requerido para ejecutar Angular CLI y las herramientas de build y gestión de dependencias del Frontend.</td>
+      <td><strong>Vue 3 / JavaScript</strong></td>
+      <td>Framework y lenguaje utilizados para la construcción de la Frontend Web Application de la plataforma, empleando Single File Components y JavaScript como lenguaje de programación.</td>
+      <td><a href="https://vuejs.org/">https://vuejs.org/</a></td>
+    </tr>
+    <tr>
+      <td><strong>PrimeVue</strong></td>
+      <td>Biblioteca de componentes de UI para Vue basada en Material Design, utilizada para construir las vistas del dashboard de forma consistente con el Design System.</td>
+      <td><a href="https://primevue.org/">https://primevue.org/</a></td>
+    </tr>
+    <tr>
+      <td><strong>Node.js / Vite</strong></td>
+      <td>Entorno de ejecución JavaScript y herramienta de build requeridos para ejecutar el servidor de desarrollo de Vue, gestionar dependencias y generar el bundle de producción del Frontend.</td>
       <td><a href="https://nodejs.org/">https://nodejs.org/</a></td>
     </tr>
   </tbody>
@@ -173,9 +183,9 @@ Para la gestión del código fuente y el seguimiento de modificaciones, el equip
 
 | Producto                     | URL del Repositorio                                           |
 | :--------------------------- | :------------------------------------------------------------ |
-| **Landing Page**             | https://github.com/Kauflink/landing-entreprenly               |
-| **Web Services**             | https://github.com/Kauflink/daop-entreprenly-web-services     |
-| **Frontend Web Application** | https://github.com/Kauflink/daop-entreprenly-web-applications |
+| **Landing Page**             | https://github.com/Kauflink/ap-entreprenly-landing               |
+| **Web Services**             | https://github.com/Kauflink/ap-entreprenly-web-services     |
+| **Frontend Web Application** | https://github.com/Kauflink/ap-entreprenly-frontend |
 
 **Estrategia de Flujo de Trabajo: GitFlow**
 
@@ -239,7 +249,7 @@ Las convenciones aplicadas son las siguientes:
 - Todas las imágenes incluyen el atributo `alt` con una descripción significativa, como parte del enfoque de accesibilidad (a11y) del proyecto.
 - Se utiliza **indentación de 2 espacios** para mantener la legibilidad del árbol de elementos.
 - Los elementos de bloque se escriben en líneas separadas; los elementos en línea pueden mantenerse en una misma línea si el resultado es conciso.
-- Se evita el uso de estilos en línea (`style=""`); todo el estilo visual se delega a las hojas de estilo CSS externas o a las clases de Angular Material.
+- Se evita el uso de estilos en línea (`style=""`); todo el estilo visual se delega a las hojas de estilo CSS externas y a las clases de los componentes de PrimeVue.
 - Los comentarios se utilizan para delimitar secciones principales del documento: `<!-- Hero Section -->`.
 
 #### CSS
@@ -270,51 +280,39 @@ Las convenciones aplicadas son las siguientes:
 - El código se organiza en funciones con una única responsabilidad, evitando bloques de lógica demasiado extensos.
 - Se incluyen comentarios descriptivos en funciones no triviales, explicando el propósito y no el mecanismo.
 
-#### TypeScript
+#### Vue Framework
 
-Para el desarrollo del Frontend Web Application de Entreprenly con Angular, el equipo adopta la **Google TypeScript Style Guide** como referencia principal.
+Para el desarrollo del Frontend Web Application de Entreprenly con **Vue 3**, el equipo adopta la **Vue Style Guide** oficial como referencia principal para la organización y estructura de los Single File Components (SFC), complementada con la **Google JavaScript Style Guide** y las **MDN JavaScript guidelines** para el código de lógica.
 
 Las convenciones aplicadas son las siguientes:
 
-- Los nombres de **clases, interfaces y enumeraciones** se escriben en **PascalCase**: `UserProfile`, `AuthService`, `PaymentStatus`.
-- Los nombres de **variables, funciones y métodos** se escriben en **camelCase**: `isLoggedIn`, `fetchUserData()`.
+- Los componentes se desarrollan como **Single File Components** (`.vue`) empleando la **Composition API** con `<script setup>`.
+- Los nombres de **archivos de componentes** se escriben en **PascalCase**: `DashboardLayout.vue`, `ProductCard.vue`, `SubscriptionPanel.vue`.
+- Los nombres de **componentes con múltiples palabras** evitan colisiones con elementos HTML nativos, conforme a la Vue Style Guide (regla de prioridad esencial).
+- Las **props** se declaran con su tipo y, cuando aplica, con valores por defecto y la marca de obligatoriedad: `defineProps({ productId: { type: Number, required: true } })`.
+- El estado reactivo se gestiona con `ref` y `reactive`, y los valores derivados con `computed`, en lugar de mutaciones manuales del DOM.
+- Los nombres de **variables, funciones y métodos** se escriben en **camelCase**: `isLoggedIn`, `fetchProducts()`.
 - Los nombres de **constantes globales** se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
-- Los nombres de **archivos** de componentes, servicios y módulos de Angular siguen la convención **kebab-case** con sufijo descriptivo: `user-profile.component.ts`, `auth.service.ts`, `app-routing.module.ts`.
-- Se declaran **tipos explícitos** para todos los parámetros de funciones y valores de retorno; se evita el uso de `any`.
-- Se utilizan **interfaces** para describir la forma de los objetos del dominio: `interface Entrepreneur { id: number; name: string; }`.
-- Se prefiere el uso de **Observables** de RxJS sobre Promises para el manejo de operaciones asíncronas, coherente con el modelo reactivo de Angular.
-- Se habilita el modo estricto de TypeScript (`"strict": true`) en el `tsconfig.json` del proyecto.
-- Las importaciones se organizan en bloques separados: primero módulos de Angular, luego librerías de terceros y finalmente módulos internos del proyecto.
+- Las vistas y los componentes se organizan **por bounded context** (p. ej. `inventory/`, `sales/`, `subscription/`), evitando una estructura monolítica, y la navegación se resuelve con **Vue Router** mediante lazy-loading por BC.
+- Las operaciones asíncronas (consumo de la API) se manejan con `async/await` sobre `fetch`/`axios`, encapsuladas en servicios o composables reutilizables (`useProducts`, `useSubscription`).
+- La internacionalización (i18n) se gestiona con **vue-i18n**, manteniendo las claves de traducción organizadas por bounded context.
 
-#### Angular Framework
+#### C# y ASP.NET Core
 
-Además de las convenciones de TypeScript, el equipo adopta la **Angular Coding Style Guide** oficial para la organización y estructura de los componentes, servicios y módulos de la aplicación.
+Para el desarrollo de los RESTful Web Services de Entreprenly, el equipo adopta las **C# Coding Conventions** de Microsoft y las **Microsoft ASP.NET Core Coding Guidelines** como referencias principales, tomando como base la arquitectura y organización del proyecto de referencia **learning-center-platform**.
 
 Las convenciones aplicadas son las siguientes:
 
-- Cada componente, servicio o módulo reside en **su propio archivo**, siguiendo el principio de una clase por archivo.
-- Los nombres de **componentes** siguen el patrón `[Feature]Component`: `DashboardComponent`, `ProjectCardComponent`.
-- Los nombres de **servicios** siguen el patrón `[Feature]Service`: `AuthService`, `ProjectService`.
-- Los **selectores** de los componentes se escriben en **kebab-case** con un prefijo único del proyecto (`ep-` por Entreprenly): `ep-project-card`, `ep-navbar`.
-- Los **módulos** de funcionalidad se organizan por bounded context o feature, evitando un único módulo monolítico.
-- Los métodos del ciclo de vida de Angular (`ngOnInit`, `ngOnDestroy`) se implementan a través de sus interfaces correspondientes (`OnInit`, `OnDestroy`).
-
-#### Java y Spring Boot
-
-Para el desarrollo de los RESTful Web Services de Entreprenly, el equipo adopta la **Google Java Style Guide** y las convenciones de **Spring Boot Features** como referencias principales.
-
-Las convenciones aplicadas son las siguientes:
-
-- Los nombres de **clases** se escriben en **PascalCase**: `ProjectController`, `UserRepository`, `AuthenticationService`.
-- Los nombres de **métodos y variables** se escriben en **camelCase**: `findProjectById()`, `currentUser`.
-- Los nombres de **constantes** se escriben en **UPPER_SNAKE_CASE**: `DEFAULT_PAGE_SIZE`.
-- Los nombres de **paquetes** se escriben en **minúsculas** y se organizan por bounded context, siguiendo la estructura: `com.kauflink.entreprenly.[boundedcontext].[layer]`. Por ejemplo: `com.kauflink.entreprenly.projects.interfaces`, `com.kauflink.entreprenly.auth.domain`.
-- La arquitectura interna de cada bounded context sigue el patrón de capas: `interfaces` (controllers), `application` (services, command handlers), `domain` (entities, value objects, repositories interfaces) e `infrastructure` (JPA repositories, external adapters).
-- Los **endpoints** de los controladores REST se nombran en **kebab-case** y en plural para recursos: `/api/v1/projects`, `/api/v1/users`.
+- Los nombres de **clases, interfaces, métodos y propiedades públicas** se escriben en **PascalCase**: `ProductController`, `IProductRepository`, `FindProductById()`. Las interfaces se prefijan con `I`.
+- Los nombres de **variables locales y parámetros** se escriben en **camelCase**: `currentUser`, `productId`.
+- Los nombres de **constantes** se escriben en **PascalCase**: `DefaultPageSize`.
+- Los **namespaces** se organizan por bounded context siguiendo la estructura de learning-center-platform: `Entreprenly.API.[BoundedContext].[Layer]`. Por ejemplo: `Entreprenly.API.Inventory.Interfaces.REST`, `Entreprenly.API.Inventory.Domain.Model.Aggregates`.
+- La arquitectura interna de cada bounded context sigue el patrón de capas DDD: `Domain` (aggregates, entities, value objects, commands, queries, repository interfaces), `Application` (command/query services e internal handlers), `Infrastructure` (Entity Framework Core repositories y adaptadores externos) e `Interfaces` (REST controllers y transform/resources).
+- Los **endpoints** de los controladores REST se nombran en **kebab-case** y en plural para recursos: `/api/v1/products`, `/api/v1/lots`.
 - Los **métodos HTTP** se emplean de acuerdo con su semántica RESTful: `GET` para consultas, `POST` para creación, `PUT` para actualización completa, `PATCH` para actualización parcial y `DELETE` para eliminación.
-- Se utilizan **anotaciones estándar** de Spring Boot: `@RestController`, `@Service`, `@Repository`, `@Entity`, `@Value`, entre otras.
-- Se aplica **indentación de 4 espacios** de acuerdo con la Google Java Style Guide.
-- Los **comentarios Javadoc** se incluyen en todas las clases públicas y en los métodos cuya lógica no sea autoexplicativa.
+- Se utilizan los **atributos estándar** de ASP.NET Core: `[ApiController]`, `[Route]`, `[HttpGet]`, `[HttpPost]`, entre otros.
+- Se aplica **indentación de 4 espacios** de acuerdo con las C# Coding Conventions.
+- Los **comentarios XML de documentación** (`/// <summary>`) se incluyen en las clases públicas y en los métodos cuya lógica no sea autoexplicativa, sirviendo además de base para la documentación OpenAPI/Swagger.
 
 #### Gherkin (Acceptance Criteria)
 
@@ -344,21 +342,21 @@ En esta sección se especifica la configuración de despliegue definida por el e
 
 #### Landing Page
 
-El Landing Page de Entreprenly está desarrollado con HTML5, CSS3 y JavaScript, y se despliega mediante **GitHub Pages**, aprovechando el soporte nativo de esta plataforma para sitios web estáticos. La automatización del proceso de despliegue se realiza a través de **GitHub Actions**, de modo que cada integración a la rama `main` desencadena automáticamente la publicación de la nueva versión. El sitio se encuentra disponible en el dominio personalizado **[entreprenly.online](https://entreprenly.online)**.
+El Landing Page de Entreprenly está desarrollado con HTML5, CSS3 y JavaScript, y se despliega mediante **GitHub Pages**, aprovechando el soporte nativo de esta plataforma para sitios web estáticos. La automatización del proceso de despliegue se realiza a través de **GitHub Actions**, de modo que cada integración a la rama `main` desencadena automáticamente la publicación de la nueva versión. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
-1. Asegurarse de que el repositorio del Landing Page (`Kauflink/landing-entreprenly`) esté público en GitHub.
+1. Asegurarse de que el repositorio del Landing Page (`Kauflink/ap-entreprenly-landing`) esté público en GitHub.
 2. En la configuración del repositorio, ingresar a **Settings > Pages** y seleccionar la rama `main` y la carpeta raíz (`/`) como fuente de publicación.
-3. Configurar el dominio personalizado ingresando `entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
+3. Configurar el dominio personalizado ingresando `landing.entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
 4. En el proveedor de DNS del dominio, crear los registros `A` que apunten a las IPs de los servidores de GitHub Pages, de acuerdo con la documentación oficial de GitHub.
 5. En el repositorio, crear el archivo `.github/workflows/deploy.yml` con el workflow de GitHub Actions encargado de ejecutar el despliegue automático al detectar un push sobre la rama `main`. El workflow realiza los pasos de checkout del repositorio y publicación en GitHub Pages usando la acción oficial `actions/deploy-pages`.
-6. Verificar que el archivo `CNAME` con el valor `entreprenly.online` esté presente en la raíz del repositorio para que GitHub Pages respete el dominio personalizado entre despliegues.
-7. Validar el despliegue accediendo a `https://entreprenly.online` y confirmando que la versión publicada corresponde con el último commit integrado en `main`.
+6. Verificar que el archivo `CNAME` con el valor `landing.entreprenly.online` esté presente en la raíz del repositorio para que GitHub Pages respete el dominio personalizado entre despliegues.
+7. Validar el despliegue accediendo a `https://landing.entreprenly.online` y confirmando que la versión publicada corresponde con el último commit integrado en `main`.
 
 #### Frontend Web Application
 
-El Frontend Web Application de Entreprenly está desarrollado con **Angular** y se despliega mediante **Firebase Hosting**, disponible en el subdominio **[https://entreprenly.web.app](https://entreprenly.web.app)**. Firebase Hosting fue elegido sobre GitHub Pages por tres razones concretas: soporta el enrutamiento del lado del cliente (SPA routing) de Angular de forma nativa sin configuraciones adicionales, permite asociar subdominios personalizados sin conflictos con el dominio principal ya utilizado por el Landing Page en GitHub Pages, y se integra de forma directa con GitHub Actions para automatizar el ciclo de build y despliegue.
+El Frontend Web Application de Entreprenly está desarrollado con **Vue 3** (construido con **Vite**) y se despliega mediante **Firebase Hosting**, disponible en el subdominio personalizado **[https://ap.entreprenly.online](https://ap.entreprenly.online)** (y también accesible mediante el dominio por defecto de Firebase **ap-entreprenly.web.app**). Firebase Hosting fue elegido sobre GitHub Pages por tres razones concretas: soporta el enrutamiento del lado del cliente (SPA routing) de Vue Router de forma nativa sin configuraciones adicionales, permite asociar subdominios personalizados sin conflictos con el dominio principal ya utilizado por el Landing Page en GitHub Pages, y se integra de forma directa con GitHub Actions para automatizar el ciclo de build y despliegue.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
@@ -368,52 +366,52 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
    npm install -g firebase-tools
    firebase login
    ```
-3. Dentro del repositorio del Frontend (`Kauflink/daop-entreprenly-web-applications`), inicializar Firebase Hosting:
+3. Dentro del repositorio del Frontend (`Kauflink/ap-entreprenly-frontend`), inicializar Firebase Hosting:
    ```bash
    firebase init hosting
    ```
-   Durante la inicialización, seleccionar el proyecto Firebase creado, indicar `dist/entreprenly` como directorio público (output del build de Angular), confirmar que la aplicación es una SPA respondiendo `Yes` a la opción de reescritura de rutas al `index.html`, y no sobrescribir el `index.html` existente.
+   Durante la inicialización, seleccionar el proyecto Firebase creado, indicar `dist` como directorio público (output del build de Vite), confirmar que la aplicación es una SPA respondiendo `Yes` a la opción de reescritura de rutas al `index.html`, y no sobrescribir el `index.html` existente.
 4. Verificar que el archivo `firebase.json` generado incluya la regla de reescritura para SPA routing:
    ```json
    {
      "hosting": {
-       "public": "dist/entreprenly",
+       "public": "dist",
        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
        "rewrites": [{ "source": "**", "destination": "/index.html" }]
      }
    }
    ```
-5. En Firebase Console, ingresar a **Hosting > Add custom domain** y registrar el subdominio `app.entreprenly.online`. Firebase proporcionará los registros DNS necesarios (tipo `A` o `CNAME`) que deben configurarse en el proveedor del dominio.
+5. En Firebase Console, ingresar a **Hosting > Add custom domain** y registrar el subdominio `ap.entreprenly.online`. Firebase proporcionará los registros DNS necesarios (tipo `A` o `CNAME`) que deben configurarse en el proveedor del dominio.
 6. En el repositorio, configurar el **GitHub Secret** `FIREBASE_SERVICE_ACCOUNT` con las credenciales de la cuenta de servicio de Firebase, necesarias para autenticar el despliegue desde GitHub Actions.
-7. Crear el archivo `.github/workflows/deploy-frontend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Node.js con la versión requerida, instalación de dependencias con `npm install`, generación del build de producción con `ng build --configuration production` y despliegue en Firebase Hosting usando la acción oficial `FirebaseExtended/action-hosting-deploy`.
-8. Validar el despliegue accediendo a `https://app.entreprenly.online` y verificando que la navegación entre vistas de Angular funciona correctamente sin errores 404 al refrescar el navegador.
+7. Crear el archivo `.github/workflows/deploy-frontend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Node.js con la versión requerida, instalación de dependencias con `npm install`, generación del build de producción con `npm run build` (Vite) y despliegue en Firebase Hosting usando la acción oficial `FirebaseExtended/action-hosting-deploy`.
+8. Validar el despliegue accediendo a `https://ap.entreprenly.online` y verificando que la navegación entre vistas de Vue funciona correctamente sin errores 404 al refrescar el navegador.
 
 #### RESTful Web Services
 
-El Backend de Entreprenly está desarrollado con **Spring Boot** y se despliega sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[api.entreprenly.online](https://api.entreprenly.online)**. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se conecta de forma segura a la VM mediante SSH para ejecutar el proceso de actualización del servicio.
+El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#) y se despliega sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)**. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se conecta de forma segura a la VM mediante SSH para ejecutar el proceso de actualización del servicio.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
 1. En la consola de GCP, crear una instancia de **Compute Engine** con las siguientes características mínimas recomendadas: sistema operativo Ubuntu 24.04 LTS, tipo de máquina `e2-medium`, disco de arranque de 50 GB y dirección IP externa estática asignada.
-2. En la instancia, instalar **Java 17 (JDK)**:
+2. En la instancia, instalar el **.NET SDK / ASP.NET Core Runtime**:
    ```bash
    sudo apt update
-   sudo apt install -y openjdk-17-jdk
+   sudo apt install -y dotnet-sdk-9.0
    ```
-3. Configurar el servicio de Spring Boot como un servicio del sistema operativo con `systemd`, creando el archivo `/etc/systemd/system/entreprenly.service`, para garantizar su reinicio automático ante fallos o reinicios de la VM.
-4. En el proveedor de DNS del dominio, crear un registro `A` que apunte `api.entreprenly.online` a la IP externa estática de la instancia de GCP.
-5. Instalar **Nginx** y **Certbot** en la VM para habilitar HTTPS mediante un certificado SSL gratuito de Let's Encrypt, configurando Nginx como proxy inverso que redirige el tráfico del puerto 443 al puerto `8080` donde escucha Spring Boot:
+3. Configurar el servicio de ASP.NET Core como un servicio del sistema operativo con `systemd`, creando el archivo `/etc/systemd/system/entreprenly.service`, para garantizar su reinicio automático ante fallos o reinicios de la VM.
+4. En el proveedor de DNS del dominio, crear un registro `A` que apunte `ap-api.entreprenly.online` a la IP externa estática de la instancia de GCP.
+5. Instalar **Nginx** y **Certbot** en la VM para habilitar HTTPS mediante un certificado SSL gratuito de Let's Encrypt, configurando Nginx como proxy inverso que redirige el tráfico del puerto 443 al puerto `5000` donde escucha Kestrel (el servidor de ASP.NET Core):
    ```bash
    sudo apt install -y nginx certbot python3-certbot-nginx
-   sudo certbot --nginx -d api.entreprenly.online
+   sudo certbot --nginx -d ap-api.entreprenly.online
    ```
-6. En el repositorio de Web Services (`Kauflink/daop-entreprenly-web-services`), configurar los siguientes **GitHub Secrets**:
+6. En el repositorio de Web Services (`Kauflink/ap-entreprenly-web-services`), configurar los siguientes **GitHub Secrets**:
    - `GCP_VM_HOST`: dirección IP externa estática de la instancia.
    - `GCP_VM_USER`: nombre de usuario de la instancia.
    - `GCP_VM_SSH_KEY`: clave SSH privada para autenticación sin contraseña.
-7. Crear el archivo `.github/workflows/deploy-backend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Java 17, generación del artefacto ejecutable con `./mvnw clean package -DskipTests`, transferencia del archivo `.jar` a la VM mediante `scp` y reinicio del servicio en la VM mediante `ssh` con los comandos `sudo systemctl stop entreprenly`, copia del nuevo `.jar` y `sudo systemctl start entreprenly`.
-8. Configurar las **reglas de firewall** en GCP para exponer únicamente los puertos `80` y `443` al tráfico externo, manteniendo el puerto `8080` de Spring Boot restringido al acceso local de Nginx.
-9. Documentar los endpoints del API desplegado mediante **Swagger UI**, accesible en la ruta `https://api.entreprenly.online/swagger-ui/index.html`, y registrar la URL base del API como variable de entorno en el proyecto del Frontend Web Application para su integración.
+7. Crear el archivo `.github/workflows/deploy-backend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración del .NET SDK, generación del artefacto publicado con `dotnet publish -c Release -o ./publish`, transferencia de la carpeta de publicación a la VM mediante `scp` y reinicio del servicio en la VM mediante `ssh` con los comandos `sudo systemctl stop entreprenly`, copia de los nuevos archivos publicados y `sudo systemctl start entreprenly`.
+8. Configurar las **reglas de firewall** en GCP para exponer únicamente los puertos `80` y `443` al tráfico externo, manteniendo el puerto `5000` de Kestrel restringido al acceso local de Nginx.
+9. Documentar los endpoints del API desplegado mediante **Swagger UI**, accesible en la ruta `https://ap-api.entreprenly.online/swagger`, y registrar la URL base del API como variable de entorno en el proyecto del Frontend Web Application para su integración.
 10. Validar el despliegue realizando una solicitud de prueba a un endpoint del API desde Swagger UI o desde Postman, confirmando que el servicio responde correctamente sobre HTTPS.
 
 ## 5.2. Landing Page, Services & Applications Implementation
@@ -710,7 +708,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
   </thead>
   <tbody>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>d57dee9</td>
       <td>Initial commit</td>
@@ -718,7 +716,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>86c305f</td>
       <td>chore(config): initialize .gitignore for node and tailwind</td>
@@ -726,7 +724,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>568c339</td>
       <td>docs: simplify README with essential information and update license to MIT</td>
@@ -734,7 +732,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>5088424</td>
       <td>Merge pull request #1 from Kauflink/develop</td>
@@ -742,7 +740,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>003eb4f</td>
       <td>Create CNAME</td>
@@ -750,7 +748,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>9e82e20</td>
       <td>Refactor GitHub Actions workflow for deployment</td>
@@ -758,7 +756,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>bcc3513</td>
       <td>Update Node.js version and clean install step</td>
@@ -766,7 +764,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>ff3e7e6</td>
       <td>Update GitHub Actions workflow for deployment</td>
@@ -774,7 +772,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>14b3ed7</td>
       <td>Upgrade GitHub Actions to version 4</td>
@@ -782,7 +780,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-18</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>54554c9</td>
       <td>feat: agregar controles de tema, idioma y mejorar CTAs de la landing</td>
@@ -790,7 +788,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>32ab091</td>
       <td>Merge pull request #2 from Kauflink/develop</td>
@@ -798,7 +796,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>f9a1e00</td>
       <td>feat: add theme fade and hero motion refinements</td>
@@ -806,7 +804,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>9136aed</td>
       <td>Merge pull request #3 from Kauflink/develop</td>
@@ -814,7 +812,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>e740b59</td>
       <td>fix: corrección de tildes</td>
@@ -822,7 +820,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>55ee2fb</td>
       <td>fix(landing_page): ortografia arreglada</td>
@@ -830,7 +828,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>846f934</td>
       <td>Merge pull request #4 from Kauflink/develop</td>
@@ -838,7 +836,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>7e09505</td>
       <td>app:Correccion</td>
@@ -846,7 +844,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>3cbf2e2</td>
       <td>app:CorreccionPalabras</td>
@@ -854,7 +852,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>develop</td>
       <td>8c4165b</td>
       <td>app:CorreccionTilde</td>
@@ -862,7 +860,7 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
       <td>2026-04-19</td>
     </tr>
     <tr>
-      <td>Kauflink/landing-entreprenly</td>
+      <td>Kauflink/ap-entreprenly-landing</td>
       <td>main</td>
       <td>7b8ccfc</td>
       <td>Merge pull request #5 from Kauflink/develop</td>
@@ -898,7 +896,7 @@ Durante el Sprint 1, el alcance de implementación se limitó exclusivamente al 
 
 Durante el Sprint 1, el equipo configuró y ejecutó el proceso de despliegue del Landing Page mediante GitHub Pages y un pipeline de integración continua con GitHub Actions. A continuación se describe el proceso realizado:
 
-1. **Creación del repositorio:** Se creó el repositorio público `landing-entreprenly` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con las ramas `main` y `develop`.
+1. **Creación del repositorio:** Se creó el repositorio público `ap-entreprenly-landing` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con las ramas `main` y `develop`.
 
 ![creacion_repos](./images/creacion_repos.png "creacion_repos")
 
@@ -922,7 +920,7 @@ Durante el Sprint 1, el equipo configuró y ejecutó el proceso de despliegue de
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 1, todos los miembros del equipo participaron activamente en la implementación del Landing Page, evidenciado a través de los commits registrados en el repositorio `landing-entreprenly`. El trabajo se distribuyó de manera colaborativa: Joseph Julius lideró la configuración del repositorio y el pipeline de despliegue; Lionel Abraham se encargó del desarrollo de funcionalidades interactivas y animaciones; Elynor Mikela, José Antonio y José Fernando contribuyeron con correcciones de contenido y en la estructura base de la página.
+Durante el Sprint 1, todos los miembros del equipo participaron activamente en la implementación del Landing Page, evidenciado a través de los commits registrados en el repositorio `ap-entreprenly-landing`. El trabajo se distribuyó de manera colaborativa: Joseph Julius lideró la configuración del repositorio y el pipeline de despliegue; Lionel Abraham se encargó del desarrollo de funcionalidades interactivas y animaciones; Elynor Mikela, José Antonio y José Fernando contribuyeron con correcciones de contenido y en la estructura base de la página.
 
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en la rama `develop` y realizando la integración a `main` mediante Pull Requests revisados y aprobados por otros miembros. Se realizaron un total de 5 Pull Requests durante el Sprint.
 
@@ -932,13 +930,13 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
 
 ![commits3](./images/commits3.png "commits3")
 
-**URL del repositorio del Landing Page:** https://github.com/Kauflink/landing-entreprenly
+**URL del repositorio del Landing Page:** https://github.com/Kauflink/ap-entreprenly-landing
 
 ### 5.2.2. Sprint 2
 
 #### 5.2.2.1. Sprint Planning 2
 
-Para este segundo Sprint, el equipo estableció como objetivo principal la implementación de la Frontend Web Application de Entreprenly en Angular, cubriendo todos los Bounded Contexts planificados: Auth, Profile, Subscription, Inventory, Sales y Chatbot. La reunión de planificación se llevó a cabo de manera virtual, donde se definieron las User Stories a abordar, el Sprint Goal y la distribución de responsabilidades por Bounded Context.
+Para este segundo Sprint, el equipo estableció como objetivo principal la implementación de la Frontend Web Application de Entreprenly en Vue, cubriendo todos los Bounded Contexts planificados: Auth, Profile, Subscription, Inventory, Sales y Chatbot. La reunión de planificación se llevó a cabo de manera virtual, donde se definieron las User Stories a abordar, el Sprint Goal y la distribución de responsabilidades por Bounded Context.
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <tbody>
@@ -970,7 +968,7 @@ Para este segundo Sprint, el equipo estableció como objetivo principal la imple
     </tr>
     <tr>
       <td><strong>Sprint 1 Review Summary</strong></td>
-      <td>En el Sprint 1 se implementó y desplegó exitosamente la primera versión del Landing Page de Entreprenly. La página se encuentra disponible en <a href="https://entreprenly.online">entreprenly.online</a> con dominio personalizado y despliegue continuo mediante GitHub Actions. Se cubrieron todas las secciones planificadas: Hero, Funcionalidades, Planes, FAQ y Footer, con soporte de tema claro/oscuro e idioma Español/Inglés.</td>
+      <td>En el Sprint 1 se implementó y desplegó exitosamente la primera versión del Landing Page de Entreprenly. La página se encuentra disponible en <a href="https://landing.entreprenly.online">landing.entreprenly.online</a> con dominio personalizado y despliegue continuo mediante GitHub Actions. Se cubrieron todas las secciones planificadas: Hero, Funcionalidades, Planes, FAQ y Footer, con soporte de tema claro/oscuro e idioma Español/Inglés.</td>
     </tr>
     <tr>
       <td><strong>Sprint 1 Retrospective Summary</strong></td>
@@ -981,7 +979,7 @@ Para este segundo Sprint, el equipo estableció como objetivo principal la imple
     </tr>
     <tr>
       <td><strong>Sprint 2 Goal</strong></td>
-      <td>Nuestro enfoque está en desarrollar el Frontend Web Application completo de Entreprenly en Angular, cubriendo todos los Bounded Contexts principales: Sales (Punto de Venta), Chatbot (Pedidos WhatsApp), Subscription, Inventory y Profile. Creemos que entrega una aplicación web funcional y desplegable con la que los comerciantes peruanos pueden gestionar sus operaciones de venta y sus pedidos de WhatsApp. Esto se confirmará cuando la aplicación Angular esté desplegada exitosamente en Firebase Hosting y todos los flujos clave —registro de ventas en caja, gestión de pedidos por chatbot y configuración del perfil de usuario— sean funcionales y navegables.</td>
+      <td>Nuestro enfoque está en desarrollar el Frontend Web Application completo de Entreprenly en Vue, cubriendo todos los Bounded Contexts principales: Sales (Punto de Venta), Chatbot (Pedidos WhatsApp), Subscription, Inventory y Profile. Creemos que entrega una aplicación web funcional y desplegable con la que los comerciantes peruanos pueden gestionar sus operaciones de venta y sus pedidos de WhatsApp. Esto se confirmará cuando la aplicación Vue esté desplegada exitosamente en Firebase Hosting y todos los flujos clave —registro de ventas en caja, gestión de pedidos por chatbot y configuración del perfil de usuario— sean funcionales y navegables.</td>
     </tr>
     <tr>
       <td><strong>Sprint 2 Velocity</strong></td>
@@ -1065,7 +1063,7 @@ En el Sprint 2, el equipo organizó el trabajo asignando un Bounded Context prin
 
 #### 5.2.2.3. Sprint Backlog 2
 
-El objetivo principal de este Sprint fue implementar la Frontend Web Application de Entreprenly en Angular, cubriendo los Bounded Contexts de Auth, Profile, Subscription, Inventory, Sales y Chatbot, junto con las vistas compartidas de Home y Help. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
+El objetivo principal de este Sprint fue implementar la Frontend Web Application de Entreprenly en Vue, cubriendo los Bounded Contexts de Auth, Profile, Subscription, Inventory, Sales y Chatbot, junto con las vistas compartidas de Home y Help. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
 
 ![sprint2](./images/sprint2.png "sprint2")
 
@@ -1094,8 +1092,8 @@ El objetivo principal de este Sprint fue implementar la Frontend Web Application
       <td>US-01</td>
       <td>Iniciar sesión en la aplicación</td>
       <td>T-01</td>
-      <td>Configurar proyecto Angular y estructura base</td>
-      <td>Inicializar el proyecto Angular con la arquitectura DDD por Bounded Context, configurar rutas lazy-loading, el shell del DashboardLayout con sidebar naranja y <code>router-outlet</code>, y conectar las rutas principales.</td>
+      <td>Configurar proyecto Vue y estructura base</td>
+      <td>Inicializar el proyecto Vue con la arquitectura DDD por Bounded Context, configurar rutas lazy-loading, el shell del DashboardLayout con sidebar naranja y <code>router-view</code>, y conectar las rutas principales.</td>
       <td>4</td>
       <td>Camargo Briceño, Joseph Julius</td>
       <td>Done</td>
@@ -1165,7 +1163,7 @@ El objetivo principal de este Sprint fue implementar la Frontend Web Application
       <td>Eliminar producto del ticket de venta</td>
       <td>T-08</td>
       <td>Implementar eliminación de ítems y resumen lateral del ticket</td>
-      <td>Agregar el ícono de basurero por ítem del ticket para eliminación individual, y el panel de resumen lateral con subtotal, cantidad de ítems y total en tiempo real usando signals de Angular.</td>
+      <td>Agregar el ícono de basurero por ítem del ticket para eliminación individual, y el panel de resumen lateral con subtotal, cantidad de ítems y total en tiempo real usando el sistema de reactividad de Vue (ref y computed).</td>
       <td>4</td>
       <td>Flores Pinchi, José Fernando</td>
       <td>Done</td>
@@ -1265,7 +1263,7 @@ El objetivo principal de este Sprint fue implementar la Frontend Web Application
       <td>Iniciar sesión en la aplicación</td>
       <td>T-18</td>
       <td>Configurar despliegue en Firebase Hosting</td>
-      <td>Configurar Firebase Hosting para el Frontend Web Application, crear el workflow de GitHub Actions para despliegue continuo al integrar cambios en <code>main</code>, y validar el despliegue en <code>https://entreprenly.web.app</code>.</td>
+      <td>Configurar Firebase Hosting para el Frontend Web Application, crear el workflow de GitHub Actions para despliegue continuo al integrar cambios en <code>main</code>, y validar el despliegue en <code>https://ap.entreprenly.online</code>.</td>
       <td>4</td>
       <td>Camargo Briceño, Joseph Julius</td>
       <td>Done</td>
@@ -1277,7 +1275,7 @@ El objetivo principal de este Sprint fue implementar la Frontend Web Application
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del Frontend Web Application (`daop-entreprenly-frontend`). Se realizaron más de 100 commits entre el 9 y el 12 de mayo de 2026, cubriendo desde la configuración inicial del proyecto Angular hasta la integración completa de todos los Bounded Contexts. A continuación se presenta el registro de los commits más representativos:
+Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del Frontend Web Application (`ap-entreprenly-frontend`). Se realizaron más de 100 commits entre el 9 y el 12 de mayo de 2026, cubriendo desde la configuración inicial del proyecto Vue hasta la integración completa de todos los Bounded Contexts. A continuación se presenta el registro de los commits más representativos:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1292,7 +1290,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
   </thead>
   <tbody>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>10fa91e</td>
       <td>Initial commit</td>
@@ -1300,15 +1298,15 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-09</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>4306255</td>
-      <td>chore: initial Angular project setup</td>
-      <td>Configuración inicial del proyecto Angular con estructura base, dependencias y configuración de rutas.</td>
+      <td>chore: initial Vue project setup</td>
+      <td>Configuración inicial del proyecto Vue con estructura base, dependencias y configuración de rutas.</td>
       <td>2026-05-09</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>2a97fc6</td>
       <td>feat(core): implement base interfaces, shared components and main views</td>
@@ -1316,7 +1314,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-09</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>develop</td>
       <td>ccd0a90</td>
       <td>dbJsonSales</td>
@@ -1324,7 +1322,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-09</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>982fc2a</td>
       <td>feat(layout): add DashboardLayout shell component</td>
@@ -1332,15 +1330,15 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>4ce1265</td>
       <td>feat(layout): integrate DashboardLayout as app shell with nested routing</td>
-      <td>Se integra el DashboardLayout como shell principal con rutas anidadas y <code>router-outlet</code> funcional.</td>
+      <td>Se integra el DashboardLayout como shell principal con rutas anidadas y <code>router-view</code> funcional.</td>
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>c8eb0bb</td>
       <td>feat(dashboard-layout): responsive sidebar with logo and scaled proportions</td>
@@ -1348,7 +1346,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/chatbot</td>
       <td>33b1cf6</td>
       <td>feat(chatbot): implement chatbot bounded context base structure</td>
@@ -1356,7 +1354,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>41fb81e</td>
       <td>feat(profile): add profile bounded context with 8 configuration cards</td>
@@ -1364,7 +1362,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/chatbot</td>
       <td>49dc628</td>
       <td>feat(chatbot): add navigation flow, QR countdown and bot auto-response</td>
@@ -1372,7 +1370,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/chatbot</td>
       <td>b5c8f40</td>
       <td>style(chatbot): match components to Figma design</td>
@@ -1380,7 +1378,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/chatbot</td>
       <td>5bb4851</td>
       <td>feat(chatbot): add real scannable QR code with WhatsApp deep link</td>
@@ -1388,7 +1386,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/chatbot</td>
       <td>b9835d2</td>
       <td>feat(chatbot): add session guard to block conversations without connected WhatsApp</td>
@@ -1396,7 +1394,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>develop</td>
       <td>b4d933d</td>
       <td>salesActualizacionFuncionalidadCompleta</td>
@@ -1404,7 +1402,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/chatbot</td>
       <td>9d96203</td>
       <td>feat(chatbot): implement complete chatbot flow with conversations, orders and payment validation</td>
@@ -1412,7 +1410,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>4536170</td>
       <td>fix(dashboard-layout): enable child route rendering and profile navigation</td>
@@ -1420,7 +1418,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-10</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/sales</td>
       <td>3c57947</td>
       <td>feat(sales): adjust sales cart, payment methods and cash summary</td>
@@ -1428,7 +1426,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>d115523</td>
       <td>feat(shared): implement Help and Home dashboard pages</td>
@@ -1436,7 +1434,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>feature/sales</td>
       <td>970d6fe</td>
       <td>feat(sales): decrement inventory stock on sale completion</td>
@@ -1444,7 +1442,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>10c612d</td>
       <td>feat(chatbot): add bilingual i18n support and real inventory product data</td>
@@ -1452,7 +1450,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>78d93ae</td>
       <td>feat(chatbot,help): client typing bubble, bot typewriter in input bar, real category counts</td>
@@ -1460,7 +1458,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>e356dda</td>
       <td>fix(preferences): persist theme and language across reloads</td>
@@ -1468,7 +1466,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>c18c8f2</td>
       <td>feat(i18n): translate browser tab titles based on active language</td>
@@ -1476,7 +1474,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>c39716c</td>
       <td>fix(subscription): agregar traduccion de idiomas de bc</td>
@@ -1484,7 +1482,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>54e9f01</td>
       <td>feat(subscription): restore subscription BC from feature/inventory</td>
@@ -1492,7 +1490,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-11</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>475913a</td>
       <td>feat(profile): add currency selector to preferences card</td>
@@ -1500,7 +1498,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-12</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>8f946c1</td>
       <td>fix: refactor currency handling and sync subscription pricing</td>
@@ -1508,7 +1506,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-12</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>e460790</td>
       <td>feat(home): redesign dashboard panel to match Figma designs</td>
@@ -1516,7 +1514,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-12</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>157d4a1</td>
       <td>feat(help): redesign help module to match Figma designs</td>
@@ -1524,7 +1522,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
       <td>2026-05-12</td>
     </tr>
     <tr>
-      <td>Kauflink/daop-entreprenly-frontend</td>
+      <td>Kauflink/ap-entreprenly-frontend</td>
       <td>main</td>
       <td>382f19b</td>
       <td>fix(chatbot): replace hardcoded localhost URLs with environment config</td>
@@ -1538,7 +1536,7 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-Al término del Sprint 2, el equipo implementó y desplegó el Frontend Web Application de Entreprenly en Angular. La aplicación se encuentra disponible públicamente en Firebase Hosting en la URL `https://entreprenly.web.app`. Los Bounded Contexts implementados y sus funcionalidades clave son los siguientes:
+Al término del Sprint 2, el equipo implementó y desplegó el Frontend Web Application de Entreprenly en Vue. La aplicación se encuentra disponible públicamente en Firebase Hosting en la URL `https://ap.entreprenly.online`. Los Bounded Contexts implementados y sus funcionalidades clave son los siguientes:
 
 - **DashboardLayout:** Sidebar naranja responsive con logo de Entreprenly, íconos de navegación por BC y botón de logout. Funciona como shell de la aplicación con rutas lazy-loading anidadas.
 
@@ -1570,7 +1568,7 @@ Al término del Sprint 2, el equipo implementó y desplegó el Frontend Web Appl
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 2, el Backend (RESTful Web Services con Spring Boot) aún no ha sido implementado. Por ello, la Frontend Web Application consume una API simulada mediante **JSON-Server**, que sirve el archivo `server/db.json` como una REST API completa. Esta API está disponible localmente en `http://localhost:3000/api/v1` y, adicionalmente, se desplegó una instancia remota en `http://db.entreprenly.online/api/v1` para que los datos también sean accesibles desde la aplicación publicada en Firebase. A continuación se documentan los endpoints utilizados durante este Sprint:
+Durante el Sprint 2, el Backend (RESTful Web Services con ASP.NET Core) aún no ha sido implementado. Por ello, la Frontend Web Application consume una API simulada mediante **JSON-Server**, que sirve el archivo `server/db.json` como una REST API completa. Esta API está disponible localmente en `http://localhost:3000/api/v1` y, adicionalmente, se desplegó una instancia remota en `http://db.entreprenly.online/api/v1` para que los datos también sean accesibles desde la aplicación publicada en Firebase. A continuación se documentan los endpoints utilizados durante este Sprint:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1778,9 +1776,9 @@ Durante el Sprint 2, el Backend (RESTful Web Services con Spring Boot) aún no h
 
 ![postman2](./images/postman2.png "postman2")
 
-**URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/daop-entreprenly-frontend
+**URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/ap-entreprenly-frontend
 
-La documentación formal de los endpoints con OpenAPI/Swagger se incorporará a partir del Sprint 3, cuando se implemente el Backend con Spring Boot, conforme a lo planificado en el Product Backlog.
+La documentación formal de los endpoints con OpenAPI/Swagger se incorporará a partir del Sprint 3, cuando se implemente el Backend con ASP.NET Core, conforme a lo planificado en el Product Backlog.
 
 ---
 
@@ -1792,11 +1790,11 @@ Durante el Sprint 2, el equipo configuró y ejecutó el proceso de despliegue de
 
 ![repo_frontend](./images/repo_frontend.png "repo_frontend")
 
-2. **Configuración de Firebase Hosting:** Se creó un proyecto en Firebase Console, se inicializó Firebase Hosting en el repositorio del frontend con `firebase init hosting`, configurando `dist/entreprenly/browser` como directorio público y habilitando la reescritura de rutas al `index.html` para el SPA routing de Angular.
+2. **Configuración de Firebase Hosting:** Se creó un proyecto en Firebase Console, se inicializó Firebase Hosting en el repositorio del frontend con `firebase init hosting`, configurando `dist` como directorio público y habilitando la reescritura de rutas al `index.html` para el SPA routing de Vue Router.
 
 ![firebase_p](./images/firebase_p.png "firebase_p")
 
-3. **Verificación del despliegue:** Se validó que la aplicación Angular se encuentra correctamente desplegada y accesible en `https://ap.entreprenly.online`, con navegación entre BCs funcional sin errores 404 al refrescar el navegador.
+3. **Verificación del despliegue:** Se validó que la aplicación Vue se encuentra correctamente desplegada y accesible en `https://ap.entreprenly.online`, con navegación entre BCs funcional sin errores 404 al refrescar el navegador.
 
 ![app_firebase](./images/app_firebase.png "app_firebase")
 
@@ -1816,27 +1814,302 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
 
 **URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/ap-entreprenly-frontend
 
-### 5.2.X.1.
+## 5.3. Validation Interviews
 
-### 5.2.X.2.
+En esta sección el equipo registra y explica las actividades de entrevistas de validación realizadas durante el proyecto. A diferencia de las entrevistas de elicitación presentadas en la sección 2.2 —cuyo objetivo fue descubrir los problemas y necesidades de los usuarios—, las entrevistas de validación tienen como propósito confirmar si la solución construida (Landing Page y aplicaciones) resuelve efectivamente esos problemas y resulta usable para los segmentos objetivo.
 
-### 5.2.X.3.
+Para ello se realizaron sesiones en las que usuarios reales de cada segmento interactuaron directamente con el Landing Page y con las aplicaciones de Entreprenly, ejecutando tareas concretas basadas en los User Flows definidos en la sección 4.4.4. Durante cada sesión se observó el desempeño del usuario al completar las tareas y, al finalizar, se aplicó un cuestionario de validación orientado a contrastar los dolores identificados en el needfinding con la experiencia real de uso del producto. Adicionalmente, se registraron observaciones de usabilidad siguiendo principios de evaluación heurística. Cada entrevista fue grabada en video como evidencia y se encuentra disponible en Microsoft Stream.
 
-### 5.2.X.4.
+### 5.3.1. Diseño de Entrevistas
 
-### 5.2.X.5.
+Antes de iniciar cada sesión de validación se brinda un saludo cordial y una breve presentación del entrevistador, explicando que el propósito de la sesión es evaluar la facilidad de uso y la utilidad del producto Entreprenly, y no evaluar al participante. Se aclara que la información será utilizada únicamente con fines académicos y se mantendrá en estricta confidencialidad. Como primer paso se solicita al participante su nombre completo, edad y distrito de residencia para fines de registro. Luego se le invita a interactuar libremente con el Landing Page y las aplicaciones, ejecutando las tareas propuestas y expresando en voz alta sus impresiones (técnica de *thinking aloud*), destacando que no existen respuestas correctas o incorrectas.
 
-### 5.2.X.6.
+El proceso de validación para cada segmento se compone de tres momentos: (1) la exploración del Landing Page, (2) la ejecución de tareas guiadas sobre las aplicaciones siguiendo los User Flows correspondientes, y (3) un cuestionario de validación de diez preguntas. A continuación se detallan los elementos a incluir en la sesión de validación para cada segmento objetivo.
 
-### 5.2.X.7.
+**Preguntas introductorias (ambos segmentos)**
 
-### 5.2.X.8.
+- ¿Cuál es su nombre y apellidos?
+- ¿Cuántos años tiene?
+- ¿En qué distrito vive?
 
-## 5.3. Sprint Planning n. Aspect Leaders and Collaborators. Sprint Backlog n. Development Evidence for Sprint Review. Execution Evidence for Sprint Review. Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. Team Collaboration Insights during Sprint. Validation Interviews.
+---
 
-### 5.3.1. Diseño de Entrevistas.
+**Segmento objetivo 1: Comerciantes (Dueños de Minimarkets/Mercados)**
 
-### 5.3.2. Registro de Entrevistas.
+*Elementos a validar:* Landing Page y Aplicación Web (Dashboard de gestión).
+
+*User Flows a validar (sección 4.4.4):*
+
+- User Flow 1 – Gestión de inventario (agregar, editar y buscar productos).
+- User Flow 2 – Creación de lotes y gestión de alertas de vencimiento.
+- User Flow 3 – Registro de venta presencial (POS con pesaje).
+- User Flow 4 – Validación de pago de pedido del chatbot.
+- User Flow 5 – Suscripción al Plan Control.
+
+*Tareas asignadas:*
+
+1. Explorar el Landing Page e identificar qué ofrece Entreprenly y los planes disponibles.
+2. Registrar un producto nuevo, editarlo y luego buscarlo en el inventario.
+3. Crear un lote con fecha de vencimiento y revisar las alertas del dashboard de lotes.
+4. Registrar una venta presencial seleccionando un producto por peso y uno por unidad, y finalizar el cobro.
+5. Revisar un pedido del chatbot pendiente y aprobar (o rechazar) su pago.
+6. Iniciar el proceso de suscripción al Plan Control.
+
+*Preguntas de validación:*
+
+1. Después de explorar el Landing Page, ¿quedó claro qué hace Entreprenly y cómo resolvería los problemas de su negocio?
+2. Al registrar, editar y buscar productos en el módulo de inventario, ¿le resultó más sencillo y ordenado que su método actual (cuaderno, Excel o memoria)?
+3. Cuando creó un lote y visualizó las alertas de stock y vencimiento, ¿siente que esto le ayudaría a evitar pérdidas por productos vencidos o desabastecimiento no detectado?
+4. Al registrar una venta presencial con el POS, incluido el pesaje, ¿le pareció un proceso rápido y confiable para el día a día en el local?
+5. ¿La separación automática de los ingresos por efectivo y por medios digitales (Yape, Plin, POS) le daría mayor control al momento de cuadrar la caja?
+6. Al validar el pago de un pedido del chatbot desde el dashboard, ¿le resultó claro el proceso de aprobar o rechazar el pago y confirmar el pedido?
+7. ¿Considera que atender los pedidos por WhatsApp mediante el chatbot le quitaría la carga de estar pendiente del celular mientras atiende a los clientes en el local?
+8. Durante el uso de la aplicación, ¿encontró alguna pantalla, botón o paso que le resultara confuso o difícil de entender?
+9. En una escala del 1 al 5, ¿qué tan probable es que utilice Entreprenly en su negocio? ¿Por qué?
+10. ¿Qué funcionalidad agregaría, quitaría o mejoraría para que la aplicación se ajuste mejor a su forma de trabajar?
+
+---
+
+**Segmento objetivo 2: Clientes Finales**
+
+*Elementos a validar:* Landing Page y Chatbot de WhatsApp (experiencia de compra).
+
+*User Flows a validar:*
+
+- Flujo de pedido por el chatbot: consulta de producto disponible, confirmación del pedido, recepción de las instrucciones de pago, reporte del comprobante de pago digital y recepción de la confirmación/comprobante.
+
+*Tareas asignadas:*
+
+1. Explorar el Landing Page e identificar qué ofrece la tienda y por qué convendría comprar por este medio.
+2. Iniciar una conversación con el chatbot y consultar la disponibilidad de un producto.
+3. Confirmar un pedido a través del chatbot.
+4. Recibir las instrucciones de pago y reportar el comprobante de pago digital.
+5. Recibir la confirmación del pedido y su comprobante.
+
+*Preguntas de validación:*
+
+1. Después de ver el Landing Page, ¿entendió qué ofrece la tienda y por qué le convendría comprar por este medio?
+2. Al realizar un pedido por el chatbot de WhatsApp, ¿le resultó fácil y rápido encontrar el producto y completar la compra?
+3. ¿La confirmación de stock en tiempo real le dio mayor confianza de que el producto que pidió sí está disponible?
+4. Al recibir las instrucciones de pago y reportar su comprobante por el chat, ¿le pareció un proceso claro y seguro?
+5. ¿Recibir una confirmación o comprobante automático del pedido le dio mayor tranquilidad al pagar por adelantado?
+6. ¿Le resultó cómodo el medio de pago ofrecido (efectivo, Yape o Plin)?
+7. ¿Prefiere esta experiencia de compra mediante el chatbot frente a esperar que una persona le responda manualmente?
+8. Durante el pedido, ¿hubo algún mensaje o paso del chatbot que le resultara confuso o poco claro?
+9. En una escala del 1 al 5, ¿qué tan probable es que vuelva a comprar en una tienda que use este sistema? ¿Por qué?
+10. ¿Qué mejoraría de la experiencia de compra a través del chatbot?
+
+### 5.3.2. Registro de Entrevistas
+
+A continuación se registran las entrevistas de validación realizadas por segmento. Para cada entrevista se consigna el nombre y apellidos del participante, su edad, su distrito de residencia, un screenshot de un cuadro del video, el enlace al video alojado en Microsoft Stream —indicando el timing donde inicia la entrevista y su duración— y un resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas. De acuerdo con lo planificado por el equipo, se realizaron dos entrevistas para el Segmento 1 (Comerciantes) y una entrevista para el Segmento 2 (Clientes Finales).
+
+> **Nota:** Las tarjetas se encuentran listas para incorporar la evidencia real de cada entrevista grabada por el equipo. Los campos entre corchetes `[ ]` y los screenshots son marcadores que deben reemplazarse por los datos del participante, el enlace de Microsoft Stream con su timing y duración, y el resumen correspondiente.
+
+**Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
+
+-   Primera entrevista:
+
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  Entrevista de Validación
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/val_comerciante_1.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado(a):</strong> [Nombres y apellidos]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Edad:</strong> [Edad]
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> [Nombre del entrevistador]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Distrito:</strong> [Distrito, Lima]
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Inicio de la entrevista:</strong> [mm:ss]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> [mm:ss]
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista (Microsoft Stream):</strong>
+        <a href="[URL del video en Microsoft Stream]" style="color: #1a6b6b;">[Nombre del participante]-Entrevista de Validación</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        [Resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas: claridad del Landing Page, facilidad de uso de cada User Flow ejecutado (inventario, lotes, venta presencial, validación de pago del chatbot y suscripción), en qué medida la solución resuelve sus problemas operativos, dificultades o pasos confusos detectados, probabilidad de uso y mejoras sugeridas.]
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+-   Segunda entrevista:
+
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  Entrevista de Validación
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/val_comerciante_2.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado(a):</strong> [Nombres y apellidos]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Edad:</strong> [Edad]
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> [Nombre del entrevistador]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Distrito:</strong> [Distrito, Lima]
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Inicio de la entrevista:</strong> [mm:ss]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> [mm:ss]
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista (Microsoft Stream):</strong>
+        <a href="[URL del video en Microsoft Stream]" style="color: #1a6b6b;">[Nombre del participante]-Entrevista de Validación</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        [Resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas: claridad del Landing Page, facilidad de uso de cada User Flow ejecutado (inventario, lotes, venta presencial, validación de pago del chatbot y suscripción), en qué medida la solución resuelve sus problemas operativos, dificultades o pasos confusos detectados, probabilidad de uso y mejoras sugeridas.]
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
+
+---
+
+**Segmento 2: Clientes Finales**
+
+-   Primera entrevista:
+
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  Entrevista de Validación
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/val_cliente_1.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Datos en dos columnas -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Entrevistado(a):</strong> [Nombres y apellidos]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
+        <strong>Edad:</strong> [Edad]
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Entrevistador(a):</strong> [Nombre del entrevistador]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Distrito:</strong> [Distrito, Lima]
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Inicio de la entrevista:</strong> [mm:ss]
+      </td>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Duración:</strong> [mm:ss]
+      </td>
+    </tr>
+  </table>
+
+  <!-- Link -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link de la entrevista (Microsoft Stream):</strong>
+        <a href="[URL del video en Microsoft Stream]" style="color: #1a6b6b;">[Nombre del participante]-Entrevista de Validación</a>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Descripción -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
+        [Resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas: claridad del Landing Page, facilidad y rapidez del pedido por el chatbot, confianza generada por la confirmación de stock en tiempo real, claridad del proceso de pago y comprobante, preferencia frente a la atención manual, pasos confusos detectados, probabilidad de recompra y mejoras sugeridas.]
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+</div>
 
 ### 5.3.3. Evaluaciones según heurísticas
 
@@ -2234,4 +2507,39 @@ Genera beneficios concretos: ahorro de tiempo, menos errores, confianza en el st
 
 ---
 
-## 5.4. Video About-the-Product.
+## 5.4. Video About-the-Product
+
+En esta sección el equipo introduce y describe el contenido del **Video About-the-Product** de Entreprenly. Este video tiene una orientación promocional y está dirigido a dos públicos: los visitantes del Landing Page, que desean conocer el modelo de negocio y las características principales de los productos de software, y los usuarios de las aplicaciones, que desean realizar las tareas relacionadas con los procesos soportados por la solución (gestión de inventario, registro de ventas, atención de pedidos por el chatbot y suscripción).
+
+El tono de comunicación del video es consistente con el adoptado para el producto: cercano, claro y orientado al comerciante peruano. El contenido resume la propuesta de valor, muestra escenas de interacción reales con la Frontend Web Application (Vue 3 + PrimeVue) y con el chatbot de WhatsApp, y destaca los beneficios concretos de la solución. De acuerdo con lo indicado en el enunciado, el video incluye al menos un testimonio positivo de un usuario que participó en las entrevistas de validación (sección 5.3).
+
+Este video se publica en **Microsoft Stream** (versión privada de evidencia) y en **YouTube** (versión utilizada para incrustarse en una sección adecuada del Landing Page). A continuación se consigna el screenshot del video, el enlace a la versión publicada y la duración del mismo.
+
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Detalle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Screenshot del video</strong></td>
+      <td>[Insertar captura de un cuadro representativo del video]</td>
+    </tr>
+    <tr>
+      <td><strong>URL (Microsoft Stream)</strong></td>
+      <td>[Insertar enlace privado de Microsoft Stream]</td>
+    </tr>
+    <tr>
+      <td><strong>URL (YouTube — incrustado en Landing Page)</strong></td>
+      <td>[Insertar enlace público de YouTube]</td>
+    </tr>
+    <tr>
+      <td><strong>Duración</strong></td>
+      <td>[Insertar duración del video, entre 1 y 3 minutos]</td>
+    </tr>
+  </tbody>
+</table>
+
+> **Nota:** Conforme al cronograma del enunciado, la primera versión del Video About-the-Product corresponde a la entrega AV2 (Sprint 3). Los campos entre corchetes `[ ]` son marcadores que deben reemplazarse por la evidencia real una vez producido y publicado el video.

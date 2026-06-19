@@ -48,7 +48,7 @@ Aplicaciones Web
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repositorio-181717?logo=github)](https://github.com/Kauflink/ap-entreprenly.git)
 
-En esta sección se presenta la evidencia de colaboración del equipo Kauflink durante el desarrollo del Trabajo Final. La colaboración se llevó a cabo de forma distribuida a través de dos repositorios principales en GitHub: el repositorio del informe del proyecto (`ap-entreprenly`) y el repositorio del Landing Page (`landing-entreprenly`), ambos bajo la organización [Kauflink](https://github.com/Kauflink).
+En esta sección se presenta la evidencia de colaboración del equipo Kauflink durante el desarrollo del Trabajo Final. La colaboración se llevó a cabo de forma distribuida a través de dos repositorios principales en GitHub: el repositorio del informe del proyecto (`ap-entreprenly`) y el repositorio del Landing Page (`ap-entreprenly-landing`), ambos bajo la organización [Kauflink](https://github.com/Kauflink).
 
 ---
 
@@ -95,9 +95,9 @@ Para la entrega TB1, el equipo se enfocó en la implementación del Frontend Web
 
 ---
 
-## Repositorio del Landing Page — `landing-entreprenly`
+## Repositorio del Landing Page — `ap-entreprenly-landing`
 
-**URL:** https://github.com/Kauflink/landing-entreprenly
+**URL:** https://github.com/Kauflink/ap-entreprenly-landing
 
 Durante el Sprint 1 (13–20 de abril de 2026), el equipo realizó un total de **20 commits** en el repositorio del Landing Page. El trabajo se distribuyó en 5 Pull Requests desde la rama `develop` hacia `main`, siguiendo la estrategia GitFlow acordada. A continuación se detalla la participación por integrante:
 
@@ -313,7 +313,7 @@ La información se presenta a través del siguiente cuadro, donde se especifican
         <em>AV1</em><br>
         Asumió el liderazgo técnico del equipo durante el Sprint 1, liderando la configuración inicial del repositorio del Landing Page bajo la organización Kauflink en GitHub. Tomó la iniciativa en el diseño e implementación del pipeline de integración continua con GitHub Actions, realizando cuatro iteraciones de ajuste hasta lograr el despliegue automático estable en GitHub Pages. Además, lideró la redacción de las secciones de Software Configuration Management (5.1) y la documentación completa del Sprint 1 (5.2.1), estableciendo el estándar de documentación técnica para el equipo.<br><br>
         <em>TB1</em><br>
-        Asumió el liderazgo de la infraestructura del Sprint 2, inicializando el proyecto Vue 3 con Vite y configurando la arquitectura base de Bounded Contexts con Vue Router y lazy-loading. Lideró la implementación del componente DashboardLayout compartido por todos los BCs del equipo, el sistema de internacionalización bilingüe (ES/EN) con vue-i18n y la configuración del pipeline de despliegue continuo en Firebase Hosting mediante GitHub Actions, garantizando que la aplicación completa quedara integrada y accesible en app.entreprenly.online.<br><br>
+        Asumió el liderazgo de la infraestructura del Sprint 2, inicializando el proyecto Vue 3 con Vite y configurando la arquitectura base de Bounded Contexts con Vue Router y lazy-loading. Lideró la implementación del componente DashboardLayout compartido por todos los BCs del equipo, el sistema de internacionalización bilingüe (ES/EN) con vue-i18n y la configuración del pipeline de despliegue continuo en Firebase Hosting mediante GitHub Actions, garantizando que la aplicación completa quedara integrada y accesible en ap.entreprenly.online.<br><br>
         <strong>Chavez Carrasco, Lionel Abraham</strong><br>
         <em>AV1</em><br>
         Ejerció liderazgo en el área de diseño y desarrollo frontend del proyecto. Lideró la elaboración de las Style Guidelines (4.1), los Wireframes y Mock-ups del Landing Page (4.3) y el diseño completo de Web Applications UX/UI (4.4), estableciendo el sistema visual de Entreprenly. En el Landing Page, lideró el desarrollo de las funcionalidades interactivas más complejas del Sprint 1: el selector de idioma ES/EN, el switch de tema claro/oscuro y las animaciones de transición del hero, coordinando la integración de estas funcionalidades mediante Pull Requests revisados por el equipo.<br><br>
