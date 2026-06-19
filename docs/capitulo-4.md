@@ -8,11 +8,11 @@ Esta sección define los lineamientos de estilo que aseguran una identidad visua
 
 ### 4.1.1. General Style Guidelines.
 
-El sistema de diseño de Entreprenly está basado en **Material Design** como lenguaje 
-de diseño de referencia, adoptando sus principios de elevación, tipografía, sistema de 
-color y componentes interactivos para garantizar interfaces coherentes, accesibles y 
-familiares para el usuario. En la Frontend Web Application, estos lineamientos se 
-implementan a través de **PrimeVue**, la biblioteca de componentes de UI seleccionada 
+El sistema de diseño de Entreprenly está basado en **Material Design** como lenguaje
+de diseño de referencia, adoptando sus principios de elevación, tipografía, sistema de
+color y componentes interactivos para garantizar interfaces coherentes, accesibles y
+familiares para el usuario. En la Frontend Web Application, estos lineamientos se
+implementan a través de **PrimeVue**, la biblioteca de componentes de UI seleccionada
 para Vue 3, cuyos componentes están alineados con los estándares de Material Design.
 
 **Paleta de Colores**
@@ -878,20 +878,23 @@ Los mockups de la Landing Page muestran la propuesta visual aplicada sobre la es
   </p>
 
 ## 4.4. Web Applications UX/UI Design
+
 El diseño UX/UI de la aplicación web de Entreprenly responde directamente a las necesidades identificadas durante las entrevistas con los dos segmentos objetivo: **comerciantes dueños de minimarkets, bodegas o puestos de mercado**, y **clientes finales** que realizan pedidos a través del chatbot de WhatsApp. Todo el trabajo visual fue desarrollado en Figma, disponible en el siguiente enlace: [https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=0EzDRaCV1KcY71Jr-1](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=0EzDRaCV1KcY71Jr-1)
- 
+
 El proceso de diseño se organizó en dos fases complementarias. En la primera fase se construyeron los **wireframes** en escala de grises, priorizando la estructura, la jerarquía de la información y la disposición espacial de los componentes sin la influencia del color. En la segunda fase se desarrollaron los **mock-ups en color**, aplicando íntegramente el Design System definido en las Style Guidelines del capítulo 4.1. Esta progresión garantiza que cada decisión visual esté fundamentada en la arquitectura de información y en los flujos de usuario validados previamente.
- 
+
 ---
+
 ### 4.4.1. Web Applications Wireframes
+
 Los wireframes de Entreprenly representan la estructura esquemática de cada pantalla de la aplicación web, elaborados en escala de grises para separar las decisiones estructurales de las decisiones estéticas. En cada pantalla se aplicaron los principios de **diseño inclusivo** (WCAG 2.1 AA), **jerarquía visual clara**, **proximidad semántica entre elementos relacionados** y **consistencia de patrones** para que el comerciante pueda operar la plataforma desde el primer día sin necesidad de capacitación técnica avanzada.
- 
+
 La paleta monocromática utilizada en esta fase emplea Blanco puro (#FFFFFF) como superficie base, Gris claro (#EEEEEE) para fondos de sección y tarjetas, Gris medio (#CCCCCC) para bordes, divisores y estados inactivos, y Gris carbón (#212121) para tipografía, íconos y elementos de mayor peso visual. Esta distribución cromática permite identificar con claridad la jerarquía de contenido y la diferenciación entre zonas interactivas y zonas informativas.
- 
+
 La estructura global de la aplicación se organiza en torno a tres zonas funcionales persistentes en todas las pantallas: el **Sidebar de navegación** fijo a la izquierda (220 px de ancho) con acceso a los módulos principales, el **encabezado sticky** en la parte superior con información del usuario activo, y el **área de contenido principal** que ocupa el espacio restante y se adapta a cada módulo.
- 
+
 #### Wireframes: Dashboard Principal
- 
+
 <p align="center">
     <img src="images/Landing_Wireframe.png" alt="Landing_Wireframe" width="800"/>
   </p>
@@ -985,11 +988,11 @@ Cuando el usuario tiene el **Plan Control activo**, la pantalla muestra el panel
 
 Los Wireflow Diagrams presentan de forma integrada las pantallas de la aplicación web junto con las rutas de navegación que el usuario sigue para alcanzar un objetivo específico. Cada Wireflow define un **User Goal** concreto, detalla las pantallas involucradas, las decisiones del usuario y las respuestas del sistema, constituyendo así el mapa completo de la experiencia de uso. El equipo elaboró previamente los Task Flows correspondientes para cada User Goal, los cuales sirvieron como base para identificar las rutas típicas y los puntos de decisión críticos antes de diseñar los wireframes que los representan.
 A continuación se describen los Wireflows principales del sistema, organizados por User Goal y considerando las User Personas definidas en el capítulo 2 (Don Lucho — comerciante, y Andrea Torres — cliente final).
- 
+
 ---
- 
+
 **Wireflow 1 – User Goal: Registrarse e iniciar sesión en Entreprenly**
- 
+
 <p align="center">
     <img src="images/Wireflow1.png" alt="Wireflow1" width="800"/>
   </p>
@@ -1094,13 +1097,12 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Gestión de suscripción activa (US-18 al US-22):** Don Lucho puede renovar su suscripción (US-20), lo que actualiza la fecha de vencimiento, o solicitar la cancelación (US-21), lo que muestra un modal de confirmación antes de ejecutar. Si decide cancelar y confirma: el sistema registra la solicitud, mantiene el acceso activo hasta la fecha de vencimiento y actualiza la etiqueta de estado a "Cancelación programada". Al llegar la fecha de vencimiento: el sistema cancela automáticamente el plan premium y devuelve la cuenta al Plan Free (US-22).
 
-
 ### 4.4.3. Web Applications Mock-ups
 
 Esta sección presenta los mock-ups de alta fidelidad de la aplicación web de Entreprenly. Los mock-ups reflejan el diseño visual final de cada pantalla, aplicando el Design System del proyecto: paleta de colores, tipografía, componentes, espaciado e iconografía definidos en la sección 4.1. Cada pantalla evidencia los principios de diseño inclusivo, jerarquía visual y arquitectura de información establecidos para la plataforma.
- 
+
 #### Dashboard Principal
- 
+
 <p align="center">
     <img src="./images/Landing.png" alt="Landing.png" width="800"/>
   </p>
@@ -1173,12 +1175,13 @@ La vista de selección de plan presenta las dos tarjetas comparativas con una di
 ### 4.4.4. Web Applications User Flow Diagrams
 
 Esta sección presenta los User Flow Diagrams de la aplicación web de Entreprenly. A diferencia de los Wireflows, los User Flows incluyen los mock-ups de las pantallas junto con los nodos de decisión, condiciones y rutas alternativas que conforman el flujo completo de cada objetivo de usuario. Cada diagrama está acompañado del User Goal al que responde y una explicación de los flujos y condiciones especificadas.
- 
- ---
+
+---
+
 **User Flow 1 – Gestión de inventario (agregar, editar y buscar productos)**
- 
-*User Goal: El comerciante desea tener su catálogo de productos completo y actualizado en el sistema.*
- 
+
+_User Goal: El comerciante desea tener su catálogo de productos completo y actualizado en el sistema._
+
 <p align="center">
     <img src="images/User_flow1.png" alt="User_flow1" width="800"/>
   </p>
@@ -1260,111 +1263,117 @@ Dashboard → Clic "Pedidos" → Lista de pedidos → Selecciona pedido en estad
  <p align="center">
     <img src="images/UserFlow5.png" alt="User_flow5" width="800"/>
   </p>
- 
 
-*Ilustración – Web Application User Flow Diagram: Suscripción al Plan Control*
- 
+_Ilustración – Web Application User Flow Diagram: Suscripción al Plan Control_
+
 **Happy Path:**
 Dashboard → Clic "Suscripción" → Pantalla muestra comparativa de planes → Clic "Elegir plan" en tarjeta Plan Control → Tarjeta queda seleccionada → Clic "Continuar con la suscripción" → Formulario de facturación → Completa datos → Clic "Continuar al pago" → Resumen de cobro → Clic "Pagar y activar suscripción" → Pago aprobado → Plan Control activado → Panel de suscripción muestra estado "Activa".
- 
+
 **Unhappy Paths:**
+
 - Intento de continuar sin seleccionar plan (US-14, Scenario 2): → Mensaje "Selecciona un plan para continuar" → Botón deshabilitado.
 - Datos de facturación incompletos (US-16, Scenario 2): → Campos inválidos resaltados → No avanza al paso de pago.
 - Cobro rechazado (US-17, Scenario 2): → Mensaje de error con el motivo → El plan no se activa → Comerciante puede corregir datos y reintentar.
 
-
 ## 4.5. Web Applications Prototyping
 
 ### Introducción y criterios de diseño
- 
+
 El prototipo interactivo de Entreprenly simula la navegación y los principales flujos de interacción de la aplicación web, permitiendo evaluar la coherencia de la experiencia de usuario antes del desarrollo, identificar puntos de fricción y validar las decisiones de arquitectura de información tomadas a lo largo del capítulo 4. El prototipo fue construido en Figma utilizando conexiones de prototipado entre frames, transiciones y overlays para representar de forma fiel los comportamientos especificados en los User Flow Diagrams.
 Los criterios de diseño que guiaron las decisiones de interacción y navegación del prototipo son los siguientes:
- 
+
 **Orientación al flujo operativo del comerciante:** La arquitectura de navegación prioriza el acceso inmediato a las tres tareas de mayor frecuencia e importancia definidas en el User Task Matrix del capítulo 2: verificar stock, registrar ventas y gestionar pedidos del chatbot. Por esta razón, el Sidebar de navegación mantiene los módulos de "Ventas", "Productos" y "Pedidos" como los primeros ítems de la lista, por encima de módulos de menor frecuencia de uso como "Suscripción".
- 
+
 **Consistencia en los patrones de interacción:** Se emplearon cuatro patrones de navegación a lo largo de toda la aplicación:
 (1) **Navegación por Sidebar** para el cambio entre módulos principales;
-(2) **Drawer lateral deslizante** para formularios de creación y edición que no requieren cambio de contexto (productos, lotes, detalle de pedido); 
-(3) **Modal central** para acciones críticas que requieren confirmación del usuario (eliminar lote, confirmar cancelación de suscripción, aprobar/rechazar pago); y 
+(2) **Drawer lateral deslizante** para formularios de creación y edición que no requieren cambio de contexto (productos, lotes, detalle de pedido);
+(3) **Modal central** para acciones críticas que requieren confirmación del usuario (eliminar lote, confirmar cancelación de suscripción, aprobar/rechazar pago); y
 (4) **Toast / Snackbar** para retroalimentación inmediata de resultado (éxito, error, advertencia) sin interrumpir el flujo operativo. Esta consistencia reduce la carga cognitiva del usuario, ya que los patrones aprendidos en un módulo son directamente aplicables a los demás.
- 
+
 **Prevención de errores en acciones de alto impacto:** En operaciones destructivas o financieramente sensibles como eliminar un lote, cancelar una suscripción activa, aprobar o rechazar el pago de un pedido, finalizar una venta, el prototipo incluye siempre una capa adicional de confirmación mediante modal que describe el impacto de la acción antes de ejecutarla, conforme al principio heurístico de Nielsen de "Prevención de errores".
- 
+
 **Retroalimentación inmediata en tiempo real:** Todos los cambios en el estado del sistema que afectan al usuario se comunican de forma inmediata: los contadores del Resumen de Caja se actualizan al finalizar cada venta, los badges de estado de los lotes cambian al detectar condiciones de vencimiento, y los campos de formulario muestran validación inline sin necesidad de enviar el formulario completo.
- 
+
 **Accesibilidad y objetivos táctiles:** Todos los elementos interactivos del prototipo tienen dimensiones mínimas de 48 × 48 px para cumplir los requisitos de objetivo táctil tanto en uso con ratón como en tablets. Los contrastes de color en todos los estados (normal, hover, focus, disabled) cumplen el mínimo WCAG 2.1 AA (ratio 4.5:1 para texto normal y 3:1 para texto grande).
- 
+
 El prototipo interactivo completo está disponible en Figma, donde puede navegarse en modo presentación para simular la experiencia real de uso.
 
 ![prototipo.jpeg](./images/prototipo.jpeg "prototipo.jpeg")
 
-*Ilustración - Web Application Prototyping: Vista general del flujo de navegación*
- 
-### Flujos de interacción cubiertos por el prototipo
- 
-El prototipo cubre los siguientes flujos principales de interacción, representando tanto las rutas exitosas (happy paths) como las principales rutas alternativas ante errores o condiciones de excepción:
- 
-**Flujo 1 – Gestión de inventario:** Comprende las pantallas del módulo de Productos (listado, búsqueda, drawer de creación y edición) y del módulo de Lotes (listado con alertas de estado, modal de creación, panel de detalles). Se simula el comportamiento del banner de alerta al existir lotes próximos a vencer y el bloqueo del formulario ante campos inválidos.
- 
-**Flujo 2 – Registro de venta:** Comprende la pantalla completa del módulo de Ventas con la simulación del flujo de búsqueda de producto, selección del modal según tipo (unidad/peso), captura de peso desde balanza IoT con fallback a ingreso manual, confirmación de cantidad, construcción del ticket, selección de método de pago y finalización con Toast de confirmación y actualización del Resumen de Caja.
- 
-**Flujo 3 – Gestión de pedidos del chatbot:** Comprende la pantalla del módulo de Pedidos con la visualización de la tabla de pedidos en sus distintos estados, el panel lateral de detalle con el visor del comprobante de pago y la simulación del flujo de aprobación y rechazo, incluyendo la alerta por rechazos repetidos y la cancelación automática por timeout.
- 
-**Flujo 4 – Chatbot WhatsApp:** Comprende el flujo de vinculación por QR, la transición al estado conectado y la gestión de conversaciones activas con el panel de mensajería.
- 
-**Flujo 5 – Suscripción:** Comprende el flujo completo de selección de plan, formulario de facturación, confirmación de pago y activación del Plan Control, incluyendo el estado del panel de suscripción con plan activo y las opciones de renovación y cancelación.
- 
-El video de demostración del prototipo, donde se explican en detalle los flujos principales y las decisiones de diseño más relevantes, está disponible en Microsoft Stream en el siguiente enlace:
- 
-**Enlace al video del prototipo:** *(Enlace pendiente de subida al repositorio del equipo)*
+_Ilustración - Web Application Prototyping: Vista general del flujo de navegación_
 
+### Flujos de interacción cubiertos por el prototipo
+
+El prototipo cubre los siguientes flujos principales de interacción, representando tanto las rutas exitosas (happy paths) como las principales rutas alternativas ante errores o condiciones de excepción:
+
+**Flujo 1 – Gestión de inventario:** Comprende las pantallas del módulo de Productos (listado, búsqueda, drawer de creación y edición) y del módulo de Lotes (listado con alertas de estado, modal de creación, panel de detalles). Se simula el comportamiento del banner de alerta al existir lotes próximos a vencer y el bloqueo del formulario ante campos inválidos.
+
+**Flujo 2 – Registro de venta:** Comprende la pantalla completa del módulo de Ventas con la simulación del flujo de búsqueda de producto, selección del modal según tipo (unidad/peso), captura de peso desde balanza IoT con fallback a ingreso manual, confirmación de cantidad, construcción del ticket, selección de método de pago y finalización con Toast de confirmación y actualización del Resumen de Caja.
+
+**Flujo 3 – Gestión de pedidos del chatbot:** Comprende la pantalla del módulo de Pedidos con la visualización de la tabla de pedidos en sus distintos estados, el panel lateral de detalle con el visor del comprobante de pago y la simulación del flujo de aprobación y rechazo, incluyendo la alerta por rechazos repetidos y la cancelación automática por timeout.
+
+**Flujo 4 – Chatbot WhatsApp:** Comprende el flujo de vinculación por QR, la transición al estado conectado y la gestión de conversaciones activas con el panel de mensajería.
+
+**Flujo 5 – Suscripción:** Comprende el flujo completo de selección de plan, formulario de facturación, confirmación de pago y activación del Plan Control, incluyendo el estado del panel de suscripción con plan activo y las opciones de renovación y cancelación.
+
+El video de demostración del prototipo, donde se explican en detalle los flujos principales y las decisiones de diseño más relevantes, está disponible en Microsoft Stream en el siguiente enlace:
+
+**Enlace al video del prototipo:** _(Enlace pendiente de subida al repositorio del equipo)_
 
 ## 4.6. Domain-Driven Software Architecture
 
 En esta sección se elaboró el diseño de los Bounded Contexts (BC) y sus conexiones dentro del sistema.
 
 ### 4.6.1. Design-Level Event Storming
+
 A continuación, se presentan los distintos Bounded Contexts identificados a partir del Event Storming, junto con sus respectivos diagramas y BC Canvas.
 
 Generación y Autenticación de Cuenta
-<p align="center"> <img src="images/Entreprenly - Generación y Autenticación de Cuenta.jpg" width="500"/> <img src="images/Canvas BC 6.jpg" width="500"/> 
+
+<p align="center"> <img src="images/Entreprenly - Generación y Autenticación de Cuenta.jpg" width="500"/> <img src="images/Canvas BC 6.jpg" width="500"/>
 
 </p>
 
 En este Bounded Context se realiza la creación de cuentas y la gestión de inicios de sesión. El flujo inicia brindando la opción de registrarse como nuevo usuario o ingresar credenciales si ya posee una cuenta. Además, se ofrecen métodos alternativos de autenticación.
 
 Perfil y Configuración
+
 <p align="center"> <img src="images/Entreprenly - Perfil y Configuración.jpg" width="500"/> <img src="images/Canvas BC 2.jpg" width="500"/> </p>
 
 En este Bounded Context se gestiona la configuración del perfil del usuario, incluyendo cambios de zona horaria, idioma, preferencias de interfaz (como modo oscuro), contraseña y otras configuraciones.
 
 Gestión y Proceso de Suscripción
+
 <p align="center"> <img src="images/Entreprenly - Gestión y Proceso de suscripción.jpg" width="500"/> <img src="images/Canvas BC 7.jpg" width="500"/> </p>
 
 Este Bounded Context se encarga de la renovación, cambio y cancelación de planes de suscripción. Además, realiza las validaciones necesarias durante todo el proceso de suscripción.
 
 Gestión de Inventario
+
 <p align="center"> <img src="images/Entreprenly - Gestión de inventario.jpg" width="500"/> <img src="images/Canvas BC 1.jpg" width="500"/> </p>
 
 En este Bounded Context se realiza la creación y modificación de productos. También incluye la gestión de lotes (creación, modificación y eliminación), así como funcionalidades adicionales como alertas de caducidad y control de stock.
 
 Chatbot de WhatsApp
+
 <p align="center"> <img src="images/Entreprenly - Chatbot de WhatsApp.jpg" width="500"/> <img src="images/Canvas BC 5.jpg" width="500"/> </p>
 
 Este Bounded Context permite la venta a través de un chatbot de WhatsApp. Para ello, consume información del inventario con el fin de conocer la disponibilidad de productos.
 
-
 Ventas
+
 <p align="center"> <img src="images/Entreprenly - Ventas.jpg" width="500"/> <img src="images/Canvas BC 3.jpg" width="500"/> </p>
 
 En este Bounded Context se realiza la gestión de ventas presenciales. Este proceso incluye la verificación de stock y la asignación de datos dependiendo del tipo de producto (por unidad o por peso).
 
 Unión de Bounded Contexts
+
 <p align="center"> <img src="images/Entreprenly - BC union.jpg" width="500"/> </p>
 
 Este diagrama muestra la integración y comunicación entre los diferentes Bounded Contexts, evidenciando las relaciones y dependencias dentro del sistema.
- 
+
 A continuación, se presentan los principales flujos de interacción del sistema, los cuales permiten visualizar la secuencia de operaciones entre los distintos Bounded Contexts en escenarios clave del negocio.
+
 <p align="center"> <img src="images/Entreprenly - Flujo ChatbotBC.jpg" width="500"/></p>
 
 <p align="center"><img src="images/Entreprenly - Flujo Ventas.jpg" width="500"/></p>
@@ -1373,13 +1382,13 @@ A continuación, se presentan los principales flujos de interacción del sistema
 
 <p align="center"><img src="images/Entreprenly - Flujo Gestion de inventario.jpg" width="500"/></p>
 
-
 <p align="center"><img src="images/Entreprenly - Flujo Gestion y Proceso de suscripcion.jpg" width="500"/></p>
 
 <p align="center"><img src="images/Entreprenly - Flujo Perfil y Configuracion.jpg" width="500"/></p>
 
 ### 4.6.2. Software Architecture Context Diagram
-A continuación, se presenta el System Context Diagram del sistema Entreprenly. En este diagrama se identifica al actor principal, denominado "Emprendedor", quien interactúa con la plataforma a través de la aplicación web. Asimismo, se muestran los sistemas externos que se integran con la solución, tales como servicios de autenticación, mensajería, almacenamiento y procesamiento de pagos
+
+A continuación, se presenta el System Context Diagram del sistema Entreprenly. En este diagrama se identifica al actor principal, denominado "Emprendedor", quien interactúa con la plataforma a través de la aplicación web. Asimismo, se muestran los sistemas externos que se integran con la solución, tales como servicios de autenticación, mensajería y almacenamiento.
 
 <p align="center">
 <p align="center">
@@ -1387,13 +1396,16 @@ A continuación, se presenta el System Context Diagram del sistema Entreprenly. 
 </p>
 
 ### 4.6.3. Software Architecture Container Diagrams
+
 A continuación, se presenta el Container Diagram del sistema Entreprenly. Este diagrama describe la arquitectura interna a nivel de contenedores, mostrando los principales componentes desplegables, como la aplicación web, el API Gateway y los distintos Bounded Contexts implementados como servicios independientes. Además, se incluyen las bases de datos asociadas a cada contexto y los sistemas externos con los que interactúan, permitiendo visualizar la distribución de responsabilidades, la comunicación entre componentes y la estructura general del sistema
+
 <p align="center">
 <img src="images/structurizr-109637-EntreprenlyContainer.png" width="500"/>
 </p>
 
 ### 4.6.4. Software Architecture Components Diagrams
-<p align="center">Generación y Autenticación de Cuenta BC</p> <p align="center"><img src="images/structurizr-109637-AuthComponent.png" width="500"/></p>
+
+<p align="center">Generación y Autenticación de Cuenta BC</p> <p align="center"><img src="images/structurizr-109637-IamComponent.png" width="500"/></p>
 
 Este Bounded Context es responsable de la gestión de identidad del usuario dentro del sistema, abarcando tanto el registro como la autenticación. Para ello, integra mecanismos de acceso alternativo mediante Google OAuth, así como un sistema externo de correo para la verificación y vinculación de cuentas.
 A nivel funcional, incluye queries orientados a la lectura de datos de sesión y credenciales, y commands destinados a la creación de cuentas, actualización de información y cambio de contraseña.
@@ -1420,25 +1432,13 @@ Además, incorpora funcionalidades de monitoreo como alertas de stock y caducida
 Asimismo, expone información de productos hacia otros contextos (outbound), como Ventas y Chatbot.
 Incluye commands para la gestión de productos y operaciones relacionadas, y persiste toda la información en una base de datos MySQL.
 
-<p align="center">Pagos BC</p> <p align="center"><img src="images/structurizr-109637-PaymentComponent.png" width="500"/></p>
-
-Este Bounded Context es responsable de la gestión de los pagos asociados a las ventas, tanto presenciales como realizadas a través de otros canales como el chatbot.
-Incluye queries para la consulta de información de pagos y commands para la generación y envío de comprobantes. Además, se encarga de validar y confirmar transacciones mediante la integración con servicios externos.
-La información de pagos es almacenada en una base de datos MySQL, permitiendo el seguimiento y control de las transacciones realizadas.
-
 <p align="center">Ventas BC</p> <p align="center"><img src="images/structurizr-109637-SalesComponent.png" width="500"/></p>
 
-Este Bounded Context gestiona el proceso de venta presencial, desde la selección de productos hasta la generación del comprobante.
-Para ello, consume información del Bounded Context de Inventario (inbound) para validar disponibilidad de productos y stock, así como del Bounded Context de Pagos para verificar el estado de las transacciones.
-Incluye queries para la consulta de información relevante y commands para registrar las ventas realizadas.
-Toda la información generada es persistida en una base de datos MySQL.
+Este Bounded Context gestiona el proceso de venta presencial, desde la selección de productos hasta la generación del comprobante. Para ello, consume información del Bounded Context de Inventario (inbound) para validar disponibilidad de productos y stock, y registra el método de pago seleccionado como parte del propio proceso de venta. Incluye queries para la consulta de información relevante y commands para registrar las ventas realizadas. Toda la información generada es persistida en una base de datos MySQL.
 
 <p align="center">ChatBot BC</p> <p align="center"><img src="images/structurizr-109637-ChatbotComponent.png" width="500"/></p>
 
-Este Bounded Context permite la gestión de ventas a través de un canal conversacional basado en WhatsApp.
-Para su funcionamiento, consume información del Bounded Context de Inventario (inbound) para consultar disponibilidad de productos, así como del Bounded Context de Pagos para verificar y confirmar transacciones.
-Incluye queries para la obtención de información necesaria durante la interacción con el usuario y commands para la generación de pedidos y procesamiento de pagos.
-Además, se integra con servicios externos de mensajería (WhatsApp API) y persiste la información en una base de datos MySQL, permitiendo el seguimiento de las conversaciones y transacciones realizadas.
+Este Bounded Context permite la gestión de ventas a través de un canal conversacional basado en WhatsApp. Para su funcionamiento, consume información del Bounded Context de Inventario (inbound) para consultar disponibilidad de productos y registra la confirmación de pago dentro del flujo del pedido. Incluye queries para la obtención de información necesaria durante la interacción con el usuario y commands para la generación, actualización y seguimiento de pedidos. Además, se integra con servicios externos de mensajería (WhatsApp API) y persiste la información en una base de datos MySQL, permitiendo el seguimiento de las conversaciones y transacciones realizadas.
 
 ## 4.7. Software Object-Oriented Design
 
@@ -1455,8 +1455,6 @@ Además, se integra con servicios externos de mensajería (WhatsApp API) y persi
 
 <p align="center">Gestión de Inventario de Suscripción BC</p>
 <p align="center"><img src="images/04_InventoryBC.svg" width="500"/></p>
-
-
 
 <p align="center">Ventas BC</p>
 <p align="center"><img src="images/05_SalesBC.svg" width="500"/></p>
@@ -1528,13 +1526,14 @@ El esquema se organiza en las siguientes tablas por categoría:
 
 ---
 
- **IoT**
+**IoT**
 
 - `iot_scale`  
   Registro de conexión de la balanza IoT utilizada para productos vendidos por peso.
 
 ---
- **Suscripciones**
+
+**Suscripciones**
 
 - `subscription_dashboard`  
   Información principal del plan actual y plan recomendado para el comerciante, incluyendo precios, estado y periodo de facturación.
