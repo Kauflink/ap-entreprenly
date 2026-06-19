@@ -171,10 +171,10 @@ Para la gestión del código fuente y el seguimiento de modificaciones, el equip
 
 **Repositorios del Proyecto**
 
-| Producto | URL del Repositorio |
-| :--- | :--- |
-| **Landing Page** | https://github.com/Kauflink/landing-entreprenly |
-| **Web Services** | https://github.com/Kauflink/daop-entreprenly-web-services | 
+| Producto                     | URL del Repositorio                                           |
+| :--------------------------- | :------------------------------------------------------------ |
+| **Landing Page**             | https://github.com/Kauflink/landing-entreprenly               |
+| **Web Services**             | https://github.com/Kauflink/daop-entreprenly-web-services     |
 | **Frontend Web Application** | https://github.com/Kauflink/daop-entreprenly-web-applications |
 
 **Estrategia de Flujo de Trabajo: GitFlow**
@@ -316,7 +316,6 @@ Las convenciones aplicadas son las siguientes:
 - Se aplica **indentación de 4 espacios** de acuerdo con la Google Java Style Guide.
 - Los **comentarios Javadoc** se incluyen en todas las clases públicas y en los métodos cuya lógica no sea autoexplicativa.
 
-
 #### Gherkin (Acceptance Criteria)
 
 Para la redacción de los criterios de aceptación de las User Stories y los escenarios de prueba de aceptación de los RESTful Web Services, el equipo adopta las **Gherkin Conventions for Readable Specifications**.
@@ -380,9 +379,7 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
      "hosting": {
        "public": "dist/entreprenly",
        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-       "rewrites": [
-         { "source": "**", "destination": "/index.html" }
-       ]
+       "rewrites": [{ "source": "**", "destination": "/index.html" }]
      }
    }
    ```
@@ -420,13 +417,13 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
 10. Validar el despliegue realizando una solicitud de prueba a un endpoint del API desde Swagger UI o desde Postman, confirmando que el servicio responde correctamente sobre HTTPS.
 
 ## 5.2. Landing Page, Services & Applications Implementation
- 
+
 ### 5.2.1. Sprint 1
- 
+
 #### 5.2.1.1. Sprint Planning 1
- 
+
 Para este primer Sprint, el equipo estableció como objetivo principal la implementación y despliegue de la primera versión del Landing Page de Entreprenly. La reunión de planificación se llevó a cabo de manera virtual, donde se definieron las User Stories a abordar, el Sprint Goal y la distribución de responsabilidades entre los miembros del equipo.
- 
+
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <tbody>
     <tr>
@@ -482,11 +479,11 @@ Para este primer Sprint, el equipo estableció como objetivo principal la implem
 </table>
 
 ---
- 
+
 #### 5.2.1.2. Aspect Leaders and Collaborators
- 
+
 En este primer Sprint, el equipo organizó su trabajo en torno a cuatro aspectos principales: la configuración inicial del repositorio y entorno de despliegue, el desarrollo de la estructura base del Landing Page, la implementación de funcionalidades interactivas (cambio de tema e idioma, animaciones y CTAs), y la revisión y corrección del contenido textual. A continuación, se presenta la matriz de liderazgo y colaboración (LACX):
- 
+
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
@@ -543,14 +540,13 @@ En este primer Sprint, el equipo organizó su trabajo en torno a cuatro aspectos
 </table>
 
 ---
- 
+
 #### 5.2.1.3. Sprint Backlog 1
- 
+
 El objetivo principal de este Sprint fue implementar y desplegar la primera versión del Landing Page de Entreprenly, cubriendo la User Story US-49 del Product Backlog. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
- 
- 
+
 ![Logo de la UPC](./images/sprint1.png "Universidad Peruana de Ciencias Aplicadas")
- 
+
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
@@ -696,11 +692,11 @@ El objetivo principal de este Sprint fue implementar y desplegar la primera vers
 </table>
 
 ---
- 
+
 #### 5.2.1.4. Development Evidence for Sprint Review
- 
+
 Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del Landing Page. Se realizaron un total de 20 commits distribuidos entre el 18 y el 20 de abril de 2026, cubriendo desde la configuración inicial del proyecto hasta correcciones de contenido y el despliegue automatizado mediante GitHub Actions. A continuación se presenta el registro de commits:
- 
+
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
@@ -877,11 +873,11 @@ Durante el Sprint 1, el equipo se centró exclusivamente en el repositorio del L
 </table>
 
 ---
- 
+
 #### 5.2.1.5. Execution Evidence for Sprint Review
- 
+
 Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoriamente la primera versión del Landing Page de Entreprenly. La página se encuentra disponible públicamente a través de GitHub Pages con dominio personalizado configurado mediante el archivo CNAME. El Landing Page incluye las siguientes secciones:
- 
+
 - **Hero:** Presentación principal del producto con headline, propuesta de valor y llamados a la acción (CTAs) diferenciados por segmento objetivo (comerciantes y clientes finales).
 - **Funcionalidades:** Descripción visual de las características principales de Entreprenly: gestión de inventario, chatbot de WhatsApp, balanza IoT y dashboard financiero.
 - **Planes:** Sección con los planes disponibles (Plan Free y Plan Control) con sus beneficios y botones de acción.
@@ -889,19 +885,19 @@ Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoria
 - **Controles de experiencia:** Selector de idioma (Español / Inglés) y switch de tema claro/oscuro, accesibles desde la barra de navegación.
 
 ![landing_desplegado](./images/landing_desplegado.png "landing_desplegado")
- 
+
 ---
- 
+
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
- 
+
 Durante el Sprint 1, el alcance de implementación se limitó exclusivamente al Landing Page estático. No se desarrollaron ni desplegaron Web Services (RESTful API) en esta iteración, por lo que no aplica documentación de endpoints para este Sprint. La documentación de servicios web se incorporará a partir del Sprint 3, conforme a lo planificado en el Product Backlog.
- 
+
 ---
- 
+
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
- 
+
 Durante el Sprint 1, el equipo configuró y ejecutó el proceso de despliegue del Landing Page mediante GitHub Pages y un pipeline de integración continua con GitHub Actions. A continuación se describe el proceso realizado:
- 
+
 1. **Creación del repositorio:** Se creó el repositorio público `landing-entreprenly` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con las ramas `main` y `develop`.
 
 ![creacion_repos](./images/creacion_repos.png "creacion_repos")
@@ -921,15 +917,15 @@ Durante el Sprint 1, el equipo configuró y ejecutó el proceso de despliegue de
 4. **Verificación del despliegue:** Se comprobó que el Landing Page quedó correctamente publicado y accesible desde la URL de GitHub Pages con el dominio configurado.
 
 ![landing_desplegado](./images/landing_desplegado.png "landing_desplegado")
- 
+
 ---
- 
+
 #### 5.2.1.8. Team Collaboration Insights during Sprint
- 
+
 Durante el Sprint 1, todos los miembros del equipo participaron activamente en la implementación del Landing Page, evidenciado a través de los commits registrados en el repositorio `landing-entreprenly`. El trabajo se distribuyó de manera colaborativa: Joseph Julius lideró la configuración del repositorio y el pipeline de despliegue; Lionel Abraham se encargó del desarrollo de funcionalidades interactivas y animaciones; Elynor Mikela, José Antonio y José Fernando contribuyeron con correcciones de contenido y en la estructura base de la página.
- 
+
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en la rama `develop` y realizando la integración a `main` mediante Pull Requests revisados y aprobados por otros miembros. Se realizaron un total de 5 Pull Requests durante el Sprint.
- 
+
 ![commits1](./images/commits1.png "commits1")
 
 ![commits2](./images/commits2.png "commits2")
@@ -1792,7 +1788,7 @@ La documentación formal de los endpoints con OpenAPI/Swagger se incorporará a 
 
 Durante el Sprint 2, el equipo configuró y ejecutó el proceso de despliegue del Frontend Web Application mediante Firebase Hosting y un pipeline de integración continua con GitHub Actions. A continuación se describe el proceso realizado:
 
-1. **Creación del repositorio del Frontend:** Se creó el repositorio público `daop-entreprenly-frontend` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con ramas `main`, `develop` y ramas `feature/` por Bounded Context.
+1. **Creación del repositorio del Frontend:** Se creó el repositorio público `ap-entreprenly-frontend` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con ramas `main`, `develop` y ramas `feature/` por Bounded Context.
 
 ![repo_frontend](./images/repo_frontend.png "repo_frontend")
 
@@ -1800,7 +1796,7 @@ Durante el Sprint 2, el equipo configuró y ejecutó el proceso de despliegue de
 
 ![firebase_p](./images/firebase_p.png "firebase_p")
 
-3. **Verificación del despliegue:** Se validó que la aplicación Angular se encuentra correctamente desplegada y accesible en `https://entreprenly.web.app`, con navegación entre BCs funcional sin errores 404 al refrescar el navegador.
+3. **Verificación del despliegue:** Se validó que la aplicación Angular se encuentra correctamente desplegada y accesible en `https://ap.entreprenly.online`, con navegación entre BCs funcional sin errores 404 al refrescar el navegador.
 
 ![app_firebase](./images/app_firebase.png "app_firebase")
 
@@ -1808,7 +1804,7 @@ Durante el Sprint 2, el equipo configuró y ejecutó el proceso de despliegue de
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 2, los cinco miembros del equipo participaron activamente en la implementación del Frontend Web Application, evidenciado a través de los commits y Pull Requests registrados en el repositorio `daop-entreprenly-frontend`. El trabajo se distribuyó por Bounded Context: Joseph Julius lideró la infraestructura base, el DashboardLayout, el Profile BC y la configuración del i18n y el sistema de temas; Elynor Mikela lideró el Chatbot BC y las vistas de Home y Help; José Fernando lideró el Sales BC; Lionel Abraham lideró el Subscription BC con soporte en el Inventory BzC; y José Antonio contribuyó con las traducciones del Subscription BC.
+Durante el Sprint 2, los cinco miembros del equipo participaron activamente en la implementación del Frontend Web Application, evidenciado a través de los commits y Pull Requests registrados en el repositorio `ap-entreprenly-frontend`. El trabajo se distribuyó por Bounded Context: Joseph Julius lideró la infraestructura base, el DashboardLayout, el Profile BC y la configuración del i18n y el sistema de temas; Elynor Mikela lideró el Chatbot BC y las vistas de Home y Help; José Fernando lideró el Sales BC; Lionel Abraham lideró el Subscription BC con soporte en el Inventory BzC; y José Antonio contribuyó con las traducciones del Subscription BC.
 
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en ramas `feature/` por Bounded Context (e.g., `feature/sales`, `feature/chatbot`, `feature/profile-configuration`, `feature/subscription`, `feature/inventory`) y realizando la integración a `develop` y `main` mediante Pull Requests. Se realizaron un total de **53 Pull Requests** durante el Sprint. La distribución de commits por miembro del equipo fue la siguiente: Camargo Briceño (87 commits), Palma De Los Santos (58 commits), Flores Pinchi (51 commits), Chavez Carrasco (49 commits) y Peirano Brun (5 commits).
 
@@ -1818,22 +1814,31 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
 
 ![network_g](./images/network_g.png "network_g")
 
-**URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/daop-entreprenly-frontend
+**URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/ap-entreprenly-frontend
 
+### 5.2.X.1.
 
-### 5.2.X.1. 
 ### 5.2.X.2.
+
 ### 5.2.X.3.
-### 5.2.X.4. 
-### 5.2.X.5. 
-### 5.2.X.6. 
-### 5.2.X.7. 
-### 5.2.X.8. 
+
+### 5.2.X.4.
+
+### 5.2.X.5.
+
+### 5.2.X.6.
+
+### 5.2.X.7.
+
+### 5.2.X.8.
 
 ## 5.3. Sprint Planning n. Aspect Leaders and Collaborators. Sprint Backlog n. Development Evidence for Sprint Review. Execution Evidence for Sprint Review. Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. Team Collaboration Insights during Sprint. Validation Interviews.
 
 ### 5.3.1. Diseño de Entrevistas.
-### 5.3.2. Registro de Entrevistas. ### 5.3.3. Evaluaciones según heurísticas
+
+### 5.3.2. Registro de Entrevistas.
+
+### 5.3.3. Evaluaciones según heurísticas
 
 Esta sección presenta la evaluación heurística aplicada a **Entreprenly** durante la etapa de validación. La evaluación se organiza en tres grupos: heurísticas de usabilidad, arquitectura de información e inclusive design. Cada criterio incluye un puntaje del 1 al 5, la evidencia observada (referenciada por figura) y las oportunidades de mejora identificadas.
 
@@ -2229,4 +2234,4 @@ Genera beneficios concretos: ahorro de tiempo, menos errores, confianza en el st
 
 ---
 
-## 5.4. Video About-the-Product. 
+## 5.4. Video About-the-Product.
