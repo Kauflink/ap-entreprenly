@@ -1444,11 +1444,14 @@ Este Bounded Context permite la gestión de ventas a través de un canal convers
 
 ### 4.7.1. Class Diagrams
 
+<p align="center">Shared Kernel BC</p>
+<p align="center"><img src="images/08_KernelBC.svg" width="500"/></p>
+
 <p align="center">Generación y Autenticación de Cuenta BC</p>
 <p align="center"><img src="images/01_AuthBC.svg" width="500"/></p>
 
 <p align="center">Perfil y Configuración BC</p>
-<p align="center"><img src="images/02_ProfileBC.png" width="500"/></p>
+<p align="center"><img src="images/02_ProfileBC.svg" width="500"/></p>
 
 <p align="center">Gestión y Proceso de Suscripción BC</p>
 <p align="center"><img src="images/03_SubscriptionBC.svg" width="500"/></p>
@@ -1462,21 +1465,20 @@ Este Bounded Context permite la gestión de ventas a través de un canal convers
 <p align="center">Chatbot de WhatsApp BC</p>
 <p align="center"><img src="images/07_ChatbotBC.svg" width="500"/></p>
 
+
 ## 4.8. Database Design
 
-El diseño de base de datos de Entreprenly está implementado en MySQL 8.0 y organizado en seis categorías. El esquema aplica normalización hasta la Tercera Forma Normal (3FN), eliminando redundancias y garantizando la integridad referencial en toda la operación del negocio.
+El diseño de base de datos de Entreprenly está implementado en MySQL 8.0 y organizado en siete categorías funcionales. El esquema aplica normalización hasta la Tercera Forma Normal (3FN), eliminando redundancias y garantizando la integridad referencial en toda la operación del negocio.
 
-El sistema distingue dos actores con responsabilidades distintas: los **Comerciantes**, quienes administran el negocio y tienen suscripción activa, y los **Clientes**, cuyos datos se registran únicamente para boletas y pedidos por WhatsApp, sin acceso al sistema.
+El sistema distingue dos actores con responsabilidades distintas: los **Comerciantes**, quienes administran el negocio y tienen suscripción activa, y los **Clientes**, cuyos datos se registran únicamente para pedidos por WhatsApp, sin acceso al sistema.
 
-Los productos se clasifican en tipo `unidad` (precio por unidad) y tipo `peso`o (precio por kilogramo), lo que determina cómo se interpreta el `stock_total` en cada caso.
+Los productos se clasifican en tipo `unit` (precio por unidad) y tipo `weight` (precio por kilogramo), lo que determina cómo se interpreta el stock disponible en cada lote.
 
-La balanza IoT se integra mediante `LecturasBalanza`, que registra cada pesaje y se vincula a una venta al confirmar la transacción, descontando el stock automáticamente.
+Los pagos digitales (Yape, Plin, tarjeta) quedan registrados en `sale_payment_receipts` como comprobante inmutable de cada venta confirmada.
 
-El arqueo de caja diario se gestiona en `ResumenDiario`, cuyo campo `total_general` es una columna calculada con `GENERATED ALWAYS AS` para evitar inconsistencias.
+El chatbot de WhatsApp persiste su sesión de conexión en `whatsapp_sessions` y registra cada conversación con el cliente en `conversations`. Los ítems de un pedido digital se almacenan como JSON dentro de `chat_orders` para preservar el snapshot exacto en el momento del pedido.
 
-Los pagos digitales (Yape y Plin) operan bajo un modelo P2P con validación manual del comerciante desde el dashboard.
-
-El chatbot de WhatsApp se integra mediante `ConexionesWhatsApp`, que persiste la sesión del número vinculado por QR, y `Conversaciones`, que registra cada mensaje del chat.
+Las alertas de stock (vencimiento, bajo stock, sin stock) son calculadas en tiempo real por el backend y no se persisten en base de datos.
 
 ### 4.8.1. Database Diagrams
 
@@ -1485,127 +1487,115 @@ El chatbot de WhatsApp se integra mediante `ConexionesWhatsApp`, que persiste la
 ![Database Diagram Entreprenly](images/Entreprenly_database_diagram.png)
 
 </div>
+
 ## Organización del esquema de base de datos
 
 El esquema se organiza en las siguientes tablas por categoría:
 
 ---
 
+**Identidad y Acceso (IAM)**
+
+- `users`  
+  Credenciales del comerciante: correo electrónico y hash de contraseña. Registra timestamps de creación y actualización.
+
+- `roles`  
+  Catálogo de roles del sistema (`ROLE_USER`, `ROLE_ADMIN`).
+
+- `role_users`  
+  Tabla de unión many-to-many entre `users` y `roles`.
+
+---
+
+**Perfil**
+
+- `profiles`  
+  Información completa del perfil del comerciante en una sola tabla: datos personales (nombre, teléfono, avatar), rol, plan contratado, preferencias (idioma, zona horaria, tema, moneda) y configuración de notificaciones (stock, pagos, chatbot). Referencia a `users` mediante `user_id`.
+
+---
+
 **Inventario**
 
-- `inventory_unit_products`  
-  Catálogo de productos vendidos por unidad, incluyendo precio, peso en gramos, marca y código QR único.
+- `unit_products`  
+  Catálogo de productos vendidos por unidad, con precio, peso en gramos, marca y código QR.
 
-- `inventory_weight_products`  
-  Catálogo de productos vendidos por peso, almacenando el precio por kilogramo y código QR.
+- `weight_products`  
+  Catálogo de productos vendidos por peso, con precio por kilogramo y código QR.
 
-- `inventory_lots`  
-  Tabla general de trazabilidad de lotes con fecha de ingreso y tipo de lote (`unit` o `weight`).
+- `unit_lots`  
+  Lotes de productos unitarios con cantidad disponible, fecha de ingreso y fecha de vencimiento opcional.
 
-- `inventory_unit_lots`  
-  Lotes específicos de productos unitarios con cantidad disponible y fecha de vencimiento.
-
-- `inventory_weight_lots`  
-  Lotes de productos vendidos al peso con cantidad disponible en kilogramos.
-
-- `inventory_stock_alerts`  
-  Registro de alertas de inventario como productos vencidos, próximos a vencer, bajo stock o sin stock.
+- `weight_lots`  
+  Lotes de productos por peso con cantidad disponible en kilogramos y fecha de ingreso.
 
 ---
 
 **Ventas**
 
 - `sales`  
-  Encabezado de ventas presenciales, incluyendo método de pago, estado de la venta, total y timestamps.
+  Encabezado de ventas presenciales: correo del propietario, id del vendedor, método de pago, estado, total y timestamps de creación y completado.
 
 - `sale_items`  
-  Detalle de productos vendidos en cada transacción con snapshot del nombre, cantidad, peso y subtotal.
+  Detalle de líneas de venta con snapshot del nombre del producto, cantidad, peso en kg, precio unitario y subtotal.
 
-- `cash_registers`  
-  Resumen diario de caja con totales en efectivo, pagos digitales y cantidad de ventas realizadas.
-
----
-
-**IoT**
-
-- `iot_scale`  
-  Registro de conexión de la balanza IoT utilizada para productos vendidos por peso.
+- `sale_payment_receipts`  
+  Comprobante de pago asociado a una venta: método, código de transacción, monto y fecha de confirmación. Relación uno-a-uno con `sales`.
 
 ---
 
 **Suscripciones**
 
-- `subscription_dashboard`  
-  Información principal del plan actual y plan recomendado para el comerciante, incluyendo precios, estado y periodo de facturación.
+- `subscriptions`  
+  Tabla principal de suscripción del comerciante. Almacena en columnas planas tanto el plan actual como el plan recomendado (id, nombre, descripción, precios mensual y anual, estado, etiquetas, periodo vigente) y la configuración de facturación (títulos, descripciones y etiquetas de acción para métodos de pago y datos fiscales).
 
-- `subscription_plan_features`  
-  Características habilitadas para cada plan asociado al dashboard de suscripciones.
+- `subscription_current_plan_features`  
+  Características habilitadas del plan actual, con descripción y disponibilidad. Referencia a `subscriptions`.
 
-- `subscription_plan_limits`  
-  Límites de uso del plan, como consumo actual y capacidad máxima permitida.
+- `subscription_recommended_plan_features`  
+  Características habilitadas del plan recomendado, con descripción y disponibilidad. Referencia a `subscriptions`.
 
-- `subscription_billing_setup`  
-  Configuración de facturación y datos fiscales asociados al comerciante.
+- `subscription_limits`  
+  Límites de uso del plan con valor utilizado y valor máximo permitido. Referencia a `subscriptions`.
 
 - `subscription_payment_methods`  
-  Métodos de pago registrados para suscripciones, incluyendo marca de tarjeta y últimos cuatro dígitos.
+  Métodos de pago registrados para la suscripción: marca de tarjeta, últimos cuatro dígitos, titular, vencimiento e indicador de predeterminado.
 
-- `subscription_activity`  
-  Historial de actividades y eventos relacionados con la suscripción.
-
----
-
-**Perfil y Configuración**
-
-- `profile_user`  
-  Información básica del usuario administrador, incluyendo nombre, rol y plan contratado.
-
-- `profile_preferences`  
-  Preferencias del usuario como idioma, zona horaria, tema visual y moneda.
-
-- `profile_notification_settings`  
-  Configuración de notificaciones relacionadas con stock, pagos y mensajes del chatbot.
+- `subscription_activities`  
+  Historial de actividades y eventos de la suscripción con título y detalle.
 
 ---
 
 **WhatsApp y Chatbot**
 
 - `whatsapp_sessions`  
-  Sesiones activas de WhatsApp vinculadas al negocio mediante QR.
+  Sesión de WhatsApp vinculada al negocio mediante QR: vendedor, correo propietario, nombre del negocio, estado de conexión, número de teléfono y timestamp de conexión.
 
 - `conversations`  
-  Conversaciones generadas entre clientes y el chatbot, con estado y timestamps.
+  Conversaciones entre clientes y el chatbot: id del vendedor, teléfono y nombre del cliente, estado y timestamps de inicio y cierre.
 
 - `chat_messages`  
-  Mensajes enviados dentro de cada conversación, incluyendo texto e imágenes.
+  Mensajes individuales dentro de una conversación: contenido, emisor (cliente, bot o sistema), tipo (texto, imagen, documento) y timestamp de envío.
 
 ---
 
 **Pedidos Digitales**
 
 - `chat_orders`  
-  Gestión de pedidos realizados mediante WhatsApp, incluyendo dirección, método de pago, estado y control de rechazos.
-
-- `chat_order_items`  
-  Detalle de productos solicitados en cada pedido con snapshot de precio unitario.
+  Pedidos realizados por WhatsApp: número de orden, teléfono del cliente, dirección de entrega, ítems serializados en JSON (`items_json`), total, estado, indicador de comprobante recibido, URL del comprobante, contador de rechazos y correo del propietario.
 
 ---
 
 **Relaciones principales**
 
-- Los productos (`inventory_unit_products` y `inventory_weight_products`) se relacionan con sus respectivos lotes mediante claves foráneas.
-- Las ventas (`sales`) se relacionan con `sale_items`.
-- Las conversaciones (`conversations`) se relacionan con mensajes (`chat_messages`) y pedidos (`chat_orders`.
-- Los pedidos (`chat_orders`) se relacionan con `chat_order_items`.
-- El dashboard de suscripciones (`subscription_dashboard`) centraliza relaciones con:
-  - `subscription_plan_features`
-  - `subscription_plan_limits`
-  - `subscription_billing_setup`
-  - `subscription_payment_methods`
-  - `subscription_activity`
-- El usuario (`profile_user`) se relaciona con:
-  - `profile_preferences`
-  - `profile_notification_settings`
+- `profiles` referencia a `users` mediante `user_id`.
+- `users` y `roles` se relacionan mediante la tabla de unión `role_users`.
+- `unit_lots` referencia a `unit_products` mediante `product_id`.
+- `weight_lots` referencia a `weight_products` mediante `product_id`.
+- `sale_items` referencia a `sales` mediante `sale_id`.
+- `sale_payment_receipts` referencia a `sales` mediante `sale_id` (relación uno-a-uno).
+- `subscription_current_plan_features`, `subscription_recommended_plan_features`, `subscription_limits`, `subscription_payment_methods` y `subscription_activities` referencian a `subscriptions` mediante `subscription_id`.
+- `chat_messages` referencia a `conversations` mediante `conversation_id`.
+- `chat_orders` referencia a `conversations` mediante `conversation_id`.
 
 ---
 
@@ -1614,16 +1604,17 @@ El esquema se organiza en las siguientes tablas por categoría:
 La normalización aplicada se resume en tres puntos principales:
 
 - **Primera Forma Normal (1FN):**  
-  Se cumple mediante el uso de atributos atómicos y tipos controlados mediante `ENUM`, evitando listas o valores multivaluados en una misma columna.
+  Se cumple mediante el uso de atributos atómicos en todas las tablas. La excepción deliberada es `chat_orders.items_json`, que serializa los ítems del pedido como JSON para preservar el snapshot exacto en el momento de la orden sin afectar la integridad de otras entidades.
 
 - **Segunda Forma Normal (2FN):**  
-  Se garantiza utilizando claves primarias simples y separando adecuadamente entidades independientes como productos, lotes, ventas, conversaciones y suscripciones.
+  Se garantiza utilizando claves primarias simples en todas las tablas y separando entidades independientes como productos, lotes, ventas, conversaciones y suscripciones.
 
 - **Tercera Forma Normal (3FN):**  
-  Se evidencia en la separación de configuraciones, preferencias, características de planes y actividades en tablas independientes, eliminando redundancia y dependencias transitivas.
+  Se evidencia en la separación de características de plan, límites, métodos de pago y actividades en tablas independientes que referencian a `subscriptions`, eliminando redundancia y dependencias transitivas.
 
 Además:
 
-- Los detalles de ventas y pedidos almacenan snapshots de información (`productName`, `unitPrice`, `subtotal`) para mantener consistencia histórica aunque cambie el catálogo de productos posteriormente.
-- Los totales almacenados en `sales`, `chat_orders` y `cash_registers` funcionan como registros contables históricos y no como datos derivados puramente calculables.
-- La separación entre productos unitarios y productos por peso evita valores nulos innecesarios y mejora la integridad del modelo de inventario.
+- Los detalles de ventas (`sale_items`) y pedidos (`chat_orders.items_json`) almacenan snapshots del nombre del producto, precio unitario y subtotal para mantener consistencia histórica aunque el catálogo de productos cambie posteriormente.
+- Los totales almacenados en `sales` y `chat_orders` funcionan como registros contables históricos y no como datos derivados puramente calculables.
+- La separación entre `unit_products`/`unit_lots` y `weight_products`/`weight_lots` evita valores nulos innecesarios y mejora la integridad del modelo de inventario.
+- Las alertas de stock son calculadas en tiempo real por el dominio (`StockAlertGenerator`) y no se persisten, lo que elimina la necesidad de sincronización entre tabla y estado real del inventario.
