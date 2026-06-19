@@ -2864,15 +2864,15 @@ Este video se publica en **Microsoft Stream** (versión privada de evidencia) y 
   <tbody>
     <tr>
       <td><strong>Screenshot del video</strong></td>
-      <td>[Insertar captura de un cuadro representativo del video]</td>
+      <td><img src="images/about-the-product-video.png" alt="Screenshot del Video About-the-Product de Entreprenly" width="520"></td>
     </tr>
     <tr>
       <td><strong>URL (Microsoft Stream)</strong></td>
-      <td>[Insertar enlace privado de Microsoft Stream]</td>
+      <td><a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQD7F8snmaJaQoAKXPJo6MHJARZWmd7lIrkanbWw0uIJt9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=i9I4BZ">Ver en Microsoft Stream</a></td>
     </tr>
     <tr>
       <td><strong>URL (YouTube — incrustado en Landing Page)</strong></td>
-      <td>[Insertar enlace público de YouTube]</td>
+      <td><a href="https://youtu.be/JFLwl_6-Alg">https://youtu.be/JFLwl_6-Alg</a></td>
     </tr>
     <tr>
       <td><strong>Duración</strong></td>
@@ -2881,4 +2881,4 @@ Este video se publica en **Microsoft Stream** (versión privada de evidencia) y 
   </tbody>
 </table>
 
-> **Nota:** Conforme al cronograma del enunciado, la primera versión del Video About-the-Product corresponde a la entrega AV2 (Sprint 3). Los campos entre corchetes `[ ]` son marcadores que deben reemplazarse por la evidencia real una vez producido y publicado el video.
+> **Nota:** Conforme al cronograma del enunciado, la primera versión del Video About-the-Product corresponde a la entrega AV2 (Sprint 3). El campo de duración entre corchetes `[ ]` debe completarse con el dato real del video publicado.
