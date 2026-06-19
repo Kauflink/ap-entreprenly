@@ -50,7 +50,7 @@ Aplicaciones Web
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repositorio-181717?logo=github)](https://github.com/Kauflink/ap-entreprenly.git)
 
-En esta sección se presenta la evidencia de colaboración del equipo Kauflink durante el desarrollo del Trabajo Final. La colaboración se llevó a cabo de forma distribuida a través de dos repositorios principales en GitHub: el repositorio del informe del proyecto (`ap-entreprenly`) y el repositorio del Landing Page (`ap-entreprenly-landing`), ambos bajo la organización [Kauflink](https://github.com/Kauflink).
+En esta sección se presenta la evidencia de colaboración del equipo Kauflink durante la elaboración del informe del Trabajo Final. El trabajo se desarrolló sobre el repositorio del Project Report (`ap-entreprenly`), bajo la organización [Kauflink](https://github.com/Kauflink), donde los cinco integrantes participaron mediante commits y Pull Requests a lo largo de las entregas AV1, TB1 y AV2. Para cada entrega se describe cómo se desarrollaron las actividades de elaboración del informe y se presentan las capturas de los analíticos de colaboración y commits del repositorio, en coherencia con el Registro de Versiones del Informe.
 
 ---
 
@@ -113,106 +113,6 @@ Para la entrega AV2, el equipo se enfocó en la implementación del backend de l
 
 ![Contri5](docs/images/contri5.png "contri5")
 ![Contri6](docs/images/contri6.png "contri6")
-
----
-
-## Repositorio del Landing Page — `ap-entreprenly-landing`
-
-**URL:** https://github.com/Kauflink/ap-entreprenly-landing
-
-Durante el Sprint 1 (13–20 de abril de 2026), el equipo realizó un total de **20 commits** en el repositorio del Landing Page. El trabajo se distribuyó en 5 Pull Requests desde la rama `develop` hacia `main`, siguiendo la estrategia GitFlow acordada. A continuación se detalla la participación por integrante:
-
-### Contribuciones por integrante
-
-<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-  <thead>
-    <tr>
-      <th>Integrante</th>
-      <th>GitHub Username</th>
-      <th>Commits (aprox.)</th>
-      <th>Área de contribución</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Camargo Briceño, Joseph Julius</td>
-      <td>Juyens</td>
-      <td>9</td>
-      <td>Configuración inicial del repositorio · .gitignore · README · CNAME · Workflow de GitHub Actions (4 iteraciones) · Merge PR #1</td>
-    </tr>
-    <tr>
-      <td>Chavez Carrasco, Lionel Abraham</td>
-      <td>LioTG</td>
-      <td>4</td>
-      <td>feat: controles de tema e idioma + CTAs · feat: animaciones hero y fade de tema · Merge PRs #2 y #3</td>
-    </tr>
-    <tr>
-      <td>Palma De Los Santos, Elynor Mikela</td>
-      <td>elynorpalma</td>
-      <td>2</td>
-      <td>fix: corrección de tildes · fix: ortografía arreglada</td>
-    </tr>
-    <tr>
-      <td>Peirano Brun, José Antonio</td>
-      <td>DoomerGX</td>
-      <td>2</td>
-      <td>app:Correccion · app:CorreccionPalabras</td>
-    </tr>
-    <tr>
-      <td>Flores Pinchi, José Fernando</td>
-      <td>Ferdinant12-ops</td>
-      <td>3</td>
-      <td>Estructura base del Landing Page (secciones hero, funcionalidades, planes, footer) · app:CorreccionTilde · Merge PR #5</td>
-    </tr>
-  </tbody>
-</table>
-
-### Resumen de Pull Requests — Sprint 1
-
-<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-  <thead>
-    <tr>
-      <th>PR #</th>
-      <th>Commit de merge</th>
-      <th>Descripción</th>
-      <th>Fecha</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>PR #1</td>
-      <td>5088424</td>
-      <td>Primera integración: estructura base, .gitignore y README</td>
-      <td>2026-04-18</td>
-    </tr>
-    <tr>
-      <td>PR #2</td>
-      <td>32ab091</td>
-      <td>Controles de tema e idioma + mejoras de CTAs</td>
-      <td>2026-04-19</td>
-    </tr>
-    <tr>
-      <td>PR #3</td>
-      <td>9136aed</td>
-      <td>Animaciones de transición en hero y fade de tema</td>
-      <td>2026-04-19</td>
-    </tr>
-    <tr>
-      <td>PR #4</td>
-      <td>846f934</td>
-      <td>Correcciones ortográficas y de tildes</td>
-      <td>2026-04-19</td>
-    </tr>
-    <tr>
-      <td>PR #5</td>
-      <td>7b8ccfc</td>
-      <td>Correcciones finales de contenido</td>
-      <td>2026-04-20</td>
-    </tr>
-  </tbody>
-</table>
-
-![Pull](docs/images/pull.png "Pull")
 
 ---
 
