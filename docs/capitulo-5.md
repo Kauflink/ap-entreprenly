@@ -2849,37 +2849,40 @@ Genera beneficios concretos: ahorro de tiempo, menos errores, confianza en el st
 
 ## 5.4. Video About-the-Product
 
-En esta sección el equipo introduce y describe el contenido del **Video About-the-Product** de Entreprenly. Este video tiene una orientación promocional y está dirigido a dos públicos: los visitantes del Landing Page, que desean conocer el modelo de negocio y las características principales de los productos de software, y los usuarios de las aplicaciones, que desean realizar las tareas relacionadas con los procesos soportados por la solución (gestión de inventario, registro de ventas, atención de pedidos por el chatbot y suscripción).
+En esta sección se presenta el video **About-the-Product** de Entreprenly, una pieza de orientación promocional que resume el modelo de negocio, las características y los beneficios del producto. El video, de una duración de entre uno y tres minutos, parte de los dolores cotidianos de un negocio de barrio —el inventario llevado en cuaderno, los productos que se vencen y los pedidos de WhatsApp que no paran— para presentar a **Entreprenly como la plataforma que digitaliza el negocio de retail integrando inventario, ventas y atención por WhatsApp en un solo lugar**. A lo largo de la narración se muestran sus capacidades centrales: el control del stock en tiempo real con alertas anticipadas de vencimiento y desabastecimiento, el registro de ventas en segundos con cuadre de caja que separa automáticamente el efectivo de los medios digitales, y un chatbot que atiende los pedidos por WhatsApp de forma automática —confirmando stock y registrando la venta— de modo que el comerciante solo aprueba el pago.
 
-El tono de comunicación del video es consistente con el adoptado para el producto: cercano, claro y orientado al comerciante peruano. El contenido resume la propuesta de valor, muestra escenas de interacción reales con la Frontend Web Application (Vue 3 + PrimeVue) y con el chatbot de WhatsApp, y destaca los beneficios concretos de la solución. De acuerdo con lo indicado en el enunciado, el video incluye al menos un testimonio positivo de un usuario que participó en las entrevistas de validación (sección 5.3).
+El video incluye escenas de interacción real con el producto (navegación por el dashboard de inventario, registro de ventas y el flujo de pedido por el chatbot) y recoge **al menos una opinión por cada segmento objetivo**. Por el **Segmento 1 (Comerciantes)** participa Stephanie, dueña de negocio, quien destaca que la plataforma reúne inventario, ventas y caja en un solo lugar de forma ordenada, frente a su método anterior basado en cuaderno y celular; resalta el ahorro de tiempo, la prevención de pérdidas gracias a las alertas de vencimiento y la rapidez al cuadrar la caja, y califica con 5/5 la probabilidad de volver a comprar en una tienda que use el sistema por considerarlo rápido, eficiente e intuitivo. Por el **Segmento 2 (Clientes Finales)** se incorpora la apreciación de Sebastián (registrada en la sección 5.3.2), quien valora la confirmación de stock en tiempo real y la atención automatizada por el chatbot de WhatsApp como un proceso claro, seguro y rápido.
 
-Este video se publica en **Microsoft Stream** (versión privada de evidencia) y en **YouTube** (versión utilizada para incrustarse en una sección adecuada del Landing Page). A continuación se consigna el screenshot del video, el enlace a la versión publicada y la duración del mismo.
+El video fue subido a **Microsoft Stream** y a **YouTube**. A continuación se incluye un screenshot del video con su respectivo enlace.
 
-<table>
-  <thead>
-    <tr>
-      <th>Elemento</th>
-      <th>Detalle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Screenshot del video</strong></td>
-      <td><img src="images/about-the-product-video.png" alt="Screenshot del Video About-the-Product de Entreprenly" width="520"></td>
-    </tr>
-    <tr>
-      <td><strong>URL (Microsoft Stream)</strong></td>
-      <td><a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQD7F8snmaJaQoAKXPJo6MHJARZWmd7lIrkanbWw0uIJt9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=i9I4BZ">Ver en Microsoft Stream</a></td>
-    </tr>
-    <tr>
-      <td><strong>URL (YouTube — incrustado en Landing Page)</strong></td>
-      <td><a href="https://youtu.be/JFLwl_6-Alg">https://youtu.be/JFLwl_6-Alg</a></td>
-    </tr>
-    <tr>
-      <td><strong>Duración</strong></td>
-      <td>[Insertar duración del video, entre 1 y 3 minutos]</td>
-    </tr>
-  </tbody>
-</table>
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
 
-> **Nota:** Conforme al cronograma del enunciado, la primera versión del Video About-the-Product corresponde a la entrega AV2 (Sprint 3). El campo de duración entre corchetes `[ ]` debe completarse con el dato real del video publicado.
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  Video About-the-Product — Entreprenly
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/about-the-product-video.png" alt="Screenshot del video About-the-Product de Entreprenly" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Links -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link del video (Microsoft Stream):</strong>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQD7F8snmaJaQoAKXPJo6MHJARZWmd7lIrkanbWw0uIJt9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=i9I4BZ" style="color: #1a6b6b;">Entreprenly — Video About-the-Product (Microsoft Stream)</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link del video (YouTube):</strong>
+        <a href="https://youtu.be/JFLwl_6-Alg" style="color: #1a6b6b;">Entreprenly — Video About-the-Product (YouTube)</a>
+      </td>
+    </tr>
+  </table>
+
+</div>
+</div>
