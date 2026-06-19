@@ -1825,6 +1825,336 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
 
 **URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/ap-entreprenly-frontend
 
+---
+
+### 5.2.3. Sprint 3
+
+#### 5.2.3.1. Sprint Planning 3
+
+Para el tercer Sprint, el equipo estableció como objetivo principal la implementación y despliegue de los **RESTful Web Services** de Entreprenly en **ASP.NET Core (C#, .NET 10)**, cubriendo todos los Bounded Contexts del backend (IAM, Profiles, Inventory, Sales, Subscription y Chatbot), y la **integración del Frontend Web Application con la API real**, reemplazando el mock de JSON-Server utilizado en el Sprint 2. La reunión de planificación se realizó de forma virtual.
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <tbody>
+    <tr>
+      <td colspan="2"><strong>Sprint 3</strong></td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>Sprint Planning Background</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>2026-06-11</td>
+    </tr>
+    <tr>
+      <td><strong>Time</strong></td>
+      <td>09:00 PM</td>
+    </tr>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td>Reunión virtual vía Discord</td>
+    </tr>
+    <tr>
+      <td><strong>Prepared By</strong></td>
+      <td>Camargo Briceño, Joseph Julius</td>
+    </tr>
+    <tr>
+      <td><strong>Attendees (to planning meeting)</strong></td>
+      <td>Camargo Briceño, Joseph Julius / Chavez Carrasco, Lionel Abraham / Palma De Los Santos, Elynor Mikela / Peirano Brun, José Antonio / Flores Pinchi, José Fernando</td>
+    </tr>
+    <tr>
+      <td><strong>Sprint 2 Review Summary</strong></td>
+      <td>En el Sprint 2 se implementó y desplegó la Frontend Web Application en Vue 3 + PrimeVue sobre Firebase Hosting (<a href="https://ap.entreprenly.online">ap.entreprenly.online</a>), cubriendo todos los Bounded Contexts con una API simulada mediante JSON-Server. Quedó pendiente la implementación del backend real y la integración de la aplicación con dicho backend.</td>
+    </tr>
+    <tr>
+      <td><strong>Sprint 2 Retrospective Summary</strong></td>
+      <td>El equipo confirmó que la asignación de un Bounded Context por miembro funcionó bien para el frontend. Para el Sprint 3 se acordó replicar ese esquema en el backend (un BC por responsable), tomar como referencia la arquitectura de <code>learning-center-platform</code>, y coordinar tempranamente los contratos REST para minimizar el retrabajo durante la integración frontend–backend.</td>
+    </tr>
+    <tr>
+      <td colspan="2"><strong>Sprint Goal &amp; User Stories</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Sprint 3 Goal</strong></td>
+      <td>Nuestro enfoque está en implementar y desplegar los RESTful Web Services de Entreprenly en ASP.NET Core, exponiendo los endpoints de IAM, Profiles, Inventory, Sales, Subscription y Chatbot, e integrar la Frontend Web Application con la API real. Creemos que entrega a los comerciantes una solución completamente funcional con datos persistentes, y a los desarrolladores una API documentada y desplegada. Esto se confirmará cuando la API esté desplegada en <code>ap-api.entreprenly.online</code> con su documentación Swagger disponible, y la aplicación web consuma los endpoints reales en todos los flujos clave sin depender del mock de JSON-Server.</td>
+    </tr>
+    <tr>
+      <td><strong>Sprint 3 Velocity</strong></td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td><strong>Sum of Story Points</strong></td>
+      <td>42</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsable, esta vez sobre el backend. Los aspectos cubiertos fueron: el Shared Kernel, la infraestructura de despliegue (Docker, Caddy, CI/CD) y los BCs de IAM y Profiles; el BC de Inventory; el BC de Sales; el BC de Subscription; y el BC de Chatbot. A continuación se presenta la matriz de liderazgo y colaboración (LACX):
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Team Member (Last Name, First Name)</th>
+      <th>GitHub Username</th>
+      <th>Shared Kernel, Deploy, IAM & Profiles<br>Leader (L) / Collaborator (C)</th>
+      <th>Inventory BC<br>Leader (L) / Collaborator (C)</th>
+      <th>Sales BC<br>Leader (L) / Collaborator (C)</th>
+      <th>Subscription BC<br>Leader (L) / Collaborator (C)</th>
+      <th>Chatbot BC<br>Leader (L) / Collaborator (C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Juyens</td>
+      <td>L</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Peirano Brun, José Antonio</td>
+      <td>DoomerGX</td>
+      <td>C</td>
+      <td>L</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Flores Pinchi, José Fernando</td>
+      <td>Ferdinant12-ops</td>
+      <td>C</td>
+      <td>C</td>
+      <td>L</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Chavez Carrasco, Lionel Abraham</td>
+      <td>LioTG</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+      <td>L</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>elynorpalma</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+      <td>L</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.3.3. Sprint Backlog 3
+
+El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presentan los Work-items, organizados por aspecto, con el responsable y su estado al cierre del Sprint.
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Aspecto / Bounded Context</th>
+      <th>Work-item / Task</th>
+      <th>Estimation (Hours)</th>
+      <th>Assigned To</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shared Kernel</td>
+      <td>Configurar el shared kernel y la configuración base de la Web API (EF Core, MySQL, mediator Cortex, manejo de errores).</td>
+      <td>8</td>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>IAM</td>
+      <td>Implementar el modelo de dominio de usuarios y roles, servicios de aplicación, persistencia, hashing BCrypt y autenticación JWT; exponer endpoints de authentication, users y roles; agregar cambio de contraseña y de correo.</td>
+      <td>14</td>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Profiles</td>
+      <td>Implementar el modelo de dominio y value objects de perfil, auto-aprovisionamiento vía evento de integración de IAM, almacenamiento de avatar y endpoints REST de perfil y preferencias.</td>
+      <td>10</td>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Deploy / CI/CD</td>
+      <td>Containerizar el backend (Dockerfile multi-etapa), definir el stack de la VM con Docker Compose y Caddy, y crear el workflow de despliegue a la VM mediante Workload Identity Federation.</td>
+      <td>10</td>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Inventory</td>
+      <td>Implementar el Bounded Context de Inventory (productos por unidad y por peso, lotes, alertas de stock) con su migración de base de datos y endpoints REST.</td>
+      <td>12</td>
+      <td>Peirano Brun, José Antonio</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td>Implementar el Bounded Context de Sales (capas de dominio, aplicación, persistencia e interfaces REST), el descuento de stock vía Inventory y el filtrado de ventas por día de negocio.</td>
+      <td>12</td>
+      <td>Flores Pinchi, José Fernando</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Subscription</td>
+      <td>Implementar el Bounded Context de Subscription con su migración, el mapeo de planes y datos de facturación, y los endpoints <code>me/dashboard</code> y <code>me/payment-confirmation</code>.</td>
+      <td>12</td>
+      <td>Chavez Carrasco, Lionel Abraham</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Chatbot</td>
+      <td>Implementar el Bounded Context de Chatbot (dominio, aplicación, infraestructura e interfaces REST), la máquina de estados de pedidos, la detección de productos contra el inventario real, el QR del bridge de WhatsApp y los endpoints de conversaciones, mensajes y pedidos.</td>
+      <td>16</td>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>Integración Frontend–API</td>
+      <td>Reemplazar el mock de JSON-Server por la API real: cliente HTTP autenticado con interceptor de token, alineación de modelos y assemblers por BC y parametrización de endpoints vía variables de entorno (<code>VITE_*</code>).</td>
+      <td>14</td>
+      <td>Equipo completo</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de Web Services (`ap-entreprenly-web-services`) y, de forma complementaria, sobre el repositorio del Frontend (`ap-entreprenly-frontend`) para la integración con la API real. El trabajo se realizó entre el 12 y el 19 de junio de 2026, aplicando GitFlow con ramas `feature/` por Bounded Context. A continuación se presenta el registro de los commits más representativos:
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Committed on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/shared-kernel</td><td>71c25cb</td><td>feat: add shared kernel and web api configuration</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/iam-context</td><td>64aad46</td><td>feat(iam): expose authentication, users and roles rest endpoints</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/profiles-context</td><td>0408620</td><td>feat(profiles): expose profile rest endpoints</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/app-bootstrap</td><td>8f8d85a</td><td>feat(persistence): add initial database migration</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>2976a19</td><td>feat(deploy): containerize the backend</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>88c96ec</td><td>feat(deploy): add vm compose stack with caddy</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>2d71068</td><td>ci: deploy to the vm on pushes to main</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>6211f75</td><td>feat(chatbot): add chatbot bounded context — domain, application, infrastructure and REST interfaces</td><td>2026-06-13</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/sales</td><td>1e278ef</td><td>feat(sales): add sales persistence and REST interfaces</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/inventory</td><td>1cd6fa6</td><td>feat(inventory): add inventory bounded context</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/subscription</td><td>ffac4aa</td><td>feat: add Subscription bounded context and migration</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>a52153a</td><td>feat(chatbot): implement conversation flow with product detection and order state machine</td><td>2026-06-17</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>c181a2b</td><td>feat(chatbot): wire catalog product repository to real inventory</td><td>2026-06-18</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>763b6d3</td><td>feat(subscription): add me/dashboard and me/payment-confirmation endpoints</td><td>2026-06-18</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/change-credentials</td><td>26106e1</td><td>feat(iam): add change password and change email endpoints</td><td>2026-06-19</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/connect-backend</td><td>46ccfa0</td><td>feat(auth): add IAM session store, API client and token interceptor</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>e5e0ef1</td><td>feat(sales): align sales domain models and assemblers with backend contract</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>b8f2e57</td><td>feat(chatbot): connect store and API to real backend endpoints</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>5f76582</td><td>fix(dashboard): route home API calls through authenticated client</td><td>2026-06-18</td></tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+
+Al término del Sprint 3, la Frontend Web Application consume la API real desplegada en `https://ap-api.entreprenly.online/api/v1`, con persistencia en MySQL y autenticación JWT. Los flujos clave —registro e inicio de sesión, gestión de inventario y lotes, registro de ventas en el punto de venta, gestión de la suscripción y atención de pedidos por el chatbot de WhatsApp— operan sobre datos persistentes reales. A continuación se incluyen las capturas de las principales vistas funcionando contra el backend.
+
+<img src="images/exec_s3_login.png" width="600">
+
+<img src="images/exec_s3_inventory.png" width="600">
+
+<img src="images/exec_s3_sales.png" width="600">
+
+> **Nota:** Las capturas son marcadores (`images/exec_s3_*.png`) que el equipo debe reemplazar por los screenshots reales de la aplicación operando contra la API. Adicionalmente, incluir el enlace al video de navegación del producto subido a Microsoft Stream.
+
+---
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **OpenAPI/Swagger** (Swashbuckle), disponibles en `https://ap-api.entreprenly.online/swagger`. A continuación se resume, por Bounded Context, la relación de endpoints implementados:
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Bounded Context</th>
+      <th>Endpoints (verbo HTTP + ruta)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IAM</td>
+      <td><code>POST /api/v1/authentication/sign-in</code>, <code>POST /api/v1/authentication/sign-up</code>, <code>GET /api/v1/users</code>, <code>GET /api/v1/users/{id}</code>, <code>PUT /api/v1/users/me/password</code>, <code>PUT /api/v1/users/me/email</code>, <code>GET /api/v1/roles</code></td>
+    </tr>
+    <tr>
+      <td>Profiles</td>
+      <td><code>GET /api/v1/profiles</code>, <code>GET /api/v1/profiles/{id}</code>, <code>GET /api/v1/profiles/by-user/{userId}</code>, <code>POST /api/v1/profiles</code>, <code>PUT /api/v1/profiles/{id}</code>, <code>PUT /api/v1/profiles/{id}/preferences</code>, <code>PUT /api/v1/profiles/{id}/notification-settings</code></td>
+    </tr>
+    <tr>
+      <td>Inventory</td>
+      <td><code>GET/POST/PUT/DELETE /api/v1/inventory-unit-products</code>, <code>GET/POST/PUT/DELETE /api/v1/inventory-weight-products</code>, <code>GET /api/v1/inventory-lots</code>, <code>GET /api/v1/inventory-unit-lots</code>, <code>GET /api/v1/inventory-weight-lots</code>, <code>GET /api/v1/inventory-stock-alerts</code></td>
+    </tr>
+    <tr>
+      <td>Sales</td>
+      <td><code>POST /api/v1/sales</code>, <code>GET /api/v1/sales</code> (filtro opcional <code>?date</code>), <code>GET /api/v1/sales/{saleId}</code></td>
+    </tr>
+    <tr>
+      <td>Subscription</td>
+      <td><code>GET /api/v1/subscriptions/me/dashboard</code>, <code>PUT /api/v1/subscriptions/me/dashboard</code>, <code>GET /api/v1/subscriptions/me/payment-confirmation</code>, y endpoints <code>by-user/{userId}</code> (<code>billing-setup</code>, <code>activate-control</code>, <code>schedule-cancellation</code>, <code>keep-control</code>)</td>
+    </tr>
+    <tr>
+      <td>Chatbot</td>
+      <td><code>GET/POST /api/v1/conversations</code>, <code>GET/POST /api/v1/chat-messages</code>, <code>GET/POST /api/v1/chat-orders</code>, <code>POST /api/v1/chat-orders/{id}/confirm</code>, <code>POST /api/v1/chat-orders/{id}/reject</code>, <code>GET/POST /api/v1/whatsapp-sessions</code>, <code>POST /api/v1/chatbot/whatsapp</code> (webhook)</td>
+    </tr>
+  </tbody>
+</table>
+
+> **Nota:** Incluir capturas de la interfaz de Swagger UI mostrando la interacción con datos de muestra (`images/swagger_s3_*.png`).
+
+**URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
+
+---
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`), publicarla en **Google Artifact Registry** (`us-east1-docker.pkg.dev`), y desplegarla en la instancia de **Google Compute Engine** mediante **Docker Compose**, con **Caddy** como reverse proxy y gestor automático de TLS. La autenticación del pipeline de GitHub Actions se realiza mediante **Workload Identity Federation**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
+
+> **Nota:** Incluir capturas del workflow de despliegue exitoso, del Artifact Registry con la imagen publicada y del API respondiendo sobre HTTPS (`images/deploy_s3_*.png`).
+
+---
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 3, los cinco miembros del equipo participaron en la implementación del backend y su integración con el frontend. El trabajo se distribuyó por Bounded Context en el repositorio `ap-entreprenly-web-services`: Joseph Julius lideró el Shared Kernel, la infraestructura de despliegue (Docker, Caddy, CI/CD) y los BCs de IAM y Profiles; José Antonio lideró el BC de Inventory; José Fernando lideró el BC de Sales; Lionel Abraham lideró el BC de Subscription; y Elynor Mikela lideró el BC de Chatbot. La integración del frontend con la API real se realizó de forma colaborativa, cada miembro sobre su BC.
+
+El equipo aplicó GitFlow con ramas `feature/` por Bounded Context (`feature/iam-context`, `feature/profiles-context`, `feature/inventory`, `feature/sales`, `feature/subscription`, `feature/chatbot`, `feature/deployment`) integradas a `develop` y `main` mediante Pull Requests (más de 20 PRs en el repositorio de Web Services). La distribución aproximada de commits en el backend fue: Camargo Briceño (37), Palma De Los Santos (25), Chavez Carrasco (12), Flores Pinchi (6) y Peirano Brun (3).
+
+> **Nota:** Incluir las capturas de los analíticos de colaboración y commits de GitHub para ambos repositorios (`images/collab_s3_*.png`).
+
+---
+
 ## 5.3. Validation Interviews
 
 En esta sección el equipo registra y explica las actividades de entrevistas de validación realizadas durante el proyecto. A diferencia de las entrevistas de elicitación presentadas en la sección 2.2 —cuyo objetivo fue descubrir los problemas y necesidades de los usuarios—, las entrevistas de validación tienen como propósito confirmar si la solución construida (Landing Page y aplicaciones) resuelve efectivamente esos problemas y resulta usable para los segmentos objetivo.
