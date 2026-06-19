@@ -766,7 +766,7 @@ Los comerciantes entrevistados operan con herramientas insuficientes o inexisten
   <img src="images/graf_metodoPreferido.png" alt="graf_metodoPreferido" width="500"/>
 </p>
 
-El gráfico evidencia un alto nivel de aceptación del modelo: el 75% de los capacitadores lo valida de forma total, mientras que el 25% restante lo apoya bajo condiciones específicas de diseño. Ningún entrevistado rechazó la propuesta, lo que representa un respaldo experto sólido para Entreprenly.
+El gráfico evidencia una clara preferencia por los medios de pago digitales: el 67% de los entrevistados utiliza billeteras digitales como Yape o Plin como medio principal, mientras que el 33% restante combina tarjeta con billetera digital. Ningún entrevistado prioriza el efectivo, lo que confirma que la conciliación de pagos electrónicos es una necesidad central para este segmento y valida el enfoque de Entreprenly en la confirmación automática de cobros digitales.
 
 
 **Principales frustraciones al comprar en minimarkets locales**
@@ -775,7 +775,7 @@ El gráfico evidencia un alto nivel de aceptación del modelo: el 75% de los cap
   <img src="images/graf_principalesFrustaciones.png" alt="Principales frustraciones al comprar en minimarkets locales" width="500"/>
 </p>
 
-La sobrecarga cognitiva y la falta de seguimiento lideran los riesgos con un 50% cada uno, seguidos por la baja alfabetización digital y la inaplicabilidad en etapas de ideación con un 25%. Estos datos orientan directamente las decisiones de diseño: el contenido debe ser variado, progresivo y acompañado de un sistema de recordatorios que sostenga la continuidad del usuario.
+Las principales frustraciones se concentran en la incertidumbre del stock y la demora en la atención: el 100% del segmento ha pagado alguna vez por un producto que resultó estar agotado y el 100% señaló la lentitud en la respuesta por WhatsApp como una de sus mayores molestias. Estas experiencias negativas erosionan la confianza en el negocio local y orientan el diseño de Entreprenly hacia la validación de stock en tiempo real y la confirmación inmediata de pedidos.
 
 **Confianza ante stock validado por sensor de peso**
 
@@ -783,7 +783,7 @@ La sobrecarga cognitiva y la falta de seguimiento lideran los riesgos con un 50%
   <img src="images/graf_seguridadSensor.png" alt="graf_seguridadSensor" width="500"/>
 </p>
 
-El aumento de ventas fue mencionado por el 100% de los capacitadores como la métrica más relevante para evaluar el impacto del programa. La organización financiera y la constancia de participación aparecen con un 50%, mientras que la generación de nuevos contactos o clientes fue señalada por el 25%. Esta jerarquía define el orden de prioridad para los indicadores de éxito de Entreprenly.
+El 100% del segmento afirmó que un sistema con validación de stock mediante sensor de peso les brindaría mayor seguridad al comprar desde su celular. La unanimidad confirma que la desconfianza hacia el stock informado es una barrera real de compra y que la validación física del inventario por peso es percibida como un factor decisivo de confianza, respaldando directamente una de las funcionalidades centrales de Entreprenly.
 
 
 **Disposición a reemplazar la compra presencial por canal digital**
