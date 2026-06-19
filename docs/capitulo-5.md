@@ -124,6 +124,16 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
       <td>Entorno de ejecución JavaScript y herramienta de build requeridos para ejecutar el servidor de desarrollo de Vue, gestionar dependencias y generar el bundle de producción del Frontend.</td>
       <td><a href="https://nodejs.org/">https://nodejs.org/</a></td>
     </tr>
+    <tr>
+      <td><strong>Pinia</strong></td>
+      <td>Biblioteca oficial de gestión de estado para Vue, utilizada para centralizar el estado compartido entre bounded contexts del Frontend mediante stores por dominio.</td>
+      <td><a href="https://pinia.vuejs.org/">https://pinia.vuejs.org/</a></td>
+    </tr>
+    <tr>
+      <td><strong>Docker</strong></td>
+      <td>Plataforma de containerización utilizada para empaquetar el RESTful Web Services (ASP.NET Core) en una imagen reproducible, publicada en Google Artifact Registry y orquestada en la VM mediante Docker Compose.</td>
+      <td><a href="https://www.docker.com/">https://www.docker.com/</a></td>
+    </tr>
   </tbody>
 </table>
 
@@ -290,11 +300,12 @@ Las convenciones aplicadas son las siguientes:
 - Los nombres de **archivos de componentes** se escriben en **PascalCase**: `DashboardLayout.vue`, `ProductCard.vue`, `SubscriptionPanel.vue`.
 - Los nombres de **componentes con múltiples palabras** evitan colisiones con elementos HTML nativos, conforme a la Vue Style Guide (regla de prioridad esencial).
 - Las **props** se declaran con su tipo y, cuando aplica, con valores por defecto y la marca de obligatoriedad: `defineProps({ productId: { type: Number, required: true } })`.
-- El estado reactivo se gestiona con `ref` y `reactive`, y los valores derivados con `computed`, en lugar de mutaciones manuales del DOM.
+- El estado reactivo local se gestiona con `ref` y `reactive`, y los valores derivados con `computed`, en lugar de mutaciones manuales del DOM.
+- El estado compartido entre vistas y bounded contexts se gestiona con **Pinia** (stores por dominio), evitando el prop-drilling y centralizando la lógica de acceso a datos.
 - Los nombres de **variables, funciones y métodos** se escriben en **camelCase**: `isLoggedIn`, `fetchProducts()`.
 - Los nombres de **constantes globales** se escriben en **UPPER_SNAKE_CASE**: `MAX_RETRY_ATTEMPTS`.
-- Las vistas y los componentes se organizan **por bounded context** (p. ej. `inventory/`, `sales/`, `subscription/`), evitando una estructura monolítica, y la navegación se resuelve con **Vue Router** mediante lazy-loading por BC.
-- Las operaciones asíncronas (consumo de la API) se manejan con `async/await` sobre `fetch`/`axios`, encapsuladas en servicios o composables reutilizables (`useProducts`, `useSubscription`).
+- Las vistas y los componentes se organizan **por bounded context** (`auth/`, `inventory/`, `sales/`, `subscription/`, `profile/`, `chatbot/`, además de `shared/`), evitando una estructura monolítica, y la navegación se resuelve con **Vue Router** mediante lazy-loading por BC.
+- Las operaciones asíncronas (consumo de la API) se manejan con `async/await` sobre **axios**, encapsuladas en servicios por bounded context; las rutas base y los endpoints se parametrizan mediante variables de entorno de Vite (`VITE_*`).
 - La internacionalización (i18n) se gestiona con **vue-i18n**, manteniendo las claves de traducción organizadas por bounded context.
 
 #### C# y ASP.NET Core
@@ -306,9 +317,9 @@ Las convenciones aplicadas son las siguientes:
 - Los nombres de **clases, interfaces, métodos y propiedades públicas** se escriben en **PascalCase**: `ProductController`, `IProductRepository`, `FindProductById()`. Las interfaces se prefijan con `I`.
 - Los nombres de **variables locales y parámetros** se escriben en **camelCase**: `currentUser`, `productId`.
 - Los nombres de **constantes** se escriben en **PascalCase**: `DefaultPageSize`.
-- Los **namespaces** se organizan por bounded context siguiendo la estructura de learning-center-platform: `Entreprenly.API.[BoundedContext].[Layer]`. Por ejemplo: `Entreprenly.API.Inventory.Interfaces.REST`, `Entreprenly.API.Inventory.Domain.Model.Aggregates`.
-- La arquitectura interna de cada bounded context sigue el patrón de capas DDD: `Domain` (aggregates, entities, value objects, commands, queries, repository interfaces), `Application` (command/query services e internal handlers), `Infrastructure` (Entity Framework Core repositories y adaptadores externos) e `Interfaces` (REST controllers y transform/resources).
-- Los **endpoints** de los controladores REST se nombran en **kebab-case** y en plural para recursos: `/api/v1/products`, `/api/v1/lots`.
+- Los **namespaces** se organizan por bounded context siguiendo la estructura de learning-center-platform: `Entreprenly.WebServices.[BoundedContext].[Layer]`. Por ejemplo: `Entreprenly.WebServices.Inventory.Interfaces.REST`, `Entreprenly.WebServices.Inventory.Domain.Model.Aggregates`. Los bounded contexts implementados son `Iam`, `Profiles`, `Subscription`, `Inventory`, `Sales` y `Chatbot`, además de `Shared`.
+- La arquitectura interna de cada bounded context sigue el patrón de capas DDD: `Domain` (aggregates, entities, value objects, commands, queries, repository interfaces), `Application` (command/query services e internal handlers), `Infrastructure` (repositories con Entity Framework Core sobre MySQL y adaptadores externos) e `Interfaces` (REST controllers y transform/resources). La comunicación entre capas mediante comandos y queries se apoya en el patrón **Mediator** (Cortex.Mediator), siguiendo el enfoque CQRS de learning-center-platform.
+- Los **endpoints** de los controladores REST se nombran en **kebab-case** y en plural para recursos: `/api/v1/inventory-unit-products`, `/api/v1/inventory-lots`, `/api/v1/sales`.
 - Los **métodos HTTP** se emplean de acuerdo con su semántica RESTful: `GET` para consultas, `POST` para creación, `PUT` para actualización completa, `PATCH` para actualización parcial y `DELETE` para eliminación.
 - Se utilizan los **atributos estándar** de ASP.NET Core: `[ApiController]`, `[Route]`, `[HttpGet]`, `[HttpPost]`, entre otros.
 - Se aplica **indentación de 4 espacios** de acuerdo con las C# Coding Conventions.
@@ -388,30 +399,25 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
 #### RESTful Web Services
 
-El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#) y se despliega sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)**. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se conecta de forma segura a la VM mediante SSH para ejecutar el proceso de actualización del servicio.
+El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#, .NET 10) y se despliega de forma **containerizada con Docker** sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)**. La imagen del API se publica en **Google Artifact Registry** y, en la VM, se orquesta mediante **Docker Compose** junto con **Caddy**, que actúa como reverse proxy y gestiona automáticamente los certificados TLS. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se autentica con GCP mediante **Workload Identity Federation** (sin claves de cuenta de servicio de larga duración). La persistencia se realiza sobre una base de datos **MySQL**.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
-1. En la consola de GCP, crear una instancia de **Compute Engine** con las siguientes características mínimas recomendadas: sistema operativo Ubuntu 24.04 LTS, tipo de máquina `e2-medium`, disco de arranque de 50 GB y dirección IP externa estática asignada.
-2. En la instancia, instalar el **.NET SDK / ASP.NET Core Runtime**:
-   ```bash
-   sudo apt update
-   sudo apt install -y dotnet-sdk-9.0
+1. En la consola de GCP, crear una instancia de **Compute Engine** (Ubuntu 24.04 LTS, tipo `e2-medium`) con Docker y Docker Compose instalados, y crear un repositorio en **Artifact Registry** (`us-east1-docker.pkg.dev/<project>/entreprenly`) para alojar la imagen del API.
+2. En la VM, preparar el directorio de despliegue `/opt/app` con el archivo `docker-compose.yml`, el `Caddyfile` y el archivo de secretos `app.env` (cadena de conexión a MySQL, secreto JWT, configuración del WhatsApp bridge). Estos secretos **no se versionan**; se proveen localmente en la VM.
+3. Definir el `Caddyfile` para que Caddy termine TLS sobre `ap-api.entreprenly.online` y haga `reverse_proxy` al contenedor del API en el puerto `8080`:
+   ```caddy
+   ap-api.entreprenly.online {
+       encode gzip
+       reverse_proxy api:8080
+   }
    ```
-3. Configurar el servicio de ASP.NET Core como un servicio del sistema operativo con `systemd`, creando el archivo `/etc/systemd/system/entreprenly.service`, para garantizar su reinicio automático ante fallos o reinicios de la VM.
-4. En el proveedor de DNS del dominio, crear un registro `A` que apunte `ap-api.entreprenly.online` a la IP externa estática de la instancia de GCP.
-5. Instalar **Nginx** y **Certbot** en la VM para habilitar HTTPS mediante un certificado SSL gratuito de Let's Encrypt, configurando Nginx como proxy inverso que redirige el tráfico del puerto 443 al puerto `5000` donde escucha Kestrel (el servidor de ASP.NET Core):
-   ```bash
-   sudo apt install -y nginx certbot python3-certbot-nginx
-   sudo certbot --nginx -d ap-api.entreprenly.online
-   ```
-6. En el repositorio de Web Services (`Kauflink/ap-entreprenly-web-services`), configurar los siguientes **GitHub Secrets**:
-   - `GCP_VM_HOST`: dirección IP externa estática de la instancia.
-   - `GCP_VM_USER`: nombre de usuario de la instancia.
-   - `GCP_VM_SSH_KEY`: clave SSH privada para autenticación sin contraseña.
-7. Crear el archivo `.github/workflows/deploy-backend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración del .NET SDK, generación del artefacto publicado con `dotnet publish -c Release -o ./publish`, transferencia de la carpeta de publicación a la VM mediante `scp` y reinicio del servicio en la VM mediante `ssh` con los comandos `sudo systemctl stop entreprenly`, copia de los nuevos archivos publicados y `sudo systemctl start entreprenly`.
-8. Configurar las **reglas de firewall** en GCP para exponer únicamente los puertos `80` y `443` al tráfico externo, manteniendo el puerto `5000` de Kestrel restringido al acceso local de Nginx.
-9. Documentar los endpoints del API desplegado mediante **Swagger UI**, accesible en la ruta `https://ap-api.entreprenly.online/swagger`, y registrar la URL base del API como variable de entorno en el proyecto del Frontend Web Application para su integración.
+4. En el proveedor de DNS del dominio, crear un registro `A` que apunte `ap-api.entreprenly.online` a la IP externa de la instancia de GCP (Caddy emite el certificado de Let's Encrypt automáticamente).
+5. En el repositorio de Web Services (`Kauflink/ap-entreprenly-web-services`), el `Dockerfile` define un build multi-etapa: la etapa `build` usa `mcr.microsoft.com/dotnet/sdk:10.0` para ejecutar `dotnet publish -c Release`, y la etapa `runtime` usa `mcr.microsoft.com/dotnet/aspnet:10.0`, exponiendo el puerto `8080` (`ASPNETCORE_URLS=http://+:8080`).
+6. Configurar en el repositorio los **GitHub Secrets** para Workload Identity Federation: `GCP_WIF_PROVIDER` (proveedor de identidad) y `GCP_DEPLOY_SA` (cuenta de servicio de despliegue).
+7. El workflow `.github/workflows/deploy.yml` se ejecuta ante cada push en la rama `main` y realiza: checkout, autenticación a GCP vía Workload Identity Federation, `docker build` y `docker push` de la imagen (etiquetada con `:<sha>` y `:latest`) a Artifact Registry, y conexión a la VM mediante **SSH a través de un túnel IAP** para ejecutar `docker compose pull` y `docker compose up -d --remove-orphans`, desplegando la nueva imagen.
+8. Caddy gestiona los puertos `80` y `443` hacia el exterior; el contenedor del API solo expone el puerto `8080` dentro de la red interna de Docker Compose, sin exposición directa.
+9. Documentar los endpoints del API desplegado mediante **Swagger UI** (`UseSwagger` + `UseSwaggerUI`), accesible en la ruta `https://ap-api.entreprenly.online/swagger`. La URL base del API se registra como variable de entorno (`VITE_ENTREPENLY_PLATFORM_API_URL`) en el proyecto del Frontend Web Application para su integración.
 10. Validar el despliegue realizando una solicitud de prueba a un endpoint del API desde Swagger UI o desde Postman, confirmando que el servicio responde correctamente sobre HTTPS.
 
 ## 5.2. Landing Page, Services & Applications Implementation
