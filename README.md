@@ -41,6 +41,8 @@ Aplicaciones Web
 | Versión  | Fecha          | Autor                 | Descripción de modificación |
 | :------: | :------------: | :-------------------: | :-------------------------: |
 | AV1      | 02 / 04 / 2026 | Todos los integrantes | Primera versión             |
+| TB1      | 12 / 05 / 2026 | Todos los integrantes | Segunda versión             |
+| AV2      | 12 / 06 / 2026 | Todos los integrantes | Tercera versión             |
 
 </div>
 
@@ -92,6 +94,25 @@ Para la entrega TB1, el equipo se enfocó en la implementación del Frontend Web
 
 ![Contri3](docs/images/contri3.png "contri3")
 ![Contri4](docs/images/contri4.png "contri4")
+
+---
+
+### **AV2: Backend Web Services, Validación y Cierre del Proyecto**
+
+Para la entrega AV2, el equipo se enfocó en la implementación del backend de los Bounded Contexts mediante servicios web RESTful en ASP.NET Core (C#) sobre el repositorio `ap-entreprenly-web-services`, consumidos por el Frontend Web Application en Vue (`ap-entreprenly-frontend`); la mejora visual y el diseño responsive de las aplicaciones web, la ejecución de las entrevistas de validación con usuarios del segmento objetivo y la incorporación de las correcciones finales sobre el informe. El trabajo se desarrolló bajo el flujo GitFlow, con integraciones a la rama `main` mediante Pull Requests.
+
+#### Distribución de contribuciones por integrante (AV2)
+
+| Integrante | Secciones principales del informe |
+| :--- | :--- |
+| Camargo Briceño, Joseph Julius | Backend de los Bounded Contexts: Profiles e IAM (ASP.NET Core) · Mejora visual y diseño responsive de sus vistas · Redacción del Sprint 3 · Actualización del Landing Page |
+| Chavez Carrasco, Lionel Abraham | Backend del Bounded Context: Inventory (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Redacción de la Evaluación Heurística (5.3.3) · Actualización del Landing Page |
+| Palma De Los Santos, Elynor Mikela | Backend del Bounded Context: Chatbot (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Actualización del Class Diagram y del Diagrama de Base de Datos (Capítulo IV) · Entrevistas de Validación y entrevistas About the Product |
+| Peirano Brun, José Antonio | Backend del Bounded Context: Subscription (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Revisión de errores de las User Stories (Capítulo III) · Actualización de los diagramas Structurizr y de la Evaluación Heurística |
+| Flores Pinchi, José Fernando | Backend del Bounded Context: Sales (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Revisión de errores del Capítulo III · Entrevistas de Validación y entrevistas About the Product |
+
+![Contri5](docs/images/contri5.png "contri5")
+![Contri6](docs/images/contri6.png "contri6")
 
 ---
 
