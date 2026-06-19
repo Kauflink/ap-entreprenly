@@ -130,6 +130,11 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
       <td><a href="https://pinia.vuejs.org/">https://pinia.vuejs.org/</a></td>
     </tr>
     <tr>
+      <td><strong>Tailwind CSS</strong></td>
+      <td>Framework CSS utility-first empleado para el estilo del Landing Page, compilando <code>src/input.css</code> hacia <code>styles.css</code> mediante su CLI.</td>
+      <td><a href="https://tailwindcss.com/">https://tailwindcss.com/</a></td>
+    </tr>
+    <tr>
       <td><strong>Docker</strong></td>
       <td>Plataforma de containerización utilizada para empaquetar el RESTful Web Services (ASP.NET Core) en una imagen reproducible, publicada en Google Artifact Registry y orquestada en la VM mediante Docker Compose.</td>
       <td><a href="https://www.docker.com/">https://www.docker.com/</a></td>
@@ -259,23 +264,21 @@ Las convenciones aplicadas son las siguientes:
 - Todas las imágenes incluyen el atributo `alt` con una descripción significativa, como parte del enfoque de accesibilidad (a11y) del proyecto.
 - Se utiliza **indentación de 2 espacios** para mantener la legibilidad del árbol de elementos.
 - Los elementos de bloque se escriben en líneas separadas; los elementos en línea pueden mantenerse en una misma línea si el resultado es conciso.
-- Se evita el uso de estilos en línea (`style=""`); todo el estilo visual se delega a las hojas de estilo CSS externas y a las clases de los componentes de PrimeVue.
+- Se evita el uso de estilos en línea (`style=""`); el estilo visual se aplica mediante **clases utilitarias de Tailwind CSS** directamente en el marcado.
 - Los comentarios se utilizan para delimitar secciones principales del documento: `<!-- Hero Section -->`.
 
 #### CSS
 
-Para el estilo visual del Landing Page de Entreprenly, el equipo adopta la **Google HTML/CSS Style Guide** como guía de referencia, complementada con las convenciones del sistema de diseño basado en **Material Design**.
+Para el estilo visual del Landing Page de Entreprenly, el equipo utiliza **Tailwind CSS** (enfoque utility-first), tomando como referencia complementaria la **Google HTML/CSS Style Guide**. Las hojas de estilo finales se generan a partir de un archivo fuente (`src/input.css`) compilado con la CLI de Tailwind hacia `styles.css`.
 
 Las convenciones aplicadas son las siguientes:
 
-- Los nombres de clases se escriben en **kebab-case**: `.hero-section`, `.cta-button`, `.nav-link`.
-- Se evita el uso de selectores de ID para estilos; se prefieren selectores de clase por su reutilizabilidad.
-- Las propiedades dentro de cada regla se ordenan de forma **alfabética** para facilitar la lectura y comparación entre reglas.
-- Se utiliza **indentación de 2 espacios**.
-- Se evita el uso de `!important`; en su lugar, se gestionan las especificidades de los selectores de forma explícita.
-- Las unidades `rem` y `em` se prefieren sobre `px` para valores de tipografía y espaciado, garantizando escalabilidad y accesibilidad.
-- Los colores se definen usando variables CSS (`--primary-color: #1A73E8;`) centralizadas en el bloque `:root` para mantener la consistencia con el Design System.
-- Cada archivo CSS tiene un alcance definido y no acumula estilos globales innecesarios.
+- El estilo se compone aplicando **clases utilitarias de Tailwind** sobre los elementos HTML (p. ej. `flex`, `gap-4`, `text-center`, `rounded-lg`), en lugar de escribir reglas CSS personalizadas para cada componente.
+- La generación de la hoja de estilos se realiza con la CLI de Tailwind: `tailwindcss -i ./src/input.css -o ./styles.css` (con `--watch` en desarrollo y `--minify` para producción, según los scripts `dev` y `build` de `package.json`).
+- Los **tokens del Design System** (colores de marca, tipografía, espaciado) se centralizan en la configuración/capa de tema de Tailwind, garantizando consistencia con los demás productos digitales.
+- La tipografía principal es **Reddit Sans**, cargada desde Google Fonts.
+- El soporte de **tema claro/oscuro** se gestiona mediante las variantes de Tailwind y un script (`app.js`) que alterna la clase de tema en la raíz del documento.
+- Las clases personalizadas residuales, cuando se requieren, se escriben en **kebab-case** dentro de `src/input.css` usando las directivas de Tailwind (`@layer`, `@apply`).
 
 #### JavaScript
 
@@ -353,15 +356,17 @@ En esta sección se especifica la configuración de despliegue definida por el e
 
 #### Landing Page
 
-El Landing Page de Entreprenly está desarrollado con HTML5, CSS3 y JavaScript, y se despliega mediante **GitHub Pages**, aprovechando el soporte nativo de esta plataforma para sitios web estáticos. La automatización del proceso de despliegue se realiza a través de **GitHub Actions**, de modo que cada integración a la rama `main` desencadena automáticamente la publicación de la nueva versión. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
+El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main` (modo *legacy*, sin pipeline de GitHub Actions). El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
+
+> **Nota:** En el Sprint 1 el despliegue se automatizó inicialmente con un workflow de GitHub Actions; posteriormente el equipo lo simplificó y eliminó el workflow, dejando la publicación directa desde la rama (`Pages deploys from branch`).
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
 1. Asegurarse de que el repositorio del Landing Page (`Kauflink/ap-entreprenly-landing`) esté público en GitHub.
-2. En la configuración del repositorio, ingresar a **Settings > Pages** y seleccionar la rama `main` y la carpeta raíz (`/`) como fuente de publicación.
-3. Configurar el dominio personalizado ingresando `landing.entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
-4. En el proveedor de DNS del dominio, crear los registros `A` que apunten a las IPs de los servidores de GitHub Pages, de acuerdo con la documentación oficial de GitHub.
-5. En el repositorio, crear el archivo `.github/workflows/deploy.yml` con el workflow de GitHub Actions encargado de ejecutar el despliegue automático al detectar un push sobre la rama `main`. El workflow realiza los pasos de checkout del repositorio y publicación en GitHub Pages usando la acción oficial `actions/deploy-pages`.
+2. Generar la hoja de estilos de producción ejecutando `npm run build` (`tailwindcss -i ./src/input.css -o ./styles.css --minify`) y versionar el `styles.css` resultante junto con el resto de archivos estáticos.
+3. En la configuración del repositorio, ingresar a **Settings > Pages** y seleccionar como fuente de publicación la rama `main` y la carpeta raíz (`/`).
+4. Configurar el dominio personalizado ingresando `landing.entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
+5. En el proveedor de DNS del dominio, crear los registros `A`/`CNAME` que apunten a los servidores de GitHub Pages, de acuerdo con la documentación oficial de GitHub.
 6. Verificar que el archivo `CNAME` con el valor `landing.entreprenly.online` esté presente en la raíz del repositorio para que GitHub Pages respete el dominio personalizado entre despliegues.
 7. Validar el despliegue accediendo a `https://landing.entreprenly.online` y confirmando que la versión publicada corresponde con el último commit integrado en `main`.
 
