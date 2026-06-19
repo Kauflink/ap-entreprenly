@@ -196,11 +196,11 @@ Para la gestión del código fuente y el seguimiento de modificaciones, el equip
 
 **Repositorios del Proyecto**
 
-| Producto                     | URL del Repositorio                                           |
-| :--------------------------- | :------------------------------------------------------------ |
-| **Landing Page**             | https://github.com/Kauflink/ap-entreprenly-landing               |
-| **Web Services**             | https://github.com/Kauflink/ap-entreprenly-web-services     |
-| **Frontend Web Application** | https://github.com/Kauflink/ap-entreprenly-frontend |
+| Producto                     | URL del Repositorio                                     |
+| :--------------------------- | :------------------------------------------------------ |
+| **Landing Page**             | https://github.com/Kauflink/ap-entreprenly-landing      |
+| **Web Services**             | https://github.com/Kauflink/ap-entreprenly-web-services |
+| **Frontend Web Application** | https://github.com/Kauflink/ap-entreprenly-frontend     |
 
 **Estrategia de Flujo de Trabajo: GitFlow**
 
@@ -1833,7 +1833,7 @@ Para ello se realizaron sesiones en las que usuarios reales de cada segmento int
 
 ### 5.3.1. Diseño de Entrevistas
 
-Antes de iniciar cada sesión de validación se brinda un saludo cordial y una breve presentación del entrevistador, explicando que el propósito de la sesión es evaluar la facilidad de uso y la utilidad del producto Entreprenly, y no evaluar al participante. Se aclara que la información será utilizada únicamente con fines académicos y se mantendrá en estricta confidencialidad. Como primer paso se solicita al participante su nombre completo, edad y distrito de residencia para fines de registro. Luego se le invita a interactuar libremente con el Landing Page y las aplicaciones, ejecutando las tareas propuestas y expresando en voz alta sus impresiones (técnica de *thinking aloud*), destacando que no existen respuestas correctas o incorrectas.
+Antes de iniciar cada sesión de validación se brinda un saludo cordial y una breve presentación del entrevistador, explicando que el propósito de la sesión es evaluar la facilidad de uso y la utilidad del producto Entreprenly, y no evaluar al participante. Se aclara que la información será utilizada únicamente con fines académicos y se mantendrá en estricta confidencialidad. Como primer paso se solicita al participante su nombre completo, edad y distrito de residencia para fines de registro. Luego se le invita a interactuar libremente con el Landing Page y las aplicaciones, ejecutando las tareas propuestas y expresando en voz alta sus impresiones (técnica de _thinking aloud_), destacando que no existen respuestas correctas o incorrectas.
 
 El proceso de validación para cada segmento se compone de tres momentos: (1) la exploración del Landing Page, (2) la ejecución de tareas guiadas sobre las aplicaciones siguiendo los User Flows correspondientes, y (3) un cuestionario de validación de diez preguntas. A continuación se detallan los elementos a incluir en la sesión de validación para cada segmento objetivo.
 
@@ -1847,9 +1847,9 @@ El proceso de validación para cada segmento se compone de tres momentos: (1) la
 
 **Segmento objetivo 1: Comerciantes (Dueños de Minimarkets/Mercados)**
 
-*Elementos a validar:* Landing Page y Aplicación Web (Dashboard de gestión).
+_Elementos a validar:_ Landing Page y Aplicación Web (Dashboard de gestión).
 
-*User Flows a validar (sección 4.4.4):*
+_User Flows a validar (sección 4.4.4):_
 
 - User Flow 1 – Gestión de inventario (agregar, editar y buscar productos).
 - User Flow 2 – Creación de lotes y gestión de alertas de vencimiento.
@@ -1857,7 +1857,7 @@ El proceso de validación para cada segmento se compone de tres momentos: (1) la
 - User Flow 4 – Validación de pago de pedido del chatbot.
 - User Flow 5 – Suscripción al Plan Control.
 
-*Tareas asignadas:*
+_Tareas asignadas:_
 
 1. Explorar el Landing Page e identificar qué ofrece Entreprenly y los planes disponibles.
 2. Registrar un producto nuevo, editarlo y luego buscarlo en el inventario.
@@ -1866,7 +1866,7 @@ El proceso de validación para cada segmento se compone de tres momentos: (1) la
 5. Revisar un pedido del chatbot pendiente y aprobar (o rechazar) su pago.
 6. Iniciar el proceso de suscripción al Plan Control.
 
-*Preguntas de validación:*
+_Preguntas de validación:_
 
 1. Después de explorar el Landing Page, ¿quedó claro qué hace Entreprenly y cómo resolvería los problemas de su negocio?
 2. Al registrar, editar y buscar productos en el módulo de inventario, ¿le resultó más sencillo y ordenado que su método actual (cuaderno, Excel o memoria)?
@@ -1883,13 +1883,13 @@ El proceso de validación para cada segmento se compone de tres momentos: (1) la
 
 **Segmento objetivo 2: Clientes Finales**
 
-*Elementos a validar:* Landing Page y Chatbot de WhatsApp (experiencia de compra).
+_Elementos a validar:_ Landing Page y Chatbot de WhatsApp (experiencia de compra).
 
-*User Flows a validar:*
+_User Flows a validar:_
 
 - Flujo de pedido por el chatbot: consulta de producto disponible, confirmación del pedido, recepción de las instrucciones de pago, reporte del comprobante de pago digital y recepción de la confirmación/comprobante.
 
-*Tareas asignadas:*
+_Tareas asignadas:_
 
 1. Explorar el Landing Page e identificar qué ofrece la tienda y por qué convendría comprar por este medio.
 2. Iniciar una conversación con el chatbot y consultar la disponibilidad de un producto.
@@ -1897,7 +1897,7 @@ El proceso de validación para cada segmento se compone de tres momentos: (1) la
 4. Recibir las instrucciones de pago y reportar el comprobante de pago digital.
 5. Recibir la confirmación del pedido y su comprobante.
 
-*Preguntas de validación:*
+_Preguntas de validación:_
 
 1. Después de ver el Landing Page, ¿entendió qué ofrece la tienda y por qué le convendría comprar por este medio?
 2. Al realizar un pedido por el chatbot de WhatsApp, ¿le resultó fácil y rápido encontrar el producto y completar la compra?
@@ -1914,11 +1914,9 @@ El proceso de validación para cada segmento se compone de tres momentos: (1) la
 
 A continuación se registran las entrevistas de validación realizadas por segmento. Para cada entrevista se consigna el nombre y apellidos del participante, su edad, su distrito de residencia, un screenshot de un cuadro del video, el enlace al video alojado en Microsoft Stream —indicando el timing donde inicia la entrevista y su duración— y un resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas. De acuerdo con lo planificado por el equipo, se realizaron dos entrevistas para el Segmento 1 (Comerciantes) y una entrevista para el Segmento 2 (Clientes Finales).
 
-> **Nota:** Las tarjetas se encuentran listas para incorporar la evidencia real de cada entrevista grabada por el equipo. Los campos entre corchetes `[ ]` y los screenshots son marcadores que deben reemplazarse por los datos del participante, el enlace de Microsoft Stream con su timing y duración, y el resumen correspondiente.
-
 **Segmento 1: Comerciantes (Dueños de Minimarkets/Mercados)**
 
--   Primera entrevista:
+- Primera entrevista:
 
 <div align="center">
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
@@ -1937,26 +1935,26 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Entrevistado(a):</strong> [Nombres y apellidos]
+        <strong>Entrevistado(a):</strong> María Encarnación Velasquez
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Edad:</strong> [Edad]
+        <strong>Edad:</strong> 62
       </td>
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Entrevistador(a):</strong> [Nombre del entrevistador]
+        <strong>Entrevistador(a):</strong> Lionel Chavez Carrasco
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Distrito:</strong> [Distrito, Lima]
+        <strong>Distrito:</strong> San Miguel, Lima
       </td>
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Inicio de la entrevista:</strong> [mm:ss]
+        <strong>Inicio de la entrevista:</strong> 03:20
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> [mm:ss]
+        <strong>Duración:</strong> 16:34
       </td>
     </tr>
   </table>
@@ -1966,7 +1964,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista (Microsoft Stream):</strong>
-        <a href="[URL del video en Microsoft Stream]" style="color: #1a6b6b;">[Nombre del participante]-Entrevista de Validación</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDLOgZZQciGT4vb_yjShsLTAS0Hr5RXYveIiQsCDk62_3g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ykle0r" style="color: #1a6b6b;">María Encarnación-Entrevista de Validación</a>
       </td>
     </tr>
   </table>
@@ -1975,7 +1973,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        [Resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas: claridad del Landing Page, facilidad de uso de cada User Flow ejecutado (inventario, lotes, venta presencial, validación de pago del chatbot y suscripción), en qué medida la solución resuelve sus problemas operativos, dificultades o pasos confusos detectados, probabilidad de uso y mejoras sugeridas.]
+        Durante la entrevista, María Encarnación Velázquez manifestó que el Landing Page de Entrepently le pareció claro y fácil de comprender, ya que explica de manera sencilla los beneficios de la aplicación y cómo puede ayudar a los pequeños comerciantes en la gestión de sus negocios. Respecto a los User Flows ejecutados, consideró que las funciones de inventario y gestión de lotes son intuitivas y facilitan el registro, búsqueda y control de productos. Asimismo, indicó que el proceso de venta presencial es rápido y permite llevar un mejor control de los ingresos diarios. La validación de pagos mediante el chatbot de WhatsApp le pareció una alternativa práctica para automatizar pedidos y cobros, mientras que el flujo de suscripción resultó sencillo y comprensible. La entrevistada señaló que la solución contribuye significativamente a resolver problemas operativos relacionados con el control de inventario, seguimiento de ventas y organización de productos, reduciendo la necesidad de registros manuales y disminuyendo el riesgo de errores o pérdidas. No se identificaron dificultades importantes durante la interacción con la aplicación; sin embargo, sugirió incorporar funcionalidades adicionales como la generación de facturas y guías de remisión para complementar la gestión comercial. Finalmente, manifestó una alta probabilidad de utilizar la aplicación en su negocio debido a los beneficios que ofrece en términos de organización, ahorro de tiempo y reducción del estrés asociado a las tareas administrativas.
       </td>
     </tr>
   </table>
@@ -1986,7 +1984,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
 
 ---
 
--   Segunda entrevista:
+- Segunda entrevista:
 
 <div align="center">
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
@@ -2005,26 +2003,26 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Entrevistado(a):</strong> [Nombres y apellidos]
+        <strong>Entrevistado(a):</strong> Hercilio Carrasco Herrera
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Edad:</strong> [Edad]
+        <strong>Edad:</strong> 59
       </td>
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Entrevistador(a):</strong> [Nombre del entrevistador]
+        <strong>Entrevistador(a):</strong> Lionel Chavez Carrasco
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Distrito:</strong> [Distrito, Lima]
+        <strong>Distrito:</strong> San Miguel, Lima
       </td>
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Inicio de la entrevista:</strong> [mm:ss]
+        <strong>Inicio de la entrevista:</strong> 03:35
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> [mm:ss]
+        <strong>Duración:</strong> 17:07
       </td>
     </tr>
   </table>
@@ -2034,7 +2032,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista (Microsoft Stream):</strong>
-        <a href="[URL del video en Microsoft Stream]" style="color: #1a6b6b;">[Nombre del participante]-Entrevista de Validación</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDfZ1lUJuh6QIJJfAiZtDGhAfoa0SvaRV9JKz7SKHOnDxQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1rjqKF" style="color: #1a6b6b;">Hercilio Carrasco-Entrevista de Validación</a>
       </td>
     </tr>
   </table>
@@ -2043,7 +2041,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        [Resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas: claridad del Landing Page, facilidad de uso de cada User Flow ejecutado (inventario, lotes, venta presencial, validación de pago del chatbot y suscripción), en qué medida la solución resuelve sus problemas operativos, dificultades o pasos confusos detectados, probabilidad de uso y mejoras sugeridas.]
+        Durante la entrevista, Hercilio Carrasco Herrera indicó que el Landing Page de Entrepently presenta de manera clara las funcionalidades y beneficios de la aplicación, permitiéndole comprender rápidamente cómo la herramienta puede apoyar la gestión de su negocio. En cuanto a los User Flows ejecutados, consideró que los procesos de inventario y gestión de lotes son fáciles de utilizar y útiles para mantener un mejor control de los productos, especialmente aquellos con fecha de vencimiento. Asimismo, valoró positivamente el flujo de venta presencial, destacando la facilidad para registrar ventas y diferenciar ingresos por efectivo y pagos electrónicos. La validación de pagos mediante el chatbot de WhatsApp le pareció una funcionalidad innovadora que simplifica la atención de pedidos, mientras que el proceso de suscripción fue percibido como sencillo y accesible. El entrevistado señaló que la solución responde adecuadamente a varios de sus problemas operativos, principalmente en el control de inventario, la gestión de productos perecibles y la organización de ventas. También destacó que las alertas de vencimiento y el control de stock en tiempo real pueden contribuir a reducir pérdidas económicas y mejorar la eficiencia del negocio. No reportó dificultades significativas durante la ejecución de las tareas; sin embargo, identificó una oportunidad de mejora relacionada con la incorporación de recordatorios automáticos para clientes con pagos pendientes, lo que facilitaría la gestión de cobranzas y reduciría el riesgo de impagos. Finalmente, manifestó una alta disposición a utilizar la aplicación en su actividad comercial, ya que considera que las funcionalidades propuestas aportan valor y contribuyen a modernizar la administración de pequeños negocios.
       </td>
     </tr>
   </table>
@@ -2056,7 +2054,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
 
 **Segmento 2: Clientes Finales**
 
--   Primera entrevista:
+- Primera entrevista:
 
 <div align="center">
 <div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
