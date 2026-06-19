@@ -24,6 +24,14 @@
 
   <p style="padding-left:2em; text-indent:-2em;">Google. (s.f.-a). <em>Google HTML/CSS style guide</em>. https://google.github.io/styleguide/htmlcssguide.html</p>
 
+  <p style="padding-left:2em; text-indent:-2em;">Google. (s.f.-b). <em>Google JavaScript style guide</em>. https://google.github.io/styleguide/jsguide.html</p>
+
+  <p style="padding-left:2em; text-indent:-2em;">Microsoft. (s.f.). <em>C# coding conventions</em>. Microsoft Learn. https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions</p>
+
   <p style="padding-left:2em; text-indent:-2em;">SpecFlow. (s.f.). <em>Gherkin conventions for readable specifications</em>. https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/</p>
+
+  <p style="padding-left:2em; text-indent:-2em;">Vue.js. (s.f.). <em>Style guide</em>. Vue.js. https://vuejs.org/style-guide/</p>
+
+  <p style="padding-left:2em; text-indent:-2em;">W3Schools. (s.f.). <em>HTML style guide and coding conventions</em>. https://www.w3schools.com/html/html5_syntax.asp</p>
 
 </div>
