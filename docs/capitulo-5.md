@@ -1819,3 +1819,414 @@ El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en
 ![network_g](./images/network_g.png "network_g")
 
 **URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/daop-entreprenly-frontend
+
+
+### 5.2.X.1. 
+### 5.2.X.2.
+### 5.2.X.3.
+### 5.2.X.4. 
+### 5.2.X.5. 
+### 5.2.X.6. 
+### 5.2.X.7. 
+### 5.2.X.8. 
+
+## 5.3. Sprint Planning n. Aspect Leaders and Collaborators. Sprint Backlog n. Development Evidence for Sprint Review. Execution Evidence for Sprint Review. Services Documentation Evidence for Sprint Review. Software Deployment Evidence for Sprint Review. Team Collaboration Insights during Sprint. Validation Interviews.
+
+### 5.3.1. Diseño de Entrevistas.
+### 5.3.2. Registro de Entrevistas. ### 5.3.3. Evaluaciones según heurísticas
+
+Esta sección presenta la evaluación heurística aplicada a **Entreprenly** durante la etapa de validación. La evaluación se organiza en tres grupos: heurísticas de usabilidad, arquitectura de información e inclusive design. Cada criterio incluye un puntaje del 1 al 5, la evidencia observada (referenciada por figura) y las oportunidades de mejora identificadas.
+
+#### Catálogo de figuras
+
+| Fig.    | Pantalla                                       | Archivo                                                 |
+| ------- | ---------------------------------------------- | ------------------------------------------------------- |
+| Fig. 1  | Panel de Inicio (Dashboard)                    | `Fig-01-panel-de-inicio.jpeg`                           |
+| Fig. 2  | Catálogo de Productos                          | `Fig-02-catalogo-de-productos.jpeg`                     |
+| Fig. 3  | Modal "Editar Producto"                        | `Fig-03-modal-editar-producto.jpeg`                     |
+| Fig. 4  | Modal "Agregar Nuevo Producto"                 | `Fig-04-modal-agregar-producto.jpeg`                    |
+| Fig. 5  | Lotes de Inventario (vista general)            | `Fig-05-lotes-de-inventario.jpeg`                       |
+| Fig. 6  | Panel de Alertas de Lotes                      | `Fig-06-panel-alertas-de-lotes.jpeg`                    |
+| Fig. 7  | Modal "Agregar Nuevo Lote"                     | `Fig-07-modal-agregar-lote.jpeg`                        |
+| Fig. 8  | Detalle de Lote (lote vencido)                 | `Fig-08-detalle-de-lote-vencido.jpeg`                   |
+| Fig. 9  | Ventas – "Producto no encontrado"              | `Fig-09-ventas-producto-no-encontrado.jpeg`             |
+| Fig. 10 | Suscripción – Planes Free y Control            | `Fig-10-suscripcion-planes.jpeg`                        |
+| Fig. 11 | Suscripción – Límites, facturación e historial | `Fig-11-suscripcion-limites-facturacion-historial.jpeg` |
+| Fig. 12 | Modal "Agregar método de pago"                 | `Fig-12-modal-agregar-metodo-de-pago.jpeg`              |
+| Fig. 13 | Modal "Completar datos de facturación"         | `Fig-13-modal-datos-de-facturacion.jpeg`                |
+| Fig. 14 | Modal "Historial de suscripción"               | `Fig-14-modal-historial-de-suscripcion.jpeg`            |
+| Fig. 15 | Ventas – Registrar cantidad (teclado numérico) | `Fig-15-ventas-registrar-cantidad.jpeg`                 |
+| Fig. 16 | Centro de Ayuda                                | `Fig-16-centro-de-ayuda.jpeg`                           |
+| Fig. 17 | Formulario "Reportar un problema"              | `Fig-17-reportar-un-problema.jpeg`                      |
+| Fig. 18 | Artículo de ayuda "¿Cómo validar un pago?"     | `Fig-18-articulo-validar-un-pago.jpeg`                  |
+| Fig. 19 | Perfil y configuración de cuenta               | `Fig-19-perfil-configuracion.jpeg`                      |
+
+---
+
+#### 5.3.3.1. Heurísticas de usabilidad
+
+En esta subsección se evalúa la experiencia de uso de Entreprenly tomando como referencia las heurísticas de Nielsen.
+
+##### Visibilidad del estado del sistema — Puntaje: 5/5
+
+Entreprenly comunica oportunamente el estado del sistema. El Panel de Inicio muestra en tiempo real el resumen del día (ventas, ingresos, pedidos y alertas), el estado del chatbot ("Activo") y el estado del inventario con etiquetas como "Vencido" y "Stock bajo". El panel de alertas de lotes notifica vencimientos y faltantes, y la vista de Suscripción refleja el plan activo y el consumo de límites mediante barras de progreso.
+
+<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+
+<img src="images/Fig-06-panel-alertas-de-lotes.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1 (resumen y alertas del dashboard), Fig. 6 (notificaciones de lotes), Fig. 11 (uso del plan y estado de facturación).
+
+**Mejora sugerida:** Añadir un _toast_ de confirmación visible tras guardar producto/lote, ya que el modal se cierra sin un mensaje persistente de éxito.
+
+---
+
+##### Relación entre el sistema y el mundo real — Puntaje: 5/5
+
+El lenguaje es cercano al comerciante peruano: "Lotes", "Stock", "Caja diaria", "Boleta", "Yape/Plin", "RUC" y "Razón social". En las vistas de Lotes y de Datos de facturación se emplean términos fiscales y de inventario propios del rubro.
+
+<img src="images/Fig-05-lotes-de-inventario.jpeg" width="600">
+
+<img src="images/Fig-13-modal-datos-de-facturacion.jpeg" width="600">
+
+**Evidencia observada:** Fig. 5 (lotes/unidades), Fig. 8 (fecha de vencimiento), Fig. 13 (RUC, razón social, dirección fiscal), Fig. 9 ("Tarjeta – Yape/Plin").
+
+**Mejora sugerida:** Incluir ayuda contextual (tooltip) en "Peso (g)" para productos a granel, diferenciándolo de "Unidad".
+
+---
+
+##### Libertad y control por parte del usuario — Puntaje: 5/5
+
+Todos los modales tienen botón de cierre (×) y opción Cancelar; el detalle de lote ofrece "Volver"; el Perfil permite editar datos, cambiar contraseña, idioma, tema y notificaciones sin quedar atrapado. En Ventas existe "Cancelar Venta".
+
+<img src="images/Fig-03-modal-editar-producto.jpeg" width="600">
+
+<img src="images/Fig-19-perfil-configuracion.jpeg" width="600">
+
+**Evidencia observada:** Fig. 3 y Fig. 4 (× y Cancelar en modales), Fig. 8 (botón Volver), Fig. 13 (Cancelar), Fig. 19 (edición libre de perfil).
+
+**Mejora sugerida:** Agregar confirmación "¿Descartar cambios?" al cerrar un modal con campos ya editados, para evitar pérdidas accidentales.
+
+---
+
+##### Consistencia y estándares — Puntaje: 5/5
+
+Se mantiene un patrón visual uniforme: sidebar naranja fija, tipografía estable, botones primarios naranjas, y tarjetas y tablas con el mismo estilo en Productos, Lotes, Ventas, Suscripción y Ayuda. La nomenclatura de navegación es consistente en todas las pantallas.
+
+<img src="images/Fig-02-catalogo-de-productos.jpeg" width="600">
+
+<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1, Fig. 2, Fig. 5, Fig. 10 y Fig. 16 comparten layout, colores y jerarquía de botones.
+
+**Mejora sugerida:** Unificar el estilo del botón "Volver" (Fig. 8, negro) con el resto de botones secundarios (blancos con borde).
+
+---
+
+##### Prevención de errores — Puntaje: 4/5
+
+Los formularios usan campos guía y valores por defecto. En Agregar Producto el botón Guardar permanece atenuado hasta completar lo necesario; en Agregar Lote se solicitan fecha de ingreso y vencimiento; en Datos de facturación y Método de pago se marcan formatos esperados (tarjeta, CVV, RUC).
+
+<img src="images/Fig-04-modal-agregar-producto.jpeg" width="600">
+
+<img src="images/Fig-07-modal-agregar-lote.jpeg" width="600">
+
+**Evidencia observada:** Fig. 4 (Guardar atenuado), Fig. 7 (fechas obligatorias), Fig. 12 y Fig. 13 (formatos guía).
+
+**Mejora sugerida:** Validar en línea que la _Fecha de Vencimiento_ sea posterior a la _Fecha de Ingreso_ y advertir antes de registrar un lote ya vencido.
+
+---
+
+##### Reconocer antes que recordar — Puntaje: 5/5
+
+El dashboard ofrece "Accesos rápidos" con íconos y una sidebar siempre visible con etiquetas de texto. El usuario reconoce los módulos sin memorizar rutas; las tarjetas resumen muestran lo relevante de un vistazo.
+
+<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1 (accesos rápidos e íconos), sidebar persistente en todas las figuras, Fig. 16 (categorías con íconos).
+
+**Mejora sugerida:** Resaltar de forma más marcada el ítem activo del menú para reforzar la ubicación del usuario.
+
+---
+
+##### Flexibilidad y eficiencia en el uso — Puntaje: 4/5
+
+Existen atajos (accesos rápidos del dashboard), buscador de lotes, descarga de historial, teclado numérico para registrar cantidad en ventas y generación automática de código QR, lo que agiliza tanto al usuario nuevo como al recurrente.
+
+<img src="images/Fig-15-ventas-registrar-cantidad.jpeg" width="600">
+
+<img src="images/Fig-14-modal-historial-de-suscripcion.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1 (accesos rápidos), Fig. 14 (Descargar historial), Fig. 15 (teclado numérico), Fig. 2 (QR por producto).
+
+**Mejora sugerida:** Incorporar búsqueda/filtros en el catálogo de Productos y atajos de teclado en el módulo de Ventas para usuarios avanzados.
+
+---
+
+##### Diseño estético y minimalista — Puntaje: 5/5
+
+La interfaz mantiene jerarquía clara y bajo ruido visual: uso consistente del naranja como color de acción, espacios en blanco amplios y tarjetas bien delimitadas en Suscripción y en el dashboard.
+
+<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1, Fig. 10 (cards de planes), Fig. 16 (centro de ayuda ordenado).
+
+**Mejora sugerida:** En el dashboard, equilibrar la densidad de la zona inferior (estado de inventario) para evitar acumulación de tarjetas pequeñas.
+
+---
+
+##### Ayuda a los usuarios a reconocer, diagnosticar y recuperarse de los errores — Puntaje: 4/5
+
+El sistema señala errores con color y texto: en Ventas muestra "⊘ Producto no encontrado"; en Lotes marca el lote "Vencido" en rojo con la fecha. Los estados de error son reconocibles.
+
+<img src="images/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
+
+<img src="images/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
+
+**Evidencia observada:** Fig. 9 (producto no encontrado), Fig. 8 (lote vencido), Fig. 11 (estados "pendiente de completar").
+
+**Mejora sugerida:** Que el mensaje "Producto no encontrado" sugiera la acción siguiente (p. ej. "Verifica el nombre o créalo en Productos"), explicando cómo recuperarse y no solo qué ocurrió.
+
+---
+
+##### Ayuda y documentación — Puntaje: 5/5
+
+Cuenta con un Centro de Ayuda con artículos frecuentes, categorías, buscador y datos de soporte (correo, WhatsApp, horario); artículos paso a paso; y un formulario para reportar problemas con tiempos de respuesta.
+
+<img src="images/Fig-16-centro-de-ayuda.jpeg" width="600">
+
+<img src="images/Fig-17-reportar-un-problema.jpeg" width="600">
+
+<img src="images/Fig-18-articulo-validar-un-pago.jpeg" width="600">
+
+**Evidencia observada:** Fig. 16 (artículos y soporte), Fig. 17 (reporte de problema), Fig. 18 (guía "¿Cómo validar un pago?").
+
+**Mejora sugerida:** Enlazar ayuda contextual ("?") desde cada módulo directamente al artículo correspondiente del centro de ayuda.
+
+---
+
+#### 5.3.3.2. Arquitectura de información
+
+En esta subsección se evalúa si la organización de la información permite encontrar, comprender y utilizar el contenido de forma clara.
+
+##### Is it findable? — Puntaje: 5/5
+
+Las funciones principales se ubican en la sidebar fija y en los accesos rápidos del dashboard; el Centro de Ayuda agrupa soporte y FAQ por categorías.
+
+<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1, Fig. 16, navegación lateral presente en todas las figuras.
+
+**Mejora sugerida:** Añadir un buscador global en el header del dashboard.
+
+---
+
+##### Is it accessible? — Puntaje: 4/5
+
+Buen contraste (texto oscuro sobre blanco, acción naranja), etiquetas visibles y opción de tema Claro/Oscuro e idioma/zona horaria configurables.
+
+<img src="images/Fig-19-perfil-configuracion.jpeg" width="600">
+
+**Evidencia observada:** Fig. 19 (preferencias de tema/idioma), formularios con labels (Fig. 4, Fig. 13).
+
+**Mejora sugerida:** Validar el contraste del texto blanco sobre naranja (banner del dashboard) y confirmar el comportamiento responsivo en móvil/tablet.
+
+---
+
+##### Is it clear? — Puntaje: 5/5
+
+Títulos y subtítulos describen cada sección ("Catálogo de productos disponibles", "Registra y procesa las ventas del día"); los modales incluyen título y descripción.
+
+<img src="images/Fig-05-lotes-de-inventario.jpeg" width="600">
+
+**Evidencia observada:** Fig. 2, Fig. 5, Fig. 8 (encabezados descriptivos).
+
+**Mejora sugerida:** Acompañar las barras de "Límites disponibles" con una leyenda del significado al alcanzar el tope.
+
+---
+
+##### Is it communicative? — Puntaje: 5/5
+
+La interfaz informa en el momento adecuado: estado del plan, stock, alertas de lotes y actividad de suscripción.
+
+<img src="images/Fig-11-suscripcion-limites-facturacion-historial.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1 (resumen), Fig. 6 (alertas), Fig. 11 (historial/estado de facturación).
+
+**Mejora sugerida:** Mostrar contadores de notificaciones también en la sidebar (módulos Lotes/Pedidos).
+
+---
+
+##### Is it usable? — Puntaje: 4/5
+
+Las tareas principales se completan sin asistencia: alta de productos y lotes, registro de ventas, gestión de suscripción, método de pago, datos fiscales y descarga de historial.
+
+<img src="images/Fig-12-modal-agregar-metodo-de-pago.jpeg" width="600">
+
+**Evidencia observada:** Fig. 4, Fig. 7, Fig. 12, Fig. 13, Fig. 14, Fig. 15.
+
+**Mejora sugerida:** Guiar el primer registro con un mini-onboarding; los módulos vacíos ya muestran estados como "Aún no hay pedidos".
+
+---
+
+##### Is it credible? — Puntaje: 5/5
+
+Transmite confianza con precios transparentes, identidad visual coherente, datos de soporte reales y una propuesta de valor clara.
+
+<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+
+**Evidencia observada:** Fig. 10 (planes y precios), Fig. 16 (soporte con correo/WhatsApp/horario).
+
+**Mejora sugerida:** Incluir un sello/nota de seguridad de pago en el modal de tarjeta (Fig. 12).
+
+---
+
+##### Is it controllable? — Puntaje: 5/5
+
+El usuario cambia de sección, cancela acciones, mantiene su plan, edita su perfil y vuelve a estados previos (botón Volver, ×, Cancelar).
+
+<img src="images/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
+
+**Evidencia observada:** Fig. 8 (Volver), Fig. 13 (Cancelar), Fig. 19 (control total del perfil).
+
+**Mejora sugerida:** Confirmar antes de cerrar modales con cambios sin guardar.
+
+---
+
+##### Is it valuable? — Puntaje: 5/5
+
+Aporta valor real: control de stock y vencimientos, conciliación de caja por método de pago, pedidos por WhatsApp vía chatbot y gestión de suscripción.
+
+<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1 (caja por método de pago), Fig. 6 (vencimientos), Fig. 10 (valor del plan Control).
+
+**Mejora sugerida:** Resaltar en el dashboard el beneficio acumulado (p. ej. mermas evitadas por alertas de vencimiento).
+
+---
+
+##### Is it learnable? — Puntaje: 5/5
+
+Patrones repetidos, labels claros y guías paso a paso facilitan el aprendizaje.
+
+<img src="images/Fig-18-articulo-validar-un-pago.jpeg" width="600">
+
+**Evidencia observada:** Fig. 4 (formulario autoexplicativo), Fig. 18 (artículo paso a paso).
+
+**Mejora sugerida:** Tour interactivo opcional en el primer ingreso.
+
+---
+
+##### Is it delightful? — Puntaje: 4/5
+
+La experiencia es fluida, limpia y profesional, con estados claros y sensación de control.
+
+<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1, Fig. 10 (estética cuidada).
+
+**Mejora sugerida:** Sumar microinteracciones (animación al guardar, checkmark al finalizar una venta) para reforzar la satisfacción.
+
+---
+
+#### 5.3.3.3. Inclusive design
+
+En esta subsección se evalúa si Entreprenly considera distintos contextos de uso, niveles de experiencia digital y necesidades de accesibilidad.
+
+##### Principio 1: Proporciona experiencias comparables — Puntaje: 5/5
+
+Los puntos de contacto (dashboard, módulos, soporte y chatbot) ofrecen una experiencia equivalente y coherente; el chatbot habilita la compra por WhatsApp como canal alterno.
+
+<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1 (chatbot activo), Fig. 16 (soporte), navegación uniforme en todas las figuras.
+
+**Mejora sugerida:** Garantizar paridad de la experiencia en la versión móvil del dashboard.
+
+---
+
+##### Principio 2: Considera la situación del usuario — Puntaje: 5/5
+
+Responde a contextos reales de tienda: registro ágil de ventas con teclado numérico, cierre de caja por método de pago, revisión rápida de stock y alertas, y pedidos por WhatsApp en horas de demanda.
+
+<img src="images/Fig-15-ventas-registrar-cantidad.jpeg" width="600">
+
+**Evidencia observada:** Fig. 15 (registro rápido), Fig. 1 (resumen de caja), Fig. 6 (alertas operativas).
+
+**Mejora sugerida:** Modo de venta rápida a pantalla completa para horas pico.
+
+---
+
+##### Principio 3: Sé consistente — Puntaje: 5/5
+
+Botones, formularios, mensajes y navegación se mantienen consistentes en todos los módulos.
+
+<img src="images/Fig-02-catalogo-de-productos.jpeg" width="600">
+
+**Evidencia observada:** Fig. 2, Fig. 5, Fig. 10, Fig. 16 (mismo sistema visual).
+
+**Mejora sugerida:** Homogeneizar el estilo del botón "Volver" (Fig. 8).
+
+---
+
+##### Principio 4: Deja al usuario mandar — Puntaje: 5/5
+
+El usuario conserva autonomía: editar perfil, mantener su plan, cancelar, corregir y cerrar popups.
+
+<img src="images/Fig-19-perfil-configuracion.jpeg" width="600">
+
+**Evidencia observada:** Fig. 19 (perfil), Fig. 3 (editar), Fig. 13 (Cancelar), Fig. 14 (descargar/cerrar).
+
+**Mejora sugerida:** Permitir deshacer la última acción en Ventas (quitar un producto agregado por error).
+
+---
+
+##### Principio 5: Ofrece opciones — Puntaje: 5/5
+
+Brinda alternativas de navegación y acción: botones primarios y secundarios, sidebar, accesos rápidos, FAQ, reporte de problema y métodos de pago Efectivo / Tarjeta-Yape/Plin.
+
+<img src="images/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
+
+<img src="images/Fig-16-centro-de-ayuda.jpeg" width="600">
+
+**Evidencia observada:** Fig. 9 (métodos de pago), Fig. 16 (FAQ + reporte), Fig. 1 (accesos rápidos).
+
+**Mejora sugerida:** Hacer más visible la comparación de ahorro entre el plan Mensual y Anual (el toggle ya existe en Fig. 10).
+
+---
+
+##### Principio 6: Prioriza el contenido — Puntaje: 5/5
+
+El contenido más importante aparece primero: resumen del día y alertas en el tope del dashboard; plan recomendado destacado en Suscripción.
+
+<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+
+**Evidencia observada:** Fig. 1 (jerarquía del resumen), Fig. 10 (Plan Control "Recomendado" resaltado).
+
+**Mejora sugerida:** Priorizar visualmente las alertas críticas (vencidos) sobre las informativas.
+
+---
+
+##### Principio 7: Agrega valor — Puntaje: 5/5
+
+Genera beneficios concretos: ahorro de tiempo, menos errores, confianza en el stock, control de caja, automatización por chatbot y claridad de suscripción.
+
+<img src="images/Fig-06-panel-alertas-de-lotes.jpeg" width="600">
+
+**Evidencia observada:** Fig. 6 (evita mermas), Fig. 1 (control de caja), Fig. 10 (valor del plan), Fig. 18 (autoservicio de soporte).
+
+**Mejora sugerida:** Agregar reportes/indicadores de tendencia (ventas semanales, productos más vendidos) para reforzar el valor analítico.
+
+---
+
+#### Resumen de puntajes
+
+| Grupo                                       | Promedio    |
+| ------------------------------------------- | ----------- |
+| 5.3.3.1 Heurísticas de usabilidad (Nielsen) | **4.7 / 5** |
+| 5.3.3.2 Arquitectura de información         | **4.8 / 5** |
+| 5.3.3.3 Inclusive design                    | **5.0 / 5** |
+
+---
+
+## 5.4. Video About-the-Product. 
