@@ -10,7 +10,7 @@
 
 Aplicaciones Web
 
-<small>NRC: 12190 &nbsp;·&nbsp; Profesor: Hugo Allan Mori Paiva</small>
+<small>Código: 1ASI0730 &nbsp;·&nbsp; NRC: 12190 &nbsp;·&nbsp; Profesor: Hugo Allan Mori Paiva</small>
 
 ### Informe del Trabajo Final
 
@@ -28,7 +28,7 @@ Aplicaciones Web
 | u20241a290 | Flores Pinchi, Jose Fernando       |
 | u202416151 | Chavez Carrasco, Lionel Abraham    |
 
-<small>Abril &nbsp;·&nbsp; 2026</small>
+<small>Junio &nbsp;·&nbsp; 2026</small>
 
 ---
 
