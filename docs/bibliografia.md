@@ -1,3 +1,5 @@
+# Bibliografía
+
 <div style="font-size:15px; line-height:1.8;">
 
   <p style="padding-left:2em; text-indent:-2em;">GecoPOS. (2024). <em>Cómo evitar pérdidas por mal manejo de inventarios</em>. Blog GecoPOS. https://blog.gecopos.com/como-evitar-perdidas-por-mal-manejo-de-inventarios/</p>
