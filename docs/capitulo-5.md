@@ -1869,6 +1869,10 @@ Al término del Sprint 3, la Frontend Web Application consume la API real desple
 
 <img src="images/exec_s3_sales.png" width="600">
 
+<img src="images/exec_s3_subscription.png" width="600">
+
+<img src="images/exec_s3_chatbot.png" width="600">
+
 > **Nota:** Las capturas son marcadores (`images/exec_s3_*.png`) que el equipo debe reemplazar por los screenshots reales de la aplicación operando contra la API. Adicionalmente, incluir el enlace al video de navegación del producto subido a Microsoft Stream.
 
 ---
