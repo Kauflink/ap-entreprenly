@@ -1583,9 +1583,7 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `chat_orders`  
   Pedidos realizados por WhatsApp: número de orden, teléfono del cliente, dirección de entrega, ítems serializados en JSON (`items_json`), total, estado, indicador de comprobante recibido, URL del comprobante, contador de rechazos y correo del propietario.
 
----
-
-**Relaciones principales**
+### 4.8.3. Relaciones entre tablas
 
 - `profiles` referencia a `users` mediante `user_id`.
 - `users` y `roles` se relacionan mediante la tabla de unión `role_users`.
@@ -1597,9 +1595,7 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `chat_messages` referencia a `conversations` mediante `conversation_id`.
 - `chat_orders` referencia a `conversations` mediante `conversation_id`.
 
----
-
-**Normalización aplicada**
+### 4.8.4. Normalización aplicada
 
 La normalización aplicada se resume en tres puntos principales:
 

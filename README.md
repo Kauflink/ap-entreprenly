@@ -180,6 +180,9 @@ Para la entrega AV2, el equipo se enfocó en la implementación del backend de l
   - [4.7.1. Class Diagrams](docs/capitulo-4.md#471-class-diagrams)
 - [4.8. Database Design](docs/capitulo-4.md#48-database-design)
   - [4.8.1. Database Diagrams](docs/capitulo-4.md#481-database-diagrams)
+  - [4.8.2. Organización del esquema de base de datos](docs/capitulo-4.md#482-organización-del-esquema-de-base-de-datos)
+  - [4.8.3. Relaciones entre tablas](docs/capitulo-4.md#483-relaciones-entre-tablas)
+  - [4.8.4. Normalización aplicada](docs/capitulo-4.md#484-normalización-aplicada)
 
 ### Capítulo V: Product Implementation, Validation & Deployment
 - [5.1. Software Configuration Management](docs/capitulo-5.md#51-software-configuration-management)
