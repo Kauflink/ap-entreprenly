@@ -1739,6 +1739,8 @@ En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsa
 
 El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presentan los Work-items, organizados por aspecto, con el responsable y su estado al cierre del Sprint.
 
+![sprint3](./images/sprint3.png "Tablero del Sprint 3")
+
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
