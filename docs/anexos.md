@@ -5,8 +5,5 @@
 **AV1**
 URL: https://youtu.be/FUVs4MKRuU0
 
-**TB1**
-URL: _(pendiente de agregar)_
-
 **AV2**
-URL: _(pendiente de agregar)_
+URL: https://youtu.be/vh1XZmKGKLE
