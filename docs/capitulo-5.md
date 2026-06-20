@@ -356,7 +356,7 @@ En esta sección se especifica la configuración de despliegue definida por el e
 
 #### Landing Page
 
-El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main` (modo *legacy*, sin pipeline de GitHub Actions). El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
+El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main`. En el Sprint 1 la publicación se automatizó con un workflow de GitHub Actions y, posteriormente, el equipo simplificó el flujo dejando la publicación directa desde la rama. El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
@@ -1284,7 +1284,7 @@ El objetivo principal de este Sprint fue implementar la Frontend Web Application
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del Frontend Web Application (`ap-entreprenly-frontend`). Se realizaron más de 100 commits entre el 9 y el 12 de mayo de 2026, cubriendo desde la configuración inicial del proyecto Vue hasta la integración completa de todos los Bounded Contexts. A continuación se presenta el registro de los commits más representativos:
+Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del Frontend Web Application (`ap-entreprenly-frontend`). El repositorio se inicializó el 25 de abril de 2026 y el grueso de la implementación se realizó entre el 14 y el 16 de mayo de 2026, sumando más de 70 commits que cubren desde la configuración inicial del proyecto Vue 3 hasta la integración de todos los Bounded Contexts sobre una API simulada con JSON-Server. A continuación se presenta el registro de los commits más representativos:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1298,246 +1298,27 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>10fa91e</td>
-      <td>Initial commit</td>
-      <td>Creación inicial del repositorio del Frontend Web Application.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>4306255</td>
-      <td>chore: initial Vue project setup</td>
-      <td>Configuración inicial del proyecto Vue con estructura base, dependencias y configuración de rutas.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>2a97fc6</td>
-      <td>feat(core): implement base interfaces, shared components and main views</td>
-      <td>Se implementan las interfaces base, componentes compartidos y las vistas principales de la aplicación.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>develop</td>
-      <td>ccd0a90</td>
-      <td>dbJsonSales</td>
-      <td>Se agrega la estructura inicial del <code>db.json</code> con productos peruanos para el BC de Sales.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>982fc2a</td>
-      <td>feat(layout): add DashboardLayout shell component</td>
-      <td>Se crea el componente DashboardLayout como shell de la aplicación con sidebar y área de contenido.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>4ce1265</td>
-      <td>feat(layout): integrate DashboardLayout as app shell with nested routing</td>
-      <td>Se integra el DashboardLayout como shell principal con rutas anidadas y <code>router-view</code> funcional.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>c8eb0bb</td>
-      <td>feat(dashboard-layout): responsive sidebar with logo and scaled proportions</td>
-      <td>Se implementa el sidebar naranja responsive con logotipo de Entreprenly y proporciones ajustadas al diseño.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>33b1cf6</td>
-      <td>feat(chatbot): implement chatbot bounded context base structure</td>
-      <td>Se crea la estructura DDD base del Chatbot BC con sus 4 capas (domain, application, infrastructure, presentation).</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>41fb81e</td>
-      <td>feat(profile): add profile bounded context with 8 configuration cards</td>
-      <td>Se implementa el BC de Profile con las 8 tarjetas de configuración siguiendo la arquitectura DDD.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>49dc628</td>
-      <td>feat(chatbot): add navigation flow, QR countdown and bot auto-response</td>
-      <td>Se agrega el flujo de navegación del chatbot, el countdown de expiración del QR y la respuesta automática del bot.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>b5c8f40</td>
-      <td>style(chatbot): match components to Figma design</td>
-      <td>Se ajustan los componentes del Chatbot BC al diseño especificado en Figma.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>5bb4851</td>
-      <td>feat(chatbot): add real scannable QR code with WhatsApp deep link</td>
-      <td>Se implementa un QR real y escaneable que codifica el deep link de WhatsApp para la conexión de la cuenta del comerciante.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>b9835d2</td>
-      <td>feat(chatbot): add session guard to block conversations without connected WhatsApp</td>
-      <td>Se agrega un guard de sesión que bloquea el acceso a la vista de conversaciones si WhatsApp no está conectado.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>develop</td>
-      <td>b4d933d</td>
-      <td>salesActualizacionFuncionalidadCompleta</td>
-      <td>Se completa la funcionalidad del Sales BC con el ticket de venta, validaciones y resumen lateral.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>9d96203</td>
-      <td>feat(chatbot): implement complete chatbot flow with conversations, orders and payment validation</td>
-      <td>Se implementa el flujo completo del chatbot: lista de conversaciones, gestión de órdenes y validación de pago.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>4536170</td>
-      <td>fix(dashboard-layout): enable child route rendering and profile navigation</td>
-      <td>Se corrige el renderizado de rutas hijas en el DashboardLayout y la navegación al BC de Profile.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/sales</td>
-      <td>3c57947</td>
-      <td>feat(sales): adjust sales cart, payment methods and cash summary</td>
-      <td>Se ajusta el carrito de ventas, los métodos de pago (Efectivo / Digital) y el panel de Resumen de Caja.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>d115523</td>
-      <td>feat(shared): implement Help and Home dashboard pages</td>
-      <td>Se implementan las vistas de Home (panel resumen del negocio con alertas) y Help (centro de ayuda con artículos por categoría).</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/sales</td>
-      <td>970d6fe</td>
-      <td>feat(sales): decrement inventory stock on sale completion</td>
-      <td>Se agrega el decremento automático del stock en el Inventory BC al completar una venta en el Sales BC.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>10c612d</td>
-      <td>feat(chatbot): add bilingual i18n support and real inventory product data</td>
-      <td>Se agrega soporte i18n bilingüe completo al Chatbot BC y se conectan los productos reales del Inventory BC.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>78d93ae</td>
-      <td>feat(chatbot,help): client typing bubble, bot typewriter in input bar, real category counts</td>
-      <td>Se agrega la burbuja de escritura del cliente, el efecto typewriter del bot y los conteos reales por categoría en Help.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>e356dda</td>
-      <td>fix(preferences): persist theme and language across reloads</td>
-      <td>Se corrige la persistencia de las preferencias de tema e idioma en <code>localStorage</code> para que sobrevivan a recargas de página.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>c18c8f2</td>
-      <td>feat(i18n): translate browser tab titles based on active language</td>
-      <td>Se implementa la traducción dinámica del título de la pestaña del navegador según el idioma activo del usuario.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>c39716c</td>
-      <td>fix(subscription): agregar traduccion de idiomas de bc</td>
-      <td>Se agregan las traducciones ES/EN faltantes al Bounded Context de Subscription.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>54e9f01</td>
-      <td>feat(subscription): restore subscription BC from feature/inventory</td>
-      <td>Se restaura el Bounded Context de Subscription que había sido excluido accidentalmente durante la integración del BC de Inventory.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>475913a</td>
-      <td>feat(profile): add currency selector to preferences card</td>
-      <td>Se agrega el selector de moneda (PEN / USD) en la tarjeta de preferencias del Profile BC, sincronizado con los precios del Subscription BC.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>8f946c1</td>
-      <td>fix: refactor currency handling and sync subscription pricing</td>
-      <td>Se refactoriza el manejo de moneda y se sincroniza el precio de los planes de Subscription con la moneda seleccionada en Profile.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>e460790</td>
-      <td>feat(home): redesign dashboard panel to match Figma designs</td>
-      <td>Se rediseña el panel de Home para que coincida exactamente con el diseño especificado en Figma.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>157d4a1</td>
-      <td>feat(help): redesign help module to match Figma designs</td>
-      <td>Se rediseña el módulo de Help para que coincida con el diseño de Figma.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>382f19b</td>
-      <td>fix(chatbot): replace hardcoded localhost URLs with environment config</td>
-      <td>Se reemplazan las URLs hardcodeadas de <code>localhost</code> en el Chatbot BC con la configuración del entorno (<code>environment.ts</code>).</td>
-      <td>2026-05-12</td>
-    </tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>4bb3de2</td><td>Initial commit</td><td>Creación inicial del repositorio del Frontend Web Application.</td><td>2026-04-25</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>e8abfa9</td><td>chore: set up initial Vue 3 project with Vite and Pinia</td><td>Se configura el proyecto base de Vue 3 con Vite como herramienta de build y Pinia para la gestión de estado.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>887fb9c</td><td>fix: correct db.json structure</td><td>Se corrige la estructura del <code>db.json</code> utilizado como API simulada con JSON-Server.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>f8b72c5</td><td>refactor: reorganize project structure - move shared to root src/</td><td>Se reorganiza la estructura del proyecto, moviendo el código compartido (<code>shared</code>) a la raíz de <code>src/</code>.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>07134af</td><td>feat: implementar modulo chatbot-bc</td><td>Se implementa la estructura base del Bounded Context de Chatbot.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/sales</td><td>3393fcc</td><td>feat(sales): implementar módulo de ventas con arquitectura DDD</td><td>Se implementa el Bounded Context de Sales (ventas presenciales) siguiendo la arquitectura DDD.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>2b51099</td><td>Merge pull request #3 from Kauflink/feature/sales</td><td>Integración del Bounded Context de Sales a la rama principal.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/subscription</td><td>31ac9a6</td><td>feat: add subscription module, i18n and routes</td><td>Se agrega el Bounded Context de Subscription con sus traducciones (i18n) y rutas.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>615eecd</td><td>feat(chatbot): add chatbot module with QR session, conversations and payment approval</td><td>Se completa el Chatbot BC con sesión por QR, conversaciones y aprobación de pago.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>ec046c7</td><td>feat: add help, orders and home views with i18n keys</td><td>Se agregan las vistas de Home, Help y Orders con sus claves de internacionalización.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>0a943eb</td><td>feat(chatbot): add plin and yape receipt components</td><td>Se agregan los componentes de comprobante de Yape y Plin al Chatbot BC.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>be34115</td><td>feat(i18n): add English translations for chatbot module</td><td>Se agregan las traducciones al inglés del módulo de Chatbot.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/inventory</td><td>994a1ef</td><td>feat(inventory): Agregacion de inventory BC</td><td>Se implementa el Bounded Context de Inventory (productos unitarios y por peso, lotes).</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>22807bc</td><td>fix: unify endpoint configuration via environment variables</td><td>Se unifica la configuración de endpoints mediante variables de entorno de Vite (<code>VITE_*</code>).</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/profile-configuration</td><td>418ac0b</td><td>feat(profile): add profile bounded context</td><td>Se implementa el Bounded Context de Profile (perfil y configuración del comerciante).</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/profile-configuration</td><td>5880670</td><td>feat(profile): connect profile context to app shell</td><td>Se conecta el Bounded Context de Profile al shell de la aplicación.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>9f0d39f</td><td>fix(router): translate page titles via i18n keys</td><td>Se traducen dinámicamente los títulos de página mediante claves i18n.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>d87e5d0</td><td>fix: responsive zoom layout and chatbot button wrap</td><td>Se corrige el layout responsive ante zoom y el ajuste del botón del Chatbot.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/inventory</td><td>40cfca5</td><td>feat(inventory): close gaps in inventory bounded context</td><td>Se cierran brechas funcionales pendientes del Inventory BC.</td><td>2026-05-16</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>db3be9d</td><td>feat: add login/register flows, assets and UI updates</td><td>Se agregan los flujos de inicio de sesión y registro (UI), recursos y mejoras visuales.</td><td>2026-05-16</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>317da6d</td><td>feat: env</td><td>Se agrega la configuración de variables de entorno del proyecto.</td><td>2026-05-16</td></tr>
   </tbody>
 </table>
 
