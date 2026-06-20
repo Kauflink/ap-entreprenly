@@ -1488,7 +1488,7 @@ Las alertas de stock (vencimiento, bajo stock, sin stock) son calculadas en tiem
 
 </div>
 
-## Organización del esquema de base de datos
+### 4.8.2. Organización del esquema de base de datos
 
 El esquema se organiza en las siguientes tablas por categoría:
 
