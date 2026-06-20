@@ -1873,7 +1873,6 @@ Al término del Sprint 3, la Frontend Web Application consume la API real desple
 
 <img src="images/exec_s3_chatbot.png" width="600">
 
-> **Nota:** Las capturas son marcadores (`images/exec_s3_*.png`) que el equipo debe reemplazar por los screenshots reales de la aplicación operando contra la API. Adicionalmente, incluir el enlace al video de navegación del producto subido a Microsoft Stream.
 
 ---
 
@@ -1916,7 +1915,7 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
   </tbody>
 </table>
 
-> **Nota:** Incluir capturas de la interfaz de Swagger UI mostrando la interacción con datos de muestra (`images/swagger_s3_*.png`).
+<img src="./images/swagger_s3.png" width="600">
 
 **URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
 
@@ -1926,7 +1925,9 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
 
 Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`), publicarla en **Google Artifact Registry** (`us-east1-docker.pkg.dev`), y desplegarla en la instancia de **Google Compute Engine** mediante **Docker Compose**, con **Caddy** como reverse proxy y gestor automático de TLS. La autenticación del pipeline de GitHub Actions se realiza mediante **Workload Identity Federation**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
 
-> **Nota:** Incluir capturas del workflow de despliegue exitoso, del Artifact Registry con la imagen publicada y del API respondiendo sobre HTTPS (`images/deploy_s3_*.png`).
+<img src="./images/deploy_s3_1.png" width="600">
+
+<img src="./images/deploy_s3_2.png" width="600">
 
 ---
 
@@ -1936,7 +1937,9 @@ Durante el Sprint 3, los cinco miembros del equipo participaron en la implementa
 
 El equipo aplicó GitFlow con ramas `feature/` por Bounded Context (`feature/iam-context`, `feature/profiles-context`, `feature/inventory`, `feature/sales`, `feature/subscription`, `feature/chatbot`, `feature/deployment`) integradas a `develop` y `main` mediante Pull Requests (más de 20 PRs en el repositorio de Web Services). La distribución aproximada de commits en el backend fue: Camargo Briceño (37), Palma De Los Santos (25), Chavez Carrasco (12), Flores Pinchi (6) y Peirano Brun (3).
 
-> **Nota:** Incluir las capturas de los analíticos de colaboración y commits de GitHub para ambos repositorios (`images/collab_s3_*.png`).
+<img src="./images/collab_s3_1.png" width="600">
+
+<img src="./images/collab_s3_2.png" width="600">
 
 ---
 
