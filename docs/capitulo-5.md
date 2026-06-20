@@ -358,8 +358,6 @@ En esta sección se especifica la configuración de despliegue definida por el e
 
 El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main` (modo *legacy*, sin pipeline de GitHub Actions). El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
 
-> **Nota:** En el Sprint 1 el despliegue se automatizó inicialmente con un workflow de GitHub Actions; posteriormente el equipo lo simplificó y eliminó el workflow, dejando la publicación directa desde la rama (`Pages deploys from branch`).
-
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
 1. Asegurarse de que el repositorio del Landing Page (`Kauflink/ap-entreprenly-landing`) esté público en GitHub.
