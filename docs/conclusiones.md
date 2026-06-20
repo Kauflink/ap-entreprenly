@@ -18,7 +18,7 @@
 
 8. **El Frontend Web Application (Vue 3 + PrimeVue) alcanzó un nivel de madurez funcional y visual adecuado para el usuario final.** La mejora visual y la incorporación de diseño responsive en todos los Bounded Contexts —incluyendo la adaptación del dashboard y del menú lateral a pantallas pequeñas— garantizó que el comerciante pueda operar la plataforma tanto en escritorio como en dispositivos móviles, ampliando la accesibilidad del producto. La migración del consumo de datos desde el mock de JSON-Server hacia los endpoints reales de la API completó la integración de extremo a extremo.
 
-9. **Las entrevistas de validación con usuarios reales confirmaron que Entreprenly resuelve los dolores identificados en el needfinding.** Los participantes del segmento de clientes finales validaron que la confirmación de stock en tiempo real y el comprobante automático del chatbot mitigan la desconfianza al comprar y pagar por adelantado, otorgando una alta probabilidad de recompra. Esta retroalimentación valida empíricamente la propuesta de valor central del producto.
+9. **Las entrevistas de validación con usuarios reales confirmaron que Entreprenly resuelve los dolores identificados en el needfinding.** Los comerciantes entrevistados validaron que los flujos de inventario y gestión de lotes, venta presencial, validación de pagos por el chatbot de WhatsApp y suscripción resultan claros e intuitivos, y manifestaron una alta probabilidad de adoptar la plataforma para reducir los registros manuales y las pérdidas operativas. Por su parte, el cliente final validó que la confirmación de stock en tiempo real y el comprobante automático del chatbot mitigan la desconfianza al comprar y pagar por adelantado. Esta retroalimentación valida empíricamente la propuesta de valor central del producto en ambos segmentos.
 
 10. **La evaluación heurística y la revisión integral del informe elevaron la calidad final del entregable.** La aplicación de principios de usabilidad sobre las aplicaciones, junto con la corrección de las User Stories y la actualización de los diagramas de clase, Structurizr y de base de datos, aseguró la coherencia entre la documentación técnica y el producto implementado al cierre del proyecto.
 
@@ -28,7 +28,7 @@
 
 1. Se recomienda completar la integración real del chatbot con la API de WhatsApp Business —actualmente operada mediante un bridge— y la conexión con la balanza IoT, con el fin de llevar a producción las funcionalidades que hoy operan en modo simulado y validar su comportamiento en condiciones reales de uso.
 
-2. Se recomienda ampliar el proceso de validación a un mayor número de entrevistas por segmento (de 3 a 5), incorporando especialmente al segmento de comerciantes, para obtener evidencia más representativa sobre la usabilidad del dashboard, el flujo de ventas presenciales y la gestión de inventario.
+2. Se recomienda ampliar el proceso de validación a un mayor número de entrevistas (de 3 a 5 en total), incorporando especialmente más participantes del segmento de clientes finales —que en esta etapa contó con una sola entrevista—, para obtener evidencia más representativa sobre la confianza en el chatbot, el flujo de compra y la experiencia de pago.
 
 3. Se recomienda incorporar pruebas automatizadas (unitarias y de integración) sobre los servicios web RESTful en ASP.NET Core y ejecutarlas dentro del pipeline de CI, con el fin de sostener la calidad y la estabilidad del backend a medida que el producto incorpore nuevas funcionalidades y escale.
 
