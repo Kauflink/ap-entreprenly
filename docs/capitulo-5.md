@@ -356,9 +356,7 @@ En esta sección se especifica la configuración de despliegue definida por el e
 
 #### Landing Page
 
-El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main` (modo *legacy*, sin pipeline de GitHub Actions). El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
-
-> **Nota:** En el Sprint 1 el despliegue se automatizó inicialmente con un workflow de GitHub Actions; posteriormente el equipo lo simplificó y eliminó el workflow, dejando la publicación directa desde la rama (`Pages deploys from branch`).
+El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main`. En el Sprint 1 la publicación se automatizó con un workflow de GitHub Actions y, posteriormente, el equipo simplificó el flujo dejando la publicación directa desde la rama. El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
@@ -1286,7 +1284,7 @@ El objetivo principal de este Sprint fue implementar la Frontend Web Application
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del Frontend Web Application (`ap-entreprenly-frontend`). Se realizaron más de 100 commits entre el 9 y el 12 de mayo de 2026, cubriendo desde la configuración inicial del proyecto Vue hasta la integración completa de todos los Bounded Contexts. A continuación se presenta el registro de los commits más representativos:
+Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del Frontend Web Application (`ap-entreprenly-frontend`). El repositorio se inicializó el 25 de abril de 2026 y el grueso de la implementación se realizó entre el 14 y el 16 de mayo de 2026, sumando más de 70 commits que cubren desde la configuración inicial del proyecto Vue 3 hasta la integración de todos los Bounded Contexts sobre una API simulada con JSON-Server. A continuación se presenta el registro de los commits más representativos:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1300,246 +1298,27 @@ Durante el Sprint 2, el equipo trabajó exclusivamente sobre el repositorio del 
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>10fa91e</td>
-      <td>Initial commit</td>
-      <td>Creación inicial del repositorio del Frontend Web Application.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>4306255</td>
-      <td>chore: initial Vue project setup</td>
-      <td>Configuración inicial del proyecto Vue con estructura base, dependencias y configuración de rutas.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>2a97fc6</td>
-      <td>feat(core): implement base interfaces, shared components and main views</td>
-      <td>Se implementan las interfaces base, componentes compartidos y las vistas principales de la aplicación.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>develop</td>
-      <td>ccd0a90</td>
-      <td>dbJsonSales</td>
-      <td>Se agrega la estructura inicial del <code>db.json</code> con productos peruanos para el BC de Sales.</td>
-      <td>2026-05-09</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>982fc2a</td>
-      <td>feat(layout): add DashboardLayout shell component</td>
-      <td>Se crea el componente DashboardLayout como shell de la aplicación con sidebar y área de contenido.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>4ce1265</td>
-      <td>feat(layout): integrate DashboardLayout as app shell with nested routing</td>
-      <td>Se integra el DashboardLayout como shell principal con rutas anidadas y <code>router-view</code> funcional.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>c8eb0bb</td>
-      <td>feat(dashboard-layout): responsive sidebar with logo and scaled proportions</td>
-      <td>Se implementa el sidebar naranja responsive con logotipo de Entreprenly y proporciones ajustadas al diseño.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>33b1cf6</td>
-      <td>feat(chatbot): implement chatbot bounded context base structure</td>
-      <td>Se crea la estructura DDD base del Chatbot BC con sus 4 capas (domain, application, infrastructure, presentation).</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>41fb81e</td>
-      <td>feat(profile): add profile bounded context with 8 configuration cards</td>
-      <td>Se implementa el BC de Profile con las 8 tarjetas de configuración siguiendo la arquitectura DDD.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>49dc628</td>
-      <td>feat(chatbot): add navigation flow, QR countdown and bot auto-response</td>
-      <td>Se agrega el flujo de navegación del chatbot, el countdown de expiración del QR y la respuesta automática del bot.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>b5c8f40</td>
-      <td>style(chatbot): match components to Figma design</td>
-      <td>Se ajustan los componentes del Chatbot BC al diseño especificado en Figma.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>5bb4851</td>
-      <td>feat(chatbot): add real scannable QR code with WhatsApp deep link</td>
-      <td>Se implementa un QR real y escaneable que codifica el deep link de WhatsApp para la conexión de la cuenta del comerciante.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>b9835d2</td>
-      <td>feat(chatbot): add session guard to block conversations without connected WhatsApp</td>
-      <td>Se agrega un guard de sesión que bloquea el acceso a la vista de conversaciones si WhatsApp no está conectado.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>develop</td>
-      <td>b4d933d</td>
-      <td>salesActualizacionFuncionalidadCompleta</td>
-      <td>Se completa la funcionalidad del Sales BC con el ticket de venta, validaciones y resumen lateral.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/chatbot</td>
-      <td>9d96203</td>
-      <td>feat(chatbot): implement complete chatbot flow with conversations, orders and payment validation</td>
-      <td>Se implementa el flujo completo del chatbot: lista de conversaciones, gestión de órdenes y validación de pago.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>4536170</td>
-      <td>fix(dashboard-layout): enable child route rendering and profile navigation</td>
-      <td>Se corrige el renderizado de rutas hijas en el DashboardLayout y la navegación al BC de Profile.</td>
-      <td>2026-05-10</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/sales</td>
-      <td>3c57947</td>
-      <td>feat(sales): adjust sales cart, payment methods and cash summary</td>
-      <td>Se ajusta el carrito de ventas, los métodos de pago (Efectivo / Digital) y el panel de Resumen de Caja.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>d115523</td>
-      <td>feat(shared): implement Help and Home dashboard pages</td>
-      <td>Se implementan las vistas de Home (panel resumen del negocio con alertas) y Help (centro de ayuda con artículos por categoría).</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>feature/sales</td>
-      <td>970d6fe</td>
-      <td>feat(sales): decrement inventory stock on sale completion</td>
-      <td>Se agrega el decremento automático del stock en el Inventory BC al completar una venta en el Sales BC.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>10c612d</td>
-      <td>feat(chatbot): add bilingual i18n support and real inventory product data</td>
-      <td>Se agrega soporte i18n bilingüe completo al Chatbot BC y se conectan los productos reales del Inventory BC.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>78d93ae</td>
-      <td>feat(chatbot,help): client typing bubble, bot typewriter in input bar, real category counts</td>
-      <td>Se agrega la burbuja de escritura del cliente, el efecto typewriter del bot y los conteos reales por categoría en Help.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>e356dda</td>
-      <td>fix(preferences): persist theme and language across reloads</td>
-      <td>Se corrige la persistencia de las preferencias de tema e idioma en <code>localStorage</code> para que sobrevivan a recargas de página.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>c18c8f2</td>
-      <td>feat(i18n): translate browser tab titles based on active language</td>
-      <td>Se implementa la traducción dinámica del título de la pestaña del navegador según el idioma activo del usuario.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>c39716c</td>
-      <td>fix(subscription): agregar traduccion de idiomas de bc</td>
-      <td>Se agregan las traducciones ES/EN faltantes al Bounded Context de Subscription.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>54e9f01</td>
-      <td>feat(subscription): restore subscription BC from feature/inventory</td>
-      <td>Se restaura el Bounded Context de Subscription que había sido excluido accidentalmente durante la integración del BC de Inventory.</td>
-      <td>2026-05-11</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>475913a</td>
-      <td>feat(profile): add currency selector to preferences card</td>
-      <td>Se agrega el selector de moneda (PEN / USD) en la tarjeta de preferencias del Profile BC, sincronizado con los precios del Subscription BC.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>8f946c1</td>
-      <td>fix: refactor currency handling and sync subscription pricing</td>
-      <td>Se refactoriza el manejo de moneda y se sincroniza el precio de los planes de Subscription con la moneda seleccionada en Profile.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>e460790</td>
-      <td>feat(home): redesign dashboard panel to match Figma designs</td>
-      <td>Se rediseña el panel de Home para que coincida exactamente con el diseño especificado en Figma.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>157d4a1</td>
-      <td>feat(help): redesign help module to match Figma designs</td>
-      <td>Se rediseña el módulo de Help para que coincida con el diseño de Figma.</td>
-      <td>2026-05-12</td>
-    </tr>
-    <tr>
-      <td>Kauflink/ap-entreprenly-frontend</td>
-      <td>main</td>
-      <td>382f19b</td>
-      <td>fix(chatbot): replace hardcoded localhost URLs with environment config</td>
-      <td>Se reemplazan las URLs hardcodeadas de <code>localhost</code> en el Chatbot BC con la configuración del entorno (<code>environment.ts</code>).</td>
-      <td>2026-05-12</td>
-    </tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>4bb3de2</td><td>Initial commit</td><td>Creación inicial del repositorio del Frontend Web Application.</td><td>2026-04-25</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>e8abfa9</td><td>chore: set up initial Vue 3 project with Vite and Pinia</td><td>Se configura el proyecto base de Vue 3 con Vite como herramienta de build y Pinia para la gestión de estado.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>887fb9c</td><td>fix: correct db.json structure</td><td>Se corrige la estructura del <code>db.json</code> utilizado como API simulada con JSON-Server.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>f8b72c5</td><td>refactor: reorganize project structure - move shared to root src/</td><td>Se reorganiza la estructura del proyecto, moviendo el código compartido (<code>shared</code>) a la raíz de <code>src/</code>.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>07134af</td><td>feat: implementar modulo chatbot-bc</td><td>Se implementa la estructura base del Bounded Context de Chatbot.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/sales</td><td>3393fcc</td><td>feat(sales): implementar módulo de ventas con arquitectura DDD</td><td>Se implementa el Bounded Context de Sales (ventas presenciales) siguiendo la arquitectura DDD.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>2b51099</td><td>Merge pull request #3 from Kauflink/feature/sales</td><td>Integración del Bounded Context de Sales a la rama principal.</td><td>2026-05-14</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/subscription</td><td>31ac9a6</td><td>feat: add subscription module, i18n and routes</td><td>Se agrega el Bounded Context de Subscription con sus traducciones (i18n) y rutas.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>615eecd</td><td>feat(chatbot): add chatbot module with QR session, conversations and payment approval</td><td>Se completa el Chatbot BC con sesión por QR, conversaciones y aprobación de pago.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>ec046c7</td><td>feat: add help, orders and home views with i18n keys</td><td>Se agregan las vistas de Home, Help y Orders con sus claves de internacionalización.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>0a943eb</td><td>feat(chatbot): add plin and yape receipt components</td><td>Se agregan los componentes de comprobante de Yape y Plin al Chatbot BC.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/chatbot</td><td>be34115</td><td>feat(i18n): add English translations for chatbot module</td><td>Se agregan las traducciones al inglés del módulo de Chatbot.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/inventory</td><td>994a1ef</td><td>feat(inventory): Agregacion de inventory BC</td><td>Se implementa el Bounded Context de Inventory (productos unitarios y por peso, lotes).</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>22807bc</td><td>fix: unify endpoint configuration via environment variables</td><td>Se unifica la configuración de endpoints mediante variables de entorno de Vite (<code>VITE_*</code>).</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/profile-configuration</td><td>418ac0b</td><td>feat(profile): add profile bounded context</td><td>Se implementa el Bounded Context de Profile (perfil y configuración del comerciante).</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/profile-configuration</td><td>5880670</td><td>feat(profile): connect profile context to app shell</td><td>Se conecta el Bounded Context de Profile al shell de la aplicación.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>9f0d39f</td><td>fix(router): translate page titles via i18n keys</td><td>Se traducen dinámicamente los títulos de página mediante claves i18n.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>main</td><td>d87e5d0</td><td>fix: responsive zoom layout and chatbot button wrap</td><td>Se corrige el layout responsive ante zoom y el ajuste del botón del Chatbot.</td><td>2026-05-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/inventory</td><td>40cfca5</td><td>feat(inventory): close gaps in inventory bounded context</td><td>Se cierran brechas funcionales pendientes del Inventory BC.</td><td>2026-05-16</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>db3be9d</td><td>feat: add login/register flows, assets and UI updates</td><td>Se agregan los flujos de inicio de sesión y registro (UI), recursos y mejoras visuales.</td><td>2026-05-16</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>317da6d</td><td>feat: env</td><td>Se agrega la configuración de variables de entorno del proyecto.</td><td>2026-05-16</td></tr>
   </tbody>
 </table>
 
@@ -1960,6 +1739,8 @@ En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsa
 
 El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presentan los Work-items, organizados por aspecto, con el responsable y su estado al cierre del Sprint.
 
+![sprint3](./images/sprint3.png "Tablero del Sprint 3")
+
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
@@ -2088,7 +1869,10 @@ Al término del Sprint 3, la Frontend Web Application consume la API real desple
 
 <img src="images/exec_s3_sales.png" width="600">
 
-> **Nota:** Las capturas son marcadores (`images/exec_s3_*.png`) que el equipo debe reemplazar por los screenshots reales de la aplicación operando contra la API. Adicionalmente, incluir el enlace al video de navegación del producto subido a Microsoft Stream.
+<img src="images/exec_s3_subscription.png" width="600">
+
+<img src="images/exec_s3_chatbot.png" width="600">
+
 
 ---
 
@@ -2131,7 +1915,7 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
   </tbody>
 </table>
 
-> **Nota:** Incluir capturas de la interfaz de Swagger UI mostrando la interacción con datos de muestra (`images/swagger_s3_*.png`).
+<img src="./images/swagger_s3.png" width="600">
 
 **URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
 
@@ -2141,7 +1925,9 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
 
 Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`), publicarla en **Google Artifact Registry** (`us-east1-docker.pkg.dev`), y desplegarla en la instancia de **Google Compute Engine** mediante **Docker Compose**, con **Caddy** como reverse proxy y gestor automático de TLS. La autenticación del pipeline de GitHub Actions se realiza mediante **Workload Identity Federation**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
 
-> **Nota:** Incluir capturas del workflow de despliegue exitoso, del Artifact Registry con la imagen publicada y del API respondiendo sobre HTTPS (`images/deploy_s3_*.png`).
+<img src="./images/deploy_s3_1.png" width="600">
+
+<img src="./images/deploy_s3_2.png" width="600">
 
 ---
 
@@ -2151,7 +1937,9 @@ Durante el Sprint 3, los cinco miembros del equipo participaron en la implementa
 
 El equipo aplicó GitFlow con ramas `feature/` por Bounded Context (`feature/iam-context`, `feature/profiles-context`, `feature/inventory`, `feature/sales`, `feature/subscription`, `feature/chatbot`, `feature/deployment`) integradas a `develop` y `main` mediante Pull Requests (más de 20 PRs en el repositorio de Web Services). La distribución aproximada de commits en el backend fue: Camargo Briceño (37), Palma De Los Santos (25), Chavez Carrasco (12), Flores Pinchi (6) y Peirano Brun (3).
 
-> **Nota:** Incluir las capturas de los analíticos de colaboración y commits de GitHub para ambos repositorios (`images/collab_s3_*.png`).
+<img src="./images/collab_s3_1.png" width="600">
+
+<img src="./images/collab_s3_2.png" width="600">
 
 ---
 
@@ -2303,7 +2091,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        Durante la entrevista, María Encarnación Velázquez manifestó que el Landing Page de Entrepently le pareció claro y fácil de comprender, ya que explica de manera sencilla los beneficios de la aplicación y cómo puede ayudar a los pequeños comerciantes en la gestión de sus negocios. Respecto a los User Flows ejecutados, consideró que las funciones de inventario y gestión de lotes son intuitivas y facilitan el registro, búsqueda y control de productos. Asimismo, indicó que el proceso de venta presencial es rápido y permite llevar un mejor control de los ingresos diarios. La validación de pagos mediante el chatbot de WhatsApp le pareció una alternativa práctica para automatizar pedidos y cobros, mientras que el flujo de suscripción resultó sencillo y comprensible. La entrevistada señaló que la solución contribuye significativamente a resolver problemas operativos relacionados con el control de inventario, seguimiento de ventas y organización de productos, reduciendo la necesidad de registros manuales y disminuyendo el riesgo de errores o pérdidas. No se identificaron dificultades importantes durante la interacción con la aplicación; sin embargo, sugirió incorporar funcionalidades adicionales como la generación de facturas y guías de remisión para complementar la gestión comercial. Finalmente, manifestó una alta probabilidad de utilizar la aplicación en su negocio debido a los beneficios que ofrece en términos de organización, ahorro de tiempo y reducción del estrés asociado a las tareas administrativas.
+        Durante la entrevista, María Encarnación Velázquez manifestó que el Landing Page de Entreprenly le pareció claro y fácil de comprender, ya que explica de manera sencilla los beneficios de la aplicación y cómo puede ayudar a los pequeños comerciantes en la gestión de sus negocios. Respecto a los User Flows ejecutados, consideró que las funciones de inventario y gestión de lotes son intuitivas y facilitan el registro, búsqueda y control de productos. Asimismo, indicó que el proceso de venta presencial es rápido y permite llevar un mejor control de los ingresos diarios. La validación de pagos mediante el chatbot de WhatsApp le pareció una alternativa práctica para automatizar pedidos y cobros, mientras que el flujo de suscripción resultó sencillo y comprensible. La entrevistada señaló que la solución contribuye significativamente a resolver problemas operativos relacionados con el control de inventario, seguimiento de ventas y organización de productos, reduciendo la necesidad de registros manuales y disminuyendo el riesgo de errores o pérdidas. No se identificaron dificultades importantes durante la interacción con la aplicación; sin embargo, sugirió incorporar funcionalidades adicionales como la generación de facturas y guías de remisión para complementar la gestión comercial. Finalmente, manifestó una alta probabilidad de utilizar la aplicación en su negocio debido a los beneficios que ofrece en términos de organización, ahorro de tiempo y reducción del estrés asociado a las tareas administrativas.
       </td>
     </tr>
   </table>
@@ -2371,7 +2159,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        Durante la entrevista, Hercilio Carrasco Herrera indicó que el Landing Page de Entrepently presenta de manera clara las funcionalidades y beneficios de la aplicación, permitiéndole comprender rápidamente cómo la herramienta puede apoyar la gestión de su negocio. En cuanto a los User Flows ejecutados, consideró que los procesos de inventario y gestión de lotes son fáciles de utilizar y útiles para mantener un mejor control de los productos, especialmente aquellos con fecha de vencimiento. Asimismo, valoró positivamente el flujo de venta presencial, destacando la facilidad para registrar ventas y diferenciar ingresos por efectivo y pagos electrónicos. La validación de pagos mediante el chatbot de WhatsApp le pareció una funcionalidad innovadora que simplifica la atención de pedidos, mientras que el proceso de suscripción fue percibido como sencillo y accesible. El entrevistado señaló que la solución responde adecuadamente a varios de sus problemas operativos, principalmente en el control de inventario, la gestión de productos perecibles y la organización de ventas. También destacó que las alertas de vencimiento y el control de stock en tiempo real pueden contribuir a reducir pérdidas económicas y mejorar la eficiencia del negocio. No reportó dificultades significativas durante la ejecución de las tareas; sin embargo, identificó una oportunidad de mejora relacionada con la incorporación de recordatorios automáticos para clientes con pagos pendientes, lo que facilitaría la gestión de cobranzas y reduciría el riesgo de impagos. Finalmente, manifestó una alta disposición a utilizar la aplicación en su actividad comercial, ya que considera que las funcionalidades propuestas aportan valor y contribuyen a modernizar la administración de pequeños negocios.
+        Durante la entrevista, Hercilio Carrasco Herrera indicó que el Landing Page de Entreprenly presenta de manera clara las funcionalidades y beneficios de la aplicación, permitiéndole comprender rápidamente cómo la herramienta puede apoyar la gestión de su negocio. En cuanto a los User Flows ejecutados, consideró que los procesos de inventario y gestión de lotes son fáciles de utilizar y útiles para mantener un mejor control de los productos, especialmente aquellos con fecha de vencimiento. Asimismo, valoró positivamente el flujo de venta presencial, destacando la facilidad para registrar ventas y diferenciar ingresos por efectivo y pagos electrónicos. La validación de pagos mediante el chatbot de WhatsApp le pareció una funcionalidad innovadora que simplifica la atención de pedidos, mientras que el proceso de suscripción fue percibido como sencillo y accesible. El entrevistado señaló que la solución responde adecuadamente a varios de sus problemas operativos, principalmente en el control de inventario, la gestión de productos perecibles y la organización de ventas. También destacó que las alertas de vencimiento y el control de stock en tiempo real pueden contribuir a reducir pérdidas económicas y mejorar la eficiencia del negocio. No reportó dificultades significativas durante la ejecución de las tareas; sin embargo, identificó una oportunidad de mejora relacionada con la incorporación de recordatorios automáticos para clientes con pagos pendientes, lo que facilitaría la gestión de cobranzas y reduciría el riesgo de impagos. Finalmente, manifestó una alta disposición a utilizar la aplicación en su actividad comercial, ya que considera que las funcionalidades propuestas aportan valor y contribuyen a modernizar la administración de pequeños negocios.
       </td>
     </tr>
   </table>
@@ -2403,26 +2191,26 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Entrevistado(a):</strong> [Nombres y apellidos]
+        <strong>Entrevistado(a):</strong> Sebastián Curay
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc; width: 50%;">
-        <strong>Edad:</strong> [Edad]
+        <strong>Edad:</strong> 19
       </td>
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Entrevistador(a):</strong> [Nombre del entrevistador]
+        <strong>Entrevistador(a):</strong> Fernando Flores
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Distrito:</strong> [Distrito, Lima]
+        <strong>Distrito:</strong> San Martín de Porres, Lima
       </td>
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Inicio de la entrevista:</strong> [mm:ss]
+        <strong>Inicio de la entrevista:</strong> 00:00
       </td>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
-        <strong>Duración:</strong> [mm:ss]
+        <strong>Duración:</strong> 09:50
       </td>
     </tr>
   </table>
@@ -2432,7 +2220,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista (Microsoft Stream):</strong>
-        <a href="[URL del video en Microsoft Stream]" style="color: #1a6b6b;">[Nombre del participante]-Entrevista de Validación</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQBA8Q70W8bCRoDGM1oUhrJdATc8nAY1ysMnwvptFJXACZk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wdusaa" style="color: #1a6b6b;">Sebastián Curay-Entrevista de Validación</a>
       </td>
     </tr>
   </table>
@@ -2441,7 +2229,8 @@ A continuación se registran las entrevistas de validación realizadas por segme
   <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
     <tr>
       <td style="padding: 10px 14px; border: 1px solid #cfd8dc; line-height: 1.6;">
-        [Resumen descriptivo de las principales apreciaciones del entrevistado respecto a las tareas asignadas: claridad del Landing Page, facilidad y rapidez del pedido por el chatbot, confianza generada por la confirmación de stock en tiempo real, claridad del proceso de pago y comprobante, preferencia frente a la atención manual, pasos confusos detectados, probabilidad de recompra y mejoras sugeridas.]
+        Sebastián, cliente final de 19 años habituado a los pagos digitales (Yape y Plin), validó el Landing Page y el flujo de compra por el chatbot de WhatsApp realizando un pedido real durante la sesión (dos Coca-Colas, con entrega en Girón Apurímac y pago reportado mediante una captura de Yape). Sobre el Landing Page, indicó que comprendió la propuesta de valor y la encontró interesante, destacando que representa una forma más rápida de comprar y que poder ver el stock disponible le resulta útil. Respecto al pedido por el chatbot, lo percibió rápido y directo, con mensajes claros y bien enfocados. Valoró especialmente la confirmación de stock en tiempo real: comentó que en otros emprendimientos suele ocurrir que paga y luego le indican que el producto está agotado, le retrasan o le cancelan el pedido, por lo que ver la cantidad disponible al momento de consultar le da confianza para comprar.
+        Sobre el pago, calificó el proceso de recibir las instrucciones y reportar el comprobante como claro, seguro, dinámico y sencillo, y señaló que recibir la confirmación automática del pedido le da tranquilidad al pagar por adelantado, pues le permite verificar que el pago fue confirmado y que no fue estafado ni perdió el tiempo. Indicó que el medio de pago ofrecido (Yape/Plin) le resulta cómodo por ser de uso generalizado. Manifestó preferir la atención por chatbot frente a la respuesta manual de una persona, por considerarla rápida y eficiente al estar todo automatizado. No identificó pasos confusos durante el flujo. Calificó con 5 sobre 5 la probabilidad de volver a comprar en una tienda que utilice este sistema, por considerarlo rápido, eficiente e intuitivo y fácil de usar para cualquier persona. Como mejora, sugirió que el mensaje de bienvenida del chatbot muestre un pequeño catálogo de los productos más solicitados o más vendidos y que, en caso de no estar disponibles, el cliente pueda escribir el producto para verificar su disponibilidad.
       </td>
     </tr>
   </table>
@@ -2848,37 +2637,40 @@ Genera beneficios concretos: ahorro de tiempo, menos errores, confianza en el st
 
 ## 5.4. Video About-the-Product
 
-En esta sección el equipo introduce y describe el contenido del **Video About-the-Product** de Entreprenly. Este video tiene una orientación promocional y está dirigido a dos públicos: los visitantes del Landing Page, que desean conocer el modelo de negocio y las características principales de los productos de software, y los usuarios de las aplicaciones, que desean realizar las tareas relacionadas con los procesos soportados por la solución (gestión de inventario, registro de ventas, atención de pedidos por el chatbot y suscripción).
+En esta sección se presenta el video **About-the-Product** de Entreprenly, una pieza de orientación promocional que resume el modelo de negocio, las características y los beneficios del producto. El video, de una duración de entre uno y tres minutos, parte de los dolores cotidianos de un negocio de barrio —el inventario llevado en cuaderno, los productos que se vencen y los pedidos de WhatsApp que no paran— para presentar a **Entreprenly como la plataforma que digitaliza el negocio de retail integrando inventario, ventas y atención por WhatsApp en un solo lugar**. A lo largo de la narración se muestran sus capacidades centrales: el control del stock en tiempo real con alertas anticipadas de vencimiento y desabastecimiento, el registro de ventas en segundos con cuadre de caja que separa automáticamente el efectivo de los medios digitales, y un chatbot que atiende los pedidos por WhatsApp de forma automática —confirmando stock y registrando la venta— de modo que el comerciante solo aprueba el pago.
 
-El tono de comunicación del video es consistente con el adoptado para el producto: cercano, claro y orientado al comerciante peruano. El contenido resume la propuesta de valor, muestra escenas de interacción reales con la Frontend Web Application (Vue 3 + PrimeVue) y con el chatbot de WhatsApp, y destaca los beneficios concretos de la solución. De acuerdo con lo indicado en el enunciado, el video incluye al menos un testimonio positivo de un usuario que participó en las entrevistas de validación (sección 5.3).
+El video incluye escenas de interacción real con el producto (navegación por el dashboard de inventario, registro de ventas y el flujo de pedido por el chatbot) y recoge **al menos una opinión por cada segmento objetivo**. Por el **Segmento 1 (Comerciantes)** participa Stephanie, dueña de negocio, quien destaca que la plataforma reúne inventario, ventas y caja en un solo lugar de forma ordenada, frente a su método anterior basado en cuaderno y celular; resalta el ahorro de tiempo, la prevención de pérdidas gracias a las alertas de vencimiento y la rapidez al cuadrar la caja, y califica con 5/5 la probabilidad de volver a comprar en una tienda que use el sistema por considerarlo rápido, eficiente e intuitivo. Por el **Segmento 2 (Clientes Finales)** se incorpora la apreciación de Sebastián (registrada en la sección 5.3.2), quien valora la confirmación de stock en tiempo real y la atención automatizada por el chatbot de WhatsApp como un proceso claro, seguro y rápido.
 
-Este video se publica en **Microsoft Stream** (versión privada de evidencia) y en **YouTube** (versión utilizada para incrustarse en una sección adecuada del Landing Page). A continuación se consigna el screenshot del video, el enlace a la versión publicada y la duración del mismo.
+El video fue subido a **Microsoft Stream** y a **YouTube**. A continuación se incluye un screenshot del video con su respectivo enlace.
 
-<table>
-  <thead>
-    <tr>
-      <th>Elemento</th>
-      <th>Detalle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Screenshot del video</strong></td>
-      <td>[Insertar captura de un cuadro representativo del video]</td>
-    </tr>
-    <tr>
-      <td><strong>URL (Microsoft Stream)</strong></td>
-      <td>[Insertar enlace privado de Microsoft Stream]</td>
-    </tr>
-    <tr>
-      <td><strong>URL (YouTube — incrustado en Landing Page)</strong></td>
-      <td>[Insertar enlace público de YouTube]</td>
-    </tr>
-    <tr>
-      <td><strong>Duración</strong></td>
-      <td>[Insertar duración del video, entre 1 y 3 minutos]</td>
-    </tr>
-  </tbody>
-</table>
+<div align="center">
+<div style="font-family: 'Segoe UI', sans-serif; max-width: 680px; margin: 24px auto; border: 1.5px solid #b0bec5; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
 
-> **Nota:** Conforme al cronograma del enunciado, la primera versión del Video About-the-Product corresponde a la entrega AV2 (Sprint 3). Los campos entre corchetes `[ ]` son marcadores que deben reemplazarse por la evidencia real una vez producido y publicado el video.
+  <!-- Encabezado -->
+  <div style="background-color: #1a6b6b; color: white; padding: 10px 16px; font-weight: 700; font-size: 1.1em; letter-spacing: 0.05em;">
+  Video About-the-Product — Entreprenly
+  </div>
+
+  <!-- Imagen de la captura de pantalla -->
+  <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
+    <img src="images/about-the-product-video.png" alt="Screenshot del video About-the-Product de Entreprenly" style="width: 100%; border-radius: 3px; display: block;">
+  </div>
+
+  <!-- Links -->
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.88em;">
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link del video (Microsoft Stream):</strong>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQD7F8snmaJaQoAKXPJo6MHJARZWmd7lIrkanbWw0uIJt9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=i9I4BZ" style="color: #1a6b6b;">Entreprenly — Video About-the-Product (Microsoft Stream)</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
+        <strong>Link del video (YouTube):</strong>
+        <a href="https://youtu.be/JFLwl_6-Alg" style="color: #1a6b6b;">Entreprenly — Video About-the-Product (YouTube)</a>
+      </td>
+    </tr>
+  </table>
+
+</div>
+</div>
