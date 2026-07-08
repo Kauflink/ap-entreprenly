@@ -1943,6 +1943,298 @@ El equipo aplicó GitFlow con ramas `feature/` por Bounded Context (`feature/iam
 
 ---
 
+### 5.2.4. Sprint 4
+
+#### 5.2.4.1. Sprint Planning 4
+
+Para este cuarto y último Sprint, el equipo estableció como objetivo principal la integración del **canal real de WhatsApp** para el chatbot de Entreprenly mediante un **WhatsApp bridge multi-tenant**, conectando la lógica de pedidos ya implementada en el Backend con conversaciones reales de clientes, y desplegando la versión final de los tres productos digitales. La reunión de planificación se llevó a cabo de manera virtual, donde se definieron las User Stories a abordar, el Sprint Goal y la distribución de responsabilidades.
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <tbody>
+    <tr><td colspan="2"><strong>Sprint 4</strong></td></tr>
+    <tr><td colspan="2"><strong>Sprint Planning Background</strong></td></tr>
+    <tr><td><strong>Date</strong></td><td>2026-06-04</td></tr>
+    <tr><td><strong>Time</strong></td><td>09:00 AM</td></tr>
+    <tr><td><strong>Location</strong></td><td>Reunión virtual vía Discord</td></tr>
+    <tr><td><strong>Prepared By</strong></td><td>Camargo Briceño, Joseph Julius</td></tr>
+    <tr><td><strong>Attendees (to planning meeting)</strong></td><td>Camargo Briceño, Joseph Julius / Chavez Carrasco, Lionel Abraham / Palma De Los Santos, Elynor Mikela / Peirano Brun, José Antonio / Flores Pinchi, José Fernando</td></tr>
+    <tr><td><strong>Sprint 3 Review Summary</strong></td><td>En el Sprint 3 se implementó y desplegó el Backend real con ASP.NET Core sobre Google Compute Engine, con autenticación JWT, persistencia con Entity Framework Core por bounded context y la lógica del flujo de pedidos del chatbot (US-41 a US-52). El Frontend se integró con la API real reemplazando la Fake API del Sprint 2.</td></tr>
+    <tr><td><strong>Sprint 3 Retrospective Summary</strong></td><td>El equipo identificó que, si bien la lógica del chatbot residía en el Backend, faltaba la integración con WhatsApp real: las conversaciones seguían siendo simuladas. Para el Sprint 4 se acordó implementar un WhatsApp bridge multi-tenant con <code>whatsapp-web.js</code>, conectar el canal real (vinculación por QR, recepción de mensajes y de comprobantes por imagen, y envío de respuestas al cliente) y desplegar la versión final de los tres productos.</td></tr>
+    <tr><td colspan="2"><strong>Sprint Goal &amp; User Stories</strong></td></tr>
+    <tr><td><strong>Sprint 4 Goal</strong></td><td>Nuestro enfoque está en habilitar la atención real de clientes por WhatsApp, conectando el chatbot de Entreprenly a cuentas reales mediante un bridge multi-tenant. Creemos que entrega valor inmediato al comerciante al automatizar consultas de productos, pedidos y validación de pagos digitales directamente sobre WhatsApp. Esto se confirmará cuando un cliente pueda vincular su WhatsApp por código QR, conversar con el bot, enviar su comprobante de pago como imagen y recibir la confirmación de su pedido de extremo a extremo. User Stories: US-37, US-38, US-44, US-45 y US-47.</td></tr>
+    <tr><td><strong>Sprint 4 Velocity</strong></td><td>14</td></tr>
+    <tr><td><strong>Sum of Story Points</strong></td><td>14</td></tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.4.2. Aspect Leaders and Collaborators
+
+En el Sprint 4, el equipo organizó el trabajo en torno a cuatro aspectos: el **WhatsApp Bridge multi-tenant**, la **integración del Chatbot en el Backend**, la **integración del Chatbot en el Frontend** y el **despliegue final con enrutamiento multi-backend** (página `/switch`). A continuación se presenta la matriz de liderazgo y colaboración (LACX):
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Team Member (Last Name, First Name)</th>
+      <th>GitHub Username</th>
+      <th>WhatsApp Bridge<br>Leader (L) / Collaborator (C)</th>
+      <th>Chatbot Backend<br>Leader (L) / Collaborator (C)</th>
+      <th>Chatbot Frontend<br>Leader (L) / Collaborator (C)</th>
+      <th>Despliegue final y Switch<br>Leader (L) / Collaborator (C)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Camargo Briceño, Joseph Julius</td><td>Juyens</td><td>C</td><td>L</td><td>C</td><td>L</td></tr>
+    <tr><td>Chavez Carrasco, Lionel Abraham</td><td>LioTG</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+    <tr><td>Palma De Los Santos, Elynor Mikela</td><td>elynorpalma</td><td>L</td><td>C</td><td>L</td><td>C</td></tr>
+    <tr><td>Peirano Brun, José Antonio</td><td>DoomerGX</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+    <tr><td>Flores Pinchi, José Fernando</td><td>Ferdinant12-ops</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.4.3. Sprint Backlog 4
+
+El objetivo principal de este Sprint fue integrar el canal real de WhatsApp para el chatbot, cubriendo las User Stories **US-37, US-38, US-44, US-45 y US-47**, que se realizaron de forma efectiva mediante el WhatsApp bridge (en Sprints previos US-37, US-38 y US-45 se abordaron de forma simulada o solo en el Backend). Cada historia se descompuso en Engineering Tasks con una estimación individual de entre 4 y 8 horas, gestionadas en el tablero Kanban del Sprint con las columnas **To Do, In Process, To Review y Done**.
+
+**Board público del Sprint 4 (Trello):** https://trello.com/b/msBZdIfS/entreprenly-sprint-4
+
+![sprint4](./images/sprint4.png "Tablero del Sprint 4 en Trello")
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th colspan="8">Sprint # Sprint 4</th>
+    </tr>
+    <tr>
+      <th colspan="2">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>US-37</td>
+      <td>Vincular cuenta de WhatsApp Business mediante código QR</td>
+      <td>T-01</td>
+      <td>Implementar el WhatsApp bridge con whatsapp-web.js</td>
+      <td>Construir el servicio bridge en Node.js con <code>whatsapp-web.js</code> que genera el código QR y mantiene la sesión de WhatsApp Web.</td>
+      <td>8</td>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-37</td>
+      <td>Vincular cuenta de WhatsApp Business mediante código QR</td>
+      <td>T-02</td>
+      <td>Reconciliar el estado de vinculación desde el QR</td>
+      <td>Relevar el QR real hacia el Backend y reconciliar el estado de vinculación a partir de la respuesta del sondeo (poll) del bridge.</td>
+      <td>5</td>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-37</td>
+      <td>Vincular cuenta de WhatsApp Business mediante código QR</td>
+      <td>T-03</td>
+      <td>Habilitar sesión de WhatsApp por vendedor (multi-tenant)</td>
+      <td>Mantener una sesión de WhatsApp independiente por email de vendedor, para que cada comerciante vincule su propia cuenta.</td>
+      <td>6</td>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-38</td>
+      <td>Consultar estado de vinculación del chatbot</td>
+      <td>T-04</td>
+      <td>Exponer y consultar el estado de conexión del bridge</td>
+      <td>Reportar el estado de conexión del bridge al Backend y agregar el endpoint de desconexión que limpia el estado y notifica el logout.</td>
+      <td>5</td>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-44</td>
+      <td>Recibir instrucciones de pago por WhatsApp</td>
+      <td>T-05</td>
+      <td>Enviar mensajes salientes al cliente (POST /send)</td>
+      <td>Agregar el endpoint <code>POST /send</code> del bridge para que el Backend empuje mensajes salientes (incluidas las instrucciones de pago) al cliente por WhatsApp.</td>
+      <td>5</td>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-45</td>
+      <td>Reportar comprobante de pago digital</td>
+      <td>T-06</td>
+      <td>Reenviar imágenes de WhatsApp como comprobantes</td>
+      <td>Detectar los mensajes de imagen entrantes y reenviarlos al Backend como comprobantes de pago, usando un centinela para no saturar los eventos SSE con el base64.</td>
+      <td>6</td>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-47</td>
+      <td>Notificar resultado de validación al cliente</td>
+      <td>T-07</td>
+      <td>Notificar el resultado de la validación por WhatsApp</td>
+      <td>Enviar al cliente, a través del bridge, la confirmación o el rechazo del pago tras la validación del comprobante desde el dashboard.</td>
+      <td>4</td>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-47</td>
+      <td>Notificar resultado de validación al cliente</td>
+      <td>T-08</td>
+      <td>Enrutar el canal a uno de dos backends (switch)</td>
+      <td>Implementar el enrutamiento del canal de WhatsApp hacia uno de dos backends con un turno conmutable y una página <code>/switch</code>, re-sincronizando el estado de la sesión.</td>
+      <td>6</td>
+      <td>Camargo Briceño, Joseph Julius</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US-37</td>
+      <td>Vincular cuenta de WhatsApp Business mediante código QR</td>
+      <td>T-09</td>
+      <td>Containerizar y desplegar el bridge</td>
+      <td>Crear el <code>Dockerfile</code> del bridge y automatizar su despliegue en una instancia de Compute Engine (VM) ante cada push a <code>main</code>.</td>
+      <td>5</td>
+      <td>Palma De Los Santos, Elynor Mikela</td>
+      <td>Done</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.4.4. Development Evidence for Sprint Review
+
+Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del **WhatsApp bridge** (`ap-entreprenly-whatsapp-bridge`) y realizó ajustes de integración en el **Backend** (`ap-entreprenly-web-services`) y el **Frontend** (`ap-entreprenly-frontend`). El bridge acumuló **13 commits** (sin contar merges) entre el 5 y el 26 de junio de 2026. A continuación se presenta el registro de los commits más representativos:
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Branch</th>
+      <th>Commit Id</th>
+      <th>Commit Message</th>
+      <th>Commit Message Body</th>
+      <th>Committed on (Date)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>a78855b</td><td>feat: WhatsApp bridge (whatsapp-web.js) for the Entreprenly chatbot</td><td>Se crea el servicio bridge en Node.js con whatsapp-web.js como base del canal de WhatsApp.</td><td>2026-06-05</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>f1d9226</td><td>feat(bridge): multi-tenant — one WhatsApp session per seller email</td><td>Se habilita una sesión de WhatsApp independiente por email de vendedor.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>26202b2</td><td>feat(bridge): add POST /send endpoint to push outbound messages from backend to clients</td><td>Se agrega el endpoint POST /send para enviar mensajes salientes al cliente por WhatsApp.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>c9cbff6</td><td>feat: forward WhatsApp image messages as payment receipts</td><td>Se reenvían las imágenes entrantes de WhatsApp al Backend como comprobantes de pago.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>8f788e7</td><td>feat(docker): add Dockerfile and dockerignore for VM deployment</td><td>Se containeriza el bridge para su despliegue en una VM.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>0eaae2e</td><td>ci: auto-deploy bridge to Compute Engine VM on push to main</td><td>Se automatiza el despliegue del bridge en Compute Engine ante cada push a main.</td><td>2026-06-10</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>83df0e6</td><td>feat: route WhatsApp to one of two backends with a switchable turn and /switch page</td><td>Se enruta el canal a uno de dos backends con turno conmutable y una página /switch.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>f802a49</td><td>fix: clean stale Chromium singleton locks on container startup</td><td>Se limpian los locks obsoletos de Chromium al iniciar el contenedor para estabilizar el arranque.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>3d5d18f</td><td>feat(chatbot): reconcile bridge link state from QR poll response</td><td>Se reconcilia el estado de vinculación del bridge a partir del sondeo del QR.</td><td>2026-06-16</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>1ceb0a8</td><td>feat(chatbot): expand rule-based responder with more intents</td><td>Se amplía el responder basado en reglas con más intenciones para las consultas de clientes.</td><td>2026-06-16</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>7a992ea</td><td>fix(chatbot): suggest catalog alternatives when requested product not found</td><td>Se sugieren alternativas del catálogo cuando el producto solicitado no está disponible.</td><td>2026-06-16</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>fff996b</td><td>fix(chatbot): add disconnect endpoint to clear bridge state and notify bridge logout</td><td>Se agrega el endpoint de desconexión que limpia el estado del bridge y notifica el logout.</td><td>2026-06-17</td></tr>
+  </tbody>
+</table>
+
+**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
+
+<img src="images/bridge_evi.png" width="800">
+
+---
+
+#### 5.2.4.5. Execution Evidence for Sprint Review
+
+Al término del Sprint 4, el chatbot de Entreprenly quedó operativo sobre **WhatsApp real** mediante el bridge multi-tenant. El flujo funcional de extremo a extremo es el siguiente:
+
+- **Vinculación por QR (US-37):** el comerciante escanea el código QR desde el dashboard para vincular su cuenta de WhatsApp; cada vendedor mantiene su propia sesión (multi-tenant).
+
+![sprint4_chatbot_qr](./images/sprint4_chatbot_qr.png "sprint4_chatbot_qr")
+
+- **Estado de vinculación (US-38):** el dashboard consulta y refleja el estado de conexión del bridge, con opción de desconexión.
+
+![sprint4_chatbot_state](./images/sprint4_chatbot_state.png "sprint4_chatbot_state")
+
+- **Atención automatizada:** el bot responde consultas de productos con datos reales del inventario y sugiere alternativas cuando un producto no está disponible.
+
+![sprint4_chatbot_demo](./images/sprint4_chatbot_demo.png "Conversación real del chatbot por WhatsApp")
+
+- **Instrucciones de pago (US-44):** el Backend envía al cliente, vía `POST /send` del bridge, las instrucciones de pago para completar su pedido.
+
+![sprint4_chatbot_pedido](./images/sprint4_chatbot_pedido.png "sprint4_chatbot_pedido")
+
+- **Comprobante por imagen (US-45):** el cliente envía la foto de su comprobante por WhatsApp y el bridge la reenvía al Backend como comprobante de pago.
+
+![sprint4_chatbot_comprobante](./images/sprint4_chatbot_comprobante.png "sprint4_chatbot_comprobante")
+
+
+- **Notificación de validación (US-47):** tras aprobar o rechazar el comprobante desde el dashboard, el resultado se notifica al cliente por WhatsApp.
+
+![sprint4_chatbot_aprobado](./images/sprint4_chatbot_aprobado.png "sprint4_chatbot_aprobado")
+
+---
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+La comunicación entre el Backend y el canal de WhatsApp se realiza a través del **WhatsApp bridge**, cuyos endpoints se documentan a continuación. Los endpoints del bridge se autentican con un **token de bridge dedicado**, y los endpoints del Backend asociados (webhook y relay) ya forman parte de la especificación OpenAPI/Swagger documentada en el Sprint 3.
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Componente</th>
+      <th>Endpoint</th>
+      <th>Verbo HTTP</th>
+      <th>Descripción</th>
+      <th>Autenticación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/bridge/qr</code></td><td>POST</td><td>El bridge releva el último QR de emparejamiento al Backend.</td><td>Token de bridge</td></tr>
+    <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/bridge/status</code></td><td>POST</td><td>El bridge reporta el estado de conexión de la sesión.</td><td>Token de bridge</td></tr>
+    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/bridge/qr</code></td><td>GET</td><td>El dashboard obtiene el QR actual y el estado de vinculación.</td><td>JWT</td></tr>
+    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/bridge/session</code></td><td>DELETE</td><td>Desconecta la sesión de WhatsApp del vendedor.</td><td>JWT</td></tr>
+    <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/webhook</code></td><td>POST</td><td>Recibe un mensaje entrante de WhatsApp (texto o imagen).</td><td>Token de bridge</td></tr>
+    <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/webhook/receipt</code></td><td>POST</td><td>Recibe un comprobante de pago (imagen) enviado por el cliente.</td><td>Token de bridge</td></tr>
+    <tr><td>Backend → Bridge</td><td><code>/send</code></td><td>POST</td><td>El Backend empuja un mensaje saliente hacia el cliente por WhatsApp.</td><td>Token de bridge</td></tr>
+  </tbody>
+</table>
+
+---
+
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma containerizada con Docker sobre una instancia de **Google Compute Engine (VM)**, con despliegue automatizado ante cada push a `main`. El bridge se comunica con el Backend desplegado en Google Compute Engine y expone la página `/switch` para el enrutamiento entre backends. Con esto quedó desplegada la **versión final** de los tres productos digitales (Landing Page, Frontend y Web Services) más el canal de WhatsApp. El proceso realizado fue el siguiente:
+
+1. **Containerización del bridge:** Se creó un `Dockerfile` para el servicio Node.js con `whatsapp-web.js` y las dependencias de Chromium necesarias para WhatsApp Web.
+
+![sprint4_bridge_docker](./images/sprint4_bridge_docker.png "sprint4_bridge_docker")
+
+2. **Despliegue automatizado en la VM:** Se configuró el despliegue automático del bridge en una instancia de Compute Engine ante cada push a `main`.
+
+![sprint4_bridge_vm](./images/sprint4_bridge_vm.png "sprint4_bridge_vm")
+
+![sprint4_bridge_deploy](./images/sprint4_bridge_deploy.png "Despliegue del WhatsApp bridge")
+
+---
+
+#### 5.2.4.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 4, la implementación del canal de WhatsApp se concentró en el repositorio `ap-entreprenly-whatsapp-bridge`, con ajustes de integración en el Backend y el Frontend. El equipo mantuvo GitFlow con ramas `feature/` integradas a `develop` y `main` mediante Pull Requests. La distribución de commits del bridge (sin contar merges) por miembro fue la siguiente: **Palma De Los Santos (8 commits)** y **Camargo Briceño (5 commits)**, con la colaboración del resto del equipo en las tareas de integración del Backend y el Frontend.
+
+![contributors_p4](./images/contributors_p4.png "Contribuidores del Sprint 4")
+
+![pull_p4](./images/pull_p4.png "Pull Requests del Sprint 4")
+
+**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
+
+---
+
 ## 5.3. Validation Interviews
 
 En esta sección el equipo registra y explica las actividades de entrevistas de validación realizadas durante el proyecto. A diferencia de las entrevistas de elicitación presentadas en la sección 2.2 —cuyo objetivo fue descubrir los problemas y necesidades de los usuarios—, las entrevistas de validación tienen como propósito confirmar si la solución construida (Landing Page y aplicaciones) resuelve efectivamente esos problemas y resulta usable para los segmentos objetivo.
