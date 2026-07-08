@@ -741,6 +741,15 @@ Los wireframes de la Landing Page representan la distribución base de cada secc
     <img src="images/wireframe-hero-section.png" alt="Wireframe Hero Section" width="800"/>
   </p>
 
+- **Video section**
+  <p align="center">
+    <img src="images/wireframe-video-section.png" alt="Mockup Hero Section" width="800"/>
+  </p>
+- **Team section**
+
+  <p align="center">
+    <img src="images/wireframe-Team-section.png" alt="Mockup Problem Section" width="800"/>
+  </p>
 - **Problem section**
 
   <p align="center">
@@ -816,15 +825,22 @@ Los mockups de la Landing Page muestran la propuesta visual aplicada sobre la es
   <p align="center">
     <img src="images/mockup-hero-section.png" alt="Mockup Hero Section" width="800"/>
   </p>
+- **Video section**
+  <p align="center">
+    <img src="images/video-section.png" alt="Mockup Hero Section" width="800"/>
+  </p>
+- **Team section**
 
+  <p align="center">
+    <img src="images/Team-section.png" alt="Mockup Problem Section" width="800"/>
+  </p>
 - **Problem section**
 
   <p align="center">
     <img src="images/mockup-problem-section.png" alt="Mockup Problem Section" width="800"/>
   </p>
-
 - **Main features section**
-
+ 
   <p align="center">
     <img src="images/mockup-main-features-section.png" alt="Mockup Main Features Section" width="800"/>
   </p>
@@ -878,32 +894,29 @@ Los mockups de la Landing Page muestran la propuesta visual aplicada sobre la es
   </p>
 
 ## 4.4. Web Applications UX/UI Design
-
-El diseño UX/UI de la aplicación web de Entreprenly responde directamente a las necesidades identificadas durante las entrevistas con los dos segmentos objetivo: **comerciantes dueños de minimarkets, bodegas o puestos de mercado**, y **clientes finales** que realizan pedidos a través del chatbot de WhatsApp. Todo el trabajo visual fue desarrollado en Figma, disponible en el siguiente enlace: [https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=0EzDRaCV1KcY71Jr-1](https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&t=0EzDRaCV1KcY71Jr-1)
-
+El diseño UX/UI de la aplicación web de Entreprenly responde directamente a las necesidades identificadas durante las entrevistas con los dos segmentos objetivo: **comerciantes dueños de minimarkets, bodegas o puestos de mercado**, y **clientes finales** que realizan pedidos a través del chatbot de WhatsApp. Todo el trabajo visual fue desarrollado en Figma, disponible en el siguiente enlace: https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&p=f&t=YgI7T4z8sRoXDOdK-0
+ 
 El proceso de diseño se organizó en dos fases complementarias. En la primera fase se construyeron los **wireframes** en escala de grises, priorizando la estructura, la jerarquía de la información y la disposición espacial de los componentes sin la influencia del color. En la segunda fase se desarrollaron los **mock-ups en color**, aplicando íntegramente el Design System definido en las Style Guidelines del capítulo 4.1. Esta progresión garantiza que cada decisión visual esté fundamentada en la arquitectura de información y en los flujos de usuario validados previamente.
-
+ 
 ---
-
 ### 4.4.1. Web Applications Wireframes
-
 Los wireframes de Entreprenly representan la estructura esquemática de cada pantalla de la aplicación web, elaborados en escala de grises para separar las decisiones estructurales de las decisiones estéticas. En cada pantalla se aplicaron los principios de **diseño inclusivo** (WCAG 2.1 AA), **jerarquía visual clara**, **proximidad semántica entre elementos relacionados** y **consistencia de patrones** para que el comerciante pueda operar la plataforma desde el primer día sin necesidad de capacitación técnica avanzada.
-
+ 
 La paleta monocromática utilizada en esta fase emplea Blanco puro (#FFFFFF) como superficie base, Gris claro (#EEEEEE) para fondos de sección y tarjetas, Gris medio (#CCCCCC) para bordes, divisores y estados inactivos, y Gris carbón (#212121) para tipografía, íconos y elementos de mayor peso visual. Esta distribución cromática permite identificar con claridad la jerarquía de contenido y la diferenciación entre zonas interactivas y zonas informativas.
-
+ 
 La estructura global de la aplicación se organiza en torno a tres zonas funcionales persistentes en todas las pantallas: el **Sidebar de navegación** fijo a la izquierda (220 px de ancho) con acceso a los módulos principales, el **encabezado sticky** en la parte superior con información del usuario activo, y el **área de contenido principal** que ocupa el espacio restante y se adapta a cada módulo.
-
+ 
 #### Wireframes: Dashboard Principal
-
+ 
 <p align="center">
     <img src="images/Landing_Wireframe.png" alt="Landing_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Dashboard Principal*
  
-El Dashboard es el centro neurálgico de la operación diaria del comerciante. Su wireframe adopta la estructura de tres zonas funcionales descritas anteriormente y organiza el contenido en dos niveles de lectura. En el **nivel superior**, una fila de cuatro tarjetas KPI (US-09) muestra en tiempo real los indicadores más críticos del negocio: "Ventas del día", "Stock crítico", "Lotes próximos a vencer" y "Total en caja". Cada tarjeta presenta una cifra principal de gran tamaño, una etiqueta descriptiva y un ícono de referencia. En la esquina superior de cada tarjeta se ubica un indicador de estado de color (verde, amarillo o rojo) para facilitar la lectura rápida sin necesidad de interpretar los números.
+El Dashboard es el centro neurálgico de la operación diaria del comerciante. Su wireframe adopta la estructura de tres zonas funcionales descritas anteriormente y organiza el contenido en dos niveles de lectura. En el **nivel superior**, una fila de cuatro tarjetas KPI (US-13) muestra en tiempo real los indicadores más críticos del negocio: "Ventas del día", "Stock crítico", "Lotes próximos a vencer" y "Total en caja". Cada tarjeta presenta una cifra principal de gran tamaño, una etiqueta descriptiva y un ícono de referencia. En la esquina superior de cada tarjeta se ubica un indicador de estado de color (verde, amarillo o rojo) para facilitar la lectura rápida sin necesidad de interpretar los números.
  
-En el **nivel secundario**, el wireframe muestra una tabla resumen de las últimas ventas registradas con columnas de Producto, Cantidad/Peso, Método de pago y Hora, y un módulo de "Alertas activas" que lista los lotes vencidos o próximos a vencer (US-07, US-11, US-12) con acceso directo al módulo de Lotes. La distribución sigue el ritmo 8-pt del sistema de espaciado: 24 px de separación entre el bloque de KPIs y la tabla, 16 px de padding interno en cada tarjeta.
+En el **nivel secundario**, el wireframe muestra una tabla resumen de las últimas ventas registradas con columnas de Producto, Cantidad/Peso, Método de pago y Hora, y un módulo de "Alertas activas" que lista los lotes vencidos o próximos a vencer (US-11, US-14, US-08) con acceso directo al módulo de Lotes. La distribución sigue el ritmo 8-pt del sistema de espaciado: 24 px de separación entre el bloque de KPIs y la tabla, 16 px de padding interno en cada tarjeta.
  
 #### Wireframes: Módulo de Productos
  
@@ -913,9 +926,9 @@ En el **nivel secundario**, el wireframe muestra una tabla resumen de las últim
  
 *Ilustración – Web Application Wireframe: Módulo de Productos*
  
-La pantalla de gestión de productos (US-01, US-05, US-10, US-13) presenta un layout de **lista con panel de filtros**. El panel lateral izquierdo contiene los filtros de búsqueda: campo de texto libre para búsqueda por nombre (US-13), selector de categoría y selector de tipo de medida (Unidad / Peso). El área principal de contenido muestra los productos en una grilla de tarjetas de 3 columnas.
+La pantalla de gestión de productos (US-01, US-05, US-07, US-08) presenta un layout de **lista con panel de filtros**. El panel lateral izquierdo contiene los filtros de búsqueda: campo de texto libre para búsqueda por nombre (US-08), selector de categoría y selector de tipo de medida (Unidad / Peso). El área principal de contenido muestra los productos en una grilla de tarjetas de 3 columnas.
  
-Cada tarjeta de producto (US-10) expone el tipo de medida (badge en esquina superior izquierda: "UNIDAD" o "PESO"), el nombre del producto, la descripción corta, el stock total con su unidad (ej. "12 unidades" o "8.5 kg"), el precio unitario o por kg, y botones de acción: "Editar" y un ícono de menú para opciones adicionales.
+Cada tarjeta de producto (US-07) expone el tipo de medida (badge en esquina superior izquierda: "UNIDAD" o "PESO"), el nombre del producto, la descripción corta, el stock total con su unidad (ej. "12 unidades" o "8.5 kg"), el precio unitario o por kg, y botones de acción: "Editar" y un ícono de menú para opciones adicionales.
  
 En la parte superior derecha del área de contenido se ubica el botón primario "Agregar producto" (US-01), que despliega un **panel lateral deslizante (drawer)** con el formulario de registro. Este patrón de drawer evita que el usuario pierda el contexto de la lista al agregar un producto nuevo, lo cual fue identificado como una necesidad de continuidad operativa durante las entrevistas. El formulario contiene campos para: nombre, descripción, categoría, tipo de medida (unitario / por peso), precio y stock inicial. El wireframe especifica los estados de validación de cada campo y el comportamiento del botón "Guardar" en estado habilitado y deshabilitado.
  
@@ -927,9 +940,9 @@ En la parte superior derecha del área de contenido se ubica el botón primario 
  
 *Ilustración – Web Application Wireframe: Módulo de Lotes*
  
-El wireframe del módulo de lotes (US-02, US-03, US-04, US-06, US-09, US-11, US-24) está organizado en torno a una **tabla principal con panel de resumen en la parte superior**. El panel de resumen (US-09) muestra tres contadores estilizados: "Lotes activos", "Próximos a vencer (7 días)" y "Lotes vencidos". Este panel actúa como semáforo de estado: si no existen condiciones críticas, muestra únicamente los contadores sin ningún banner de alerta; si existen lotes en estado crítico, aparece un **banner de alerta inline** (US-11) con borde izquierdo de 4 px en el color de estado correspondiente (amarillo para próximos a vencer, rojo para vencidos) y un listado con los nombres de los lotes afectados.
+El wireframe del módulo de lotes (US-02, US-03, US-04, US-06, US-13, US-14, US-09) está organizado en torno a una **tabla principal con panel de resumen en la parte superior**. El panel de resumen (US-13) muestra tres contadores estilizados: "Lotes activos", "Próximos a vencer (7 días)" y "Lotes vencidos". Este panel actúa como semáforo de estado: si no existen condiciones críticas, muestra únicamente los contadores sin ningún banner de alerta; si existen lotes en estado crítico, aparece un **banner de alerta inline** (US-14) con borde izquierdo de 4 px en el color de estado correspondiente (amarillo para próximos a vencer, rojo para vencidos) y un listado con los nombres de los lotes afectados.
  
-La tabla de lotes presenta las columnas: Producto asociado, Número de lote, Fecha de ingreso, Fecha de vencimiento, Cantidad/Peso disponible, Estado (badge de color) y Acciones (Editar, Ver detalles, Eliminar). El wireframe especifica el orden cronológico ascendente por defecto —primero los que vencen antes— como mecanismo de priorización visual para el comerciante. El botón "Crear lote" (US-24) se ubica en la parte superior derecha del módulo y abre un modal de registro.
+La tabla de lotes presenta las columnas: Producto asociado, Número de lote, Fecha de ingreso, Fecha de vencimiento, Cantidad/Peso disponible, Estado (badge de color) y Acciones (Editar, Ver detalles, Eliminar). El wireframe especifica el orden cronológico ascendente por defecto —primero los que vencen antes— como mecanismo de priorización visual para el comerciante. El botón "Crear lote" (US-09) se ubica en la parte superior derecha del módulo y abre un modal de registro.
  
 #### Wireframes: Módulo de Ventas
  
@@ -939,13 +952,13 @@ La tabla de lotes presenta las columnas: Producto asociado, Número de lote, Fec
  
 *Ilustración – Web Application Wireframe: Módulo de Ventas Presencial*
  
-El wireframe del punto de venta (US-25 al US-30) adopta la distribución clásica de los sistemas POS: **panel izquierdo de búsqueda de productos** (aproximadamente el 55% del ancho) y **panel derecho del ticket de venta en construcción** (45% restante).
+El wireframe del punto de venta (US-29 al US-35) adopta la distribución clásica de los sistemas POS: **panel izquierdo de búsqueda de productos** (aproximadamente el 55% del ancho) y **panel derecho del ticket de venta en construcción** (45% restante).
  
-El panel izquierdo contiene en la parte superior un campo de búsqueda con autocompletado y, debajo, una cuadrícula de acceso rápido con los productos más vendidos. Al seleccionar un producto, el sistema valida automáticamente si es de tipo "Unidad" o "Peso" y despliega el modal correspondiente. El wireframe muestra los dos estados de modal: **"Registrar Cantidad"** (US-25), con un campo numérico entero y un indicador del stock disponible en tiempo real; y **"Registrar Peso"** (US-26), con un campo decimal, la opción de captura desde balanza IoT (representada con un ícono de balanza y el label "Captura automática") y la alternativa de ingreso manual.
+El panel izquierdo contiene en la parte superior un campo de búsqueda con autocompletado y, debajo, una cuadrícula de acceso rápido con los productos más vendidos. Al seleccionar un producto, el sistema valida automáticamente si es de tipo "Unidad" o "Peso" y despliega el modal correspondiente. El wireframe muestra los dos estados de modal: **"Registrar Cantidad"** (US-29), con un campo numérico entero y un indicador del stock disponible en tiempo real; y **"Registrar Peso"** (US-30), con un campo decimal, la opción de captura desde balanza IoT (representada con un ícono de balanza y el label "Captura automática") y la alternativa de ingreso manual.
  
-El panel derecho representa el **Ticket de Venta** (US-27) con el listado de ítems confirmados (nombre, cantidad/peso, precio unitario y subtotal), el subtotal acumulado y el monto total en tipografía de gran tamaño para máxima visibilidad. Debajo del total se ubican los botones de método de pago (US-28): "Efectivo" y "Digital (Yape / Plin)", diseñados como toggles de selección exclusiva de 48 px de altura mínima. En la parte inferior del panel derecho se ubica el botón primario "Finalizar venta y emitir boleta" (US-30).
+El panel derecho representa el **Ticket de Venta** (US-31) con el listado de ítems confirmados (nombre, cantidad/peso, precio unitario y subtotal), el subtotal acumulado y el monto total en tipografía de gran tamaño para máxima visibilidad. Debajo del total se ubican los botones de método de pago (US-32): "Efectivo" y "Digital (Yape / Plin)", diseñados como toggles de selección exclusiva de 48 px de altura mínima. En la parte inferior del panel derecho se ubica el botón primario "Finalizar venta y emitir boleta" (US-35).
  
-El **Resumen de Caja** (US-29, US-31) aparece como un bloque fijo en la parte inferior del panel izquierdo, mostrando los contadores "Efectivo", "Digital (Yape/Plin)" y "Total del día", actualizados sincrónicamente cada vez que se finaliza una venta.
+El **Resumen de Caja** (US-33, US-36) aparece como un bloque fijo en la parte inferior del panel izquierdo, mostrando los contadores "Efectivo", "Digital (Yape/Plin)" y "Total del día", actualizados sincrónicamente cada vez que se finaliza una venta.
  
 #### Wireframes: Módulo de Chatbot WhatsApp
  
@@ -955,7 +968,7 @@ El **Resumen de Caja** (US-29, US-31) aparece como un bloque fijo en la parte in
  
 *Ilustración – Web Application Wireframe: Módulo de Chatbot WhatsApp*
  
-El wireframe del módulo de chatbot (US-32 al US-35) replica el patrón visual de las aplicaciones de mensajería, dividido en dos paneles. El **panel izquierdo** (35% del ancho) es la lista de conversaciones activas, ordenada cronológicamente con el último mensaje visible como preview. El **panel derecho** (65% del ancho) es la ventana de conversación activa con el historial de mensajes (burbujas diferenciadas para mensajes del bot y del cliente), el campo de redacción y el botón de envío.
+El wireframe del módulo de chatbot (US-37 al US-40) replica el patrón visual de las aplicaciones de mensajería, dividido en dos paneles. El **panel izquierdo** (35% del ancho) es la lista de conversaciones activas, ordenada cronológicamente con el último mensaje visible como preview. El **panel derecho** (65% del ancho) es la ventana de conversación activa con el historial de mensajes (burbujas diferenciadas para mensajes del bot y del cliente), el campo de redacción y el botón de envío.
  
 En la parte superior del módulo, cuando la cuenta de WhatsApp Business no está vinculada, el wireframe muestra el **panel de vinculación por QR**: un área central con el código QR generado, instrucciones textuales de escaneo y un contador de tiempo de expiración. Una vez vinculada la cuenta, este panel es reemplazado por una etiqueta de estado con el número vinculado y un indicador de conexión activa.
  
@@ -969,7 +982,7 @@ En la parte superior del módulo, cuando la cuenta de WhatsApp Business no está
  
 El wireframe del módulo de pedidos presenta una **tabla de gestión de pedidos** recibidos a través del chatbot. Las columnas incluyen: número de pedido, cliente (nombre/número WhatsApp), productos solicitados (resumen), total, método de pago, estado (badge con colores de estado: amarillo para "Pendiente de pago", naranja para "Esperando validación", verde para "Confirmado", gris para "Cancelado") y acciones disponibles según el estado del pedido.
  
-El detalle de cada pedido se abre en un **panel lateral deslizante** que muestra el historial completo del pedido, la dirección de entrega indicada por el cliente y el comprobante de pago adjunto (imagen). Los botones de acción "Aprobar pago" (US-42) y "Rechazar pago" (US-43) están ubicados en una zona fija en la parte inferior del panel, con el comprobante ocupando el área central para facilitar la revisión visual. Para el rechazo se incluye un campo de texto obligatorio de motivo. El wireframe refleja también el indicador de alerta por pagos repetidamente rechazados del mismo cliente (US-48), visible como un badge de advertencia junto al nombre del cliente en la tabla.
+El detalle de cada pedido se abre en un **panel lateral deslizante** que muestra el historial completo del pedido, la dirección de entrega indicada por el cliente y el comprobante de pago adjunto (imagen). Los botones de acción "Aprobar pago" (US-47) y "Rechazar pago" (US-48) están ubicados en una zona fija en la parte inferior del panel, con el comprobante ocupando el área central para facilitar la revisión visual. Para el rechazo se incluye un campo de texto obligatorio de motivo. El wireframe refleja también el indicador de alerta por pagos repetidamente rechazados del mismo cliente (US-52), visible como un badge de advertencia junto al nombre del cliente en la tabla.
  
 #### Wireframes: Módulo de Suscripción
  
@@ -979,20 +992,20 @@ El detalle de cada pedido se abre en un **panel lateral deslizante** que muestra
  
 *Ilustración – Web Application Wireframe: Módulo de Suscripción*
  
-El wireframe de suscripción (US-14 al US-23) está dividido en dos estados claramente diferenciados. Cuando el usuario tiene el **Plan Free**, la pantalla muestra dos tarjetas comparativas de planes: "Plan Free" (sin borde activo, con listado de funcionalidades limitadas) y "Plan Control" (con borde destacado y badge "Recomendado"), y el botón "Elegir plan" (US-14). Al presionar "Continuar con la suscripción" (US-15), el wireframe muestra un formulario de facturación en dos pasos: datos personales/empresa y datos de pago.
+El wireframe de suscripción (US-16 al US-24) está dividido en dos estados claramente diferenciados. Cuando el usuario tiene el **Plan Free**, la pantalla muestra dos tarjetas comparativas de planes: "Plan Free" (sin borde activo, con listado de funcionalidades limitadas) y "Plan Control" (con borde destacado y badge "Recomendado"), y el botón "Elegir plan" (US-16). Al presionar "Continuar con la suscripción" (US-17), el wireframe muestra un formulario de facturación en dos pasos: datos personales/empresa y datos de pago.
  
-Cuando el usuario tiene el **Plan Control activo**, la pantalla muestra el panel de gestión de suscripción (US-19, US-20) con: etiqueta de estado, fecha de renovación, historial de facturación y los botones "Renovar suscripción" (US-21) y "Solicitar cancelación" (US-22). El botón de cancelación tiene un flujo de confirmación con modal que requiere una acción adicional para evitar cancelaciones accidentales.
+Cuando el usuario tiene el **Plan Control activo**, la pantalla muestra el panel de gestión de suscripción (US-21, US-22) con: etiqueta de estado, fecha de renovación, historial de facturación y los botones "Renovar suscripción" (US-23) y "Solicitar cancelación" (US-24). El botón de cancelación tiene un flujo de confirmación con modal que requiere una acción adicional para evitar cancelaciones accidentales.
  
 ---
 ### 4.4.2. Web Applications Wireflow Diagrams
 
 Los Wireflow Diagrams presentan de forma integrada las pantallas de la aplicación web junto con las rutas de navegación que el usuario sigue para alcanzar un objetivo específico. Cada Wireflow define un **User Goal** concreto, detalla las pantallas involucradas, las decisiones del usuario y las respuestas del sistema, constituyendo así el mapa completo de la experiencia de uso. El equipo elaboró previamente los Task Flows correspondientes para cada User Goal, los cuales sirvieron como base para identificar las rutas típicas y los puntos de decisión críticos antes de diseñar los wireframes que los representan.
 A continuación se describen los Wireflows principales del sistema, organizados por User Goal y considerando las User Personas definidas en el capítulo 2 (Don Lucho — comerciante, y Andrea Torres — cliente final).
-
+ 
 ---
-
+ 
 **Wireflow 1 – User Goal: Registrarse e iniciar sesión en Entreprenly**
-
+ 
 <p align="center">
     <img src="images/Wireflow1.png" alt="Wireflow1" width="800"/>
   </p>
@@ -1001,11 +1014,11 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Pantalla de inicio (Login):** Don Lucho llega a la pantalla de Login. Presiona el enlace "¿No tienes cuenta? Regístrate". → El formulario cambia al modo Registro (transición sin cambio de URL, solo alternancia de componentes).
  
-**Formulario de Registro:** Don Lucho ingresa su email y contraseña. Si los datos son válidos y el email no está registrado (US-52, Scenario 1): el sistema crea la cuenta, asigna el Plan Free automáticamente y muestra un mensaje de confirmación indicando que se envió un email de verificación. Si el email ya existe (US-52, Scenario 2): aparece un mensaje de error inline debajo del campo de email. Si la contraseña no cumple los requisitos (US-52, Scenario 3): se resaltan los requisitos no cumplidos debajo del campo de contraseña.
+**Formulario de Registro:** Don Lucho ingresa su email y contraseña. Si los datos son válidos y el email no está registrado (US-56, Scenario 1): el sistema crea la cuenta, asigna el Plan Free automáticamente y muestra un mensaje de confirmación indicando que se envió un email de verificación. Si el email ya existe (US-56, Scenario 2): aparece un mensaje de error inline debajo del campo de email. Si la contraseña no cumple los requisitos (US-56, Scenario 3): se resaltan los requisitos no cumplidos debajo del campo de contraseña.
  
-**Verificación de email (US-53):** Don Lucho revisa su correo y hace clic en el enlace de verificación. Si el token es válido: la cuenta queda activa y el sistema redirige directamente al Dashboard principal. Si el token expiró: la pantalla muestra un mensaje de error y el botón "Reenviar email de verificación".
+**Verificación de email (US-57):** Don Lucho revisa su correo y hace clic en el enlace de verificación. Si el token es válido: la cuenta queda activa y el sistema redirige directamente al Dashboard principal. Si el token expiró: la pantalla muestra un mensaje de error y el botón "Reenviar email de verificación".
  
-**Pantalla de Login:** En visitas posteriores, Don Lucho ingresa email y contraseña. Si las credenciales son correctas (US-54, Scenario 1): el sistema genera un JWT y redirige al Dashboard. Si las credenciales son incorrectas (US-54, Scenario 2): aparece un mensaje de error genérico sin indicar qué campo falló. Si falló 5 veces (US-54, Scenario 3): la cuenta se bloquea y se envía notificación al email. Como alternativa, si Don Lucho prefiere usar Google (US-55): presiona "Continuar con Google" y completa el flujo OAuth.
+**Pantalla de Login:** En visitas posteriores, Don Lucho ingresa email y contraseña. Si las credenciales son correctas (US-58, Scenario 1): el sistema genera un JWT y redirige al Dashboard. Si las credenciales son incorrectas (US-58, Scenario 2): aparece un mensaje de error genérico sin indicar qué campo falló. Si falló 5 veces (US-58, Scenario 3): la cuenta se bloquea y se envía notificación al email. Como alternativa, si Don Lucho prefiere usar Google (US-59): presiona "Continuar con Google" y completa el flujo OAuth.
  
 ---
  
@@ -1021,11 +1034,11 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Agregar producto (US-01):** Don Lucho presiona el botón primario "Agregar producto". El drawer lateral se despliega con el formulario de registro. Completa todos los campos obligatorios (nombre, tipo de medida, precio, stock inicial). Presiona "Guardar". Si todos los datos son válidos: el producto queda registrado y aparece en la grilla con su tarjeta correspondiente. Si hay campos obligatorios vacíos: los campos inválidos quedan resaltados en rojo y el botón "Guardar" permanece deshabilitado.
  
-**Editar producto (US-05):** Don Lucho localiza el producto que desea editar mediante la búsqueda por nombre (US-12) o navegando en la grilla. Presiona el botón "Editar" en la tarjeta. El drawer lateral se abre con los datos actuales pre-cargados. Modifica los campos necesarios y presiona "Guardar". El sistema actualiza el producto y cierra el drawer mostrando la tarjeta actualizada en la grilla.
+**Editar producto (US-05):** Don Lucho localiza el producto que desea editar mediante la búsqueda por nombre (US-08) o navegando en la grilla. Presiona el botón "Editar" en la tarjeta. El drawer lateral se abre con los datos actuales pre-cargados. Modifica los campos necesarios y presiona "Guardar". El sistema actualiza el producto y cierra el drawer mostrando la tarjeta actualizada en la grilla.
  
-**Visualizar detalles (US-10):** Al hacer hover sobre cualquier tarjeta de producto, aparece el botón "Ver detalles". Al presionarlo, el sistema expande la tarjeta o despliega un panel con toda la información del producto incluyendo el historial de lotes asociados.
+**Visualizar detalles (US-07):** Al hacer hover sobre cualquier tarjeta de producto, aparece el botón "Ver detalles". Al presionarlo, el sistema expande la tarjeta o despliega un panel con toda la información del producto incluyendo el historial de lotes asociados.
  
-**Buscar productos (US-12):** Don Lucho escribe el nombre o categoría en el campo de búsqueda del panel izquierdo. El sistema filtra la grilla en tiempo real a medida que se ingresa cada carácter, sin requerir presionar Enter.
+**Buscar productos (US-08):** Don Lucho escribe el nombre o categoría en el campo de búsqueda del panel izquierdo. El sistema filtra la grilla en tiempo real a medida que se ingresa cada carácter, sin requerir presionar Enter.
  
 ---
  
@@ -1037,11 +1050,11 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Descripción del flujo:** Don Lucho necesita crear lotes para controlar las fechas de vencimiento de sus productos perecederos y ser notificado cuando alguno esté próximo a vencer.
  
-**Desde el Sidebar → Módulo "Lotes":** Al acceder al módulo, el sistema evalúa el estado de todos los lotes existentes. Si existen lotes próximos a vencer (US-11, Scenario 1): el panel de resumen superior muestra el banner de alerta amarillo con el listado de productos afectados. Si existen lotes vencidos (US-11, Scenario 2): el banner aparece en rojo. Si no hay condiciones críticas (US-09, Scenario 2): solo se muestran los contadores numéricos sin banner de alerta.
+**Desde el Sidebar → Módulo "Lotes":** Al acceder al módulo, el sistema evalúa el estado de todos los lotes existentes. Si existen lotes próximos a vencer (US-14, Scenario 1): el panel de resumen superior muestra el banner de alerta amarillo con el listado de productos afectados. Si existen lotes vencidos (US-14, Scenario 2): el banner aparece en rojo. Si no hay condiciones críticas (US-13, Scenario 2): solo se muestran los contadores numéricos sin banner de alerta.
  
-**Crear lote (US-23):** Don Lucho presiona "Crear lote". Se despliega un modal con los campos: selector de producto (búsqueda con autocompletado), número de lote, fecha de ingreso, fecha de vencimiento y cantidad/peso inicial. Al confirmar: el lote queda registrado y aparece en la tabla de lotes. Si intenta guardar sin haber seleccionado un producto: el campo del selector queda resaltado en rojo.
+**Crear lote (US-09):** Don Lucho presiona "Crear lote". Se despliega un modal con los campos: selector de producto (búsqueda con autocompletado), número de lote, fecha de ingreso, fecha de vencimiento y cantidad/peso inicial. Al confirmar: el lote queda registrado y aparece en la tabla de lotes. Si intenta guardar sin haber seleccionado un producto: el campo del selector queda resaltado en rojo.
  
-**Ver detalles de lote (US-06, US-08):** Don Lucho hace clic en "Ver detalles" de un lote específico. El sistema muestra el panel de detalle con todos los atributos del lote. Si el lote tiene stock bajo, está agotado o próximo a vencer: el panel muestra una alerta de estado con ícono y texto descriptivo del tipo de condición crítica detectada (US-08, Scenario 1). Si el estado del lote es normal: el panel muestra solo los datos sin alertas (US-08, Scenario 2).
+**Ver detalles de lote (US-06, US-12):** Don Lucho hace clic en "Ver detalles" de un lote específico. El sistema muestra el panel de detalle con todos los atributos del lote. Si el lote tiene stock bajo, está agotado o próximo a vencer: el panel muestra una alerta de estado con ícono y texto descriptivo del tipo de condición crítica detectada (US-12, Scenario 1). Si el estado del lote es normal: el panel muestra solo los datos sin alertas (US-12, Scenario 2).
  
 **Editar lote (US-02) y Eliminar lote (US-04):** Desde la tabla de lotes, los botones de acción permiten editar los datos del lote (mismo flujo de drawer que para productos) o eliminarlo. Al presionar "Eliminar", el sistema muestra un modal de confirmación antes de ejecutar la acción para prevenir eliminaciones accidentales.
  
@@ -1057,13 +1070,13 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Desde el Sidebar → Módulo "Ventas":** La pantalla de POS carga con el ticket vacío y el Resumen de Caja en cero (o con los valores acumulados del día).
  
-**Buscar y agregar producto (US-24):** Don Lucho escribe el nombre del producto en el buscador. El sistema muestra resultados en tiempo real. Al seleccionar un producto con tipo "Peso" (US-26): se despliega el modal "Registrar Peso". Si hay balanza IoT conectada: el peso se captura automáticamente (Scenario 1). Si no hay balanza: Don Lucho ingresa el peso manualmente (Scenario 2). Al seleccionar un producto con tipo "Unidad" (US-25): se despliega el modal "Registrar Cantidad" con un campo numérico entero. Si la cantidad o el peso solicitado supera el stock disponible: el sistema muestra el error "Stock insuficiente" y no permite agregar el ítem al ticket (US-25, Scenario 2 y US-26, Scenario 3).
+**Buscar y agregar producto (US-28):** Don Lucho escribe el nombre del producto en el buscador. El sistema muestra resultados en tiempo real. Al seleccionar un producto con tipo "Peso" (US-30): se despliega el modal "Registrar Peso". Si hay balanza IoT conectada: el peso se captura automáticamente (Scenario 1). Si no hay balanza: Don Lucho ingresa el peso manualmente (Scenario 2). Al seleccionar un producto con tipo "Unidad" (US-29): se despliega el modal "Registrar Cantidad" con un campo numérico entero. Si la cantidad o el peso solicitado supera el stock disponible: el sistema muestra el error "Stock insuficiente" y no permite agregar el ítem al ticket (US-29, Scenario 2 y US-30, Scenario 3).
  
-**Gestionar el ticket (US-27):** El ítem confirmado aparece en el ticket del panel derecho con su subtotal calculado. Don Lucho puede eliminar cualquier ítem del ticket (Scenario 2): el sistema actualiza el total inmediatamente. Puede continuar agregando más productos.
+**Gestionar el ticket (US-31):** El ítem confirmado aparece en el ticket del panel derecho con su subtotal calculado. Don Lucho puede eliminar cualquier ítem del ticket (Scenario 2): el sistema actualiza el total inmediatamente. Puede continuar agregando más productos.
  
-**Seleccionar método de pago (US-28):** Don Lucho presiona "Efectivo" o "Tarjeta/Yape/Plin". El toggle seleccionado queda resaltado. Si intenta finalizar sin seleccionar ninguno: aparece el mensaje de validación "Por favor, seleccione un método de pago" (Scenario 2).
+**Seleccionar método de pago (US-32):** Don Lucho presiona "Efectivo" o "Tarjeta/Yape/Plin". El toggle seleccionado queda resaltado. Si intenta finalizar sin seleccionar ninguno: aparece el mensaje de validación "Por favor, seleccione un método de pago" (Scenario 2).
  
-**Finalizar venta (US-29, US-30, US-31):** Don Lucho presiona "Finalizar venta y emitir boleta". El sistema registra la venta, genera el comprobante, actualiza el Resumen de Caja con el monto del método de pago utilizado (US-30) y limpia el ticket para la siguiente venta. Un Toast de confirmación verde aparece en la esquina inferior derecha durante 3 segundos.
+**Finalizar venta (US-33, US-35, US-36):** Don Lucho presiona "Finalizar venta y emitir boleta". El sistema registra la venta, genera el comprobante, actualiza el Resumen de Caja con el monto del método de pago utilizado (US-35) y limpia el ticket para la siguiente venta. Un Toast de confirmación verde aparece en la esquina inferior derecha durante 3 segundos.
  
 ---
  
@@ -1075,11 +1088,11 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Descripción del flujo:** Don Lucho necesita conectar su número de WhatsApp Business al sistema para activar la atención automatizada de pedidos.
  
-**Desde el Sidebar → Módulo "Chatbot":** Si no hay cuenta vinculada (US-32, Scenario 1): la pantalla muestra el panel de vinculación con el código QR generado, instrucciones y un temporizador de expiración (generalmente 60 segundos). Don Lucho abre WhatsApp Business en su teléfono y escanea el código. Si la vinculación es exitosa (US-32, Scenario 2): el sistema registra la sesión y la pantalla cambia automáticamente al estado "Conectado", mostrando el número vinculado y el listado de conversaciones (inicialmente vacío). Si el código QR expira antes de ser escaneado (US-32, Scenario 3): el sistema descarta el código expirado, muestra el mensaje "El código expiró" y genera uno nuevo automáticamente.
+**Desde el Sidebar → Módulo "Chatbot":** Si no hay cuenta vinculada (US-37, Scenario 1): la pantalla muestra el panel de vinculación con el código QR generado, instrucciones y un temporizador de expiración (generalmente 60 segundos). Don Lucho abre WhatsApp Business en su teléfono y escanea el código. Si la vinculación es exitosa (US-37, Scenario 2): el sistema registra la sesión y la pantalla cambia automáticamente al estado "Conectado", mostrando el número vinculado y el listado de conversaciones (inicialmente vacío). Si el código QR expira antes de ser escaneado (US-37, Scenario 3): el sistema descarta el código expirado, muestra el mensaje "El código expiró" y genera uno nuevo automáticamente.
  
-**Consultar estado de conexión (US-33):** En visitas posteriores al módulo, si la sesión sigue activa (Scenario 1): se muestra el estado "Activo" con el número vinculado. Si la sesión expiró o fue cerrada desde el teléfono (Scenario 2): se muestra el estado "Desconectado" y el botón "Volver a vincular" para reiniciar el proceso de QR.
+**Consultar estado de conexión (US-38):** En visitas posteriores al módulo, si la sesión sigue activa (Scenario 1): se muestra el estado "Activo" con el número vinculado. Si la sesión expiró o fue cerrada desde el teléfono (Scenario 2): se muestra el estado "Desconectado" y el botón "Volver a vincular" para reiniciar el proceso de QR.
  
-**Gestionar conversaciones (US-34, US-35):** La lista de conversaciones del panel izquierdo muestra cada chat ordenado por el más reciente. Don Lucho hace clic en una conversación para ver el historial completo en el panel derecho. Si desea responder manualmente: escribe en el campo de texto y presiona "Enviar". Si el campo está vacío al presionar "Enviar": el sistema no procesa el envío (US-35, Scenario 2).
+**Gestionar conversaciones (US-39, US-40):** La lista de conversaciones del panel izquierdo muestra cada chat ordenado por el más reciente. Don Lucho hace clic en una conversación para ver el historial completo en el panel derecho. Si desea responder manualmente: escribe en el campo de texto y presiona "Enviar". Si el campo está vacío al presionar "Enviar": el sistema no procesa el envío (US-40, Scenario 2).
  
 ---
  
@@ -1091,20 +1104,21 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Descripción del flujo:** Don Lucho, con el Plan Free asignado por defecto, decide contratar el Plan Control para acceder a funcionalidades avanzadas como el módulo de chatbot y la integración con balanza IoT.
  
-**Desde el Sidebar → Módulo "Suscripción":** La pantalla muestra el panel comparativo de planes con el estado actual "Plan Free". Don Lucho presiona "Elegir plan" en la tarjeta del Plan Control (US-13, Scenario 1). La tarjeta queda seleccionada visualmente (borde naranja activo) y el botón "Continuar con la suscripción" queda habilitado. Si intenta continuar sin seleccionar ningún plan (US-13, Scenario 2): el sistema muestra el mensaje "Selecciona un plan para continuar".
+**Desde el Sidebar → Módulo "Suscripción":** La pantalla muestra el panel comparativo de planes con el estado actual "Plan Free". Don Lucho presiona "Elegir plan" en la tarjeta del Plan Control (US-15, Scenario 1). La tarjeta queda seleccionada visualmente (borde naranja activo) y el botón "Continuar con la suscripción" queda habilitado. Si intenta continuar sin seleccionar ningún plan (US-15, Scenario 2): el sistema muestra el mensaje "Selecciona un plan para continuar".
  
-**Proceso de suscripción (US-14, US-15, US-16):** Al presionar "Continuar con la suscripción", el sistema navega al formulario de facturación. Don Lucho completa los datos personales y de pago. Presiona "Continuar al pago". Si los datos son válidos: el sistema muestra el resumen previo al cobro. Don Lucho presiona "Pagar y activar suscripción". Si el cobro es aprobado: el sistema activa el Plan Control y redirige al panel de suscripción con el estado "Activa" (US-17, Scenario 1). Si el cobro falla: aparece el mensaje de error con el motivo dentro de la misma vista sin perder los datos ingresados (US-16, Scenario 2).
+**Proceso de suscripción (US-16, US-17, US-18):** Al presionar "Continuar con la suscripción", el sistema navega al formulario de facturación. Don Lucho completa los datos personales y de pago. Presiona "Continuar al pago". Si los datos son válidos: el sistema muestra el resumen previo al cobro. Don Lucho presiona "Pagar y activar suscripción". Si el cobro es aprobado: el sistema activa el Plan Control y redirige al panel de suscripción con el estado "Activa" (US-19, Scenario 1). Si el cobro falla: aparece el mensaje de error con el motivo dentro de la misma vista sin perder los datos ingresados (US-18, Scenario 2).
  
-**Gestión de suscripción activa (US-18 al US-22):** Don Lucho puede renovar su suscripción (US-20), lo que actualiza la fecha de vencimiento, o solicitar la cancelación (US-21), lo que muestra un modal de confirmación antes de ejecutar. Si decide cancelar y confirma: el sistema registra la solicitud, mantiene el acceso activo hasta la fecha de vencimiento y actualiza la etiqueta de estado a "Cancelación programada". Al llegar la fecha de vencimiento: el sistema cancela automáticamente el plan premium y devuelve la cuenta al Plan Free (US-22).
+**Gestión de suscripción activa (US-20 al US-24):** Don Lucho puede renovar su suscripción (US-22), lo que actualiza la fecha de vencimiento, o solicitar la cancelación (US-23), lo que muestra un modal de confirmación antes de ejecutar. Si decide cancelar y confirma: el sistema registra la solicitud, mantiene el acceso activo hasta la fecha de vencimiento y actualiza la etiqueta de estado a "Cancelación programada". Al llegar la fecha de vencimiento: el sistema cancela automáticamente el plan premium y devuelve la cuenta al Plan Free (US-24).
+
 
 ### 4.4.3. Web Applications Mock-ups
 
 Esta sección presenta los mock-ups de alta fidelidad de la aplicación web de Entreprenly. Los mock-ups reflejan el diseño visual final de cada pantalla, aplicando el Design System del proyecto: paleta de colores, tipografía, componentes, espaciado e iconografía definidos en la sección 4.1. Cada pantalla evidencia los principios de diseño inclusivo, jerarquía visual y arquitectura de información establecidos para la plataforma.
-
+ 
 #### Dashboard Principal
-
+ 
 <p align="center">
-    <img src="./images/Landing.png" alt="Landing.png" width="800"/>
+    <img src="images/Landing.png" alt="landing" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Dashboard Principal*
@@ -1175,13 +1189,12 @@ La vista de selección de plan presenta las dos tarjetas comparativas con una di
 ### 4.4.4. Web Applications User Flow Diagrams
 
 Esta sección presenta los User Flow Diagrams de la aplicación web de Entreprenly. A diferencia de los Wireflows, los User Flows incluyen los mock-ups de las pantallas junto con los nodos de decisión, condiciones y rutas alternativas que conforman el flujo completo de cada objetivo de usuario. Cada diagrama está acompañado del User Goal al que responde y una explicación de los flujos y condiciones especificadas.
-
----
-
+ 
+ ---
 **User Flow 1 – Gestión de inventario (agregar, editar y buscar productos)**
-
-_User Goal: El comerciante desea tener su catálogo de productos completo y actualizado en el sistema._
-
+ 
+*User Goal: El comerciante desea tener su catálogo de productos completo y actualizado en el sistema.*
+ 
 <p align="center">
     <img src="images/User_flow1.png" alt="User_flow1" width="800"/>
   </p>
@@ -1193,7 +1206,7 @@ Dashboard → Clic "Productos" en Sidebar → Vista de productos → Clic "Agreg
  
 **Unhappy Paths:**
 - Campos obligatorios vacíos al guardar (US-01): → Campos resaltados con mensajes de validación → Botón "Guardar" permanece deshabilitado.
-- Búsqueda sin resultados (US-13): → La grilla muestra el estado vacío con el mensaje "No se encontraron productos que coincidan con tu búsqueda".
+- Búsqueda sin resultados (US-08): → La grilla muestra el estado vacío con el mensaje "No se encontraron productos que coincidan con tu búsqueda".
 ---
  
 **User Flow 2 – Creación de lotes y gestión de alertas de vencimiento**
@@ -1211,9 +1224,9 @@ Dashboard → Clic "Productos" en Sidebar → Vista de productos → Clic "Agreg
 Dashboard → Clic "Lotes" → Panel de resumen con contadores → Clic "Crear lote" → Modal de creación → Selecciona producto → Completa fecha de vencimiento y cantidad → Clic "Agregar" → Modal se cierra → Lote aparece en la tabla con badge "Activo".
  
 **Unhappy Paths:**
-- No selecciona producto al guardar (US-24): → Campo de producto resaltado → Modal permanece abierto.
+- No selecciona producto al guardar (US-09): → Campo de producto resaltado → Modal permanece abierto.
 - Fecha de vencimiento anterior a la fecha actual: → Mensaje de validación "La fecha de vencimiento no puede ser una fecha pasada".
-- Acceso al módulo cuando existen lotes próximos a vencer (US-11): → Banner de alerta amarillo visible en panel superior → Lotes afectados aparecen primero en la tabla por ordenamiento automático.
+- Acceso al módulo cuando existen lotes próximos a vencer (US-14): → Banner de alerta amarillo visible en panel superior → Lotes afectados aparecen primero en la tabla por ordenamiento automático.
 ---
  
 **User Flow 3 – Registro de venta presencial**
@@ -1231,10 +1244,10 @@ Dashboard → Clic "Lotes" → Panel de resumen con contadores → Clic "Crear l
 Dashboard → Clic "Ventas" → Módulo POS carga → Cajero escribe nombre del producto en buscador → Sistema muestra resultados → Cajero selecciona producto → Modal de cantidad/peso aparece → Ingresa valor → Clic "Confirmar" → Ítem aparece en el ticket con subtotal → Repite para más productos si es necesario → Cajero selecciona método de pago → Clic "Finalizar venta y emitir boleta" → Toast verde de éxito → Ticket se limpia → Resumen de caja se actualiza.
  
 **Unhappy Paths:**
-- Stock insuficiente al confirmar cantidad (US-25, Scenario 2 / US-26, Scenario 3): → Modal muestra "Stock insuficiente. Disponible: X unidades/kg" → No se agrega el ítem → Cajero puede ajustar la cantidad.
-- Balanza IoT sin respuesta (US-26): → Sistema muestra "Balanza no disponible" → Permite ingreso manual del peso.
-- Intento de finalizar sin método de pago (US-28): → Mensaje inline "Por favor, seleccione un método de pago" → Botón finalizar permanece deshabilitado.
-- Intento de finalizar con ticket vacío (US-30): → Mensaje inline "No hay productos en el ticket" → Botón finalizar permanece deshabilitado.
+- Stock insuficiente al confirmar cantidad (US-29, Scenario 2 / US-30, Scenario 3): → Modal muestra "Stock insuficiente. Disponible: X unidades/kg" → No se agrega el ítem → Cajero puede ajustar la cantidad.
+- Balanza IoT sin respuesta (US-30): → Sistema muestra "Balanza no disponible" → Permite ingreso manual del peso.
+- Intento de finalizar sin método de pago (US-32): → Mensaje inline "Por favor, seleccione un método de pago" → Botón finalizar permanece deshabilitado.
+- Intento de finalizar con ticket vacío (US-35): → Mensaje inline "No hay productos en el ticket" → Botón finalizar permanece deshabilitado.
 ---
  
 **User Flow 4 – Validación de pago de pedido del chatbot**
@@ -1251,9 +1264,9 @@ Dashboard → Clic "Ventas" → Módulo POS carga → Cajero escribe nombre del 
 Dashboard → Clic "Pedidos" → Lista de pedidos → Selecciona pedido en estado "Esperando validación" → Panel lateral se despliega → Revisa detalle y comprobante de pago → Clic "Aprobar pago" → Modal de confirmación → Clic "Confirmar" → Pedido pasa a estado "Confirmado" → Stock se descuenta → Chatbot envía comprobante al cliente por WhatsApp → Toast de éxito.
  
 **Unhappy Paths:**
-- Rechazo de pago (US-43): → Comerciante presiona "Rechazar pago" → Se habilita campo de motivo → Ingresa motivo → Clic "Confirmar rechazo" → Pedido vuelve a estado "Esperando pago" → Chatbot notifica al cliente.
-- Segundo rechazo del mismo cliente (US-48, Scenario 2): → Sistema genera alerta de advertencia al comerciante → Pedido queda bloqueado para revisión manual.
-- Cancelación automática por timeout (US-47): → A los 60 minutos sin reporte de pago → Sistema cancela el pedido automáticamente → Libera el stock reservado → Chatbot notifica al cliente → Pedido aparece con estado "Cancelado (Timeout de pago)".
+- Rechazo de pago (US-48): → Comerciante presiona "Rechazar pago" → Se habilita campo de motivo → Ingresa motivo → Clic "Confirmar rechazo" → Pedido vuelve a estado "Esperando pago" → Chatbot notifica al cliente.
+- Segundo rechazo del mismo cliente (US-52, Scenario 2): → Sistema genera alerta de advertencia al comerciante → Pedido queda bloqueado para revisión manual.
+- Cancelación automática por timeout (US-51): → A los 60 minutos sin reporte de pago → Sistema cancela el pedido automáticamente → Libera el stock reservado → Chatbot notifica al cliente → Pedido aparece con estado "Cancelado (Timeout de pago)".
 ---
  
 **User Flow 5 – Suscripción al Plan Control**
@@ -1261,63 +1274,64 @@ Dashboard → Clic "Pedidos" → Lista de pedidos → Selecciona pedido en estad
 *User Goal: El comerciante con Plan Free desea contratar el Plan Control para acceder a funcionalidades premium.*
  
  <p align="center">
-    <img src="images/UserFlow5.png" alt="User_flow5" width="800"/>
+    <img src="images/User_Flow5.png" alt="User_flow5" width="800"/>
   </p>
+ 
 
-_Ilustración – Web Application User Flow Diagram: Suscripción al Plan Control_
-
+*Ilustración – Web Application User Flow Diagram: Suscripción al Plan Control*
+ 
 **Happy Path:**
 Dashboard → Clic "Suscripción" → Pantalla muestra comparativa de planes → Clic "Elegir plan" en tarjeta Plan Control → Tarjeta queda seleccionada → Clic "Continuar con la suscripción" → Formulario de facturación → Completa datos → Clic "Continuar al pago" → Resumen de cobro → Clic "Pagar y activar suscripción" → Pago aprobado → Plan Control activado → Panel de suscripción muestra estado "Activa".
-
+ 
 **Unhappy Paths:**
+- Intento de continuar sin seleccionar plan (US-16, Scenario 2): → Mensaje "Selecciona un plan para continuar" → Botón deshabilitado.
+- Datos de facturación incompletos (US-18, Scenario 2): → Campos inválidos resaltados → No avanza al paso de pago.
+- Cobro rechazado (US-19, Scenario 2): → Mensaje de error con el motivo → El plan no se activa → Comerciante puede corregir datos y reintentar.
 
-- Intento de continuar sin seleccionar plan (US-14, Scenario 2): → Mensaje "Selecciona un plan para continuar" → Botón deshabilitado.
-- Datos de facturación incompletos (US-16, Scenario 2): → Campos inválidos resaltados → No avanza al paso de pago.
-- Cobro rechazado (US-17, Scenario 2): → Mensaje de error con el motivo → El plan no se activa → Comerciante puede corregir datos y reintentar.
 
 ## 4.5. Web Applications Prototyping
 
 ### Introducción y criterios de diseño
-
+ 
 El prototipo interactivo de Entreprenly simula la navegación y los principales flujos de interacción de la aplicación web, permitiendo evaluar la coherencia de la experiencia de usuario antes del desarrollo, identificar puntos de fricción y validar las decisiones de arquitectura de información tomadas a lo largo del capítulo 4. El prototipo fue construido en Figma utilizando conexiones de prototipado entre frames, transiciones y overlays para representar de forma fiel los comportamientos especificados en los User Flow Diagrams.
 Los criterios de diseño que guiaron las decisiones de interacción y navegación del prototipo son los siguientes:
-
+ 
 **Orientación al flujo operativo del comerciante:** La arquitectura de navegación prioriza el acceso inmediato a las tres tareas de mayor frecuencia e importancia definidas en el User Task Matrix del capítulo 2: verificar stock, registrar ventas y gestionar pedidos del chatbot. Por esta razón, el Sidebar de navegación mantiene los módulos de "Ventas", "Productos" y "Pedidos" como los primeros ítems de la lista, por encima de módulos de menor frecuencia de uso como "Suscripción".
-
+ 
 **Consistencia en los patrones de interacción:** Se emplearon cuatro patrones de navegación a lo largo de toda la aplicación:
 (1) **Navegación por Sidebar** para el cambio entre módulos principales;
-(2) **Drawer lateral deslizante** para formularios de creación y edición que no requieren cambio de contexto (productos, lotes, detalle de pedido);
-(3) **Modal central** para acciones críticas que requieren confirmación del usuario (eliminar lote, confirmar cancelación de suscripción, aprobar/rechazar pago); y
+(2) **Drawer lateral deslizante** para formularios de creación y edición que no requieren cambio de contexto (productos, lotes, detalle de pedido); 
+(3) **Modal central** para acciones críticas que requieren confirmación del usuario (eliminar lote, confirmar cancelación de suscripción, aprobar/rechazar pago); y 
 (4) **Toast / Snackbar** para retroalimentación inmediata de resultado (éxito, error, advertencia) sin interrumpir el flujo operativo. Esta consistencia reduce la carga cognitiva del usuario, ya que los patrones aprendidos en un módulo son directamente aplicables a los demás.
-
+ 
 **Prevención de errores en acciones de alto impacto:** En operaciones destructivas o financieramente sensibles como eliminar un lote, cancelar una suscripción activa, aprobar o rechazar el pago de un pedido, finalizar una venta, el prototipo incluye siempre una capa adicional de confirmación mediante modal que describe el impacto de la acción antes de ejecutarla, conforme al principio heurístico de Nielsen de "Prevención de errores".
-
+ 
 **Retroalimentación inmediata en tiempo real:** Todos los cambios en el estado del sistema que afectan al usuario se comunican de forma inmediata: los contadores del Resumen de Caja se actualizan al finalizar cada venta, los badges de estado de los lotes cambian al detectar condiciones de vencimiento, y los campos de formulario muestran validación inline sin necesidad de enviar el formulario completo.
-
+ 
 **Accesibilidad y objetivos táctiles:** Todos los elementos interactivos del prototipo tienen dimensiones mínimas de 48 × 48 px para cumplir los requisitos de objetivo táctil tanto en uso con ratón como en tablets. Los contrastes de color en todos los estados (normal, hover, focus, disabled) cumplen el mínimo WCAG 2.1 AA (ratio 4.5:1 para texto normal y 3:1 para texto grande).
-
+ 
 El prototipo interactivo completo está disponible en Figma, donde puede navegarse en modo presentación para simular la experiencia real de uso.
 
-![prototipo.jpeg](./images/prototipo.jpeg "prototipo.jpeg")
+![prototipo.jpeg](./images/prototipo.png "prototipo.jpeg")
 
-_Ilustración - Web Application Prototyping: Vista general del flujo de navegación_
-
+*Ilustración - Web Application Prototyping: Vista general del flujo de navegación*
+ 
 ### Flujos de interacción cubiertos por el prototipo
-
+ 
 El prototipo cubre los siguientes flujos principales de interacción, representando tanto las rutas exitosas (happy paths) como las principales rutas alternativas ante errores o condiciones de excepción:
-
+ 
 **Flujo 1 – Gestión de inventario:** Comprende las pantallas del módulo de Productos (listado, búsqueda, drawer de creación y edición) y del módulo de Lotes (listado con alertas de estado, modal de creación, panel de detalles). Se simula el comportamiento del banner de alerta al existir lotes próximos a vencer y el bloqueo del formulario ante campos inválidos.
-
+ 
 **Flujo 2 – Registro de venta:** Comprende la pantalla completa del módulo de Ventas con la simulación del flujo de búsqueda de producto, selección del modal según tipo (unidad/peso), captura de peso desde balanza IoT con fallback a ingreso manual, confirmación de cantidad, construcción del ticket, selección de método de pago y finalización con Toast de confirmación y actualización del Resumen de Caja.
-
+ 
 **Flujo 3 – Gestión de pedidos del chatbot:** Comprende la pantalla del módulo de Pedidos con la visualización de la tabla de pedidos en sus distintos estados, el panel lateral de detalle con el visor del comprobante de pago y la simulación del flujo de aprobación y rechazo, incluyendo la alerta por rechazos repetidos y la cancelación automática por timeout.
-
+ 
 **Flujo 4 – Chatbot WhatsApp:** Comprende el flujo de vinculación por QR, la transición al estado conectado y la gestión de conversaciones activas con el panel de mensajería.
-
+ 
 **Flujo 5 – Suscripción:** Comprende el flujo completo de selección de plan, formulario de facturación, confirmación de pago y activación del Plan Control, incluyendo el estado del panel de suscripción con plan activo y las opciones de renovación y cancelación.
-
+ 
 El video de demostración del prototipo, donde se explican en detalle los flujos principales y las decisiones de diseño más relevantes, está disponible en Microsoft Stream en el siguiente enlace:
-
+ 
 **Enlace al video del prototipo:** https://youtu.be/T2icL1vz_9Q?si=CBUKX_37Ur2NabD9
 
 ## 4.6. Domain-Driven Software Architecture
