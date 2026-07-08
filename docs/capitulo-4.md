@@ -1332,7 +1332,7 @@ El prototipo cubre los siguientes flujos principales de interacción, representa
  
 El video de demostración del prototipo, donde se explican en detalle los flujos principales y las decisiones de diseño más relevantes, está disponible en Microsoft Stream en el siguiente enlace:
  
-**Enlace al video del prototipo:** https://youtu.be/T2icL1vz_9Q?si=CBUKX_37Ur2NabD9
+**Enlace al video del prototipo:** https://youtu.be/hzcwRnjQyK4
 
 ## 4.6. Domain-Driven Software Architecture
 
