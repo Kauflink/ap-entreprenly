@@ -43,6 +43,7 @@ Aplicaciones Web
 | AV1      | 02 / 04 / 2026 | Todos los integrantes | Primera versión             |
 | TB1      | 12 / 05 / 2026 | Todos los integrantes | Segunda versión             |
 | AV2      | 12 / 06 / 2026 | Todos los integrantes | Tercera versión             |
+| TB2      | 06 / 07 / 2026 | Todos los integrantes | Cuarta versión              |
 
 </div>
 
@@ -50,7 +51,7 @@ Aplicaciones Web
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repositorio-181717?logo=github)](https://github.com/Kauflink/ap-entreprenly.git)
 
-En esta sección se presenta la evidencia de colaboración del equipo Kauflink durante la elaboración del informe del Trabajo Final. El trabajo se desarrolló sobre el repositorio del Project Report (`ap-entreprenly`), bajo la organización [Kauflink](https://github.com/Kauflink), donde los cinco integrantes participaron mediante commits y Pull Requests a lo largo de las entregas AV1, TB1 y AV2. Para cada entrega se describe cómo se desarrollaron las actividades de elaboración del informe y se presentan las capturas de los analíticos de colaboración y commits del repositorio, en coherencia con el Registro de Versiones del Informe.
+En esta sección se presenta la evidencia de colaboración del equipo Kauflink durante la elaboración del informe del Trabajo Final. El trabajo se desarrolló sobre el repositorio del Project Report (`ap-entreprenly`), bajo la organización [Kauflink](https://github.com/Kauflink), donde los cinco integrantes participaron mediante commits y Pull Requests a lo largo de las entregas AV1, TB1, AV2 y TB2. Para cada entrega se describe cómo se desarrollaron las actividades de elaboración del informe y se presentan las capturas de los analíticos de colaboración y commits del repositorio, en coherencia con el Registro de Versiones del Informe.
 
 ---
 
@@ -87,9 +88,9 @@ Para la entrega TB1, el equipo se enfocó en la implementación del Frontend Web
 | Integrante | Secciones principales del informe |
 | :--- | :--- |
 | Camargo Briceño, Joseph Julius | 5.2.2.1 Sprint Planning 2 · 5.2.2.4 Development Evidence for Sprint Review · 5.2.2.7 Software Deployment Evidence for Sprint Review · Correcciones a 5.1 Software Configuration Management |
-| Chavez Carrasco, Lionel Abraham | 5.2.2.5 Execution Evidence for Sprint Review · Bounded Context: Inventory · Bounded Context: Subscription · Actualización de 4.4 Web Applications UX/UI Design (Mockups Sprint 2) |
+| Chavez Carrasco, Lionel Abraham | 5.2.2.5 Execution Evidence for Sprint Review · Bounded Context: Subscription · Actualización de 4.4 Web Applications UX/UI Design (Mockups Sprint 2) |
 | Palma De Los Santos, Elynor Mikela | 5.2.2.6 Services Documentation Evidence for Sprint Review · 5.2.2.8 Team Collaboration Insights during Sprint · Student Outcome TB1 · Correcciones a 3.1 User Stories (criterios de aceptación) |
-| Peirano Brun, José Antonio | 5.2.2.2 Aspect Leaders and Collaborators · Vistas Home y Help del Dashboard · Correcciones a 4.6 Domain-Driven Software Architecture y 4.7 Software Object-Oriented Design · Revisión y mantenimiento del repositorio |
+| Peirano Brun, José Antonio | 5.2.2.2 Aspect Leaders and Collaborators · Bounded Context: Inventory · Vistas Home y Help del Dashboard · Correcciones a 4.6 Domain-Driven Software Architecture y 4.7 Software Object-Oriented Design · Revisión y mantenimiento del repositorio |
 | Flores Pinchi, José Fernando | 5.2.2.3 Sprint Backlog 2 · Bounded Context: Sales (Punto de Venta) · Correcciones a 3.3 Product Backlog · Avance de Conclusiones, Bibliografía y Anexos |
 
 ![Contri3](docs/images/contri3.png "contri3")
@@ -106,13 +107,32 @@ Para la entrega AV2, el equipo se enfocó en la implementación del backend de l
 | Integrante | Secciones principales del informe |
 | :--- | :--- |
 | Camargo Briceño, Joseph Julius | Backend de los Bounded Contexts: Profiles e IAM (ASP.NET Core) · Mejora visual y diseño responsive de sus vistas · Redacción del Sprint 3 · Actualización del Landing Page |
-| Chavez Carrasco, Lionel Abraham | Backend del Bounded Context: Inventory (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Redacción de la Evaluación Heurística (5.3.3) · Actualización del Landing Page |
+| Chavez Carrasco, Lionel Abraham | Backend del Bounded Context: Subscription (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Redacción de la Evaluación Heurística (5.3.3) · Actualización del Landing Page |
 | Palma De Los Santos, Elynor Mikela | Backend del Bounded Context: Chatbot (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Actualización del Class Diagram y del Diagrama de Base de Datos (Capítulo IV) · Entrevistas de Validación y entrevistas About the Product |
-| Peirano Brun, José Antonio | Backend del Bounded Context: Subscription (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Revisión de errores de las User Stories (Capítulo III) · Actualización de los diagramas Structurizr y de la Evaluación Heurística |
+| Peirano Brun, José Antonio | Backend del Bounded Context: Inventory (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Revisión de errores de las User Stories (Capítulo III) · Actualización de los diagramas Structurizr y de la Evaluación Heurística |
 | Flores Pinchi, José Fernando | Backend del Bounded Context: Sales (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Revisión de errores del Capítulo III · Entrevistas de Validación y entrevistas About the Product |
 
 ![Contri5](docs/images/contri5.png "contri5")
 ![Contri6](docs/images/contri6.png "contri6")
+
+---
+
+### **TB2: Correcciones Finales del Informe y Cierre del Proyecto**
+
+Para la entrega TB2, el equipo aplicó cambios en el Landing Page y en el Frontend Web Application en Vue, afinó el backend de los Bounded Contexts sobre el repositorio `ap-entreprenly-web-services` en ASP.NET Core (C#) e incorporó las correcciones finales de la documentación: actualización del prototipo en Figma, corrección de los diagramas de componentes, de contenedores y de base de datos, actualización de las User Stories y reorganización del Product Backlog. El trabajo se desarrolló bajo el flujo GitFlow, con integraciones a la rama `main` mediante Pull Requests.
+
+#### Distribución de contribuciones por integrante (TB2)
+
+| Integrante | Secciones principales del informe |
+| :--- | :--- |
+| Camargo Briceño, Joseph Julius | Cambios en el Landing Page y el Frontend Web Application · Afinamiento del backend del Bounded Context: Profiles e IAM · Corrección del prototipo en Figma · Actualización de las tareas de los sprints |
+| Chavez Carrasco, Lionel Abraham | Cambios en el Landing Page y el Frontend Web Application · Afinamiento del backend del Bounded Context: Subscription · Corrección del prototipo en Figma · Actualización de las tareas de los sprints |
+| Palma De Los Santos, Elynor Mikela | Cambios en el Frontend Web Application · Afinamiento del backend del Bounded Context: Chatbot · Corrección del Diagrama de Base de Datos · Actualización de las User Stories (Capítulo III) |
+| Peirano Brun, José Antonio | Cambios en el Frontend Web Application · Afinamiento del backend del Bounded Context: Inventory · Corrección de los diagramas de componentes y de contenedores · Reorganización del Product Backlog |
+| Flores Pinchi, José Fernando | Cambios en el Frontend Web Application · Afinamiento del backend del Bounded Context: Sales · Actualización de las User Stories (Capítulo III) · Reorganización del Product Backlog |
+
+![Contri7](docs/images/contri7.png "contri7")
+![Contri8](docs/images/contri8.png "contri8")
 
 ---
 
