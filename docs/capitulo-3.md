@@ -63,6 +63,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
       <td>US-90</td>
       <td colspan="2">Eliminar productos</td>
     </tr>
+    <tr>
+      <td>US-95</td>
+      <td colspan="2">Buscar lotes</td>
+    </tr>
   </tbody>
 </table>
 
@@ -179,6 +183,10 @@ En esta sección se especifican las épicas y las User Stories que definen el al
       <td>US-27</td>
       <td colspan="2">Descargar historial de suscripción</td>
     </tr>
+    <tr>
+      <td>US-96</td>
+      <td colspan="2">Gestionar métodos de pago de suscripción</td>
+    </tr>
   </tbody>
 </table>
 
@@ -246,6 +254,14 @@ En esta sección se especifican las épicas y las User Stories que definen el al
     <tr>
       <td>US-36</td>
       <td colspan="2">Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td>
+    </tr>
+    <tr>
+      <td>US-97</td>
+      <td colspan="2">Consultar el historial de ventas del día</td>
+    </tr>
+    <tr>
+      <td>US-98</td>
+      <td colspan="2">Consultar el detalle de una venta registrada</td>
     </tr>
   </tbody>
 </table>
@@ -3373,6 +3389,122 @@ A continuación se detalla cada User Story con su épica relacionada, descripci�
   </tbody>
 </table>
 
+<table>
+  <tbody>
+    <tr>
+      <td><strong>User Story</strong></td>
+      <td>95</td>
+      <td><strong>Epic ID</strong></td>
+      <td>01</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Buscar lotes</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como comerciante quiero contar con un buscador en el módulo de Lotes para localizar rápidamente los lotes de un producto por su nombre o marca sin recorrer todas las tarjetas del dashboard.</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>Scenario 1: Búsqueda de lotes por nombre de producto</strong><br>
+      Dado que el usuario está en el dashboard de lotes en "/dashboard/inventory/lots", cuando ingresa el nombre de un producto en el campo de búsqueda, entonces el sistema filtra en tiempo real y muestra únicamente las tarjetas de los productos cuyo nombre coincide con el texto ingresado.<br><br>
+      <strong>Scenario 2: Búsqueda de lotes por marca</strong><br>
+      Dado que el usuario está en el dashboard de lotes, cuando ingresa la marca de un producto en el campo de búsqueda, entonces el sistema filtra y muestra las tarjetas cuyos productos coinciden con esa marca.<br><br>
+      <strong>Scenario 3: Búsqueda sin coincidencias</strong><br>
+      Dado que el usuario ingresa un término en el campo de búsqueda, cuando ningún producto coincide con el texto, entonces el sistema no muestra tarjetas hasta que se ajuste o se limpie la búsqueda.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>User Story</strong></td>
+      <td>96</td>
+      <td><strong>Epic ID</strong></td>
+      <td>04</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Gestionar métodos de pago de suscripción</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como comerciante con acceso al panel "Suscripción", quiero visualizar mis métodos de pago registrados y seleccionar cuál será el principal para que los pagos y renovaciones del Plan Control usen el medio correcto.</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>Scenario 1: Lista de métodos de pago mostrada correctamente</strong><br>
+      Dado que el comerciante tiene uno o más métodos de pago registrados, cuando presiona "Ver métodos de pago" en la sección de facturación, entonces el sistema muestra un modal con las tarjetas disponibles, identifica el método principal y permite seleccionar otra tarjeta como principal.<br><br>
+      <strong>Scenario 2: Registro de nuevo método desde la lista</strong><br>
+      Dado que el comerciante se encuentra en el modal de métodos de pago, cuando presiona "Agregar método de pago", completa los datos requeridos y guarda los cambios, entonces el sistema registra el nuevo método, lo muestra en la lista y lo deja disponible para pagos y renovaciones.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>User Story</strong></td>
+      <td>97</td>
+      <td><strong>Epic ID</strong></td>
+      <td>06</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Consultar el historial de ventas del día</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como comerciante, quiero consultar el listado de las ventas registradas en un día seleccionado, para revisar la actividad comercial y verificar las transacciones sin salir del panel de ventas.</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>Scenario 1: Historial cargado con las ventas del día</strong><br>
+      Dado que el comerciante se encuentra en "/dashboard/sales" y existen ventas registradas en el día actual, cuando el sistema consulta el endpoint "/api/v1/sales" filtrando por la fecha seleccionada, entonces muestra en el panel "Historial de ventas" cada transacción ordenada de la más reciente a la más antigua, indicando la hora, el método de pago, la cantidad de productos y el total formateado en la moneda configurada en el perfil.<br><br>
+      <strong>Scenario 2: Consulta de otro día mediante el selector de fecha</strong><br>
+      Dado que el comerciante visualiza el panel "Historial de ventas", cuando selecciona una fecha distinta en el selector de fecha, entonces el sistema consulta las ventas correspondientes a ese día de negocio y actualiza la lista sin recargar la página.<br><br>
+      <strong>Scenario 3: Día sin ventas o carga en curso</strong><br>
+      Dado que el comerciante selecciona un día, cuando el sistema está obteniendo la información muestra el mensaje "Cargando ventas…", y si el día no tiene ventas registradas muestra el mensaje "No hay ventas registradas para este día".
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>User Story</strong></td>
+      <td>98</td>
+      <td><strong>Epic ID</strong></td>
+      <td>06</td>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td colspan="3">Consultar el detalle de una venta registrada</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td colspan="3">Como comerciante, quiero abrir el detalle de una venta del historial, para revisar los productos vendidos con sus cantidades o pesos y sus montos.</td>
+    </tr>
+    <tr>
+      <td><strong>Acceptance Criteria</strong></td>
+      <td colspan="3">
+      <strong>Scenario 1: Apertura del detalle de la venta</strong><br>
+      Dado que el comerciante visualiza el panel "Historial de ventas" con al menos una venta, cuando hace clic sobre una de las ventas de la lista, entonces el sistema abre el modal "Detalle de venta" mostrando la fecha y hora, el método de pago y una tabla con cada ítem (producto, cantidad o peso, precio unitario y subtotal), junto con el total de la venta.<br><br>
+      <strong>Scenario 2: Cierre del modal de detalle</strong><br>
+      Dado que el modal "Detalle de venta" está abierto, cuando el comerciante presiona el botón de cerrar "✕" o hace clic fuera del modal, entonces el sistema cierra el modal y regresa al historial sin modificar la venta consultada.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## 3.2. Impact Mapping
 
 El Impact Mapping es una técnica de planificación estratégica que permite vincular los objetivos de negocio con las funcionalidades del producto, respondiendo las preguntas: ¿por qué construimos esto?, ¿quién nos ayuda a lograrlo?, ¿cómo cambia su comportamiento? y ¿qué entregamos para provocar ese cambio? Su elaboración permite asegurar que cada User Story tenga un propósito claro y directo sobre el objetivo del negocio.A continuación se presenta el Impact Map elaborado en UXPressia para Entreprenly:
@@ -3414,86 +3546,90 @@ A continuación se presenta el Product Backlog de Entreprenly. Las User Stories 
     <tr><td>13</td><td>US-06</td><td>Visualizar detalles de lotes</td><td>Como comerciante quiero visualizar los detalles de los lotes para gestionar mejor el inventario.</td><td>2</td></tr>
     <tr><td>14</td><td>US-07</td><td>Visualizar detalles de producto</td><td>Como comerciante quiero visualizar la información detallada de cada producto en el listado para conocer rápidamente sus características, stock disponible y precio sin necesidad de ingresar a otra pantalla.</td><td>2</td></tr>
     <tr><td>15</td><td>US-08</td><td>Buscar productos</td><td>Como comerciante quiero tener un buscador de productos para perder menos tiempo buscando en el inventario.</td><td>3</td></tr>
-    <tr><td>16</td><td>US-09</td><td>Crear lotes</td><td>Como comerciante quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.</td><td>3</td></tr>
-    <tr><td>17</td><td>US-10</td><td>Escanear código QR en inventario</td><td>Como comerciante, quiero escanear códigos QR desde los formularios de productos y lotes para completar el código del registro sin ingresarlo manualmente.</td><td>3</td></tr>
-    <tr><td>18</td><td>US-90</td><td>Eliminar productos</td><td>Como comerciante quiero eliminar productos para deshacerme de los productos que no me sirvan.</td><td>1</td></tr>
-    <tr><td>19</td><td>US-11</td><td>Detectar stock agotado</td><td>Como comerciante quiero ser notificado cuando tengo bajo/nada de stock.</td><td>3</td></tr>
-    <tr><td>20</td><td>US-12</td><td>Mostrar alertas de estado al visualizar detalles</td><td>Como comerciante quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.</td><td>2</td></tr>
-    <tr><td>21</td><td>US-13</td><td>Visualizar dashboard de lotes</td><td>Como comerciante quiero visualizar un dashboard de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.</td><td>3</td></tr>
-    <tr><td>22</td><td>US-14</td><td>Recibir alerta de caducidad de lote</td><td>Como comerciante quiero ser notificado cuando un lote esté próximo a vencer o ya haya vencido para tomar acciones como priorizar su uso o descartarlo.</td><td>3</td></tr>
-    <tr><td>23</td><td>US-15</td><td>Seleccionar plan de suscripción</td><td>Como comerciante con Plan Free, quiero presionar el botón "Elegir plan" en la tarjeta del Plan Control para definir el plan que deseo contratar y continuar con el proceso de suscripción.</td><td>2</td></tr>
-    <tr><td>24</td><td>US-16</td><td>Iniciar proceso de suscripción</td><td>Como comerciante con un plan seleccionado, quiero presionar el botón "Continuar con la suscripción" para abrir el formulario de facturación y comenzar formalmente la contratación del plan elegido.</td><td>2</td></tr>
-    <tr><td>25</td><td>US-17</td><td>Registrar datos de facturación</td><td>Como comerciante, quiero completar el formulario de facturación y presionar el botón "Continuar al pago" para que el sistema pueda preparar el cobro correspondiente a la suscripción.</td><td>3</td></tr>
-    <tr><td>26</td><td>US-18</td><td>Procesar cobro de suscripción</td><td>Como comerciante, quiero revisar el resumen de cobro y presionar el botón "Pagar y activar suscripción" para validar el pago del Plan Control seleccionado.</td><td>5</td></tr>
-    <tr><td>27</td><td>US-19</td><td>Activar suscripción</td><td>Como comerciante, quiero que al confirmarse el pago el sistema active automáticamente el Plan Control y me redirija al panel de suscripción para acceder a las funcionalidades premium.</td><td>3</td></tr>
-    <tr><td>28</td><td>US-20</td><td>Visualizar panel de suscripción</td><td>Como comerciante, quiero hacer clic en la opción lateral "Suscripción" para ver un panel con el plan actual, estado, fecha de renovación, facturación y acciones disponibles.</td><td>2</td></tr>
-    <tr><td>29</td><td>US-21</td><td>Consultar estado de suscripción</td><td>Como comerciante, quiero ver una etiqueta de estado en el panel de suscripción para saber si mi plan se encuentra en estado "Activa", "Cancelación programada", "Cancelada" o "Plan Free".</td><td>1</td></tr>
-    <tr><td>30</td><td>US-22</td><td>Renovar suscripción</td><td>Como comerciante con una suscripción de pago activa o próxima a vencer, quiero presionar el botón "Renovar suscripción" para extender la vigencia de mi acceso a la plataforma.</td><td>3</td></tr>
-    <tr><td>31</td><td>US-23</td><td>Solicitar cancelación de suscripción</td><td>Como comerciante con una suscripción de pago activa, quiero presionar el botón "Solicitar cancelación" y luego "Confirmar cancelación" para detener la renovación automática al finalizar el periodo vigente.</td><td>2</td></tr>
-    <tr><td>32</td><td>US-24</td><td>Cancelar suscripción</td><td>Como sistema, quiero cancelar la suscripción de pago al finalizar su periodo vigente para retirar el acceso premium y devolver la cuenta del comerciante al Plan Free.</td><td>3</td></tr>
-    <tr><td>33</td><td>US-25</td><td>Agregar método de pago de suscripción</td><td>Como comerciante con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td><td>3</td></tr>
-    <tr><td>34</td><td>US-26</td><td>Completar datos fiscales de suscripción</td><td>Como comerciante con una cuenta registrada, quiero presionar el botón "Completar datos" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td><td>2</td></tr>
-    <tr><td>35</td><td>US-27</td><td>Descargar historial de suscripción</td><td>Como comerciante, quiero presionar el botón "Descargar historial" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td><td>2</td></tr>
-    <tr><td>36</td><td>US-28</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso, para abrir la interfaz de ingreso correspondiente.</td><td>3</td></tr>
-    <tr><td>37</td><td>US-29</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>Como cajero, quiero ingresar el número de unidades de un producto seleccionado, para añadirlo al detalle de la venta.</td><td>2</td></tr>
-    <tr><td>38</td><td>US-30</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td><td>5</td></tr>
-    <tr><td>39</td><td>US-31</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>Como cajero, quiero visualizar el desglose de productos para verificar que la información sea correcta antes de proceder al pago.</td><td>3</td></tr>
-    <tr><td>40</td><td>US-32</td><td>Seleccionar el método de pago para la transacción</td><td>Como cajero, quiero elegir el medio por el cual está pagando el cliente para que el ingreso se registre en la categoría contable correcta.</td><td>2</td></tr>
-    <tr><td>41</td><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>Como cajero, quiero procesar el pago y finalizar la venta en un solo paso para registrar la transacción en el sistema y entregar el comprobante al cliente de forma inmediata.</td><td>3</td></tr>
-    <tr><td>42</td><td>US-34</td><td>Cancelar venta en curso</td><td>Como cajero, quiero cancelar la venta en curso para limpiar el ticket y empezar una nueva transacción sin procesar el cobro.</td><td>1</td></tr>
-    <tr><td>43</td><td>US-35</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente para tener visibilidad inmediata del efectivo y digital.</td><td>3</td></tr>
-    <tr><td>44</td><td>US-36</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td><td>2</td></tr>
-    <tr><td>45</td><td>US-37</td><td>Vincular cuenta de WhatsApp Business mediante código QR</td><td>Como comerciante, quiero conectar mi cuenta de WhatsApp Business escaneando un código QR para activar el chatbot de atención a clientes desde el dashboard.</td><td>5</td></tr>
-    <tr><td>46</td><td>US-38</td><td>Consultar estado de vinculación del chatbot</td><td>Como comerciante, quiero conocer el estado de conexión de mi WhatsApp Business para saber si el chatbot se encuentra activo o requiere reconexión.</td><td>2</td></tr>
-    <tr><td>47</td><td>US-39</td><td>Visualizar conversaciones de clientes en el dashboard</td><td>Como comerciante, quiero ver los chats que el bot ha tenido con mis clientes dentro del dashboard para tener visibilidad de todas las conversaciones activas sin usar WhatsApp directamente.</td><td>3</td></tr>
-    <tr><td>48</td><td>US-40</td><td>Responder mensajes de clientes desde el dashboard</td><td>Como comerciante, quiero enviar mensajes a mis clientes directamente desde el dashboard para gestionar conversaciones sin necesitar abrir WhatsApp.</td><td>3</td></tr>
-    <tr><td>49</td><td>US-70</td><td>Visualizar resumen de ventas del día</td><td>Como comerciante, quiero visualizar un resumen de las ventas del día en el panel de inicio para conocer el rendimiento de mi negocio sin ingresar al módulo de ventas.</td><td>2</td></tr>
-    <tr><td>50</td><td>US-71</td><td>Visualizar estado del chatbot en el home</td><td>Como comerciante, quiero visualizar el estado de conexión del chatbot y los chats activos desde el panel de inicio para saber si mi canal de ventas por WhatsApp está operativo.</td><td>2</td></tr>
-    <tr><td>51</td><td>US-72</td><td>Visualizar alertas de inventario en el home</td><td>Como comerciante, quiero ver las alertas críticas de inventario directamente en el panel de inicio para identificar rápidamente productos agotados o lotes próximos a vencer.</td><td>2</td></tr>
-    <tr><td>52</td><td>US-73</td><td>Visualizar contador de pedidos pendientes en el home</td><td>Como comerciante, quiero ver el número de pedidos que están pendientes de atención en el panel de inicio para priorizar mi respuesta sin necesidad de ingresar al módulo de chatbot.</td><td>1</td></tr>
-    <tr><td>53</td><td>US-74</td><td>Visualizar pedidos recientes en el home</td><td>Como comerciante, quiero ver los pedidos más recientes con su estado actual en el panel de inicio para hacer seguimiento sin ingresar al módulo de pedidos.</td><td>2</td></tr>
-    <tr><td>54</td><td>US-75</td><td>Acceder a módulos desde accesos directos del home</td><td>Como comerciante, quiero contar con accesos directos a los módulos principales desde el panel de inicio para navegar rápidamente a cualquier sección sin recorrer el menú lateral.</td><td>1</td></tr>
-    <tr><td>55</td><td>US-76</td><td>Visualizar el centro de soporte</td><td>Como comerciante, quiero visualizar el centro de soporte al presionar el botón de Ayuda para acceder de forma rápida a las opciones de asistencia disponibles.</td><td>2</td></tr>
-    <tr><td>56</td><td>US-77</td><td>Buscar artículo de ayuda</td><td>Como comerciante, quiero buscar artículos de ayuda por palabras clave para encontrar rápidamente la información que necesito sin revisar todas las categorías.</td><td>2</td></tr>
-    <tr><td>57</td><td>US-78</td><td>Consultar artículo de ayuda</td><td>Como comerciante, quiero abrir y leer un artículo de ayuda para entender cómo usar una funcionalidad de la plataforma o resolver un problema específico.</td><td>2</td></tr>
-    <tr><td>58</td><td>US-79</td><td>Reportar un problema</td><td>Como comerciante, quiero reportar un problema o incidencia desde el centro de soporte para que el equipo de Entreprenly pueda revisarlo y darle seguimiento.</td><td>3</td></tr>
-    <tr><td>59</td><td>US-80</td><td>Confirmar envío del reporte</td><td>Como comerciante, quiero recibir una confirmación visual tras enviar un reporte para tener la certeza de que mi solicitud fue registrada correctamente.</td><td>1</td></tr>
-    <tr><td>60</td><td>US-81</td><td>Navegar entre módulos desde el sidebar</td><td>Como comerciante autenticado, quiero usar el sidebar del dashboard para ingresar rápidamente a Home, Productos, Lotes, Ventas, Suscripción, Pedidos, Chatbot y Ayuda.</td><td>2</td></tr>
-    <tr><td>61</td><td>US-82</td><td>Cambiar idioma de la interfaz</td><td>Como comerciante del dashboard, quiero alternar entre español e inglés para visualizar los textos de la interfaz en el idioma que prefiera.</td><td>2</td></tr>
-    <tr><td>62</td><td>US-83</td><td>Gestionar rutas no encontradas</td><td>Como comerciante del dashboard, quiero recibir una vista de ruta no encontrada cuando ingreso a una URL inválida para entender que la página solicitada no existe.</td><td>1</td></tr>
+    <tr><td>16</td><td>US-95</td><td>Buscar lotes</td><td>Como comerciante quiero contar con un buscador en el módulo de Lotes para localizar rápidamente los lotes de un producto por su nombre o marca sin recorrer todas las tarjetas del dashboard.</td><td>2</td></tr>
+    <tr><td>17</td><td>US-09</td><td>Crear lotes</td><td>Como comerciante quiero crear lotes de productos para controlar mejor el stock y la caducidad en el inventario.</td><td>3</td></tr>
+    <tr><td>18</td><td>US-10</td><td>Escanear código QR en inventario</td><td>Como comerciante, quiero escanear códigos QR desde los formularios de productos y lotes para completar el código del registro sin ingresarlo manualmente.</td><td>3</td></tr>
+    <tr><td>19</td><td>US-90</td><td>Eliminar productos</td><td>Como comerciante quiero eliminar productos para deshacerme de los productos que no me sirvan.</td><td>1</td></tr>
+    <tr><td>20</td><td>US-11</td><td>Detectar stock agotado</td><td>Como comerciante quiero ser notificado cuando tengo bajo/nada de stock.</td><td>3</td></tr>
+    <tr><td>21</td><td>US-12</td><td>Mostrar alertas de estado al visualizar detalles</td><td>Como comerciante quiero visualizar alertas de estado al ver el detalle de un lote para identificar rápidamente si tiene stock bajo, está agotado o próximo a vencer.</td><td>2</td></tr>
+    <tr><td>22</td><td>US-13</td><td>Visualizar dashboard de lotes</td><td>Como comerciante quiero visualizar un dashboard de lotes con indicadores y alertas para conocer rápidamente el estado de mi inventario al ingresar al módulo de lotes.</td><td>3</td></tr>
+    <tr><td>23</td><td>US-14</td><td>Recibir alerta de caducidad de lote</td><td>Como comerciante quiero ser notificado cuando un lote esté próximo a vencer o ya haya vencido para tomar acciones como priorizar su uso o descartarlo.</td><td>3</td></tr>
+    <tr><td>24</td><td>US-15</td><td>Seleccionar plan de suscripción</td><td>Como comerciante con Plan Free, quiero presionar el botón "Elegir plan" en la tarjeta del Plan Control para definir el plan que deseo contratar y continuar con el proceso de suscripción.</td><td>2</td></tr>
+    <tr><td>25</td><td>US-16</td><td>Iniciar proceso de suscripción</td><td>Como comerciante con un plan seleccionado, quiero presionar el botón "Continuar con la suscripción" para abrir el formulario de facturación y comenzar formalmente la contratación del plan elegido.</td><td>2</td></tr>
+    <tr><td>26</td><td>US-17</td><td>Registrar datos de facturación</td><td>Como comerciante, quiero completar el formulario de facturación y presionar el botón "Continuar al pago" para que el sistema pueda preparar el cobro correspondiente a la suscripción.</td><td>3</td></tr>
+    <tr><td>27</td><td>US-18</td><td>Procesar cobro de suscripción</td><td>Como comerciante, quiero revisar el resumen de cobro y presionar el botón "Pagar y activar suscripción" para validar el pago del Plan Control seleccionado.</td><td>5</td></tr>
+    <tr><td>28</td><td>US-19</td><td>Activar suscripción</td><td>Como comerciante, quiero que al confirmarse el pago el sistema active automáticamente el Plan Control y me redirija al panel de suscripción para acceder a las funcionalidades premium.</td><td>3</td></tr>
+    <tr><td>29</td><td>US-20</td><td>Visualizar panel de suscripción</td><td>Como comerciante, quiero hacer clic en la opción lateral "Suscripción" para ver un panel con el plan actual, estado, fecha de renovación, facturación y acciones disponibles.</td><td>2</td></tr>
+    <tr><td>30</td><td>US-21</td><td>Consultar estado de suscripción</td><td>Como comerciante, quiero ver una etiqueta de estado en el panel de suscripción para saber si mi plan se encuentra en estado "Activa", "Cancelación programada", "Cancelada" o "Plan Free".</td><td>1</td></tr>
+    <tr><td>31</td><td>US-22</td><td>Renovar suscripción</td><td>Como comerciante con una suscripción de pago activa o próxima a vencer, quiero presionar el botón "Renovar suscripción" para extender la vigencia de mi acceso a la plataforma.</td><td>3</td></tr>
+    <tr><td>32</td><td>US-23</td><td>Solicitar cancelación de suscripción</td><td>Como comerciante con una suscripción de pago activa, quiero presionar el botón "Solicitar cancelación" y luego "Confirmar cancelación" para detener la renovación automática al finalizar el periodo vigente.</td><td>2</td></tr>
+    <tr><td>33</td><td>US-24</td><td>Cancelar suscripción</td><td>Como sistema, quiero cancelar la suscripción de pago al finalizar su periodo vigente para retirar el acceso premium y devolver la cuenta del comerciante al Plan Free.</td><td>3</td></tr>
+    <tr><td>34</td><td>US-25</td><td>Agregar método de pago de suscripción</td><td>Como comerciante con acceso al panel "Suscripción", quiero presionar el botón "Agregar método de pago" para registrar un medio de cobro que pueda usarse en pagos y renovaciones del Plan Control.</td><td>3</td></tr>
+    <tr><td>35</td><td>US-96</td><td>Gestionar métodos de pago de suscripción</td><td>Como comerciante con acceso al panel "Suscripción", quiero visualizar, editar y eliminar los métodos de pago registrados para mantener actualizada mi información de cobro del Plan Control.</td><td>2</td></tr>
+    <tr><td>36</td><td>US-26</td><td>Completar datos fiscales de suscripción</td><td>Como comerciante con una cuenta registrada, quiero presionar el botón "Completar datos" para registrar mi RUC o DNI, razón social o nombre, dirección fiscal y correo de facturación.</td><td>2</td></tr>
+    <tr><td>37</td><td>US-27</td><td>Descargar historial de suscripción</td><td>Como comerciante, quiero presionar el botón "Descargar historial" para obtener un archivo con los eventos de mi plan, pagos, renovaciones, cambios y cancelaciones.</td><td>2</td></tr>
+    <tr><td>38</td><td>US-28</td><td>Buscar productos en el inventario y validar su tipo de medida</td><td>Como cajero, quiero buscar productos del inventario para que el sistema valide si son por cantidad o peso, para abrir la interfaz de ingreso correspondiente.</td><td>3</td></tr>
+    <tr><td>39</td><td>US-29</td><td>Registrar la cantidad de unidades en el Ticket de Venta</td><td>Como cajero, quiero ingresar el número de unidades de un producto seleccionado, para añadirlo al detalle de la venta.</td><td>2</td></tr>
+    <tr><td>40</td><td>US-30</td><td>Capturar el peso mediante balanza IoT o ingreso manual</td><td>Como cajero, quiero obtener el peso del producto automáticamente o por teclado para procesar la venta de productos al granel.</td><td>5</td></tr>
+    <tr><td>41</td><td>US-31</td><td>Gestionar el desglose y cálculo del Ticket de Venta</td><td>Como cajero, quiero visualizar el desglose de productos para verificar que la información sea correcta antes de proceder al pago.</td><td>3</td></tr>
+    <tr><td>42</td><td>US-32</td><td>Seleccionar el método de pago para la transacción</td><td>Como cajero, quiero elegir el medio por el cual está pagando el cliente para que el ingreso se registre en la categoría contable correcta.</td><td>2</td></tr>
+    <tr><td>43</td><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>Como cajero, quiero procesar el pago y finalizar la venta en un solo paso para registrar la transacción en el sistema y entregar el comprobante al cliente de forma inmediata.</td><td>3</td></tr>
+    <tr><td>44</td><td>US-34</td><td>Cancelar venta en curso</td><td>Como cajero, quiero cancelar la venta en curso para limpiar el ticket y empezar una nueva transacción sin procesar el cobro.</td><td>1</td></tr>
+    <tr><td>45</td><td>US-35</td><td>Clasificar automáticamente los ingresos según el medio de pago</td><td>Como comerciante, quiero que cada venta finalizada sume su monto al acumulado del método correspondiente para tener visibilidad inmediata del efectivo y digital.</td><td>3</td></tr>
+    <tr><td>46</td><td>US-36</td><td>Monitorear el Resumen de Caja en tiempo real dentro del panel de ventas</td><td>Como cajero, quiero visualizar de forma centralizada los ingresos acumulados por método de pago para tener un control inmediato de los saldos del día sin salir de la interfaz principal.</td><td>2</td></tr>
+    <tr><td>47</td><td>US-97</td><td>Consultar el historial de ventas del día</td><td>Como comerciante, quiero consultar el listado de las ventas registradas en un día seleccionado para revisar la actividad comercial y verificar las transacciones sin salir del panel de ventas.</td><td>2</td></tr>
+    <tr><td>48</td><td>US-98</td><td>Consultar el detalle de una venta registrada</td><td>Como comerciante, quiero abrir el detalle de una venta del historial para revisar los productos vendidos con sus cantidades o pesos y sus montos.</td><td>2</td></tr>
+    <tr><td>49</td><td>US-37</td><td>Vincular cuenta de WhatsApp Business mediante código QR</td><td>Como comerciante, quiero conectar mi cuenta de WhatsApp Business escaneando un código QR para activar el chatbot de atención a clientes desde el dashboard.</td><td>5</td></tr>
+    <tr><td>50</td><td>US-38</td><td>Consultar estado de vinculación del chatbot</td><td>Como comerciante, quiero conocer el estado de conexión de mi WhatsApp Business para saber si el chatbot se encuentra activo o requiere reconexión.</td><td>2</td></tr>
+    <tr><td>51</td><td>US-39</td><td>Visualizar conversaciones de clientes en el dashboard</td><td>Como comerciante, quiero ver los chats que el bot ha tenido con mis clientes dentro del dashboard para tener visibilidad de todas las conversaciones activas sin usar WhatsApp directamente.</td><td>3</td></tr>
+    <tr><td>52</td><td>US-40</td><td>Responder mensajes de clientes desde el dashboard</td><td>Como comerciante, quiero enviar mensajes a mis clientes directamente desde el dashboard para gestionar conversaciones sin necesitar abrir WhatsApp.</td><td>3</td></tr>
+    <tr><td>53</td><td>US-70</td><td>Visualizar resumen de ventas del día</td><td>Como comerciante, quiero visualizar un resumen de las ventas del día en el panel de inicio para conocer el rendimiento de mi negocio sin ingresar al módulo de ventas.</td><td>2</td></tr>
+    <tr><td>54</td><td>US-71</td><td>Visualizar estado del chatbot en el home</td><td>Como comerciante, quiero visualizar el estado de conexión del chatbot y los chats activos desde el panel de inicio para saber si mi canal de ventas por WhatsApp está operativo.</td><td>2</td></tr>
+    <tr><td>55</td><td>US-72</td><td>Visualizar alertas de inventario en el home</td><td>Como comerciante, quiero ver las alertas críticas de inventario directamente en el panel de inicio para identificar rápidamente productos agotados o lotes próximos a vencer.</td><td>2</td></tr>
+    <tr><td>56</td><td>US-73</td><td>Visualizar contador de pedidos pendientes en el home</td><td>Como comerciante, quiero ver el número de pedidos que están pendientes de atención en el panel de inicio para priorizar mi respuesta sin necesidad de ingresar al módulo de chatbot.</td><td>1</td></tr>
+    <tr><td>57</td><td>US-74</td><td>Visualizar pedidos recientes en el home</td><td>Como comerciante, quiero ver los pedidos más recientes con su estado actual en el panel de inicio para hacer seguimiento sin ingresar al módulo de pedidos.</td><td>2</td></tr>
+    <tr><td>58</td><td>US-75</td><td>Acceder a módulos desde accesos directos del home</td><td>Como comerciante, quiero contar con accesos directos a los módulos principales desde el panel de inicio para navegar rápidamente a cualquier sección sin recorrer el menú lateral.</td><td>1</td></tr>
+    <tr><td>59</td><td>US-76</td><td>Visualizar el centro de soporte</td><td>Como comerciante, quiero visualizar el centro de soporte al presionar el botón de Ayuda para acceder de forma rápida a las opciones de asistencia disponibles.</td><td>2</td></tr>
+    <tr><td>60</td><td>US-77</td><td>Buscar artículo de ayuda</td><td>Como comerciante, quiero buscar artículos de ayuda por palabras clave para encontrar rápidamente la información que necesito sin revisar todas las categorías.</td><td>2</td></tr>
+    <tr><td>61</td><td>US-78</td><td>Consultar artículo de ayuda</td><td>Como comerciante, quiero abrir y leer un artículo de ayuda para entender cómo usar una funcionalidad de la plataforma o resolver un problema específico.</td><td>2</td></tr>
+    <tr><td>62</td><td>US-79</td><td>Reportar un problema</td><td>Como comerciante, quiero reportar un problema o incidencia desde el centro de soporte para que el equipo de Entreprenly pueda revisarlo y darle seguimiento.</td><td>3</td></tr>
+    <tr><td>63</td><td>US-80</td><td>Confirmar envío del reporte</td><td>Como comerciante, quiero recibir una confirmación visual tras enviar un reporte para tener la certeza de que mi solicitud fue registrada correctamente.</td><td>1</td></tr>
+    <tr><td>64</td><td>US-81</td><td>Navegar entre módulos desde el sidebar</td><td>Como comerciante autenticado, quiero usar el sidebar del dashboard para ingresar rápidamente a Home, Productos, Lotes, Ventas, Suscripción, Pedidos, Chatbot y Ayuda.</td><td>2</td></tr>
+    <tr><td>65</td><td>US-82</td><td>Cambiar idioma de la interfaz</td><td>Como comerciante del dashboard, quiero alternar entre español e inglés para visualizar los textos de la interfaz en el idioma que prefiera.</td><td>2</td></tr>
+    <tr><td>66</td><td>US-83</td><td>Gestionar rutas no encontradas</td><td>Como comerciante del dashboard, quiero recibir una vista de ruta no encontrada cuando ingreso a una URL inválida para entender que la página solicitada no existe.</td><td>1</td></tr>
     <!-- BLOQUE 3: BACKEND (SISTEMA, API E INFRAESTRUCTURA) -->
-    <tr><td>63</td><td>US-41</td><td>Responder consulta de producto disponible</td><td>Como sistema, quiero que el chatbot responda automáticamente al cliente con la información del producto solicitado cuando este existe en el inventario.</td><td>3</td></tr>
-    <tr><td>64</td><td>US-42</td><td>Sugerir alternativas ante producto no disponible</td><td>Como sistema, quiero que el chatbot informe al cliente cuando un producto no está disponible y le sugiera otros productos del inventario.</td><td>2</td></tr>
-    <tr><td>65</td><td>US-43</td><td>Confirmar pedido con el cliente</td><td>Como sistema, quiero que el chatbot presente un resumen del pedido al cliente y solicite confirmación antes de proceder al pago.</td><td>3</td></tr>
-    <tr><td>66</td><td>US-44</td><td>Recibir instrucciones de pago por WhatsApp</td><td>Como cliente final, quiero recibir las instrucciones de pago a través del chatbot para saber cómo realizar la transferencia y completar mi pedido.</td><td>2</td></tr>
-    <tr><td>67</td><td>US-45</td><td>Reportar comprobante de pago digital</td><td>Como cliente final, quiero enviar el comprobante de mi pago al chatbot para que el comerciante pueda verificarlo y confirmar mi pedido.</td><td>3</td></tr>
-    <tr><td>68</td><td>US-46</td><td>Validar comprobante de pago desde el dashboard</td><td>Como comerciante, quiero revisar el comprobante reportado por el cliente y aprobarlo o rechazarlo desde el dashboard.</td><td>3</td></tr>
-    <tr><td>69</td><td>US-47</td><td>Notificar resultado de validación al cliente</td><td>Como cliente final, quiero recibir una notificación sobre el resultado de la validación de mi pago para saber si mi pedido fue confirmado.</td><td>2</td></tr>
-    <tr><td>70</td><td>US-48</td><td>Confirmar pedido y descontar stock</td><td>Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real y reflejar el consumo de stock.</td><td>3</td></tr>
-    <tr><td>71</td><td>US-49</td><td>Registrar venta en el sistema</td><td>Como comerciante, quiero que cada pedido confirmado quede registrado como venta en el sistema para mantener un control financiero preciso y trazable.</td><td>2</td></tr>
-    <tr><td>72</td><td>US-50</td><td>Manejar stock insuficiente en pedido</td><td>Como cliente final, quiero ser notificado cuando un producto no tiene stock suficiente para ajustar mi pedido antes de proceder al pago.</td><td>3</td></tr>
-    <tr><td>73</td><td>US-51</td><td>Cancelar pedido por expiración de tiempo de pago</td><td>Como sistema, quiero cancelar automáticamente un pedido cuando el cliente no reporta el comprobante de pago en el tiempo establecido para liberar el stock reservado.</td><td>3</td></tr>
-    <tr><td>74</td><td>US-52</td><td>Rechazar comprobante de pago inválido</td><td>Como comerciante, quiero rechazar un comprobante de pago cuando sea incorrecto o sospechoso para proteger el negocio de transacciones fraudulentas.</td><td>3</td></tr>
-    <tr><td>75</td><td>US-54</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>Como developer, quiero endpoints para crear y actualizar pedidos para que el chatbot y el dashboard intercambien información del pedido de forma automática y consistente.</td><td>5</td></tr>
-    <tr><td>76</td><td>US-55</td><td>Validar y registrar pagos mediante API</td><td>Como developer, quiero un endpoint para aprobar o rechazar pagos desde el dashboard para que el sistema actualice el inventario y notifique al cliente de forma automática.</td><td>5</td></tr>
-    <tr><td>77</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>Como equipo de desarrollo, queremos proteger los endpoints de la API mediante autenticación basada en JWT para que solo los usuarios autenticados accedan a los recursos del comerciante.</td><td>5</td></tr>
-    <tr><td>78</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>Como equipo de desarrollo, queremos empaquetar el backend en una imagen Docker y automatizar su construcción y despliegue mediante un pipeline de CI/CD para garantizar entregas reproducibles y consistentes.</td><td>5</td></tr>
-    <tr><td>79</td><td>US-93</td><td>Persistir datos mediante Entity Framework Core por bounded context</td><td>Como equipo de desarrollo, queremos mapear las entidades de dominio a la base de datos mediante Entity Framework Core respetando los límites de cada bounded context para mantener la integridad y separación de los datos.</td><td>3</td></tr>
-    <tr><td>80</td><td>US-94</td><td>Desplegar el frontend en Firebase Hosting</td><td>Como equipo de desarrollo, queremos desplegar la aplicación Vue en Firebase Hosting para entregar el frontend de forma escalable y accesible a los comerciantes.</td><td>3</td></tr>
+    <tr><td>67</td><td>US-41</td><td>Responder consulta de producto disponible</td><td>Como sistema, quiero que el chatbot responda automáticamente al cliente con la información del producto solicitado cuando este existe en el inventario.</td><td>3</td></tr>
+    <tr><td>68</td><td>US-42</td><td>Sugerir alternativas ante producto no disponible</td><td>Como sistema, quiero que el chatbot informe al cliente cuando un producto no está disponible y le sugiera otros productos del inventario.</td><td>2</td></tr>
+    <tr><td>69</td><td>US-43</td><td>Confirmar pedido con el cliente</td><td>Como sistema, quiero que el chatbot presente un resumen del pedido al cliente y solicite confirmación antes de proceder al pago.</td><td>3</td></tr>
+    <tr><td>70</td><td>US-44</td><td>Recibir instrucciones de pago por WhatsApp</td><td>Como cliente final, quiero recibir las instrucciones de pago a través del chatbot para saber cómo realizar la transferencia y completar mi pedido.</td><td>2</td></tr>
+    <tr><td>71</td><td>US-45</td><td>Reportar comprobante de pago digital</td><td>Como cliente final, quiero enviar el comprobante de mi pago al chatbot para que el comerciante pueda verificarlo y confirmar mi pedido.</td><td>3</td></tr>
+    <tr><td>72</td><td>US-46</td><td>Validar comprobante de pago desde el dashboard</td><td>Como comerciante, quiero revisar el comprobante reportado por el cliente y aprobarlo o rechazarlo desde el dashboard.</td><td>3</td></tr>
+    <tr><td>73</td><td>US-47</td><td>Notificar resultado de validación al cliente</td><td>Como cliente final, quiero recibir una notificación sobre el resultado de la validación de mi pago para saber si mi pedido fue confirmado.</td><td>2</td></tr>
+    <tr><td>74</td><td>US-48</td><td>Confirmar pedido y descontar stock</td><td>Como sistema, quiero confirmar el pedido automáticamente al aprobar el pago para actualizar el inventario en tiempo real y reflejar el consumo de stock.</td><td>3</td></tr>
+    <tr><td>75</td><td>US-49</td><td>Registrar venta en el sistema</td><td>Como comerciante, quiero que cada pedido confirmado quede registrado como venta en el sistema para mantener un control financiero preciso y trazable.</td><td>2</td></tr>
+    <tr><td>76</td><td>US-50</td><td>Manejar stock insuficiente en pedido</td><td>Como cliente final, quiero ser notificado cuando un producto no tiene stock suficiente para ajustar mi pedido antes de proceder al pago.</td><td>3</td></tr>
+    <tr><td>77</td><td>US-51</td><td>Cancelar pedido por expiración de tiempo de pago</td><td>Como sistema, quiero cancelar automáticamente un pedido cuando el cliente no reporta el comprobante de pago en el tiempo establecido para liberar el stock reservado.</td><td>3</td></tr>
+    <tr><td>78</td><td>US-52</td><td>Rechazar comprobante de pago inválido</td><td>Como comerciante, quiero rechazar un comprobante de pago cuando sea incorrecto o sospechoso para proteger el negocio de transacciones fraudulentas.</td><td>3</td></tr>
+    <tr><td>79</td><td>US-54</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>Como developer, quiero endpoints para crear y actualizar pedidos para que el chatbot y el dashboard intercambien información del pedido de forma automática y consistente.</td><td>5</td></tr>
+    <tr><td>80</td><td>US-55</td><td>Validar y registrar pagos mediante API</td><td>Como developer, quiero un endpoint para aprobar o rechazar pagos desde el dashboard para que el sistema actualice el inventario y notifique al cliente de forma automática.</td><td>5</td></tr>
+    <tr><td>81</td><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>Como equipo de desarrollo, queremos proteger los endpoints de la API mediante autenticación basada en JWT para que solo los usuarios autenticados accedan a los recursos del comerciante.</td><td>5</td></tr>
+    <tr><td>82</td><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>Como equipo de desarrollo, queremos empaquetar el backend en una imagen Docker y automatizar su construcción y despliegue mediante un pipeline de CI/CD para garantizar entregas reproducibles y consistentes.</td><td>5</td></tr>
+    <tr><td>83</td><td>US-93</td><td>Persistir datos mediante Entity Framework Core por bounded context</td><td>Como equipo de desarrollo, queremos mapear las entidades de dominio a la base de datos mediante Entity Framework Core respetando los límites de cada bounded context para mantener la integridad y separación de los datos.</td><td>3</td></tr>
+    <tr><td>84</td><td>US-94</td><td>Desplegar el frontend en Firebase Hosting</td><td>Como equipo de desarrollo, queremos desplegar la aplicación Vue en Firebase Hosting para entregar el frontend de forma escalable y accesible a los comerciantes.</td><td>3</td></tr>
     <!-- BLOQUE 4: INICIO DE SESIÓN, REGISTRO Y PERFIL -->
-    <tr><td>81</td><td>US-56</td><td>Registrar cuenta con email</td><td>Como comerciante anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly y obtener automáticamente el Plan Free.</td><td>3</td></tr>
-    <tr><td>82</td><td>US-57</td><td>Verificar email</td><td>Como comerciante registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.</td><td>3</td></tr>
-    <tr><td>83</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>Como comerciante registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.</td><td>3</td></tr>
-    <tr><td>84</td><td>US-59</td><td>Iniciar sesión con Google OAuth</td><td>Como comerciante anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.</td><td>5</td></tr>
-    <tr><td>85</td><td>US-60</td><td>Recuperar contraseña</td><td>Como comerciante registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.</td><td>3</td></tr>
-    <tr><td>86</td><td>US-61</td><td>Cerrar sesión</td><td>Como comerciante autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.</td><td>1</td></tr>
-    <tr><td>87</td><td>US-62</td><td>Visualizar perfil actual</td><td>Como comerciante autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.</td><td>1</td></tr>
-    <tr><td>88</td><td>US-63</td><td>Actualizar nombre y biografía</td><td>Como comerciante autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.</td><td>2</td></tr>
-    <tr><td>89</td><td>US-64</td><td>Subir foto de perfil</td><td>Como comerciante autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.</td><td>3</td></tr>
-    <tr><td>90</td><td>US-65</td><td>Cambiar email con re-verificación</td><td>Como comerciante autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.</td><td>3</td></tr>
-    <tr><td>91</td><td>US-66</td><td>Cambiar contraseña</td><td>Como comerciante autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td><td>3</td></tr>
-    <tr><td>92</td><td>US-67</td><td>Configurar preferencias de idioma, zona horaria, tema y moneda</td><td>Como comerciante autenticado, quiero configurar mi idioma, zona horaria, tema visual y moneda para adaptar la plataforma a mis preferencias operativas.</td><td>3</td></tr>
-    <tr><td>93</td><td>US-68</td><td>Configurar notificaciones</td><td>Como comerciante autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.</td><td>2</td></tr>
-    <tr><td>94</td><td>US-69</td><td>Registrar y verificar número de teléfono</td><td>Como comerciante autenticado, quiero registrar y verificar mi número de teléfono en el perfil para tener un canal de contacto adicional vinculado a mi cuenta.</td><td>2</td></tr>
+    <tr><td>85</td><td>US-56</td><td>Registrar cuenta con email</td><td>Como comerciante anónimo, quiero registrarme con mi email y contraseña para crear una cuenta en Entreprenly y obtener automáticamente el Plan Free.</td><td>3</td></tr>
+    <tr><td>86</td><td>US-57</td><td>Verificar email</td><td>Como comerciante registrado, quiero verificar mi email mediante el enlace enviado a mi correo para activar mi cuenta.</td><td>3</td></tr>
+    <tr><td>87</td><td>US-58</td><td>Iniciar sesión con credenciales</td><td>Como comerciante registrado, quiero iniciar sesión con mi email y contraseña para acceder al dashboard de Entreprenly.</td><td>3</td></tr>
+    <tr><td>88</td><td>US-59</td><td>Iniciar sesión con Google OAuth</td><td>Como comerciante anónimo, quiero iniciar sesión con mi cuenta de Google para acceder a Entreprenly sin necesidad de crear credenciales nuevas.</td><td>5</td></tr>
+    <tr><td>89</td><td>US-60</td><td>Recuperar contraseña</td><td>Como comerciante registrado, quiero recuperar el acceso a mi cuenta mediante un enlace enviado a mi email para restablecer mi contraseña.</td><td>3</td></tr>
+    <tr><td>90</td><td>US-61</td><td>Cerrar sesión</td><td>Como comerciante autenticado, quiero cerrar mi sesión para que el sistema revoque mi token y me redirija a la pantalla de login.</td><td>1</td></tr>
+    <tr><td>91</td><td>US-62</td><td>Visualizar perfil actual</td><td>Como comerciante autenticado, quiero visualizar mi perfil actual para revisar mis datos registrados en la plataforma.</td><td>1</td></tr>
+    <tr><td>92</td><td>US-63</td><td>Actualizar nombre y biografía</td><td>Como comerciante autenticado, quiero actualizar mi nombre y biografía para mantener mi perfil al día.</td><td>2</td></tr>
+    <tr><td>93</td><td>US-64</td><td>Subir foto de perfil</td><td>Como comerciante autenticado, quiero subir una foto de perfil para personalizar mi cuenta en la plataforma.</td><td>3</td></tr>
+    <tr><td>94</td><td>US-65</td><td>Cambiar email con re-verificación</td><td>Como comerciante autenticado, quiero cambiar mi email y verificarlo para mantener mis datos de contacto actualizados.</td><td>3</td></tr>
+    <tr><td>95</td><td>US-66</td><td>Cambiar contraseña</td><td>Como comerciante autenticado, quiero cambiar mi contraseña para mantener la seguridad de mi cuenta.</td><td>3</td></tr>
+    <tr><td>96</td><td>US-67</td><td>Configurar preferencias de idioma, zona horaria, tema y moneda</td><td>Como comerciante autenticado, quiero configurar mi idioma, zona horaria, tema visual y moneda para adaptar la plataforma a mis preferencias operativas.</td><td>3</td></tr>
+    <tr><td>97</td><td>US-68</td><td>Configurar notificaciones</td><td>Como comerciante autenticado, quiero configurar mis preferencias de notificación para recibir solo los avisos que me sean relevantes.</td><td>2</td></tr>
+    <tr><td>98</td><td>US-69</td><td>Registrar y verificar número de teléfono</td><td>Como comerciante autenticado, quiero registrar y verificar mi número de teléfono en el perfil para tener un canal de contacto adicional vinculado a mi cuenta.</td><td>2</td></tr>
   </tbody>
 </table>
