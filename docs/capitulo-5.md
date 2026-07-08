@@ -2374,7 +2374,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista (Microsoft Stream):</strong>
-        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDLOgZZQciGT4vb_yjShsLTAS0Hr5RXYveIiQsCDk62_3g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ykle0r" style="color: #1a6b6b;">María Encarnación-Entrevista de Validación</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDLOgZZQciGT4vb_yjShsLTAS0Hr5RXYveIiQsCDk62_3g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ykle0r">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDLOgZZQciGT4vb_yjShsLTAS0Hr5RXYveIiQsCDk62_3g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ykle0r</a>
       </td>
     </tr>
   </table>
@@ -2442,7 +2442,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista (Microsoft Stream):</strong>
-        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDfZ1lUJuh6QIJJfAiZtDGhAfoa0SvaRV9JKz7SKHOnDxQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1rjqKF" style="color: #1a6b6b;">Hercilio Carrasco-Entrevista de Validación</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDfZ1lUJuh6QIJJfAiZtDGhAfoa0SvaRV9JKz7SKHOnDxQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1rjqKF">https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416151_upc_edu_pe/IQDfZ1lUJuh6QIJJfAiZtDGhAfoa0SvaRV9JKz7SKHOnDxQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1rjqKF</a>
       </td>
     </tr>
   </table>
@@ -2512,7 +2512,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link de la entrevista (Microsoft Stream):</strong>
-        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQBA8Q70W8bCRoDGM1oUhrJdATc8nAY1ysMnwvptFJXACZk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wdusaa" style="color: #1a6b6b;">Sebastián Curay-Entrevista de Validación</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQBA8Q70W8bCRoDGM1oUhrJdATc8nAY1ysMnwvptFJXACZk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wdusaa">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQBA8Q70W8bCRoDGM1oUhrJdATc8nAY1ysMnwvptFJXACZk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=wdusaa</a>
       </td>
     </tr>
   </table>
@@ -2953,13 +2953,13 @@ El video fue subido a **Microsoft Stream** y a **YouTube**. A continuación se i
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link del video (Microsoft Stream):</strong>
-        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQD7F8snmaJaQoAKXPJo6MHJARZWmd7lIrkanbWw0uIJt9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=i9I4BZ" style="color: #1a6b6b;">Entreprenly — Video About-the-Product (Microsoft Stream)</a>
+        <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQD7F8snmaJaQoAKXPJo6MHJARZWmd7lIrkanbWw0uIJt9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=i9I4BZ">https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a290_upc_edu_pe/IQD7F8snmaJaQoAKXPJo6MHJARZWmd7lIrkanbWw0uIJt9Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=i9I4BZ</a>
       </td>
     </tr>
     <tr>
       <td style="padding: 7px 14px; border: 1px solid #cfd8dc;">
         <strong>Link del video (YouTube):</strong>
-        <a href="https://youtu.be/JFLwl_6-Alg" style="color: #1a6b6b;">Entreprenly — Video About-the-Product (YouTube)</a>
+        <a href="https://youtu.be/JFLwl_6-Alg">https://youtu.be/JFLwl_6-Alg</a>
       </td>
     </tr>
   </table>

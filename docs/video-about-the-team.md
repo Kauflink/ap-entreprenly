@@ -22,7 +22,7 @@ En esta sección se presenta el **Video About-the-Team** del equipo **Kauflink**
     <tr>
       <td style="padding: 9px 16px; border: 1px solid #cfd8dc;">
         <strong>▶️ Ver el video (YouTube):</strong>
-        <a href="https://youtu.be/vh1XZmKGKLE" style="color: #1a6b6b;">Kauflink — Video About-the-Team</a>
+        <a href="https://youtu.be/vh1XZmKGKLE">https://youtu.be/vh1XZmKGKLE</a>
       </td>
     </tr>
   </table>
