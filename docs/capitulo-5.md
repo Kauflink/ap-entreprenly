@@ -552,7 +552,7 @@ En este primer Sprint, el equipo organizó su trabajo en torno a cuatro aspectos
 
 El objetivo principal de este Sprint fue implementar y desplegar la primera versión del Landing Page de Entreprenly, cubriendo la User Story US-49 del Product Backlog. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
 
-![Logo de la UPC](./images/sprint1.png "Universidad Peruana de Ciencias Aplicadas")
+![Logo de la UPC](./images/capitulo5/sprint1.png "Universidad Peruana de Ciencias Aplicadas")
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -891,7 +891,7 @@ Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoria
 - **Footer:** Información de contacto, términos y condiciones y enlaces relevantes.
 - **Controles de experiencia:** Selector de idioma (Español / Inglés) y switch de tema claro/oscuro, accesibles desde la barra de navegación.
 
-![landing_desplegado](./images/landing_desplegado.png "landing_desplegado")
+![landing_desplegado](./images/capitulo5/landing_desplegado.png "landing_desplegado")
 
 ---
 
@@ -907,23 +907,23 @@ Durante el Sprint 1, el equipo configuró y ejecutó el proceso de despliegue de
 
 1. **Creación del repositorio:** Se creó el repositorio público `ap-entreprenly-landing` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con las ramas `main` y `develop`.
 
-![creacion_repos](./images/creacion_repos.png "creacion_repos")
+![creacion_repos](./images/capitulo5/creacion_repos.png "creacion_repos")
 
 2. **Configuración del dominio personalizado:** Se añadió el archivo `CNAME` al repositorio con el dominio personalizado asignado al Landing Page.
 
-![cname](./images/cname.png "cname")
+![cname](./images/capitulo5/cname.png "cname")
 
-![entreprenly_cname](./images/entreprenly_cname.png "entreprenly_cname")
+![entreprenly_cname](./images/capitulo5/entreprenly_cname.png "entreprenly_cname")
 
 3. **Configuración del pipeline de CI/CD:** Se creó un workflow de GitHub Actions (`.github/workflows/`) que automatiza el proceso de build y despliegue. El workflow incluye los pasos de instalación de dependencias (`npm ci`), compilación de estilos con Tailwind CSS (`npm run build`) y despliegue automático a la rama `gh-pages` al fusionar cambios en `main`.
 
-![workflows1](./images/workflows1.png "workflows1")
+![workflows1](./images/capitulo5/workflows1.png "workflows1")
 
-![workflows2](./images/workflows2.png "workflows2")
+![workflows2](./images/capitulo5/workflows2.png "workflows2")
 
 4. **Verificación del despliegue:** Se comprobó que el Landing Page quedó correctamente publicado y accesible desde la URL de GitHub Pages con el dominio configurado.
 
-![landing_desplegado](./images/landing_desplegado.png "landing_desplegado")
+![landing_desplegado](./images/capitulo5/landing_desplegado.png "landing_desplegado")
 
 ---
 
@@ -933,11 +933,11 @@ Durante el Sprint 1, todos los miembros del equipo participaron activamente en l
 
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en la rama `develop` y realizando la integración a `main` mediante Pull Requests revisados y aprobados por otros miembros. Se realizaron un total de 5 Pull Requests durante el Sprint.
 
-![commits1](./images/commits1.png "commits1")
+![commits1](./images/capitulo5/commits1.png "commits1")
 
-![commits2](./images/commits2.png "commits2")
+![commits2](./images/capitulo5/commits2.png "commits2")
 
-![commits3](./images/commits3.png "commits3")
+![commits3](./images/capitulo5/commits3.png "commits3")
 
 **URL del repositorio del Landing Page:** https://github.com/Kauflink/ap-entreprenly-landing
 
@@ -1074,7 +1074,7 @@ En el Sprint 2, el equipo organizó el trabajo asignando un Bounded Context prin
 
 El objetivo principal de este Sprint fue implementar la Frontend Web Application de Entreprenly en Vue, cubriendo los Bounded Contexts de Auth, Profile, Subscription, Inventory, Sales y Chatbot, junto con las vistas compartidas de Home y Help. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
 
-![sprint2](./images/sprint2.png "sprint2")
+![sprint2](./images/capitulo5/sprint2.png "sprint2")
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1344,15 +1344,15 @@ Al término del Sprint 2, el equipo implementó y desplegó el Frontend Web Appl
 
 - **i18n:** Soporte bilingüe ES/EN en todos los BCs con traducción dinámica del título de la pestaña del navegador.
 
-![home_p](./images/home_p.png "home_p")
+![home_p](./images/capitulo5/home_p.png "home_p")
 
-![sales_p](./images/sales_p.png "sales_p")
+![sales_p](./images/capitulo5/sales_p.png "sales_p")
 
-![chatbot_p](./images/chatbot_p.png "chatbot_p")
+![chatbot_p](./images/capitulo5/chatbot_p.png "chatbot_p")
 
-![profile_p](./images/profile_p.png "profile_p")
+![profile_p](./images/capitulo5/profile_p.png "profile_p")
 
-![subscription_p](./images/subscription_p.png "subscription_p")
+![subscription_p](./images/capitulo5/subscription_p.png "subscription_p")
 
 ---
 
@@ -1560,11 +1560,11 @@ Durante el Sprint 2, el Backend (RESTful Web Services con ASP.NET Core) aún no 
   </tbody>
 </table>
 
-![json-server](./images/json-server.png "json-server")
+![json-server](./images/capitulo5/json-server.png "json-server")
 
-![postman](./images/postman.png "postman")
+![postman](./images/capitulo5/postman.png "postman")
 
-![postman2](./images/postman2.png "postman2")
+![postman2](./images/capitulo5/postman2.png "postman2")
 
 **URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/ap-entreprenly-frontend
 
@@ -1578,15 +1578,15 @@ Durante el Sprint 2, el equipo configuró y ejecutó el proceso de despliegue de
 
 1. **Creación del repositorio del Frontend:** Se creó el repositorio público `ap-entreprenly-frontend` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con ramas `main`, `develop` y ramas `feature/` por Bounded Context.
 
-![repo_frontend](./images/repo_frontend.png "repo_frontend")
+![repo_frontend](./images/capitulo5/repo_frontend.png "repo_frontend")
 
 2. **Configuración de Firebase Hosting:** Se creó un proyecto en Firebase Console, se inicializó Firebase Hosting en el repositorio del frontend con `firebase init hosting`, configurando `dist` como directorio público y habilitando la reescritura de rutas al `index.html` para el SPA routing de Vue Router.
 
-![firebase_p](./images/firebase_p.png "firebase_p")
+![firebase_p](./images/capitulo5/firebase_p.png "firebase_p")
 
 3. **Verificación del despliegue:** Se validó que la aplicación Vue se encuentra correctamente desplegada y accesible en `https://ap.entreprenly.online`, con navegación entre BCs funcional sin errores 404 al refrescar el navegador.
 
-![app_firebase](./images/app_firebase.png "app_firebase")
+![app_firebase](./images/capitulo5/app_firebase.png "app_firebase")
 
 ---
 
@@ -1596,11 +1596,11 @@ Durante el Sprint 2, los cinco miembros del equipo participaron activamente en l
 
 El equipo aplicó GitFlow como estrategia de control de versiones, trabajando en ramas `feature/` por Bounded Context (e.g., `feature/sales`, `feature/chatbot`, `feature/profile-configuration`, `feature/subscription`, `feature/inventory`) y realizando la integración a `develop` y `main` mediante Pull Requests. Se realizaron un total de **53 Pull Requests** durante el Sprint. La distribución de commits por miembro del equipo fue la siguiente: Camargo Briceño (87 commits), Palma De Los Santos (58 commits), Flores Pinchi (51 commits), Chavez Carrasco (49 commits) y Peirano Brun (5 commits).
 
-![contributors_p2](./images/contributors_p2.png "contributors_p2")
+![contributors_p2](./images/capitulo5/contributors_p2.png "contributors_p2")
 
-![pull_p2](./images/pull_p2.png "pull_p2")
+![pull_p2](./images/capitulo5/pull_p2.png "pull_p2")
 
-![network_g](./images/network_g.png "network_g")
+![network_g](./images/capitulo5/network_g.png "network_g")
 
 **URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/ap-entreprenly-frontend
 
@@ -1739,7 +1739,7 @@ En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsa
 
 El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presentan los Work-items, organizados por aspecto, con el responsable y su estado al cierre del Sprint.
 
-![sprint3](./images/sprint3.png "Tablero del Sprint 3")
+![sprint3](./images/capitulo5/sprint3.png "Tablero del Sprint 3")
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1863,15 +1863,15 @@ Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de W
 
 Al término del Sprint 3, la Frontend Web Application consume la API real desplegada en `https://ap-api.entreprenly.online/api/v1`, con persistencia en MySQL y autenticación JWT. Los flujos clave —registro e inicio de sesión, gestión de inventario y lotes, registro de ventas en el punto de venta, gestión de la suscripción y atención de pedidos por el chatbot de WhatsApp— operan sobre datos persistentes reales. A continuación se incluyen las capturas de las principales vistas funcionando contra el backend.
 
-<img src="images/exec_s3_login.png" width="600">
+<img src="images/capitulo5/exec_s3_login.png" width="600">
 
-<img src="images/exec_s3_inventory.png" width="600">
+<img src="images/capitulo5/exec_s3_inventory.png" width="600">
 
-<img src="images/exec_s3_sales.png" width="600">
+<img src="images/capitulo5/exec_s3_sales.png" width="600">
 
-<img src="images/exec_s3_subscription.png" width="600">
+<img src="images/capitulo5/exec_s3_subscription.png" width="600">
 
-<img src="images/exec_s3_chatbot.png" width="600">
+<img src="images/capitulo5/exec_s3_chatbot.png" width="600">
 
 
 ---
@@ -1915,7 +1915,7 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
   </tbody>
 </table>
 
-<img src="./images/swagger_s3.png" width="600">
+<img src="./images/capitulo5/swagger_s3.png" width="600">
 
 **URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
 
@@ -1925,9 +1925,9 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
 
 Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`), publicarla en **Google Artifact Registry** (`us-east1-docker.pkg.dev`), y desplegarla en la instancia de **Google Compute Engine** mediante **Docker Compose**, con **Caddy** como reverse proxy y gestor automático de TLS. La autenticación del pipeline de GitHub Actions se realiza mediante **Workload Identity Federation**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
 
-<img src="./images/deploy_s3_1.png" width="600">
+<img src="./images/capitulo5/deploy_s3_1.png" width="600">
 
-<img src="./images/deploy_s3_2.png" width="600">
+<img src="./images/capitulo5/deploy_s3_2.png" width="600">
 
 ---
 
@@ -1937,9 +1937,9 @@ Durante el Sprint 3, los cinco miembros del equipo participaron en la implementa
 
 El equipo aplicó GitFlow con ramas `feature/` por Bounded Context (`feature/iam-context`, `feature/profiles-context`, `feature/inventory`, `feature/sales`, `feature/subscription`, `feature/chatbot`, `feature/deployment`) integradas a `develop` y `main` mediante Pull Requests (más de 20 PRs en el repositorio de Web Services). La distribución aproximada de commits en el backend fue: Camargo Briceño (37), Palma De Los Santos (25), Chavez Carrasco (12), Flores Pinchi (6) y Peirano Brun (3).
 
-<img src="./images/collab_s3_1.png" width="600">
+<img src="./images/capitulo5/collab_s3_1.png" width="600">
 
-<img src="./images/collab_s3_2.png" width="600">
+<img src="./images/capitulo5/collab_s3_2.png" width="600">
 
 ---
 
@@ -2001,7 +2001,7 @@ El objetivo principal de este Sprint fue integrar el canal real de WhatsApp para
 
 **Board público del Sprint 4 (Trello):** https://trello.com/b/msBZdIfS/entreprenly-sprint-4
 
-![sprint4](./images/sprint4.png "Tablero del Sprint 4 en Trello")
+![sprint4](./images/capitulo5/sprint4.png "Tablero del Sprint 4 en Trello")
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -2145,7 +2145,7 @@ Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del 
 
 **URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
 
-<img src="images/bridge_evi.png" width="800">
+<img src="images/capitulo5/bridge_evi.png" width="800">
 
 ---
 
@@ -2155,28 +2155,28 @@ Al término del Sprint 4, el chatbot de Entreprenly quedó operativo sobre **Wha
 
 - **Vinculación por QR (US-37):** el comerciante escanea el código QR desde el dashboard para vincular su cuenta de WhatsApp; cada vendedor mantiene su propia sesión (multi-tenant).
 
-![sprint4_chatbot_qr](./images/sprint4_chatbot_qr.png "sprint4_chatbot_qr")
+![sprint4_chatbot_qr](./images/capitulo5/sprint4_chatbot_qr.png "sprint4_chatbot_qr")
 
 - **Estado de vinculación (US-38):** el dashboard consulta y refleja el estado de conexión del bridge, con opción de desconexión.
 
-![sprint4_chatbot_state](./images/sprint4_chatbot_state.png "sprint4_chatbot_state")
+![sprint4_chatbot_state](./images/capitulo5/sprint4_chatbot_state.png "sprint4_chatbot_state")
 
 - **Atención automatizada:** el bot responde consultas de productos con datos reales del inventario y sugiere alternativas cuando un producto no está disponible.
 
-![sprint4_chatbot_demo](./images/sprint4_chatbot_demo.png "Conversación real del chatbot por WhatsApp")
+![sprint4_chatbot_demo](./images/capitulo5/sprint4_chatbot_demo.png "Conversación real del chatbot por WhatsApp")
 
 - **Instrucciones de pago (US-44):** el Backend envía al cliente, vía `POST /send` del bridge, las instrucciones de pago para completar su pedido.
 
-![sprint4_chatbot_pedido](./images/sprint4_chatbot_pedido.png "sprint4_chatbot_pedido")
+![sprint4_chatbot_pedido](./images/capitulo5/sprint4_chatbot_pedido.png "sprint4_chatbot_pedido")
 
 - **Comprobante por imagen (US-45):** el cliente envía la foto de su comprobante por WhatsApp y el bridge la reenvía al Backend como comprobante de pago.
 
-![sprint4_chatbot_comprobante](./images/sprint4_chatbot_comprobante.png "sprint4_chatbot_comprobante")
+![sprint4_chatbot_comprobante](./images/capitulo5/sprint4_chatbot_comprobante.png "sprint4_chatbot_comprobante")
 
 
 - **Notificación de validación (US-47):** tras aprobar o rechazar el comprobante desde el dashboard, el resultado se notifica al cliente por WhatsApp.
 
-![sprint4_chatbot_aprobado](./images/sprint4_chatbot_aprobado.png "sprint4_chatbot_aprobado")
+![sprint4_chatbot_aprobado](./images/capitulo5/sprint4_chatbot_aprobado.png "sprint4_chatbot_aprobado")
 
 ---
 
@@ -2213,13 +2213,13 @@ Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma contain
 
 1. **Containerización del bridge:** Se creó un `Dockerfile` para el servicio Node.js con `whatsapp-web.js` y las dependencias de Chromium necesarias para WhatsApp Web.
 
-![sprint4_bridge_docker](./images/sprint4_bridge_docker.png "sprint4_bridge_docker")
+![sprint4_bridge_docker](./images/capitulo5/sprint4_bridge_docker.png "sprint4_bridge_docker")
 
 2. **Despliegue automatizado en la VM:** Se configuró el despliegue automático del bridge en una instancia de Compute Engine ante cada push a `main`.
 
-![sprint4_bridge_vm](./images/sprint4_bridge_vm.png "sprint4_bridge_vm")
+![sprint4_bridge_vm](./images/capitulo5/sprint4_bridge_vm.png "sprint4_bridge_vm")
 
-![sprint4_bridge_deploy](./images/sprint4_bridge_deploy.png "Despliegue del WhatsApp bridge")
+![sprint4_bridge_deploy](./images/capitulo5/sprint4_bridge_deploy.png "Despliegue del WhatsApp bridge")
 
 ---
 
@@ -2227,9 +2227,9 @@ Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma contain
 
 Durante el Sprint 4, la implementación del canal de WhatsApp se concentró en el repositorio `ap-entreprenly-whatsapp-bridge`, con ajustes de integración en el Backend y el Frontend. El equipo mantuvo GitFlow con ramas `feature/` integradas a `develop` y `main` mediante Pull Requests. La distribución de commits del bridge (sin contar merges) por miembro fue la siguiente: **Palma De Los Santos (8 commits)** y **Camargo Briceño (5 commits)**, con la colaboración del resto del equipo en las tareas de integración del Backend y el Frontend.
 
-![contributors_p4](./images/contributors_p4.png "Contribuidores del Sprint 4")
+![contributors_p4](./images/capitulo5/contributors_p4.png "Contribuidores del Sprint 4")
 
-![pull_p4](./images/pull_p4.png "Pull Requests del Sprint 4")
+![pull_p4](./images/capitulo5/pull_p4.png "Pull Requests del Sprint 4")
 
 **URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
 
@@ -2338,7 +2338,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
 
   <!-- Imagen de la captura de pantalla -->
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/val_comerciante_1.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo5/val_comerciante_1.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
 
   <!-- Datos en dos columnas -->
@@ -2406,7 +2406,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
 
   <!-- Imagen de la captura de pantalla -->
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/val_comerciante_2.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo5/val_comerciante_2.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
 
   <!-- Datos en dos columnas -->
@@ -2476,7 +2476,7 @@ A continuación se registran las entrevistas de validación realizadas por segme
 
   <!-- Imagen de la captura de pantalla -->
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/val_cliente_1.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo5/val_cliente_1.png" alt="Screenshot de la entrevista de validación" style="width: 100%; border-radius: 3px; display: block;">
   </div>
 
   <!-- Datos en dos columnas -->
@@ -2567,9 +2567,9 @@ En esta subsección se evalúa la experiencia de uso de Entreprenly tomando como
 
 Entreprenly comunica oportunamente el estado del sistema. El Panel de Inicio muestra en tiempo real el resumen del día (ventas, ingresos, pedidos y alertas), el estado del chatbot ("Activo") y el estado del inventario con etiquetas como "Vencido" y "Stock bajo". El panel de alertas de lotes notifica vencimientos y faltantes, y la vista de Suscripción refleja el plan activo y el consumo de límites mediante barras de progreso.
 
-<img src="images/Fig-01-panel-de-inicio.png" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.png" width="600">
 
-<img src="images/Fig-06-panel-alertas-de-lotes.png" width="600">
+<img src="images/capitulo5/Fig-06-panel-alertas-de-lotes.png" width="600">
 
 **Evidencia observada:** Fig. 1 (resumen y alertas del dashboard), Fig. 6 (notificaciones de lotes), Fig. 11 (uso del plan y estado de facturación).
 
@@ -2581,9 +2581,9 @@ Entreprenly comunica oportunamente el estado del sistema. El Panel de Inicio mue
 
 El lenguaje es cercano al comerciante peruano: "Lotes", "Stock", "Caja diaria", "Boleta", "Yape/Plin", "RUC" y "Razón social". En las vistas de Lotes y de Datos de facturación se emplean términos fiscales y de inventario propios del rubro.
 
-<img src="images/Fig-05-lotes-de-inventario.png" width="600">
+<img src="images/capitulo5/Fig-05-lotes-de-inventario.png" width="600">
 
-<img src="images/Fig-13-modal-datos-de-facturacion.png" width="600">
+<img src="images/capitulo5/Fig-13-modal-datos-de-facturacion.png" width="600">
 
 **Evidencia observada:** Fig. 5 (lotes/unidades), Fig. 8 (fecha de vencimiento), Fig. 13 (RUC, razón social, dirección fiscal), Fig. 9 ("Tarjeta – Yape/Plin").
 
@@ -2595,9 +2595,9 @@ El lenguaje es cercano al comerciante peruano: "Lotes", "Stock", "Caja diaria", 
 
 Todos los modales tienen botón de cierre (×) y opción Cancelar; el detalle de lote ofrece "Volver"; el Perfil permite editar datos, cambiar contraseña, idioma, tema y notificaciones sin quedar atrapado. En Ventas existe "Cancelar Venta".
 
-<img src="images/Fig-03-modal-editar-producto.png" width="600">
+<img src="images/capitulo5/Fig-03-modal-editar-producto.png" width="600">
 
-<img src="images/Fig-19-perfil-configuracion.png" width="600">
+<img src="images/capitulo5/Fig-19-perfil-configuracion.png" width="600">
 
 **Evidencia observada:** Fig. 3 y Fig. 4 (× y Cancelar en modales), Fig. 8 (botón Volver), Fig. 13 (Cancelar), Fig. 19 (edición libre de perfil).
 
@@ -2609,9 +2609,9 @@ Todos los modales tienen botón de cierre (×) y opción Cancelar; el detalle de
 
 Se mantiene un patrón visual uniforme: sidebar naranja fija, tipografía estable, botones primarios naranjas, y tarjetas y tablas con el mismo estilo en Productos, Lotes, Ventas, Suscripción y Ayuda. La nomenclatura de navegación es consistente en todas las pantallas.
 
-<img src="images/Fig-02-catalogo-de-productos.png" width="600">
+<img src="images/capitulo5/Fig-02-catalogo-de-productos.png" width="600">
 
-<img src="images/Fig-10-suscripcion-planes.png" width="600">
+<img src="images/capitulo5/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 2, Fig. 5, Fig. 10 y Fig. 16 comparten layout, colores y jerarquía de botones.
 
@@ -2623,9 +2623,9 @@ Se mantiene un patrón visual uniforme: sidebar naranja fija, tipografía establ
 
 Los formularios usan campos guía y valores por defecto. En Agregar Producto el botón Guardar permanece atenuado hasta completar lo necesario; en Agregar Lote se solicitan fecha de ingreso y vencimiento; en Datos de facturación y Método de pago se marcan formatos esperados (tarjeta, CVV, RUC).
 
-<img src="images/Fig-04-modal-agregar-producto.png" width="600">
+<img src="images/capitulo5/Fig-04-modal-agregar-producto.png" width="600">
 
-<img src="images/Fig-07-modal-agregar-lote.png" width="600">
+<img src="images/capitulo5/Fig-07-modal-agregar-lote.png" width="600">
 
 **Evidencia observada:** Fig. 4 (Guardar atenuado), Fig. 7 (fechas obligatorias), Fig. 12 y Fig. 13 (formatos guía).
 
@@ -2637,7 +2637,7 @@ Los formularios usan campos guía y valores por defecto. En Agregar Producto el 
 
 El dashboard ofrece "Accesos rápidos" con íconos y una sidebar siempre visible con etiquetas de texto. El usuario reconoce los módulos sin memorizar rutas; las tarjetas resumen muestran lo relevante de un vistazo.
 
-<img src="images/Fig-01-panel-de-inicio.png" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.png" width="600">
 
 **Evidencia observada:** Fig. 1 (accesos rápidos e íconos), sidebar persistente en todas las figuras, Fig. 16 (categorías con íconos).
 
@@ -2649,9 +2649,9 @@ El dashboard ofrece "Accesos rápidos" con íconos y una sidebar siempre visible
 
 Existen atajos (accesos rápidos del dashboard), buscador de lotes, descarga de historial, teclado numérico para registrar cantidad en ventas y generación automática de código QR, lo que agiliza tanto al usuario nuevo como al recurrente.
 
-<img src="images/Fig-15-ventas-registrar-cantidad.png" width="600">
+<img src="images/capitulo5/Fig-15-ventas-registrar-cantidad.png" width="600">
 
-<img src="images/Fig-14-modal-historial-de-suscripcion.png" width="600">
+<img src="images/capitulo5/Fig-14-modal-historial-de-suscripcion.png" width="600">
 
 **Evidencia observada:** Fig. 1 (accesos rápidos), Fig. 14 (Descargar historial), Fig. 15 (teclado numérico), Fig. 2 (QR por producto).
 
@@ -2663,7 +2663,7 @@ Existen atajos (accesos rápidos del dashboard), buscador de lotes, descarga de 
 
 La interfaz mantiene jerarquía clara y bajo ruido visual: uso consistente del naranja como color de acción, espacios en blanco amplios y tarjetas bien delimitadas en Suscripción y en el dashboard.
 
-<img src="images/Fig-10-suscripcion-planes.png" width="600">
+<img src="images/capitulo5/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 10 (cards de planes), Fig. 16 (centro de ayuda ordenado).
 
@@ -2675,9 +2675,9 @@ La interfaz mantiene jerarquía clara y bajo ruido visual: uso consistente del n
 
 El sistema señala errores con color y texto: en Ventas muestra "⊘ Producto no encontrado"; en Lotes marca el lote "Vencido" en rojo con la fecha. Los estados de error son reconocibles.
 
-<img src="images/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
+<img src="images/capitulo5/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
 
-<img src="images/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
+<img src="images/capitulo5/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
 
 **Evidencia observada:** Fig. 9 (producto no encontrado), Fig. 8 (lote vencido), Fig. 11 (estados "pendiente de completar").
 
@@ -2689,11 +2689,11 @@ El sistema señala errores con color y texto: en Ventas muestra "⊘ Producto no
 
 Cuenta con un Centro de Ayuda con artículos frecuentes, categorías, buscador y datos de soporte (correo, WhatsApp, horario); artículos paso a paso; y un formulario para reportar problemas con tiempos de respuesta.
 
-<img src="images/Fig-16-centro-de-ayuda.jpeg" width="600">
+<img src="images/capitulo5/Fig-16-centro-de-ayuda.jpeg" width="600">
 
-<img src="images/Fig-17-reportar-un-problema.jpeg" width="600">
+<img src="images/capitulo5/Fig-17-reportar-un-problema.jpeg" width="600">
 
-<img src="images/Fig-18-articulo-validar-un-pago.jpeg" width="600">
+<img src="images/capitulo5/Fig-18-articulo-validar-un-pago.jpeg" width="600">
 
 **Evidencia observada:** Fig. 16 (artículos y soporte), Fig. 17 (reporte de problema), Fig. 18 (guía "¿Cómo validar un pago?").
 
@@ -2709,7 +2709,7 @@ En esta subsección se evalúa si la organización de la información permite en
 
 Las funciones principales se ubican en la sidebar fija y en los accesos rápidos del dashboard; el Centro de Ayuda agrupa soporte y FAQ por categorías.
 
-<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.jpeg" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 16, navegación lateral presente en todas las figuras.
 
@@ -2721,7 +2721,7 @@ Las funciones principales se ubican en la sidebar fija y en los accesos rápidos
 
 Buen contraste (texto oscuro sobre blanco, acción naranja), etiquetas visibles y opción de tema Claro/Oscuro e idioma/zona horaria configurables.
 
-<img src="images/Fig-19-perfil-configuracion.jpeg" width="600">
+<img src="images/capitulo5/Fig-19-perfil-configuracion.jpeg" width="600">
 
 **Evidencia observada:** Fig. 19 (preferencias de tema/idioma), formularios con labels (Fig. 4, Fig. 13).
 
@@ -2733,7 +2733,7 @@ Buen contraste (texto oscuro sobre blanco, acción naranja), etiquetas visibles 
 
 Títulos y subtítulos describen cada sección ("Catálogo de productos disponibles", "Registra y procesa las ventas del día"); los modales incluyen título y descripción.
 
-<img src="images/Fig-05-lotes-de-inventario.jpeg" width="600">
+<img src="images/capitulo5/Fig-05-lotes-de-inventario.jpeg" width="600">
 
 **Evidencia observada:** Fig. 2, Fig. 5, Fig. 8 (encabezados descriptivos).
 
@@ -2745,7 +2745,7 @@ Títulos y subtítulos describen cada sección ("Catálogo de productos disponib
 
 La interfaz informa en el momento adecuado: estado del plan, stock, alertas de lotes y actividad de suscripción.
 
-<img src="images/Fig-11-suscripcion-limites-facturacion-historial.jpeg" width="600">
+<img src="images/capitulo5/Fig-11-suscripcion-limites-facturacion-historial.jpeg" width="600">
 
 **Evidencia observada:** Fig. 1 (resumen), Fig. 6 (alertas), Fig. 11 (historial/estado de facturación).
 
@@ -2757,7 +2757,7 @@ La interfaz informa en el momento adecuado: estado del plan, stock, alertas de l
 
 Las tareas principales se completan sin asistencia: alta de productos y lotes, registro de ventas, gestión de suscripción, método de pago, datos fiscales y descarga de historial.
 
-<img src="images/Fig-12-modal-agregar-metodo-de-pago.jpeg" width="600">
+<img src="images/capitulo5/Fig-12-modal-agregar-metodo-de-pago.jpeg" width="600">
 
 **Evidencia observada:** Fig. 4, Fig. 7, Fig. 12, Fig. 13, Fig. 14, Fig. 15.
 
@@ -2769,7 +2769,7 @@ Las tareas principales se completan sin asistencia: alta de productos y lotes, r
 
 Transmite confianza con precios transparentes, identidad visual coherente, datos de soporte reales y una propuesta de valor clara.
 
-<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+<img src="images/capitulo5/Fig-10-suscripcion-planes.jpeg" width="600">
 
 **Evidencia observada:** Fig. 10 (planes y precios), Fig. 16 (soporte con correo/WhatsApp/horario).
 
@@ -2781,7 +2781,7 @@ Transmite confianza con precios transparentes, identidad visual coherente, datos
 
 El usuario cambia de sección, cancela acciones, mantiene su plan, edita su perfil y vuelve a estados previos (botón Volver, ×, Cancelar).
 
-<img src="images/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
+<img src="images/capitulo5/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
 
 **Evidencia observada:** Fig. 8 (Volver), Fig. 13 (Cancelar), Fig. 19 (control total del perfil).
 
@@ -2793,7 +2793,7 @@ El usuario cambia de sección, cancela acciones, mantiene su plan, edita su perf
 
 Aporta valor real: control de stock y vencimientos, conciliación de caja por método de pago, pedidos por WhatsApp vía chatbot y gestión de suscripción.
 
-<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.jpeg" width="600">
 
 **Evidencia observada:** Fig. 1 (caja por método de pago), Fig. 6 (vencimientos), Fig. 10 (valor del plan Control).
 
@@ -2805,7 +2805,7 @@ Aporta valor real: control de stock y vencimientos, conciliación de caja por m�
 
 Patrones repetidos, labels claros y guías paso a paso facilitan el aprendizaje.
 
-<img src="images/Fig-18-articulo-validar-un-pago.jpeg" width="600">
+<img src="images/capitulo5/Fig-18-articulo-validar-un-pago.jpeg" width="600">
 
 **Evidencia observada:** Fig. 4 (formulario autoexplicativo), Fig. 18 (artículo paso a paso).
 
@@ -2817,7 +2817,7 @@ Patrones repetidos, labels claros y guías paso a paso facilitan el aprendizaje.
 
 La experiencia es fluida, limpia y profesional, con estados claros y sensación de control.
 
-<img src="images/Fig-10-suscripcion-planes.png" width="600">
+<img src="images/capitulo5/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 10 (estética cuidada).
 
@@ -2833,7 +2833,7 @@ En esta subsección se evalúa si Entreprenly considera distintos contextos de u
 
 Los puntos de contacto (dashboard, módulos, soporte y chatbot) ofrecen una experiencia equivalente y coherente; el chatbot habilita la compra por WhatsApp como canal alterno.
 
-<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.jpeg" width="600">
 
 **Evidencia observada:** Fig. 1 (chatbot activo), Fig. 16 (soporte), navegación uniforme en todas las figuras.
 
@@ -2845,7 +2845,7 @@ Los puntos de contacto (dashboard, módulos, soporte y chatbot) ofrecen una expe
 
 Responde a contextos reales de tienda: registro ágil de ventas con teclado numérico, cierre de caja por método de pago, revisión rápida de stock y alertas, y pedidos por WhatsApp en horas de demanda.
 
-<img src="images/Fig-15-ventas-registrar-cantidad.png" width="600">
+<img src="images/capitulo5/Fig-15-ventas-registrar-cantidad.png" width="600">
 
 **Evidencia observada:** Fig. 15 (registro rápido), Fig. 1 (resumen de caja), Fig. 6 (alertas operativas).
 
@@ -2857,7 +2857,7 @@ Responde a contextos reales de tienda: registro ágil de ventas con teclado num�
 
 Botones, formularios, mensajes y navegación se mantienen consistentes en todos los módulos.
 
-<img src="images/Fig-02-catalogo-de-productos.png" width="600">
+<img src="images/capitulo5/Fig-02-catalogo-de-productos.png" width="600">
 
 **Evidencia observada:** Fig. 2, Fig. 5, Fig. 10, Fig. 16 (mismo sistema visual).
 
@@ -2869,7 +2869,7 @@ Botones, formularios, mensajes y navegación se mantienen consistentes en todos 
 
 El usuario conserva autonomía: editar perfil, mantener su plan, cancelar, corregir y cerrar popups.
 
-<img src="images/Fig-19-perfil-configuracion.png" width="600">
+<img src="images/capitulo5/Fig-19-perfil-configuracion.png" width="600">
 
 **Evidencia observada:** Fig. 19 (perfil), Fig. 3 (editar), Fig. 13 (Cancelar), Fig. 14 (descargar/cerrar).
 
@@ -2881,9 +2881,9 @@ El usuario conserva autonomía: editar perfil, mantener su plan, cancelar, corre
 
 Brinda alternativas de navegación y acción: botones primarios y secundarios, sidebar, accesos rápidos, FAQ, reporte de problema y métodos de pago Efectivo / Tarjeta-Yape/Plin.
 
-<img src="images/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
+<img src="images/capitulo5/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
 
-<img src="images/Fig-16-centro-de-ayuda.jpeg" width="600">
+<img src="images/capitulo5/Fig-16-centro-de-ayuda.jpeg" width="600">
 
 **Evidencia observada:** Fig. 9 (métodos de pago), Fig. 16 (FAQ + reporte), Fig. 1 (accesos rápidos).
 
@@ -2895,7 +2895,7 @@ Brinda alternativas de navegación y acción: botones primarios y secundarios, s
 
 El contenido más importante aparece primero: resumen del día y alertas en el tope del dashboard; plan recomendado destacado en Suscripción.
 
-<img src="images/Fig-10-suscripcion-planes.png" width="600">
+<img src="images/capitulo5/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1 (jerarquía del resumen), Fig. 10 (Plan Control "Recomendado" resaltado).
 
@@ -2907,7 +2907,7 @@ El contenido más importante aparece primero: resumen del día y alertas en el t
 
 Genera beneficios concretos: ahorro de tiempo, menos errores, confianza en el stock, control de caja, automatización por chatbot y claridad de suscripción.
 
-<img src="images/Fig-06-panel-alertas-de-lotes.jpeg" width="600">
+<img src="images/capitulo5/Fig-06-panel-alertas-de-lotes.jpeg" width="600">
 
 **Evidencia observada:** Fig. 6 (evita mermas), Fig. 1 (control de caja), Fig. 10 (valor del plan), Fig. 18 (autoservicio de soporte).
 
@@ -2943,7 +2943,7 @@ El video fue subido a **Microsoft Stream** y a **YouTube**. A continuación se i
 
   <!-- Imagen de la captura de pantalla -->
   <div style="background-color: #1a6b6b; padding: 12px 16px 16px;">
-    <img src="images/about-the-product-video.png" alt="Screenshot del video About-the-Product de Entreprenly" style="width: 100%; border-radius: 3px; display: block;">
+    <img src="images/capitulo5/about-the-product-video.png" alt="Screenshot del video About-the-Product de Entreprenly" style="width: 100%; border-radius: 3px; display: block;">
   </div>
 
   <!-- Links -->

@@ -2,7 +2,7 @@
 
 ---
 
-![Logo de la UPC](docs/images/upc_logo.png "Universidad Peruana de Ciencias Aplicadas")
+![Logo de la UPC](docs/images/readme/upc_logo.png "Universidad Peruana de Ciencias Aplicadas")
 
 ### Universidad Peruana de Ciencias Aplicadas
 
@@ -73,9 +73,9 @@ Durante la elaboración de la AV1, los cinco integrantes del equipo contribuyero
 | Peirano Brun, José Antonio | 2.1 Competidores · 2.4 Big Picture Event Storming · 4.6 Domain-Driven Software Architecture · 4.7 Software Object-Oriented Design |
 | Flores Pinchi, José Fernando | 1.2 Solution Profile · 1.3 Segmentos objetivo · 3.2 Impact Mapping · 3.3 Product Backlog · 4.8 Database Design |
 
-![Contributors1](./docs/images/contributors1.png "Contributors1")
+![Contributors1](./docs/images/readme/contributors1.png "Contributors1")
 
-![Contributors2](./docs/images/Contributors2.png "Contributors2")
+![Contributors2](./docs/images/readme/Contributors2.png "Contributors2")
 
 ---
 
@@ -93,8 +93,8 @@ Para la entrega TB1, el equipo se enfocó en la implementación del Frontend Web
 | Peirano Brun, José Antonio | 5.2.2.2 Aspect Leaders and Collaborators · Bounded Context: Inventory · Vistas Home y Help del Dashboard · Correcciones a 4.6 Domain-Driven Software Architecture y 4.7 Software Object-Oriented Design · Revisión y mantenimiento del repositorio |
 | Flores Pinchi, José Fernando | 5.2.2.3 Sprint Backlog 2 · Bounded Context: Sales (Punto de Venta) · Correcciones a 3.3 Product Backlog · Avance de Conclusiones, Bibliografía y Anexos |
 
-![Contri3](docs/images/contri3.png "contri3")
-![Contri4](docs/images/contri4.png "contri4")
+![Contri3](docs/images/readme/contri3.png "contri3")
+![Contri4](docs/images/readme/contri4.png "contri4")
 
 ---
 
@@ -112,8 +112,8 @@ Para la entrega AV2, el equipo se enfocó en la implementación del backend de l
 | Peirano Brun, José Antonio | Backend del Bounded Context: Inventory (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Revisión de errores de las User Stories (Capítulo III) · Actualización de los diagramas Structurizr y de la Evaluación Heurística |
 | Flores Pinchi, José Fernando | Backend del Bounded Context: Sales (ASP.NET Core) · Mejora visual y diseño responsive del Bounded Context · Revisión de errores del Capítulo III · Entrevistas de Validación y entrevistas About the Product |
 
-![Contri5](docs/images/contri5.png "contri5")
-![Contri6](docs/images/contri6.png "contri6")
+![Contri5](docs/images/readme/contri5.png "contri5")
+![Contri6](docs/images/readme/contri6.png "contri6")
 
 ---
 
@@ -131,8 +131,8 @@ Para la entrega TB2, el equipo aplicó cambios en el Landing Page y en el Fronte
 | Peirano Brun, José Antonio | Cambios en el Frontend Web Application · Afinamiento del backend del Bounded Context: Inventory · Corrección de los diagramas de componentes y de contenedores · Reorganización del Product Backlog |
 | Flores Pinchi, José Fernando | Cambios en el Frontend Web Application · Afinamiento del backend del Bounded Context: Sales · Actualización de las User Stories (Capítulo III) · Reorganización del Product Backlog |
 
-![Contri7](docs/images/contri7.png "contri7")
-![Contri8](docs/images/contri8.png "contri8")
+![Contri7](docs/images/readme/contri7.png "contri7")
+![Contri8](docs/images/readme/contri8.png "contri8")
 
 ---
 

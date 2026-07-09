@@ -39,7 +39,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Camargo Briceño, Joseph Julius</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/foto_julius.png" alt="Joseph Julius" width="250">
+        <img src="./images/capitulo1/foto_julius.png" alt="Joseph Julius" width="250">
       </td>
     </tr>
     <tr>
@@ -65,7 +65,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Palma De Los Santos, Elynor Mikela</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/foto_elynor.png" alt="Elynor Mikela" width="250">
+        <img src="./images/capitulo1/foto_elynor.png" alt="Elynor Mikela" width="250">
       </td>
     </tr>
     <tr>
@@ -91,7 +91,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Flores Pinchi, José Fernando</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/foto_fernando.png" alt="José Fernando" width="250">
+        <img src="./images/capitulo1/foto_fernando.png" alt="José Fernando" width="250">
       </td>
     </tr>
     <tr>
@@ -117,7 +117,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Peirano Brun, José Antonio</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/foto_jose.png" alt="José Antonio" width="250">
+        <img src="./images/capitulo1/foto_jose.png" alt="José Antonio" width="250">
       </td>
     </tr>
     <tr>
@@ -143,7 +143,7 @@ Hemos identificado que la mayoría de estos comerciantes no cuenta con herramien
       <td align="center" valign="middle"><strong>Nombre</strong></td>
       <td align="center" valign="middle">Chavez Carrasco, Lionel Abraham</td>
       <td align="center" valign="middle" rowspan="3">
-        <img src="./images/foto_lionel.png" alt="Elynor Mikela" width="250">
+        <img src="./images/capitulo1/foto_lionel.png" alt="Elynor Mikela" width="250">
       </td>
     </tr>
     <tr>

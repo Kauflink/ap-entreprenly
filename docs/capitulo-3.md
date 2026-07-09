@@ -3509,7 +3509,7 @@ A continuación se detalla cada User Story con su épica relacionada, descripci�
 
 El Impact Mapping es una técnica de planificación estratégica que permite vincular los objetivos de negocio con las funcionalidades del producto, respondiendo las preguntas: ¿por qué construimos esto?, ¿quién nos ayuda a lograrlo?, ¿cómo cambia su comportamiento? y ¿qué entregamos para provocar ese cambio? Su elaboración permite asegurar que cada User Story tenga un propósito claro y directo sobre el objetivo del negocio.A continuación se presenta el Impact Map elaborado en UXPressia para Entreprenly:
 
-![Impact Mapping](./images/Impact_Mapping.png "Impact Mapping")
+![Impact Mapping](./images/capitulo3/Impact_Mapping.png "Impact Mapping")
 
 El Impact Map parte de un único objetivo de negocio: permitir que el pequeño comerciante gestione su negocio de forma eficiente, reduzca pérdidas de inventario y automatice la atención de pedidos sin depender de procesos manuales. Se identificó al Comerciante como único actor, dado que es el usuario directo de la plataforma y el único cuyo comportamiento debe cambiar para que el objetivo se cumpla.
 A partir de este actor se derivaron cinco impactos esperados: que deje de gestionar su inventario manualmente, que reaccione a tiempo ante problemas de stock, que registre sus ventas presenciales de forma rápida y ordenada, que delegue la atención de pedidos por WhatsApp al chatbot, y que tome decisiones con información centralizada desde el panel de inicio. Cada uno de estos impactos se traduce en entregables concretos que corresponden a las funcionalidades de la plataforma, las cuales están sustentadas por las User Stories especificadas en la sección 3.1.

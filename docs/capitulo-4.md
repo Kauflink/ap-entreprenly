@@ -30,25 +30,25 @@ para Vue 3, cuyos componentes están alineados con los estándares de Material D
   <tbody>
     <tr>
       <td><strong>#F38313</strong></td>
-      <td><img src="images/_F38313.png" alt="#F38313" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_F38313.png" alt="#F38313" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Es un tono vibrante y enérgico que comunica dinamismo y acción. <br>
       Se utiliza como color de acento principal para botones de llamada a la acción (CTA) y elementos críticos de la marca, asegurando una alta visibilidad.</td>
     </tr>
     <tr>
       <td><strong>#FCE0D4</strong></td>
-      <td><img src="images/_FCE0D4.png" alt="#FCE0D4" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
+      <td><img src="images/capitulo4/_FCE0D4.png" alt="#FCE0D4" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
       <td>Tono melocotón claro que aporta calidez y cercanía.
       <br> Se emplea en fondos de tarjetas y estados de selección suave, proporcionando un contraste armonioso con el naranja principal sin saturar la interfaz.</td>
     </tr>
     <tr>
       <td><strong>#0C0F12</strong></td>
-      <td><img src="images/_0C0F12.png" alt="#0C0F12" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_0C0F12.png" alt="#0C0F12" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Color sólido y profundo utilizado para la tipografía principal y encabezados.
       <br> Garantiza el cumplimiento de las normas de accesibilidad (WCAG) al ofrecer un contraste máximo sobre fondos claros.</td>
     </tr>
     <tr>
       <td><strong>#F6F4F4</strong></td>
-      <td><img src="images/_F6F4F4.png" alt="#F6F4F4" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
+      <td><img src="images/capitulo4/_F6F4F4.png" alt="#F6F4F4" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
       <td>Un tono blanco con una mínima calidez que sirve como lienzo principal para la aplicación, evitando el deslumbramiento y proporcionando una sensación de orden y amplitud.</td>
     </tr>
   </tbody>
@@ -67,54 +67,54 @@ para Vue 3, cuyos componentes están alineados con los estándares de Material D
   <tbody>
     <tr>
       <td><strong>#7679DE</strong></td>
-      <td><img src="images/_7679DE.png" alt="#7679DE" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_7679DE.png" alt="#7679DE" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Representa la vertiente tecnológica del proyecto.
       <br> Es un tono azulado con matices lavanda que transmite confianza y modernidad, ideal para enlaces, iconos de navegación y elementos interactivos web.</td>
     </tr>
     <tr>
       <td><strong>#C2CDFC</strong></td>
-      <td><img src="images/_C2CDFC.png" alt="#C2CDFC" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
+      <td><img src="images/capitulo4/_C2CDFC.png" alt="#C2CDFC" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
       <td>Variante clara y relajada del azul principal.
       <br> Se utiliza para resaltar componentes secundarios y áreas de información técnica, manteniendo una estética limpia y profesional.</td>
     </tr>
     <tr>
       <td><strong>#C9C9C9</strong></td>
-      <td><img src="images/_C9C9C9.png" alt="#C9C9C9" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_C9C9C9.png" alt="#C9C9C9" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Tono neutro destinado a bordes, divisores y estados inactivos. 
       <br> Su función es estructurar la interfaz de manera sutil sin distraer al usuario de las tareas principales.</td>
     </tr>
     <tr>
       <td><strong>#666666</strong></td>
-      <td><img src="images/_666666.png" alt="#666666" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_666666.png" alt="#666666" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Tono neutro destinado a bordes, divisores y estados inactivos.<br> 
       Su función es estructurar la interfaz de manera sutil sin distraer al usuario de las tareas principales.</td>
     </tr>
     <tr>
       <td><strong>#F1F1F1</strong></td>
-      <td><img src="images/_F1F1F1.png" alt="#F1F1F1" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
+      <td><img src="images/capitulo4/_F1F1F1.png" alt="#F1F1F1" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
       <td>Gris muy claro utilizado en fondos de secciones y contenedores de datos (como tablas de productos) para separar visualmente diferentes bloques de contenido.</td>
     </tr>
     <tr>
       <td><strong>#FD4444</strong></td>
-      <td><img src="images/_FD4444.png" alt="#FD4444" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_FD4444.png" alt="#FD4444" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Color de alta intensidad para estados de alerta. 
       <br>Comunica urgencia y se reserva exclusivamente para mensajes de error, eliminación de registros o indicadores de stock crítico.</td>
     </tr>
     <tr>
       <td><strong>#70D399</strong></td>
-      <td><img src="images/_70D399.png" alt="#70D399" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_70D399.png" alt="#70D399" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Tono orgánico que representa éxito y crecimiento. <br>
       Se utiliza en notificaciones de confirmación, transacciones finalizadas y estados positivos del inventario.</td>
     </tr>
     <tr>
       <td><strong>#FFF7E1</strong></td>
-      <td><img src="images/_FFF7E1.png" alt="#FFF7E1" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
+      <td><img src="images/capitulo4/_FFF7E1.png" alt="#FFF7E1" width="60" height="40" style="border-radius:4px;display:block;border:1px solid #ccc;"></td>
       <td>Tono suave y luminoso similar al <em>Lemon Chiffon</em>, que comunica amabilidad y optimismo. <br>
       Se recomienda como fondo para banners informativos o etiquetas de ayuda, cuidando el contraste con textos oscuros.</td>
     </tr>
     <tr>
       <td><strong>#C79D08</strong></td>
-      <td><img src="images/_C79D08.png" alt="#C79D08" width="60" height="40" style="border-radius:4px;display:block;"></td>
+      <td><img src="images/capitulo4/_C79D08.png" alt="#C79D08" width="60" height="40" style="border-radius:4px;display:block;"></td>
       <td>Color mostaza oscuro utilizado para advertencias preventivas que requieren atención moderada sin llegar a ser una alerta de error.</td>
     </tr>
   </tbody>
@@ -127,7 +127,7 @@ para Vue 3, cuyos componentes están alineados con los estándares de Material D
 Hemos seleccionado cuidadosamente estas tipografías para Entreprenly, buscando un equilibrio armónico entre claridad, profesionalismo y modernidad que refuerce nuestros valores de eficiencia, gestión inteligente y apoyo al micro-emprendedor. La combinación de Reddit Sans para títulos y Roboto para textos técnicos potencia la legibilidad en web y móvil, proyecta una identidad tecnológica y accesible, y acompaña con coherencia los flujos clave de inventario, ventas y soporte, asegurando una experiencia consistente, robusta y fácil de usar en toda la plataforma.
 
 <p align="center">
-  <img src="images/Jerarquia_Tipografica.png" alt="Jerarquia_Tipografica" width="500"/>
+  <img src="images/capitulo4/Jerarquia_Tipografica.png" alt="Jerarquia_Tipografica" width="500"/>
 </p>
 
 - Reddit Sans fue elegida para los títulos por su estilo contemporáneo y geométrico, aportando una presencia clara y profesional que resalta el carácter innovador y eficiente de Entreprenly.
@@ -165,7 +165,7 @@ El diseño visual de **Entreprenly** se ha desarrollado para proyectar una image
 - **Naming y Tipografía:** El nombre **"Entreprenly"** establece una relación directa con el ámbito empresarial y el emprendimiento moderno. Se presenta en una tipografía clara y robusta que garantiza legibilidad, transmitiendo una imagen de software confiable y de alta gama.
 
 <p align="center">
-  <img src="images/entrepenly.png" alt="entrepenly.png" width="500"/>
+  <img src="images/capitulo4/entrepenly.png" alt="entrepenly.png" width="500"/>
 </p>
 
 ---
@@ -297,22 +297,22 @@ La aplicación cromática en la interfaz web de Entreprenly sigue una distribuci
   <tbody>
     <tr>
       <td><strong>Botón CTA principal, ícono activo, borde de enfoque</strong></td>
-      <td><img src="images/_F38313.png" alt="#F38313" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#F38313</code></td>
+      <td><img src="images/capitulo4/_F38313.png" alt="#F38313" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#F38313</code></td>
       <td><strong>Naranja principal de Entreprenly:</strong> concentra la llamada a la acción en botones 'Registrar venta', 'Agregar producto' y 'Guardar lote'. Garantiza contraste ≥ 4.5:1 sobre fondo blanco.</td>
     </tr>
     <tr>
       <td><strong>Fondo de tarjeta seleccionada, hover suave, chip de categoría</strong></td>
-      <td><img src="images/_FCE0D4.png" alt="#FCE0D4" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;border:1px solid #ccc;"><code>#FCE0D4</code></td>
+      <td><img src="images/capitulo4/_FCE0D4.png" alt="#FCE0D4" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;border:1px solid #ccc;"><code>#FCE0D4</code></td>
       <td><strong>Naranja tenue:</strong> estado de selección activa en tarjetas de producto y microlearning. Comunica proximidad sin la intensidad del naranja primario.</td>
     </tr>
     <tr>
       <td><strong>Tipografía principal, fondo de sidebar, elementos de autoridad</strong></td>
-      <td><img src="images/_0C0F12.png" alt="#0C0F12" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#0C0F12</code></td>
+      <td><img src="images/capitulo4/_0C0F12.png" alt="#0C0F12" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#0C0F12</code></td>
       <td><strong>Negro profundo de Entreprenly:</strong> utilizado en la barra lateral de navegación, encabezados de módulo y texto principal. Máximo contraste sobre fondos claros; transmite seriedad y profesionalismo.</td>
     </tr>
     <tr>
       <td><strong>Fondo general de la aplicación, superficies de tarjeta</strong></td>
-      <td><img src="images/_F6F4F4.png" alt="#F6F4F4" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;border:1px solid #ccc;"><code>#F6F4F4</code></td>
+      <td><img src="images/capitulo4/_F6F4F4.png" alt="#F6F4F4" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;border:1px solid #ccc;"><code>#F6F4F4</code></td>
       <td><strong>Blanco cálido:</strong> lienzo principal de la interfaz. Evita el deslumbramiento de un blanco puro y proporciona una sensación de amplitud y orden en el dashboard.</td>
     </tr>
   </tbody>
@@ -329,17 +329,17 @@ La aplicación cromática en la interfaz web de Entreprenly sigue una distribuci
   <tbody>
     <tr>
       <td><strong>Fondos de sección, contenedores de tabla</strong></td>
-      <td><img src="images/_F1F1F1.png" alt="#F1F1F1" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;border:1px solid #ccc;"><code>#F1F1F1</code></td>
+      <td><img src="images/capitulo4/_F1F1F1.png" alt="#F1F1F1" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;border:1px solid #ccc;"><code>#F1F1F1</code></td>
       <td><strong>Gris claro:</strong> fondo alternado en tablas de lotes y ventas. Separa bloques de contenido sin introducir ruido visual.</td>
     </tr>
     <tr>
       <td><strong>Bordes de tarjeta, divisores, líneas de tabla</strong></td>
-      <td><img src="images/_C9C9C9.png" alt="#C9C9C9" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#C9C9C9</code></td>
+      <td><img src="images/capitulo4/_C9C9C9.png" alt="#C9C9C9" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#C9C9C9</code></td>
       <td><strong>Gris de estructura:</strong> delimita tarjetas, campos de formulario y filas de tabla con sutileza. No compite con los elementos de acción.</td>
     </tr>
     <tr>
       <td><strong>Texto secundario, metadatos, placeholders</strong></td>
-      <td><img src="images/_666666.png" alt="#666666" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#666666</code></td>
+      <td><img src="images/capitulo4/_666666.png" alt="#666666" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#666666</code></td>
       <td><strong>Gris medio:</strong> fechas de vencimiento, nombres de marca en catálogo, descripciones breves. Cumple el mínimo de contraste 4.5:1 sobre #F6F4F4.</td>
     </tr>
   </tbody>
@@ -356,22 +356,22 @@ La aplicación cromática en la interfaz web de Entreprenly sigue una distribuci
   <tbody>
     <tr>
       <td><strong>Error, stock crítico, alerta de eliminación</strong></td>
-      <td><img src="images/_FD4444.png" alt="#FD4444" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#FD4444</code></td>
+      <td><img src="images/capitulo4/_FD4444.png" alt="#FD4444" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#FD4444</code></td>
       <td><strong>Rojo de alerta:</strong> exclusivo para mensajes de error en formularios, indicadores de stock en cero y confirmación de eliminación de registros.</td>
     </tr>
     <tr>
       <td><strong>Éxito, venta confirmada, stock saludable</strong></td>
-      <td><img src="images/_70D399.png" alt="#70D399" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#70D399</code></td>
+      <td><img src="images/capitulo4/_70D399.png" alt="#70D399" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#70D399</code></td>
       <td><strong>Verde de confirmación:</strong> notificaciones de venta registrada, lote creado y módulo de microlearning completado.</td>
     </tr>
     <tr>
       <td><strong>Advertencia, lote próximo a vencer</strong></td>
-      <td><img src="images/_C79D08.png" alt="#C79D08" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#C79D08</code></td>
+      <td><img src="images/capitulo4/_C79D08.png" alt="#C79D08" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#C79D08</code></td>
       <td><strong>Amarillo-mostaza:</strong> alertas de vencimiento próximo y situaciones que requieren atención moderada sin llegar al nivel de error crítico.</td>
     </tr>
     <tr>
       <td><strong>Información, enlaces, estados focus</strong></td>
-      <td><img src="images/_7679DE.png" alt="#7679DE" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#7679DE</code></td>
+      <td><img src="images/capitulo4/_7679DE.png" alt="#7679DE" width="60" height="36" style="border-radius:4px;display:block;margin-bottom:4px;"><code>#7679DE</code></td>
       <td><strong>Azul-lavanda:</strong> hipervínculos, indicadores de focus en inputs y botones secundarios de naturaleza informativa.</td>
     </tr>
   </tbody>
@@ -732,82 +732,82 @@ Los wireframes de la Landing Page representan la distribución base de cada secc
 - **Header (Navbar)**
 
   <p align="center">
-    <img src="images/wireframe-header-navbar.png" alt="Wireframe Header Navbar" width="800"/>
+    <img src="images/capitulo4/wireframe-header-navbar.png" alt="Wireframe Header Navbar" width="800"/>
   </p>
 
 - **Hero section**
 
   <p align="center">
-    <img src="images/wireframe-hero-section.png" alt="Wireframe Hero Section" width="800"/>
+    <img src="images/capitulo4/wireframe-hero-section.png" alt="Wireframe Hero Section" width="800"/>
   </p>
 
 - **Video section**
   <p align="center">
-    <img src="images/wireframe-video-section.png" alt="Mockup Hero Section" width="800"/>
+    <img src="images/capitulo4/wireframe-video-section.png" alt="Mockup Hero Section" width="800"/>
   </p>
 - **Team section**
 
   <p align="center">
-    <img src="images/wireframe-Team-section.png" alt="Mockup Problem Section" width="800"/>
+    <img src="images/capitulo4/wireframe-Team-section.png" alt="Mockup Problem Section" width="800"/>
   </p>
 - **Problem section**
 
   <p align="center">
-    <img src="images/wireframe-problem-section.png" alt="Wireframe Problem Section" width="800"/>
+    <img src="images/capitulo4/wireframe-problem-section.png" alt="Wireframe Problem Section" width="800"/>
   </p>
 
 - **Main features section**
 
   <p align="center">
-    <img src="images/wireframe-main-features-section.png" alt="Wireframe Main Features Section" width="800"/>
+    <img src="images/capitulo4/wireframe-main-features-section.png" alt="Wireframe Main Features Section" width="800"/>
   </p>
 
 - **How it works section**
 
   <p align="center">
-    <img src="images/wireframe-how-works-section.png" alt="Wireframe How It Works Section" width="800"/>
+    <img src="images/capitulo4/wireframe-how-works-section.png" alt="Wireframe How It Works Section" width="800"/>
   </p>
 
 - **Merchant benefits section**
 
   <p align="center">
-    <img src="images/wireframe-merchant-benefits-section.png" alt="Wireframe Merchant Benefits Section" width="800"/>
+    <img src="images/capitulo4/wireframe-merchant-benefits-section.png" alt="Wireframe Merchant Benefits Section" width="800"/>
   </p>
 
 - **Client trust section**
 
   <p align="center">
-    <img src="images/wireframe-client-trust-section.png" alt="Wireframe Client Trust Section" width="800"/>
+    <img src="images/capitulo4/wireframe-client-trust-section.png" alt="Wireframe Client Trust Section" width="800"/>
   </p>
 
 - **Comparativa breve section**
 
   <p align="center">
-    <img src="images/wireframe-comparativa-breve-section.png" alt="Wireframe Comparativa Breve Section" width="800"/>
+    <img src="images/capitulo4/wireframe-comparativa-breve-section.png" alt="Wireframe Comparativa Breve Section" width="800"/>
   </p>
 
 - **Planes section**
 
   <p align="center">
-    <img src="images/wireframe-planes-section.png" alt="Wireframe Planes Section" width="800"/>
+    <img src="images/capitulo4/wireframe-planes-section.png" alt="Wireframe Planes Section" width="800"/>
   </p>
 
 - **FAQ section**
 
   <p align="center">
-    <img src="images/wireframe-faq-section.png" alt="Wireframe FAQ Section" width="800"/>
+    <img src="images/capitulo4/wireframe-faq-section.png" alt="Wireframe FAQ Section" width="800"/>
   </p>
 
 - **Next step section**
 
   <p align="center">
-    <img src="images/wireframe-next-step-section.png" alt="Wireframe Next Step Section" width="800"/>
+    <img src="images/capitulo4/wireframe-next-step-section.png" alt="Wireframe Next Step Section" width="800"/>
   </p>
 
 - **Footer section**
 
   <p align="center">
-    <img src="images/wireframe-footer-section.png" alt="Wireframe Footer Section" width="800"/>
+    <img src="images/capitulo4/wireframe-footer-section.png" alt="Wireframe Footer Section" width="800"/>
   </p>
 
 ### 4.3.2. Landing Page Mock-up
@@ -817,80 +817,80 @@ Los mockups de la Landing Page muestran la propuesta visual aplicada sobre la es
 - **Header (Navbar)**
 
   <p align="center">
-    <img src="images/mockup-header-navbar.png" alt="Mockup Header Navbar" width="800"/>
+    <img src="images/capitulo4/mockup-header-navbar.png" alt="Mockup Header Navbar" width="800"/>
   </p>
 
 - **Hero section**
 
   <p align="center">
-    <img src="images/mockup-hero-section.png" alt="Mockup Hero Section" width="800"/>
+    <img src="images/capitulo4/mockup-hero-section.png" alt="Mockup Hero Section" width="800"/>
   </p>
 - **Video section**
   <p align="center">
-    <img src="images/video-section.png" alt="Mockup Hero Section" width="800"/>
+    <img src="images/capitulo4/video-section.png" alt="Mockup Hero Section" width="800"/>
   </p>
 - **Team section**
 
   <p align="center">
-    <img src="images/Team-section.png" alt="Mockup Problem Section" width="800"/>
+    <img src="images/capitulo4/Team-section.png" alt="Mockup Problem Section" width="800"/>
   </p>
 - **Problem section**
 
   <p align="center">
-    <img src="images/mockup-problem-section.png" alt="Mockup Problem Section" width="800"/>
+    <img src="images/capitulo4/mockup-problem-section.png" alt="Mockup Problem Section" width="800"/>
   </p>
 - **Main features section**
  
   <p align="center">
-    <img src="images/mockup-main-features-section.png" alt="Mockup Main Features Section" width="800"/>
+    <img src="images/capitulo4/mockup-main-features-section.png" alt="Mockup Main Features Section" width="800"/>
   </p>
 
 - **How it works section**
 
   <p align="center">
-    <img src="images/mockup-how-works-section.png" alt="Mockup How It Works Section" width="800"/>
+    <img src="images/capitulo4/mockup-how-works-section.png" alt="Mockup How It Works Section" width="800"/>
   </p>
 
 - **Merchant benefits section**
 
   <p align="center">
-    <img src="images/mockup-merchant-benefits-section.png" alt="Mockup Merchant Benefits Section" width="800"/>
+    <img src="images/capitulo4/mockup-merchant-benefits-section.png" alt="Mockup Merchant Benefits Section" width="800"/>
   </p>
 
 - **Client trust section**
 
   <p align="center">
-    <img src="images/mockup-client-trust-section.png" alt="Mockup Client Trust Section" width="800"/>
+    <img src="images/capitulo4/mockup-client-trust-section.png" alt="Mockup Client Trust Section" width="800"/>
   </p>
 
 - **Comparativa breve section**
 
   <p align="center">
-    <img src="images/mockup-comparativa-breve-section.png" alt="Mockup Comparativa Breve Section" width="800"/>
+    <img src="images/capitulo4/mockup-comparativa-breve-section.png" alt="Mockup Comparativa Breve Section" width="800"/>
   </p>
 
 - **Planes section**
 
   <p align="center">
-    <img src="images/mockup-planes-section.png" alt="Mockup Planes Section" width="800"/>
+    <img src="images/capitulo4/mockup-planes-section.png" alt="Mockup Planes Section" width="800"/>
   </p>
 
 - **FAQ section**
 
   <p align="center">
-    <img src="images/mockup-faq-section.png" alt="Mockup FAQ Section" width="800"/>
+    <img src="images/capitulo4/mockup-faq-section.png" alt="Mockup FAQ Section" width="800"/>
   </p>
 
 - **Next step section**
 
   <p align="center">
-    <img src="images/mockup-next-step-section.png" alt="Mockup Next Step Section" width="800"/>
+    <img src="images/capitulo4/mockup-next-step-section.png" alt="Mockup Next Step Section" width="800"/>
   </p>
 
 - **Footer section**
 
   <p align="center">
-    <img src="images/mockup-footer-section.png" alt="Mockup Footer Section" width="800"/>
+    <img src="images/capitulo4/mockup-footer-section.png" alt="Mockup Footer Section" width="800"/>
   </p>
 
 ## 4.4. Web Applications UX/UI Design
@@ -909,7 +909,7 @@ La estructura global de la aplicación se organiza en torno a tres zonas funcion
 #### Wireframes: Dashboard Principal
  
 <p align="center">
-    <img src="images/Landing_Wireframe.png" alt="Landing_Wireframe" width="800"/>
+    <img src="images/capitulo4/Landing_Wireframe.png" alt="Landing_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Dashboard Principal*
@@ -921,7 +921,7 @@ En el **nivel secundario**, el wireframe muestra una tabla resumen de las últim
 #### Wireframes: Módulo de Productos
  
 <p align="center">
-    <img src="images/Productos_Wireframe.png" alt="Productos_Wireframe" width="800"/>
+    <img src="images/capitulo4/Productos_Wireframe.png" alt="Productos_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Módulo de Productos*
@@ -935,7 +935,7 @@ En la parte superior derecha del área de contenido se ubica el botón primario 
 #### Wireframes: Módulo de Lotes
  
 <p align="center">
-    <img src="images/Lotes_Wireframe.png" alt="Lotes_Wireframe" width="800"/>
+    <img src="images/capitulo4/Lotes_Wireframe.png" alt="Lotes_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Módulo de Lotes*
@@ -947,7 +947,7 @@ La tabla de lotes presenta las columnas: Producto asociado, Número de lote, Fec
 #### Wireframes: Módulo de Ventas
  
 <p align="center">
-    <img src="images/Ventas_Wireframe.png" alt="Ventas_Wireframe" width="800"/>
+    <img src="images/capitulo4/Ventas_Wireframe.png" alt="Ventas_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Módulo de Ventas Presencial*
@@ -963,7 +963,7 @@ El **Resumen de Caja** (US-33, US-36) aparece como un bloque fijo en la parte in
 #### Wireframes: Módulo de Chatbot WhatsApp
  
 <p align="center">
-    <img src="images/Chatbot_Wireframe.png" alt="ChatBot_Wireframe" width="800"/>
+    <img src="images/capitulo4/Chatbot_Wireframe.png" alt="ChatBot_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Módulo de Chatbot WhatsApp*
@@ -975,7 +975,7 @@ En la parte superior del módulo, cuando la cuenta de WhatsApp Business no está
 #### Wireframes: Módulo de Pedidos del Chatbot
  
 <p align="center">
-    <img src="images/Pedidos_Wireframe.png" alt="Pedidos_Wireframe" width="800"/>
+    <img src="images/capitulo4/Pedidos_Wireframe.png" alt="Pedidos_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Panel de Pedidos del Chatbot*
@@ -987,7 +987,7 @@ El detalle de cada pedido se abre en un **panel lateral deslizante** que muestra
 #### Wireframes: Módulo de Suscripción
  
 <p align="center">
-    <img src="images/Suscripcion_Wireframe.png" alt="Suscripcion_Wireframe" width="800"/>
+    <img src="images/capitulo4/Suscripcion_Wireframe.png" alt="Suscripcion_Wireframe" width="800"/>
   </p>
  
 *Ilustración – Web Application Wireframe: Módulo de Suscripción*
@@ -1007,7 +1007,7 @@ A continuación se describen los Wireflows principales del sistema, organizados 
 **Wireflow 1 – User Goal: Registrarse e iniciar sesión en Entreprenly**
  
 <p align="center">
-    <img src="images/Wireflow1.png" alt="Wireflow1" width="800"/>
+    <img src="images/capitulo4/Wireflow1.png" alt="Wireflow1" width="800"/>
   </p>
  
 **Descripción del flujo:** Don Lucho accede por primera vez a Entreprenly y necesita crear una cuenta para empezar a gestionar su negocio digitalmente.
@@ -1025,7 +1025,7 @@ A continuación se describen los Wireflows principales del sistema, organizados 
 **Wireflow 2 – User Goal: Registrar y gestionar el inventario de productos**
  
 <p align="center">
-    <img src="images/Wireflow2.png" alt="Wireflow2" width="800"/>
+    <img src="images/capitulo4/Wireflow2.png" alt="Wireflow2" width="800"/>
   </p>
  
 **Descripción del flujo:** Don Lucho necesita agregar los productos de su minimarket al sistema para poder controlar el stock y registrar ventas.
@@ -1045,7 +1045,7 @@ A continuación se describen los Wireflows principales del sistema, organizados 
 **Wireflow 3 – User Goal: Gestionar lotes y recibir alertas de vencimiento**
  
 <p align="center">
-    <img src="images/Wireflow3.png" alt="Wireflow3" width="800"/>
+    <img src="images/capitulo4/Wireflow3.png" alt="Wireflow3" width="800"/>
   </p>
  
 **Descripción del flujo:** Don Lucho necesita crear lotes para controlar las fechas de vencimiento de sus productos perecederos y ser notificado cuando alguno esté próximo a vencer.
@@ -1063,7 +1063,7 @@ A continuación se describen los Wireflows principales del sistema, organizados 
 **Wireflow 4 – User Goal: Registrar una venta presencial**
  
 <p align="center">
-    <img src="images/Wireflow4.png" alt="Wireflow4" width="800"/>
+    <img src="images/capitulo4/Wireflow4.png" alt="Wireflow4" width="800"/>
   </p>
  
 **Descripción del flujo:** Don Lucho necesita atender a un cliente en el mostrador, registrar los productos comprados, seleccionar el método de pago y emitir el comprobante, todo sin interrumpir la atención al cliente.
@@ -1083,7 +1083,7 @@ A continuación se describen los Wireflows principales del sistema, organizados 
 **Wireflow 5 – User Goal: Configurar y vincular el chatbot de WhatsApp Business**
  
 <p align="center">
-    <img src="images/Wireflow5.png" alt="Wireflow5" width="800"/>
+    <img src="images/capitulo4/Wireflow5.png" alt="Wireflow5" width="800"/>
   </p>
  
 **Descripción del flujo:** Don Lucho necesita conectar su número de WhatsApp Business al sistema para activar la atención automatizada de pedidos.
@@ -1099,7 +1099,7 @@ A continuación se describen los Wireflows principales del sistema, organizados 
 **Wireflow 6 – User Goal: Activar o gestionar la suscripción al Plan Control**
  
 <p align="center">
-    <img src="images/Wireflow6.png" alt="Wireflow6" width="800"/>
+    <img src="images/capitulo4/Wireflow6.png" alt="Wireflow6" width="800"/>
   </p>
  
 **Descripción del flujo:** Don Lucho, con el Plan Free asignado por defecto, decide contratar el Plan Control para acceder a funcionalidades avanzadas como el módulo de chatbot y la integración con balanza IoT.
@@ -1118,7 +1118,7 @@ Esta sección presenta los mock-ups de alta fidelidad de la aplicación web de E
 #### Dashboard Principal
  
 <p align="center">
-    <img src="images/Landing.png" alt="landing" width="800"/>
+    <img src="images/capitulo4/Landing.png" alt="landing" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Dashboard Principal*
@@ -1128,7 +1128,7 @@ El dashboard aplica la paleta de colores primaria del proyecto sobre una superfi
 #### Módulo de Productos
  
 <p align="center">
-    <img src="images/Productos.png" alt="Producto" width="800"/>
+    <img src="images/capitulo4/Productos.png" alt="Producto" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Módulo de Productos*
@@ -1138,7 +1138,7 @@ La vista de inventario presenta la grilla de tarjetas de producto con tipografí
 #### Módulo de Lotes
  
 <p align="center">
-    <img src="images/lotes.png" alt="Lotes" width="800"/>
+    <img src="images/capitulo4/lotes.png" alt="Lotes" width="800"/>
   </p>
  
  
@@ -1149,7 +1149,7 @@ La vista de lotes presenta el panel de resumen en la parte superior con los tres
 #### Módulo de Ventas Presencial
  
 <p align="center">
-    <img src="images/ventas.png" alt="ventas" width="800"/>
+    <img src="images/capitulo4/ventas.png" alt="ventas" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Módulo de Ventas Presencial*
@@ -1159,7 +1159,7 @@ El punto de venta presenta la distribución de dos columnas con la división vis
 #### Módulo de Chatbot WhatsApp
  
 <p align="center">
-    <img src="images/chatbot.png" alt="chatbot" width="800"/>
+    <img src="images/capitulo4/chatbot.png" alt="chatbot" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Módulo de Chatbot WhatsApp*
@@ -1169,7 +1169,7 @@ El módulo de chatbot aplica el patrón visual de las aplicaciones de mensajerí
 #### Módulo de Pedidos del Chatbot
  
 <p align="center">
-    <img src="images/pedidos.png" alt="Pedidos" width="800"/>
+    <img src="images/capitulo4/pedidos.png" alt="Pedidos" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Panel de Pedidos del Chatbot*
@@ -1179,7 +1179,7 @@ El panel de pedidos presenta las filas de la tabla con los badges de estado usan
 #### Módulo de Suscripción
  
 <p align="center">
-    <img src="images/suscripcion.png" alt="suscripcion" width="800"/>
+    <img src="images/capitulo4/suscripcion.png" alt="suscripcion" width="800"/>
   </p>
  
 *Ilustración – Web Application Mock-up: Módulo de Suscripción*
@@ -1196,7 +1196,7 @@ Esta sección presenta los User Flow Diagrams de la aplicación web de Entrepren
 *User Goal: El comerciante desea tener su catálogo de productos completo y actualizado en el sistema.*
  
 <p align="center">
-    <img src="images/User_flow1.png" alt="User_flow1" width="800"/>
+    <img src="images/capitulo4/User_flow1.png" alt="User_flow1" width="800"/>
   </p>
  
 *Ilustración – Web Application User Flow Diagram: Gestión de Inventario*
@@ -1215,7 +1215,7 @@ Dashboard → Clic "Productos" en Sidebar → Vista de productos → Clic "Agreg
  
  
 <p align="center">
-    <img src="images/User_flow2.png" alt="User_flow2" width="800"/>
+    <img src="images/capitulo4/User_flow2.png" alt="User_flow2" width="800"/>
   </p>
  
 *Ilustración – Web Application User Flow Diagram: Gestión de Lotes*
@@ -1235,7 +1235,7 @@ Dashboard → Clic "Lotes" → Panel de resumen con contadores → Clic "Crear l
  
  
 <p align="center">
-    <img src="images/User_flow3.png" alt="User_flow3" width="800"/>
+    <img src="images/capitulo4/User_flow3.png" alt="User_flow3" width="800"/>
   </p>
  
 *Ilustración – Web Application User Flow Diagram: Registro de Venta Presencial*
@@ -1255,7 +1255,7 @@ Dashboard → Clic "Ventas" → Módulo POS carga → Cajero escribe nombre del 
 *User Goal: El comerciante desea revisar los pedidos recibidos por WhatsApp y validar los pagos para confirmar las entregas de manera segura.*
  
 <p align="center">
-    <img src="images/User_flow4.png" alt="User_flow4" width="800"/>
+    <img src="images/capitulo4/User_flow4.png" alt="User_flow4" width="800"/>
   </p>
  
 *Ilustración – Web Application User Flow Diagram: Validación de Pago de Pedido del Chatbot*
@@ -1274,7 +1274,7 @@ Dashboard → Clic "Pedidos" → Lista de pedidos → Selecciona pedido en estad
 *User Goal: El comerciante con Plan Free desea contratar el Plan Control para acceder a funcionalidades premium.*
  
  <p align="center">
-    <img src="images/User_Flow5.png" alt="User_flow5" width="800"/>
+    <img src="images/capitulo4/User_Flow5.png" alt="User_flow5" width="800"/>
   </p>
  
 
@@ -1312,7 +1312,7 @@ Los criterios de diseño que guiaron las decisiones de interacción y navegació
  
 El prototipo interactivo completo está disponible en Figma, donde puede navegarse en modo presentación para simular la experiencia real de uso.
 
-![prototipo.jpeg](./images/prototipo.png "prototipo.jpeg")
+![prototipo.jpeg](./images/capitulo4/prototipo.png "prototipo.jpeg")
 
 *Ilustración - Web Application Prototyping: Vista general del flujo de navegación*
  
@@ -1344,7 +1344,7 @@ A continuación, se presentan los distintos Bounded Contexts identificados a par
 
 Generación y Autenticación de Cuenta
 
-<p align="center"> <img src="images/Entreprenly - Generación y Autenticación de Cuenta.jpg" width="500"/> <img src="images/Canvas BC 6.jpg" width="500"/>
+<p align="center"> <img src="images/capitulo4/Entreprenly - Generación y Autenticación de Cuenta.jpg" width="500"/> <img src="images/capitulo4/Canvas BC 6.jpg" width="500"/>
 
 </p>
 
@@ -1352,53 +1352,53 @@ En este Bounded Context se realiza la creación de cuentas y la gestión de inic
 
 Perfil y Configuración
 
-<p align="center"> <img src="images/Entreprenly - Perfil y Configuración.jpg" width="500"/> <img src="images/Canvas BC 2.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo4/Entreprenly - Perfil y Configuración.jpg" width="500"/> <img src="images/capitulo4/Canvas BC 2.jpg" width="500"/> </p>
 
 En este Bounded Context se gestiona la configuración del perfil del usuario, incluyendo cambios de zona horaria, idioma, preferencias de interfaz (como modo oscuro), contraseña y otras configuraciones.
 
 Gestión y Proceso de Suscripción
 
-<p align="center"> <img src="images/Entreprenly - Gestión y Proceso de suscripción.jpg" width="500"/> <img src="images/Canvas BC 7.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo4/Entreprenly - Gestión y Proceso de suscripción.jpg" width="500"/> <img src="images/capitulo4/Canvas BC 7.jpg" width="500"/> </p>
 
 Este Bounded Context se encarga de la renovación, cambio y cancelación de planes de suscripción. Además, realiza las validaciones necesarias durante todo el proceso de suscripción.
 
 Gestión de Inventario
 
-<p align="center"> <img src="images/Entreprenly - Gestión de inventario.jpg" width="500"/> <img src="images/Canvas BC 1.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo4/Entreprenly - Gestión de inventario.jpg" width="500"/> <img src="images/capitulo4/Canvas BC 1.jpg" width="500"/> </p>
 
 En este Bounded Context se realiza la creación y modificación de productos. También incluye la gestión de lotes (creación, modificación y eliminación), así como funcionalidades adicionales como alertas de caducidad y control de stock.
 
 Chatbot de WhatsApp
 
-<p align="center"> <img src="images/Entreprenly - Chatbot de WhatsApp.jpg" width="500"/> <img src="images/Canvas BC 5.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo4/Entreprenly - Chatbot de WhatsApp.jpg" width="500"/> <img src="images/capitulo4/Canvas BC 5.jpg" width="500"/> </p>
 
 Este Bounded Context permite la venta a través de un chatbot de WhatsApp. Para ello, consume información del inventario con el fin de conocer la disponibilidad de productos.
 
 Ventas
 
-<p align="center"> <img src="images/Entreprenly - Ventas.jpg" width="500"/> <img src="images/Canvas BC 3.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo4/Entreprenly - Ventas.jpg" width="500"/> <img src="images/capitulo4/Canvas BC 3.jpg" width="500"/> </p>
 
 En este Bounded Context se realiza la gestión de ventas presenciales. Este proceso incluye la verificación de stock y la asignación de datos dependiendo del tipo de producto (por unidad o por peso).
 
 Unión de Bounded Contexts
 
-<p align="center"> <img src="images/Entreprenly - BC union.jpg" width="500"/> </p>
+<p align="center"> <img src="images/capitulo4/Entreprenly - BC union.jpg" width="500"/> </p>
 
 Este diagrama muestra la integración y comunicación entre los diferentes Bounded Contexts, evidenciando las relaciones y dependencias dentro del sistema.
 
 A continuación, se presentan los principales flujos de interacción del sistema, los cuales permiten visualizar la secuencia de operaciones entre los distintos Bounded Contexts en escenarios clave del negocio.
 
-<p align="center"> <img src="images/Entreprenly - Flujo ChatbotBC.jpg" width="500"/></p>
+<p align="center"> <img src="images/capitulo4/Entreprenly - Flujo ChatbotBC.jpg" width="500"/></p>
 
-<p align="center"><img src="images/Entreprenly - Flujo Ventas.jpg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/Entreprenly - Flujo Ventas.jpg" width="500"/></p>
 
-<p align="center"><img src="images/Entreprenly - Flujo Completo.jpg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/Entreprenly - Flujo Completo.jpg" width="500"/></p>
 
-<p align="center"><img src="images/Entreprenly - Flujo Gestion de inventario.jpg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/Entreprenly - Flujo Gestion de inventario.jpg" width="500"/></p>
 
-<p align="center"><img src="images/Entreprenly - Flujo Gestion y Proceso de suscripcion.jpg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/Entreprenly - Flujo Gestion y Proceso de suscripcion.jpg" width="500"/></p>
 
-<p align="center"><img src="images/Entreprenly - Flujo Perfil y Configuracion.jpg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/Entreprenly - Flujo Perfil y Configuracion.jpg" width="500"/></p>
 
 ### 4.6.2. Software Architecture Context Diagram
 
@@ -1406,7 +1406,7 @@ A continuación, se presenta el System Context Diagram del sistema Entreprenly. 
 
 <p align="center">
 <p align="center">
-<img src="images/structurizr-109637-EntreprenlySystemContext.png" width="500"/>
+<img src="images/capitulo4/structurizr-109637-EntreprenlySystemContext.png" width="500"/>
 </p>
 
 ### 4.6.3. Software Architecture Container Diagrams
@@ -1414,43 +1414,43 @@ A continuación, se presenta el System Context Diagram del sistema Entreprenly. 
 A continuación, se presenta el Container Diagram del sistema Entreprenly. Este diagrama describe la arquitectura interna a nivel de contenedores, mostrando los principales componentes desplegables, como la aplicación web, el API Gateway y los distintos Bounded Contexts implementados como servicios independientes. Además, se incluyen las bases de datos asociadas a cada contexto y los sistemas externos con los que interactúan, permitiendo visualizar la distribución de responsabilidades, la comunicación entre componentes y la estructura general del sistema
 
 <p align="center">
-<img src="images/structurizr-109637-EntreprenlyContainer.png" width="500"/>
+<img src="images/capitulo4/structurizr-109637-EntreprenlyContainer.png" width="500"/>
 </p>
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-<p align="center">Generación y Autenticación de Cuenta BC</p> <p align="center"><img src="images/structurizr-109637-IamComponent.png" width="500"/></p>
+<p align="center">Generación y Autenticación de Cuenta BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-IamComponent.png" width="500"/></p>
 
 Este Bounded Context es responsable de la gestión de identidad del usuario dentro del sistema, abarcando tanto el registro como la autenticación. Para ello, integra mecanismos de acceso alternativo mediante Google OAuth, así como un sistema externo de correo para la verificación y vinculación de cuentas.
 A nivel funcional, incluye queries orientados a la lectura de datos de sesión y credenciales, y commands destinados a la creación de cuentas, actualización de información y cambio de contraseña.
 Finalmente, toda la información relacionada con autenticación es persistida en una base de datos MySQL, garantizando la consistencia y seguridad de los datos.
 
-<p align="center">Perfil y Configuración BC</p> <p align="center"><img src="images/structurizr-109637-ProfileComponent.png" width="500"/></p>
+<p align="center">Perfil y Configuración BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-ProfileComponent.png" width="500"/></p>
 
 Este Bounded Context se encarga de la gestión de la información del perfil del usuario y sus preferencias de configuración, tales como zona horaria, idioma, tema de interfaz (UI), notificaciones y foto de perfil.
 Recibe información inicial del usuario desde el Bounded Context de Generación y Autenticación de Cuenta (inbound), lo que le permite construir y mantener el perfil completo.
 Define queries para la lectura de datos del usuario y commands para la actualización de configuraciones y almacenamiento de cambios realizados. Además, puede enviar información configurada hacia otros contextos (outbound), como el idioma del usuario.
 Toda esta información es almacenada en una base de datos MySQL.
 
-<p align="center">Gestión y Proceso de Suscripción BC</p> <p align="center"><img src="images/structurizr-109637-SubscriptionComponent.png" width="500"/></p>
+<p align="center">Gestión y Proceso de Suscripción BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-SubscriptionComponent.png" width="500"/></p>
 
 Este Bounded Context es responsable de la gestión del ciclo de vida de las suscripciones, incluyendo la creación, renovación, cancelación y cambio de plan.
 Recibe como entrada información del usuario y configuraciones provenientes del Bounded Context de Perfil y Configuración (inbound), lo que le permite adaptar el proceso de suscripción a las preferencias del usuario.
 Cuenta con commands que gestionan las operaciones sobre la suscripción y queries que permiten consultar el estado, datos de facturación y detalles asociados al usuario.
 La información de suscripciones es persistida en una base de datos MySQL, asegurando el control y seguimiento del estado de cada cuenta.
 
-<p align="center">Gestión de Inventario BC</p> <p align="center"><img src="images/structurizr-109637-InventoryComponent.png" width="500"/></p>
+<p align="center">Gestión de Inventario BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-InventoryComponent.png" width="500"/></p>
 
 Este Bounded Context se encarga de la administración del inventario, incluyendo la creación, actualización y eliminación de productos, así como la gestión de lotes asociados.
 Además, incorpora funcionalidades de monitoreo como alertas de stock y caducidad de productos. Para ello, utiliza queries que permiten obtener configuraciones relevantes, como el idioma del usuario desde el Bounded Context de Perfil y Configuración (inbound).
 Asimismo, expone información de productos hacia otros contextos (outbound), como Ventas y Chatbot.
 Incluye commands para la gestión de productos y operaciones relacionadas, y persiste toda la información en una base de datos MySQL.
 
-<p align="center">Ventas BC</p> <p align="center"><img src="images/structurizr-109637-SalesComponent.png" width="500"/></p>
+<p align="center">Ventas BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-SalesComponent.png" width="500"/></p>
 
 Este Bounded Context gestiona el proceso de venta presencial, desde la selección de productos hasta la generación del comprobante. Para ello, consume información del Bounded Context de Inventario (inbound) para validar disponibilidad de productos y stock, y registra el método de pago seleccionado como parte del propio proceso de venta. Incluye queries para la consulta de información relevante y commands para registrar las ventas realizadas. Toda la información generada es persistida en una base de datos MySQL.
 
-<p align="center">ChatBot BC</p> <p align="center"><img src="images/structurizr-109637-ChatbotComponent.png" width="500"/></p>
+<p align="center">ChatBot BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-ChatbotComponent.png" width="500"/></p>
 
 Este Bounded Context permite la gestión de ventas a través de un canal conversacional basado en WhatsApp. Para su funcionamiento, consume información del Bounded Context de Inventario (inbound) para consultar disponibilidad de productos y registra la confirmación de pago dentro del flujo del pedido. Incluye queries para la obtención de información necesaria durante la interacción con el usuario y commands para la generación, actualización y seguimiento de pedidos. Además, se integra con servicios externos de mensajería (WhatsApp API) y persiste la información en una base de datos MySQL, permitiendo el seguimiento de las conversaciones y transacciones realizadas.
 
@@ -1459,25 +1459,25 @@ Este Bounded Context permite la gestión de ventas a través de un canal convers
 ### 4.7.1. Class Diagrams
 
 <p align="center">Shared Kernel BC</p>
-<p align="center"><img src="images/08_KernelBC.svg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/08_KernelBC.svg" width="500"/></p>
 
 <p align="center">Generación y Autenticación de Cuenta BC</p>
-<p align="center"><img src="images/01_AuthBC.svg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/01_AuthBC.svg" width="500"/></p>
 
 <p align="center">Perfil y Configuración BC</p>
-<p align="center"><img src="images/02_ProfileBC.svg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/02_ProfileBC.svg" width="500"/></p>
 
 <p align="center">Gestión y Proceso de Suscripción BC</p>
-<p align="center"><img src="images/03_SubscriptionBC.svg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/03_SubscriptionBC.svg" width="500"/></p>
 
 <p align="center">Gestión de Inventario de Suscripción BC</p>
-<p align="center"><img src="images/04_InventoryBC.svg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/04_InventoryBC.svg" width="500"/></p>
 
 <p align="center">Ventas BC</p>
-<p align="center"><img src="images/05_SalesBC.svg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/05_SalesBC.svg" width="500"/></p>
 
 <p align="center">Chatbot de WhatsApp BC</p>
-<p align="center"><img src="images/07_ChatbotBC.svg" width="500"/></p>
+<p align="center"><img src="images/capitulo4/07_ChatbotBC.svg" width="500"/></p>
 
 
 ## 4.8. Database Design
@@ -1498,7 +1498,7 @@ Las alertas de stock (vencimiento, bajo stock, sin stock) son calculadas en tiem
 
 <div align="center">
 
-![Database Diagram Entreprenly](images/Entreprenly_database_diagram.png)
+![Database Diagram Entreprenly](images/capitulo4/Entreprenly_database_diagram.png)
 
 </div>
 
