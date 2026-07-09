@@ -2539,27 +2539,25 @@ Esta sección presenta la evaluación heurística aplicada a **Entreprenly** dur
 
 | Fig.    | Pantalla                                       | Archivo                                                 |
 | ------- | ---------------------------------------------- | ------------------------------------------------------- |
-| Fig. 1  | Panel de Inicio (Dashboard)                    | `Fig-01-panel-de-inicio.jpeg`                           |
-| Fig. 2  | Catálogo de Productos                          | `Fig-02-catalogo-de-productos.jpeg`                     |
-| Fig. 3  | Modal "Editar Producto"                        | `Fig-03-modal-editar-producto.jpeg`                     |
-| Fig. 4  | Modal "Agregar Nuevo Producto"                 | `Fig-04-modal-agregar-producto.jpeg`                    |
-| Fig. 5  | Lotes de Inventario (vista general)            | `Fig-05-lotes-de-inventario.jpeg`                       |
-| Fig. 6  | Panel de Alertas de Lotes                      | `Fig-06-panel-alertas-de-lotes.jpeg`                    |
-| Fig. 7  | Modal "Agregar Nuevo Lote"                     | `Fig-07-modal-agregar-lote.jpeg`                        |
-| Fig. 8  | Detalle de Lote (lote vencido)                 | `Fig-08-detalle-de-lote-vencido.jpeg`                   |
-| Fig. 9  | Ventas – "Producto no encontrado"              | `Fig-09-ventas-producto-no-encontrado.jpeg`             |
-| Fig. 10 | Suscripción – Planes Free y Control            | `Fig-10-suscripcion-planes.jpeg`                        |
-| Fig. 11 | Suscripción – Límites, facturación e historial | `Fig-11-suscripcion-limites-facturacion-historial.jpeg` |
-| Fig. 12 | Modal "Agregar método de pago"                 | `Fig-12-modal-agregar-metodo-de-pago.jpeg`              |
-| Fig. 13 | Modal "Completar datos de facturación"         | `Fig-13-modal-datos-de-facturacion.jpeg`                |
-| Fig. 14 | Modal "Historial de suscripción"               | `Fig-14-modal-historial-de-suscripcion.jpeg`            |
-| Fig. 15 | Ventas – Registrar cantidad (teclado numérico) | `Fig-15-ventas-registrar-cantidad.jpeg`                 |
-| Fig. 16 | Centro de Ayuda                                | `Fig-16-centro-de-ayuda.jpeg`                           |
-| Fig. 17 | Formulario "Reportar un problema"              | `Fig-17-reportar-un-problema.jpeg`                      |
-| Fig. 18 | Artículo de ayuda "¿Cómo validar un pago?"     | `Fig-18-articulo-validar-un-pago.jpeg`                  |
-| Fig. 19 | Perfil y configuración de cuenta               | `Fig-19-perfil-configuracion.jpeg`                      |
-
----
+| Fig. 1  | Panel de Inicio (Dashboard)                    | `Fig-01-panel-de-inicio.png`                            |
+| Fig. 2  | Catálogo de Productos                          | `Fig-02-catalogo-de-productos.png`                      |
+| Fig. 3  | Modal "Editar Producto"                        | `Fig-03-modal-editar-producto.png`                      |
+| Fig. 4  | Modal "Agregar Nuevo Producto"                 | `Fig-04-modal-agregar-producto.png`                     |
+| Fig. 5  | Lotes de Inventario (vista general)            | `Fig-05-lotes-de-inventario.png`                        |
+| Fig. 6  | Panel de Alertas de Lotes                      | `Fig-06-panel-alertas-de-lotes.png`                     |
+| Fig. 7  | Modal "Agregar Nuevo Lote"                     | `Fig-07-modal-agregar-lote.png`                         |
+| Fig. 8  | Detalle de Lote (lote vencido)                 | `Fig-08-detalle-de-lote-vencido.png`                    |
+| Fig. 9  | Ventas – "Producto no encontrado"              | `Fig-09-ventas-producto-no-encontrado.png`             |
+| Fig. 10 | Suscripción – Planes Free y Control            | `Fig-10-suscripcion-planes.png`                         |
+| Fig. 11 | Suscripción – Límites, facturación e historial | `Fig-11-suscripcion-limites-facturacion-historial.png`  |
+| Fig. 12 | Modal "Agregar método de pago"                 | `Fig-12-modal-agregar-metodo-de-pago.png`               |
+| Fig. 13 | Modal "Completar datos de facturación"         | `Fig-13-modal-datos-de-facturacion.png`                 |
+| Fig. 14 | Modal "Historial de suscripción"               | `Fig-14-modal-historial-de-suscripcion.png`             |
+| Fig. 15 | Ventas – Registrar cantidad (teclado numérico) | `Fig-15-ventas-registrar-cantidad.png`                  |
+| Fig. 16 | Centro de Ayuda                                | `Fig-16-centro-de-ayuda.png`                            |
+| Fig. 17 | Formulario "Reportar un problema"              | `Fig-17-reportar-un-problema.png`                       |
+| Fig. 18 | Artículo de ayuda "¿Cómo validar un pago?"     | `Fig-18-articulo-validar-un-pago.png`                   |
+| Fig. 19 | Perfil y configuración de cuenta               | `Fig-19-perfil-configuracion.png`                       |
 
 #### 5.3.3.1. Heurísticas de usabilidad
 
@@ -2569,9 +2567,9 @@ En esta subsección se evalúa la experiencia de uso de Entreprenly tomando como
 
 Entreprenly comunica oportunamente el estado del sistema. El Panel de Inicio muestra en tiempo real el resumen del día (ventas, ingresos, pedidos y alertas), el estado del chatbot ("Activo") y el estado del inventario con etiquetas como "Vencido" y "Stock bajo". El panel de alertas de lotes notifica vencimientos y faltantes, y la vista de Suscripción refleja el plan activo y el consumo de límites mediante barras de progreso.
 
-<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/Fig-01-panel-de-inicio.png" width="600">
 
-<img src="images/Fig-06-panel-alertas-de-lotes.jpeg" width="600">
+<img src="images/Fig-06-panel-alertas-de-lotes.png" width="600">
 
 **Evidencia observada:** Fig. 1 (resumen y alertas del dashboard), Fig. 6 (notificaciones de lotes), Fig. 11 (uso del plan y estado de facturación).
 
@@ -2583,9 +2581,9 @@ Entreprenly comunica oportunamente el estado del sistema. El Panel de Inicio mue
 
 El lenguaje es cercano al comerciante peruano: "Lotes", "Stock", "Caja diaria", "Boleta", "Yape/Plin", "RUC" y "Razón social". En las vistas de Lotes y de Datos de facturación se emplean términos fiscales y de inventario propios del rubro.
 
-<img src="images/Fig-05-lotes-de-inventario.jpeg" width="600">
+<img src="images/Fig-05-lotes-de-inventario.png" width="600">
 
-<img src="images/Fig-13-modal-datos-de-facturacion.jpeg" width="600">
+<img src="images/Fig-13-modal-datos-de-facturacion.png" width="600">
 
 **Evidencia observada:** Fig. 5 (lotes/unidades), Fig. 8 (fecha de vencimiento), Fig. 13 (RUC, razón social, dirección fiscal), Fig. 9 ("Tarjeta – Yape/Plin").
 
@@ -2597,9 +2595,9 @@ El lenguaje es cercano al comerciante peruano: "Lotes", "Stock", "Caja diaria", 
 
 Todos los modales tienen botón de cierre (×) y opción Cancelar; el detalle de lote ofrece "Volver"; el Perfil permite editar datos, cambiar contraseña, idioma, tema y notificaciones sin quedar atrapado. En Ventas existe "Cancelar Venta".
 
-<img src="images/Fig-03-modal-editar-producto.jpeg" width="600">
+<img src="images/Fig-03-modal-editar-producto.png" width="600">
 
-<img src="images/Fig-19-perfil-configuracion.jpeg" width="600">
+<img src="images/Fig-19-perfil-configuracion.png" width="600">
 
 **Evidencia observada:** Fig. 3 y Fig. 4 (× y Cancelar en modales), Fig. 8 (botón Volver), Fig. 13 (Cancelar), Fig. 19 (edición libre de perfil).
 
@@ -2611,9 +2609,9 @@ Todos los modales tienen botón de cierre (×) y opción Cancelar; el detalle de
 
 Se mantiene un patrón visual uniforme: sidebar naranja fija, tipografía estable, botones primarios naranjas, y tarjetas y tablas con el mismo estilo en Productos, Lotes, Ventas, Suscripción y Ayuda. La nomenclatura de navegación es consistente en todas las pantallas.
 
-<img src="images/Fig-02-catalogo-de-productos.jpeg" width="600">
+<img src="images/Fig-02-catalogo-de-productos.png" width="600">
 
-<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+<img src="images/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 2, Fig. 5, Fig. 10 y Fig. 16 comparten layout, colores y jerarquía de botones.
 
@@ -2625,9 +2623,9 @@ Se mantiene un patrón visual uniforme: sidebar naranja fija, tipografía establ
 
 Los formularios usan campos guía y valores por defecto. En Agregar Producto el botón Guardar permanece atenuado hasta completar lo necesario; en Agregar Lote se solicitan fecha de ingreso y vencimiento; en Datos de facturación y Método de pago se marcan formatos esperados (tarjeta, CVV, RUC).
 
-<img src="images/Fig-04-modal-agregar-producto.jpeg" width="600">
+<img src="images/Fig-04-modal-agregar-producto.png" width="600">
 
-<img src="images/Fig-07-modal-agregar-lote.jpeg" width="600">
+<img src="images/Fig-07-modal-agregar-lote.png" width="600">
 
 **Evidencia observada:** Fig. 4 (Guardar atenuado), Fig. 7 (fechas obligatorias), Fig. 12 y Fig. 13 (formatos guía).
 
@@ -2639,7 +2637,7 @@ Los formularios usan campos guía y valores por defecto. En Agregar Producto el 
 
 El dashboard ofrece "Accesos rápidos" con íconos y una sidebar siempre visible con etiquetas de texto. El usuario reconoce los módulos sin memorizar rutas; las tarjetas resumen muestran lo relevante de un vistazo.
 
-<img src="images/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/Fig-01-panel-de-inicio.png" width="600">
 
 **Evidencia observada:** Fig. 1 (accesos rápidos e íconos), sidebar persistente en todas las figuras, Fig. 16 (categorías con íconos).
 
@@ -2651,9 +2649,9 @@ El dashboard ofrece "Accesos rápidos" con íconos y una sidebar siempre visible
 
 Existen atajos (accesos rápidos del dashboard), buscador de lotes, descarga de historial, teclado numérico para registrar cantidad en ventas y generación automática de código QR, lo que agiliza tanto al usuario nuevo como al recurrente.
 
-<img src="images/Fig-15-ventas-registrar-cantidad.jpeg" width="600">
+<img src="images/Fig-15-ventas-registrar-cantidad.png" width="600">
 
-<img src="images/Fig-14-modal-historial-de-suscripcion.jpeg" width="600">
+<img src="images/Fig-14-modal-historial-de-suscripcion.png" width="600">
 
 **Evidencia observada:** Fig. 1 (accesos rápidos), Fig. 14 (Descargar historial), Fig. 15 (teclado numérico), Fig. 2 (QR por producto).
 
@@ -2665,7 +2663,7 @@ Existen atajos (accesos rápidos del dashboard), buscador de lotes, descarga de 
 
 La interfaz mantiene jerarquía clara y bajo ruido visual: uso consistente del naranja como color de acción, espacios en blanco amplios y tarjetas bien delimitadas en Suscripción y en el dashboard.
 
-<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+<img src="images/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 10 (cards de planes), Fig. 16 (centro de ayuda ordenado).
 
@@ -2819,7 +2817,7 @@ Patrones repetidos, labels claros y guías paso a paso facilitan el aprendizaje.
 
 La experiencia es fluida, limpia y profesional, con estados claros y sensación de control.
 
-<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+<img src="images/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 10 (estética cuidada).
 
@@ -2847,7 +2845,7 @@ Los puntos de contacto (dashboard, módulos, soporte y chatbot) ofrecen una expe
 
 Responde a contextos reales de tienda: registro ágil de ventas con teclado numérico, cierre de caja por método de pago, revisión rápida de stock y alertas, y pedidos por WhatsApp en horas de demanda.
 
-<img src="images/Fig-15-ventas-registrar-cantidad.jpeg" width="600">
+<img src="images/Fig-15-ventas-registrar-cantidad.png" width="600">
 
 **Evidencia observada:** Fig. 15 (registro rápido), Fig. 1 (resumen de caja), Fig. 6 (alertas operativas).
 
@@ -2859,7 +2857,7 @@ Responde a contextos reales de tienda: registro ágil de ventas con teclado num�
 
 Botones, formularios, mensajes y navegación se mantienen consistentes en todos los módulos.
 
-<img src="images/Fig-02-catalogo-de-productos.jpeg" width="600">
+<img src="images/Fig-02-catalogo-de-productos.png" width="600">
 
 **Evidencia observada:** Fig. 2, Fig. 5, Fig. 10, Fig. 16 (mismo sistema visual).
 
@@ -2871,7 +2869,7 @@ Botones, formularios, mensajes y navegación se mantienen consistentes en todos 
 
 El usuario conserva autonomía: editar perfil, mantener su plan, cancelar, corregir y cerrar popups.
 
-<img src="images/Fig-19-perfil-configuracion.jpeg" width="600">
+<img src="images/Fig-19-perfil-configuracion.png" width="600">
 
 **Evidencia observada:** Fig. 19 (perfil), Fig. 3 (editar), Fig. 13 (Cancelar), Fig. 14 (descargar/cerrar).
 
@@ -2897,7 +2895,7 @@ Brinda alternativas de navegación y acción: botones primarios y secundarios, s
 
 El contenido más importante aparece primero: resumen del día y alertas en el tope del dashboard; plan recomendado destacado en Suscripción.
 
-<img src="images/Fig-10-suscripcion-planes.jpeg" width="600">
+<img src="images/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 1 (jerarquía del resumen), Fig. 10 (Plan Control "Recomendado" resaltado).
 
