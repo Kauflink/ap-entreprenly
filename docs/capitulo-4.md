@@ -1223,12 +1223,13 @@ Login/Registro → Home → Clic "Productos" en Sidebar → Tabla de productos �
 *Ilustración – Web Application User Flow Diagram: Gestión de Lotes*
  
 **Happy Path:**
-Dashboard → Clic "Lotes" → Panel de resumen con contadores → Clic "Crear lote" → Modal de creación → Selecciona producto → Completa fecha de vencimiento y cantidad → Clic "Agregar" → Modal se cierra → Lote aparece en la tabla con badge "Activo".
+Login/Registro → Clic "Lotes" → Dashboard de lotes con los contadores "Lotes totales", "Lotes vencidos" y "Sin stock" → Clic "Crear lote" → Modal "Crear Nuevo Lote" → Selecciona "Producto", completa "Cantidad", "Fecha de Ingreso" y "Fecha de Caducidad" → Clic "Guardar" → Modal se cierra → El lote aparece en la ficha del producto → Clic "Ver Detalles" → Tabla de lotes del producto con #ID, Cantidad, fechas y Código QR → Clic en el ícono de editar → Modal "Edición de Lote" → Clic "Guardar".
  
 **Unhappy Paths:**
-- No selecciona producto al guardar (US-09): → Campo de producto resaltado → Modal permanece abierto.
-- Fecha de vencimiento anterior a la fecha actual: → Mensaje de validación "La fecha de vencimiento no puede ser una fecha pasada".
-- Acceso al módulo cuando existen lotes próximos a vencer (US-14): → Banner de alerta amarillo visible en panel superior → Lotes afectados aparecen primero en la tabla por ordenamiento automático.
+- Campos obligatorios vacíos al crear un lote (US-09): → Los campos quedan marcados con "X" y el mensaje "Campo obligatorio incompleto" → El botón "Guardar" permanece deshabilitado.
+- Valor inválido al editar un lote (US-02): → El campo muestra "X" y el mensaje "Debe poner campo válido" → El lote no se actualiza.
+- Error al cargar el detalle de un producto (US-06): → El sistema muestra "No se pudo cargar los detalles en este momento. Inténtelo más tarde." con la opción de reintentar.
+- Existen lotes próximos a vencer, a punto de agotarse o sin stock (US-14): → La campanita de notificaciones muestra el contador de alertas → El panel "Alerta de lotes" lista cada caso con el producto, el lote y el detalle correspondiente.
 ---
  
 **User Flow 3 – Registro de venta presencial**
