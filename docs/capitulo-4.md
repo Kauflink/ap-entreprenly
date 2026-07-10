@@ -1204,11 +1204,11 @@ Esta sección presenta los User Flow Diagrams de la aplicación web de Entrepren
 *Ilustración – Web Application User Flow Diagram: Gestión de Inventario*
  
 **Happy Path:**
-Dashboard → Clic "Productos" en Sidebar → Vista de productos → Clic "Agregar producto" → Drawer lateral se despliega → Completa todos los campos → Clic "Guardar" → Toast de éxito "Producto registrado correctamente" → Drawer se cierra → Nuevo producto aparece en la grilla.
+Login/Registro → Home → Clic "Productos" en Sidebar → Tabla de productos → Clic "Agregar producto" → Modal "Agregar Nuevo Producto" se despliega → Elige "Por Unidad" o "Por Peso" → Completa Nombre, Descripción, Código QR y Precio (y Peso/Marca según el tipo) → Clic "Guardar" → Modal se cierra → Nuevo producto aparece como fila al final de la tabla → Clic en el ícono "Editar" de la fila → Modal "Editar Producto" con los datos pre-cargados → Modifica los campos permitidos → Clic "Guardar".
  
 **Unhappy Paths:**
-- Campos obligatorios vacíos al guardar (US-01): → Campos resaltados con mensajes de validación → Botón "Guardar" permanece deshabilitado.
-- Búsqueda sin resultados (US-08): → La grilla muestra el estado vacío con el mensaje "No se encontraron productos que coincidan con tu búsqueda".
+- Campos obligatorios vacíos al guardar un producto nuevo (US-01): → Campos resaltados con el mensaje "Este campo es obligatorio" → El producto no se registra.
+- Intento de modificar el "Tipo de Producto" al editar (US-05): → El campo aparece bloqueado con el mensaje "No modificable" → El cambio de tipo no se guarda.
 ---
  
 **User Flow 2 – Creación de lotes y gestión de alertas de vencimiento**
