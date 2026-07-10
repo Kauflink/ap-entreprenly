@@ -1068,15 +1068,17 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Descripción del flujo:** Don Lucho necesita atender a un cliente en el mostrador, registrar los productos comprados, seleccionar el método de pago y emitir el comprobante, todo sin interrumpir la atención al cliente.
  
-**Desde el Sidebar → Módulo "Ventas":** La pantalla de POS carga con el ticket vacío y el Resumen de Caja en cero (o con los valores acumulados del día).
- 
-**Buscar y agregar producto (US-28):** Don Lucho escribe el nombre del producto en el buscador. El sistema muestra resultados en tiempo real. Al seleccionar un producto con tipo "Peso" (US-30): se despliega el modal "Registrar Peso". Si hay balanza IoT conectada: el peso se captura automáticamente (Scenario 1). Si no hay balanza: Don Lucho ingresa el peso manualmente (Scenario 2). Al seleccionar un producto con tipo "Unidad" (US-29): se despliega el modal "Registrar Cantidad" con un campo numérico entero. Si la cantidad o el peso solicitado supera el stock disponible: el sistema muestra el error "Stock insuficiente" y no permite agregar el ítem al ticket (US-29, Scenario 2 y US-30, Scenario 3).
- 
-**Gestionar el ticket (US-31):** El ítem confirmado aparece en el ticket del panel derecho con su subtotal calculado. Don Lucho puede eliminar cualquier ítem del ticket (Scenario 2): el sistema actualiza el total inmediatamente. Puede continuar agregando más productos.
- 
-**Seleccionar método de pago (US-32):** Don Lucho presiona "Efectivo" o "Tarjeta/Yape/Plin". El toggle seleccionado queda resaltado. Si intenta finalizar sin seleccionar ninguno: aparece el mensaje de validación "Por favor, seleccione un método de pago" (Scenario 2).
- 
-**Finalizar venta (US-33, US-35, US-36):** Don Lucho presiona "Finalizar venta y emitir boleta". El sistema registra la venta, genera el comprobante, actualiza el Resumen de Caja con el monto del método de pago utilizado (US-35) y limpia el ticket para la siguiente venta. Un Toast de confirmación verde aparece en la esquina inferior derecha durante 3 segundos.
+**Desde el Sidebar → Módulo "Ventas":** La pantalla de POS carga con el panel "Detalle de venta" (buscador "Buscar producto por nombre..." y una tabla con las columnas Producto, Tipo, Cantidad/peso, P. Unit. y Subtotal, vacía con el mensaje "Aún no se han añadido productos al ticket"), el panel "Resumen" (Subtotal, Items, Total), "Método de Pago", "Resumen de Caja" (Total del Día, Efectivo, Tarjeta - Yape/Plin) e "Historial de ventas" con un selector de fecha.
+
+**Buscar y agregar producto (US-28):** Don Lucho escribe el nombre del producto en el buscador. Al seleccionar un producto de tipo "Peso" (US-30): se despliega el modal "Registrar Peso". Si hay balanza IoT conectada, el campo "Peso (kg)" queda a la espera con el texto "Esperando respuesta de la balanza..." (Scenario 1). Si no hay balanza: Don Lucho presiona "Ingresa el peso del producto manualmente" y lo escribe con el teclado numérico del modal, presionando "Confirmar Peso" (Scenario 2). Al seleccionar un producto de tipo "Unidad" (US-29): se despliega el modal "Registrar Cantidad" con el mismo teclado numérico y el botón "Confirmar Cantidad". Si la cantidad o el peso solicitado supera el stock disponible (Scenario 2): el modal muestra el mensaje "Stock insuficiente" y el botón de confirmar permanece deshabilitado.
+
+**Gestionar el ticket (US-31):** El ítem confirmado aparece como nueva fila en la tabla "Detalle de venta" con su cantidad/peso, precio unitario y subtotal, y el panel "Resumen" actualiza el Subtotal, los Items y el Total. Don Lucho puede seguir agregando productos o cancelar la venta completa con el botón "Cancelar Venta" (US-34), lo que vacía el ticket sin registrar el cobro.
+
+**Seleccionar método de pago (US-32):** Don Lucho presiona "Efectivo" o "Tarjeta yape/plin" en el panel "Método de Pago". El botón "Finalizar Venta y Emitir Boleta" solo se habilita cuando el ticket tiene al menos un producto y se seleccionó un método de pago.
+
+**Finalizar venta (US-33, US-35, US-36):** Don Lucho presiona "Finalizar Venta y Emitir Boleta". El sistema muestra la confirmación "Venta Exitosa", registra la transacción, suma el monto al método de pago correspondiente dentro de "Resumen de Caja" (US-35, US-36) y limpia el ticket para la siguiente venta.
+
+**Consultar historial y detalle de venta (US-97, US-98):** En el panel "Historial de ventas", Don Lucho elige una fecha en el calendario y ve el listado de ventas de ese día con hora, método de pago, cantidad de productos y total (US-97). Al presionar una venta del listado, el sistema despliega el modal "Detalle de venta" con la fecha, hora y método de pago, y la tabla de productos vendidos con cantidad/peso, precio unitario y subtotal (US-98).
  
 ---
  
