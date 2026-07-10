@@ -652,7 +652,9 @@ En este primer Sprint, el equipo organizó su trabajo en torno a cuatro aspectos
 
 El objetivo principal de este Sprint fue implementar y desplegar la primera versión del Landing Page de Entreprenly, cubriendo la User Story US-49 del Product Backlog. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
 
-![Logo de la UPC](./images/capitulo5/sprint1.png "Universidad Peruana de Ciencias Aplicadas")
+![sprint1](./images/capitulo5/sprint1.png "Tablero del Sprint 1 en Trello")
+
+**Board público del Sprint 1 (Trello):** https://trello.com/b/w5cZrD9x/entreprenly-sprint-1
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1174,7 +1176,9 @@ En el Sprint 2, el equipo organizó el trabajo asignando un Bounded Context prin
 
 El objetivo principal de este Sprint fue implementar la Frontend Web Application de Entreprenly en Vue, cubriendo los Bounded Contexts de Auth, Profile, Subscription, Inventory, Sales y Chatbot, junto con las vistas compartidas de Home y Help. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
 
-![sprint2](./images/capitulo5/sprint2.png "sprint2")
+![sprint2](./images/capitulo5/sprint2.png "Tablero del Sprint 2 en Trello")
+
+**Board público del Sprint 2 (Trello):** https://trello.com/b/X5XRlVOZ/entreprenly-sprint-2
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1839,7 +1843,9 @@ En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsa
 
 El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presentan los Work-items, organizados por aspecto, con el responsable y su estado al cierre del Sprint.
 
-![sprint3](./images/capitulo5/sprint3.png "Tablero del Sprint 3")
+![sprint3](./images/capitulo5/sprint3.png "Tablero del Sprint 3 en Trello")
+
+**Board público del Sprint 3 (Trello):** https://trello.com/b/kcHoLNFO/entreprenly-sprint-3
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -2171,9 +2177,9 @@ En el Sprint 4, el equipo organizó el trabajo en torno a cuatro aspectos: el **
 
 El objetivo principal de este Sprint fue integrar el canal real de WhatsApp para el chatbot, cubriendo las User Stories **US-37, US-38, US-44, US-45 y US-47**, que se realizaron de forma efectiva mediante el WhatsApp bridge (en Sprints previos US-37, US-38 y US-45 se abordaron de forma simulada o solo en el Backend). Cada historia se descompuso en Engineering Tasks con una estimación individual de entre 4 y 8 horas, gestionadas en el tablero Kanban del Sprint con las columnas **To Do, In Process, To Review y Done**.
 
-**Board público del Sprint 4 (Trello):** https://trello.com/b/msBZdIfS/entreprenly-sprint-4
-
 ![sprint4](./images/capitulo5/sprint4.png "Tablero del Sprint 4 en Trello")
+
+**Board público del Sprint 4 (Trello):** https://trello.com/b/msBZdIfS/entreprenly-sprint-4
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
