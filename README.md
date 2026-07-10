@@ -202,7 +202,6 @@ Para la entrega TB2, el equipo aplicó cambios en el Landing Page y en el Fronte
   - [4.8.1. Database Diagrams](docs/capitulo-4.md#481-database-diagrams)
   - [4.8.2. Organización del esquema de base de datos](docs/capitulo-4.md#482-organización-del-esquema-de-base-de-datos)
   - [4.8.3. Relaciones entre tablas](docs/capitulo-4.md#483-relaciones-entre-tablas)
-  - [4.8.4. Normalización aplicada](docs/capitulo-4.md#484-normalización-aplicada)
 
 ### Capítulo V: Product Implementation, Validation & Deployment
 - [5.1. Software Configuration Management](docs/capitulo-5.md#51-software-configuration-management)
