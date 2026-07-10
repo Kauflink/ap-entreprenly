@@ -1873,7 +1873,6 @@ Al término del Sprint 3, la Frontend Web Application consume la API real desple
 
 <img src="images/capitulo5/exec_s3_chatbot.png" width="600">
 
-
 ---
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
@@ -2172,7 +2171,6 @@ Al término del Sprint 4, el chatbot de Entreprenly quedó operativo sobre **Wha
 - **Comprobante por imagen (US-45):** el cliente envía la foto de su comprobante por WhatsApp y el bridge la reenvía al Backend como comprobante de pago.
 
 ![sprint4_chatbot_comprobante](./images/capitulo5/sprint4_chatbot_comprobante.png "sprint4_chatbot_comprobante")
-
 
 - **Notificación de validación (US-47):** tras aprobar o rechazar el comprobante desde el dashboard, el resultado se notifica al cliente por WhatsApp.
 
@@ -2537,27 +2535,27 @@ Esta sección presenta la evaluación heurística aplicada a **Entreprenly** dur
 
 #### Catálogo de figuras
 
-| Fig.    | Pantalla                                       | Archivo                                                 |
-| ------- | ---------------------------------------------- | ------------------------------------------------------- |
-| Fig. 1  | Panel de Inicio (Dashboard)                    | `Fig-01-panel-de-inicio.png`                            |
-| Fig. 2  | Catálogo de Productos                          | `Fig-02-catalogo-de-productos.png`                      |
-| Fig. 3  | Modal "Editar Producto"                        | `Fig-03-modal-editar-producto.png`                      |
-| Fig. 4  | Modal "Agregar Nuevo Producto"                 | `Fig-04-modal-agregar-producto.png`                     |
-| Fig. 5  | Lotes de Inventario (vista general)            | `Fig-05-lotes-de-inventario.png`                        |
-| Fig. 6  | Panel de Alertas de Lotes                      | `Fig-06-panel-alertas-de-lotes.png`                     |
-| Fig. 7  | Modal "Agregar Nuevo Lote"                     | `Fig-07-modal-agregar-lote.png`                         |
-| Fig. 8  | Detalle de Lote (lote vencido)                 | `Fig-08-detalle-de-lote-vencido.png`                    |
-| Fig. 9  | Ventas – "Producto no encontrado"              | `Fig-09-ventas-producto-no-encontrado.png`             |
-| Fig. 10 | Suscripción – Planes Free y Control            | `Fig-10-suscripcion-planes.png`                         |
-| Fig. 11 | Suscripción – Límites, facturación e historial | `Fig-11-suscripcion-limites-facturacion-historial.png`  |
-| Fig. 12 | Modal "Agregar método de pago"                 | `Fig-12-modal-agregar-metodo-de-pago.png`               |
-| Fig. 13 | Modal "Completar datos de facturación"         | `Fig-13-modal-datos-de-facturacion.png`                 |
-| Fig. 14 | Modal "Historial de suscripción"               | `Fig-14-modal-historial-de-suscripcion.png`             |
-| Fig. 15 | Ventas – Registrar cantidad (teclado numérico) | `Fig-15-ventas-registrar-cantidad.png`                  |
-| Fig. 16 | Centro de Ayuda                                | `Fig-16-centro-de-ayuda.png`                            |
-| Fig. 17 | Formulario "Reportar un problema"              | `Fig-17-reportar-un-problema.png`                       |
-| Fig. 18 | Artículo de ayuda "¿Cómo validar un pago?"     | `Fig-18-articulo-validar-un-pago.png`                   |
-| Fig. 19 | Perfil y configuración de cuenta               | `Fig-19-perfil-configuracion.png`                       |
+| Fig.    | Pantalla                                                        | Archivo                                                |
+| ------- | --------------------------------------------------------------- | ------------------------------------------------------ |
+| Fig. 1  | Panel de Inicio (Dashboard)                                     | `Fig-01-panel-de-inicio.png`                           |
+| Fig. 2  | Catálogo de Productos                                           | `Fig-02-catalogo-de-productos.png`                     |
+| Fig. 3  | Modal "Editar Producto"                                         | `Fig-03-modal-editar-producto.png`                     |
+| Fig. 4  | Modal "Agregar Nuevo Producto"                                  | `Fig-04-modal-agregar-producto.png`                    |
+| Fig. 5  | Lotes de Inventario (vista general)                             | `Fig-05-lotes-de-inventario.png`                       |
+| Fig. 6  | Panel de Alertas de Lotes                                       | `Fig-06-panel-alertas-de-lotes.png`                    |
+| Fig. 7  | Modal "Agregar Nuevo Lote"                                      | `Fig-07-modal-agregar-lote.png`                        |
+| Fig. 8  | Detalle de Lote (lote vencido)                                  | `Fig-08-detalle-de-lote-vencido.png`                   |
+| Fig. 9  | Ventas – "Producto no encontrado"                               | `Fig-09-ventas-producto-no-encontrado.png`             |
+| Fig. 10 | Suscripción – Planes Free y Control                             | `Fig-10-suscripcion-planes.png`                        |
+| Fig. 11 | Suscripción – Límites, facturación e historial                  | `Fig-11-suscripcion-limites-facturacion-historial.png` |
+| Fig. 12 | Modal "Agregar método de pago"                                  | `Fig-12-modal-agregar-metodo-de-pago.png`              |
+| Fig. 13 | Modal "Completar datos de facturación"                          | `Fig-13-modal-datos-de-facturacion.png`                |
+| Fig. 14 | Modal "Historial de suscripción"                                | `Fig-14-modal-historial-de-suscripcion.png`            |
+| Fig. 15 | Ventas – Registrar cantidad (teclado numérico)                  | `Fig-15-ventas-registrar-cantidad.png`                 |
+| Fig. 16 | Centro de Ayuda                                                 | `Fig-16-centro-de-ayuda.png`                           |
+| Fig. 17 | Formulario "Reportar un problema"                               | `Fig-17-reportar-un-problema.png`                      |
+| Fig. 18 | Artículo de ayuda "¿Cómo aprobar o rechazar un pedido del bot?" | `Fig-18-articulo-aprobar-pedido.png`                   |
+| Fig. 19 | Perfil y configuración de cuenta                                | `Fig-19-perfil-configuracion.png`                      |
 
 #### 5.3.3.1. Heurísticas de usabilidad
 
@@ -2675,9 +2673,9 @@ La interfaz mantiene jerarquía clara y bajo ruido visual: uso consistente del n
 
 El sistema señala errores con color y texto: en Ventas muestra "⊘ Producto no encontrado"; en Lotes marca el lote "Vencido" en rojo con la fecha. Los estados de error son reconocibles.
 
-<img src="images/capitulo5/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
+<img src="images/capitulo5/Fig-09-ventas-producto-no-encontrado.png" width="600">
 
-<img src="images/capitulo5/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
+<img src="images/capitulo5/Fig-08-detalle-de-lote-vencido.png" width="600">
 
 **Evidencia observada:** Fig. 9 (producto no encontrado), Fig. 8 (lote vencido), Fig. 11 (estados "pendiente de completar").
 
@@ -2689,13 +2687,13 @@ El sistema señala errores con color y texto: en Ventas muestra "⊘ Producto no
 
 Cuenta con un Centro de Ayuda con artículos frecuentes, categorías, buscador y datos de soporte (correo, WhatsApp, horario); artículos paso a paso; y un formulario para reportar problemas con tiempos de respuesta.
 
-<img src="images/capitulo5/Fig-16-centro-de-ayuda.jpeg" width="600">
+<img src="images/capitulo5/Fig-16-centro-de-ayuda.png" width="600">
 
-<img src="images/capitulo5/Fig-17-reportar-un-problema.jpeg" width="600">
+<img src="images/capitulo5/Fig-17-reportar-un-problema.png" width="600">
 
-<img src="images/capitulo5/Fig-18-articulo-validar-un-pago.jpeg" width="600">
+<img src="images/capitulo5/Fig-18-articulo-aprobar-pedido.png" width="600">
 
-**Evidencia observada:** Fig. 16 (artículos y soporte), Fig. 17 (reporte de problema), Fig. 18 (guía "¿Cómo validar un pago?").
+**Evidencia observada:** Fig. 16 (artículos y soporte), Fig. 17 (reporte de problema), Fig. 18 (guía "¿Cómo aprobar o rechazar un pedido del bot?").
 
 **Mejora sugerida:** Enlazar ayuda contextual ("?") desde cada módulo directamente al artículo correspondiente del centro de ayuda.
 
@@ -2709,7 +2707,7 @@ En esta subsección se evalúa si la organización de la información permite en
 
 Las funciones principales se ubican en la sidebar fija y en los accesos rápidos del dashboard; el Centro de Ayuda agrupa soporte y FAQ por categorías.
 
-<img src="images/capitulo5/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.png" width="600">
 
 **Evidencia observada:** Fig. 1, Fig. 16, navegación lateral presente en todas las figuras.
 
@@ -2721,7 +2719,7 @@ Las funciones principales se ubican en la sidebar fija y en los accesos rápidos
 
 Buen contraste (texto oscuro sobre blanco, acción naranja), etiquetas visibles y opción de tema Claro/Oscuro e idioma/zona horaria configurables.
 
-<img src="images/capitulo5/Fig-19-perfil-configuracion.jpeg" width="600">
+<img src="images/capitulo5/Fig-19-perfil-configuracion.png" width="600">
 
 **Evidencia observada:** Fig. 19 (preferencias de tema/idioma), formularios con labels (Fig. 4, Fig. 13).
 
@@ -2733,7 +2731,7 @@ Buen contraste (texto oscuro sobre blanco, acción naranja), etiquetas visibles 
 
 Títulos y subtítulos describen cada sección ("Catálogo de productos disponibles", "Registra y procesa las ventas del día"); los modales incluyen título y descripción.
 
-<img src="images/capitulo5/Fig-05-lotes-de-inventario.jpeg" width="600">
+<img src="images/capitulo5/Fig-05-lotes-de-inventario.png" width="600">
 
 **Evidencia observada:** Fig. 2, Fig. 5, Fig. 8 (encabezados descriptivos).
 
@@ -2745,7 +2743,7 @@ Títulos y subtítulos describen cada sección ("Catálogo de productos disponib
 
 La interfaz informa en el momento adecuado: estado del plan, stock, alertas de lotes y actividad de suscripción.
 
-<img src="images/capitulo5/Fig-11-suscripcion-limites-facturacion-historial.jpeg" width="600">
+<img src="images/capitulo5/Fig-11-suscripcion-limites-facturacion-historial.png" width="600">
 
 **Evidencia observada:** Fig. 1 (resumen), Fig. 6 (alertas), Fig. 11 (historial/estado de facturación).
 
@@ -2757,7 +2755,7 @@ La interfaz informa en el momento adecuado: estado del plan, stock, alertas de l
 
 Las tareas principales se completan sin asistencia: alta de productos y lotes, registro de ventas, gestión de suscripción, método de pago, datos fiscales y descarga de historial.
 
-<img src="images/capitulo5/Fig-12-modal-agregar-metodo-de-pago.jpeg" width="600">
+<img src="images/capitulo5/Fig-12-modal-agregar-metodo-de-pago.png" width="600">
 
 **Evidencia observada:** Fig. 4, Fig. 7, Fig. 12, Fig. 13, Fig. 14, Fig. 15.
 
@@ -2769,7 +2767,7 @@ Las tareas principales se completan sin asistencia: alta de productos y lotes, r
 
 Transmite confianza con precios transparentes, identidad visual coherente, datos de soporte reales y una propuesta de valor clara.
 
-<img src="images/capitulo5/Fig-10-suscripcion-planes.jpeg" width="600">
+<img src="images/capitulo5/Fig-10-suscripcion-planes.png" width="600">
 
 **Evidencia observada:** Fig. 10 (planes y precios), Fig. 16 (soporte con correo/WhatsApp/horario).
 
@@ -2781,7 +2779,7 @@ Transmite confianza con precios transparentes, identidad visual coherente, datos
 
 El usuario cambia de sección, cancela acciones, mantiene su plan, edita su perfil y vuelve a estados previos (botón Volver, ×, Cancelar).
 
-<img src="images/capitulo5/Fig-08-detalle-de-lote-vencido.jpeg" width="600">
+<img src="images/capitulo5/Fig-08-detalle-de-lote-vencido.png" width="600">
 
 **Evidencia observada:** Fig. 8 (Volver), Fig. 13 (Cancelar), Fig. 19 (control total del perfil).
 
@@ -2793,7 +2791,7 @@ El usuario cambia de sección, cancela acciones, mantiene su plan, edita su perf
 
 Aporta valor real: control de stock y vencimientos, conciliación de caja por método de pago, pedidos por WhatsApp vía chatbot y gestión de suscripción.
 
-<img src="images/capitulo5/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.png" width="600">
 
 **Evidencia observada:** Fig. 1 (caja por método de pago), Fig. 6 (vencimientos), Fig. 10 (valor del plan Control).
 
@@ -2805,7 +2803,7 @@ Aporta valor real: control de stock y vencimientos, conciliación de caja por m�
 
 Patrones repetidos, labels claros y guías paso a paso facilitan el aprendizaje.
 
-<img src="images/capitulo5/Fig-18-articulo-validar-un-pago.jpeg" width="600">
+<img src="images/capitulo5/Fig-18-articulo-aprobar-pedido.png" width="600">
 
 **Evidencia observada:** Fig. 4 (formulario autoexplicativo), Fig. 18 (artículo paso a paso).
 
@@ -2833,7 +2831,7 @@ En esta subsección se evalúa si Entreprenly considera distintos contextos de u
 
 Los puntos de contacto (dashboard, módulos, soporte y chatbot) ofrecen una experiencia equivalente y coherente; el chatbot habilita la compra por WhatsApp como canal alterno.
 
-<img src="images/capitulo5/Fig-01-panel-de-inicio.jpeg" width="600">
+<img src="images/capitulo5/Fig-01-panel-de-inicio.png" width="600">
 
 **Evidencia observada:** Fig. 1 (chatbot activo), Fig. 16 (soporte), navegación uniforme en todas las figuras.
 
@@ -2881,9 +2879,9 @@ El usuario conserva autonomía: editar perfil, mantener su plan, cancelar, corre
 
 Brinda alternativas de navegación y acción: botones primarios y secundarios, sidebar, accesos rápidos, FAQ, reporte de problema y métodos de pago Efectivo / Tarjeta-Yape/Plin.
 
-<img src="images/capitulo5/Fig-09-ventas-producto-no-encontrado.jpeg" width="600">
+<img src="images/capitulo5/Fig-09-ventas-producto-no-encontrado.png" width="600">
 
-<img src="images/capitulo5/Fig-16-centro-de-ayuda.jpeg" width="600">
+<img src="images/capitulo5/Fig-16-centro-de-ayuda.png" width="600">
 
 **Evidencia observada:** Fig. 9 (métodos de pago), Fig. 16 (FAQ + reporte), Fig. 1 (accesos rápidos).
 
@@ -2907,7 +2905,7 @@ El contenido más importante aparece primero: resumen del día y alertas en el t
 
 Genera beneficios concretos: ahorro de tiempo, menos errores, confianza en el stock, control de caja, automatización por chatbot y claridad de suscripción.
 
-<img src="images/capitulo5/Fig-06-panel-alertas-de-lotes.jpeg" width="600">
+<img src="images/capitulo5/Fig-06-panel-alertas-de-lotes.png" width="600">
 
 **Evidencia observada:** Fig. 6 (evita mermas), Fig. 1 (control de caja), Fig. 10 (valor del plan), Fig. 18 (autoservicio de soporte).
 
