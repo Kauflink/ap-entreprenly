@@ -1284,11 +1284,12 @@ Dashboard → Clic "Chatbot" → Panel "Estado de la conexión" muestra "WhatsAp
 *Ilustración – Web Application User Flow Diagram: Suscripción al Plan Control*
  
 **Happy Path:**
-Dashboard → Clic "Suscripción" → Pantalla muestra comparativa de planes → Clic "Elegir plan" en tarjeta Plan Control → Tarjeta queda seleccionada → Clic "Continuar con la suscripción" → Formulario de facturación → Completa datos → Clic "Continuar al pago" → Resumen de cobro → Clic "Pagar y activar suscripción" → Pago aprobado → Plan Control activado → Panel de suscripción muestra estado "Activa".
+Dashboard → Clic "Suscripción" → Panel "Plan actual y facturación" con la tarjeta "Plan Free" y la tarjeta "Recomendado: Plan Control" (S/89) → Clic "Actualizar a Plan Control" → Modal con los pasos "PLAN" → "FACTURACIÓN" (RUC, Razón social, Correo de facturación, Distrito) → "PAGO" (tarjeta registrada o "Listo para activar" y el total a cobrar) → Clic "Pagar y activar suscripción" → Paso "ACTIVACIÓN": "Suscripción activada — Plan Control activado" → Clic "Entendido" → El panel de Suscripción muestra "Plan Control" como plan actual.
  
 **Unhappy Paths:**
-- Intento de continuar sin seleccionar plan (US-16, Scenario 2): → Mensaje "Selecciona un plan para continuar" → Botón deshabilitado.
-- Datos de facturación incompletos (US-18, Scenario 2): → Campos inválidos resaltados → No avanza al paso de pago.
+- Cobro rechazado en el paso "PAGO" (US-18, Scenario 2): → Mensaje de error dentro de la misma vista sin perder los datos ya ingresados → El comerciante puede corregir y reintentar.
+- Renovar la suscripción activa (US-22): → Clic "Renovar suscripción" → Modal "Renovación preparada" con la nueva fecha de vigencia → Clic "Entendido".
+- Solicitar la cancelación (US-23): → Clic "Solicitar cancelación" → Modal "Confirma la cancelación" con la fecha hasta la que se mantiene el acceso → Clic "Confirmar cancelación" → Modal "Cancelación programada" → El "Historial de actividad" registra el nuevo estado y la etiqueta del panel cambia a "CANCELACIÓN PROGRAMADA".
 - Cobro rechazado (US-19, Scenario 2): → Mensaje de error con el motivo → El plan no se activa → Comerciante puede corregir datos y reintentar.
 
 
