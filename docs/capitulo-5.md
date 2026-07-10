@@ -1017,6 +1017,8 @@ Durante el Sprint 1, el equipo configuró y ejecutó el despliegue del Landing P
 
 3. **Publicación con GitHub Pages:** El sitio se publica con **GitHub Pages** sirviéndolo **directamente desde la rama `main`** (**Settings > Pages**, con *Source* = `main` y carpeta raíz `/`), sin paso de build en el servidor. Cada push integrado a `main` actualiza el sitio en vivo.
 
+![gitHubpages](./images/capitulo5/gitHubpages.png "gitHubpages")
+
 4. **Configuración del dominio personalizado:** Se añadió el archivo `CNAME` a la raíz del repositorio con el dominio `landing.entreprenly.online` y se habilitó **Enforce HTTPS** en la configuración de Pages.
 
 ![cname](./images/capitulo5/cnamee.png "Archivo CNAME con el dominio personalizado")
@@ -1684,7 +1686,7 @@ Durante el Sprint 2, el equipo configuró y ejecutó el proceso de despliegue de
 
 2. **Configuración de Firebase Hosting:** Se creó un proyecto en Firebase Console, se inicializó Firebase Hosting en el repositorio del frontend con `firebase init hosting`, configurando `dist` como directorio público y habilitando la reescritura de rutas al `index.html` para el SPA routing de Vue Router.
 
-![firebase_p](./images/capitulo5/firebase_p.png "firebase_p")
+![firebase_p](./images/capitulo5/deploy-frontend-01.png "firebase_p")
 
 3. **Verificación del despliegue:** Se validó que la aplicación Vue se encuentra correctamente desplegada y accesible en `https://ap.entreprenly.online`, con navegación entre BCs funcional sin errores 404 al refrescar el navegador.
 
@@ -2087,19 +2089,15 @@ Una petición con parámetros faltantes o con ítems sin stock suficiente retorn
 
 A continuación se muestra la interfaz Swagger UI con la relación de endpoints y una ejecución de prueba (*Try it out*) con datos de muestra:
 
-<img src="./images/capitulo5/swagger_s3.png" width="600">
-
-<img src="./images/capitulo5/swagger_s3_prueba.png" width="600">
+<img src="./images/capitulo5/swagger_s3.png" width="800">
 
 **URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
-
-**Commits relacionados con la documentación (Sprint 3):** las anotaciones OpenAPI (`SwaggerSchema`, descripciones de operaciones y *problem-details*) se incorporaron dentro de los commits de cada Bounded Context; la configuración del esquema de seguridad `Bearer` para Swagger UI se realizó en el commit `cd2d1ff` (`fix(swagger): match bearer security scheme name so authorize sends token`, 2026-06-19).
 
 ---
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`) mediante **Cloud Build**, publicarla en **Google Artifact Registry** y desplegarla en **Google Cloud Run** (servicio `ap-entreprenly-web-services`, región `us-east1`, con *allow unauthenticated*, 1 vCPU, 1 GiB y *startup CPU boost*). La persistencia se realiza sobre **Cloud SQL para MySQL 8.4** (instancia `entreprenly-db`), a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL** (socket Unix), consumido por **EF Core** con el proveedor **Pomelo/MySqlConnector**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
+Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso consistió en: construir la imagen Docker multi-etapa del backend mediante **Cloud Build**, publicarla en **Google Artifact Registry** y desplegarla en **Google Cloud Run**. La persistencia se realiza sobre **Cloud SQL para MySQL 8.4**, a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL**, consumido por **EF Core** con el proveedor **Pomelo/MySqlConnector**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
 
 <img src="./images/capitulo5/deploy-backend-09.png" width="600">
 
