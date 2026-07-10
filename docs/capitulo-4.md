@@ -1264,12 +1264,12 @@ Dashboard → Clic "Ventas" → Módulo POS carga con el "Detalle de venta" vac�
 *Ilustración – Web Application User Flow Diagram: Validación de Pago de Pedido del Chatbot*
  
 **Happy Path:**
-Dashboard → Clic "Pedidos" → Lista de pedidos → Selecciona pedido en estado "Esperando validación" → Panel lateral se despliega → Revisa detalle y comprobante de pago → Clic "Aprobar pago" → Modal de confirmación → Clic "Confirmar" → Pedido pasa a estado "Confirmado" → Stock se descuenta → Chatbot envía comprobante al cliente por WhatsApp → Toast de éxito.
+Dashboard → Clic "Chatbot" → Panel "Estado de la conexión" muestra "WhatsApp Business · Conectado" → Clic "Ver conversaciones" → Lista "Conversaciones" → Selecciona la conversación del cliente → El chatbot ya registró el pedido y envió las instrucciones de pago ("Pedido #000X registrado · instrucciones de pago enviadas") → El cliente envía la captura de pago dentro del chat → El bot responde "¡Recibí tu comprobante! Lo estamos validando y te confirmamos en breve." → Aparece la tarjeta fija "Pedido #000X — S/ X.XX" con el detalle (canal, producto, monto del comprobante) y el estado "Esperando validación" → Comerciante presiona "Aprobar pago" → El bot confirma al cliente que el pedido está "confirmado y en preparación".
  
 **Unhappy Paths:**
-- Rechazo de pago (US-48): → Comerciante presiona "Rechazar pago" → Se habilita campo de motivo → Ingresa motivo → Clic "Confirmar rechazo" → Pedido vuelve a estado "Esperando pago" → Chatbot notifica al cliente.
-- Segundo rechazo del mismo cliente (US-52, Scenario 2): → Sistema genera alerta de advertencia al comerciante → Pedido queda bloqueado para revisión manual.
-- Cancelación automática por timeout (US-51): → A los 60 minutos sin reporte de pago → Sistema cancela el pedido automáticamente → Libera el stock reservado → Chatbot notifica al cliente → Pedido aparece con estado "Cancelado (Timeout de pago)".
+- Rechazo de pago por monto no coincidente (US-48): → El comprobante recibido no coincide con el total del pedido (por ejemplo, S/2.00 recibidos contra S/3.50 del pedido) → Comerciante presiona "Rechazar pago" → El pedido vuelve a estado de espera y el chatbot notifica al cliente.
+- Segundo rechazo del mismo cliente (US-52, Scenario 2): → Sistema genera una alerta de advertencia al comerciante → Pedido queda marcado para revisión manual.
+- Cancelación automática por timeout (US-51): → Si el cliente no envía el comprobante dentro del plazo establecido tras el mensaje "instrucciones de pago enviadas" → El sistema registra "Sistema: 30 minutos sin reporte de pago" → El pedido se cancela automáticamente, libera el stock reservado y el bot notifica al cliente: "Tu pedido fue cancelado porque no recibimos tu comprobante de pago a tiempo. Si aún deseas comprarlo, puedes iniciar un nuevo pedido cuando quieras."
 ---
  
 **User Flow 5 – Suscripción al Plan Control**
