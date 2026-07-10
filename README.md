@@ -4,19 +4,31 @@
 
 ![Logo de la UPC](docs/images/readme/upc_logo.png "Universidad Peruana de Ciencias Aplicadas")
 
-### Universidad Peruana de Ciencias Aplicadas
+Universidad Peruana de Ciencias Aplicadas
 
-<small>Facultad de Ingeniería &nbsp;·&nbsp; Ingeniería de Software &nbsp;·&nbsp; 5to Ciclo</small>
+Carrera de Ingeniería de Software
 
-Aplicaciones Web
+### 1ASI0730
 
-<small>Código: 1ASI0730 &nbsp;·&nbsp; NRC: 12190 &nbsp;·&nbsp; Profesor: Hugo Allan Mori Paiva</small>
+### Aplicaciones Web
+
+### NRC
+
+12190
 
 ### Informe del Trabajo Final
 
-<small>Startup &nbsp;·&nbsp; Kauflink</small>
+### Docente
 
-<small>Producto &nbsp;·&nbsp; Entreprenly</small>
+Mori Paiva, Hugo Allan
+
+### Equipo
+
+Kauflink
+
+### Proyecto
+
+Entreprenly
 
 ### Integrantes
 
@@ -28,7 +40,9 @@ Aplicaciones Web
 | u20241a290 | Flores Pinchi, Jose Fernando       |
 | u202416151 | Chavez Carrasco, Lionel Abraham    |
 
-<small>Junio &nbsp;·&nbsp; 2026</small>
+### Período 202610
+
+### Julio 2026
 
 ---
 
@@ -38,12 +52,42 @@ Aplicaciones Web
 
 <div align="center">
 
-| Versión  | Fecha          | Autor                 | Descripción de modificación |
-| :------: | :------------: | :-------------------: | :-------------------------: |
-| AV1      | 02 / 04 / 2026 | Todos los integrantes | Primera versión             |
-| TB1      | 12 / 05 / 2026 | Todos los integrantes | Segunda versión             |
-| AV2      | 12 / 06 / 2026 | Todos los integrantes | Tercera versión             |
-| TB2      | 06 / 07 / 2026 | Todos los integrantes | Cuarta versión              |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Versión</th>
+      <th align="center">Fecha</th>
+      <th align="center">Autor</th>
+      <th align="center">Descripción de modificación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">AV1</td>
+      <td align="center">02 / 04 / 2026</td>
+      <td align="center">Todos los integrantes</td>
+      <td align="justify">Versión inicial del informe: estructura del documento, Capítulo 1 (Lean UX Process, segmentos, descripción de la startup, antecedentes y problemática), Capítulo 2 (entrevistas, análisis competitivo, User Personas, Empathy Maps), Capítulo 3 (Epics, User Stories, Product Backlog, Event Storming, Ubiquitous Language, Impact Mapping), Capítulo 4 (arquitectura de información, wireframes, mockups, diseño de base de datos, diagramas UML) y Capítulo 5 (configuración y despliegue), conclusiones y bibliografía.</td>
+    </tr>
+    <tr>
+      <td align="center">TB1</td>
+      <td align="center">12 / 05 / 2026</td>
+      <td align="center">Todos los integrantes</td>
+      <td align="justify">Actualización de diagramas de arquitectura C4 y de clases (eliminación del Bounded Context de Pagos), refinamiento del diseño de base de datos, corrección de User Stories y Product Backlog, documentación de Sprint Backlogs 1 y 2 con evidencias, y actualización de Student Outcomes y gráficos de contribución del equipo.</td>
+    </tr>
+    <tr>
+      <td align="center">AV2</td>
+      <td align="center">12 / 06 / 2026</td>
+      <td align="center">Todos los integrantes</td>
+      <td align="justify">Incorporación de nuevas User Stories (técnicas y funcionales) y reorganización del Product Backlog, documentación del Sprint 3 (backend, Swagger, despliegue y tableros Trello), Entrevistas de Validación (5.3), Evaluación Heurística, sección Video About-the-Product, y actualización de conclusiones, recomendaciones y Student Outcomes para la AV2.</td>
+    </tr>
+    <tr>
+      <td align="center">TB2</td>
+      <td align="center">06 / 07 / 2025</td>
+      <td align="center">Todos los integrantes</td>
+      <td align="justify">Correcciones en cada capítulo del informe, actualización de las capturas y prototipos del diseño en Figma, y corrección de diversas tareas de los sprints.</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
