@@ -1030,15 +1030,13 @@ A continuación se describen los Wireflows principales del sistema, organizados 
  
 **Descripción del flujo:** Don Lucho necesita agregar los productos de su minimarket al sistema para poder controlar el stock y registrar ventas.
  
-**Desde el Sidebar → Módulo "Productos":** Don Lucho hace clic en la sección "Productos" del sidebar. El sistema carga la lista de productos existente (vacía en el primer acceso).
- 
-**Agregar producto (US-01):** Don Lucho presiona el botón primario "Agregar producto". El drawer lateral se despliega con el formulario de registro. Completa todos los campos obligatorios (nombre, tipo de medida, precio, stock inicial). Presiona "Guardar". Si todos los datos son válidos: el producto queda registrado y aparece en la grilla con su tarjeta correspondiente. Si hay campos obligatorios vacíos: los campos inválidos quedan resaltados en rojo y el botón "Guardar" permanece deshabilitado.
- 
-**Editar producto (US-05):** Don Lucho localiza el producto que desea editar mediante la búsqueda por nombre (US-08) o navegando en la grilla. Presiona el botón "Editar" en la tarjeta. El drawer lateral se abre con los datos actuales pre-cargados. Modifica los campos necesarios y presiona "Guardar". El sistema actualiza el producto y cierra el drawer mostrando la tarjeta actualizada en la grilla.
- 
-**Visualizar detalles (US-07):** Al hacer hover sobre cualquier tarjeta de producto, aparece el botón "Ver detalles". Al presionarlo, el sistema expande la tarjeta o despliega un panel con toda la información del producto incluyendo el historial de lotes asociados.
- 
-**Buscar productos (US-08):** Don Lucho escribe el nombre o categoría en el campo de búsqueda del panel izquierdo. El sistema filtra la grilla en tiempo real a medida que se ingresa cada carácter, sin requerir presionar Enter.
+**Desde el Home → Sidebar "Productos":** Tras iniciar sesión, Don Lucho llega al Home y accede al módulo desde el sidebar (Home, Productos, Lotes, Ventas, Suscripción, Pedidos, Chatbot, Ayuda). El sistema carga la tabla de productos con las columnas Tipo, Nombre, Descripción, Código QR, Stock Total, Precio y Editar, junto con el buscador "Buscar productos..." (US-08) y el botón "Agregar producto".
+
+**Agregar producto (US-01):** Don Lucho presiona "Agregar producto". El modal "Agregar Nuevo Producto" se despliega con el selector "Tipo de Producto" (Por Unidad / Por Peso). Si elige "Por Unidad" (Scenario 1): completa Nombre, Descripción, Precio, Peso(g) y Marca. Si elige "Por Peso" (Scenario 2): completa Nombre, Descripción y Precio por kg. En ambos casos el "Código QR" se genera automáticamente y puede dejarse en blanco ("Si no especificas uno, se usará el código del producto"). Presiona "Guardar". Si todos los datos son válidos: el producto queda registrado con stock en 0 y aparece como nueva fila al final de la tabla. Si hay campos obligatorios vacíos (Scenario 3): el sistema resalta cada campo omitido con el mensaje "Este campo es obligatorio" y no registra el producto.
+
+**Editar producto (US-05):** Don Lucho presiona el ícono "Editar" de la fila correspondiente. El modal "Editar Producto" se abre con los datos actuales pre-cargados (Nombre, Descripción, Código QR, Precio, Peso(g), Marca). Si intenta cambiar el campo "Tipo de Producto" (Scenario 2): el sistema lo muestra bloqueado con el mensaje "No modificable", ya que el tipo no puede editarse una vez creado el producto. Modifica los demás campos y presiona "Guardar"; el sistema actualiza la fila y cierra el modal (Scenario 1).
+
+**Buscar productos (US-08):** Don Lucho escribe el nombre del producto en el campo "Buscar productos...", ubicado junto al botón "Agregar producto". El sistema filtra la tabla en tiempo real a medida que se ingresa cada carácter (Scenario 1).
  
 ---
  
