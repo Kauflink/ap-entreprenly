@@ -1244,13 +1244,13 @@ Login/Registro → Clic "Lotes" → Dashboard de lotes con los contadores "Lotes
 *Ilustración – Web Application User Flow Diagram: Registro de Venta Presencial*
  
 **Happy Path:**
-Dashboard → Clic "Ventas" → Módulo POS carga → Cajero escribe nombre del producto en buscador → Sistema muestra resultados → Cajero selecciona producto → Modal de cantidad/peso aparece → Ingresa valor → Clic "Confirmar" → Ítem aparece en el ticket con subtotal → Repite para más productos si es necesario → Cajero selecciona método de pago → Clic "Finalizar venta y emitir boleta" → Toast verde de éxito → Ticket se limpia → Resumen de caja se actualiza.
+Dashboard → Clic "Ventas" → Módulo POS carga con el "Detalle de venta" vacío → Cajero escribe el nombre del producto en "Buscar producto por nombre..." → Selecciona un producto por peso → Modal "Registrar Peso" (balanza o teclado numérico) → "Confirmar Peso" → El ítem aparece en la tabla del ticket con su subtotal → Repite con un producto por unidad mediante el modal "Registrar Cantidad" y "Confirmar Cantidad" → Selecciona el método de pago en "Método de Pago" → Clic "Finalizar Venta y Emitir Boleta" → Confirmación "Venta Exitosa" → El ticket se limpia, el "Resumen de Caja" se actualiza y la venta aparece en "Historial de ventas".
  
 **Unhappy Paths:**
-- Stock insuficiente al confirmar cantidad (US-29, Scenario 2 / US-30, Scenario 3): → Modal muestra "Stock insuficiente. Disponible: X unidades/kg" → No se agrega el ítem → Cajero puede ajustar la cantidad.
-- Balanza IoT sin respuesta (US-30): → Sistema muestra "Balanza no disponible" → Permite ingreso manual del peso.
-- Intento de finalizar sin método de pago (US-32): → Mensaje inline "Por favor, seleccione un método de pago" → Botón finalizar permanece deshabilitado.
-- Intento de finalizar con ticket vacío (US-35): → Mensaje inline "No hay productos en el ticket" → Botón finalizar permanece deshabilitado.
+- Stock insuficiente al confirmar cantidad o peso (US-29, Scenario 2 / US-30, Scenario 3): → El modal muestra el mensaje "Stock insuficiente" → El botón de confirmar permanece deshabilitado → El ítem no se agrega al ticket.
+- Sin balanza IoT conectada (US-30, Scenario 2): → El campo "Peso (kg)" no recibe respuesta automática → El cajero presiona el teclado numérico del modal e ingresa el peso manualmente.
+- Cancelar la venta en curso (US-34): → Clic en "Cancelar Venta" → El ticket se vacía sin registrar el cobro.
+- Intento de finalizar sin seleccionar método de pago o con el ticket vacío (US-32): → El botón "Finalizar Venta y Emitir Boleta" permanece deshabilitado hasta que ambas condiciones se cumplan.
 ---
  
 **User Flow 4 – Validación de pago de pedido del chatbot**
