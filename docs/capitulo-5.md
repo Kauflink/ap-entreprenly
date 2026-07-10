@@ -1979,46 +1979,117 @@ Al término del Sprint 3, la Frontend Web Application consume la API real desple
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **OpenAPI/Swagger** (Swashbuckle), disponibles en `https://ap-api.entreprenly.online/swagger`. A continuación se resume, por Bounded Context, la relación de endpoints implementados:
+A diferencia del Sprint 2, en el que la Frontend Web Application consumía una Fake RESTful API servida con **JSON-Server**, en el Sprint 3 se implementó el Backend real con **ASP.NET Core** y se documentó formalmente mediante **OpenAPI/Swagger** (Swashbuckle). La especificación OpenAPI está disponible en `https://ap-api.entreprenly.online/swagger/v1/swagger.json` y la interfaz interactiva de exploración y prueba (Swagger UI) en `https://ap-api.entreprenly.online/swagger`.
+
+La API expone **72 operaciones** distribuidas en **19 controladores REST** a través de 6 Bounded Contexts. Todos los endpoints de negocio están protegidos con **JWT** (esquema `Bearer`); únicamente el `sign-in` y el `sign-up` quedan fuera de esa protección. Los endpoints del webhook/bridge de WhatsApp se documentan en la sección del Sprint 4 (5.2.4.6). A continuación se documentan los endpoints implementados por Bounded Context:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
       <th>Bounded Context</th>
-      <th>Endpoints (verbo HTTP + ruta)</th>
+      <th>Endpoint</th>
+      <th>Verbo(s) HTTP</th>
+      <th>Descripción</th>
+      <th>Autenticación</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>IAM</td>
-      <td><code>POST /api/v1/authentication/sign-in</code>, <code>POST /api/v1/authentication/sign-up</code>, <code>GET /api/v1/users</code>, <code>GET /api/v1/users/{id}</code>, <code>PUT /api/v1/users/me/password</code>, <code>PUT /api/v1/users/me/email</code>, <code>GET /api/v1/roles</code></td>
-    </tr>
-    <tr>
-      <td>Profiles</td>
-      <td><code>GET /api/v1/profiles</code>, <code>GET /api/v1/profiles/{id}</code>, <code>GET /api/v1/profiles/by-user/{userId}</code>, <code>POST /api/v1/profiles</code>, <code>PUT /api/v1/profiles/{id}</code>, <code>PUT /api/v1/profiles/{id}/preferences</code>, <code>PUT /api/v1/profiles/{id}/notification-settings</code></td>
-    </tr>
-    <tr>
-      <td>Inventory</td>
-      <td><code>GET/POST/PUT/DELETE /api/v1/inventory-unit-products</code>, <code>GET/POST/PUT/DELETE /api/v1/inventory-weight-products</code>, <code>GET /api/v1/inventory-lots</code>, <code>GET /api/v1/inventory-unit-lots</code>, <code>GET /api/v1/inventory-weight-lots</code>, <code>GET /api/v1/inventory-stock-alerts</code></td>
-    </tr>
-    <tr>
-      <td>Sales</td>
-      <td><code>POST /api/v1/sales</code>, <code>GET /api/v1/sales</code> (filtro opcional <code>?date</code>), <code>GET /api/v1/sales/{saleId}</code></td>
-    </tr>
-    <tr>
-      <td>Subscription</td>
-      <td><code>GET /api/v1/subscriptions/me/dashboard</code>, <code>PUT /api/v1/subscriptions/me/dashboard</code>, <code>GET /api/v1/subscriptions/me/payment-confirmation</code>, y endpoints <code>by-user/{userId}</code> (<code>billing-setup</code>, <code>activate-control</code>, <code>schedule-cancellation</code>, <code>keep-control</code>)</td>
-    </tr>
-    <tr>
-      <td>Chatbot</td>
-      <td><code>GET/POST /api/v1/conversations</code>, <code>GET/POST /api/v1/chat-messages</code>, <code>GET/POST /api/v1/chat-orders</code>, <code>POST /api/v1/chat-orders/{id}/confirm</code>, <code>POST /api/v1/chat-orders/{id}/reject</code>, <code>GET/POST /api/v1/whatsapp-sessions</code>, <code>POST /api/v1/chatbot/whatsapp</code> (webhook)</td>
-    </tr>
+    <tr><td>IAM / Authentication</td><td><code>/api/v1/authentication/sign-in</code></td><td>POST</td><td>Autentica al usuario por email y contraseña y retorna un token JWT.</td><td>No (anónimo)</td></tr>
+    <tr><td>IAM / Authentication</td><td><code>/api/v1/authentication/sign-up</code></td><td>POST</td><td>Registra una nueva cuenta y aprovisiona su perfil y suscripción por defecto.</td><td>No (anónimo)</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/users</code> · <code>/api/v1/users/{id}</code></td><td>GET</td><td>Lista los usuarios y obtiene uno por su identificador.</td><td>JWT</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/users/me/password</code></td><td>PUT</td><td>Cambia la contraseña del usuario autenticado (valida la actual).</td><td>JWT</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/users/me/email</code></td><td>PUT</td><td>Cambia el correo del usuario autenticado.</td><td>JWT</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/roles</code></td><td>GET</td><td>Lista los roles disponibles en el sistema.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles</code></td><td>GET / POST</td><td>Lista y crea perfiles de comerciante.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/{profileId}</code></td><td>GET / PUT</td><td>Consulta y actualiza el perfil del comerciante.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/by-user/{userId}</code></td><td>GET</td><td>Obtiene el perfil asociado a un usuario.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/{profileId}/preferences</code></td><td>PUT</td><td>Actualiza idioma, tema y moneda del comerciante.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/{profileId}/notification-settings</code></td><td>PUT</td><td>Actualiza las preferencias de notificación.</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-unit-products</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los productos vendidos por unidad (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-weight-products</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los productos vendidos por kilogramo (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-unit-lots</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los lotes de productos unitarios (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-weight-lots</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los lotes de productos a granel (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-lots</code></td><td>GET</td><td>Retorna la vista combinada de lotes; <code>/{lotId}</code> para el detalle.</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-stock-alerts</code></td><td>GET</td><td>Retorna las alertas de stock derivadas (vencido, por vencer, bajo, agotado).</td><td>JWT</td></tr>
+    <tr><td>Sales</td><td><code>/api/v1/sales</code></td><td>POST / GET</td><td>Registra una venta (descontando stock) y lista las ventas; filtro opcional <code>?date</code>.</td><td>JWT</td></tr>
+    <tr><td>Sales</td><td><code>/api/v1/sales/{saleId}</code></td><td>GET</td><td>Obtiene el detalle de una venta.</td><td>JWT</td></tr>
+    <tr><td>Sales</td><td><code>/api/v1/sales-products</code></td><td>GET</td><td>Catálogo de productos disponibles para registrar en una venta.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/me/dashboard</code></td><td>GET / PUT</td><td>Consulta y actualiza el dashboard de suscripción del usuario autenticado.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/me/payment-confirmation</code></td><td>GET</td><td>Obtiene el estado de confirmación de pago del usuario autenticado.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/active</code></td><td>GET</td><td>Retorna la suscripción activa.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/by-user/{userId}/billing-setup</code></td><td>PUT</td><td>Registra los datos de facturación y el método de pago.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/by-user/{userId}/activate-control</code></td><td>POST</td><td>Activa el plan Control para el usuario.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/by-user/{userId}/schedule-cancellation</code> · <code>/keep-control</code></td><td>POST</td><td>Programa la cancelación al fin del período o revierte dicha cancelación.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/conversations</code></td><td>GET / POST</td><td>Lista, crea y consulta (<code>/{id}</code>) las conversaciones.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/chat-messages</code></td><td>GET / POST</td><td>Registra y lista mensajes; <code>/by-conversation/{conversationId}</code> filtra por conversación.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/chat-orders</code></td><td>GET / POST</td><td>Gestiona los pedidos generados por el chatbot; <code>/{id}</code> para el detalle.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/chat-orders/{id}/confirm</code> · <code>/reject</code></td><td>POST</td><td>Aprueba (tras validar el comprobante) o rechaza un pedido.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/whatsapp-sessions</code></td><td>GET / POST</td><td>Gestiona las sesiones de WhatsApp del comerciante.</td><td>JWT</td></tr>
   </tbody>
 </table>
 
+**Sintaxis, parámetros y ejemplos de response.** Los identificadores de recurso se pasan como *path parameters* (por ejemplo `{userId}`, `{profileId}`, `{saleId}`) y algunos listados aceptan *query parameters* (por ejemplo `GET /api/v1/sales?date=2026-06-18`). A continuación se muestran dos interacciones representativas con datos de muestra.
+
+*Ejemplo 1 — Autenticación (`POST /api/v1/authentication/sign-in`).* Recibe email y contraseña; retorna el usuario y el token JWT.
+
+```http
+POST /api/v1/authentication/sign-in
+Content-Type: application/json
+
+{ "email": "comerciante@entreprenly.com", "password": "MiClaveSegura123" }
+```
+```json
+// 200 OK
+{
+  "id": 12,
+  "email": "comerciante@entreprenly.com",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+El `token` retornado debe enviarse como `Authorization: Bearer <token>` en las peticiones a endpoints protegidos. Credenciales inválidas retornan `401 Unauthorized`.
+
+*Ejemplo 2 — Registro de venta (`POST /api/v1/sales`).* Cada ítem se indica por `quantity` (productos por unidad) o por `weightKg` (productos por peso). El backend resuelve el `unitPrice`, calcula `subtotal` y `total`, y descuenta el stock del inventario del vendedor.
+
+```http
+POST /api/v1/sales
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "sellerId": 12,
+  "items": [
+    { "productId": 3, "quantity": 2 },
+    { "productId": 7, "weightKg": 1.5 }
+  ],
+  "paymentMethod": "YAPE"
+}
+```
+```json
+// 201 Created
+{
+  "id": 45,
+  "sellerId": 12,
+  "items": [
+    { "productId": 3, "productName": "Arroz 1kg",   "quantity": 2,    "weightKg": null, "unitPrice": 4.50, "subtotal": 9.00 },
+    { "productId": 7, "productName": "Azúcar rubia", "quantity": null, "weightKg": 1.5,  "unitPrice": 5.20, "subtotal": 7.80 }
+  ],
+  "total": 16.80,
+  "paymentMethod": "YAPE",
+  "paymentReceipt": null,
+  "status": "COMPLETED"
+}
+```
+Una petición con parámetros faltantes o con ítems sin stock suficiente retorna `400 Bad Request` con un cuerpo *problem-details* que describe el error.
+
+A continuación se muestra la interfaz Swagger UI con la relación de endpoints y una ejecución de prueba (*Try it out*) con datos de muestra:
+
 <img src="./images/capitulo5/swagger_s3.png" width="600">
 
+<img src="./images/capitulo5/swagger_s3_prueba.png" width="600">
+
 **URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
+
+**Commits relacionados con la documentación (Sprint 3):** las anotaciones OpenAPI (`SwaggerSchema`, descripciones de operaciones y *problem-details*) se incorporaron dentro de los commits de cada Bounded Context; la configuración del esquema de seguridad `Bearer` para Swagger UI se realizó en el commit `cd2d1ff` (`fix(swagger): match bearer security scheme name so authorize sends token`, 2026-06-19).
 
 ---
 
@@ -2297,13 +2368,16 @@ La comunicación entre el Backend y el canal de WhatsApp se realiza a través de
   <tbody>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/bridge/qr</code></td><td>POST</td><td>El bridge releva el último QR de emparejamiento al Backend.</td><td>Token de bridge</td></tr>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/bridge/status</code></td><td>POST</td><td>El bridge reporta el estado de conexión de la sesión.</td><td>Token de bridge</td></tr>
-    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/bridge/qr</code></td><td>GET</td><td>El dashboard obtiene el QR actual y el estado de vinculación.</td><td>JWT</td></tr>
-    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/bridge/session</code></td><td>DELETE</td><td>Desconecta la sesión de WhatsApp del vendedor.</td><td>JWT</td></tr>
+    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/qr?ownerEmail={email}</code></td><td>GET</td><td>El dashboard obtiene el QR actual y el estado de vinculación de la sesión del vendedor.</td><td>No (anónimo)</td></tr>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/webhook</code></td><td>POST</td><td>Recibe un mensaje entrante de WhatsApp (texto o imagen).</td><td>Token de bridge</td></tr>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/webhook/receipt</code></td><td>POST</td><td>Recibe un comprobante de pago (imagen) enviado por el cliente.</td><td>Token de bridge</td></tr>
     <tr><td>Backend → Bridge</td><td><code>/send</code></td><td>POST</td><td>El Backend empuja un mensaje saliente hacia el cliente por WhatsApp.</td><td>Token de bridge</td></tr>
   </tbody>
 </table>
+
+**URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
+
+**Commit relacionado con la documentación (Sprint 4):** `bba48f8` (`docs(chatbot): add descriptions to all endpoint operations`, 2026-07-09), que completa las descripciones OpenAPI de las operaciones del Chatbot.
 
 ---
 
