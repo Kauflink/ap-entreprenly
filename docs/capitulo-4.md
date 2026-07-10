@@ -1402,7 +1402,7 @@ A continuación, se presentan los principales flujos de interacción del sistema
 
 ### 4.6.2. Software Architecture Context Diagram
 
-A continuación, se presenta el System Context Diagram del sistema Entreprenly. En este diagrama se identifica al actor principal, denominado "Emprendedor", quien interactúa con la plataforma a través de la aplicación web. Asimismo, se muestran los sistemas externos que se integran con la solución, tales como servicios de autenticación, mensajería y almacenamiento.
+A continuación, se presenta el System Context Diagram del sistema Entreprenly. En este diagrama se identifica al actor principal, denominado "Emprendedor", quien interactúa con la plataforma a través de la aplicación web (Vue 3). Asimismo, se muestra el único sistema externo integrado con la solución: el WhatsApp Bridge, encargado de enviar y recibir mensajes de WhatsApp para el canal conversacional de ventas.
 
 <p align="center">
 <p align="center">
@@ -1411,7 +1411,7 @@ A continuación, se presenta el System Context Diagram del sistema Entreprenly. 
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-A continuación, se presenta el Container Diagram del sistema Entreprenly. Este diagrama describe la arquitectura interna a nivel de contenedores, mostrando los principales componentes desplegables, como la aplicación web, el API Gateway y los distintos Bounded Contexts implementados como servicios independientes. Además, se incluyen las bases de datos asociadas a cada contexto y los sistemas externos con los que interactúan, permitiendo visualizar la distribución de responsabilidades, la comunicación entre componentes y la estructura general del sistema
+A continuación, se presenta el Container Diagram del sistema Entreprenly. Este diagrama describe la arquitectura interna a nivel de contenedores. Entreprenly está construido como un monolito modular: una aplicación web (Vue 3) consume un único Backend Web API (ASP.NET Core 10 / Kestrel) que aloja y enruta las solicitudes hacia los distintos Bounded Contexts (IAM, Perfil y Configuración, Suscripción, Inventario, Ventas y Chatbot). Todos los contextos comparten una sola base de datos relacional MySQL 8 a través de un único AppDbContext. El diagrama también muestra la integración con el sistema externo WhatsApp Bridge, permitiendo visualizar la distribución de responsabilidades y la comunicación entre componentes.
 
 <p align="center">
 <img src="images/capitulo4/structurizr-109637-EntreprenlyContainer.png" width="500"/>
@@ -1421,39 +1421,38 @@ A continuación, se presenta el Container Diagram del sistema Entreprenly. Este 
 
 <p align="center">Generación y Autenticación de Cuenta BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-IamComponent.png" width="500"/></p>
 
-Este Bounded Context es responsable de la gestión de identidad del usuario dentro del sistema, abarcando tanto el registro como la autenticación. Para ello, integra mecanismos de acceso alternativo mediante Google OAuth, así como un sistema externo de correo para la verificación y vinculación de cuentas.
-A nivel funcional, incluye queries orientados a la lectura de datos de sesión y credenciales, y commands destinados a la creación de cuentas, actualización de información y cambio de contraseña.
-Finalmente, toda la información relacionada con autenticación es persistida en una base de datos MySQL, garantizando la consistencia y seguridad de los datos.
+Este Bounded Context es responsable de la gestión de identidad del usuario dentro del sistema, abarcando el registro (sign-up), la autenticación (sign-in) y la autorización. La autenticación se resuelve internamente mediante JSON Web Tokens (JWT), generados y validados por un servicio de tokens, y las contraseñas se protegen con un servicio de hashing basado en BCrypt.
+A nivel funcional, incluye commands para el registro de cuentas, inicio de sesión, cambio de contraseña, cambio de email y siembra de roles por defecto; y queries para la lectura de usuarios (por id, por email y listado) y de roles (todos o por nombre).
+Además, expone un ContextFacade (ACL) que permite a otros Bounded Contexts resolver la identidad del usuario (userId/email). Toda la información de usuarios y roles es persistida en una base de datos MySQL, garantizando la consistencia y seguridad de los datos.
 
 <p align="center">Perfil y Configuración BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-ProfileComponent.png" width="500"/></p>
 
-Este Bounded Context se encarga de la gestión de la información del perfil del usuario y sus preferencias de configuración, tales como zona horaria, idioma, tema de interfaz (UI), notificaciones y foto de perfil.
-Recibe información inicial del usuario desde el Bounded Context de Generación y Autenticación de Cuenta (inbound), lo que le permite construir y mantener el perfil completo.
-Define queries para la lectura de datos del usuario y commands para la actualización de configuraciones y almacenamiento de cambios realizados. Además, puede enviar información configurada hacia otros contextos (outbound), como el idioma del usuario.
+Este Bounded Context se encarga de la gestión de la información del perfil del usuario y sus preferencias de configuración, tales como zona horaria, idioma, tema de interfaz (UI), notificaciones y plan.
+Se integra de forma reactiva con el Bounded Context de Generación y Autenticación de Cuenta: al publicarse el evento de dominio UserSignedUp, un event handler crea automáticamente un perfil por defecto para el nuevo usuario (inbound).
+Define queries para la lectura del perfil (por id, por userId y listado) y commands para crear el perfil por defecto y actualizar datos, preferencias, notificaciones y plan. Sus datos de lectura son consumidos por otros contextos (outbound); por ejemplo, Inventario consulta la preferencia de alertas de stock y el Chatbot consulta el idioma/cultura del vendedor.
 Toda esta información es almacenada en una base de datos MySQL.
 
 <p align="center">Gestión y Proceso de Suscripción BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-SubscriptionComponent.png" width="500"/></p>
 
-Este Bounded Context es responsable de la gestión del ciclo de vida de las suscripciones, incluyendo la creación, renovación, cancelación y cambio de plan.
-Recibe como entrada información del usuario y configuraciones provenientes del Bounded Context de Perfil y Configuración (inbound), lo que le permite adaptar el proceso de suscripción a las preferencias del usuario.
-Cuenta con commands que gestionan las operaciones sobre la suscripción y queries que permiten consultar el estado, datos de facturación y detalles asociados al usuario.
+Este Bounded Context es responsable de la gestión del ciclo de vida de las suscripciones, incluyendo la creación por defecto, la activación y mantenimiento del plan de control, la configuración de datos de facturación, el reemplazo del dashboard y la programación de la cancelación.
+Al igual que Perfil, se integra de forma reactiva con Generación y Autenticación de Cuenta: al publicarse el evento UserSignedUp, un event handler crea una suscripción por defecto para el nuevo usuario (inbound).
+Cuenta con commands que gestionan las operaciones sobre la suscripción y un query que permite consultar la suscripción por userId (incluye atajos de dashboard y confirmación de pago).
 La información de suscripciones es persistida en una base de datos MySQL, asegurando el control y seguimiento del estado de cada cuenta.
 
 <p align="center">Gestión de Inventario BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-InventoryComponent.png" width="500"/></p>
 
-Este Bounded Context se encarga de la administración del inventario, incluyendo la creación, actualización y eliminación de productos, así como la gestión de lotes asociados.
-Además, incorpora funcionalidades de monitoreo como alertas de stock y caducidad de productos. Para ello, utiliza queries que permiten obtener configuraciones relevantes, como el idioma del usuario desde el Bounded Context de Perfil y Configuración (inbound).
-Asimismo, expone información de productos hacia otros contextos (outbound), como Ventas y Chatbot.
-Incluye commands para la gestión de productos y operaciones relacionadas, y persiste toda la información en una base de datos MySQL.
+Este Bounded Context se encarga de la administración del inventario, diferenciando productos por unidad y por peso, junto con la gestión de sus lotes (creación, actualización y eliminación) y una vista de lectura combinada de lotes.
+Además, incorpora alertas de stock derivadas on-demand: un servicio de dominio (Stock Alert Generator) genera las alertas cuando el stock cae por debajo del umbral, calculándolas a partir del snapshot actual de productos y lotes. Para respetar la configuración del usuario, consulta la preferencia de notificaciones desde el Bounded Context de Perfil y Configuración (inbound).
+Asimismo, expone un ContextFacade (ACL) que entrega el catálogo con stock ya calculado y realiza el descuento de stock consumiendo lotes en orden FIFO (más antiguos primero), información consumida por los contextos de Ventas y Chatbot (outbound).
+Incluye commands para la gestión de productos y lotes, queries para su lectura, y persiste toda la información en una base de datos MySQL.
 
 <p align="center">Ventas BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-SalesComponent.png" width="500"/></p>
 
-Este Bounded Context gestiona el proceso de venta presencial, desde la selección de productos hasta la generación del comprobante. Para ello, consume información del Bounded Context de Inventario (inbound) para validar disponibilidad de productos y stock, y registra el método de pago seleccionado como parte del propio proceso de venta. Incluye queries para la consulta de información relevante y commands para registrar las ventas realizadas. Toda la información generada es persistida en una base de datos MySQL.
+Este Bounded Context gestiona el proceso de venta presencial (point-of-sale), desde la selección de productos hasta el registro del comprobante de pago (Yape, Plin o efectivo). Para ello consume el ContextFacade de Inventario (inbound/ACL) en dos momentos: expone el catálogo vendible con stock para el punto de venta y, una vez registrada la venta, descuenta el stock correspondiente de los lotes en orden FIFO. Incluye un command para registrar la venta y queries para consultarla por id, listarla o filtrarla por día de negocio. Toda la información generada es persistida en una base de datos MySQL.
 
 <p align="center">ChatBot BC</p> <p align="center"><img src="images/capitulo4/structurizr-109637-ChatbotComponent.png" width="500"/></p>
 
-Este Bounded Context permite la gestión de ventas a través de un canal conversacional basado en WhatsApp. Para su funcionamiento, consume información del Bounded Context de Inventario (inbound) para consultar disponibilidad de productos y registra la confirmación de pago dentro del flujo del pedido. Incluye queries para la obtención de información necesaria durante la interacción con el usuario y commands para la generación, actualización y seguimiento de pedidos. Además, se integra con servicios externos de mensajería (WhatsApp API) y persiste la información en una base de datos MySQL, permitiendo el seguimiento de las conversaciones y transacciones realizadas.
-
+Este Bounded Context permite la gestión de ventas a través de un canal conversacional basado en WhatsApp. Recibe los mensajes y comprobantes entrantes mediante un webhook llamado por el WhatsApp Bridge y, para componer las respuestas, consulta el catálogo y stock del vendedor a través del ContextFacade de Inventario (inbound/ACL); además resuelve la identidad del vendedor mediante el ACL de IAM y aplica su idioma/cultura consultando Perfil. Un servicio de dominio (Product Reply Composer) detecta pedidos y arma respuestas de catálogo/precio/stock, con un responder por reglas como respaldo. Incluye commands para procesar mensajes y comprobantes, gestionar conversaciones, sesiones y mensajes manuales, y para crear, confirmar o rechazar pedidos; y queries para leer conversaciones, mensajes, pedidos y sesiones. Los mensajes salientes se envían mediante el WhatsApp Bridge y toda la información (conversaciones, mensajes, pedidos y sesiones) se persiste en una base de datos MySQL.
 ## 4.7. Software Object-Oriented Design
 
 ### 4.7.1. Class Diagrams
