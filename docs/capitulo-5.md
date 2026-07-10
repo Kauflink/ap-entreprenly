@@ -136,7 +136,7 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
     </tr>
     <tr>
       <td><strong>Docker</strong></td>
-      <td>Plataforma de containerización utilizada para empaquetar el RESTful Web Services (ASP.NET Core) en una imagen reproducible, publicada en Google Artifact Registry y orquestada en la VM mediante Docker Compose.</td>
+      <td>Plataforma de containerización utilizada para empaquetar el RESTful Web Services (ASP.NET Core) en una imagen reproducible, construida con Cloud Build, publicada en Google Artifact Registry y desplegada en Google Cloud Run.</td>
       <td><a href="https://www.docker.com/">https://www.docker.com/</a></td>
     </tr>
   </tbody>
@@ -402,26 +402,25 @@ Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
 #### RESTful Web Services
 
-El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#, .NET 10) y se despliega de forma **containerizada con Docker** sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)**. La imagen del API se publica en **Google Artifact Registry** y, en la VM, se orquesta mediante **Docker Compose** junto con **Caddy**, que actúa como reverse proxy y gestiona automáticamente los certificados TLS. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se autentica con GCP mediante **Workload Identity Federation** (sin claves de cuenta de servicio de larga duración). La persistencia se realiza sobre una base de datos **MySQL**.
+El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#, .NET 10) y se empaqueta con un **`Dockerfile`** multi-etapa. Se despliega en **Google Cloud Run** (servicio `ap-entreprenly-web-services`, región `us-east1`), donde el contenedor se construye a partir del código fuente mediante **Cloud Build** y la imagen queda publicada en **Google Artifact Registry**. La persistencia se realiza sobre **Cloud SQL para MySQL 8.4** (instancia `entreprenly-db`), a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL** (socket Unix). El servicio se expone en el subdominio personalizado **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)** y el despliegue se realiza tomando como fuente la rama `main` del repositorio `Kauflink/ap-entreprenly-web-services`.
 
 Los pasos para configurar y ejecutar el despliegue son los siguientes:
 
-1. En la consola de GCP, crear una instancia de **Compute Engine** (Ubuntu 24.04 LTS, tipo `e2-medium`) con Docker y Docker Compose instalados, y crear un repositorio en **Artifact Registry** (`us-east1-docker.pkg.dev/<project>/entreprenly`) para alojar la imagen del API.
-2. En la VM, preparar el directorio de despliegue `/opt/app` con el archivo `docker-compose.yml`, el `Caddyfile` y el archivo de secretos `app.env` (cadena de conexión a MySQL, secreto JWT, configuración del WhatsApp bridge). Estos secretos **no se versionan**; se proveen localmente en la VM.
-3. Definir el `Caddyfile` para que Caddy termine TLS sobre `ap-api.entreprenly.online` y haga `reverse_proxy` al contenedor del API en el puerto `8080`:
-   ```caddy
-   ap-api.entreprenly.online {
-       encode gzip
-       reverse_proxy api:8080
-   }
+1. En **Google Cloud Console**, seleccionar (o crear) el proyecto y habilitar las APIs necesarias: **Cloud Run Admin**, **Cloud Build**, **Artifact Registry** y **Cloud SQL Admin**.
+2. Provisionar la instancia de **Cloud SQL para MySQL 8.4** (`entreprenly-db`, región `us-east1`), crear la base de datos `ap-entreprenly` y el usuario `entreprenly`, y anotar su **connection name** (`project-46ae30cc-2d30-4c9e-9f5:us-east1:entreprenly-db`), requerido más adelante por la conexión de Cloud Run.
+3. Confirmar que el repositorio `Kauflink/ap-entreprenly-web-services` contiene el **`Dockerfile`** multi-etapa: la etapa `build` usa `mcr.microsoft.com/dotnet/sdk:10.0` para ejecutar `dotnet restore` y `dotnet publish -c Release`, y la etapa `runtime` usa `mcr.microsoft.com/dotnet/aspnet:10.0`. La aplicación escucha en el puerto `8080` (`ASPNETCORE_URLS=http://+:8080`) y el `ENTRYPOINT` ejecuta `dotnet Entreprenly.WebServices.dll`.
+4. Verificar la cadena de conexión del perfil de producción, que apunta al **socket Unix de Cloud SQL** que Cloud Run monta automáticamente y es consumida por **EF Core 9** con el proveedor **Pomelo MySQL**:
+   ```text
+   server=/cloudsql/<CLOUD_SQL_CONNECTION_NAME>;database=ap-entreprenly;User Id=entreprenly;AllowPublicKeyRetrieval=True
    ```
-4. En el proveedor de DNS del dominio, crear un registro `A` que apunte `ap-api.entreprenly.online` a la IP externa de la instancia de GCP (Caddy emite el certificado de Let's Encrypt automáticamente).
-5. En el repositorio de Web Services (`Kauflink/ap-entreprenly-web-services`), el `Dockerfile` define un build multi-etapa: la etapa `build` usa `mcr.microsoft.com/dotnet/sdk:10.0` para ejecutar `dotnet publish -c Release`, y la etapa `runtime` usa `mcr.microsoft.com/dotnet/aspnet:10.0`, exponiendo el puerto `8080` (`ASPNETCORE_URLS=http://+:8080`).
-6. Configurar en el repositorio los **GitHub Secrets** para Workload Identity Federation: `GCP_WIF_PROVIDER` (proveedor de identidad) y `GCP_DEPLOY_SA` (cuenta de servicio de despliegue).
-7. El workflow `.github/workflows/deploy.yml` se ejecuta ante cada push en la rama `main` y realiza: checkout, autenticación a GCP vía Workload Identity Federation, `docker build` y `docker push` de la imagen (etiquetada con `:<sha>` y `:latest`) a Artifact Registry, y conexión a la VM mediante **SSH a través de un túnel IAP** para ejecutar `docker compose pull` y `docker compose up -d --remove-orphans`, desplegando la nueva imagen.
-8. Caddy gestiona los puertos `80` y `443` hacia el exterior; el contenedor del API solo expone el puerto `8080` dentro de la red interna de Docker Compose, sin exposición directa.
-9. Documentar los endpoints del API desplegado mediante **Swagger UI** (`UseSwagger` + `UseSwaggerUI`), accesible en la ruta `https://ap-api.entreprenly.online/swagger`. La URL base del API se registra como variable de entorno (`VITE_ENTREPENLY_PLATFORM_API_URL`) en el proyecto del Frontend Web Application para su integración.
-10. Validar el despliegue realizando una solicitud de prueba a un endpoint del API desde Swagger UI o desde Postman, confirmando que el servicio responde correctamente sobre HTTPS.
+   El esquema de la base de datos se gestiona con **migraciones de EF Core**.
+5. En **Cloud Run > Deploy container > Service**, elegir la opción de desplegar **desde el código fuente / repositorio** (build con Cloud Build a partir del `Dockerfile`). Conectar el repositorio de GitHub `ap-entreprenly-web-services` y seleccionar la rama `main`.
+6. Definir la configuración del servicio: nombre `ap-entreprenly-web-services`, región `us-east1`, **Authentication = Allow unauthenticated invocations**, **container port = 8080**, **CPU = 1**, **Memory = 1 GiB**, **Max instances = 3** y **Startup CPU boost** activado.
+7. En la pestaña **Containers > Cloud SQL connections**, agregar la conexión a la instancia `entreprenly-db` creada en el Paso 2 (Cloud Run inyecta el socket en `/cloudsql/<connection_name>`).
+8. En **Variables & Secrets**, definir las variables de entorno del perfil de producción: `ASPNETCORE_ENVIRONMENT=Production`, `DATABASE_PROJECT`, `DATABASE_REGION`, `DATABASE_INSTANCE`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`, `TokenSettings__Secret` (secreto JWT), `WhatsAppBridge__BridgeUrl` y `WhatsAppBridge__BridgeToken`. *(Recomendado: gestionar los valores sensibles —contraseña de la base de datos, secreto JWT y token del bridge— mediante **Secret Manager** en lugar de texto plano.)*
+9. Presionar **Deploy** y esperar a que Cloud Build construya la imagen (publicada en Artifact Registry) y la nueva revisión reciba el **100 % del tráfico**. Cloud Run asigna una URL `*.run.app`.
+10. En **Cloud Run > Manage Custom Domains > Add mapping**, mapear `ap-api.entreprenly.online` al servicio, crear en el DNS los registros indicados y esperar la emisión automática del certificado TLS. Registrar la URL base `https://ap-api.entreprenly.online/api/v1` como variable de entorno (`VITE_ENTREPENLY_PLATFORM_API_URL`) en el proyecto del Frontend Web Application para su integración.
+11. Validar el despliegue accediendo a la documentación **Swagger UI** en `https://ap-api.entreprenly.online/swagger` y realizando una petición de prueba desde Swagger o Postman, confirmando la respuesta correcta sobre HTTPS.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -1670,7 +1669,7 @@ Para el tercer Sprint, el equipo estableció como objetivo principal la implemen
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsable, esta vez sobre el backend. Los aspectos cubiertos fueron: el Shared Kernel, la infraestructura de despliegue (Docker, Caddy, CI/CD) y los BCs de IAM y Profiles; el BC de Inventory; el BC de Sales; el BC de Subscription; y el BC de Chatbot. A continuación se presenta la matriz de liderazgo y colaboración (LACX):
+En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsable, esta vez sobre el backend. Los aspectos cubiertos fueron: el Shared Kernel, la infraestructura de despliegue (Docker, Cloud Run, Cloud SQL) y los BCs de IAM y Profiles; el BC de Inventory; el BC de Sales; el BC de Subscription; y el BC de Chatbot. A continuación se presenta la matriz de liderazgo y colaboración (LACX):
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1775,7 +1774,7 @@ El objetivo principal de este Sprint fue implementar los RESTful Web Services po
     </tr>
     <tr>
       <td>Deploy / CI/CD</td>
-      <td>Containerizar el backend (Dockerfile multi-etapa), definir el stack de la VM con Docker Compose y Caddy, y crear el workflow de despliegue a la VM mediante Workload Identity Federation.</td>
+      <td>Containerizar el backend (Dockerfile multi-etapa) y desplegarlo en Google Cloud Run construyendo la imagen con Cloud Build, conectándolo a Cloud SQL para MySQL mediante el conector nativo (socket Unix) y parametrizando la configuración con variables de entorno.</td>
       <td>10</td>
       <td>Camargo Briceño, Joseph Julius</td>
       <td>Done</td>
@@ -1822,7 +1821,7 @@ El objetivo principal de este Sprint fue implementar los RESTful Web Services po
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de Web Services (`ap-entreprenly-web-services`) y, de forma complementaria, sobre el repositorio del Frontend (`ap-entreprenly-frontend`) para la integración con la API real. El trabajo se realizó entre el 12 y el 19 de junio de 2026, aplicando GitFlow con ramas `feature/` por Bounded Context. A continuación se presenta el registro de los commits más representativos:
+Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de Web Services (`ap-entreprenly-web-services`) y, de forma complementaria, sobre el repositorio del Frontend (`ap-entreprenly-frontend`) para la integración con la API real. El trabajo se realizó entre el 12 y el 26 de junio de 2026, aplicando GitFlow con ramas `feature/` por Bounded Context. A continuación se presenta el registro de los commits más representativos:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1840,8 +1839,9 @@ Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de W
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/profiles-context</td><td>0408620</td><td>feat(profiles): expose profile rest endpoints</td><td>2026-06-12</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/app-bootstrap</td><td>8f8d85a</td><td>feat(persistence): add initial database migration</td><td>2026-06-12</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>2976a19</td><td>feat(deploy): containerize the backend</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>88c96ec</td><td>feat(deploy): add vm compose stack with caddy</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>2d71068</td><td>ci: deploy to the vm on pushes to main</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>6629653</td><td>refactor: use Cloud SQL socket connection string driven by environment variables</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>cdb9937</td><td>fix: switch MySQL provider to Pomelo/MySqlConnector for Cloud SQL Unix socket support</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>c639c2f</td><td>chore: remove obsolete VM deploy artifacts and add project README</td><td>2026-06-26</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>6211f75</td><td>feat(chatbot): add chatbot bounded context — domain, application, infrastructure and REST interfaces</td><td>2026-06-13</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/sales</td><td>1e278ef</td><td>feat(sales): add sales persistence and REST interfaces</td><td>2026-06-15</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/inventory</td><td>1cd6fa6</td><td>feat(inventory): add inventory bounded context</td><td>2026-06-15</td></tr>
@@ -1922,7 +1922,7 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`), publicarla en **Google Artifact Registry** (`us-east1-docker.pkg.dev`), y desplegarla en la instancia de **Google Compute Engine** mediante **Docker Compose**, con **Caddy** como reverse proxy y gestor automático de TLS. La autenticación del pipeline de GitHub Actions se realiza mediante **Workload Identity Federation**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
+Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`) mediante **Cloud Build**, publicarla en **Google Artifact Registry** y desplegarla en **Google Cloud Run** (servicio `ap-entreprenly-web-services`, región `us-east1`, con *allow unauthenticated*, 1 vCPU, 1 GiB y *startup CPU boost*). La persistencia se realiza sobre **Cloud SQL para MySQL 8.4** (instancia `entreprenly-db`), a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL** (socket Unix), consumido por **EF Core** con el proveedor **Pomelo/MySqlConnector**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
 
 <img src="./images/capitulo5/deploy_s3_1.png" width="600">
 
@@ -1932,7 +1932,7 @@ Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Servi
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 3, los cinco miembros del equipo participaron en la implementación del backend y su integración con el frontend. El trabajo se distribuyó por Bounded Context en el repositorio `ap-entreprenly-web-services`: Joseph Julius lideró el Shared Kernel, la infraestructura de despliegue (Docker, Caddy, CI/CD) y los BCs de IAM y Profiles; José Antonio lideró el BC de Inventory; José Fernando lideró el BC de Sales; Lionel Abraham lideró el BC de Subscription; y Elynor Mikela lideró el BC de Chatbot. La integración del frontend con la API real se realizó de forma colaborativa, cada miembro sobre su BC.
+Durante el Sprint 3, los cinco miembros del equipo participaron en la implementación del backend y su integración con el frontend. El trabajo se distribuyó por Bounded Context en el repositorio `ap-entreprenly-web-services`: Joseph Julius lideró el Shared Kernel, la infraestructura de despliegue (Docker, Cloud Run, Cloud SQL) y los BCs de IAM y Profiles; José Antonio lideró el BC de Inventory; José Fernando lideró el BC de Sales; Lionel Abraham lideró el BC de Subscription; y Elynor Mikela lideró el BC de Chatbot. La integración del frontend con la API real se realizó de forma colaborativa, cada miembro sobre su BC.
 
 El equipo aplicó GitFlow con ramas `feature/` por Bounded Context (`feature/iam-context`, `feature/profiles-context`, `feature/inventory`, `feature/sales`, `feature/subscription`, `feature/chatbot`, `feature/deployment`) integradas a `develop` y `main` mediante Pull Requests (más de 20 PRs en el repositorio de Web Services). La distribución aproximada de commits en el backend fue: Camargo Briceño (37), Palma De Los Santos (25), Chavez Carrasco (12), Flores Pinchi (6) y Peirano Brun (3).
 
@@ -1957,7 +1957,7 @@ Para este cuarto y último Sprint, el equipo estableció como objetivo principal
     <tr><td><strong>Location</strong></td><td>Reunión virtual vía Discord</td></tr>
     <tr><td><strong>Prepared By</strong></td><td>Camargo Briceño, Joseph Julius</td></tr>
     <tr><td><strong>Attendees (to planning meeting)</strong></td><td>Camargo Briceño, Joseph Julius / Chavez Carrasco, Lionel Abraham / Palma De Los Santos, Elynor Mikela / Peirano Brun, José Antonio / Flores Pinchi, José Fernando</td></tr>
-    <tr><td><strong>Sprint 3 Review Summary</strong></td><td>En el Sprint 3 se implementó y desplegó el Backend real con ASP.NET Core sobre Google Compute Engine, con autenticación JWT, persistencia con Entity Framework Core por bounded context y la lógica del flujo de pedidos del chatbot (US-41 a US-52). El Frontend se integró con la API real reemplazando la Fake API del Sprint 2.</td></tr>
+    <tr><td><strong>Sprint 3 Review Summary</strong></td><td>En el Sprint 3 se implementó y desplegó el Backend real con ASP.NET Core sobre Google Cloud Run, con base de datos en Cloud SQL para MySQL, autenticación JWT, persistencia con Entity Framework Core por bounded context y la lógica del flujo de pedidos del chatbot (US-41 a US-52). El Frontend se integró con la API real reemplazando la Fake API del Sprint 2.</td></tr>
     <tr><td><strong>Sprint 3 Retrospective Summary</strong></td><td>El equipo identificó que, si bien la lógica del chatbot residía en el Backend, faltaba la integración con WhatsApp real: las conversaciones seguían siendo simuladas. Para el Sprint 4 se acordó implementar un WhatsApp bridge multi-tenant con <code>whatsapp-web.js</code>, conectar el canal real (vinculación por QR, recepción de mensajes y de comprobantes por imagen, y envío de respuestas al cliente) y desplegar la versión final de los tres productos.</td></tr>
     <tr><td colspan="2"><strong>Sprint Goal &amp; User Stories</strong></td></tr>
     <tr><td><strong>Sprint 4 Goal</strong></td><td>Nuestro enfoque está en habilitar la atención real de clientes por WhatsApp, conectando el chatbot de Entreprenly a cuentas reales mediante un bridge multi-tenant. Creemos que entrega valor inmediato al comerciante al automatizar consultas de productos, pedidos y validación de pagos digitales directamente sobre WhatsApp. Esto se confirmará cuando un cliente pueda vincular su WhatsApp por código QR, conversar con el bot, enviar su comprobante de pago como imagen y recibir la confirmación de su pedido de extremo a extremo. User Stories: US-37, US-38, US-44, US-45 y US-47.</td></tr>
@@ -2207,7 +2207,7 @@ La comunicación entre el Backend y el canal de WhatsApp se realiza a través de
 
 #### 5.2.4.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma containerizada con Docker sobre una instancia de **Google Compute Engine (VM)**, con despliegue automatizado ante cada push a `main`. El bridge se comunica con el Backend desplegado en Google Compute Engine y expone la página `/switch` para el enrutamiento entre backends. Con esto quedó desplegada la **versión final** de los tres productos digitales (Landing Page, Frontend y Web Services) más el canal de WhatsApp. El proceso realizado fue el siguiente:
+Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma containerizada con Docker sobre una instancia de **Google Compute Engine (VM)**, con despliegue automatizado ante cada push a `main`. El bridge se comunica con el Backend desplegado en Google Cloud Run y expone la página `/switch` para el enrutamiento entre backends. Con esto quedó desplegada la **versión final** de los tres productos digitales (Landing Page, Frontend y Web Services) más el canal de WhatsApp. El proceso realizado fue el siguiente:
 
 1. **Containerización del bridge:** Se creó un `Dockerfile` para el servicio Node.js con `whatsapp-web.js` y las dependencias de Chromium necesarias para WhatsApp Web.
 
