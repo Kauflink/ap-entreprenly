@@ -1005,27 +1005,27 @@ Durante el Sprint 1, el alcance de implementación se limitó exclusivamente al 
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 1, el equipo configuró y ejecutó el proceso de despliegue del Landing Page mediante GitHub Pages y un pipeline de integración continua con GitHub Actions. A continuación se describe el proceso realizado:
+Durante el Sprint 1, el equipo configuró y ejecutó el despliegue del Landing Page mediante **GitHub Pages**, publicándolo directamente desde la rama `main`. A continuación se describe el proceso realizado:
 
 1. **Creación del repositorio:** Se creó el repositorio público `ap-entreprenly-landing` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con las ramas `main` y `develop`.
 
-![creacion_repos](./images/capitulo5/creacion_repos.png "creacion_repos")
+![creacion_repos](./images/capitulo5/creacion_reposs.png "Creación del repositorio del Landing Page")
 
-2. **Configuración del dominio personalizado:** Se añadió el archivo `CNAME` al repositorio con el dominio personalizado asignado al Landing Page.
+2. **Compilación local de estilos:** Los estilos se generan con la CLI de **Tailwind CSS** (`npm run build`, que ejecuta `tailwindcss -i ./input.css -o ./styles.css --minify`) y el `styles.css` resultante se versiona junto con los archivos estáticos, de modo que GitHub Pages publica el sitio tal cual, sin paso de build en el servidor.
 
-![cname](./images/capitulo5/cname.png "cname")
+3. **Publicación con GitHub Pages:** Durante el Sprint 1, la publicación se automatizó con un workflow de GitHub Actions (`.github/workflows/deploy.yml`) que, ante cada push a `main`, instala Node.js 20 y las dependencias, compila los estilos con Tailwind (`npm run build`), sube el artefacto con `actions/upload-pages-artifact` y publica en GitHub Pages con `actions/deploy-pages` (entorno `github-pages`). *(Posteriormente el equipo simplificó el flujo retirando este workflow —commit `51676a0`, "remove unused Deploy workflow (Pages deploys from branch)"— y dejando la publicación directa desde la rama `main` en **Settings > Pages**, con Source = `main` y carpeta raíz `/`.)*
 
-![entreprenly_cname](./images/capitulo5/entreprenly_cname.png "entreprenly_cname")
+![workflows1](./images/capitulo5/workflows1.png "Workflow de despliegue en .github/workflows")
 
-3. **Configuración del pipeline de CI/CD:** Se creó un workflow de GitHub Actions (`.github/workflows/`) que automatiza el proceso de build y despliegue. El workflow incluye los pasos de instalación de dependencias (`npm ci`), compilación de estilos con Tailwind CSS (`npm run build`) y despliegue automático a la rama `gh-pages` al fusionar cambios en `main`.
+![workflows2](./images/capitulo5/workflows2.png "Contenido del workflow deploy.yml: build con Tailwind y publicación con actions/deploy-pages")
 
-![workflows1](./images/capitulo5/workflows1.png "workflows1")
+4. **Configuración del dominio personalizado:** Se añadió el archivo `CNAME` a la raíz del repositorio con el dominio `landing.entreprenly.online` y se habilitó **Enforce HTTPS** en la configuración de Pages.
 
-![workflows2](./images/capitulo5/workflows2.png "workflows2")
+![cname](./images/capitulo5/cnamee.png "Archivo CNAME con el dominio personalizado")
 
-4. **Verificación del despliegue:** Se comprobó que el Landing Page quedó correctamente publicado y accesible desde la URL de GitHub Pages con el dominio configurado.
+5. **Verificación del despliegue:** Se comprobó que el Landing Page quedó correctamente publicado y accesible en `https://landing.entreprenly.online`.
 
-![landing_desplegado](./images/capitulo5/landing_desplegado.png "landing_desplegado")
+![landing_desplegado](./images/capitulo5/landing_desplegado.png "Landing Page publicado")
 
 ---
 
