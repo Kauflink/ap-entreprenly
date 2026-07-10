@@ -1463,31 +1463,31 @@ Este Bounded Context permite la gestión de ventas a través de un canal convers
 
 <p align="center">Shared Kernel BC</p>
 <p align="center"><img src="images/capitulo4/08_KernelBC.svg" width="500"/></p>
-<p align="center">https://tinyurl.com/shared-kernel-bc</p>
+<p align="center">URL del diagrama de clase: https://tinyurl.com/shared-kernel-bc</p>
 
 <p align="center">Generación y Autenticación de Cuenta BC</p>
 <p align="center"><img src="images/capitulo4/01_AuthBC.svg" width="500"/></p>
-<p align="center">https://tinyurl.com/iam-bc-class</p>
+<p align="center">URL del diagrama de clase: https://tinyurl.com/iam-bc-class</p>
 
 <p align="center">Perfil y Configuración BC</p>
 <p align="center"><img src="images/capitulo4/02_ProfileBC.svg" width="500"/></p>
-<p align="center">https://tinyurl.com/profiles-bc</p>
+<p align="center">URL del diagrama de clase: https://tinyurl.com/profiles-bc</p>
 
 <p align="center">Gestión y Proceso de Suscripción BC</p>
 <p align="center"><img src="images/capitulo4/03_SubscriptionBC.svg" width="500"/></p>
-<p align="center">https://tinyurl.com/subscriptions-bc</p>
+<p align="center">URL del diagrama de clase: https://tinyurl.com/subscriptions-bc</p>
 
 <p align="center">Gestión de Inventario BC</p>
 <p align="center"><img src="images/capitulo4/04_InventoryBC.svg" width="500"/></p>
-<p align="center">https://tinyurl.com/inventory-bc</p>
+<p align="center">URL del diagrama de clase: https://tinyurl.com/inventory-bc</p>
 
 <p align="center">Ventas BC</p>
 <p align="center"><img src="images/capitulo4/05_SalesBC.svg" width="500"/></p>
-<p align="center">https://tinyurl.com/sales-bc-class</p>
+<p align="center">URL del diagrama de clase: https://tinyurl.com/sales-bc-class</p>
 
 <p align="center">Chatbot de WhatsApp BC</p>
 <p align="center"><img src="images/capitulo4/07_ChatbotBC.svg" width="500"/></p>
-<p align="center">https://tinyurl.com/chatbot-bc</p>
+<p align="center">URL del diagrama de clase: https://tinyurl.com/chatbot-bc</p>
 
 
 ## 4.8. Database Design
