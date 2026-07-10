@@ -136,7 +136,7 @@ En esta sección se detallan las herramientas, frameworks y plataformas utilizad
     </tr>
     <tr>
       <td><strong>Docker</strong></td>
-      <td>Plataforma de containerización utilizada para empaquetar el RESTful Web Services (ASP.NET Core) en una imagen reproducible, publicada en Google Artifact Registry y orquestada en la VM mediante Docker Compose.</td>
+      <td>Plataforma de containerización utilizada para empaquetar el RESTful Web Services (ASP.NET Core) en una imagen reproducible, construida con Cloud Build, publicada en Google Artifact Registry y desplegada en Google Cloud Run.</td>
       <td><a href="https://www.docker.com/">https://www.docker.com/</a></td>
     </tr>
   </tbody>
@@ -354,74 +354,174 @@ Scenario: Developer retrieves an existing project successfully
 
 En esta sección se especifica la configuración de despliegue definida por el equipo de Kauflink para cada uno de los productos digitales que conforman la solución **Entreprenly**: Landing Page, Frontend Web Application y RESTful Web Services. El objetivo es establecer, desde el inicio del ciclo de vida, los pasos y herramientas necesarias para lograr el despliegue o publicación satisfactoria de cada producto a partir de los repositorios de código fuente.
 
-#### Landing Page
+**Productos desplegados y URLs públicas**
+
+La siguiente tabla resume los tres productos digitales de la solución, con su tecnología y plataforma de despliegue y la URL pública donde se encuentran disponibles.
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Tecnología / Plataforma de despliegue</th>
+      <th>URL pública</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Landing Page</td>
+      <td>HTML5 + Tailwind CSS / GitHub Pages</td>
+      <td><a href="https://landing.entreprenly.online/">https://landing.entreprenly.online/</a></td>
+    </tr>
+    <tr>
+      <td>Frontend Web Application</td>
+      <td>Vue 3 (Vite) / Firebase Hosting</td>
+      <td><a href="https://ap.entreprenly.online/">https://ap.entreprenly.online/</a></td>
+    </tr>
+    <tr>
+      <td>RESTful Web Services (API)</td>
+      <td>ASP.NET Core (.NET 10) / Google Cloud Run</td>
+      <td><a href="https://ap-api.entreprenly.online/swagger">https://ap-api.entreprenly.online/swagger</a></td>
+    </tr>
+  </tbody>
+</table>
+
+#### Landing Page (GitHub Pages)
 
 El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main`. En el Sprint 1 la publicación se automatizó con un workflow de GitHub Actions y, posteriormente, el equipo simplificó el flujo dejando la publicación directa desde la rama. El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
 
-Los pasos para configurar y ejecutar el despliegue son los siguientes:
+**Paso 1.** Asegurar que el repositorio del Landing Page (`Kauflink/ap-entreprenly-landing`) esté **público** en GitHub y siga GitFlow (ramas `main` y `develop`).
 
-1. Asegurarse de que el repositorio del Landing Page (`Kauflink/ap-entreprenly-landing`) esté público en GitHub.
-2. Generar la hoja de estilos de producción ejecutando `npm run build` (`tailwindcss -i ./src/input.css -o ./styles.css --minify`) y versionar el `styles.css` resultante junto con el resto de archivos estáticos.
-3. En la configuración del repositorio, ingresar a **Settings > Pages** y seleccionar como fuente de publicación la rama `main` y la carpeta raíz (`/`).
-4. Configurar el dominio personalizado ingresando `landing.entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
-5. En el proveedor de DNS del dominio, crear los registros `A`/`CNAME` que apunten a los servidores de GitHub Pages, de acuerdo con la documentación oficial de GitHub.
-6. Verificar que el archivo `CNAME` con el valor `landing.entreprenly.online` esté presente en la raíz del repositorio para que GitHub Pages respete el dominio personalizado entre despliegues.
-7. Validar el despliegue accediendo a `https://landing.entreprenly.online` y confirmando que la versión publicada corresponde con el último commit integrado en `main`.
+<p align="center"><img src="images/capitulo5/deploy-landing-01.png" width="700" alt="Repositorio del Landing en GitHub"></p>
 
-#### Frontend Web Application
+**Paso 2.** Generar la hoja de estilos de producción ejecutando `npm run build` (`tailwindcss -i ./src/input.css -o ./styles.css --minify`) y versionar el `styles.css` resultante junto con el resto de archivos estáticos.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-02.png" width="700" alt="Compilación de estilos con Tailwind CSS"></p>
+
+**Paso 3.** En la configuración del repositorio, ingresar a **Settings > Pages** y seleccionar como fuente de publicación (**Source**) la rama `main` y la carpeta raíz (`/`).
+
+<p align="center"><img src="images/capitulo5/deploy-landing-03.png" width="700" alt="Settings > Pages con Source = main"></p>
+
+**Paso 4.** Configurar el dominio personalizado ingresando `landing.entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-04.png" width="700" alt="Dominio personalizado en GitHub Pages"></p>
+
+**Paso 5.** En el proveedor de DNS del dominio, crear los registros `A`/`CNAME` que apunten a los servidores de GitHub Pages, de acuerdo con la documentación oficial de GitHub.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-05.png" width="700" alt="Registros DNS del dominio"></p>
+
+**Paso 6.** Verificar que el archivo `CNAME` con el valor `landing.entreprenly.online` esté presente en la raíz del repositorio para que GitHub Pages respete el dominio personalizado entre despliegues.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-06.png" width="700" alt="Archivo CNAME en el repositorio"></p>
+
+**Paso 7.** Validar el despliegue accediendo a `https://landing.entreprenly.online` y confirmando que la versión publicada corresponde con el último commit integrado en `main`.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-07.png" width="700" alt="Landing Page publicado"></p>
+
+#### Frontend Web Application (Firebase Hosting)
 
 El Frontend Web Application de Entreprenly está desarrollado con **Vue 3** (construido con **Vite**) y se despliega mediante **Firebase Hosting**, disponible en el subdominio personalizado **[https://ap.entreprenly.online](https://ap.entreprenly.online)** (y también accesible mediante el dominio por defecto de Firebase **ap-entreprenly.web.app**). Firebase Hosting fue elegido sobre GitHub Pages por tres razones concretas: soporta el enrutamiento del lado del cliente (SPA routing) de Vue Router de forma nativa sin configuraciones adicionales, permite asociar subdominios personalizados sin conflictos con el dominio principal ya utilizado por el Landing Page en GitHub Pages, y se integra de forma directa con GitHub Actions para automatizar el ciclo de build y despliegue.
 
-Los pasos para configurar y ejecutar el despliegue son los siguientes:
+**Paso 1.** Crear un proyecto en **Firebase Console** ([console.firebase.google.com](https://console.firebase.google.com)) e ingresar a la sección **Hosting**. Activar el servicio y asociarlo al proyecto `ap-entreprenly`.
 
-1. Crear un proyecto en **Firebase Console** ([console.firebase.google.com](https://console.firebase.google.com)) e ingresar a la sección **Hosting**. Activar el servicio y asociarlo al proyecto de Entreprenly.
-2. En el entorno local, instalar Firebase CLI:
-   ```bash
-   npm install -g firebase-tools
-   firebase login
-   ```
-3. Dentro del repositorio del Frontend (`Kauflink/ap-entreprenly-frontend`), inicializar Firebase Hosting:
-   ```bash
-   firebase init hosting
-   ```
-   Durante la inicialización, seleccionar el proyecto Firebase creado, indicar `dist` como directorio público (output del build de Vite), confirmar que la aplicación es una SPA respondiendo `Yes` a la opción de reescritura de rutas al `index.html`, y no sobrescribir el `index.html` existente.
-4. Verificar que el archivo `firebase.json` generado incluya la regla de reescritura para SPA routing:
-   ```json
-   {
-     "hosting": {
-       "public": "dist",
-       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-       "rewrites": [{ "source": "**", "destination": "/index.html" }]
-     }
-   }
-   ```
-5. En Firebase Console, ingresar a **Hosting > Add custom domain** y registrar el subdominio `ap.entreprenly.online`. Firebase proporcionará los registros DNS necesarios (tipo `A` o `CNAME`) que deben configurarse en el proveedor del dominio.
-6. En el repositorio, configurar el **GitHub Secret** `FIREBASE_SERVICE_ACCOUNT` con las credenciales de la cuenta de servicio de Firebase, necesarias para autenticar el despliegue desde GitHub Actions.
-7. Crear el archivo `.github/workflows/deploy-frontend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Node.js con la versión requerida, instalación de dependencias con `npm install`, generación del build de producción con `npm run build` (Vite) y despliegue en Firebase Hosting usando la acción oficial `FirebaseExtended/action-hosting-deploy`.
-8. Validar el despliegue accediendo a `https://ap.entreprenly.online` y verificando que la navegación entre vistas de Vue funciona correctamente sin errores 404 al refrescar el navegador.
+<p align="center"><img src="images/capitulo5/deploy-frontend-01.png" width="700" alt="Proyecto Firebase con Hosting activado"></p>
 
-#### RESTful Web Services
+**Paso 2.** En el entorno local, instalar Firebase CLI e iniciar sesión:
+```bash
+npm install -g firebase-tools
+firebase login
+```
 
-El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#, .NET 10) y se despliega de forma **containerizada con Docker** sobre una instancia de **Google Compute Engine (VM)** en **Google Cloud Platform (GCP)**, accesible a través del subdominio **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)**. La imagen del API se publica en **Google Artifact Registry** y, en la VM, se orquesta mediante **Docker Compose** junto con **Caddy**, que actúa como reverse proxy y gestiona automáticamente los certificados TLS. La automatización del despliegue se gestiona mediante **GitHub Actions**, que se autentica con GCP mediante **Workload Identity Federation** (sin claves de cuenta de servicio de larga duración). La persistencia se realiza sobre una base de datos **MySQL**.
+<p align="center"><img src="images/capitulo5/deploy-frontend-02-01.png" width="700" alt="Firebase CLI instalado y login"></p>
 
-Los pasos para configurar y ejecutar el despliegue son los siguientes:
+<p align="center"><img src="images/capitulo5/deploy-frontend-02-02.png" width="700" alt="Firebase CLI instalado y login"></p>
 
-1. En la consola de GCP, crear una instancia de **Compute Engine** (Ubuntu 24.04 LTS, tipo `e2-medium`) con Docker y Docker Compose instalados, y crear un repositorio en **Artifact Registry** (`us-east1-docker.pkg.dev/<project>/entreprenly`) para alojar la imagen del API.
-2. En la VM, preparar el directorio de despliegue `/opt/app` con el archivo `docker-compose.yml`, el `Caddyfile` y el archivo de secretos `app.env` (cadena de conexión a MySQL, secreto JWT, configuración del WhatsApp bridge). Estos secretos **no se versionan**; se proveen localmente en la VM.
-3. Definir el `Caddyfile` para que Caddy termine TLS sobre `ap-api.entreprenly.online` y haga `reverse_proxy` al contenedor del API en el puerto `8080`:
-   ```caddy
-   ap-api.entreprenly.online {
-       encode gzip
-       reverse_proxy api:8080
-   }
-   ```
-4. En el proveedor de DNS del dominio, crear un registro `A` que apunte `ap-api.entreprenly.online` a la IP externa de la instancia de GCP (Caddy emite el certificado de Let's Encrypt automáticamente).
-5. En el repositorio de Web Services (`Kauflink/ap-entreprenly-web-services`), el `Dockerfile` define un build multi-etapa: la etapa `build` usa `mcr.microsoft.com/dotnet/sdk:10.0` para ejecutar `dotnet publish -c Release`, y la etapa `runtime` usa `mcr.microsoft.com/dotnet/aspnet:10.0`, exponiendo el puerto `8080` (`ASPNETCORE_URLS=http://+:8080`).
-6. Configurar en el repositorio los **GitHub Secrets** para Workload Identity Federation: `GCP_WIF_PROVIDER` (proveedor de identidad) y `GCP_DEPLOY_SA` (cuenta de servicio de despliegue).
-7. El workflow `.github/workflows/deploy.yml` se ejecuta ante cada push en la rama `main` y realiza: checkout, autenticación a GCP vía Workload Identity Federation, `docker build` y `docker push` de la imagen (etiquetada con `:<sha>` y `:latest`) a Artifact Registry, y conexión a la VM mediante **SSH a través de un túnel IAP** para ejecutar `docker compose pull` y `docker compose up -d --remove-orphans`, desplegando la nueva imagen.
-8. Caddy gestiona los puertos `80` y `443` hacia el exterior; el contenedor del API solo expone el puerto `8080` dentro de la red interna de Docker Compose, sin exposición directa.
-9. Documentar los endpoints del API desplegado mediante **Swagger UI** (`UseSwagger` + `UseSwaggerUI`), accesible en la ruta `https://ap-api.entreprenly.online/swagger`. La URL base del API se registra como variable de entorno (`VITE_ENTREPENLY_PLATFORM_API_URL`) en el proyecto del Frontend Web Application para su integración.
-10. Validar el despliegue realizando una solicitud de prueba a un endpoint del API desde Swagger UI o desde Postman, confirmando que el servicio responde correctamente sobre HTTPS.
+**Paso 3.** Dentro del repositorio del Frontend (`Kauflink/ap-entreprenly-frontend`), inicializar Firebase Hosting con `firebase init hosting`: seleccionar el proyecto `ap-entreprenly`, indicar `dist` como directorio público (output del build de Vite), responder `Yes` a la reescritura de rutas al `index.html` (SPA) y no sobrescribir el `index.html` existente.
+```bash
+firebase init hosting
+```
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-03.png" width="700" alt="firebase init hosting"></p>
+
+**Paso 4.** Verificar que el archivo `firebase.json` incluya la regla de reescritura para el SPA routing de Vue Router:
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}
+```
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-04.png" width="700" alt="firebase.json con rewrites"></p>
+
+**Paso 5.** En **Firebase Console > Hosting > Add custom domain**, registrar el subdominio `ap.entreprenly.online` y crear en el proveedor de DNS los registros que indica Firebase (tipo `A` o `CNAME`), esperando la emisión automática del certificado TLS.
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-05.png" width="700" alt="Dominio personalizado en Firebase Hosting"></p>
+
+**Paso 6.** En el repositorio, configurar el **GitHub Secret** `FIREBASE_SERVICE_ACCOUNT_AP_ENTREPRENLY` con las credenciales de la cuenta de servicio de Firebase, necesarias para autenticar el despliegue desde GitHub Actions.
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-06.png" width="700" alt="GitHub Secret de Firebase"></p>
+
+**Paso 7.** Crear el workflow `.github/workflows/firebase-hosting.yml`, que ante cada push a `main` ejecuta: checkout, configuración de **Node.js 22**, instalación de dependencias con `npm ci`, build de producción con `npm run build` (Vite) y despliegue con la acción oficial `FirebaseExtended/action-hosting-deploy` (proyecto `ap-entreprenly`, canal `live`).
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-07.png" width="700" alt="Workflow de Firebase Hosting en GitHub Actions"></p>
+
+**Paso 8.** Verificar la ejecución del workflow en **Actions** (estado verde) y validar accediendo a `https://ap.entreprenly.online`, comprobando que la navegación entre vistas de Vue funciona sin errores 404 al refrescar el navegador.
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-08.png" width="700" alt="Frontend desplegado en Firebase Hosting"></p>
+
+#### RESTful Web Services (Google Cloud Run)
+
+El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#, .NET 10) y se empaqueta con un **`Dockerfile`** multi-etapa. Se despliega en **Google Cloud Run** (servicio `ap-entreprenly-web-services`, región `us-east1`), donde el contenedor se construye a partir del código fuente mediante **Cloud Build** y la imagen queda publicada en **Google Artifact Registry**. La persistencia se realiza sobre **Cloud SQL para MySQL 8.4** (instancia `entreprenly-db`), a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL** (socket Unix). El servicio se expone en el subdominio personalizado **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)** y el despliegue se realiza tomando como fuente la rama `main` del repositorio `Kauflink/ap-entreprenly-web-services`.
+
+**Paso 1.** En **Google Cloud Console**, seleccionar (o crear) el proyecto y habilitar las APIs necesarias: **Cloud Run Admin**, **Cloud Build**, **Artifact Registry** y **Cloud SQL Admin**.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-01.png" width="700" alt="APIs habilitadas en Google Cloud"></p>
+
+**Paso 2.** Provisionar la instancia de **Cloud SQL para MySQL 8.4** (`entreprenly-db`, región `us-east1`), crear la base de datos `ap-entreprenly` y el usuario `entreprenly`, y anotar su **connection name** (`project-46ae30cc-2d30-4c9e-9f5:us-east1:entreprenly-db`), requerido más adelante por la conexión de Cloud Run.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-02.png" width="700" alt="Instancia Cloud SQL para MySQL"></p>
+
+**Paso 3.** Confirmar que el repositorio `Kauflink/ap-entreprenly-web-services` contiene el **`Dockerfile`** multi-etapa: la etapa `build` usa `mcr.microsoft.com/dotnet/sdk:10.0` para ejecutar `dotnet restore` y `dotnet publish -c Release`, y la etapa `runtime` usa `mcr.microsoft.com/dotnet/aspnet:10.0`. La aplicación escucha en el puerto `8080` (`ASPNETCORE_URLS=http://+:8080`) y el `ENTRYPOINT` ejecuta `dotnet Entreprenly.WebServices.dll`.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-03.png" width="700" alt="Dockerfile del backend"></p>
+
+**Paso 4.** Verificar la cadena de conexión del perfil de producción, que apunta al **socket Unix de Cloud SQL** que Cloud Run monta automáticamente y es consumida por **EF Core 9** con el proveedor **Pomelo MySQL**:
+```text
+server=/cloudsql/<CLOUD_SQL_CONNECTION_NAME>;database=ap-entreprenly;User Id=entreprenly;AllowPublicKeyRetrieval=True
+```
+El esquema de la base de datos se gestiona con **migraciones de EF Core**.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-04.png" width="700" alt="Cadena de conexión a Cloud SQL"></p>
+
+**Paso 5.** En **Cloud Run > Deploy container > Service**, elegir la opción de desplegar **desde el código fuente / repositorio** (build con Cloud Build a partir del `Dockerfile`). Conectar el repositorio de GitHub `ap-entreprenly-web-services` y seleccionar la rama `main`.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-05.png" width="700" alt="Origen del despliegue en Cloud Run"></p>
+
+**Paso 6.** Definir la configuración del servicio: nombre `ap-entreprenly-web-services`, región `us-east1`, **Authentication = Allow unauthenticated invocations**, **container port = 8080**, **CPU = 1**, **Memory = 1 GiB**, **Max instances = 3** y **Startup CPU boost** activado.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-06.png" width="700" alt="Configuración del servicio Cloud Run"></p>
+
+**Paso 7.** En la pestaña **Containers > Cloud SQL connections**, agregar la conexión a la instancia `entreprenly-db` creada en el Paso 2 (Cloud Run inyecta el socket en `/cloudsql/<connection_name>`).
+
+<p align="center"><img src="images/capitulo5/deploy-backend-07.png" width="700" alt="Conexión Cloud SQL en Cloud Run"></p>
+
+**Paso 8.** En **Variables & Secrets**, definir las variables de entorno del perfil de producción: `ASPNETCORE_ENVIRONMENT=Production`, `DATABASE_PROJECT`, `DATABASE_REGION`, `DATABASE_INSTANCE`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`, `TokenSettings__Secret` (secreto JWT), `WhatsAppBridge__BridgeUrl` y `WhatsAppBridge__BridgeToken`. *(Recomendado: gestionar los valores sensibles —contraseña de la base de datos, secreto JWT y token del bridge— mediante **Secret Manager** en lugar de texto plano.)*
+
+<p align="center"><img src="images/capitulo5/deploy-backend-08.png" width="700" alt="Variables de entorno en Cloud Run"></p>
+
+**Paso 9.** Presionar **Deploy** y esperar a que Cloud Build construya la imagen (publicada en Artifact Registry) y la nueva revisión reciba el **100 % del tráfico**. Cloud Run asigna una URL `*.run.app`.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-09.png" width="700" alt="Revisión desplegada en Cloud Run"></p>
+
+**Paso 10.** En **Cloud Run > Manage Custom Domains > Add mapping**, mapear `ap-api.entreprenly.online` al servicio, crear en el DNS los registros indicados y esperar la emisión automática del certificado TLS. Registrar la URL base `https://ap-api.entreprenly.online/api/v1` como variable de entorno (`VITE_ENTREPENLY_PLATFORM_API_URL`) en el proyecto del Frontend Web Application para su integración.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-10.png" width="700" alt="Dominio personalizado del backend"></p>
+
+**Paso 11.** Validar el despliegue accediendo a la documentación **Swagger UI** en `https://ap-api.entreprenly.online/swagger` y realizando una petición de prueba desde Swagger o Postman, confirmando la respuesta correcta sobre HTTPS.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-11.png" width="700" alt="Swagger UI del backend desplegado"></p>
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
@@ -552,7 +652,9 @@ En este primer Sprint, el equipo organizó su trabajo en torno a cuatro aspectos
 
 El objetivo principal de este Sprint fue implementar y desplegar la primera versión del Landing Page de Entreprenly, cubriendo la User Story US-49 del Product Backlog. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
 
-![Logo de la UPC](./images/capitulo5/sprint1.png "Universidad Peruana de Ciencias Aplicadas")
+![sprint1](./images/capitulo5/sprint1.png "Tablero del Sprint 1 en Trello")
+
+**Board público del Sprint 1 (Trello):** https://trello.com/b/w5cZrD9x/entreprenly-sprint-1
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -903,27 +1005,27 @@ Durante el Sprint 1, el alcance de implementación se limitó exclusivamente al 
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 1, el equipo configuró y ejecutó el proceso de despliegue del Landing Page mediante GitHub Pages y un pipeline de integración continua con GitHub Actions. A continuación se describe el proceso realizado:
+Durante el Sprint 1, el equipo configuró y ejecutó el despliegue del Landing Page mediante **GitHub Pages**, publicándolo directamente desde la rama `main`. A continuación se describe el proceso realizado:
 
 1. **Creación del repositorio:** Se creó el repositorio público `ap-entreprenly-landing` bajo la organización `Kauflink` en GitHub, aplicando GitFlow con las ramas `main` y `develop`.
 
-![creacion_repos](./images/capitulo5/creacion_repos.png "creacion_repos")
+![creacion_repos](./images/capitulo5/creacion_reposs.png "Creación del repositorio del Landing Page")
 
-2. **Configuración del dominio personalizado:** Se añadió el archivo `CNAME` al repositorio con el dominio personalizado asignado al Landing Page.
+2. **Compilación local de estilos:** Los estilos se generan con la CLI de **Tailwind CSS** (`npm run build`, que ejecuta `tailwindcss -i ./input.css -o ./styles.css --minify`) y el `styles.css` resultante se versiona junto con los archivos estáticos, de modo que GitHub Pages publica el sitio tal cual, sin paso de build en el servidor.
 
-![cname](./images/capitulo5/cname.png "cname")
+![compilacion](./images/capitulo5/compilacion-style.png "compilacion")
 
-![entreprenly_cname](./images/capitulo5/entreprenly_cname.png "entreprenly_cname")
+3. **Publicación con GitHub Pages:** El sitio se publica con **GitHub Pages** sirviéndolo **directamente desde la rama `main`** (**Settings > Pages**, con *Source* = `main` y carpeta raíz `/`), sin paso de build en el servidor. Cada push integrado a `main` actualiza el sitio en vivo.
 
-3. **Configuración del pipeline de CI/CD:** Se creó un workflow de GitHub Actions (`.github/workflows/`) que automatiza el proceso de build y despliegue. El workflow incluye los pasos de instalación de dependencias (`npm ci`), compilación de estilos con Tailwind CSS (`npm run build`) y despliegue automático a la rama `gh-pages` al fusionar cambios en `main`.
+![gitHubpages](./images/capitulo5/gitHubpages.png "gitHubpages")
 
-![workflows1](./images/capitulo5/workflows1.png "workflows1")
+4. **Configuración del dominio personalizado:** Se añadió el archivo `CNAME` a la raíz del repositorio con el dominio `landing.entreprenly.online` y se habilitó **Enforce HTTPS** en la configuración de Pages.
 
-![workflows2](./images/capitulo5/workflows2.png "workflows2")
+![cname](./images/capitulo5/cnamee.png "Archivo CNAME con el dominio personalizado")
 
-4. **Verificación del despliegue:** Se comprobó que el Landing Page quedó correctamente publicado y accesible desde la URL de GitHub Pages con el dominio configurado.
+5. **Verificación del despliegue:** Se comprobó que el Landing Page quedó correctamente publicado y accesible en `https://landing.entreprenly.online`.
 
-![landing_desplegado](./images/capitulo5/landing_desplegado.png "landing_desplegado")
+![landing_desplegado](./images/capitulo5/landing_desplegado.png "Landing Page publicado")
 
 ---
 
@@ -1074,7 +1176,9 @@ En el Sprint 2, el equipo organizó el trabajo asignando un Bounded Context prin
 
 El objetivo principal de este Sprint fue implementar la Frontend Web Application de Entreprenly en Vue, cubriendo los Bounded Contexts de Auth, Profile, Subscription, Inventory, Sales y Chatbot, junto con las vistas compartidas de Home y Help. A continuación se presenta el tablero del Sprint y el detalle de los Work-items asociados.
 
-![sprint2](./images/capitulo5/sprint2.png "sprint2")
+![sprint2](./images/capitulo5/sprint2.png "Tablero del Sprint 2 en Trello")
+
+**Board público del Sprint 2 (Trello):** https://trello.com/b/X5XRlVOZ/entreprenly-sprint-2
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1582,7 +1686,7 @@ Durante el Sprint 2, el equipo configuró y ejecutó el proceso de despliegue de
 
 2. **Configuración de Firebase Hosting:** Se creó un proyecto en Firebase Console, se inicializó Firebase Hosting en el repositorio del frontend con `firebase init hosting`, configurando `dist` como directorio público y habilitando la reescritura de rutas al `index.html` para el SPA routing de Vue Router.
 
-![firebase_p](./images/capitulo5/firebase_p.png "firebase_p")
+![firebase_p](./images/capitulo5/deploy-frontend-01.png "firebase_p")
 
 3. **Verificación del despliegue:** Se validó que la aplicación Vue se encuentra correctamente desplegada y accesible en `https://ap.entreprenly.online`, con navegación entre BCs funcional sin errores 404 al refrescar el navegador.
 
@@ -1670,7 +1774,7 @@ Para el tercer Sprint, el equipo estableció como objetivo principal la implemen
 
 #### 5.2.3.2. Aspect Leaders and Collaborators
 
-En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsable, esta vez sobre el backend. Los aspectos cubiertos fueron: el Shared Kernel, la infraestructura de despliegue (Docker, Caddy, CI/CD) y los BCs de IAM y Profiles; el BC de Inventory; el BC de Sales; el BC de Subscription; y el BC de Chatbot. A continuación se presenta la matriz de liderazgo y colaboración (LACX):
+En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsable, esta vez sobre el backend. Los aspectos cubiertos fueron: el Shared Kernel, la infraestructura de despliegue (Docker, Cloud Run, Cloud SQL) y los BCs de IAM y Profiles; el BC de Inventory; el BC de Sales; el BC de Subscription; y el BC de Chatbot. A continuación se presenta la matriz de liderazgo y colaboración (LACX):
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1739,7 +1843,9 @@ En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsa
 
 El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presentan los Work-items, organizados por aspecto, con el responsable y su estado al cierre del Sprint.
 
-![sprint3](./images/capitulo5/sprint3.png "Tablero del Sprint 3")
+![sprint3](./images/capitulo5/sprint3.png "Tablero del Sprint 3 en Trello")
+
+**Board público del Sprint 3 (Trello):** https://trello.com/b/kcHoLNFO/entreprenly-sprint-3
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1775,7 +1881,7 @@ El objetivo principal de este Sprint fue implementar los RESTful Web Services po
     </tr>
     <tr>
       <td>Deploy / CI/CD</td>
-      <td>Containerizar el backend (Dockerfile multi-etapa), definir el stack de la VM con Docker Compose y Caddy, y crear el workflow de despliegue a la VM mediante Workload Identity Federation.</td>
+      <td>Containerizar el backend (Dockerfile multi-etapa) y desplegarlo en Google Cloud Run construyendo la imagen con Cloud Build, conectándolo a Cloud SQL para MySQL mediante el conector nativo (socket Unix) y parametrizando la configuración con variables de entorno.</td>
       <td>10</td>
       <td>Camargo Briceño, Joseph Julius</td>
       <td>Done</td>
@@ -1822,7 +1928,7 @@ El objetivo principal de este Sprint fue implementar los RESTful Web Services po
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de Web Services (`ap-entreprenly-web-services`) y, de forma complementaria, sobre el repositorio del Frontend (`ap-entreprenly-frontend`) para la integración con la API real. El trabajo se realizó entre el 12 y el 19 de junio de 2026, aplicando GitFlow con ramas `feature/` por Bounded Context. A continuación se presenta el registro de los commits más representativos:
+Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de Web Services (`ap-entreprenly-web-services`) y, de forma complementaria, sobre el repositorio del Frontend (`ap-entreprenly-frontend`) para la integración con la API real. El trabajo se realizó entre el 12 y el 26 de junio de 2026, aplicando GitFlow con ramas `feature/` por Bounded Context. A continuación se presenta el registro de los commits más representativos:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -1831,29 +1937,31 @@ Durante el Sprint 3, el equipo trabajó principalmente sobre el repositorio de W
       <th>Branch</th>
       <th>Commit Id</th>
       <th>Commit Message</th>
+      <th>Commit Message Body</th>
       <th>Committed on (Date)</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/shared-kernel</td><td>71c25cb</td><td>feat: add shared kernel and web api configuration</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/iam-context</td><td>64aad46</td><td>feat(iam): expose authentication, users and roles rest endpoints</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/profiles-context</td><td>0408620</td><td>feat(profiles): expose profile rest endpoints</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/app-bootstrap</td><td>8f8d85a</td><td>feat(persistence): add initial database migration</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>2976a19</td><td>feat(deploy): containerize the backend</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>88c96ec</td><td>feat(deploy): add vm compose stack with caddy</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>2d71068</td><td>ci: deploy to the vm on pushes to main</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>6211f75</td><td>feat(chatbot): add chatbot bounded context — domain, application, infrastructure and REST interfaces</td><td>2026-06-13</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/sales</td><td>1e278ef</td><td>feat(sales): add sales persistence and REST interfaces</td><td>2026-06-15</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/inventory</td><td>1cd6fa6</td><td>feat(inventory): add inventory bounded context</td><td>2026-06-15</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/subscription</td><td>ffac4aa</td><td>feat: add Subscription bounded context and migration</td><td>2026-06-15</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>a52153a</td><td>feat(chatbot): implement conversation flow with product detection and order state machine</td><td>2026-06-17</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>c181a2b</td><td>feat(chatbot): wire catalog product repository to real inventory</td><td>2026-06-18</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>763b6d3</td><td>feat(subscription): add me/dashboard and me/payment-confirmation endpoints</td><td>2026-06-18</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/change-credentials</td><td>26106e1</td><td>feat(iam): add change password and change email endpoints</td><td>2026-06-19</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/connect-backend</td><td>46ccfa0</td><td>feat(auth): add IAM session store, API client and token interceptor</td><td>2026-06-12</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>e5e0ef1</td><td>feat(sales): align sales domain models and assemblers with backend contract</td><td>2026-06-15</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>b8f2e57</td><td>feat(chatbot): connect store and API to real backend endpoints</td><td>2026-06-15</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>5f76582</td><td>fix(dashboard): route home API calls through authenticated client</td><td>2026-06-18</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/shared-kernel</td><td>71c25cb</td><td>feat: add shared kernel and web api configuration</td><td>Se establece la base transversal compartida por todos los bounded contexts: tipo Result, primitivas de dominio, contexto EF Core MySQL y manejo global de excepciones.</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/iam-context</td><td>64aad46</td><td>feat(iam): expose authentication, users and roles rest endpoints</td><td>Se exponen los endpoints REST de autenticación (sign-in/sign-up), usuarios y roles del BC de IAM, con autorización por token.</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/profiles-context</td><td>0408620</td><td>feat(profiles): expose profile rest endpoints</td><td>Se exponen los endpoints REST del BC de Profiles: lectura, creación y actualización de perfil, preferencias y ajustes de notificación.</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/app-bootstrap</td><td>8f8d85a</td><td>feat(persistence): add initial database migration</td><td>Se agrega la migración inicial que crea las tablas de usuarios, roles, perfiles y user-roles con sus índices y relaciones.</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/deployment</td><td>2976a19</td><td>feat(deploy): containerize the backend</td><td>Se containeriza el backend con un Dockerfile multi-etapa sobre .NET 10, preparado para ejecutarse detrás de un proxy con terminación TLS.</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>6629653</td><td>refactor: use Cloud SQL socket connection string driven by environment variables</td><td>Se adopta la cadena de conexión por socket de Cloud SQL, parametrizada mediante variables de entorno.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>cdb9937</td><td>fix: switch MySQL provider to Pomelo/MySqlConnector for Cloud SQL Unix socket support</td><td>Se cambia el proveedor de MySQL a Pomelo/MySqlConnector para soportar la conexión por socket Unix de Cloud SQL.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>c639c2f</td><td>chore: remove obsolete VM deploy artifacts and add project README</td><td>Se eliminan los artefactos obsoletos del despliegue en VM y se agrega el README del proyecto.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>6211f75</td><td>feat(chatbot): add chatbot bounded context — domain, application, infrastructure and REST interfaces</td><td>Se implementa el BC de Chatbot completo (dominio, aplicación, infraestructura e interfaces REST) siguiendo la arquitectura del BC de IAM.</td><td>2026-06-13</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/sales</td><td>1e278ef</td><td>feat(sales): add sales persistence and REST interfaces</td><td>Se agregan la persistencia EF Core y las interfaces REST del BC de Sales, expuestas en /api/v1/sales y /api/v1/cash-registers y documentadas en Swagger.</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/inventory</td><td>1cd6fa6</td><td>feat(inventory): add inventory bounded context</td><td>Se introduce el BC de Inventory con cuatro agregados (productos y lotes por unidad y por peso), alertas de stock derivadas y sus endpoints REST.</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/subscription</td><td>ffac4aa</td><td>feat: add Subscription bounded context and migration</td><td>Se introduce el BC de Subscription (dominio, servicios, repositorio EF Core y controlador REST) con su migración y mensajes de error localizados (EN/ES).</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>a52153a</td><td>feat(chatbot): implement conversation flow with product detection and order state machine</td><td>Se implementa el flujo de conversación del chatbot con detección de productos y la máquina de estados de pedidos.</td><td>2026-06-17</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/chatbot</td><td>c181a2b</td><td>feat(chatbot): wire catalog product repository to real inventory</td><td>Se conecta el repositorio de productos del chatbot al inventario real, permitiendo detectar y cotizar productos por nombre con el stock calculado del vendedor.</td><td>2026-06-18</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>763b6d3</td><td>feat(subscription): add me/dashboard and me/payment-confirmation endpoints</td><td>Se agregan los endpoints me/dashboard y me/payment-confirmation del BC de Subscription.</td><td>2026-06-18</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-web-services</td><td>feature/change-credentials</td><td>26106e1</td><td>feat(iam): add change password and change email endpoints</td><td>Se exponen los endpoints autenticados de cambio de contraseña y de correo, validando la contraseña actual y rechazando correos sin cambios o ya en uso.</td><td>2026-06-19</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>feature/connect-backend</td><td>46ccfa0</td><td>feat(auth): add IAM session store, API client and token interceptor</td><td>Se agrega la autenticación real: cliente de API de auth, store Pinia que persiste el JWT y un interceptor axios que adjunta el token Bearer a cada petición.</td><td>2026-06-12</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>e5e0ef1</td><td>feat(sales): align sales domain models and assemblers with backend contract</td><td>Se alinean los modelos y assemblers de ventas del frontend con el contrato de la API de Sales en C#/.NET (métodos de pago, estados e ítems con cantidad/peso).</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>b8f2e57</td><td>feat(chatbot): connect store and API to real backend endpoints</td><td>Se conecta el store y la API del chatbot del frontend a los endpoints reales del backend.</td><td>2026-06-15</td></tr>
+    <tr><td>Kauflink/ap-entreprenly-frontend</td><td>develop</td><td>5f76582</td><td>fix(dashboard): route home API calls through authenticated client</td><td>Se enrutan las llamadas del dashboard por el cliente autenticado (SalesApi/InventoryApi) para adjuntar el token JWT y evitar los errores 401.</td><td>2026-06-18</td></tr>
   </tbody>
 </table>
 
@@ -1877,44 +1985,111 @@ Al término del Sprint 3, la Frontend Web Application consume la API real desple
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **OpenAPI/Swagger** (Swashbuckle), disponibles en `https://ap-api.entreprenly.online/swagger`. A continuación se resume, por Bounded Context, la relación de endpoints implementados:
+A diferencia del Sprint 2, en el que la Frontend Web Application consumía una Fake RESTful API servida con **JSON-Server**, en el Sprint 3 se implementó el Backend real con **ASP.NET Core** y se documentó formalmente mediante **OpenAPI/Swagger** (Swashbuckle). La especificación OpenAPI está disponible en `https://ap-api.entreprenly.online/swagger/v1/swagger.json` y la interfaz interactiva de exploración y prueba (Swagger UI) en `https://ap-api.entreprenly.online/swagger`.
+
+La API expone **72 operaciones** distribuidas en **19 controladores REST** a través de 6 Bounded Contexts. Todos los endpoints de negocio están protegidos con **JWT** (esquema `Bearer`); únicamente el `sign-in` y el `sign-up` quedan fuera de esa protección. Los endpoints del webhook/bridge de WhatsApp se documentan en la sección del Sprint 4 (5.2.4.6). A continuación se documentan los endpoints implementados por Bounded Context:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
       <th>Bounded Context</th>
-      <th>Endpoints (verbo HTTP + ruta)</th>
+      <th>Endpoint</th>
+      <th>Verbo(s) HTTP</th>
+      <th>Descripción</th>
+      <th>Autenticación</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>IAM</td>
-      <td><code>POST /api/v1/authentication/sign-in</code>, <code>POST /api/v1/authentication/sign-up</code>, <code>GET /api/v1/users</code>, <code>GET /api/v1/users/{id}</code>, <code>PUT /api/v1/users/me/password</code>, <code>PUT /api/v1/users/me/email</code>, <code>GET /api/v1/roles</code></td>
-    </tr>
-    <tr>
-      <td>Profiles</td>
-      <td><code>GET /api/v1/profiles</code>, <code>GET /api/v1/profiles/{id}</code>, <code>GET /api/v1/profiles/by-user/{userId}</code>, <code>POST /api/v1/profiles</code>, <code>PUT /api/v1/profiles/{id}</code>, <code>PUT /api/v1/profiles/{id}/preferences</code>, <code>PUT /api/v1/profiles/{id}/notification-settings</code></td>
-    </tr>
-    <tr>
-      <td>Inventory</td>
-      <td><code>GET/POST/PUT/DELETE /api/v1/inventory-unit-products</code>, <code>GET/POST/PUT/DELETE /api/v1/inventory-weight-products</code>, <code>GET /api/v1/inventory-lots</code>, <code>GET /api/v1/inventory-unit-lots</code>, <code>GET /api/v1/inventory-weight-lots</code>, <code>GET /api/v1/inventory-stock-alerts</code></td>
-    </tr>
-    <tr>
-      <td>Sales</td>
-      <td><code>POST /api/v1/sales</code>, <code>GET /api/v1/sales</code> (filtro opcional <code>?date</code>), <code>GET /api/v1/sales/{saleId}</code></td>
-    </tr>
-    <tr>
-      <td>Subscription</td>
-      <td><code>GET /api/v1/subscriptions/me/dashboard</code>, <code>PUT /api/v1/subscriptions/me/dashboard</code>, <code>GET /api/v1/subscriptions/me/payment-confirmation</code>, y endpoints <code>by-user/{userId}</code> (<code>billing-setup</code>, <code>activate-control</code>, <code>schedule-cancellation</code>, <code>keep-control</code>)</td>
-    </tr>
-    <tr>
-      <td>Chatbot</td>
-      <td><code>GET/POST /api/v1/conversations</code>, <code>GET/POST /api/v1/chat-messages</code>, <code>GET/POST /api/v1/chat-orders</code>, <code>POST /api/v1/chat-orders/{id}/confirm</code>, <code>POST /api/v1/chat-orders/{id}/reject</code>, <code>GET/POST /api/v1/whatsapp-sessions</code>, <code>POST /api/v1/chatbot/whatsapp</code> (webhook)</td>
-    </tr>
+    <tr><td>IAM / Authentication</td><td><code>/api/v1/authentication/sign-in</code></td><td>POST</td><td>Autentica al usuario por email y contraseña y retorna un token JWT.</td><td>No (anónimo)</td></tr>
+    <tr><td>IAM / Authentication</td><td><code>/api/v1/authentication/sign-up</code></td><td>POST</td><td>Registra una nueva cuenta y aprovisiona su perfil y suscripción por defecto.</td><td>No (anónimo)</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/users</code> · <code>/api/v1/users/{id}</code></td><td>GET</td><td>Lista los usuarios y obtiene uno por su identificador.</td><td>JWT</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/users/me/password</code></td><td>PUT</td><td>Cambia la contraseña del usuario autenticado (valida la actual).</td><td>JWT</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/users/me/email</code></td><td>PUT</td><td>Cambia el correo del usuario autenticado.</td><td>JWT</td></tr>
+    <tr><td>IAM</td><td><code>/api/v1/roles</code></td><td>GET</td><td>Lista los roles disponibles en el sistema.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles</code></td><td>GET / POST</td><td>Lista y crea perfiles de comerciante.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/{profileId}</code></td><td>GET / PUT</td><td>Consulta y actualiza el perfil del comerciante.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/by-user/{userId}</code></td><td>GET</td><td>Obtiene el perfil asociado a un usuario.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/{profileId}/preferences</code></td><td>PUT</td><td>Actualiza idioma, tema y moneda del comerciante.</td><td>JWT</td></tr>
+    <tr><td>Profiles</td><td><code>/api/v1/profiles/{profileId}/notification-settings</code></td><td>PUT</td><td>Actualiza las preferencias de notificación.</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-unit-products</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los productos vendidos por unidad (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-weight-products</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los productos vendidos por kilogramo (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-unit-lots</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los lotes de productos unitarios (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-weight-lots</code></td><td>GET / POST / PUT / DELETE</td><td>Gestiona los lotes de productos a granel (CRUD).</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-lots</code></td><td>GET</td><td>Retorna la vista combinada de lotes; <code>/{lotId}</code> para el detalle.</td><td>JWT</td></tr>
+    <tr><td>Inventory</td><td><code>/api/v1/inventory-stock-alerts</code></td><td>GET</td><td>Retorna las alertas de stock derivadas (vencido, por vencer, bajo, agotado).</td><td>JWT</td></tr>
+    <tr><td>Sales</td><td><code>/api/v1/sales</code></td><td>POST / GET</td><td>Registra una venta (descontando stock) y lista las ventas; filtro opcional <code>?date</code>.</td><td>JWT</td></tr>
+    <tr><td>Sales</td><td><code>/api/v1/sales/{saleId}</code></td><td>GET</td><td>Obtiene el detalle de una venta.</td><td>JWT</td></tr>
+    <tr><td>Sales</td><td><code>/api/v1/sales-products</code></td><td>GET</td><td>Catálogo de productos disponibles para registrar en una venta.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/me/dashboard</code></td><td>GET / PUT</td><td>Consulta y actualiza el dashboard de suscripción del usuario autenticado.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/me/payment-confirmation</code></td><td>GET</td><td>Obtiene el estado de confirmación de pago del usuario autenticado.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/active</code></td><td>GET</td><td>Retorna la suscripción activa.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/by-user/{userId}/billing-setup</code></td><td>PUT</td><td>Registra los datos de facturación y el método de pago.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/by-user/{userId}/activate-control</code></td><td>POST</td><td>Activa el plan Control para el usuario.</td><td>JWT</td></tr>
+    <tr><td>Subscription</td><td><code>/api/v1/subscriptions/by-user/{userId}/schedule-cancellation</code> · <code>/keep-control</code></td><td>POST</td><td>Programa la cancelación al fin del período o revierte dicha cancelación.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/conversations</code></td><td>GET / POST</td><td>Lista, crea y consulta (<code>/{id}</code>) las conversaciones.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/chat-messages</code></td><td>GET / POST</td><td>Registra y lista mensajes; <code>/by-conversation/{conversationId}</code> filtra por conversación.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/chat-orders</code></td><td>GET / POST</td><td>Gestiona los pedidos generados por el chatbot; <code>/{id}</code> para el detalle.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/chat-orders/{id}/confirm</code> · <code>/reject</code></td><td>POST</td><td>Aprueba (tras validar el comprobante) o rechaza un pedido.</td><td>JWT</td></tr>
+    <tr><td>Chatbot</td><td><code>/api/v1/whatsapp-sessions</code></td><td>GET / POST</td><td>Gestiona las sesiones de WhatsApp del comerciante.</td><td>JWT</td></tr>
   </tbody>
 </table>
 
-<img src="./images/capitulo5/swagger_s3.png" width="600">
+**Sintaxis, parámetros y ejemplos de response.** Los identificadores de recurso se pasan como *path parameters* (por ejemplo `{userId}`, `{profileId}`, `{saleId}`) y algunos listados aceptan *query parameters* (por ejemplo `GET /api/v1/sales?date=2026-06-18`). A continuación se muestran dos interacciones representativas con datos de muestra.
+
+*Ejemplo 1 — Autenticación (`POST /api/v1/authentication/sign-in`).* Recibe email y contraseña; retorna el usuario y el token JWT.
+
+```http
+POST /api/v1/authentication/sign-in
+Content-Type: application/json
+
+{ "email": "comerciante@entreprenly.com", "password": "MiClaveSegura123" }
+```
+```json
+// 200 OK
+{
+  "id": 12,
+  "email": "comerciante@entreprenly.com",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+El `token` retornado debe enviarse como `Authorization: Bearer <token>` en las peticiones a endpoints protegidos. Credenciales inválidas retornan `401 Unauthorized`.
+
+*Ejemplo 2 — Registro de venta (`POST /api/v1/sales`).* Cada ítem se indica por `quantity` (productos por unidad) o por `weightKg` (productos por peso). El backend resuelve el `unitPrice`, calcula `subtotal` y `total`, y descuenta el stock del inventario del vendedor.
+
+```http
+POST /api/v1/sales
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "sellerId": 12,
+  "items": [
+    { "productId": 3, "quantity": 2 },
+    { "productId": 7, "weightKg": 1.5 }
+  ],
+  "paymentMethod": "YAPE"
+}
+```
+```json
+// 201 Created
+{
+  "id": 45,
+  "sellerId": 12,
+  "items": [
+    { "productId": 3, "productName": "Arroz 1kg",   "quantity": 2,    "weightKg": null, "unitPrice": 4.50, "subtotal": 9.00 },
+    { "productId": 7, "productName": "Azúcar rubia", "quantity": null, "weightKg": 1.5,  "unitPrice": 5.20, "subtotal": 7.80 }
+  ],
+  "total": 16.80,
+  "paymentMethod": "YAPE",
+  "paymentReceipt": null,
+  "status": "COMPLETED"
+}
+```
+Una petición con parámetros faltantes o con ítems sin stock suficiente retorna `400 Bad Request` con un cuerpo *problem-details* que describe el error.
+
+A continuación se muestra la interfaz Swagger UI con la relación de endpoints y una ejecución de prueba (*Try it out*) con datos de muestra:
+
+<img src="./images/capitulo5/swagger_s3.png" width="800">
 
 **URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
 
@@ -1922,17 +2097,17 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`), publicarla en **Google Artifact Registry** (`us-east1-docker.pkg.dev`), y desplegarla en la instancia de **Google Compute Engine** mediante **Docker Compose**, con **Caddy** como reverse proxy y gestor automático de TLS. La autenticación del pipeline de GitHub Actions se realiza mediante **Workload Identity Federation**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
+Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso consistió en: construir la imagen Docker multi-etapa del backend mediante **Cloud Build**, publicarla en **Google Artifact Registry** y desplegarla en **Google Cloud Run**. La persistencia se realiza sobre **Cloud SQL para MySQL 8.4**, a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL**, consumido por **EF Core** con el proveedor **Pomelo/MySqlConnector**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
 
-<img src="./images/capitulo5/deploy_s3_1.png" width="600">
+<img src="./images/capitulo5/deploy-backend-09.png" width="600">
 
-<img src="./images/capitulo5/deploy_s3_2.png" width="600">
+<img src="./images/capitulo5/deploy-backend-11.png" width="600">
 
 ---
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 3, los cinco miembros del equipo participaron en la implementación del backend y su integración con el frontend. El trabajo se distribuyó por Bounded Context en el repositorio `ap-entreprenly-web-services`: Joseph Julius lideró el Shared Kernel, la infraestructura de despliegue (Docker, Caddy, CI/CD) y los BCs de IAM y Profiles; José Antonio lideró el BC de Inventory; José Fernando lideró el BC de Sales; Lionel Abraham lideró el BC de Subscription; y Elynor Mikela lideró el BC de Chatbot. La integración del frontend con la API real se realizó de forma colaborativa, cada miembro sobre su BC.
+Durante el Sprint 3, los cinco miembros del equipo participaron en la implementación del backend y su integración con el frontend. El trabajo se distribuyó por Bounded Context en el repositorio `ap-entreprenly-web-services`: Joseph Julius lideró el Shared Kernel, la infraestructura de despliegue (Docker, Cloud Run, Cloud SQL) y los BCs de IAM y Profiles; José Antonio lideró el BC de Inventory; José Fernando lideró el BC de Sales; Lionel Abraham lideró el BC de Subscription; y Elynor Mikela lideró el BC de Chatbot. La integración del frontend con la API real se realizó de forma colaborativa, cada miembro sobre su BC.
 
 El equipo aplicó GitFlow con ramas `feature/` por Bounded Context (`feature/iam-context`, `feature/profiles-context`, `feature/inventory`, `feature/sales`, `feature/subscription`, `feature/chatbot`, `feature/deployment`) integradas a `develop` y `main` mediante Pull Requests (más de 20 PRs en el repositorio de Web Services). La distribución aproximada de commits en el backend fue: Camargo Briceño (37), Palma De Los Santos (25), Chavez Carrasco (12), Flores Pinchi (6) y Peirano Brun (3).
 
@@ -1957,7 +2132,7 @@ Para este cuarto y último Sprint, el equipo estableció como objetivo principal
     <tr><td><strong>Location</strong></td><td>Reunión virtual vía Discord</td></tr>
     <tr><td><strong>Prepared By</strong></td><td>Camargo Briceño, Joseph Julius</td></tr>
     <tr><td><strong>Attendees (to planning meeting)</strong></td><td>Camargo Briceño, Joseph Julius / Chavez Carrasco, Lionel Abraham / Palma De Los Santos, Elynor Mikela / Peirano Brun, José Antonio / Flores Pinchi, José Fernando</td></tr>
-    <tr><td><strong>Sprint 3 Review Summary</strong></td><td>En el Sprint 3 se implementó y desplegó el Backend real con ASP.NET Core sobre Google Compute Engine, con autenticación JWT, persistencia con Entity Framework Core por bounded context y la lógica del flujo de pedidos del chatbot (US-41 a US-52). El Frontend se integró con la API real reemplazando la Fake API del Sprint 2.</td></tr>
+    <tr><td><strong>Sprint 3 Review Summary</strong></td><td>En el Sprint 3 se implementó y desplegó el Backend real con ASP.NET Core sobre Google Cloud Run, con base de datos en Cloud SQL para MySQL, autenticación JWT, persistencia con Entity Framework Core por bounded context y la lógica del flujo de pedidos del chatbot (US-41 a US-52). El Frontend se integró con la API real reemplazando la Fake API del Sprint 2.</td></tr>
     <tr><td><strong>Sprint 3 Retrospective Summary</strong></td><td>El equipo identificó que, si bien la lógica del chatbot residía en el Backend, faltaba la integración con WhatsApp real: las conversaciones seguían siendo simuladas. Para el Sprint 4 se acordó implementar un WhatsApp bridge multi-tenant con <code>whatsapp-web.js</code>, conectar el canal real (vinculación por QR, recepción de mensajes y de comprobantes por imagen, y envío de respuestas al cliente) y desplegar la versión final de los tres productos.</td></tr>
     <tr><td colspan="2"><strong>Sprint Goal &amp; User Stories</strong></td></tr>
     <tr><td><strong>Sprint 4 Goal</strong></td><td>Nuestro enfoque está en habilitar la atención real de clientes por WhatsApp, conectando el chatbot de Entreprenly a cuentas reales mediante un bridge multi-tenant. Creemos que entrega valor inmediato al comerciante al automatizar consultas de productos, pedidos y validación de pagos digitales directamente sobre WhatsApp. Esto se confirmará cuando un cliente pueda vincular su WhatsApp por código QR, conversar con el bot, enviar su comprobante de pago como imagen y recibir la confirmación de su pedido de extremo a extremo. User Stories: US-37, US-38, US-44, US-45 y US-47.</td></tr>
@@ -1998,9 +2173,9 @@ En el Sprint 4, el equipo organizó el trabajo en torno a cuatro aspectos: el **
 
 El objetivo principal de este Sprint fue integrar el canal real de WhatsApp para el chatbot, cubriendo las User Stories **US-37, US-38, US-44, US-45 y US-47**, que se realizaron de forma efectiva mediante el WhatsApp bridge (en Sprints previos US-37, US-38 y US-45 se abordaron de forma simulada o solo en el Backend). Cada historia se descompuso en Engineering Tasks con una estimación individual de entre 4 y 8 horas, gestionadas en el tablero Kanban del Sprint con las columnas **To Do, In Process, To Review y Done**.
 
-**Board público del Sprint 4 (Trello):** https://trello.com/b/msBZdIfS/entreprenly-sprint-4
-
 ![sprint4](./images/capitulo5/sprint4.png "Tablero del Sprint 4 en Trello")
+
+**Board público del Sprint 4 (Trello):** https://trello.com/b/msBZdIfS/entreprenly-sprint-4
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -2113,7 +2288,7 @@ El objetivo principal de este Sprint fue integrar el canal real de WhatsApp para
 
 #### 5.2.4.4. Development Evidence for Sprint Review
 
-Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del **WhatsApp bridge** (`ap-entreprenly-whatsapp-bridge`) y realizó ajustes de integración en el **Backend** (`ap-entreprenly-web-services`) y el **Frontend** (`ap-entreprenly-frontend`). El bridge acumuló **13 commits** (sin contar merges) entre el 5 y el 26 de junio de 2026. A continuación se presenta el registro de los commits más representativos:
+Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del **WhatsApp bridge** (`daop-entreprenly-whatsapp-bridge`) y realizó ajustes de integración en el **Backend** (`ap-entreprenly-web-services`) y el **Frontend** (`ap-entreprenly-frontend`). El bridge acumuló **13 commits** (sin contar merges) entre el 5 y el 26 de junio de 2026. A continuación se presenta el registro de los commits más representativos:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -2127,14 +2302,14 @@ Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del 
     </tr>
   </thead>
   <tbody>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>a78855b</td><td>feat: WhatsApp bridge (whatsapp-web.js) for the Entreprenly chatbot</td><td>Se crea el servicio bridge en Node.js con whatsapp-web.js como base del canal de WhatsApp.</td><td>2026-06-05</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>f1d9226</td><td>feat(bridge): multi-tenant — one WhatsApp session per seller email</td><td>Se habilita una sesión de WhatsApp independiente por email de vendedor.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>26202b2</td><td>feat(bridge): add POST /send endpoint to push outbound messages from backend to clients</td><td>Se agrega el endpoint POST /send para enviar mensajes salientes al cliente por WhatsApp.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>c9cbff6</td><td>feat: forward WhatsApp image messages as payment receipts</td><td>Se reenvían las imágenes entrantes de WhatsApp al Backend como comprobantes de pago.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>8f788e7</td><td>feat(docker): add Dockerfile and dockerignore for VM deployment</td><td>Se containeriza el bridge para su despliegue en una VM.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>0eaae2e</td><td>ci: auto-deploy bridge to Compute Engine VM on push to main</td><td>Se automatiza el despliegue del bridge en Compute Engine ante cada push a main.</td><td>2026-06-10</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>83df0e6</td><td>feat: route WhatsApp to one of two backends with a switchable turn and /switch page</td><td>Se enruta el canal a uno de dos backends con turno conmutable y una página /switch.</td><td>2026-06-26</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>f802a49</td><td>fix: clean stale Chromium singleton locks on container startup</td><td>Se limpian los locks obsoletos de Chromium al iniciar el contenedor para estabilizar el arranque.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>a78855b</td><td>feat: WhatsApp bridge (whatsapp-web.js) for the Entreprenly chatbot</td><td>Se crea el servicio bridge en Node.js con whatsapp-web.js como base del canal de WhatsApp.</td><td>2026-06-05</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>f1d9226</td><td>feat(bridge): multi-tenant — one WhatsApp session per seller email</td><td>Se habilita una sesión de WhatsApp independiente por email de vendedor.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>26202b2</td><td>feat(bridge): add POST /send endpoint to push outbound messages from backend to clients</td><td>Se agrega el endpoint POST /send para enviar mensajes salientes al cliente por WhatsApp.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>c9cbff6</td><td>feat: forward WhatsApp image messages as payment receipts</td><td>Se reenvían las imágenes entrantes de WhatsApp al Backend como comprobantes de pago.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>8f788e7</td><td>feat(docker): add Dockerfile and dockerignore for VM deployment</td><td>Se containeriza el bridge para su despliegue en una VM.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>0eaae2e</td><td>ci: auto-deploy bridge to Compute Engine VM on push to main</td><td>Se automatiza el despliegue del bridge en Compute Engine ante cada push a main.</td><td>2026-06-10</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>83df0e6</td><td>feat: route WhatsApp to one of two backends with a switchable turn and /switch page</td><td>Se enruta el canal a uno de dos backends con turno conmutable y una página /switch.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>f802a49</td><td>fix: clean stale Chromium singleton locks on container startup</td><td>Se limpian los locks obsoletos de Chromium al iniciar el contenedor para estabilizar el arranque.</td><td>2026-06-26</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>3d5d18f</td><td>feat(chatbot): reconcile bridge link state from QR poll response</td><td>Se reconcilia el estado de vinculación del bridge a partir del sondeo del QR.</td><td>2026-06-16</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>1ceb0a8</td><td>feat(chatbot): expand rule-based responder with more intents</td><td>Se amplía el responder basado en reglas con más intenciones para las consultas de clientes.</td><td>2026-06-16</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>7a992ea</td><td>fix(chatbot): suggest catalog alternatives when requested product not found</td><td>Se sugieren alternativas del catálogo cuando el producto solicitado no está disponible.</td><td>2026-06-16</td></tr>
@@ -2142,7 +2317,7 @@ Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del 
   </tbody>
 </table>
 
-**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
+**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/daop-entreprenly-whatsapp-bridge
 
 <img src="images/capitulo5/bridge_evi.png" width="800">
 
@@ -2195,19 +2370,22 @@ La comunicación entre el Backend y el canal de WhatsApp se realiza a través de
   <tbody>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/bridge/qr</code></td><td>POST</td><td>El bridge releva el último QR de emparejamiento al Backend.</td><td>Token de bridge</td></tr>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/bridge/status</code></td><td>POST</td><td>El bridge reporta el estado de conexión de la sesión.</td><td>Token de bridge</td></tr>
-    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/bridge/qr</code></td><td>GET</td><td>El dashboard obtiene el QR actual y el estado de vinculación.</td><td>JWT</td></tr>
-    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/bridge/session</code></td><td>DELETE</td><td>Desconecta la sesión de WhatsApp del vendedor.</td><td>JWT</td></tr>
+    <tr><td>Frontend → Backend</td><td><code>/api/v1/chatbot/whatsapp/qr?ownerEmail={email}</code></td><td>GET</td><td>El dashboard obtiene el QR actual y el estado de vinculación de la sesión del vendedor.</td><td>No (anónimo)</td></tr>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/webhook</code></td><td>POST</td><td>Recibe un mensaje entrante de WhatsApp (texto o imagen).</td><td>Token de bridge</td></tr>
     <tr><td>Backend ← Bridge</td><td><code>/api/v1/chatbot/whatsapp/webhook/receipt</code></td><td>POST</td><td>Recibe un comprobante de pago (imagen) enviado por el cliente.</td><td>Token de bridge</td></tr>
     <tr><td>Backend → Bridge</td><td><code>/send</code></td><td>POST</td><td>El Backend empuja un mensaje saliente hacia el cliente por WhatsApp.</td><td>Token de bridge</td></tr>
   </tbody>
 </table>
 
+**URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
+
+**Commit relacionado con la documentación (Sprint 4):** `bba48f8` (`docs(chatbot): add descriptions to all endpoint operations`, 2026-07-09), que completa las descripciones OpenAPI de las operaciones del Chatbot.
+
 ---
 
 #### 5.2.4.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma containerizada con Docker sobre una instancia de **Google Compute Engine (VM)**, con despliegue automatizado ante cada push a `main`. El bridge se comunica con el Backend desplegado en Google Compute Engine y expone la página `/switch` para el enrutamiento entre backends. Con esto quedó desplegada la **versión final** de los tres productos digitales (Landing Page, Frontend y Web Services) más el canal de WhatsApp. El proceso realizado fue el siguiente:
+Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma containerizada con Docker sobre una instancia de **Google Compute Engine (VM)**, con despliegue automatizado ante cada push a `main`. El bridge se comunica con el Backend desplegado en Google Cloud Run y expone la página `/switch` para el enrutamiento entre backends. Con esto quedó desplegada la **versión final** de los tres productos digitales (Landing Page, Frontend y Web Services) más el canal de WhatsApp. El proceso realizado fue el siguiente:
 
 1. **Containerización del bridge:** Se creó un `Dockerfile` para el servicio Node.js con `whatsapp-web.js` y las dependencias de Chromium necesarias para WhatsApp Web.
 
@@ -2223,13 +2401,13 @@ Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma contain
 
 #### 5.2.4.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 4, la implementación del canal de WhatsApp se concentró en el repositorio `ap-entreprenly-whatsapp-bridge`, con ajustes de integración en el Backend y el Frontend. El equipo mantuvo GitFlow con ramas `feature/` integradas a `develop` y `main` mediante Pull Requests. La distribución de commits del bridge (sin contar merges) por miembro fue la siguiente: **Palma De Los Santos (8 commits)** y **Camargo Briceño (5 commits)**, con la colaboración del resto del equipo en las tareas de integración del Backend y el Frontend.
+Durante el Sprint 4, la implementación del canal de WhatsApp se concentró en el repositorio `daop-entreprenly-whatsapp-bridge`, con ajustes de integración en el Backend y el Frontend. El equipo mantuvo GitFlow con ramas `feature/` integradas a `develop` y `main` mediante Pull Requests. La distribución de commits del bridge (sin contar merges) por miembro fue la siguiente: **Palma De Los Santos (8 commits)** y **Camargo Briceño (5 commits)**, con la colaboración del resto del equipo en las tareas de integración del Backend y el Frontend.
 
 ![contributors_p4](./images/capitulo5/contributors_p4.png "Contribuidores del Sprint 4")
 
 ![pull_p4](./images/capitulo5/pull_p4.png "Pull Requests del Sprint 4")
 
-**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
+**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/daop-entreprenly-whatsapp-bridge
 
 ---
 
