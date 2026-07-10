@@ -354,6 +354,37 @@ Scenario: Developer retrieves an existing project successfully
 
 En esta sección se especifica la configuración de despliegue definida por el equipo de Kauflink para cada uno de los productos digitales que conforman la solución **Entreprenly**: Landing Page, Frontend Web Application y RESTful Web Services. El objetivo es establecer, desde el inicio del ciclo de vida, los pasos y herramientas necesarias para lograr el despliegue o publicación satisfactoria de cada producto a partir de los repositorios de código fuente.
 
+**Productos desplegados y URLs públicas**
+
+La siguiente tabla resume los tres productos digitales de la solución, con su tecnología y plataforma de despliegue y la URL pública donde se encuentran disponibles.
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Tecnología / Plataforma de despliegue</th>
+      <th>URL pública</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Landing Page</td>
+      <td>HTML5 + Tailwind CSS / GitHub Pages</td>
+      <td><a href="https://landing.entreprenly.online/">https://landing.entreprenly.online/</a></td>
+    </tr>
+    <tr>
+      <td>Frontend Web Application</td>
+      <td>Vue 3 (Vite) / Firebase Hosting</td>
+      <td><a href="https://ap.entreprenly.online/">https://ap.entreprenly.online/</a></td>
+    </tr>
+    <tr>
+      <td>RESTful Web Services (API)</td>
+      <td>ASP.NET Core (.NET 10) / Google Cloud Run</td>
+      <td><a href="https://ap-api.entreprenly.online/swagger">https://ap-api.entreprenly.online/swagger</a></td>
+    </tr>
+  </tbody>
+</table>
+
 #### Landing Page
 
 El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main`. En el Sprint 1 la publicación se automatizó con un workflow de GitHub Actions y, posteriormente, el equipo simplificó el flujo dejando la publicación directa desde la rama. El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
