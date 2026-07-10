@@ -385,73 +385,141 @@ La siguiente tabla resume los tres productos digitales de la solución, con su t
   </tbody>
 </table>
 
-#### Landing Page
+#### Landing Page (GitHub Pages)
 
 El Landing Page de Entreprenly está desarrollado con HTML5, JavaScript y **Tailwind CSS**, y se despliega mediante **GitHub Pages** sirviendo directamente desde la rama `main`. En el Sprint 1 la publicación se automatizó con un workflow de GitHub Actions y, posteriormente, el equipo simplificó el flujo dejando la publicación directa desde la rama. El estilo se compila localmente con la CLI de Tailwind y el `styles.css` resultante se versiona en el repositorio, de modo que GitHub Pages publica los archivos estáticos tal cual al integrarse cambios en `main`. El sitio se encuentra disponible en el dominio personalizado **[landing.entreprenly.online](https://landing.entreprenly.online)**.
 
-Los pasos para configurar y ejecutar el despliegue son los siguientes:
+**Paso 1.** Asegurar que el repositorio del Landing Page (`Kauflink/ap-entreprenly-landing`) esté **público** en GitHub y siga GitFlow (ramas `main` y `develop`).
 
-1. Asegurarse de que el repositorio del Landing Page (`Kauflink/ap-entreprenly-landing`) esté público en GitHub.
-2. Generar la hoja de estilos de producción ejecutando `npm run build` (`tailwindcss -i ./src/input.css -o ./styles.css --minify`) y versionar el `styles.css` resultante junto con el resto de archivos estáticos.
-3. En la configuración del repositorio, ingresar a **Settings > Pages** y seleccionar como fuente de publicación la rama `main` y la carpeta raíz (`/`).
-4. Configurar el dominio personalizado ingresando `landing.entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
-5. En el proveedor de DNS del dominio, crear los registros `A`/`CNAME` que apunten a los servidores de GitHub Pages, de acuerdo con la documentación oficial de GitHub.
-6. Verificar que el archivo `CNAME` con el valor `landing.entreprenly.online` esté presente en la raíz del repositorio para que GitHub Pages respete el dominio personalizado entre despliegues.
-7. Validar el despliegue accediendo a `https://landing.entreprenly.online` y confirmando que la versión publicada corresponde con el último commit integrado en `main`.
+<p align="center"><img src="images/capitulo5/deploy-landing-01.png" width="700" alt="Repositorio del Landing en GitHub"></p>
 
-#### Frontend Web Application
+**Paso 2.** Generar la hoja de estilos de producción ejecutando `npm run build` (`tailwindcss -i ./src/input.css -o ./styles.css --minify`) y versionar el `styles.css` resultante junto con el resto de archivos estáticos.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-02.png" width="700" alt="Compilación de estilos con Tailwind CSS"></p>
+
+**Paso 3.** En la configuración del repositorio, ingresar a **Settings > Pages** y seleccionar como fuente de publicación (**Source**) la rama `main` y la carpeta raíz (`/`).
+
+<p align="center"><img src="images/capitulo5/deploy-landing-03.png" width="700" alt="Settings > Pages con Source = main"></p>
+
+**Paso 4.** Configurar el dominio personalizado ingresando `landing.entreprenly.online` en el campo **Custom domain** y habilitando **Enforce HTTPS**.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-04.png" width="700" alt="Dominio personalizado en GitHub Pages"></p>
+
+**Paso 5.** En el proveedor de DNS del dominio, crear los registros `A`/`CNAME` que apunten a los servidores de GitHub Pages, de acuerdo con la documentación oficial de GitHub.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-05.png" width="700" alt="Registros DNS del dominio"></p>
+
+**Paso 6.** Verificar que el archivo `CNAME` con el valor `landing.entreprenly.online` esté presente en la raíz del repositorio para que GitHub Pages respete el dominio personalizado entre despliegues.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-06.png" width="700" alt="Archivo CNAME en el repositorio"></p>
+
+**Paso 7.** Validar el despliegue accediendo a `https://landing.entreprenly.online` y confirmando que la versión publicada corresponde con el último commit integrado en `main`.
+
+<p align="center"><img src="images/capitulo5/deploy-landing-07.png" width="700" alt="Landing Page publicado"></p>
+
+#### Frontend Web Application (Firebase Hosting)
 
 El Frontend Web Application de Entreprenly está desarrollado con **Vue 3** (construido con **Vite**) y se despliega mediante **Firebase Hosting**, disponible en el subdominio personalizado **[https://ap.entreprenly.online](https://ap.entreprenly.online)** (y también accesible mediante el dominio por defecto de Firebase **ap-entreprenly.web.app**). Firebase Hosting fue elegido sobre GitHub Pages por tres razones concretas: soporta el enrutamiento del lado del cliente (SPA routing) de Vue Router de forma nativa sin configuraciones adicionales, permite asociar subdominios personalizados sin conflictos con el dominio principal ya utilizado por el Landing Page en GitHub Pages, y se integra de forma directa con GitHub Actions para automatizar el ciclo de build y despliegue.
 
-Los pasos para configurar y ejecutar el despliegue son los siguientes:
+**Paso 1.** Crear un proyecto en **Firebase Console** ([console.firebase.google.com](https://console.firebase.google.com)) e ingresar a la sección **Hosting**. Activar el servicio y asociarlo al proyecto `ap-entreprenly`.
 
-1. Crear un proyecto en **Firebase Console** ([console.firebase.google.com](https://console.firebase.google.com)) e ingresar a la sección **Hosting**. Activar el servicio y asociarlo al proyecto de Entreprenly.
-2. En el entorno local, instalar Firebase CLI:
-   ```bash
-   npm install -g firebase-tools
-   firebase login
-   ```
-3. Dentro del repositorio del Frontend (`Kauflink/ap-entreprenly-frontend`), inicializar Firebase Hosting:
-   ```bash
-   firebase init hosting
-   ```
-   Durante la inicialización, seleccionar el proyecto Firebase creado, indicar `dist` como directorio público (output del build de Vite), confirmar que la aplicación es una SPA respondiendo `Yes` a la opción de reescritura de rutas al `index.html`, y no sobrescribir el `index.html` existente.
-4. Verificar que el archivo `firebase.json` generado incluya la regla de reescritura para SPA routing:
-   ```json
-   {
-     "hosting": {
-       "public": "dist",
-       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-       "rewrites": [{ "source": "**", "destination": "/index.html" }]
-     }
-   }
-   ```
-5. En Firebase Console, ingresar a **Hosting > Add custom domain** y registrar el subdominio `ap.entreprenly.online`. Firebase proporcionará los registros DNS necesarios (tipo `A` o `CNAME`) que deben configurarse en el proveedor del dominio.
-6. En el repositorio, configurar el **GitHub Secret** `FIREBASE_SERVICE_ACCOUNT` con las credenciales de la cuenta de servicio de Firebase, necesarias para autenticar el despliegue desde GitHub Actions.
-7. Crear el archivo `.github/workflows/deploy-frontend.yml` con el workflow de GitHub Actions. El workflow se ejecuta ante cada push en la rama `main` y realiza los siguientes pasos: checkout del repositorio, configuración de Node.js con la versión requerida, instalación de dependencias con `npm install`, generación del build de producción con `npm run build` (Vite) y despliegue en Firebase Hosting usando la acción oficial `FirebaseExtended/action-hosting-deploy`.
-8. Validar el despliegue accediendo a `https://ap.entreprenly.online` y verificando que la navegación entre vistas de Vue funciona correctamente sin errores 404 al refrescar el navegador.
+<p align="center"><img src="images/capitulo5/deploy-frontend-01.png" width="700" alt="Proyecto Firebase con Hosting activado"></p>
 
-#### RESTful Web Services
+**Paso 2.** En el entorno local, instalar Firebase CLI e iniciar sesión:
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-02.png" width="700" alt="Firebase CLI instalado y login"></p>
+
+**Paso 3.** Dentro del repositorio del Frontend (`Kauflink/ap-entreprenly-frontend`), inicializar Firebase Hosting con `firebase init hosting`: seleccionar el proyecto `ap-entreprenly`, indicar `dist` como directorio público (output del build de Vite), responder `Yes` a la reescritura de rutas al `index.html` (SPA) y no sobrescribir el `index.html` existente.
+```bash
+firebase init hosting
+```
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-03.png" width="700" alt="firebase init hosting"></p>
+
+**Paso 4.** Verificar que el archivo `firebase.json` incluya la regla de reescritura para el SPA routing de Vue Router:
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}
+```
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-04.png" width="700" alt="firebase.json con rewrites"></p>
+
+**Paso 5.** En **Firebase Console > Hosting > Add custom domain**, registrar el subdominio `ap.entreprenly.online` y crear en el proveedor de DNS los registros que indica Firebase (tipo `A` o `CNAME`), esperando la emisión automática del certificado TLS.
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-05.png" width="700" alt="Dominio personalizado en Firebase Hosting"></p>
+
+**Paso 6.** En el repositorio, configurar el **GitHub Secret** `FIREBASE_SERVICE_ACCOUNT_AP_ENTREPRENLY` con las credenciales de la cuenta de servicio de Firebase, necesarias para autenticar el despliegue desde GitHub Actions.
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-06.png" width="700" alt="GitHub Secret de Firebase"></p>
+
+**Paso 7.** Crear el workflow `.github/workflows/firebase-hosting.yml`, que ante cada push a `main` ejecuta: checkout, configuración de **Node.js 22**, instalación de dependencias con `npm ci`, build de producción con `npm run build` (Vite) y despliegue con la acción oficial `FirebaseExtended/action-hosting-deploy` (proyecto `ap-entreprenly`, canal `live`).
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-07.png" width="700" alt="Workflow de Firebase Hosting en GitHub Actions"></p>
+
+**Paso 8.** Verificar la ejecución del workflow en **Actions** (estado verde) y validar accediendo a `https://ap.entreprenly.online`, comprobando que la navegación entre vistas de Vue funciona sin errores 404 al refrescar el navegador.
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-08.png" width="700" alt="Frontend desplegado en Firebase Hosting"></p>
+
+#### RESTful Web Services (Google Cloud Run)
 
 El Backend de Entreprenly está desarrollado con **ASP.NET Core** (C#, .NET 10) y se empaqueta con un **`Dockerfile`** multi-etapa. Se despliega en **Google Cloud Run** (servicio `ap-entreprenly-web-services`, región `us-east1`), donde el contenedor se construye a partir del código fuente mediante **Cloud Build** y la imagen queda publicada en **Google Artifact Registry**. La persistencia se realiza sobre **Cloud SQL para MySQL 8.4** (instancia `entreprenly-db`), a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL** (socket Unix). El servicio se expone en el subdominio personalizado **[ap-api.entreprenly.online](https://ap-api.entreprenly.online)** y el despliegue se realiza tomando como fuente la rama `main` del repositorio `Kauflink/ap-entreprenly-web-services`.
 
-Los pasos para configurar y ejecutar el despliegue son los siguientes:
+**Paso 1.** En **Google Cloud Console**, seleccionar (o crear) el proyecto y habilitar las APIs necesarias: **Cloud Run Admin**, **Cloud Build**, **Artifact Registry** y **Cloud SQL Admin**.
 
-1. En **Google Cloud Console**, seleccionar (o crear) el proyecto y habilitar las APIs necesarias: **Cloud Run Admin**, **Cloud Build**, **Artifact Registry** y **Cloud SQL Admin**.
-2. Provisionar la instancia de **Cloud SQL para MySQL 8.4** (`entreprenly-db`, región `us-east1`), crear la base de datos `ap-entreprenly` y el usuario `entreprenly`, y anotar su **connection name** (`project-46ae30cc-2d30-4c9e-9f5:us-east1:entreprenly-db`), requerido más adelante por la conexión de Cloud Run.
-3. Confirmar que el repositorio `Kauflink/ap-entreprenly-web-services` contiene el **`Dockerfile`** multi-etapa: la etapa `build` usa `mcr.microsoft.com/dotnet/sdk:10.0` para ejecutar `dotnet restore` y `dotnet publish -c Release`, y la etapa `runtime` usa `mcr.microsoft.com/dotnet/aspnet:10.0`. La aplicación escucha en el puerto `8080` (`ASPNETCORE_URLS=http://+:8080`) y el `ENTRYPOINT` ejecuta `dotnet Entreprenly.WebServices.dll`.
-4. Verificar la cadena de conexión del perfil de producción, que apunta al **socket Unix de Cloud SQL** que Cloud Run monta automáticamente y es consumida por **EF Core 9** con el proveedor **Pomelo MySQL**:
-   ```text
-   server=/cloudsql/<CLOUD_SQL_CONNECTION_NAME>;database=ap-entreprenly;User Id=entreprenly;AllowPublicKeyRetrieval=True
-   ```
-   El esquema de la base de datos se gestiona con **migraciones de EF Core**.
-5. En **Cloud Run > Deploy container > Service**, elegir la opción de desplegar **desde el código fuente / repositorio** (build con Cloud Build a partir del `Dockerfile`). Conectar el repositorio de GitHub `ap-entreprenly-web-services` y seleccionar la rama `main`.
-6. Definir la configuración del servicio: nombre `ap-entreprenly-web-services`, región `us-east1`, **Authentication = Allow unauthenticated invocations**, **container port = 8080**, **CPU = 1**, **Memory = 1 GiB**, **Max instances = 3** y **Startup CPU boost** activado.
-7. En la pestaña **Containers > Cloud SQL connections**, agregar la conexión a la instancia `entreprenly-db` creada en el Paso 2 (Cloud Run inyecta el socket en `/cloudsql/<connection_name>`).
-8. En **Variables & Secrets**, definir las variables de entorno del perfil de producción: `ASPNETCORE_ENVIRONMENT=Production`, `DATABASE_PROJECT`, `DATABASE_REGION`, `DATABASE_INSTANCE`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`, `TokenSettings__Secret` (secreto JWT), `WhatsAppBridge__BridgeUrl` y `WhatsAppBridge__BridgeToken`. *(Recomendado: gestionar los valores sensibles —contraseña de la base de datos, secreto JWT y token del bridge— mediante **Secret Manager** en lugar de texto plano.)*
-9. Presionar **Deploy** y esperar a que Cloud Build construya la imagen (publicada en Artifact Registry) y la nueva revisión reciba el **100 % del tráfico**. Cloud Run asigna una URL `*.run.app`.
-10. En **Cloud Run > Manage Custom Domains > Add mapping**, mapear `ap-api.entreprenly.online` al servicio, crear en el DNS los registros indicados y esperar la emisión automática del certificado TLS. Registrar la URL base `https://ap-api.entreprenly.online/api/v1` como variable de entorno (`VITE_ENTREPENLY_PLATFORM_API_URL`) en el proyecto del Frontend Web Application para su integración.
-11. Validar el despliegue accediendo a la documentación **Swagger UI** en `https://ap-api.entreprenly.online/swagger` y realizando una petición de prueba desde Swagger o Postman, confirmando la respuesta correcta sobre HTTPS.
+<p align="center"><img src="images/capitulo5/deploy-backend-01.png" width="700" alt="APIs habilitadas en Google Cloud"></p>
+
+**Paso 2.** Provisionar la instancia de **Cloud SQL para MySQL 8.4** (`entreprenly-db`, región `us-east1`), crear la base de datos `ap-entreprenly` y el usuario `entreprenly`, y anotar su **connection name** (`project-46ae30cc-2d30-4c9e-9f5:us-east1:entreprenly-db`), requerido más adelante por la conexión de Cloud Run.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-02.png" width="700" alt="Instancia Cloud SQL para MySQL"></p>
+
+**Paso 3.** Confirmar que el repositorio `Kauflink/ap-entreprenly-web-services` contiene el **`Dockerfile`** multi-etapa: la etapa `build` usa `mcr.microsoft.com/dotnet/sdk:10.0` para ejecutar `dotnet restore` y `dotnet publish -c Release`, y la etapa `runtime` usa `mcr.microsoft.com/dotnet/aspnet:10.0`. La aplicación escucha en el puerto `8080` (`ASPNETCORE_URLS=http://+:8080`) y el `ENTRYPOINT` ejecuta `dotnet Entreprenly.WebServices.dll`.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-03.png" width="700" alt="Dockerfile del backend"></p>
+
+**Paso 4.** Verificar la cadena de conexión del perfil de producción, que apunta al **socket Unix de Cloud SQL** que Cloud Run monta automáticamente y es consumida por **EF Core 9** con el proveedor **Pomelo MySQL**:
+```text
+server=/cloudsql/<CLOUD_SQL_CONNECTION_NAME>;database=ap-entreprenly;User Id=entreprenly;AllowPublicKeyRetrieval=True
+```
+El esquema de la base de datos se gestiona con **migraciones de EF Core**.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-04.png" width="700" alt="Cadena de conexión a Cloud SQL"></p>
+
+**Paso 5.** En **Cloud Run > Deploy container > Service**, elegir la opción de desplegar **desde el código fuente / repositorio** (build con Cloud Build a partir del `Dockerfile`). Conectar el repositorio de GitHub `ap-entreprenly-web-services` y seleccionar la rama `main`.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-05.png" width="700" alt="Origen del despliegue en Cloud Run"></p>
+
+**Paso 6.** Definir la configuración del servicio: nombre `ap-entreprenly-web-services`, región `us-east1`, **Authentication = Allow unauthenticated invocations**, **container port = 8080**, **CPU = 1**, **Memory = 1 GiB**, **Max instances = 3** y **Startup CPU boost** activado.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-06.png" width="700" alt="Configuración del servicio Cloud Run"></p>
+
+**Paso 7.** En la pestaña **Containers > Cloud SQL connections**, agregar la conexión a la instancia `entreprenly-db` creada en el Paso 2 (Cloud Run inyecta el socket en `/cloudsql/<connection_name>`).
+
+<p align="center"><img src="images/capitulo5/deploy-backend-07.png" width="700" alt="Conexión Cloud SQL en Cloud Run"></p>
+
+**Paso 8.** En **Variables & Secrets**, definir las variables de entorno del perfil de producción: `ASPNETCORE_ENVIRONMENT=Production`, `DATABASE_PROJECT`, `DATABASE_REGION`, `DATABASE_INSTANCE`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD`, `TokenSettings__Secret` (secreto JWT), `WhatsAppBridge__BridgeUrl` y `WhatsAppBridge__BridgeToken`. *(Recomendado: gestionar los valores sensibles —contraseña de la base de datos, secreto JWT y token del bridge— mediante **Secret Manager** en lugar de texto plano.)*
+
+<p align="center"><img src="images/capitulo5/deploy-backend-08.png" width="700" alt="Variables de entorno en Cloud Run"></p>
+
+**Paso 9.** Presionar **Deploy** y esperar a que Cloud Build construya la imagen (publicada en Artifact Registry) y la nueva revisión reciba el **100 % del tráfico**. Cloud Run asigna una URL `*.run.app`.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-09.png" width="700" alt="Revisión desplegada en Cloud Run"></p>
+
+**Paso 10.** En **Cloud Run > Manage Custom Domains > Add mapping**, mapear `ap-api.entreprenly.online` al servicio, crear en el DNS los registros indicados y esperar la emisión automática del certificado TLS. Registrar la URL base `https://ap-api.entreprenly.online/api/v1` como variable de entorno (`VITE_ENTREPENLY_PLATFORM_API_URL`) en el proyecto del Frontend Web Application para su integración.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-10.png" width="700" alt="Dominio personalizado del backend"></p>
+
+**Paso 11.** Validar el despliegue accediendo a la documentación **Swagger UI** en `https://ap-api.entreprenly.online/swagger` y realizando una petición de prueba desde Swagger o Postman, confirmando la respuesta correcta sobre HTTPS.
+
+<p align="center"><img src="images/capitulo5/deploy-backend-11.png" width="700" alt="Swagger UI del backend desplegado"></p>
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
