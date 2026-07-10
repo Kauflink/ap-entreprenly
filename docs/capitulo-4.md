@@ -1481,7 +1481,8 @@ Este Bounded Context permite la gestión de ventas a través de un canal convers
 
 ## 4.8. Database Design
 
-El diseño de base de datos de Entreprenly está implementado en MySQL 8.0 y organizado en siete categorías funcionales. El esquema aplica normalización hasta la Tercera Forma Normal (3FN), eliminando redundancias y garantizando la integridad referencial en toda la operación del negocio.
+
+El diseño de base de datos de Entreprenly está implementado en MySQL 8.0 y organizado en siete categorías funcionales. El modelo mantiene normalizado el núcleo del negocio (identidad, inventario, ventas y chatbot) y aplica denormalización deliberada donde aporta valor: una tabla de solo-lectura para el panel de suscripción y snapshots históricos en ventas y pedidos.
 
 El sistema distingue dos actores con responsabilidades distintas: los **Comerciantes**, quienes administran el negocio y tienen suscripción activa, y los **Clientes**, cuyos datos se registran únicamente para pedidos por WhatsApp, sin acceso al sistema.
 
@@ -1505,7 +1506,6 @@ Las alertas de stock (vencimiento, bajo stock, sin stock) son calculadas en tiem
 
 El esquema se organiza en las siguientes tablas por categoría:
 
----
 
 **Identidad y Acceso (IAM)**
 
@@ -1518,14 +1518,14 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `role_users`  
   Tabla de unión many-to-many entre `users` y `roles`.
 
----
+
 
 **Perfil**
 
 - `profiles`  
-  Información completa del perfil del comerciante en una sola tabla: datos personales (nombre, teléfono, avatar), rol, plan contratado, preferencias (idioma, zona horaria, tema, moneda) y configuración de notificaciones (stock, pagos, chatbot). Referencia a `users` mediante `user_id`.
+  Información completa del perfil del comerciante en una sola tabla: datos personales (nombre, teléfono, avatar), rol, plan contratado, preferencias (idioma, zona horaria, tema, moneda) y configuración de notificaciones (únicamente alertas de stock, `notifications_stock_alerts`). Referencia a `users` mediante `user_id`.
 
----
+
 
 **Inventario**
 
@@ -1541,7 +1541,6 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `weight_lots`  
   Lotes de productos por peso con cantidad disponible en kilogramos y fecha de ingreso.
 
----
 
 **Ventas**
 
@@ -1554,7 +1553,6 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `sale_payment_receipts`  
   Comprobante de pago asociado a una venta: método, código de transacción, monto y fecha de confirmación. Relación uno-a-uno con `sales`.
 
----
 
 **Suscripciones**
 
@@ -1576,9 +1574,9 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `subscription_activities`  
   Historial de actividades y eventos de la suscripción con título y detalle.
 
----
 
-**WhatsApp y Chatbot**
+
+**Chatbot y pedidos**
 
 - `whatsapp_sessions`  
   Sesión de WhatsApp vinculada al negocio mediante QR: vendedor, correo propietario, nombre del negocio, estado de conexión, número de teléfono y timestamp de conexión.
@@ -1589,14 +1587,18 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `chat_messages`  
   Mensajes individuales dentro de una conversación: contenido, emisor (cliente, bot o sistema), tipo (texto, imagen, documento) y timestamp de envío.
 
----
-
-**Pedidos Digitales**
-
 - `chat_orders`  
   Pedidos realizados por WhatsApp: número de orden, teléfono del cliente, dirección de entrega, ítems serializados en JSON (`items_json`), total, estado, indicador de comprobante recibido, URL del comprobante, contador de rechazos y correo del propietario.
 
+**Sistema**
+
+- `__EFMigrationsHistory`  
+  Tabla técnica gestionada por Entity Framework Core que registra las migraciones aplicadas al esquema (`MigrationId`, `ProductVersion`). No pertenece al modelo de negocio.
+
+  
 ### 4.8.3. Relaciones entre tablas
+
+Las relaciones se implementan mediante columnas `*_id`. El diagrama renderiza como conector únicamente las que tienen restricción de clave foránea explícita (`role_users`, `sales`↔`sale_items`, `sales`↔`sale_payment_receipts` y `subscriptions`↔sus tablas hijas); el resto son referencias lógicas por convención.
 
 - `profiles` referencia a `users` mediante `user_id`.
 - `users` y `roles` se relacionan mediante la tabla de unión `role_users`.
@@ -1607,23 +1609,3 @@ El esquema se organiza en las siguientes tablas por categoría:
 - `subscription_current_plan_features`, `subscription_recommended_plan_features`, `subscription_limits`, `subscription_payment_methods` y `subscription_activities` referencian a `subscriptions` mediante `subscription_id`.
 - `chat_messages` referencia a `conversations` mediante `conversation_id`.
 - `chat_orders` referencia a `conversations` mediante `conversation_id`.
-
-### 4.8.4. Normalización aplicada
-
-La normalización aplicada se resume en tres puntos principales:
-
-- **Primera Forma Normal (1FN):**  
-  Se cumple mediante el uso de atributos atómicos en todas las tablas. La excepción deliberada es `chat_orders.items_json`, que serializa los ítems del pedido como JSON para preservar el snapshot exacto en el momento de la orden sin afectar la integridad de otras entidades.
-
-- **Segunda Forma Normal (2FN):**  
-  Se garantiza utilizando claves primarias simples en todas las tablas y separando entidades independientes como productos, lotes, ventas, conversaciones y suscripciones.
-
-- **Tercera Forma Normal (3FN):**  
-  Se evidencia en la separación de características de plan, límites, métodos de pago y actividades en tablas independientes que referencian a `subscriptions`, eliminando redundancia y dependencias transitivas.
-
-Además:
-
-- Los detalles de ventas (`sale_items`) y pedidos (`chat_orders.items_json`) almacenan snapshots del nombre del producto, precio unitario y subtotal para mantener consistencia histórica aunque el catálogo de productos cambie posteriormente.
-- Los totales almacenados en `sales` y `chat_orders` funcionan como registros contables históricos y no como datos derivados puramente calculables.
-- La separación entre `unit_products`/`unit_lots` y `weight_products`/`weight_lots` evita valores nulos innecesarios y mejora la integridad del modelo de inventario.
-- Las alertas de stock son calculadas en tiempo real por el dominio (`StockAlertGenerator`) y no se persisten, lo que elimina la necesidad de sincronización entre tabla y estado real del inventario.
