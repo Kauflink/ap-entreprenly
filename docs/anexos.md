@@ -87,3 +87,15 @@ En esta sección se listan, como anexos independientes, todos los enlaces de los
 
 ### Anexo W — Diseño UX/UI (Figma)
 🔗 https://www.figma.com/design/aZv1YLCkMN17TLsgGsDJdR/Entreprenly?node-id=0-1&p=f&t=YgI7T4z8sRoXDOdK-0
+
+## Diagramas de clases (PlantUML)
+
+### Anexo X — Diagramas de clases por Bounded Context (PlantUML) — Cap. 4.7.1
+
+- **Shared Kernel BC** — 🔗 https://tinyurl.com/shared-kernel-bc
+- **Generación y Autenticación de Cuenta (IAM) BC** — 🔗 https://tinyurl.com/iam-bc-class
+- **Perfil y Configuración BC** — 🔗 https://tinyurl.com/profiles-bc
+- **Gestión y Proceso de Suscripción BC** — 🔗 https://tinyurl.com/subscriptions-bc
+- **Gestión de Inventario BC** — 🔗 https://tinyurl.com/inventory-bc
+- **Ventas BC** — 🔗 https://tinyurl.com/sales-bc-class
+- **Chatbot de WhatsApp BC** — 🔗 https://tinyurl.com/chatbot-bc
