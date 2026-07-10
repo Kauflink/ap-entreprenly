@@ -2214,7 +2214,7 @@ El objetivo principal de este Sprint fue integrar el canal real de WhatsApp para
 
 #### 5.2.4.4. Development Evidence for Sprint Review
 
-Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del **WhatsApp bridge** (`ap-entreprenly-whatsapp-bridge`) y realizó ajustes de integración en el **Backend** (`ap-entreprenly-web-services`) y el **Frontend** (`ap-entreprenly-frontend`). El bridge acumuló **13 commits** (sin contar merges) entre el 5 y el 26 de junio de 2026. A continuación se presenta el registro de los commits más representativos:
+Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del **WhatsApp bridge** (`daop-entreprenly-whatsapp-bridge`) y realizó ajustes de integración en el **Backend** (`ap-entreprenly-web-services`) y el **Frontend** (`ap-entreprenly-frontend`). El bridge acumuló **13 commits** (sin contar merges) entre el 5 y el 26 de junio de 2026. A continuación se presenta el registro de los commits más representativos:
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -2228,14 +2228,14 @@ Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del 
     </tr>
   </thead>
   <tbody>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>a78855b</td><td>feat: WhatsApp bridge (whatsapp-web.js) for the Entreprenly chatbot</td><td>Se crea el servicio bridge en Node.js con whatsapp-web.js como base del canal de WhatsApp.</td><td>2026-06-05</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>f1d9226</td><td>feat(bridge): multi-tenant — one WhatsApp session per seller email</td><td>Se habilita una sesión de WhatsApp independiente por email de vendedor.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>26202b2</td><td>feat(bridge): add POST /send endpoint to push outbound messages from backend to clients</td><td>Se agrega el endpoint POST /send para enviar mensajes salientes al cliente por WhatsApp.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>c9cbff6</td><td>feat: forward WhatsApp image messages as payment receipts</td><td>Se reenvían las imágenes entrantes de WhatsApp al Backend como comprobantes de pago.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>8f788e7</td><td>feat(docker): add Dockerfile and dockerignore for VM deployment</td><td>Se containeriza el bridge para su despliegue en una VM.</td><td>2026-06-09</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>0eaae2e</td><td>ci: auto-deploy bridge to Compute Engine VM on push to main</td><td>Se automatiza el despliegue del bridge en Compute Engine ante cada push a main.</td><td>2026-06-10</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>83df0e6</td><td>feat: route WhatsApp to one of two backends with a switchable turn and /switch page</td><td>Se enruta el canal a uno de dos backends con turno conmutable y una página /switch.</td><td>2026-06-26</td></tr>
-    <tr><td>Kauflink/ap-entreprenly-whatsapp-bridge</td><td>main</td><td>f802a49</td><td>fix: clean stale Chromium singleton locks on container startup</td><td>Se limpian los locks obsoletos de Chromium al iniciar el contenedor para estabilizar el arranque.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>a78855b</td><td>feat: WhatsApp bridge (whatsapp-web.js) for the Entreprenly chatbot</td><td>Se crea el servicio bridge en Node.js con whatsapp-web.js como base del canal de WhatsApp.</td><td>2026-06-05</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>f1d9226</td><td>feat(bridge): multi-tenant — one WhatsApp session per seller email</td><td>Se habilita una sesión de WhatsApp independiente por email de vendedor.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>26202b2</td><td>feat(bridge): add POST /send endpoint to push outbound messages from backend to clients</td><td>Se agrega el endpoint POST /send para enviar mensajes salientes al cliente por WhatsApp.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>c9cbff6</td><td>feat: forward WhatsApp image messages as payment receipts</td><td>Se reenvían las imágenes entrantes de WhatsApp al Backend como comprobantes de pago.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>8f788e7</td><td>feat(docker): add Dockerfile and dockerignore for VM deployment</td><td>Se containeriza el bridge para su despliegue en una VM.</td><td>2026-06-09</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>0eaae2e</td><td>ci: auto-deploy bridge to Compute Engine VM on push to main</td><td>Se automatiza el despliegue del bridge en Compute Engine ante cada push a main.</td><td>2026-06-10</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>83df0e6</td><td>feat: route WhatsApp to one of two backends with a switchable turn and /switch page</td><td>Se enruta el canal a uno de dos backends con turno conmutable y una página /switch.</td><td>2026-06-26</td></tr>
+    <tr><td>Kauflink/daop-entreprenly-whatsapp-bridge</td><td>main</td><td>f802a49</td><td>fix: clean stale Chromium singleton locks on container startup</td><td>Se limpian los locks obsoletos de Chromium al iniciar el contenedor para estabilizar el arranque.</td><td>2026-06-26</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>3d5d18f</td><td>feat(chatbot): reconcile bridge link state from QR poll response</td><td>Se reconcilia el estado de vinculación del bridge a partir del sondeo del QR.</td><td>2026-06-16</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>1ceb0a8</td><td>feat(chatbot): expand rule-based responder with more intents</td><td>Se amplía el responder basado en reglas con más intenciones para las consultas de clientes.</td><td>2026-06-16</td></tr>
     <tr><td>Kauflink/ap-entreprenly-web-services</td><td>develop</td><td>7a992ea</td><td>fix(chatbot): suggest catalog alternatives when requested product not found</td><td>Se sugieren alternativas del catálogo cuando el producto solicitado no está disponible.</td><td>2026-06-16</td></tr>
@@ -2243,7 +2243,7 @@ Durante el Sprint 4, el equipo trabajó principalmente sobre el repositorio del 
   </tbody>
 </table>
 
-**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
+**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/daop-entreprenly-whatsapp-bridge
 
 <img src="images/capitulo5/bridge_evi.png" width="800">
 
@@ -2324,13 +2324,13 @@ Durante el Sprint 4, el equipo desplegó el **WhatsApp bridge** de forma contain
 
 #### 5.2.4.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 4, la implementación del canal de WhatsApp se concentró en el repositorio `ap-entreprenly-whatsapp-bridge`, con ajustes de integración en el Backend y el Frontend. El equipo mantuvo GitFlow con ramas `feature/` integradas a `develop` y `main` mediante Pull Requests. La distribución de commits del bridge (sin contar merges) por miembro fue la siguiente: **Palma De Los Santos (8 commits)** y **Camargo Briceño (5 commits)**, con la colaboración del resto del equipo en las tareas de integración del Backend y el Frontend.
+Durante el Sprint 4, la implementación del canal de WhatsApp se concentró en el repositorio `daop-entreprenly-whatsapp-bridge`, con ajustes de integración en el Backend y el Frontend. El equipo mantuvo GitFlow con ramas `feature/` integradas a `develop` y `main` mediante Pull Requests. La distribución de commits del bridge (sin contar merges) por miembro fue la siguiente: **Palma De Los Santos (8 commits)** y **Camargo Briceño (5 commits)**, con la colaboración del resto del equipo en las tareas de integración del Backend y el Frontend.
 
 ![contributors_p4](./images/capitulo5/contributors_p4.png "Contribuidores del Sprint 4")
 
 ![pull_p4](./images/capitulo5/pull_p4.png "Pull Requests del Sprint 4")
 
-**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/ap-entreprenly-whatsapp-bridge
+**URL del repositorio del WhatsApp Bridge:** https://github.com/Kauflink/daop-entreprenly-whatsapp-bridge
 
 ---
 
