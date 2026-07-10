@@ -431,7 +431,9 @@ npm install -g firebase-tools
 firebase login
 ```
 
-<p align="center"><img src="images/capitulo5/deploy-frontend-02.png" width="700" alt="Firebase CLI instalado y login"></p>
+<p align="center"><img src="images/capitulo5/deploy-frontend-02-01.png" width="700" alt="Firebase CLI instalado y login"></p>
+
+<p align="center"><img src="images/capitulo5/deploy-frontend-02-02.png" width="700" alt="Firebase CLI instalado y login"></p>
 
 **Paso 3.** Dentro del repositorio del Frontend (`Kauflink/ap-entreprenly-frontend`), inicializar Firebase Hosting con `firebase init hosting`: seleccionar el proyecto `ap-entreprenly`, indicar `dist` como directorio público (output del build de Vite), responder `Yes` a la reescritura de rutas al `index.html` (SPA) y no sobrescribir el `index.html` existente.
 ```bash
@@ -2023,9 +2025,9 @@ Durante el Sprint 3 se documentaron los endpoints del RESTful API mediante **Ope
 
 Durante el Sprint 3 se configuró y ejecutó el despliegue del RESTful Web Services. El proceso (detallado en la sección 5.1.4) consistió en: construir la imagen Docker multi-etapa del backend (`mcr.microsoft.com/dotnet/sdk:10.0` → `aspnet:10.0`) mediante **Cloud Build**, publicarla en **Google Artifact Registry** y desplegarla en **Google Cloud Run** (servicio `ap-entreprenly-web-services`, región `us-east1`, con *allow unauthenticated*, 1 vCPU, 1 GiB y *startup CPU boost*). La persistencia se realiza sobre **Cloud SQL para MySQL 8.4** (instancia `entreprenly-db`), a la que Cloud Run se conecta mediante el **conector nativo de Cloud SQL** (socket Unix), consumido por **EF Core** con el proveedor **Pomelo/MySqlConnector**. El API quedó disponible en `https://ap-api.entreprenly.online`, con su documentación Swagger en `https://ap-api.entreprenly.online/swagger`.
 
-<img src="./images/capitulo5/deploy_s3_1.png" width="600">
+<img src="./images/capitulo5/deploy-backend-09.png" width="600">
 
-<img src="./images/capitulo5/deploy_s3_2.png" width="600">
+<img src="./images/capitulo5/deploy-backend-11.png" width="600">
 
 ---
 
