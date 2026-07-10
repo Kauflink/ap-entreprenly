@@ -12,8 +12,8 @@ En esta sección se presenta el **Video About-the-Team** del equipo **Kauflink**
 
   <!-- Miniatura / enlace -->
   <div style="background-color: #1a6b6b; padding: 14px 16px 18px;">
-    <a href="https://youtu.be/vh1XZmKGKLE">
-      <img src="https://img.youtube.com/vi/vh1XZmKGKLE/maxresdefault.jpg" alt="Video About-the-Team de Kauflink — Entreprenly" style="width: 100%; border-radius: 4px; display: block;">
+    <a href="https://youtu.be/GsKv0a7NAU0">
+      <img src="https://img.youtube.com/vi/GsKv0a7NAU0/maxresdefault.jpg" alt="Video About-the-Team de Kauflink — Entreprenly" style="width: 100%; border-radius: 4px; display: block;">
     </a>
   </div>
 
@@ -22,7 +22,7 @@ En esta sección se presenta el **Video About-the-Team** del equipo **Kauflink**
     <tr>
       <td style="padding: 9px 16px; border: 1px solid #cfd8dc;">
         <strong>▶️ Ver el video (YouTube):</strong>
-        <a href="https://youtu.be/vh1XZmKGKLE">https://youtu.be/vh1XZmKGKLE</a>
+        <a href="https://youtu.be/GsKv0a7NAU0">https://youtu.be/GsKv0a7NAU0</a>
       </td>
     </tr>
   </table>

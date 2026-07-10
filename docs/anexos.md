@@ -62,7 +62,7 @@ En esta sección se listan, como anexos independientes, todos los enlaces de los
 🔗 https://youtu.be/JFLwl_6-Alg
 
 ### Anexo P — Video: About-the-Team
-🔗 https://youtu.be/vh1XZmKGKLE
+🔗 https://youtu.be/GsKv0a7NAU0
 ## Videos de exposiciones
 
 ### Anexo Q — Video: Exposición AV1
