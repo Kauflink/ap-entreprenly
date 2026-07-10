@@ -1672,8 +1672,6 @@ Durante el Sprint 2, el Backend (RESTful Web Services con ASP.NET Core) aún no 
 
 **URL del repositorio del Frontend Web Application:** https://github.com/Kauflink/ap-entreprenly-frontend
 
-La documentación formal de los endpoints con OpenAPI/Swagger se incorporará a partir del Sprint 3, cuando se implemente el Backend con ASP.NET Core, conforme a lo planificado en el Product Backlog.
-
 ---
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
@@ -1841,7 +1839,7 @@ En el Sprint 3, el equipo replicó el esquema de un Bounded Context por responsa
 
 #### 5.2.3.3. Sprint Backlog 3
 
-El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presentan los Work-items, organizados por aspecto, con el responsable y su estado al cierre del Sprint.
+El objetivo principal de este Sprint fue implementar los RESTful Web Services por Bounded Context e integrarlos con el Frontend Web Application. A continuación se presenta el Sprint Backlog con las User Stories abordadas y los Work-items resultantes de su descomposición, indicando la estimación, el responsable y el estado al cierre del Sprint.
 
 ![sprint3](./images/capitulo5/sprint3.png "Tablero del Sprint 3 en Trello")
 
@@ -1850,77 +1848,33 @@ El objetivo principal de este Sprint fue implementar los RESTful Web Services po
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
-      <th>Aspecto / Bounded Context</th>
-      <th>Work-item / Task</th>
+      <th colspan="8">Sprint # Sprint 3</th>
+    </tr>
+    <tr>
+      <th colspan="2">User Story</th>
+      <th colspan="6">Work-Item / Task</th>
+    </tr>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
       <th>Estimation (Hours)</th>
       <th>Assigned To</th>
       <th>Status</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Shared Kernel</td>
-      <td>Configurar el shared kernel y la configuración base de la Web API (EF Core, MySQL, mediator Cortex, manejo de errores).</td>
-      <td>8</td>
-      <td>Camargo Briceño, Joseph Julius</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>IAM</td>
-      <td>Implementar el modelo de dominio de usuarios y roles, servicios de aplicación, persistencia, hashing BCrypt y autenticación JWT; exponer endpoints de authentication, users y roles; agregar cambio de contraseña y de correo.</td>
-      <td>14</td>
-      <td>Camargo Briceño, Joseph Julius</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>Profiles</td>
-      <td>Implementar el modelo de dominio y value objects de perfil, auto-aprovisionamiento vía evento de integración de IAM, almacenamiento de avatar y endpoints REST de perfil y preferencias.</td>
-      <td>10</td>
-      <td>Camargo Briceño, Joseph Julius</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>Deploy / CI/CD</td>
-      <td>Containerizar el backend (Dockerfile multi-etapa) y desplegarlo en Google Cloud Run construyendo la imagen con Cloud Build, conectándolo a Cloud SQL para MySQL mediante el conector nativo (socket Unix) y parametrizando la configuración con variables de entorno.</td>
-      <td>10</td>
-      <td>Camargo Briceño, Joseph Julius</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>Inventory</td>
-      <td>Implementar el Bounded Context de Inventory (productos por unidad y por peso, lotes, alertas de stock) con su migración de base de datos y endpoints REST.</td>
-      <td>12</td>
-      <td>Peirano Brun, José Antonio</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>Sales</td>
-      <td>Implementar el Bounded Context de Sales (capas de dominio, aplicación, persistencia e interfaces REST), el descuento de stock vía Inventory y el filtrado de ventas por día de negocio.</td>
-      <td>12</td>
-      <td>Flores Pinchi, José Fernando</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>Subscription</td>
-      <td>Implementar el Bounded Context de Subscription con su migración, el mapeo de planes y datos de facturación, y los endpoints <code>me/dashboard</code> y <code>me/payment-confirmation</code>.</td>
-      <td>12</td>
-      <td>Chavez Carrasco, Lionel Abraham</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>Chatbot</td>
-      <td>Implementar el Bounded Context de Chatbot (dominio, aplicación, infraestructura e interfaces REST), la máquina de estados de pedidos, la detección de productos contra el inventario real, el QR del bridge de WhatsApp y los endpoints de conversaciones, mensajes y pedidos.</td>
-      <td>16</td>
-      <td>Palma De Los Santos, Elynor Mikela</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>Integración Frontend–API</td>
-      <td>Reemplazar el mock de JSON-Server por la API real: cliente HTTP autenticado con interceptor de token, alineación de modelos y assemblers por BC y parametrización de endpoints vía variables de entorno (<code>VITE_*</code>).</td>
-      <td>14</td>
-      <td>Equipo completo</td>
-      <td>Done</td>
-    </tr>
+    <tr><td>US-93</td><td>Persistir datos mediante Entity Framework Core por bounded context</td><td>T-01</td><td>Configurar el Shared Kernel y la Web API base</td><td>Configurar el shared kernel y la configuración base de la Web API (EF Core, MySQL, mediator Cortex, manejo de errores).</td><td>8</td><td>Camargo Briceño, Joseph Julius</td><td>Done</td></tr>
+    <tr><td>US-91</td><td>Autenticar y autorizar usuarios mediante JWT</td><td>T-02</td><td>Implementar el BC de IAM y autenticación JWT</td><td>Implementar el modelo de dominio de usuarios y roles, servicios de aplicación, persistencia, hashing BCrypt y autenticación JWT; exponer endpoints de authentication, users y roles; agregar cambio de contraseña y de correo.</td><td>14</td><td>Camargo Briceño, Joseph Julius</td><td>Done</td></tr>
+    <tr><td>US-62</td><td>Visualizar perfil actual</td><td>T-03</td><td>Implementar el BC de Profiles</td><td>Implementar el modelo de dominio y value objects de perfil, auto-aprovisionamiento vía evento de integración de IAM, almacenamiento de avatar y endpoints REST de perfil y preferencias.</td><td>10</td><td>Camargo Briceño, Joseph Julius</td><td>Done</td></tr>
+    <tr><td>US-92</td><td>Containerizar y desplegar la API mediante Docker y CI/CD</td><td>T-04</td><td>Containerizar y desplegar el backend en Cloud Run</td><td>Containerizar el backend (Dockerfile multi-etapa) y desplegarlo en Google Cloud Run construyendo la imagen con Cloud Build, conectándolo a Cloud SQL para MySQL mediante el conector nativo (socket Unix) y parametrizando la configuración con variables de entorno.</td><td>10</td><td>Camargo Briceño, Joseph Julius</td><td>Done</td></tr>
+    <tr><td>US-01</td><td>Agregar productos</td><td>T-05</td><td>Implementar el BC de Inventory</td><td>Implementar el Bounded Context de Inventory (productos por unidad y por peso, lotes, alertas de stock) con su migración de base de datos y endpoints REST.</td><td>12</td><td>Peirano Brun, José Antonio</td><td>Done</td></tr>
+    <tr><td>US-33</td><td>Finalizar la venta y emitir el comprobante de pago</td><td>T-06</td><td>Implementar el BC de Sales</td><td>Implementar el Bounded Context de Sales (capas de dominio, aplicación, persistencia e interfaces REST), el descuento de stock vía Inventory y el filtrado de ventas por día de negocio.</td><td>12</td><td>Flores Pinchi, José Fernando</td><td>Done</td></tr>
+    <tr><td>US-20</td><td>Visualizar panel de suscripción</td><td>T-07</td><td>Implementar el BC de Subscription</td><td>Implementar el Bounded Context de Subscription con su migración, el mapeo de planes y datos de facturación, y los endpoints <code>me/dashboard</code> y <code>me/payment-confirmation</code>.</td><td>12</td><td>Chavez Carrasco, Lionel Abraham</td><td>Done</td></tr>
+    <tr><td>US-54</td><td>Gestionar ciclo de vida de pedidos mediante API</td><td>T-08</td><td>Implementar el BC de Chatbot</td><td>Implementar el Bounded Context de Chatbot (dominio, aplicación, infraestructura e interfaces REST), la máquina de estados de pedidos, la detección de productos contra el inventario real, el QR del bridge de WhatsApp y los endpoints de conversaciones, mensajes y pedidos.</td><td>16</td><td>Palma De Los Santos, Elynor Mikela</td><td>Done</td></tr>
+    <tr><td>US-58</td><td>Iniciar sesión con credenciales</td><td>T-09</td><td>Integrar el Frontend con la API real</td><td>Reemplazar el mock de JSON-Server por la API real: cliente HTTP autenticado con interceptor de token, alineación de modelos y assemblers por BC y parametrización de endpoints vía variables de entorno (<code>VITE_*</code>).</td><td>14</td><td>Equipo completo</td><td>Done</td></tr>
   </tbody>
 </table>
 
@@ -2378,8 +2332,6 @@ La comunicación entre el Backend y el canal de WhatsApp se realiza a través de
 </table>
 
 **URL del repositorio de Web Services:** https://github.com/Kauflink/ap-entreprenly-web-services
-
-**Commit relacionado con la documentación (Sprint 4):** `bba48f8` (`docs(chatbot): add descriptions to all endpoint operations`, 2026-07-09), que completa las descripciones OpenAPI de las operaciones del Chatbot.
 
 ---
 
